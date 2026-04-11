@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "PrintifyGenerator.App/1.0.0": {
+        "dependencies": {
+          "PrintifyGenerator.Library": "1.0.0"
+        },
+        "runtime": {
+          "PrintifyGenerator.App.dll": {}
+        }
+      },
+      "PrintifyGenerator.Library/1.0.0": {
+        "runtime": {
+          "PrintifyGenerator.Library.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PrintifyGenerator.App/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PrintifyGenerator.Library/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

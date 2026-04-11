@@ -1,0 +1,146 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator/PrintifyGenerator.csproj": {}
+  },
+  "projects": {
+    "/home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Core/PrintifyGenerator.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Core/PrintifyGenerator.Core.csproj",
+        "projectName": "PrintifyGenerator.Core",
+        "projectPath": "/home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Core/PrintifyGenerator.Core.csproj",
+        "packagesPath": "/home/rf/.nuget/packages/",
+        "outputPath": "/home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Core/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/rf/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "SixLabors.ImageSharp": {
+              "target": "Package",
+              "version": "[3.1.8, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.125/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator/PrintifyGenerator.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator/PrintifyGenerator.csproj",
+        "projectName": "PrintifyGenerator",
+        "projectPath": "/home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator/PrintifyGenerator.csproj",
+        "packagesPath": "/home/rf/.nuget/packages/",
+        "outputPath": "/home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/rf/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Core/PrintifyGenerator.Core.csproj": {
+                "projectPath": "/home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Core/PrintifyGenerator.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Logging.Console": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.125/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
