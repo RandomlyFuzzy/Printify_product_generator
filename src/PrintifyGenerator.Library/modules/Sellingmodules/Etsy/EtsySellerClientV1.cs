@@ -275,7 +275,7 @@ public class EtsySellerClientV1 : ISellerClient
                         OfferingId = o.OfferingId,
                         IsEnabled  = o.IsEnabled,
                         Quantity   = sku.Quantity ?? o.Quantity,
-                        Price      = sku.Price.HasValue ? (float)sku.Price.Value : o.Price.ToDecimal()
+                        Price      = sku.Price.HasValue ? (float)sku.Price.Value : (float)o.Price.ToDecimal()
                     })
                     .ToList()
             };
