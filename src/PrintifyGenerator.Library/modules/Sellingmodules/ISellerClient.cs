@@ -1,0 +1,1 @@
+//i want you to create an general generic selling interface which includes create listings/add skus see orders etc 
