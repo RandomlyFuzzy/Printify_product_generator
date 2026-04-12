@@ -47,6 +47,10 @@ public record ImageSuitability
     {
         return JsonSerializer.Serialize(this, new JsonSerializerOptions { WriteIndented = true });
     }
+    public string ToJsonString()
+    {
+        return JsonSerializer.Serialize(this);  
+    }
 
 }
 
