@@ -13,7 +13,10 @@ public class OllamaClient
     public OllamaClient(string baseUrl = "http://localhost:11434")
     {
         _baseUrl = baseUrl;
-        _http = new HttpClient();
+        _http = new HttpClient()
+        {
+            Timeout = TimeSpan.FromMinutes(4) // Set a longer timeout for potentially long-running requests
+        };
     }
 
     // 🔹 1. Health check

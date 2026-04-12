@@ -368,12 +368,12 @@ public class JobStatus
 
             foreach (var img in images.EnumerateArray())
             {
-                var filename = img.GetProperty("filename").GetString();
+                var fn = img.GetProperty("filename").GetString();
                 var subfolder = img.GetProperty("subfolder").GetString();
                 var type = img.GetProperty("type").GetString();
 
                 urls.Add(
-                    $"{baseUrl}/view?filename={Uri.EscapeDataString(filename)}" +
+                    $"{baseUrl}/view?filename={Uri.EscapeDataString(fn)}" +
                     $"&subfolder={Uri.EscapeDataString(subfolder)}" +
                     $"&type={Uri.EscapeDataString(type)}"
                 );
