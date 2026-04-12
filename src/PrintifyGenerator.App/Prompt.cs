@@ -6,10 +6,10 @@ public record Prompt
 {
     public string positive { get; set; }
     public string negative { get; set; }
-    public int width { get; set; }
-    public int height { get; set; }
-    public int steps { get; set; }
-    public int cfg { get; set; }
+    public int width { get; set; } = 512;
+    public int height { get; set; }= 512;
+    public int steps { get; set; } = 20;
+    public float cfg { get; set; } = 3.5f;
 
     public bool isValid()
     {

@@ -338,7 +338,7 @@ public class JobStatus
     // 🆕 Outputs
     public List<string> ImageUrls { get; set; } = new List<string>();
 
-    public async Task DownloadAllImagesAsync(string saveDirectory)
+    public async Task<string> DownloadAllImagesAsync(string saveDirectory)
     {
         Directory.CreateDirectory(saveDirectory);
 
@@ -357,7 +357,7 @@ public class JobStatus
             !jobData.TryGetProperty("outputs", out var outputs))
         {
             Console.WriteLine($"No outputs found in history for prompt {PromptId}.");
-            return;
+            return "";
         }
 
         var urls = new List<string>();
@@ -393,11 +393,12 @@ public class JobStatus
             var originalFilename = query.TryGetValue("filename", out var fn) ? fn : Path.GetFileName(uri.LocalPath);
             var savePath = Path.Combine(saveDirectory, $"{PromptId}.png");
             Console.WriteLine($"Downloading {url} to {savePath}...");
-            await DownloadImageAsync(url, savePath);
+            return await DownloadImageAsync(url, savePath);
         }
+        return "";
     }
 
-    private async Task DownloadImageAsync(string url, string savePath)
+    private async Task<string> DownloadImageAsync(string url, string savePath)
     {
         var request = (HttpWebRequest)WebRequest.Create(url);
         request.Method = "GET";
@@ -407,5 +408,6 @@ public class JobStatus
         using var file = File.Create(savePath);
 
         await stream.CopyToAsync(file);
+        return savePath;
     }
 }
