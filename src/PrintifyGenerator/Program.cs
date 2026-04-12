@@ -46,19 +46,18 @@ var generator = new MockupGenerator(
     visionModel:  "moondream:latest");
 
 // ── Collect candidate images from phase_3 results ─────────────────────────────
+const string checkingPath = "./src/data/Checking";
 const string phase3Path = "./src/data/phase_3";
-if (!Directory.Exists(phase3Path))
+const string oldPhase3Path = "./src/old_data/phase_3";
+
+if (!Directory.Exists(checkingPath) && !Directory.Exists(phase3Path) && !Directory.Exists(oldPhase3Path))
 {
-    Console.Error.WriteLine($"[WARN] Phase-3 data directory not found: {phase3Path}");
-    Console.Error.WriteLine("  → Checking old_data fallback...");
+    Console.Error.WriteLine("[WARN] No phase-3 data directories were found.");
+    Console.Error.WriteLine($"  → Expected one of: {checkingPath}, {phase3Path}, {oldPhase3Path}");
 }
 
-var jsonFiles = (Directory.Exists(phase3Path)
-        ? Directory.EnumerateFiles(phase3Path, "*.json", SearchOption.AllDirectories)
-        : Enumerable.Empty<string>())
-    .Concat(Directory.Exists("./src/old_data/phase_3")
-        ? Directory.EnumerateFiles("./src/old_data/phase_3", "*.json", SearchOption.AllDirectories)
-        : Enumerable.Empty<string>())
+var jsonFiles = EnumerateSuitabilityFiles(checkingPath, phase3Path, oldPhase3Path)
+    .Distinct(StringComparer.OrdinalIgnoreCase)
     .ToList();
 
 Console.WriteLine($"Found {jsonFiles.Count} phase-3 suitability records.");
@@ -76,16 +75,16 @@ foreach (var jsonFile in jsonFiles)
         if (!suitability.IsSuitableForPrint()) continue;
         if (suitability.OverallScore() < 6.0f) continue;
 
-        // imageURL is stored as "file://..." – strip the scheme
-        string path = suitability.imageURL.StartsWith("file://")
-            ? suitability.imageURL[7..]
-            : suitability.imageURL;
-
-        if (File.Exists(path))
+        string? path = ResolveImagePath(suitability.imageURL, jsonFile);
+        if (path is not null)
             imagePaths.Add(path);
     }
     catch { /* skip malformed records */ }
 }
+
+imagePaths = imagePaths
+    .Distinct(StringComparer.OrdinalIgnoreCase)
+    .ToList();
 
 if (imagePaths.Count == 0)
 {
@@ -121,3 +120,76 @@ foreach (var (imagePath, idx) in imagePaths.Select((p, i) => (p, i)))
 
 Console.WriteLine($"Done. {success} draft(s) created, {failed} failed.");
 Console.WriteLine("Inspect drafts in ./src/data/staging/drafts/ before publishing.");
+
+static IEnumerable<string> EnumerateSuitabilityFiles(string checkingRoot, string phase3Root, string oldPhase3Root)
+{
+    if (Directory.Exists(checkingRoot))
+    {
+        foreach (var file in Directory.EnumerateFiles(checkingRoot, "phase_3.json", SearchOption.AllDirectories))
+            yield return file;
+    }
+
+    if (Directory.Exists(phase3Root))
+    {
+        foreach (var file in Directory.EnumerateFiles(phase3Root, "*.json", SearchOption.AllDirectories))
+            yield return file;
+    }
+
+    if (Directory.Exists(oldPhase3Root))
+    {
+        foreach (var file in Directory.EnumerateFiles(oldPhase3Root, "*.json", SearchOption.AllDirectories))
+            yield return file;
+    }
+}
+
+static string? ResolveImagePath(string? imageUrl, string jsonFile)
+{
+    var resolvedPath = ResolveFromImageUrl(imageUrl);
+    if (resolvedPath is not null)
+        return resolvedPath;
+
+    var folderPath = Path.GetDirectoryName(jsonFile);
+    if (string.IsNullOrWhiteSpace(folderPath))
+        return null;
+
+    var folderName = Path.GetFileName(folderPath);
+    if (string.IsNullOrWhiteSpace(folderName))
+        return null;
+
+    foreach (var extension in new[] { ".png", ".jpg", ".jpeg", ".webp" })
+    {
+        var siblingImage = Path.Combine(folderPath, folderName + extension);
+        if (File.Exists(siblingImage))
+            return Path.GetFullPath(siblingImage);
+    }
+
+    return null;
+}
+
+static string? ResolveFromImageUrl(string? imageUrl)
+{
+    if (string.IsNullOrWhiteSpace(imageUrl))
+        return null;
+
+    var trimmed = imageUrl.Trim();
+
+    if (Uri.TryCreate(trimmed, UriKind.Absolute, out var fileUri) && fileUri.IsFile && File.Exists(fileUri.LocalPath))
+        return fileUri.LocalPath;
+
+    if (trimmed.StartsWith("file://", StringComparison.OrdinalIgnoreCase))
+    {
+        var withoutScheme = trimmed["file://".Length..];
+        if (!withoutScheme.StartsWith('/'))
+            withoutScheme = "/" + withoutScheme;
+
+        var legacyPath = Path.GetFullPath(withoutScheme);
+        if (File.Exists(legacyPath))
+            return legacyPath;
+    }
+
+    var localPath = Path.IsPathRooted(trimmed)
+        ? trimmed
+        : Path.GetFullPath(trimmed);
+
+    return File.Exists(localPath) ? Path.GetFullPath(localPath) : null;
+}

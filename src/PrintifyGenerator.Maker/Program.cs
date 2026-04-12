@@ -57,7 +57,7 @@ if (File.Exists("./main.env"))
 
 
 // return;
-OllamaClient ollama = new OllamaClient();
+OllamaClient ollama = new OllamaClient("http://localhost:11434");
 // OllamaClient ollamaExternal = new OllamaClient("http://192.168.0.151:11434");
 
 WebSocketEventEmitter emitter = new WebSocketEventEmitter();
@@ -95,40 +95,12 @@ while(!Console.KeyAvailable)
      you will return a json and only a json to explain this
      "+new ImageSuitability().PrityJsonString();
 
-    //Find Images that are not in phase 3
-    List<(string id,string path)> phase3Responses = new();
-    //get files recursively in phase 3
-    if(Directory.Exists("./src/data/phase_3"))
-    {
-        var files = Directory.GetFiles("./src/data/phase_3", "*.*", SearchOption.AllDirectories);
-        foreach(var file in files)        {
-            if(file.EndsWith(".json") || file.EndsWith(".jpg") || file.EndsWith(".jpeg"))
-            {
-                phase3Responses.Add((Path.GetFileNameWithoutExtension(file), file));
-            }
-        }
-    }
-    List<(string id,string path)> phase2Responses = new();
-    if(Directory.Exists("./src/data/phase_2"))
-    {
-        var files = Directory.GetFiles("./src/data/phase_2", "*.*", SearchOption.AllDirectories);
-        foreach(var file in files)        {
-            if(file.EndsWith(".png"))
-            {
-                phase2Responses.Add((Path.GetFileNameWithoutExtension(file), file));
-            }
-        }
-    }
-    var toProcess = phase2Responses.Where(x => !phase3Responses.Any(y => y.id == x.id)).Select(a => a.path).ToList();
+    var toProcess = GetPendingSuitabilityImages().ToList();
 
     await foreach(var suitabilities in GenerateImageSuitability(ollama, toProcess,SutabilityPrompt))
     {
-        //keep the same structure just using phase_3 instaead of phase_2 and a json instead of a png
-        string newpath = suitabilities.imageURL.Replace("phase_2","phase_3");
-        newpath = newpath.Replace(".png", ".json");
-        newpath = newpath.Substring(6);
-        Console.WriteLine(newpath);
-        File.AppendAllText(newpath, suitabilities.ToJsonString());
+        string newPath = WriteSuitabilityRecord(suitabilities);
+        Console.WriteLine(newPath);
         Console.WriteLine("Generated suitability for " + suitabilities.imageURL);
     }
 
@@ -146,13 +118,22 @@ while(!Console.KeyAvailable)
             await foreach(var suitabilities in GenerateImageSuitability(ollama, images,SutabilityPrompt))
             {
                 Console.WriteLine(suitabilities.PrityJsonString());
-                //keep the same structure just using phase_3 instaead of phase_2 and a json instead of a png
-                string newpath = suitabilities.imageURL.Replace("phase_2","phase_3").Replace(".png", ".json").Substring(6);
-                File.AppendAllText(newpath, suitabilities.ToJsonString());
+                WriteSuitabilityRecord(suitabilities);
                 Console.WriteLine("Generated suitability for " + suitabilities.imageURL);
             }
             images.Clear();
         }
+    }
+
+    if (images.Count > 0)
+    {
+        await foreach (var suitabilities in GenerateImageSuitability(ollama, images, SutabilityPrompt))
+        {
+            Console.WriteLine(suitabilities.PrityJsonString());
+            WriteSuitabilityRecord(suitabilities);
+            Console.WriteLine("Generated suitability for " + suitabilities.imageURL);
+        }
+        images.Clear();
     }
 }
 
@@ -165,6 +146,7 @@ async IAsyncEnumerable<ImageSuitability> GenerateImageSuitability(OllamaClient o
         start:
         try
         {
+            // await foreach (var response in ol.GenerateWithImageStreamAsync("gemma4:e2b",  SutabilityPrompt,image))
             await foreach (var response in ol.GenerateWithImageStreamAsync("gemma4:e2b",  SutabilityPrompt,image))
             {
                 totalResp += response;
@@ -173,8 +155,8 @@ async IAsyncEnumerable<ImageSuitability> GenerateImageSuitability(OllamaClient o
             totalResp = totalResp.Substring(totalResp.IndexOf("{")); // get the json part only
             totalResp = totalResp.Substring(0,totalResp.LastIndexOf("}")+1); // get the json part only
             suitability = JsonSerializer.Deserialize<ImageSuitability>(totalResp) ?? new ImageSuitability();
-            if (suitability.isValid()){                
-                suitability.imageURL = "file://home/rf/Desktop/Printify_prodcuct_generator/" + image.Substring(2);
+            if (suitability.isValid()){
+                suitability.imageURL = CreateImageFileUri(image);
             }else{
                 // Console.WriteLine($"Invalid suitability response for {image}. Response: {suitability.PrityJsonString()}");
                 totalResp = "";
@@ -278,4 +260,110 @@ async IAsyncEnumerable<string> GenerateImage(IAsyncEnumerable<Prompt> prompts)
         Console.WriteLine($"Job {jobId} completed. Outputs downloaded.");
     }
     
+}
+
+List<string> GetPendingSuitabilityImages()
+{
+    var pendingImages = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+
+    const string checkingRoot = "./src/data/Checking";
+    if (Directory.Exists(checkingRoot))
+    {
+        foreach (var imagePath in Directory.EnumerateFiles(checkingRoot, "*.png", SearchOption.AllDirectories))
+        {
+            var folderPath = Path.GetDirectoryName(imagePath);
+            if (string.IsNullOrWhiteSpace(folderPath))
+                continue;
+
+            var phase3Record = Path.Combine(folderPath, "phase_3.json");
+            if (!File.Exists(phase3Record))
+                pendingImages.Add(imagePath);
+        }
+    }
+
+    const string phase2Root = "./src/data/phase_2";
+    const string phase3Root = "./src/data/phase_3";
+    if (Directory.Exists(phase2Root))
+    {
+        foreach (var imagePath in Directory.EnumerateFiles(phase2Root, "*.png", SearchOption.AllDirectories))
+        {
+            var legacyOutput = GetLegacySuitabilityPath(imagePath, phase2Root, phase3Root);
+            if (!File.Exists(legacyOutput))
+                pendingImages.Add(imagePath);
+        }
+    }
+
+    return pendingImages.OrderBy(path => path, StringComparer.OrdinalIgnoreCase).ToList();
+}
+
+string WriteSuitabilityRecord(ImageSuitability suitability)
+{
+    var imagePath = ResolveImagePathFromUrl(suitability.imageURL);
+    var outputPath = GetSuitabilityOutputPath(imagePath);
+
+    var directory = Path.GetDirectoryName(outputPath);
+    if (!string.IsNullOrWhiteSpace(directory))
+        Directory.CreateDirectory(directory);
+
+    File.WriteAllText(outputPath, suitability.ToJsonString());
+    return outputPath;
+}
+
+string GetSuitabilityOutputPath(string imagePath)
+{
+    var fullImagePath = Path.GetFullPath(imagePath);
+    var directory = Path.GetDirectoryName(fullImagePath) ?? Directory.GetCurrentDirectory();
+    var folderName = Path.GetFileName(directory);
+    var imageName = Path.GetFileNameWithoutExtension(fullImagePath);
+    var checkingSegment = $"{Path.DirectorySeparatorChar}Checking{Path.DirectorySeparatorChar}";
+
+    if (fullImagePath.Contains(checkingSegment, StringComparison.OrdinalIgnoreCase)
+        && string.Equals(folderName, imageName, StringComparison.OrdinalIgnoreCase))
+    {
+        return Path.Combine(directory, "phase_3.json");
+    }
+
+    const string phase2Root = "./src/data/phase_2";
+    const string phase3Root = "./src/data/phase_3";
+    if (fullImagePath.Contains($"{Path.DirectorySeparatorChar}phase_2{Path.DirectorySeparatorChar}", StringComparison.OrdinalIgnoreCase))
+        return GetLegacySuitabilityPath(fullImagePath, phase2Root, phase3Root);
+
+    return Path.ChangeExtension(fullImagePath, ".json");
+}
+
+string GetLegacySuitabilityPath(string imagePath, string phase2Root, string phase3Root)
+{
+    var fullImagePath = Path.GetFullPath(imagePath);
+    var fullPhase2Root = Path.GetFullPath(phase2Root)
+        .TrimEnd(Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar);
+    var fullPhase3Root = Path.GetFullPath(phase3Root)
+        .TrimEnd(Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar);
+
+    if (!fullImagePath.StartsWith(fullPhase2Root, StringComparison.OrdinalIgnoreCase))
+        return Path.ChangeExtension(fullImagePath, ".json");
+
+    var relativePath = Path.GetRelativePath(fullPhase2Root, fullImagePath);
+    return Path.ChangeExtension(Path.Combine(fullPhase3Root, relativePath), ".json");
+}
+
+string ResolveImagePathFromUrl(string imageUrl)
+{
+    if (Uri.TryCreate(imageUrl, UriKind.Absolute, out var imageUri) && imageUri.IsFile)
+        return imageUri.LocalPath;
+
+    if (imageUrl.StartsWith("file://", StringComparison.OrdinalIgnoreCase))
+    {
+        var withoutScheme = imageUrl["file://".Length..];
+        if (!withoutScheme.StartsWith('/'))
+            withoutScheme = "/" + withoutScheme;
+
+        return Path.GetFullPath(withoutScheme);
+    }
+
+    return Path.GetFullPath(imageUrl);
+}
+
+string CreateImageFileUri(string imagePath)
+{
+    return new Uri(Path.GetFullPath(imagePath)).AbsoluteUri;
 }
