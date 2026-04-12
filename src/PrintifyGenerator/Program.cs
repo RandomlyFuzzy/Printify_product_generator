@@ -24,7 +24,8 @@ if (string.IsNullOrWhiteSpace(token))
 
 // ── Clients ────────────────────────────────────────────────────────────────────
 PrintifyClient printify = new PrintifyClient(token);
-OllamaClient   ollama   = new OllamaClient("http://192.168.0.151:11434");
+// OllamaClient   ollama   = new OllamaClient("http://192.168.0.151:11434");
+OllamaClient   ollama   = new OllamaClient();//"http://192.168.0.151:11434");
 
 // ── Auto-resolve shop ID ───────────────────────────────────────────────────────
 Console.WriteLine("Fetching shop list from Printify...");
@@ -47,16 +48,14 @@ var generator = new MockupGenerator(
 
 // ── Collect candidate images from phase_3 results ─────────────────────────────
 const string checkingPath = "./src/data/Checking";
-const string phase3Path = "./src/data/phase_3";
-const string oldPhase3Path = "./src/old_data/phase_3";
 
-if (!Directory.Exists(checkingPath) && !Directory.Exists(phase3Path) && !Directory.Exists(oldPhase3Path))
+if (!Directory.Exists(checkingPath) )
 {
     Console.Error.WriteLine("[WARN] No phase-3 data directories were found.");
-    Console.Error.WriteLine($"  → Expected one of: {checkingPath}, {phase3Path}, {oldPhase3Path}");
+    Console.Error.WriteLine($"  → Expected one of: {checkingPath}");
 }
 
-var jsonFiles = EnumerateSuitabilityFiles(checkingPath, phase3Path, oldPhase3Path)
+var jsonFiles = EnumerateSuitabilityFiles(checkingPath)
     .Distinct(StringComparer.OrdinalIgnoreCase)
     .ToList();
 
@@ -121,7 +120,7 @@ foreach (var (imagePath, idx) in imagePaths.Select((p, i) => (p, i)))
 Console.WriteLine($"Done. {success} draft(s) created, {failed} failed.");
 Console.WriteLine("Inspect drafts in ./src/data/staging/drafts/ before publishing.");
 
-static IEnumerable<string> EnumerateSuitabilityFiles(string checkingRoot, string phase3Root, string oldPhase3Root)
+static IEnumerable<string> EnumerateSuitabilityFiles(string checkingRoot)
 {
     if (Directory.Exists(checkingRoot))
     {
@@ -129,17 +128,6 @@ static IEnumerable<string> EnumerateSuitabilityFiles(string checkingRoot, string
             yield return file;
     }
 
-    if (Directory.Exists(phase3Root))
-    {
-        foreach (var file in Directory.EnumerateFiles(phase3Root, "*.json", SearchOption.AllDirectories))
-            yield return file;
-    }
-
-    if (Directory.Exists(oldPhase3Root))
-    {
-        foreach (var file in Directory.EnumerateFiles(oldPhase3Root, "*.json", SearchOption.AllDirectories))
-            yield return file;
-    }
 }
 
 static string? ResolveImagePath(string? imageUrl, string jsonFile)
