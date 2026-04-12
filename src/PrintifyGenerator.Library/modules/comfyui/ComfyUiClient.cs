@@ -338,7 +338,7 @@ public class JobStatus
     // 🆕 Outputs
     public List<string> ImageUrls { get; set; } = new List<string>();
 
-    public async Task<string> DownloadAllImagesAsync(string saveDirectory)
+    public async Task<string> DownloadAllImagesAsync(string saveDirectory,string filename = null)
     {
         Directory.CreateDirectory(saveDirectory);
 
@@ -391,7 +391,7 @@ public class JobStatus
                 .ToDictionary(p => Uri.UnescapeDataString(p[0]), p => Uri.UnescapeDataString(p[1]));
 
             var originalFilename = query.TryGetValue("filename", out var fn) ? fn : Path.GetFileName(uri.LocalPath);
-            var savePath = Path.Combine(saveDirectory, $"{PromptId}.png");
+            var savePath = Path.Combine(saveDirectory, (filename ?? PromptId) + ".png");
             Console.WriteLine($"Downloading {url} to {savePath}...");
             return await DownloadImageAsync(url, savePath);
         }

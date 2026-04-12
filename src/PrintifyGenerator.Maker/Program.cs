@@ -113,9 +113,6 @@ while(!Console.KeyAvailable)
         newpath = newpath.Replace(".png", ".json");
         newpath = newpath.Substring(6);
         Console.WriteLine(newpath);
-        if(!Directory.Exists(Path.GetDirectoryName(newpath)))
-            Directory.CreateDirectory(Path.GetDirectoryName(newpath));
-
         File.WriteAllText(newpath, suitabilities.PrityJsonString());
         Console.WriteLine("Generated suitability for " + suitabilities.imageURL);
     }
@@ -136,9 +133,6 @@ while(!Console.KeyAvailable)
                 Console.WriteLine(suitabilities.PrityJsonString());
                 //keep the same structure just using phase_3 instaead of phase_2 and a json instead of a png
                 string newpath = suitabilities.imageURL.Replace("phase_2","phase_3").Replace(".png", ".json").Substring(6);
-                if(!Directory.Exists(Path.GetDirectoryName(newpath)))
-                    Directory.CreateDirectory(Path.GetDirectoryName(newpath));
-
                 File.WriteAllText(newpath, suitabilities.PrityJsonString());
                 Console.WriteLine("Generated suitability for " + suitabilities.imageURL);
             }
@@ -261,10 +255,11 @@ async IAsyncEnumerable<string> GenerateImage(IAsyncEnumerable<Prompt> prompts)
         }
         Console.SetCursorPosition(0, Console.CursorTop + 1);
         //download the images
-        if(!Directory.Exists($"./src/data/phase_1/{DateTime.Now:yyyy-MM/dd}"))
-            Directory.CreateDirectory($"./src/data/phase_1/{DateTime.Now:yyyy-MM/dd}");
-        File.WriteAllText($"./src/data/phase_1/{DateTime.Now:yyyy-MM/dd}/{jobId}.json", prompt.ToPrityJsonString());
-        yield return await jobStatus.DownloadAllImagesAsync($"./src/data/phase_2/{DateTime.Now:yyyy-MM/dd}/");
+        string baseDir = $"./src/data/Checking/{DateTime.Now:yyyy-MM/dd}/{jobId}";
+        if(!Directory.Exists(baseDir))
+            Directory.CreateDirectory(baseDir);
+        File.WriteAllText(Path.Combine(baseDir, "phase_1.json"), prompt.ToPrityJsonString());
+        yield return await jobStatus.DownloadAllImagesAsync(baseDir, "phase_2");
         Console.WriteLine($"Job {jobId} completed. Outputs downloaded.");
     }
     
