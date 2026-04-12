@@ -128,7 +128,7 @@ while(!Console.KeyAvailable)
         newpath = newpath.Replace(".png", ".json");
         newpath = newpath.Substring(6);
         Console.WriteLine(newpath);
-        File.WriteAllText(newpath, suitabilities.PrityJsonString());
+        File.AppendAllText(newpath, suitabilities.ToJsonString());
         Console.WriteLine("Generated suitability for " + suitabilities.imageURL);
     }
 
@@ -148,7 +148,7 @@ while(!Console.KeyAvailable)
                 Console.WriteLine(suitabilities.PrityJsonString());
                 //keep the same structure just using phase_3 instaead of phase_2 and a json instead of a png
                 string newpath = suitabilities.imageURL.Replace("phase_2","phase_3").Replace(".png", ".json").Substring(6);
-                File.WriteAllText(newpath, suitabilities.PrityJsonString());
+                File.AppendAllText(newpath, suitabilities.ToJsonString());
                 Console.WriteLine("Generated suitability for " + suitabilities.imageURL);
             }
             images.Clear();
@@ -176,7 +176,7 @@ async IAsyncEnumerable<ImageSuitability> GenerateImageSuitability(OllamaClient o
             if (suitability.isValid()){                
                 suitability.imageURL = "file://home/rf/Desktop/Printify_prodcuct_generator/" + image.Substring(2);
             }else{
-                Console.WriteLine($"Invalid suitability response for {image}. Response: {suitability.PrityJsonString()}");
+                // Console.WriteLine($"Invalid suitability response for {image}. Response: {suitability.PrityJsonString()}");
                 totalResp = "";
                 goto start;
             }
@@ -274,7 +274,7 @@ async IAsyncEnumerable<string> GenerateImage(IAsyncEnumerable<Prompt> prompts)
         if(!Directory.Exists(baseDir))
             Directory.CreateDirectory(baseDir);
         File.WriteAllText(Path.Combine(baseDir, "phase_1.json"), prompt.ToPrityJsonString());
-        yield return await jobStatus.DownloadAllImagesAsync(baseDir, "phase_2");
+        yield return await jobStatus.DownloadAllImagesAsync(baseDir);
         Console.WriteLine($"Job {jobId} completed. Outputs downloaded.");
     }
     

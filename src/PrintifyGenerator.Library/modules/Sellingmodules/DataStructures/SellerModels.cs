@@ -71,13 +71,13 @@ public class CreateListingRequest
     /// <summary>Base price. On Etsy this maps to the single-offering price; on eBay to the offer price.</summary>
     public required decimal Price       { get; set; }
     public required int     Quantity    { get; set; }
-    public string           CurrencyCode { get; set; } = "USD";
+    public string           CurrencyCode { get; set; } = "GBP";
     public List<string>?    Tags        { get; set; }
     /// <summary>
     /// When <c>true</c>, the listing is published/activated immediately after creation.
     /// When <c>false</c> (default), it is saved as a draft.
     /// </summary>
-    public bool             AutoPublish { get; set; }
+    public bool             AutoPublish { get; set; } = false
     /// <summary>Platform-specific extension values passed through to the underlying API call.</summary>
     public Dictionary<string, object?>? PlatformExtensions { get; set; }
 }
