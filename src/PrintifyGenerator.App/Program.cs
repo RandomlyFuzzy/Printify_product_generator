@@ -16,7 +16,7 @@ using System.Linq;
 
 using System.Net.Http.Headers;
 using System.Text.Json;
-using PrintifyGenerator.Library.printify;
+using System.Runtime.InteropServices.JavaScript;
 
 
 //read the token from the main.env file
@@ -34,16 +34,31 @@ if (File.Exists("./main.env"))
 }
 // Console.WriteLine($"Token: {token}");
 
+// PrintifyClient client = new PrintifyClient(token);
+
+// // foreach(var file in Directory.GetFiles("./src/data/phase_3", "*.*", SearchOption.AllDirectories))
+// // {
+// //     ImageSuitability suitability = JsonSerializer.Deserialize<ImageSuitability>(File.ReadAllText(file)) ?? new ImageSuitability();
+// //     if(suitability.Scoring.OverallScore() > 6.0f && suitability.IsSuitableForPrint())
+// //     {
+// //         // Console.WriteLine($"Uploading {file} to Printify...");
+// //         //upload the image to printify using the api and get the url
+// //         var imageUrl = await client.UploadImageFromFileAsync(suitability.imageURL.Substring(6)); // remove file:// from the path
+// //         Console.WriteLine($"Image uploaded. URL: {imageUrl}");
+// //     }
+// // }
+
+// foreach(var images in (await client.GetUploadsAsync(1,50)).Data)
+// {
+//     Console.WriteLine($"Uploaded image: {images.Id}, URL: {images.FileName}");
+// }
 
 
 
 
-
-
-
-return;
+// return;
 OllamaClient ollama = new OllamaClient();
-OllamaClient ollamaExternal = new OllamaClient("http://192.168.0.151:11434");
+// OllamaClient ollamaExternal = new OllamaClient("http://192.168.0.151:11434");
 
 WebSocketEventEmitter emitter = new WebSocketEventEmitter();
 ComfyUiClient comfyUi = new ComfyUiClient("http://192.168.0.151:8188",emitter);
@@ -131,7 +146,7 @@ while(!Console.KeyAvailable)
         images.Add(image);
         if (images.Count > 4)
         {
-            await foreach(var suitabilities in GenerateImageSuitability(ollamaExternal, images,SutabilityPrompt))
+            await foreach(var suitabilities in GenerateImageSuitability(ollama, images,SutabilityPrompt))
             {
                 Console.WriteLine(suitabilities.PrityJsonString());
                 //keep the same structure just using phase_3 instaead of phase_2 and a json instead of a png
