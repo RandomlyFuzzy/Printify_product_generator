@@ -24,7 +24,7 @@ if (string.IsNullOrWhiteSpace(token))
 
 // ── Clients ────────────────────────────────────────────────────────────────────
 PrintifyClient printify = new PrintifyClient(token);
-OllamaClient   ollama   = new OllamaClient();
+OllamaClient   ollama   = new OllamaClient("http://192.168.0.151:11434");
 
 // ── Auto-resolve shop ID ───────────────────────────────────────────────────────
 Console.WriteLine("Fetching shop list from Printify...");
