@@ -274,7 +274,7 @@ async IAsyncEnumerable<string> GenerateImage(IAsyncEnumerable<Prompt> prompts)
         if(!Directory.Exists(baseDir))
             Directory.CreateDirectory(baseDir);
         File.WriteAllText(Path.Combine(baseDir, "phase_1.json"), prompt.ToPrityJsonString());
-        yield return await jobStatus.DownloadAllImagesAsync(baseDir, "phase_2");
+        yield return await jobStatus.DownloadAllImagesAsync(baseDir);
         Console.WriteLine($"Job {jobId} completed. Outputs downloaded.");
     }
     
