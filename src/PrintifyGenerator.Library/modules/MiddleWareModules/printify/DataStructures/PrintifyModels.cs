@@ -61,8 +61,17 @@ public record Variant
 {
     [JsonPropertyName("id")] public int Id { get; set; }
     [JsonPropertyName("title")] public string Title { get; set; } = "";
+    [JsonPropertyName("cost")] public int? Cost { get; set; }
+    [JsonPropertyName("price")] public int? Price { get; set; }
+    [JsonPropertyName("prices")] public List<VariantPrice> Prices { get; set; } = new();
     [JsonPropertyName("options")] public Dictionary<string, object>? Options { get; set; }
     [JsonPropertyName("placeholders")] public List<VariantPlaceholder>? Placeholders { get; set; }
+}
+
+public record VariantPrice
+{
+    [JsonPropertyName("currency")] public string Currency { get; set; } = "";
+    [JsonPropertyName("price")] public int Price { get; set; }
 }
 
 public record VariantPlaceholder

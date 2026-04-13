@@ -108,6 +108,24 @@ public class MockupGenerator
                 {
                     continue;
                 }
+                //filter variants by price so i can keep cost to a minimum
+                //find the mid price of each sku and keep all variants that are below a certain threshold (e.g. $15)
+                var affordableVariants = new List<Variant>();
+                foreach(var variant in variants)                {
+                    var prices = variant.Prices;
+                    if(prices == null || prices.Count == 0)                    {
+                        continue;
+                    }
+                    var midPrice = prices.Average(p => p.Price);
+                    if(midPrice <= 1500) // $15.00 in cents                    {
+                        affordableVariants.Add(variant);
+                }
+                if(affordableVariants.Count == 0)                {
+                    Console.WriteLine($"[MockupGenerator] No affordable variants found for blueprint {suggestion.BlueprintId} with provider {provider.Id}. Skipping.");
+                    continue;
+                }
+                variants = affordableVariants;
+
 
                 if(variants.Count > 100)
                 {
@@ -327,8 +345,7 @@ public class MockupGenerator
         try
         {
             var suggestionArray = JsonSerializer.Deserialize<List<BlueprintSuggestion>>(responseText, JsonOpts);
-            var suggestion = suggestionArray?.FirstOrDefault();
-            if(suggestionArray.All(s => s.BlueprintId == 0) && suggestionArray.Count > 1)
+            if (suggestionArray is { Count: > 1 } && suggestionArray.All(s => s.BlueprintId == 0))
             {
                 Console.WriteLine($"[MockupGenerator] LLM returned multiple suggestions, but all had invalid blueprint_id=0. Ignoring and falling back to first blueprint.");
                 return suggestionArray;
@@ -469,6 +486,7 @@ public class MockupGenerator
                 }
             }
         };
+        //get variant price to produce 
 
         var productVariants = variants.Select(v => new CreateProductVariant
         {
