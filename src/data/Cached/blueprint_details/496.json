@@ -1,0 +1,279 @@
+{
+  "blueprint": {
+    "id": 496,
+    "title": "Sublimation Crew Socks (EU)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d5c59bb168767454063216",
+      "https://images.printify.com/66f40668991520b25b03a92b",
+      "https://images.printify.com/5f1ea7c705a94832e6217a73",
+      "https://images.printify.com/5f1ea9094144dd0e71003433"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 26,
+        "title": "Textildruck Europa"
+      },
+      "variants": {
+        "id": 26,
+        "title": "Textildruck Europa",
+        "variants": [
+          {
+            "id": 66447,
+            "title": "S",
+            "options": {
+              "size": "S"
+            },
+            "placeholders": [
+              {
+                "position": "left_leg",
+                "decoration_method": "dye-sublimation",
+                "height": 4252,
+                "width": 1417
+              },
+              {
+                "position": "right_leg",
+                "decoration_method": "dye-sublimation",
+                "height": 4252,
+                "width": 1417
+              }
+            ]
+          },
+          {
+            "id": 66448,
+            "title": "M",
+            "options": {
+              "size": "M"
+            },
+            "placeholders": [
+              {
+                "position": "left_leg",
+                "decoration_method": "dye-sublimation",
+                "height": 4961,
+                "width": 1417
+              },
+              {
+                "position": "right_leg",
+                "decoration_method": "dye-sublimation",
+                "height": 4961,
+                "width": 1417
+              }
+            ]
+          },
+          {
+            "id": 66449,
+            "title": "L",
+            "options": {
+              "size": "L"
+            },
+            "placeholders": [
+              {
+                "position": "left_leg",
+                "decoration_method": "dye-sublimation",
+                "height": 5374,
+                "width": 1417
+              },
+              {
+                "position": "right_leg",
+                "decoration_method": "dye-sublimation",
+                "height": 5374,
+                "width": 1417
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              66447,
+              66448,
+              66449
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1249
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 659
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              66447,
+              66448,
+              66449
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2549
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 659
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              66447,
+              66448,
+              66449
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 959
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 119
+            },
+            "countries": [
+              "DK",
+              "LV",
+              "FI",
+              "EE",
+              "IS",
+              "LI",
+              "CH",
+              "LT",
+              "SE",
+              "NO"
+            ]
+          },
+          {
+            "variant_ids": [
+              66447,
+              66448,
+              66449
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 549
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 119
+            },
+            "countries": [
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "FO",
+              "FR",
+              "GE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IM",
+              "IT",
+              "JE",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "TR",
+              "UA",
+              "XK"
+            ]
+          },
+          {
+            "variant_ids": [
+              66447,
+              66448,
+              66449
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 859
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              66447,
+              66448,
+              66449
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 419
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 119
+            },
+            "countries": [
+              "DE"
+            ]
+          },
+          {
+            "variant_ids": [
+              66447,
+              66448,
+              66449
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 609
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 119
+            },
+            "countries": [
+              "GB",
+              "IE"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

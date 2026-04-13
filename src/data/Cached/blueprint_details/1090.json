@@ -1,0 +1,164 @@
+{
+  "blueprint": {
+    "id": 1090,
+    "title": "Natural Tote Bag",
+    "brand": "S\u0026S Bags",
+    "model": "42795",
+    "images": [
+      "https://images.printify.com/66d5b0f2639fbe7741007a02",
+      "https://images.printify.com/66d5b0f028813f3bb10dfdd2",
+      "https://images.printify.com/672df68f94aeb8d56d0196d2",
+      "https://images.printify.com/672df68a92b604c87f06c922"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 41,
+        "title": "Duplium"
+      },
+      "variants": {
+        "id": 41,
+        "title": "Duplium",
+        "variants": [
+          {
+            "id": 82432,
+            "title": "15\u0022 x 16\u0022 / Natural",
+            "options": {
+              "size": "15\u0022 x 16\u0022",
+              "color": "Natural"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3600,
+                "width": 3000
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 3600,
+                "width": 3000
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              82432
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1099
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "AD",
+              "GL",
+              "IS",
+              "BY",
+              "AT",
+              "GE",
+              "DE",
+              "LU",
+              "NL",
+              "PL",
+              "GP",
+              "MK",
+              "RE",
+              "TR",
+              "BV",
+              "VA",
+              "SM",
+              "BA",
+              "FO",
+              "HU",
+              "ES",
+              "UA",
+              "AX",
+              "EE",
+              "IM",
+              "LV",
+              "LI",
+              "LT",
+              "SK",
+              "CH",
+              "GB",
+              "XK",
+              "MC",
+              "RO",
+              "SE",
+              "AL",
+              "MT",
+              "HR",
+              "DK",
+              "GI",
+              "PT",
+              "RS",
+              "CZ",
+              "REST_OF_THE_WORLD",
+              "AM",
+              "BE",
+              "CY",
+              "GR",
+              "ME",
+              "NO",
+              "IE",
+              "FR",
+              "JE",
+              "MD",
+              "BG",
+              "FI",
+              "GG",
+              "IT",
+              "SI"
+            ]
+          },
+          {
+            "variant_ids": [
+              82432
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 829
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              82432
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1659
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 289
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

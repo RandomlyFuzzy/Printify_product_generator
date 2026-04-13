@@ -1,0 +1,97 @@
+{
+  "blueprint": {
+    "id": 2761,
+    "title": "Stemless Wine Glass, 11.5oz (Engraving) ",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/69286a7df08bb55160019733",
+      "https://images.printify.com/692875d597b7a507460e9b32"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 228,
+        "title": "Taylor"
+      },
+      "variants": {
+        "id": 228,
+        "title": "Taylor",
+        "variants": [
+          {
+            "id": 149515,
+            "title": "11.5oz",
+            "options": {
+              "size": "11.5oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "engraving",
+                "height": 1200,
+                "width": 1200
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              149515
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 949
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              149515
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2459
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1529
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              149515
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1579
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1099
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "blueprint": {
+    "id": 601,
+    "title": "Wireless Charger",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66f4ff744aab50cd5808df32",
+      "https://images.printify.com/66d6f01bc47fa4c3c4040a54",
+      "https://images.printify.com/66d6f04bc47fa4c3c4040a55",
+      "https://images.printify.com/6087c21e92edb32f9b47a2fb"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 1,
+        "title": "SPOKE Custom Products"
+      },
+      "variants": {
+        "id": 1,
+        "title": "SPOKE Custom Products",
+        "variants": [
+          {
+            "id": 71686,
+            "title": "Round / One size",
+            "options": {
+              "shape": "Round",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1234,
+                "width": 1234
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              71686
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 159
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              71686
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 959
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 219
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              71686
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 529
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 159
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              71686
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1249
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 449
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

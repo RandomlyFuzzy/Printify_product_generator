@@ -1,0 +1,137 @@
+{
+  "blueprint": {
+    "id": 2953,
+    "title": "Break Apart Heart Necklace Set (Engraving)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/6964ebcb0d24d6bf1f02aed2",
+      "https://images.printify.com/6964ef020602e333ad0c40a2",
+      "https://images.printify.com/695e0ea81dc0e79c19089122",
+      "https://images.printify.com/695e0eabaf926cf84e07af92",
+      "https://images.printify.com/69674c46d4bed482550a9632"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 217,
+        "title": "Fulfill Engine"
+      },
+      "variants": {
+        "id": 217,
+        "title": "Fulfill Engine",
+        "variants": [
+          {
+            "id": 164443,
+            "title": "18K Gold PVD coating / One Size",
+            "options": {
+              "color": "18K Gold PVD coating",
+              "size": "One Size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "laser-engraving",
+                "height": 840,
+                "width": 1020
+              }
+            ]
+          },
+          {
+            "id": 164444,
+            "title": "Stainless Steel / One Size",
+            "options": {
+              "color": "Stainless Steel",
+              "size": "One Size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "laser-engraving",
+                "height": 840,
+                "width": 1020
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              164443,
+              164444
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 449
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 209
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              164443,
+              164444
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 569
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              164443,
+              164444
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              164443,
+              164444
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 939
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

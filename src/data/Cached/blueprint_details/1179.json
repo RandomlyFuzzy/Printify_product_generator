@@ -1,0 +1,107 @@
+{
+  "blueprint": {
+    "id": 1179,
+    "title": "Accessory Zipper Pouch",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d09f49cfebb6ad860ad8a3",
+      "https://images.printify.com/66d09f46eb9bbcfb440fabe4",
+      "https://images.printify.com/6732074d8b2586f4200ded92",
+      "https://images.printify.com/62fa26ed5a91f30b8e0a2615",
+      "https://images.printify.com/62fa27fbabd1997c32030de6",
+      "https://images.printify.com/62fb8515c2a469e97b0be683",
+      "https://images.printify.com/62fa26f45a91f30b8e0a2618",
+      "https://images.printify.com/62fa26fc330cbf0dfc0b41b9"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 28,
+        "title": "District Photo"
+      },
+      "variants": {
+        "id": 28,
+        "title": "District Photo",
+        "variants": [
+          {
+            "id": 91328,
+            "title": "8.3\u0022 \u00D7 7.8\u0027\u0027",
+            "options": {
+              "size": "8.3\u0022 \u00D7 7.8\u0027\u0027"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1425,
+                "width": 1875
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              91328
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 479
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 169
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              91328
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1399
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "NZ",
+              "CA",
+              "NO",
+              "REST_OF_THE_WORLD",
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              91328
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 509
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

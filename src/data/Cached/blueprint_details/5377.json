@@ -1,0 +1,240 @@
+{
+  "blueprint": {
+    "id": 5377,
+    "title": "Foam Mesh-Back Trucker Cap",
+    "brand": "ValuCap",
+    "model": "VC700",
+    "images": [
+      "https://images.printify.com/69b13a5a4689f6e21f0777a0",
+      "https://images.printify.com/69b139967b725b582702069f",
+      "https://images.printify.com/69b13991cb465d5ae20ea0d2",
+      "https://images.printify.com/69b139a1ef94ce670d0a6aa0",
+      "https://images.printify.com/69b139507da766bc2c09e1bf",
+      "https://images.printify.com/69b139666c695f684806b6b2",
+      "https://images.printify.com/69b139724607a75f9a097e60",
+      "https://images.printify.com/69b1397c88706b2c72073083",
+      "https://images.printify.com/69b139885d86e967dd0701f1",
+      "https://images.printify.com/69b139b1376918bb8d028c10",
+      "https://images.printify.com/69b13a213509e69ddf06eca1"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 41,
+        "title": "Duplium"
+      },
+      "variants": {
+        "id": 41,
+        "title": "Duplium",
+        "variants": [
+          {
+            "id": 244837,
+            "title": "White / White / One size",
+            "options": {
+              "color": "White / White",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtf",
+                "height": 750,
+                "width": 1650
+              }
+            ]
+          },
+          {
+            "id": 244838,
+            "title": "Black / Black / One size",
+            "options": {
+              "color": "Black / Black",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtf",
+                "height": 750,
+                "width": 1650
+              }
+            ]
+          },
+          {
+            "id": 244839,
+            "title": "Navy / Navy / One size",
+            "options": {
+              "color": "Navy / Navy",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtf",
+                "height": 750,
+                "width": 1650
+              }
+            ]
+          },
+          {
+            "id": 244840,
+            "title": "White / Black / One size",
+            "options": {
+              "color": "White / Black",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtf",
+                "height": 750,
+                "width": 1650
+              }
+            ]
+          },
+          {
+            "id": 244841,
+            "title": "White / Kelly / One size",
+            "options": {
+              "color": "White / Kelly",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtf",
+                "height": 750,
+                "width": 1650
+              }
+            ]
+          },
+          {
+            "id": 244842,
+            "title": "White / Navy / One size",
+            "options": {
+              "color": "White / Navy",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtf",
+                "height": 750,
+                "width": 1650
+              }
+            ]
+          },
+          {
+            "id": 244843,
+            "title": "White / Red / One size",
+            "options": {
+              "color": "White / Red",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtf",
+                "height": 750,
+                "width": 1650
+              }
+            ]
+          },
+          {
+            "id": 244844,
+            "title": "White / Royal / One size",
+            "options": {
+              "color": "White / Royal",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtf",
+                "height": 750,
+                "width": 1650
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              244837,
+              244838,
+              244839,
+              244840,
+              244841,
+              244842,
+              244843,
+              244844
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 929
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              244837,
+              244838,
+              244839,
+              244840,
+              244841,
+              244842,
+              244843,
+              244844
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1199
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 599
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              244837,
+              244838,
+              244839,
+              244840,
+              244841,
+              244842,
+              244843,
+              244844
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 749
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 99
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

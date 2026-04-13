@@ -1,0 +1,713 @@
+{
+  "blueprint": {
+    "id": 1901,
+    "title": "5 Panel Cap (Embroidery)",
+    "brand": "Yupoong",
+    "model": "7005",
+    "images": [
+      "https://images.printify.com/67af0400dbc03c3a6d0a6d52",
+      "https://images.printify.com/690ae7297df4b4051e0da4f2",
+      "https://images.printify.com/690ae756a5523caf930d3273",
+      "https://images.printify.com/684c51bb2f5fb839c60a79b2",
+      "https://images.printify.com/684c51a9a2ab2496580cd1c2",
+      "https://images.printify.com/67af0401dbc03c3a6d0a6d53",
+      "https://images.printify.com/67af0403dbc03c3a6d0a6d54",
+      "https://images.printify.com/67af03fe91530509bd0279b4",
+      "https://images.printify.com/684c4c213192d34b9b0a8352",
+      "https://images.printify.com/684c4ddd8b984aa94c0d05d3"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 410,
+        "title": "Printful"
+      },
+      "variants": {
+        "id": 410,
+        "title": "Printful",
+        "variants": [
+          {
+            "id": 119155,
+            "title": "One size / Black",
+            "options": {
+              "size": "One size",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 525,
+                "width": 1200
+              },
+              {
+                "position": "back_hat_embroidery",
+                "decoration_method": "embroidery",
+                "height": 300,
+                "width": 600
+              }
+            ]
+          },
+          {
+            "id": 119156,
+            "title": "One size / Green Camo",
+            "options": {
+              "size": "One size",
+              "color": "Green Camo"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 525,
+                "width": 1200
+              },
+              {
+                "position": "back_hat_embroidery",
+                "decoration_method": "embroidery",
+                "height": 300,
+                "width": 600
+              }
+            ]
+          },
+          {
+            "id": 119157,
+            "title": "One size / Grey",
+            "options": {
+              "size": "One size",
+              "color": "Grey"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 525,
+                "width": 1200
+              },
+              {
+                "position": "back_hat_embroidery",
+                "decoration_method": "embroidery",
+                "height": 300,
+                "width": 600
+              }
+            ]
+          },
+          {
+            "id": 119158,
+            "title": "One size / Khaki",
+            "options": {
+              "size": "One size",
+              "color": "Khaki"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 525,
+                "width": 1200
+              },
+              {
+                "position": "back_hat_embroidery",
+                "decoration_method": "embroidery",
+                "height": 300,
+                "width": 600
+              }
+            ]
+          },
+          {
+            "id": 119159,
+            "title": "One size / Navy",
+            "options": {
+              "size": "One size",
+              "color": "Navy"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 525,
+                "width": 1200
+              },
+              {
+                "position": "back_hat_embroidery",
+                "decoration_method": "embroidery",
+                "height": 300,
+                "width": 600
+              }
+            ]
+          },
+          {
+            "id": 119160,
+            "title": "One size / Olive",
+            "options": {
+              "size": "One size",
+              "color": "Olive"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 525,
+                "width": 1200
+              },
+              {
+                "position": "back_hat_embroidery",
+                "decoration_method": "embroidery",
+                "height": 300,
+                "width": 600
+              }
+            ]
+          },
+          {
+            "id": 119161,
+            "title": "One size / Red",
+            "options": {
+              "size": "One size",
+              "color": "Red"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 525,
+                "width": 1200
+              },
+              {
+                "position": "back_hat_embroidery",
+                "decoration_method": "embroidery",
+                "height": 300,
+                "width": 600
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              119155,
+              119156,
+              119157,
+              119158,
+              119159,
+              119160,
+              119161
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 449
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 209
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              119155,
+              119156,
+              119157,
+              119158,
+              119159,
+              119160,
+              119161
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 489
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 219
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              119155,
+              119156,
+              119157,
+              119158,
+              119159,
+              119160,
+              119161
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 459
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 145
+            },
+            "countries": [
+              "JE",
+              "MT",
+              "LU",
+              "MD",
+              "SK",
+              "LT",
+              "HU",
+              "MK",
+              "BE",
+              "AT",
+              "RO",
+              "IE",
+              "AX",
+              "FO",
+              "DE",
+              "MC",
+              "SE",
+              "ES",
+              "CY",
+              "DK",
+              "VA",
+              "LV",
+              "HR",
+              "GI",
+              "AL",
+              "SM",
+              "BG",
+              "AD",
+              "UA",
+              "GR",
+              "CZ",
+              "EE",
+              "GP",
+              "BY",
+              "GG",
+              "NL",
+              "GE",
+              "FR",
+              "BA",
+              "IM",
+              "RE",
+              "PT",
+              "ME",
+              "TR",
+              "PL",
+              "RS",
+              "XK",
+              "BV",
+              "GL",
+              "AM",
+              "FI",
+              "IT",
+              "SI"
+            ]
+          },
+          {
+            "variant_ids": [
+              119155,
+              119156,
+              119157,
+              119158,
+              119159,
+              119160,
+              119161
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 110
+            },
+            "countries": [
+              "LI",
+              "NO",
+              "IS",
+              "CH"
+            ]
+          },
+          {
+            "variant_ids": [
+              119155,
+              119156,
+              119157,
+              119158,
+              119159,
+              119160,
+              119161
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "JP",
+              "REST_OF_THE_WORLD",
+              "BR"
+            ]
+          },
+          {
+            "variant_ids": [
+              119155,
+              119156,
+              119157,
+              119158,
+              119159,
+              119160,
+              119161
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 939
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              119155,
+              119156,
+              119157,
+              119158,
+              119159,
+              119160,
+              119161
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 159
+            },
+            "countries": [
+              "GB"
+            ]
+          },
+          {
+            "variant_ids": [
+              119155,
+              119156,
+              119157,
+              119158,
+              119159,
+              119160,
+              119161
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1249
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 239
+            },
+            "countries": [
+              "AU"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "provider": {
+        "id": 99,
+        "title": "Printify Choice"
+      },
+      "variants": {
+        "id": 99,
+        "title": "Printify Choice",
+        "variants": [
+          {
+            "id": 119155,
+            "title": "One size / Black",
+            "options": {
+              "size": "One size",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "back_hat_embroidery",
+                "decoration_method": "embroidery",
+                "height": 300,
+                "width": 600
+              },
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 525,
+                "width": 1200
+              }
+            ]
+          },
+          {
+            "id": 119156,
+            "title": "One size / Green Camo",
+            "options": {
+              "size": "One size",
+              "color": "Green Camo"
+            },
+            "placeholders": [
+              {
+                "position": "back_hat_embroidery",
+                "decoration_method": "embroidery",
+                "height": 300,
+                "width": 600
+              },
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 525,
+                "width": 1200
+              }
+            ]
+          },
+          {
+            "id": 119157,
+            "title": "One size / Grey",
+            "options": {
+              "size": "One size",
+              "color": "Grey"
+            },
+            "placeholders": [
+              {
+                "position": "back_hat_embroidery",
+                "decoration_method": "embroidery",
+                "height": 300,
+                "width": 600
+              },
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 525,
+                "width": 1200
+              }
+            ]
+          },
+          {
+            "id": 119158,
+            "title": "One size / Khaki",
+            "options": {
+              "size": "One size",
+              "color": "Khaki"
+            },
+            "placeholders": [
+              {
+                "position": "back_hat_embroidery",
+                "decoration_method": "embroidery",
+                "height": 300,
+                "width": 600
+              },
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 525,
+                "width": 1200
+              }
+            ]
+          },
+          {
+            "id": 119159,
+            "title": "One size / Navy",
+            "options": {
+              "size": "One size",
+              "color": "Navy"
+            },
+            "placeholders": [
+              {
+                "position": "back_hat_embroidery",
+                "decoration_method": "embroidery",
+                "height": 300,
+                "width": 600
+              },
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 525,
+                "width": 1200
+              }
+            ]
+          },
+          {
+            "id": 119160,
+            "title": "One size / Olive",
+            "options": {
+              "size": "One size",
+              "color": "Olive"
+            },
+            "placeholders": [
+              {
+                "position": "back_hat_embroidery",
+                "decoration_method": "embroidery",
+                "height": 300,
+                "width": 600
+              },
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 525,
+                "width": 1200
+              }
+            ]
+          },
+          {
+            "id": 119161,
+            "title": "One size / Red",
+            "options": {
+              "size": "One size",
+              "color": "Red"
+            },
+            "placeholders": [
+              {
+                "position": "back_hat_embroidery",
+                "decoration_method": "embroidery",
+                "height": 300,
+                "width": 600
+              },
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 525,
+                "width": 1200
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              119155,
+              119156,
+              119157,
+              119158,
+              119159,
+              119160,
+              119161
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 449
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 209
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              119155,
+              119156,
+              119157,
+              119158,
+              119159,
+              119160,
+              119161
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              119155,
+              119156,
+              119157,
+              119158,
+              119159,
+              119160,
+              119161
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1249
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 239
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              119155,
+              119156,
+              119157,
+              119158,
+              119159,
+              119160,
+              119161
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 939
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              119155,
+              119156,
+              119157,
+              119158,
+              119159,
+              119160,
+              119161
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 489
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 219
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

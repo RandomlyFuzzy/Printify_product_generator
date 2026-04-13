@@ -1,0 +1,151 @@
+{
+  "blueprint": {
+    "id": 1637,
+    "title": "Christmas Sock (Polyester)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/6707e18208a342e4be055c23",
+      "https://images.printify.com/6707e182afcf884394012024",
+      "https://images.printify.com/6707e181807f16917b05d5c4",
+      "https://images.printify.com/6707e180807f16917b05d5c3",
+      "https://images.printify.com/6707e17fd3bf41cd080bf373",
+      "https://images.printify.com/6707e17eafcf884394012023"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 332,
+        "title": "Printdoors"
+      },
+      "variants": {
+        "id": 332,
+        "title": "Printdoors",
+        "variants": [
+          {
+            "id": 113442,
+            "title": "One size",
+            "options": {
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtf",
+                "height": 1830,
+                "width": 2365
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              113442
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 919
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 789
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              113442
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 649
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 529
+            },
+            "countries": [
+              "FR",
+              "DE",
+              "GB"
+            ]
+          },
+          {
+            "variant_ids": [
+              113442
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1049
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 359
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              113442
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 379
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "CN"
+            ]
+          },
+          {
+            "variant_ids": [
+              113442
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1149
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 979
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              113442
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 799
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 549
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

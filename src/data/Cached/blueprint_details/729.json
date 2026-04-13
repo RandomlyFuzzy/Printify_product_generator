@@ -1,0 +1,118 @@
+{
+  "blueprint": {
+    "id": 729,
+    "title": "Blackwater Outdoor Bluetooth Speaker",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66cc6c25da561839cf0b5ef3",
+      "https://images.printify.com/66cc6c24da561839cf0b5ef2",
+      "https://images.printify.com/61e7d9c616cf3c785f59d240",
+      "https://images.printify.com/61e7d9c6e83a0f72d67c3401",
+      "https://images.printify.com/61e7d9c3f98e353cd81a9384",
+      "https://images.printify.com/672e0b603a4b9a750903ce52"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 75,
+        "title": "SwagRabbit"
+      },
+      "variants": {
+        "id": 75,
+        "title": "SwagRabbit",
+        "variants": [
+          {
+            "id": 73699,
+            "title": "Black / One size",
+            "options": {
+              "color": "Black",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 717,
+                "width": 720
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              73699
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 579
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              73699
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1239
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              73699
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 799
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 299
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              73699
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1979
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 959
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

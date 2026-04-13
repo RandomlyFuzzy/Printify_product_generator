@@ -1,0 +1,164 @@
+{
+  "blueprint": {
+    "id": 1105,
+    "title": "Sweatshirt Blanket",
+    "brand": "Terry Town",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d5926850893400c003f843",
+      "https://images.printify.com/66d5926750893400c003f842",
+      "https://images.printify.com/62b14fc8746bf129cf0d299b",
+      "https://images.printify.com/62b14fd2746bf129cf0d29a0",
+      "https://images.printify.com/62bd9fc2e467419a4009aa7f",
+      "https://images.printify.com/62b152934a53b2187d0f717c"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 92,
+        "title": "Pic the Gift"
+      },
+      "variants": {
+        "id": 92,
+        "title": "Pic the Gift",
+        "variants": [
+          {
+            "id": 82216,
+            "title": "60\u0022 \u00D7 50\u0022",
+            "options": {
+              "size": "60\u0022 \u00D7 50\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 10800,
+                "width": 12600
+              }
+            ]
+          },
+          {
+            "id": 82217,
+            "title": "80\u0022 \u00D7 60\u0022",
+            "options": {
+              "size": "80\u0022 \u00D7 60\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 12700,
+                "width": 17200
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              82217
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1199
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 629
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              82216
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2389
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1539
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              82217
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2629
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2629
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              82216
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1959
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1129
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              82217
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 3359
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 3359
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              82216
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

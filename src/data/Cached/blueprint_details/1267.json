@@ -1,0 +1,367 @@
+{
+  "blueprint": {
+    "id": 1267,
+    "title": "Gloss Posters",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66e00d6198640c63e60a7302",
+      "https://images.printify.com/66cdda0560f9be2ae20029c5",
+      "https://images.printify.com/67ed141dd161ca3e75075e53"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 215,
+        "title": "Stickers \u0026 Posters"
+      },
+      "variants": {
+        "id": 215,
+        "title": "Stickers \u0026 Posters",
+        "variants": [
+          {
+            "id": 95727,
+            "title": "16.5\u0022 x 11.7\u0022 (Horizontal) / Glossy",
+            "options": {
+              "size": "16.5\u0022 x 11.7\u0022 (Horizontal)",
+              "paper": "Glossy"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 2970,
+                "width": 4200
+              }
+            ]
+          },
+          {
+            "id": 95728,
+            "title": "23.4\u0022 x 16.5\u0022 (Horizontal) / Glossy",
+            "options": {
+              "size": "23.4\u0022 x 16.5\u0022 (Horizontal)",
+              "paper": "Glossy"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 4200,
+                "width": 5940
+              }
+            ]
+          },
+          {
+            "id": 95729,
+            "title": "33.1\u0022 x 23.4\u0022 (Horizontal) / Glossy",
+            "options": {
+              "size": "33.1\u0022 x 23.4\u0022 (Horizontal)",
+              "paper": "Glossy"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 5940,
+                "width": 8410
+              }
+            ]
+          },
+          {
+            "id": 95730,
+            "title": "11.7\u0022 x 16.5\u0022 (Vertical) / Glossy",
+            "options": {
+              "size": "11.7\u0022 x 16.5\u0022 (Vertical)",
+              "paper": "Glossy"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 4200,
+                "width": 2970
+              }
+            ]
+          },
+          {
+            "id": 95731,
+            "title": "16.5\u0022 x 23.4\u0022 (Vertical) / Glossy",
+            "options": {
+              "size": "16.5\u0022 x 23.4\u0022 (Vertical)",
+              "paper": "Glossy"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 5940,
+                "width": 4200
+              }
+            ]
+          },
+          {
+            "id": 95732,
+            "title": "23.4\u0022 x 33.1\u0022 (Vertical) / Glossy",
+            "options": {
+              "size": "23.4\u0022 x 33.1\u0022 (Vertical)",
+              "paper": "Glossy"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 8410,
+                "width": 5940
+              }
+            ]
+          },
+          {
+            "id": 96405,
+            "title": "46.8\u0022 x 33.1\u0022 (Horizontal) / Glossy",
+            "options": {
+              "size": "46.8\u0022 x 33.1\u0022 (Horizontal)",
+              "paper": "Glossy"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 8410,
+                "width": 11890
+              }
+            ]
+          },
+          {
+            "id": 96406,
+            "title": "33.1\u0022 x 46.8\u0022 (Vertical) / Glossy",
+            "options": {
+              "size": "33.1\u0022 x 46.8\u0022 (Vertical)",
+              "paper": "Glossy"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 11890,
+                "width": 8410
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              96405,
+              96406
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1309
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 239
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              96405,
+              96406
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1439
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 649
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              96405,
+              96406
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1859
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1039
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              95729,
+              95732
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1459
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 669
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              95729,
+              95732
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1199
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 409
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              95729,
+              95732
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 719
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 239
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              95728,
+              95731
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 719
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 189
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              95728,
+              95731
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1299
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 449
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              95728,
+              95731
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1099
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 269
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              95727,
+              95730
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 989
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 209
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              95727,
+              95730
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 519
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 89
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              95727,
+              95730
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1129
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 339
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

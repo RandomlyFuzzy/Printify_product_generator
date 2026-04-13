@@ -1,0 +1,228 @@
+{
+  "blueprint": {
+    "id": 5387,
+    "title": "Tripper Duffel Bag",
+    "brand": "Independent Trading Company",
+    "model": "",
+    "images": [
+      "https://images.printify.com/69bd7097cddc3ed8a407cee5",
+      "https://images.printify.com/69bd707fc014329f3a0d29b0",
+      "https://images.printify.com/69bd708a5113752c680e3db3",
+      "https://images.printify.com/69bd70901964b11f3b0d68d0",
+      "https://images.printify.com/69bd7095923c6bc77b0e8933",
+      "https://images.printify.com/69c26c0ac49a0ab42a0e4901"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 217,
+        "title": "Fulfill Engine"
+      },
+      "variants": {
+        "id": 217,
+        "title": "Fulfill Engine",
+        "variants": [
+          {
+            "id": 244987,
+            "title": "20.5\u0022 x 10.5\u0022 / Black",
+            "options": {
+              "size": "20.5\u0022 x 10.5\u0022",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front_dtf",
+                "decoration_method": "dtf",
+                "height": 1500,
+                "width": 1500
+              },
+              {
+                "position": "front_embroidery",
+                "decoration_method": "embroidery",
+                "height": 1500,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 244988,
+            "title": "20.5\u0022 x 10.5\u0022 / Black Camo",
+            "options": {
+              "size": "20.5\u0022 x 10.5\u0022",
+              "color": "Black Camo"
+            },
+            "placeholders": [
+              {
+                "position": "front_dtf",
+                "decoration_method": "dtf",
+                "height": 1500,
+                "width": 1500
+              },
+              {
+                "position": "front_embroidery",
+                "decoration_method": "embroidery",
+                "height": 1500,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 244989,
+            "title": "20.5\u0022 x 10.5\u0022 / Black Cheetah",
+            "options": {
+              "size": "20.5\u0022 x 10.5\u0022",
+              "color": "Black Cheetah"
+            },
+            "placeholders": [
+              {
+                "position": "front_dtf",
+                "decoration_method": "dtf",
+                "height": 1500,
+                "width": 1500
+              },
+              {
+                "position": "front_embroidery",
+                "decoration_method": "embroidery",
+                "height": 1500,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 244990,
+            "title": "20.5\u0022 x 10.5\u0022 / Black / Checker Strap",
+            "options": {
+              "size": "20.5\u0022 x 10.5\u0022",
+              "color": "Black / Checker Strap"
+            },
+            "placeholders": [
+              {
+                "position": "front_dtf",
+                "decoration_method": "dtf",
+                "height": 1500,
+                "width": 1500
+              },
+              {
+                "position": "front_embroidery",
+                "decoration_method": "embroidery",
+                "height": 1500,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 244991,
+            "title": "20.5\u0022 x 10.5\u0022 / White Camo",
+            "options": {
+              "size": "20.5\u0022 x 10.5\u0022",
+              "color": "White Camo"
+            },
+            "placeholders": [
+              {
+                "position": "front_dtf",
+                "decoration_method": "dtf",
+                "height": 1500,
+                "width": 1500
+              },
+              {
+                "position": "front_embroidery",
+                "decoration_method": "embroidery",
+                "height": 1500,
+                "width": 1500
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              244987,
+              244988,
+              244989,
+              244990,
+              244991
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2199
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              244987,
+              244988,
+              244989,
+              244990,
+              244991
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2019
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 709
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              244987,
+              244988,
+              244989,
+              244990,
+              244991
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 929
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              244987,
+              244988,
+              244989,
+              244990,
+              244991
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2039
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 739
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

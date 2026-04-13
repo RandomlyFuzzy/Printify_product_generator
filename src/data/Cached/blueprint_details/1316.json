@@ -1,0 +1,193 @@
+{
+  "blueprint": {
+    "id": 1316,
+    "title": "Snug-Fit Polyester Face Mask",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66cdac79e2361454e503f737",
+      "https://images.printify.com/66cdac621fc7bbf2140b9973",
+      "https://images.printify.com/643e8fff23251fe2a2056182",
+      "https://images.printify.com/6440e6747f0592847808a375",
+      "https://images.printify.com/64259fbadd4e8efa280da243",
+      "https://images.printify.com/643d10e7c73654c2c40ed360",
+      "https://images.printify.com/643d1055fee19c57d10e4f06",
+      "https://images.printify.com/643d1056c73654c2c40ed35c"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 48,
+        "title": "Colorway"
+      },
+      "variants": {
+        "id": 48,
+        "title": "Colorway",
+        "variants": [
+          {
+            "id": 100176,
+            "title": "7.3\u0027\u0027 \u00D7 4.5\u0027\u0027",
+            "options": {
+              "size": "7.3\u0027\u0027 \u00D7 4.5\u0027\u0027"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 839,
+                "width": 1152
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              100176
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2279
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1139
+            },
+            "countries": [
+              "MX",
+              "REST_OF_THE_WORLD",
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              100176
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1869
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 899
+            },
+            "countries": [
+              "NL",
+              "DE",
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "DK",
+              "EE",
+              "FO",
+              "FI",
+              "FR",
+              "GE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IS",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "LV",
+              "LI",
+              "LT",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NO",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "SE",
+              "CH",
+              "TR",
+              "UA",
+              "XK"
+            ]
+          },
+          {
+            "variant_ids": [
+              100176
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 979
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 309
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              100176
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 509
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 49
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              100176
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 549
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 299
+            },
+            "countries": [
+              "GB"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

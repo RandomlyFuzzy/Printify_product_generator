@@ -1,0 +1,175 @@
+{
+  "blueprint": {
+    "id": 597,
+    "title": "CamelBak Eddy\u00AE  Water Bottle, 20oz\\25oz",
+    "brand": "CamelBak",
+    "model": "Eddy",
+    "images": [
+      "https://images.printify.com/66d6eed11c68fda51206f7b4",
+      "https://images.printify.com/66d6ee9eaef46028ac03a152",
+      "https://images.printify.com/64e46ca7a2f11a314b0cd0ce",
+      "https://images.printify.com/67e4016eccd43c64c90801d3"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 75,
+        "title": "SwagRabbit"
+      },
+      "variants": {
+        "id": 75,
+        "title": "SwagRabbit",
+        "variants": [
+          {
+            "id": 71946,
+            "title": "25oz / Charcoal",
+            "options": {
+              "size": "25oz",
+              "color": "Charcoal"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1200,
+                "width": 2911
+              }
+            ]
+          },
+          {
+            "id": 71947,
+            "title": "25oz / Oxford Blue",
+            "options": {
+              "size": "25oz",
+              "color": "Oxford Blue"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1200,
+                "width": 2911
+              }
+            ]
+          },
+          {
+            "id": 71949,
+            "title": "20oz / Oxford Blue",
+            "options": {
+              "size": "20oz",
+              "color": "Oxford Blue"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1495,
+                "width": 2674
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              71946,
+              71947,
+              71948,
+              71949
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 589
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              71946,
+              71947,
+              71948,
+              71949
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 969
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 289
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              71946,
+              71947,
+              71948,
+              71949
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1069
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 279
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              71946,
+              71947
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 659
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              71948,
+              71949
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 629
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "blueprint": {
+    "id": 495,
+    "title": "Fabric Face Mask",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d5c5428082897bc30194c9",
+      "https://images.printify.com/66d5c541b168767454063215",
+      "https://images.printify.com/5ecf5c5b494cd9176f48af69"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 10,
+        "title": "MWW On Demand"
+      },
+      "variants": {
+        "id": 10,
+        "title": "MWW On Demand",
+        "variants": [
+          {
+            "id": 66236,
+            "title": "One size",
+            "options": {
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 814,
+                "width": 1189
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              66236
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 479
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 49
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              66236
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1089
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 359
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              66236
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 509
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 49
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              66236
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1199
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 379
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

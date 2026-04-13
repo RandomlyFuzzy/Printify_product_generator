@@ -1,0 +1,101 @@
+{
+  "blueprint": {
+    "id": 1046,
+    "title": "Mylar Helium Balloon",
+    "brand": "Floato\u2122",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d5ae6745e6bec9de071984",
+      "https://images.printify.com/66d5ae6645e6bec9de071983",
+      "https://images.printify.com/67ed3018493014a9ba0b90a2",
+      "https://images.printify.com/62a12d819b9a1991f001f403"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 102,
+        "title": "Photo Balloon Store"
+      },
+      "variants": {
+        "id": 102,
+        "title": "Photo Balloon Store",
+        "variants": [
+          {
+            "id": 80278,
+            "title": "Round / 22\u0022 / White",
+            "options": {
+              "shape": "Round",
+              "size": "22\u0022",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 3612,
+                "width": 3612
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              80278
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 929
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 329
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              80278
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 539
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 119
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              80278
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1899
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

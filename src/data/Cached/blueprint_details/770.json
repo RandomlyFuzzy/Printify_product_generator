@@ -1,0 +1,116 @@
+{
+  "blueprint": {
+    "id": 770,
+    "title": "Titan Copper Insulated Food Storage",
+    "brand": "Arctic Zone",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66cc81b077594f02b70764e2",
+      "https://images.printify.com/66cc81af8212324b6f064706",
+      "https://images.printify.com/61a0b445e430f06a5a77553f",
+      "https://images.printify.com/61a0b4493fca4130c9584537"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 75,
+        "title": "SwagRabbit"
+      },
+      "variants": {
+        "id": 75,
+        "title": "SwagRabbit",
+        "variants": [
+          {
+            "id": 76330,
+            "title": "16.9oz / Black",
+            "options": {
+              "size": "16.9oz",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 600,
+                "width": 2362
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              76330
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 829
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              76330
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1399
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 449
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              76330
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1039
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 349
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              76330
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1539
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 489
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

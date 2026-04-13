@@ -1,0 +1,357 @@
+{
+  "blueprint": {
+    "id": 953,
+    "title": "Tritan Water Bottle",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d17c03346bb344ea098075",
+      "https://images.printify.com/66d17c01537ec7184d008754",
+      "https://images.printify.com/621761a7d7b7d840172828ac",
+      "https://images.printify.com/621761a6e8b94d6d637234ae",
+      "https://images.printify.com/6751786b2fc7a9f0ce071b82"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 23,
+        "title": "WOYC"
+      },
+      "variants": {
+        "id": 23,
+        "title": "WOYC",
+        "variants": [
+          {
+            "id": 78266,
+            "title": "16.9oz / Transparent",
+            "options": {
+              "size": "16.9oz",
+              "color": "Transparent"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 945,
+                "width": 1358
+              }
+            ]
+          },
+          {
+            "id": 78267,
+            "title": "25oz / Transparent",
+            "options": {
+              "size": "25oz",
+              "color": "Transparent"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1181,
+                "width": 1299
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              78266,
+              78267
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 589
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              78266,
+              78267
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 799
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 299
+            },
+            "countries": [
+              "BV",
+              "AX",
+              "CY",
+              "LI",
+              "MK",
+              "NL",
+              "SI",
+              "AM",
+              "FO",
+              "VA",
+              "FI",
+              "AT",
+              "MC",
+              "GG",
+              "LT",
+              "LV",
+              "GP",
+              "CH",
+              "IS",
+              "IE",
+              "MD",
+              "SM",
+              "BY",
+              "BE",
+              "BA",
+              "BG",
+              "CZ",
+              "GR",
+              "TR",
+              "GE",
+              "GI",
+              "ME",
+              "XK",
+              "NO",
+              "AL",
+              "GL",
+              "IT",
+              "JE",
+              "SK",
+              "SE",
+              "DK",
+              "EE",
+              "FR",
+              "HU",
+              "LU",
+              "PT",
+              "RO",
+              "HR",
+              "RE",
+              "RS",
+              "AD",
+              "IM",
+              "MT",
+              "PL",
+              "ES",
+              "UA"
+            ]
+          },
+          {
+            "variant_ids": [
+              78266,
+              78267
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1939
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 449
+            },
+            "countries": [
+              "GY",
+              "FK",
+              "PY",
+              "GF",
+              "AN",
+              "VE",
+              "SR",
+              "BR",
+              "UY",
+              "AR",
+              "BO",
+              "CL",
+              "EC",
+              "CO",
+              "PE",
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              78266,
+              78267
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1899
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 629
+            },
+            "countries": [
+              "BD",
+              "IQ",
+              "AZ",
+              "JO",
+              "AF",
+              "CX",
+              "PH",
+              "RU",
+              "SG",
+              "BH",
+              "IL",
+              "KG",
+              "TJ",
+              "UZ",
+              "BN",
+              "PS",
+              "TW",
+              "ID",
+              "LA",
+              "OM",
+              "SA",
+              "MV",
+              "AE",
+              "JP",
+              "BT",
+              "KH",
+              "LB",
+              "IN",
+              "MY",
+              "IO",
+              "MO",
+              "PK",
+              "MM",
+              "KZ",
+              "KW",
+              "NP",
+              "LK",
+              "TH",
+              "CN",
+              "IR",
+              "KR",
+              "MN",
+              "QA",
+              "SY",
+              "TM",
+              "CC",
+              "HK",
+              "VN",
+              "YE"
+            ]
+          },
+          {
+            "variant_ids": [
+              78266,
+              78267
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 939
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              78266,
+              78267
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1709
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 599
+            },
+            "countries": [
+              "NZ"
+            ]
+          },
+          {
+            "variant_ids": [
+              78266,
+              78267
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 699
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              78266,
+              78267
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 859
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 319
+            },
+            "countries": [
+              "DE"
+            ]
+          },
+          {
+            "variant_ids": [
+              78266,
+              78267
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2099
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              78266,
+              78267
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 449
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 299
+            },
+            "countries": [
+              "GB"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

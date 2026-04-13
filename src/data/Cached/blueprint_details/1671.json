@@ -1,0 +1,217 @@
+{
+  "blueprint": {
+    "id": 1671,
+    "title": "Maxi Cup, 40oz",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/673460b41b19117f130b8ff2",
+      "https://images.printify.com/674065876341c94324085582"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 72,
+        "title": "Print Clever"
+      },
+      "variants": {
+        "id": 72,
+        "title": "Print Clever",
+        "variants": [
+          {
+            "id": 115214,
+            "title": "40oz / White",
+            "options": {
+              "size": "40oz",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "left",
+                "decoration_method": "dtf",
+                "height": 1299,
+                "width": 1060
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              115214
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 799
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "FO",
+              "FR",
+              "GE",
+              "DE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IT",
+              "JE",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "TR",
+              "UA",
+              "XK",
+              "IE"
+            ]
+          },
+          {
+            "variant_ids": [
+              115214
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 449
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 129
+            },
+            "countries": [
+              "GB",
+              "IM"
+            ]
+          },
+          {
+            "variant_ids": [
+              115214
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1299
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 299
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              115214
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1299
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 359
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              115214
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1299
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              115214
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "IS",
+              "LV",
+              "EE",
+              "DK",
+              "LT",
+              "NO",
+              "LI",
+              "SE",
+              "CH",
+              "FI"
+            ]
+          },
+          {
+            "variant_ids": [
+              115214
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2299
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 359
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

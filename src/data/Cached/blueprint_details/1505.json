@@ -1,0 +1,524 @@
+{
+  "blueprint": {
+    "id": 1505,
+    "title": "AirPod Cases",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/684bf75627f3d627ea033f12",
+      "https://images.printify.com/67655acf84bb8ac0c10084d2",
+      "https://images.printify.com/69326f0885600ccd79069942",
+      "https://images.printify.com/67655acba3a0f8375f0c55cf",
+      "https://images.printify.com/693285e1fbc0daa4b50f4fc2",
+      "https://images.printify.com/67655acedf08e3f03e06c9d2"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 23,
+        "title": "WOYC"
+      },
+      "variants": {
+        "id": 23,
+        "title": "WOYC",
+        "variants": [
+          {
+            "id": 108256,
+            "title": "AirPods Pro Gen 1 / White / Glossy",
+            "options": {
+              "size": "AirPods Pro Gen 1",
+              "color": "White",
+              "finish": "Glossy"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 946,
+                "width": 1130
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 946,
+                "width": 1130
+              }
+            ]
+          },
+          {
+            "id": 108257,
+            "title": "AirPods Pro Gen 2 / White / Glossy",
+            "options": {
+              "size": "AirPods Pro Gen 2",
+              "color": "White",
+              "finish": "Glossy"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 950,
+                "width": 1108
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 950,
+                "width": 1108
+              }
+            ]
+          },
+          {
+            "id": 108258,
+            "title": "AirPods Gen 1 / White / Glossy",
+            "options": {
+              "size": "AirPods Gen 1",
+              "color": "White",
+              "finish": "Glossy"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1034,
+                "width": 858
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 1034,
+                "width": 858
+              }
+            ]
+          },
+          {
+            "id": 108259,
+            "title": "AirPods Gen 2 / White / Glossy",
+            "options": {
+              "size": "AirPods Gen 2",
+              "color": "White",
+              "finish": "Glossy"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1034,
+                "width": 858
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 1034,
+                "width": 858
+              }
+            ]
+          },
+          {
+            "id": 108260,
+            "title": "AirPods Gen 3 / White / Glossy",
+            "options": {
+              "size": "AirPods Gen 3",
+              "color": "White",
+              "finish": "Glossy"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 962,
+                "width": 1036
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 962,
+                "width": 1036
+              }
+            ]
+          },
+          {
+            "id": 120657,
+            "title": "AirPods Gen 4 / White / Glossy",
+            "options": {
+              "size": "AirPods Gen 4",
+              "color": "White",
+              "finish": "Glossy"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 891,
+                "width": 1035
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 891,
+                "width": 1035
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              108256,
+              108257,
+              108258,
+              108259,
+              108260,
+              120657
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 99
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              108256,
+              108257,
+              108258,
+              108259,
+              108260,
+              120657
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 579
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 149
+            },
+            "countries": [
+              "AT",
+              "BE",
+              "NL",
+              "RO",
+              "GG",
+              "JE",
+              "LT",
+              "SM",
+              "BY",
+              "IE",
+              "BA",
+              "CY",
+              "MD",
+              "SI",
+              "MC",
+              "CH",
+              "XK",
+              "GI",
+              "AX",
+              "CZ",
+              "FI",
+              "BG",
+              "MK",
+              "BV",
+              "LI",
+              "GE",
+              "IT",
+              "AD",
+              "MT",
+              "PT",
+              "UA",
+              "EE",
+              "SK",
+              "TR",
+              "IM",
+              "DK",
+              "FO",
+              "GP",
+              "IS",
+              "GR",
+              "ME",
+              "PL",
+              "AL",
+              "AM",
+              "HU",
+              "LV",
+              "NO",
+              "RE",
+              "ES",
+              "SE",
+              "HR",
+              "FR",
+              "GL",
+              "VA",
+              "LU",
+              "RS"
+            ]
+          },
+          {
+            "variant_ids": [
+              108256,
+              108257,
+              108258,
+              108259,
+              108260,
+              120657
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 549
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "DE"
+            ]
+          },
+          {
+            "variant_ids": [
+              108256,
+              108257,
+              108258,
+              108259,
+              108260,
+              120657
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 549
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 149
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              108256,
+              108257,
+              108258,
+              108259,
+              108260,
+              120657
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 929
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 349
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              108256,
+              108257,
+              108258,
+              108259,
+              108260,
+              120657
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1429
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "BR",
+              "FK",
+              "AR",
+              "GY",
+              "BO",
+              "VE",
+              "PE",
+              "GF",
+              "CL",
+              "EC",
+              "PY",
+              "CO",
+              "AN",
+              "SR",
+              "UY"
+            ]
+          },
+          {
+            "variant_ids": [
+              108256,
+              108257,
+              108258,
+              108259,
+              108260,
+              120657
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 949
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "IN",
+              "ID",
+              "IQ",
+              "LA",
+              "LB",
+              "BD",
+              "JP",
+              "CX",
+              "VN",
+              "CC",
+              "KR",
+              "KG",
+              "NP",
+              "SA",
+              "BH",
+              "SG",
+              "SY",
+              "TM",
+              "AZ",
+              "BN",
+              "KH",
+              "TW",
+              "OM",
+              "AF",
+              "IO",
+              "MO",
+              "MY",
+              "MV",
+              "TJ",
+              "YE",
+              "MN",
+              "PS",
+              "PH",
+              "CN",
+              "HK",
+              "AE",
+              "RU",
+              "LK",
+              "TH",
+              "MM",
+              "KZ",
+              "QA",
+              "UZ",
+              "BT",
+              "IR",
+              "IL",
+              "JO",
+              "KW",
+              "PK"
+            ]
+          },
+          {
+            "variant_ids": [
+              108256,
+              108257,
+              108258,
+              108259,
+              108260,
+              120657
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 319
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 119
+            },
+            "countries": [
+              "GB"
+            ]
+          },
+          {
+            "variant_ids": [
+              108256,
+              108257,
+              108258,
+              108259,
+              108260,
+              120657
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1399
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "NZ"
+            ]
+          },
+          {
+            "variant_ids": [
+              108256,
+              108257,
+              108258,
+              108259,
+              108260,
+              120657
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1689
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              108256,
+              108257,
+              108258,
+              108259,
+              108260,
+              120657
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1799
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

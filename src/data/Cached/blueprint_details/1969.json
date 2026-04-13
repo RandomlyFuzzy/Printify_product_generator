@@ -1,0 +1,199 @@
+{
+  "blueprint": {
+    "id": 1969,
+    "title": "Clear Stadium Backpack",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/685528b647c35421130992d2",
+      "https://images.printify.com/6874fd3381eef3e92f03eac2",
+      "https://images.printify.com/6862ef38877a164bf30aaa82",
+      "https://images.printify.com/685528b389ac95a8d00eb7b2",
+      "https://images.printify.com/685528afc9d196807d0f0e72",
+      "https://images.printify.com/685528a934945590e708da43",
+      "https://images.printify.com/685528ac962c9028c1052bd2",
+      "https://images.printify.com/685528a6be2cc5b4ff010bf2"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 90,
+        "title": "Smart Printee"
+      },
+      "variants": {
+        "id": 90,
+        "title": "Smart Printee",
+        "variants": [
+          {
+            "id": 121586,
+            "title": "Medium",
+            "options": {
+              "size": "Medium"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 2362,
+                "width": 2362
+              },
+              {
+                "position": "back",
+                "decoration_method": "uv",
+                "height": 3745,
+                "width": 2956
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              121586
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1359
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1109
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              121586
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1109
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 869
+            },
+            "countries": [
+              "GB"
+            ]
+          },
+          {
+            "variant_ids": [
+              121586
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1979
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1729
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              121586
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1239
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 869
+            },
+            "countries": [
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "DK",
+              "EE",
+              "FO",
+              "FI",
+              "FR",
+              "GE",
+              "DE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IS",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "LV",
+              "LI",
+              "LT",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "NO",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "SE",
+              "CH",
+              "TR",
+              "UA",
+              "GB",
+              "XK"
+            ]
+          },
+          {
+            "variant_ids": [
+              121586
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1609
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1359
+            },
+            "countries": [
+              "CA",
+              "AU"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

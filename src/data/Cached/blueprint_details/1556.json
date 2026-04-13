@@ -1,0 +1,70 @@
+{
+  "blueprint": {
+    "id": 1556,
+    "title": "CoQ10 (Ubiquinone) Supplement (30 Capsules)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66c44954a9f8644df4021b96",
+      "https://images.printify.com/66c44953f3685fb5a20ad862",
+      "https://images.printify.com/66e2a32b30784a7c340049a2",
+      "https://images.printify.com/66c3494e2cb3e5bb85006b42",
+      "https://images.printify.com/66b3446347303ddf4108a012"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 294,
+        "title": "Rocktomic"
+      },
+      "variants": {
+        "id": 294,
+        "title": "Rocktomic",
+        "variants": [
+          {
+            "id": 110426,
+            "title": "White bottle \u002B cap / Unflavored / 30 Vegetable capsules",
+            "options": {
+              "color": "White bottle \u002B cap",
+              "flavor": "Unflavored",
+              "size": "30 Vegetable capsules"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 1110,
+                "width": 1866
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              110426
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 449
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

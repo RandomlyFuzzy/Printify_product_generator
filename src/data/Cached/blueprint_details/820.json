@@ -1,0 +1,189 @@
+{
+  "blueprint": {
+    "id": 820,
+    "title": "Non-Slip Gaming Mouse Pad",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d98fe19f88355afa0d89e2",
+      "https://images.printify.com/66d990ffae32cbc53906d9a2",
+      "https://images.printify.com/629082343cc2074d590d3328",
+      "https://images.printify.com/629082dbe21b0cf993038f75"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 48,
+        "title": "Colorway"
+      },
+      "variants": {
+        "id": 48,
+        "title": "Colorway",
+        "variants": [
+          {
+            "id": 75751,
+            "title": "9.5\u0022 \u00D7 8\u0022",
+            "options": {
+              "size": "9.5\u0022 \u00D7 8\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1299,
+                "width": 1535
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              75751
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1869
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 899
+            },
+            "countries": [
+              "DE",
+              "NL",
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "DK",
+              "EE",
+              "FO",
+              "FI",
+              "FR",
+              "GE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IS",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "LV",
+              "LI",
+              "LT",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NO",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "SE",
+              "CH",
+              "TR",
+              "UA",
+              "XK"
+            ]
+          },
+          {
+            "variant_ids": [
+              75751
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 569
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 209
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              75751
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 979
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 309
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              75751
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2279
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1139
+            },
+            "countries": [
+              "REST_OF_THE_WORLD",
+              "MX",
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              75751
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 559
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 299
+            },
+            "countries": [
+              "GB"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

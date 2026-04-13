@@ -1,0 +1,103 @@
+{
+  "blueprint": {
+    "id": 485,
+    "title": "Hardcover Journal Matte",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d5c2ee13268a5e030e0cd4",
+      "https://images.printify.com/66d5c2ed13268a5e030e0cd3",
+      "https://images.printify.com/5f0462d687afb603d07e91f0",
+      "https://images.printify.com/5f0462d787213c4fb01e91b3",
+      "https://images.printify.com/6904923fb52f3a93d5084712"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 28,
+        "title": "District Photo"
+      },
+      "variants": {
+        "id": 28,
+        "title": "District Photo",
+        "variants": [
+          {
+            "id": 65223,
+            "title": "Journal",
+            "options": {
+              "size": "Journal"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 2850,
+                "width": 4065
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              65223
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 529
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              65223
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1399
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "AU",
+              "NZ",
+              "CA",
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              65223
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 599
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 240
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

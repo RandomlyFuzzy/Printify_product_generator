@@ -1,0 +1,120 @@
+{
+  "blueprint": {
+    "id": 797,
+    "title": "Hand Towel",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d7068c95dc413ba30169aa",
+      "https://images.printify.com/66d7068bcff3836130040936",
+      "https://images.printify.com/6182245bfd21650253435de3",
+      "https://images.printify.com/6357a0ec78f88b73ec034094",
+      "https://images.printify.com/6188eab0e72d1e1b8251b3e1",
+      "https://images.printify.com/617f95f7285c4e24081dec68",
+      "https://images.printify.com/6183af2d82f20f5865154028",
+      "https://images.printify.com/6183af3582f20f586515402d"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 1,
+        "title": "SPOKE Custom Products"
+      },
+      "variants": {
+        "id": 1,
+        "title": "SPOKE Custom Products",
+        "variants": [
+          {
+            "id": 75004,
+            "title": "White base / 28\u0022 \u00D7 16\u0022",
+            "options": {
+              "color": "White base",
+              "size": "28\u0022 \u00D7 16\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 9154,
+                "width": 5693
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              75004
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 479
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 149
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              75004
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 869
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 219
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              75004
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              75004
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 589
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 209
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

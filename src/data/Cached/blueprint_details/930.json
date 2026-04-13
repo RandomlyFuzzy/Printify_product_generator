@@ -1,0 +1,115 @@
+{
+  "blueprint": {
+    "id": 930,
+    "title": "Magic Mug",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d06f3e1f66afa463006102",
+      "https://images.printify.com/66d06f401f66afa463006103",
+      "https://images.printify.com/67dacf0913733a04cd00d464"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 66,
+        "title": "Prima Printing"
+      },
+      "variants": {
+        "id": 66,
+        "title": "Prima Printing",
+        "variants": [
+          {
+            "id": 78721,
+            "title": "11oz",
+            "options": {
+              "size": "11oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1181,
+                "width": 2457
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              78721
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1389
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1389
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              78721
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 4019
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 4019
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              78721
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 719
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 269
+            },
+            "countries": [
+              "AU",
+              "NZ"
+            ]
+          },
+          {
+            "variant_ids": [
+              78721
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "countries": [
+              "GB"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

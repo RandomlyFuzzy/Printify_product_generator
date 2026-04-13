@@ -1,0 +1,115 @@
+{
+  "blueprint": {
+    "id": 663,
+    "title": "Gaming Mouse Pad",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d70177db800a6d3c023d75",
+      "https://images.printify.com/66d701761fb614d5a3087512",
+      "https://images.printify.com/611cda2552eac83c475852a2"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 1,
+        "title": "SPOKE Custom Products"
+      },
+      "variants": {
+        "id": 1,
+        "title": "SPOKE Custom Products",
+        "variants": [
+          {
+            "id": 72583,
+            "title": "Rectangle / 9\u0022 \u00D7 7\u0022",
+            "options": {
+              "shape": "Rectangle",
+              "size": "9\u0022 \u00D7 7\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 2598,
+                "width": 3071
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              72583
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 449
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 149
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              72583
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 489
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 209
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              72583
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 869
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 219
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              72583
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1499
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

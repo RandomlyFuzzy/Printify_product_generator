@@ -1,0 +1,351 @@
+{
+  "blueprint": {
+    "id": 1740,
+    "title": "Fabric (Combed Cotton Prima)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/6799e0086db837e00d030022",
+      "https://images.printify.com/6799e1c32a3a15a70a074dd4"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 10,
+        "title": "MWW On Demand"
+      },
+      "variants": {
+        "id": 10,
+        "title": "MWW On Demand",
+        "variants": [
+          {
+            "id": 118685,
+            "title": "9\u0027\u0027 \u00D7 9\u0027\u0027",
+            "options": {
+              "size": "9\u0027\u0027 \u00D7 9\u0027\u0027"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "direct-to-fabric",
+                "height": 1350,
+                "width": 1350
+              }
+            ]
+          },
+          {
+            "id": 118686,
+            "title": "29\u0027\u0027 \u00D7 18\u0027\u0027",
+            "options": {
+              "size": "29\u0027\u0027 \u00D7 18\u0027\u0027"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "direct-to-fabric",
+                "height": 2700,
+                "width": 4350
+              }
+            ]
+          },
+          {
+            "id": 118687,
+            "title": "54\u0027\u0027 \u00D7 36\u0027\u0027",
+            "options": {
+              "size": "54\u0027\u0027 \u00D7 36\u0027\u0027"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "direct-to-fabric",
+                "height": 5400,
+                "width": 8100
+              }
+            ]
+          },
+          {
+            "id": 118688,
+            "title": "54\u0027\u0027 \u00D7 108\u0027\u0027",
+            "options": {
+              "size": "54\u0027\u0027 \u00D7 108\u0027\u0027"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "direct-to-fabric",
+                "height": 16200,
+                "width": 8100
+              }
+            ]
+          },
+          {
+            "id": 118689,
+            "title": "54\u0027\u0027 \u00D7 180\u0027\u0027",
+            "options": {
+              "size": "54\u0027\u0027 \u00D7 180\u0027\u0027"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "direct-to-fabric",
+                "height": 27000,
+                "width": 8100
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              118686
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 539
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              118686
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 539
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 259
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              118685
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 479
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 169
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              118687
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 789
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 299
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              118685,
+              118686
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1119
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 359
+            },
+            "countries": [
+              "CA",
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              118685
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 509
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              118689
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1899
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1839
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              118689
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2169
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1569
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              118689
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1599
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1179
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              118688
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1199
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 629
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              118688
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1749
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 899
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              118688
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1479
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1479
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              118687
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 819
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 359
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              118687
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1867
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1079
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              118687
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1259
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

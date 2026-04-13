@@ -1,0 +1,100 @@
+{
+  "blueprint": {
+    "id": 1682,
+    "title": "Glass Mug, 10oz",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/67c193e8cc1f56fb200df3d2",
+      "https://images.printify.com/675fd1acf1c2c450ef008dd2",
+      "https://images.printify.com/675fd1a409304f4d8a02b821",
+      "https://images.printify.com/675fd1ad285f15b4360f3005",
+      "https://images.printify.com/6762dc7d3e2d65541c0aa0c5"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 70,
+        "title": "Printed Mint"
+      },
+      "variants": {
+        "id": 70,
+        "title": "Printed Mint",
+        "variants": [
+          {
+            "id": 115635,
+            "title": "10oz",
+            "options": {
+              "size": "10oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 885,
+                "width": 2370
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              115635
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2109
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 449
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              115635
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1579
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 489
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              115635
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 699
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 309
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

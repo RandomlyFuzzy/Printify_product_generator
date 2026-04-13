@@ -1,0 +1,121 @@
+{
+  "blueprint": {
+    "id": 1155,
+    "title": "Kids\u0027 Puzzle, 30-Piece",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d0a474d89fe553800a78ec",
+      "https://images.printify.com/66d0a4737b559e16e30f8fb3",
+      "https://images.printify.com/62fdf772fbb48f644a0baaf5",
+      "https://images.printify.com/62fdf772cd7323723e0825cc"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 28,
+        "title": "District Photo"
+      },
+      "variants": {
+        "id": 28,
+        "title": "District Photo",
+        "variants": [
+          {
+            "id": 88140,
+            "title": "30 pcs (Horizontal)",
+            "options": {
+              "size": "30 pcs (Horizontal)"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 3600,
+                "width": 4500
+              }
+            ]
+          },
+          {
+            "id": 91357,
+            "title": "30 pcs (Vertical)",
+            "options": {
+              "size": "30 pcs (Vertical)"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 4500,
+                "width": 3600
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              88140,
+              91357
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 579
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 149
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              88140,
+              91357
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1399
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "AU",
+              "CA",
+              "REST_OF_THE_WORLD",
+              "NZ",
+              "NO"
+            ]
+          },
+          {
+            "variant_ids": [
+              88140,
+              91357
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 629
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 299
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

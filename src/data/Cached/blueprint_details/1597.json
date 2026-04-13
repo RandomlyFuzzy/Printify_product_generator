@@ -1,0 +1,173 @@
+{
+  "blueprint": {
+    "id": 1597,
+    "title": "Quilted Sham",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66e96a18114d18b191042013",
+      "https://images.printify.com/66e96a1543b8889a5e050d82",
+      "https://images.printify.com/66e96a17f43bd138820bdc82",
+      "https://images.printify.com/66d079de06f9c36bb20ff762",
+      "https://images.printify.com/66d079e006f9c36bb20ff763",
+      "https://images.printify.com/66d079dc65229f3adf074983"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 10,
+        "title": "MWW On Demand"
+      },
+      "variants": {
+        "id": 10,
+        "title": "MWW On Demand",
+        "variants": [
+          {
+            "id": 111489,
+            "title": "26\u0027\u0027 \u00D7 20\u0027\u0027",
+            "options": {
+              "size": "26\u0027\u0027 \u00D7 20\u0027\u0027"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 3375,
+                "width": 4275
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 3375,
+                "width": 4275
+              }
+            ]
+          },
+          {
+            "id": 111490,
+            "title": "26\u0027\u0027 \u00D7 26\u0027\u0027",
+            "options": {
+              "size": "26\u0027\u0027 \u00D7 26\u0027\u0027"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 4275,
+                "width": 4275
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 4275,
+                "width": 4275
+              }
+            ]
+          },
+          {
+            "id": 111491,
+            "title": "36\u0027\u0027 \u00D7 20\u0027\u0027",
+            "options": {
+              "size": "36\u0027\u0027 \u00D7 20\u0027\u0027"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 3375,
+                "width": 5775
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 3375,
+                "width": 5775
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              111489,
+              111490,
+              111491
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 639
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              111489,
+              111490,
+              111491
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1199
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 379
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              111489,
+              111490,
+              111491
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 869
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 209
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              111489,
+              111490,
+              111491
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1069
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 359
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

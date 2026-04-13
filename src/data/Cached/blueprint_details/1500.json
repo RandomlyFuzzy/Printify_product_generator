@@ -1,0 +1,308 @@
+{
+  "blueprint": {
+    "id": 1500,
+    "title": "Sherpa Blankets",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/6659ba56e47cc3a1900d28f3",
+      "https://images.printify.com/6659ba55e47cc3a1900d28f2",
+      "https://images.printify.com/66f2b7bd567be5be8c0fbeb8",
+      "https://images.printify.com/66f2b7bad79131497105cb74"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 94,
+        "title": "Harrier"
+      },
+      "variants": {
+        "id": 94,
+        "title": "Harrier",
+        "variants": [
+          {
+            "id": 107808,
+            "title": "50\u0022 \u00D7 60\u0022 / White",
+            "options": {
+              "size": "50\u0022 \u00D7 60\u0022",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 6350,
+                "width": 5350
+              }
+            ]
+          },
+          {
+            "id": 107809,
+            "title": "60\u0022 \u00D7 80\u0022 / White",
+            "options": {
+              "size": "60\u0022 \u00D7 80\u0022",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 8466,
+                "width": 6374
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              107809
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 969
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 489
+            },
+            "countries": [
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "FO",
+              "GE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IE",
+              "IM",
+              "JE",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "TR",
+              "UA",
+              "XK",
+              "FR",
+              "BE",
+              "CZ",
+              "NL",
+              "IT",
+              "DE"
+            ]
+          },
+          {
+            "variant_ids": [
+              107809
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1749
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 489
+            },
+            "countries": [
+              "EE",
+              "LV",
+              "NO",
+              "LU",
+              "FI",
+              "LI",
+              "DK",
+              "CH",
+              "IS",
+              "LT",
+              "SE"
+            ]
+          },
+          {
+            "variant_ids": [
+              107808,
+              107809
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 359
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              107809
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 559
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "GB"
+            ]
+          },
+          {
+            "variant_ids": [
+              107808
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 129
+            },
+            "countries": [
+              "GB"
+            ]
+          },
+          {
+            "variant_ids": [
+              107808
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 869
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 179
+            },
+            "countries": [
+              "BE",
+              "CZ",
+              "DE",
+              "FR",
+              "IT",
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "FO",
+              "GE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IE",
+              "IM",
+              "JE",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "TR",
+              "UA",
+              "XK",
+              "NL"
+            ]
+          },
+          {
+            "variant_ids": [
+              107808,
+              107809
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 3999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 359
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              107808
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1649
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 359
+            },
+            "countries": [
+              "EE",
+              "LV",
+              "NO",
+              "LU",
+              "FI",
+              "LI",
+              "DK",
+              "CH",
+              "IS",
+              "LT",
+              "SE"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

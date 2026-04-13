@@ -1,0 +1,445 @@
+{
+  "blueprint": {
+    "id": 1910,
+    "title": "Bucket Hat (Embroidery)",
+    "brand": "Big Accessories",
+    "model": "BX003",
+    "images": [
+      "https://images.printify.com/67b5d66725b8a020f5001c85",
+      "https://images.printify.com/6926c74554b7425de803e1a2",
+      "https://images.printify.com/6926c7421b240b5d25027ec2",
+      "https://images.printify.com/683eb5dc6f1ca99158008852",
+      "https://images.printify.com/683db639835b83ccb90f10b2",
+      "https://images.printify.com/683db64749356d2d61029582"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 410,
+        "title": "Printful"
+      },
+      "variants": {
+        "id": 410,
+        "title": "Printful",
+        "variants": [
+          {
+            "id": 119315,
+            "title": "Black / One size",
+            "options": {
+              "color": "Black",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 600,
+                "width": 1650
+              }
+            ]
+          },
+          {
+            "id": 119316,
+            "title": "Navy / One size",
+            "options": {
+              "color": "Navy",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 600,
+                "width": 1650
+              }
+            ]
+          },
+          {
+            "id": 119317,
+            "title": "White / One size",
+            "options": {
+              "color": "White",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 600,
+                "width": 1650
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              119315,
+              119316,
+              119317
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 449
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 209
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              119315,
+              119316,
+              119317
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 489
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 219
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              119315,
+              119316,
+              119317
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 459
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 145
+            },
+            "countries": [
+              "JE",
+              "MT",
+              "LU",
+              "MD",
+              "SK",
+              "LT",
+              "HU",
+              "MK",
+              "BE",
+              "AT",
+              "RO",
+              "IE",
+              "AX",
+              "FO",
+              "DE",
+              "MC",
+              "SE",
+              "ES",
+              "CY",
+              "DK",
+              "VA",
+              "LV",
+              "HR",
+              "GI",
+              "AL",
+              "SM",
+              "BG",
+              "AD",
+              "UA",
+              "GR",
+              "CZ",
+              "EE",
+              "GP",
+              "BY",
+              "GG",
+              "NL",
+              "GE",
+              "FR",
+              "BA",
+              "IM",
+              "RE",
+              "PT",
+              "ME",
+              "TR",
+              "PL",
+              "RS",
+              "XK",
+              "BV",
+              "GL",
+              "AM",
+              "FI",
+              "IT",
+              "SI"
+            ]
+          },
+          {
+            "variant_ids": [
+              119315,
+              119316,
+              119317
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 110
+            },
+            "countries": [
+              "LI",
+              "NO",
+              "IS",
+              "CH"
+            ]
+          },
+          {
+            "variant_ids": [
+              119315,
+              119316,
+              119317
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "JP",
+              "REST_OF_THE_WORLD",
+              "BR"
+            ]
+          },
+          {
+            "variant_ids": [
+              119315,
+              119316,
+              119317
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 939
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              119315,
+              119316,
+              119317
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 159
+            },
+            "countries": [
+              "GB"
+            ]
+          },
+          {
+            "variant_ids": [
+              119315,
+              119316,
+              119317
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1249
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 239
+            },
+            "countries": [
+              "AU"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "provider": {
+        "id": 99,
+        "title": "Printify Choice"
+      },
+      "variants": {
+        "id": 99,
+        "title": "Printify Choice",
+        "variants": [
+          {
+            "id": 119315,
+            "title": "Black / One size",
+            "options": {
+              "size": "One size",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 600,
+                "width": 1650
+              }
+            ]
+          },
+          {
+            "id": 119316,
+            "title": "Navy / One size",
+            "options": {
+              "size": "One size",
+              "color": "Navy"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 600,
+                "width": 1650
+              }
+            ]
+          },
+          {
+            "id": 119317,
+            "title": "White / One size",
+            "options": {
+              "color": "White",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 600,
+                "width": 1650
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              119315,
+              119316,
+              119317
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 449
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 209
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              119315,
+              119316,
+              119317
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              119315,
+              119316,
+              119317
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1249
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 239
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              119315,
+              119316,
+              119317
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 939
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              119315,
+              119316,
+              119317
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 489
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 219
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

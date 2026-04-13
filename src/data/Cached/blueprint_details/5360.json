@@ -1,0 +1,247 @@
+{
+  "blueprint": {
+    "id": 5360,
+    "title": "Acrylic Table sign, Dome Shape",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/699f23452a50682c84003642",
+      "https://images.printify.com/699f234198dbce9b110bdea0",
+      "https://images.printify.com/699f233fbcf07f38f0012880",
+      "https://images.printify.com/699f233d78ff658c090af700",
+      "https://images.printify.com/699f233d07f520edc1008f40"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 104,
+        "title": "Acrylic Idea Factory"
+      },
+      "variants": {
+        "id": 104,
+        "title": "Acrylic Idea Factory",
+        "variants": [
+          {
+            "id": 244604,
+            "title": "Clear / 5\u2033 x 7\u2033 / Glossy",
+            "options": {
+              "color": "Clear",
+              "size": "5\u2033 x 7\u2033",
+              "finish": "Glossy"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 2081,
+                "width": 1481
+              }
+            ]
+          },
+          {
+            "id": 244605,
+            "title": "Clear / 8\u0022 x 10\u0022 / Glossy",
+            "options": {
+              "color": "Clear",
+              "size": "8\u0022 x 10\u0022",
+              "finish": "Glossy"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 2981,
+                "width": 2381
+              }
+            ]
+          },
+          {
+            "id": 244606,
+            "title": "Clear / 5\u2033 x 7\u2033 / Frosted",
+            "options": {
+              "color": "Clear",
+              "size": "5\u2033 x 7\u2033",
+              "finish": "Frosted"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 2081,
+                "width": 1481
+              }
+            ]
+          },
+          {
+            "id": 244607,
+            "title": "Clear / 8\u0022 x 10\u0022 / Frosted",
+            "options": {
+              "color": "Clear",
+              "size": "8\u0022 x 10\u0022",
+              "finish": "Frosted"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 2981,
+                "width": 2381
+              }
+            ]
+          },
+          {
+            "id": 244608,
+            "title": "Black / 5\u2033 x 7\u2033 / Glossy",
+            "options": {
+              "color": "Black",
+              "size": "5\u2033 x 7\u2033",
+              "finish": "Glossy"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 2081,
+                "width": 1481
+              }
+            ]
+          },
+          {
+            "id": 244609,
+            "title": "Black / 8\u0022 x 10\u0022 / Glossy",
+            "options": {
+              "color": "Black",
+              "size": "8\u0022 x 10\u0022",
+              "finish": "Glossy"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 2981,
+                "width": 2381
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              244604,
+              244606,
+              244608
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 599
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              244604,
+              244606,
+              244608
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1359
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 629
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              244604,
+              244606,
+              244608
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1359
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 699
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              244605,
+              244607,
+              244609
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1399
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              244605,
+              244607,
+              244609
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 3139
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1689
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              244605,
+              244607,
+              244609
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 3209
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1689
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

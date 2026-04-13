@@ -1,0 +1,121 @@
+{
+  "blueprint": {
+    "id": 562,
+    "title": "Pet Bandana",
+    "brand": "Evergreen",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d6e4508fac8115920c1c82",
+      "https://images.printify.com/66d6e44c77c823835d05e673",
+      "https://images.printify.com/6037a28101714f5fda2a591a",
+      "https://images.printify.com/647609ac541a9c9e300f4b24",
+      "https://images.printify.com/647847b94d993dff8d09dbf3"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 70,
+        "title": "Printed Mint"
+      },
+      "variants": {
+        "id": 70,
+        "title": "Printed Mint",
+        "variants": [
+          {
+            "id": 101403,
+            "title": "20\u0022 \u00D7 10\u0022",
+            "options": {
+              "size": "20\u0022 \u00D7 10\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1691,
+                "width": 3150
+              }
+            ]
+          },
+          {
+            "id": 101404,
+            "title": "27\u0022 \u00D7 13\u0022",
+            "options": {
+              "size": "27\u0022 \u00D7 13\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 2325,
+                "width": 4275
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              70849,
+              101403,
+              101404
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 549
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 99
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              70849,
+              101403,
+              101404
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1089
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 129
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              70849,
+              101403,
+              101404
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1159
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

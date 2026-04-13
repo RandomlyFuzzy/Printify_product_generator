@@ -1,0 +1,295 @@
+{
+  "blueprint": {
+    "id": 1048,
+    "title": "Scented Soy Candle, 9oz",
+    "brand": "Lumient",
+    "model": "",
+    "images": [
+      "https://images.printify.com/69aae67024e526d0c10d5002",
+      "https://images.printify.com/69aadc8da62a5b04300f5e73",
+      "https://images.printify.com/66d9593826d6fa016100b653",
+      "https://images.printify.com/69aadc8e6c175d857d0465f2",
+      "https://images.printify.com/66669d857b9d8723ef0030e2",
+      "https://images.printify.com/69aadd1718ed163b5f032533",
+      "https://images.printify.com/69aae6546958b015120f04a3"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 219,
+        "title": "Lumient"
+      },
+      "variants": {
+        "id": 219,
+        "title": "Lumient",
+        "variants": [
+          {
+            "id": 80301,
+            "title": "Clean Cotton / 9oz",
+            "options": {
+              "scent": "Clean Cotton",
+              "size": "9oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 600,
+                "width": 900
+              }
+            ]
+          },
+          {
+            "id": 80302,
+            "title": "Sea Salt \u002B Orchid / 9oz",
+            "options": {
+              "scent": "Sea Salt \u002B Orchid",
+              "size": "9oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 600,
+                "width": 900
+              }
+            ]
+          },
+          {
+            "id": 80303,
+            "title": "White Sage and Lavender / 9oz",
+            "options": {
+              "scent": "White Sage and Lavender",
+              "size": "9oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 600,
+                "width": 900
+              }
+            ]
+          },
+          {
+            "id": 93541,
+            "title": "Apple Harvest / 9oz",
+            "options": {
+              "scent": "Apple Harvest",
+              "size": "9oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 600,
+                "width": 900
+              }
+            ]
+          },
+          {
+            "id": 93542,
+            "title": "Cinnamon Vanilla / 9oz",
+            "options": {
+              "scent": "Cinnamon Vanilla",
+              "size": "9oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 600,
+                "width": 900
+              }
+            ]
+          },
+          {
+            "id": 104680,
+            "title": "Christmas Warmth / 9oz",
+            "options": {
+              "scent": "Christmas Warmth",
+              "size": "9oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 600,
+                "width": 900
+              }
+            ]
+          },
+          {
+            "id": 104681,
+            "title": "Coconut Cream \u002B Cardamom / 9oz",
+            "options": {
+              "scent": "Coconut Cream \u002B Cardamom",
+              "size": "9oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 600,
+                "width": 900
+              }
+            ]
+          },
+          {
+            "id": 104682,
+            "title": "Peppered Passionfruit / 9oz",
+            "options": {
+              "scent": "Peppered Passionfruit",
+              "size": "9oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 600,
+                "width": 900
+              }
+            ]
+          },
+          {
+            "id": 104683,
+            "title": "Unscented / 9oz",
+            "options": {
+              "scent": "Unscented",
+              "size": "9oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 600,
+                "width": 900
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              80301,
+              80302,
+              80303,
+              93541,
+              93542,
+              104679,
+              104680,
+              104681,
+              104682,
+              104683,
+              134916,
+              134917,
+              134918
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 799
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 349
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              80301,
+              80302,
+              80303,
+              93541,
+              93542,
+              104679,
+              104680,
+              104681,
+              104682,
+              104683,
+              134916,
+              134917,
+              134918
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 3399
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 929
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              80301,
+              80302,
+              80303,
+              93541,
+              93542,
+              104679,
+              104680,
+              104681,
+              104682,
+              104683,
+              134916,
+              134917,
+              134918
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2759
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 639
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              80301,
+              80302,
+              80303,
+              93541,
+              93542,
+              104679,
+              104680,
+              104681,
+              104682,
+              104683,
+              134916,
+              134917,
+              134918
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2829
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 929
+            },
+            "countries": [
+              "AU"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "blueprint": {
+    "id": 380,
+    "title": "Christmas Stockings",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d80f895d7e08d6ce09e147",
+      "https://images.printify.com/66d83099a01b99f5a1028062",
+      "https://images.printify.com/5d417792f902f005a44a76b6",
+      "https://images.printify.com/5d417794f902f003987be242",
+      "https://images.printify.com/5d4174f5f902f005a44a76b2",
+      "https://images.printify.com/6900b5a90dae54158b017782"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 10,
+        "title": "MWW On Demand"
+      },
+      "variants": {
+        "id": 10,
+        "title": "MWW On Demand",
+        "variants": [
+          {
+            "id": 45150,
+            "title": "One size",
+            "options": {
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 3225,
+                "width": 2813
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 3225,
+                "width": 2813
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              45150
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 629
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              45150
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1119
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 359
+            },
+            "countries": [
+              "CA",
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              45150
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 699
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 299
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

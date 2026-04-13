@@ -1,0 +1,233 @@
+{
+  "blueprint": {
+    "id": 1117,
+    "title": "Black Coffee Cup, 11oz",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d59099145f601bbe0df503",
+      "https://images.printify.com/66d590985a89615b7f0cf626",
+      "https://images.printify.com/67e3e9bd20ab7efe560562c2"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 26,
+        "title": "Textildruck Europa"
+      },
+      "variants": {
+        "id": 26,
+        "title": "Textildruck Europa",
+        "variants": [
+          {
+            "id": 82930,
+            "title": "11oz / Black",
+            "options": {
+              "size": "11oz",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 886,
+                "width": 2067
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              82930
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "DK",
+              "LV",
+              "FI",
+              "EE",
+              "IS",
+              "LI",
+              "CH",
+              "LT",
+              "SE",
+              "NO"
+            ]
+          },
+          {
+            "variant_ids": [
+              82930
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1699
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1399
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              82930
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 779
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 169
+            },
+            "countries": [
+              "GB",
+              "IE"
+            ]
+          },
+          {
+            "variant_ids": [
+              82930
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 529
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 129
+            },
+            "countries": [
+              "DE"
+            ]
+          },
+          {
+            "variant_ids": [
+              82930
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 659
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "FO",
+              "FR",
+              "GE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IM",
+              "IT",
+              "JE",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "TR",
+              "UA",
+              "XK"
+            ]
+          },
+          {
+            "variant_ids": [
+              82930
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2199
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              82930
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2749
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1399
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              82930
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1749
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1399
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

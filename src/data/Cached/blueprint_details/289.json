@@ -1,0 +1,113 @@
+{
+  "blueprint": {
+    "id": 289,
+    "title": "Latte Mug",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66c5c92cc2f5f7cea708ce52",
+      "https://images.printify.com/66c5c92f3b375eab810b3d42"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 1,
+        "title": "SPOKE Custom Products"
+      },
+      "variants": {
+        "id": 1,
+        "title": "SPOKE Custom Products",
+        "variants": [
+          {
+            "id": 43321,
+            "title": "12oz",
+            "options": {
+              "size": "12oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1196,
+                "width": 1988
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              43321
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 639
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 299
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              43321
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1879
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 669
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              43321
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1319
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 549
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              43321
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 699
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 309
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,213 @@
+{
+  "blueprint": {
+    "id": 1294,
+    "title": "Post-it\u00AE Note Pads",
+    "brand": "Post-it\u00AE",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66cdcaf2c776fe69fd062f33",
+      "https://images.printify.com/66cdcaf0c776fe69fd062f32",
+      "https://images.printify.com/641c525ad1ae0b8e6d09efb2"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 228,
+        "title": "Taylor"
+      },
+      "variants": {
+        "id": 228,
+        "title": "Taylor",
+        "variants": [
+          {
+            "id": 96731,
+            "title": "3\u0022 x 3\u0022 / White",
+            "options": {
+              "size": "3\u0022 x 3\u0022",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 957,
+                "width": 976
+              }
+            ]
+          },
+          {
+            "id": 96732,
+            "title": "4\u0022 x 3\u0022 / White",
+            "options": {
+              "size": "4\u0022 x 3\u0022",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 939,
+                "width": 1276
+              }
+            ]
+          },
+          {
+            "id": 96733,
+            "title": "4\u0022 x 4\u0022 / White",
+            "options": {
+              "size": "4\u0022 x 4\u0022",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 1257,
+                "width": 1276
+              }
+            ]
+          },
+          {
+            "id": 96734,
+            "title": "4\u0022 x 6\u0022 / White",
+            "options": {
+              "size": "4\u0022 x 6\u0022",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 1819,
+                "width": 1276
+              }
+            ]
+          },
+          {
+            "id": 96735,
+            "title": "8\u0022 x 6\u0022 / White",
+            "options": {
+              "size": "8\u0022 x 6\u0022",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 1820,
+                "width": 2476
+              }
+            ]
+          },
+          {
+            "id": 96736,
+            "title": "10\u0022 x 3\u0022 / White",
+            "options": {
+              "size": "10\u0022 x 3\u0022",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 939,
+                "width": 3076
+              }
+            ]
+          },
+          {
+            "id": 96737,
+            "title": "10\u0022 x 6\u0022 / White",
+            "options": {
+              "size": "10\u0022 x 6\u0022",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 1820,
+                "width": 3076
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              96731,
+              96732,
+              96733,
+              96734,
+              96735,
+              96736,
+              96737
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 539
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              96731,
+              96732,
+              96733,
+              96734,
+              96735,
+              96736,
+              96737
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1249
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              96731,
+              96732,
+              96733,
+              96734,
+              96735,
+              96736,
+              96737
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1059
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "blueprint": {
+    "id": 414,
+    "title": "Drawstring Bag",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d8359f9935bc2b42015826",
+      "https://images.printify.com/66d83a625d53a711630043e2",
+      "https://images.printify.com/5cd42a3f8c37690009265c45",
+      "https://images.printify.com/5cd42c898c37690009265c4c",
+      "https://images.printify.com/5ecf9000790e0f3fd6712e08"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 10,
+        "title": "MWW On Demand"
+      },
+      "variants": {
+        "id": 10,
+        "title": "MWW On Demand",
+        "variants": [
+          {
+            "id": 61365,
+            "title": "One size",
+            "options": {
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 11100,
+                "width": 4950
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              61365
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 799
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 139
+            },
+            "countries": [
+              "EE",
+              "LI",
+              "LT",
+              "LV",
+              "IS",
+              "CH",
+              "FI",
+              "SE",
+              "NO",
+              "DK"
+            ]
+          },
+          {
+            "variant_ids": [
+              61365
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1259
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 599
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              61365
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1299
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 669
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              61365
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 639
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 139
+            },
+            "countries": [
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "FO",
+              "FR",
+              "GE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "TR",
+              "UA",
+              "GB",
+              "XK",
+              "LU"
+            ]
+          },
+          {
+            "variant_ids": [
+              61365
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 139
+            },
+            "countries": [
+              "DE"
+            ]
+          },
+          {
+            "variant_ids": [
+              61365
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 649
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 299
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

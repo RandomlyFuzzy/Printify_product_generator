@@ -1,0 +1,136 @@
+{
+  "blueprint": {
+    "id": 2044,
+    "title": "Riva Tumbler, 20oz (Engraving)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/69c25e3e3e0ea90e4003e6c4",
+      "https://images.printify.com/69c25e3a737d41896d0bf400",
+      "https://images.printify.com/69c25e3cc5b9a4286b0df055",
+      "https://images.printify.com/68f0d0a8d136d5747c0c9b72"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 86,
+        "title": "Chill"
+      },
+      "variants": {
+        "id": 86,
+        "title": "Chill",
+        "variants": [
+          {
+            "id": 125427,
+            "title": "White / 20oz",
+            "options": {
+              "color": "White",
+              "size": "20oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "engraving",
+                "height": 1650,
+                "width": 1800
+              }
+            ]
+          },
+          {
+            "id": 125428,
+            "title": "Black / 20oz",
+            "options": {
+              "color": "Black",
+              "size": "20oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "engraving",
+                "height": 1650,
+                "width": 1800
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              125427,
+              125428
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 659
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              125427,
+              125428
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1329
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 699
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              125427,
+              125428
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1229
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 529
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              125427,
+              125428
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 699
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,208 @@
+{
+  "blueprint": {
+    "id": 515,
+    "title": "Spiral Notebook",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d5c96509831031450f1aa4",
+      "https://images.printify.com/66d5c96309831031450f1aa3",
+      "https://images.printify.com/5f75d2998d56520e6b149e68",
+      "https://images.printify.com/5f75d29a3b3bbb1497357893"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 55,
+        "title": "Druk\u0101tava"
+      },
+      "variants": {
+        "id": 55,
+        "title": "Druk\u0101tava",
+        "variants": [
+          {
+            "id": 67981,
+            "title": "One Size",
+            "options": {
+              "size": "One Size"
+            },
+            "placeholders": [
+              {
+                "position": "front_cover",
+                "decoration_method": "digital-printing",
+                "height": 2882,
+                "width": 2150
+              },
+              {
+                "position": "back_cover",
+                "decoration_method": "digital-printing",
+                "height": 2882,
+                "width": 2150
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              67981
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1969
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 99
+            },
+            "countries": [
+              "EE",
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "DK",
+              "FO",
+              "FI",
+              "FR",
+              "GE",
+              "DE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IS",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "SE",
+              "TR",
+              "UA",
+              "XK",
+              "LV",
+              "LT"
+            ]
+          },
+          {
+            "variant_ids": [
+              67981
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2619
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 99
+            },
+            "countries": [
+              "NO",
+              "CH",
+              "LI"
+            ]
+          },
+          {
+            "variant_ids": [
+              67981
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1959
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 99
+            },
+            "countries": [
+              "GB"
+            ]
+          },
+          {
+            "variant_ids": [
+              67981
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 3139
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              67981
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 3399
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              67981
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 4649
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

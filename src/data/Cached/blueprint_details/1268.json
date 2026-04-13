@@ -1,0 +1,161 @@
+{
+  "blueprint": {
+    "id": 1268,
+    "title": "Kiss-Cut Vinyl Decals",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66cdd8ea60f9be2ae20029c4",
+      "https://images.printify.com/66cdd8e960f9be2ae20029c3",
+      "https://images.printify.com/67ed268ee1c37922070f52b3",
+      "https://images.printify.com/67ed268d67fa16d433071936"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 215,
+        "title": "Stickers \u0026 Posters"
+      },
+      "variants": {
+        "id": 215,
+        "title": "Stickers \u0026 Posters",
+        "variants": [
+          {
+            "id": 95743,
+            "title": "3\u0022 x 4\u0022 / Kiss-Cut / Satin",
+            "options": {
+              "size": "3\u0022 x 4\u0022",
+              "shape": "Kiss-Cut",
+              "paper": "Satin"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 800,
+                "width": 600
+              }
+            ]
+          },
+          {
+            "id": 95744,
+            "title": "4\u0022 x 6\u0022 / Kiss-Cut / Satin",
+            "options": {
+              "size": "4\u0022 x 6\u0022",
+              "shape": "Kiss-Cut",
+              "paper": "Satin"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1200,
+                "width": 800
+              }
+            ]
+          },
+          {
+            "id": 95745,
+            "title": "6\u0022 x 8\u0022 / Kiss-Cut / Satin",
+            "options": {
+              "size": "6\u0022 x 8\u0022",
+              "shape": "Kiss-Cut",
+              "paper": "Satin"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1600,
+                "width": 1200
+              }
+            ]
+          },
+          {
+            "id": 95746,
+            "title": "8\u0022 x 10\u0022 / Kiss-Cut / Satin",
+            "options": {
+              "size": "8\u0022 x 10\u0022",
+              "shape": "Kiss-Cut",
+              "paper": "Satin"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 2000,
+                "width": 1600
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              95743,
+              95744,
+              95745,
+              95746
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 839
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 49
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              95743,
+              95744,
+              95745,
+              95746
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1049
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 59
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              95743,
+              95744,
+              95745,
+              95746
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 469
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 9
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

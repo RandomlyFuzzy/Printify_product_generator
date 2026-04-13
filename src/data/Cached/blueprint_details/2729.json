@@ -1,0 +1,221 @@
+{
+  "blueprint": {
+    "id": 2729,
+    "title": "Paper Gift Bag",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/698c7ecc67d32e8182095922",
+      "https://images.printify.com/698c7ec5a02ccdfc48041442",
+      "https://images.printify.com/698dacaa78418ce213058a42",
+      "https://images.printify.com/698c7ec821cb5950e40ecdb2",
+      "https://images.printify.com/698c7ed37228cf21f502d5f2",
+      "https://images.printify.com/698db08643d7b328d80efb22"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 228,
+        "title": "Taylor"
+      },
+      "variants": {
+        "id": 228,
+        "title": "Taylor",
+        "variants": [
+          {
+            "id": 148763,
+            "title": "5.5\u0027\u0027 x 8.375\u0022 / Kraft / Paper",
+            "options": {
+              "size": "5.5\u0027\u0027 x 8.375\u0022",
+              "color": "Kraft",
+              "material": "Paper"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 2213,
+                "width": 1350
+              }
+            ]
+          },
+          {
+            "id": 148764,
+            "title": "5.5\u0027\u0027 x 8.375\u0022 / White / Paper",
+            "options": {
+              "size": "5.5\u0027\u0027 x 8.375\u0022",
+              "color": "White",
+              "material": "Paper"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 2213,
+                "width": 1350
+              }
+            ]
+          },
+          {
+            "id": 148765,
+            "title": "8\u0027\u0027 x 10.25\u0022 / Kraft / Paper",
+            "options": {
+              "size": "8\u0027\u0027 x 10.25\u0022",
+              "color": "Kraft",
+              "material": "Paper"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 2775,
+                "width": 2100
+              }
+            ]
+          },
+          {
+            "id": 148766,
+            "title": "8\u0027\u0027 x 10.25\u0022 / White / Paper",
+            "options": {
+              "size": "8\u0027\u0027 x 10.25\u0022",
+              "color": "White",
+              "material": "Paper"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 2775,
+                "width": 2100
+              }
+            ]
+          },
+          {
+            "id": 148767,
+            "title": "10\u0027\u0027 x 13\u0022 / Kraft / Paper",
+            "options": {
+              "size": "10\u0027\u0027 x 13\u0022",
+              "color": "Kraft",
+              "material": "Paper"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 3600,
+                "width": 2700
+              }
+            ]
+          },
+          {
+            "id": 148768,
+            "title": "10\u0027\u0027 x 13\u0022 / White / Paper",
+            "options": {
+              "size": "10\u0027\u0027 x 13\u0022",
+              "color": "White",
+              "material": "Paper"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 3600,
+                "width": 2700
+              }
+            ]
+          },
+          {
+            "id": 148769,
+            "title": "6.25\u0027\u0027 x 12.5\u0022 / Kraft / Paper",
+            "options": {
+              "size": "6.25\u0027\u0027 x 12.5\u0022",
+              "color": "Kraft",
+              "material": "Paper"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 2100,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 148770,
+            "title": "6.25\u0027\u0027 x 12.5\u0022 / White / Paper",
+            "options": {
+              "size": "6.25\u0027\u0027 x 12.5\u0022",
+              "color": "White",
+              "material": "Paper"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 2100,
+                "width": 1500
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              148763,
+              148764,
+              148765,
+              148766,
+              148767,
+              148768,
+              148769,
+              148770
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 579
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 99
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              148763,
+              148764,
+              148765,
+              148766,
+              148767,
+              148768,
+              148769,
+              148770
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1249
+            },
+            "countries": [
+              "REST_OF_THE_WORLD",
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

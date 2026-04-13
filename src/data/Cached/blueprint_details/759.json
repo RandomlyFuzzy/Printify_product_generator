@@ -1,0 +1,206 @@
+{
+  "blueprint": {
+    "id": 759,
+    "title": "Wall Decals",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d6f82911f4267f37024333",
+      "https://images.printify.com/66d6f8285f51b60b060df378",
+      "https://images.printify.com/6166c16bb507f83c41427ad8",
+      "https://images.printify.com/6166c1701dc6f7739544ab41",
+      "https://images.printify.com/6735cf8fc5b0d4c38e0dfd02",
+      "https://images.printify.com/6735cfba077ce57e470c8192"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 73,
+        "title": "Printed Simply"
+      },
+      "variants": {
+        "id": 73,
+        "title": "Printed Simply",
+        "variants": [
+          {
+            "id": 74528,
+            "title": "12\u0022 x 18\u0022",
+            "options": {
+              "size": "12\u0022 x 18\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 5400,
+                "width": 3600
+              }
+            ]
+          },
+          {
+            "id": 74529,
+            "title": "18\u2033 x 12\u2033",
+            "options": {
+              "size": "18\u2033 x 12\u2033"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 3600,
+                "width": 5400
+              }
+            ]
+          },
+          {
+            "id": 74530,
+            "title": "18\u0022 x 24\u0022",
+            "options": {
+              "size": "18\u0022 x 24\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 7200,
+                "width": 5400
+              }
+            ]
+          },
+          {
+            "id": 74531,
+            "title": "24\u2033 x 18\u2033",
+            "options": {
+              "size": "24\u2033 x 18\u2033"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 5400,
+                "width": 7200
+              }
+            ]
+          },
+          {
+            "id": 74532,
+            "title": "24\u0022 x 36\u0022",
+            "options": {
+              "size": "24\u0022 x 36\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 10800,
+                "width": 7200
+              }
+            ]
+          },
+          {
+            "id": 74533,
+            "title": "36\u0022 x 24\u0022",
+            "options": {
+              "size": "36\u0022 x 24\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 7200,
+                "width": 10800
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              74528,
+              74529,
+              74530,
+              74531,
+              74532,
+              74533
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              74528,
+              74529
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 539
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 99
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              74528,
+              74529,
+              74530,
+              74531,
+              74532,
+              74533
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1099
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 219
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              74530,
+              74531,
+              74532,
+              74533
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 629
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 129
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

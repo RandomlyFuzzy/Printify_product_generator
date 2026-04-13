@@ -1,0 +1,99 @@
+{
+  "blueprint": {
+    "id": 1346,
+    "title": "Doormat",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66cc81348212324b6f064703",
+      "https://images.printify.com/66cc8133276651a15c01f962",
+      "https://images.printify.com/65081239bc909f3a5109f9fc",
+      "https://images.printify.com/6756b903048b72953e098332"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 80,
+        "title": "M.i.A Merchandise"
+      },
+      "variants": {
+        "id": 80,
+        "title": "M.i.A Merchandise",
+        "variants": [
+          {
+            "id": 103043,
+            "title": "24\u0022 x 16\u0022",
+            "options": {
+              "size": "24\u0022 x 16\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 4875,
+                "width": 7275
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              103043
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2049
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2049
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              103043
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 7049
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 5999
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              103043
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 5579
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2969
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

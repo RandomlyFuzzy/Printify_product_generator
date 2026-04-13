@@ -1,0 +1,109 @@
+{
+  "blueprint": {
+    "id": 971,
+    "title": "Winter Neck Gaiter With Drawstring",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d894c11dc58c2df20eb0fc",
+      "https://images.printify.com/66d894c4c0281a60d00e19da",
+      "https://images.printify.com/62909661e21b0cf993039033",
+      "https://images.printify.com/62862da102b057819d07fb6f",
+      "https://images.printify.com/629096a16da48a318e016303",
+      "https://images.printify.com/62862d54f537f9f6e50feb47",
+      "https://images.printify.com/628639913e49921fff019c2e",
+      "https://images.printify.com/6232ce8e2cf2df6609557904"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 107,
+        "title": "Deco Slides"
+      },
+      "variants": {
+        "id": 107,
+        "title": "Deco Slides",
+        "variants": [
+          {
+            "id": 78499,
+            "title": "17.5\u0022 \u00D7 9.5\u0022",
+            "options": {
+              "size": "17.5\u0022 \u00D7 9.5\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 5300,
+                "width": 2900
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 5300,
+                "width": 2900
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              78499
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 479
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 99
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              78499
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 959
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 139
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              78499
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 949
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 370
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

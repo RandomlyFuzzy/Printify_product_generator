@@ -1,0 +1,187 @@
+{
+  "blueprint": {
+    "id": 2720,
+    "title": "Quilt Cover Set Of Three",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/69c3bbb97a3cf05c510bed30",
+      "https://images.printify.com/69c3bbbb04e8ffb02206db80",
+      "https://images.printify.com/6903288e20bbc2041f09bc52",
+      "https://images.printify.com/69032893cfb6935a7d0b13f2",
+      "https://images.printify.com/69c3bfdae519e3bdd805a9d2",
+      "https://images.printify.com/6903288d9e7325c5c704dbb2",
+      "https://images.printify.com/6903288709193590180e0992",
+      "https://images.printify.com/69c3d4513a24582eaf0ca842",
+      "https://images.printify.com/69032890ce1d599c560bc5c2"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 332,
+        "title": "Printdoors"
+      },
+      "variants": {
+        "id": 332,
+        "title": "Printdoors",
+        "variants": [
+          {
+            "id": 148532,
+            "title": "79\u0027\u0027 x 90\u0027\u0027",
+            "options": {
+              "size": "79\u0027\u0027 x 90\u0027\u0027"
+            },
+            "placeholders": [
+              {
+                "position": "quilt_cover",
+                "decoration_method": "dye-sublimation",
+                "height": 9252,
+                "width": 8150
+              },
+              {
+                "position": "pillow_cover",
+                "decoration_method": "dye-sublimation",
+                "height": 2051,
+                "width": 3071
+              }
+            ]
+          },
+          {
+            "id": 148533,
+            "title": "68\u0027\u0027 x 90\u0027\u0027",
+            "options": {
+              "size": "68\u0027\u0027 x 90\u0027\u0027"
+            },
+            "placeholders": [
+              {
+                "position": "quilt_cover",
+                "decoration_method": "dye-sublimation",
+                "height": 9254,
+                "width": 6974
+              },
+              {
+                "position": "pillow_cover",
+                "decoration_method": "dye-sublimation",
+                "height": 2051,
+                "width": 3071
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              148532,
+              148533
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 379
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "CN"
+            ]
+          },
+          {
+            "variant_ids": [
+              148532,
+              148533
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2449
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2299
+            },
+            "countries": [
+              "DE",
+              "FR",
+              "GB"
+            ]
+          },
+          {
+            "variant_ids": [
+              148532,
+              148533
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2649
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2499
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              148532,
+              148533
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2599
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2349
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              148532,
+              148533
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1649
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 899
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              148532,
+              148533
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 4099
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 3899
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

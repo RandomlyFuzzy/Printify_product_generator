@@ -1,0 +1,151 @@
+{
+  "blueprint": {
+    "id": 5344,
+    "title": "Slate Desk Plaque",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/69c3ab8dbff1f9e0800e9932",
+      "https://images.printify.com/69c38d2167c1c7901e07ce40",
+      "https://images.printify.com/6989fbeeaab8c63ad10cc312",
+      "https://images.printify.com/69c26a85bf800eae3b051840"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 92,
+        "title": "Pic the Gift"
+      },
+      "variants": {
+        "id": 92,
+        "title": "Pic the Gift",
+        "variants": [
+          {
+            "id": 243923,
+            "title": "7\u0022 x 11\u0022",
+            "options": {
+              "size": "7\u0022 x 11\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 2325,
+                "width": 3489
+              }
+            ]
+          },
+          {
+            "id": 243924,
+            "title": "8\u0022 \u00D7 8\u0022",
+            "options": {
+              "size": "8\u0022 \u00D7 8\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 2250,
+                "width": 2250
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              243923,
+              243924
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1199
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 629
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              243923,
+              243924
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2399
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1209
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              243923,
+              243924
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 3269
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1569
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              243923,
+              243924
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2629
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1599
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              243923,
+              243924
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 3359
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2599
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

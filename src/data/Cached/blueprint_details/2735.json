@@ -1,0 +1,97 @@
+{
+  "blueprint": {
+    "id": 2735,
+    "title": "Twin Flat Sheet",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/69b181a1f7cd89e6df0eadf0",
+      "https://images.printify.com/69b1815d8d1960b302044ae0"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 92,
+        "title": "Pic the Gift"
+      },
+      "variants": {
+        "id": 92,
+        "title": "Pic the Gift",
+        "variants": [
+          {
+            "id": 149012,
+            "title": "58\u0022 x 97\u0022",
+            "options": {
+              "size": "58\u0022 x 97\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 20900,
+                "width": 11920
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              149012
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              149012
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1709
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 879
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              149012
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2359
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 799
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

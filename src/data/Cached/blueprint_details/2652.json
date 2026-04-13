@@ -1,0 +1,198 @@
+{
+  "blueprint": {
+    "id": 2652,
+    "title": "Cutout Paw Bar Necklace (Engraving)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/68d67df856c3542a3d0b3be2",
+      "https://images.printify.com/68e65cf593973472fc0fc932",
+      "https://images.printify.com/68e65cf7b614b908720dfc88",
+      "https://images.printify.com/68e65cf687a022aa41006232",
+      "https://images.printify.com/68e65cf414412746410bffd2",
+      "https://images.printify.com/68e65cf3d2e1f72a580a7fd2"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 217,
+        "title": "Fulfill Engine"
+      },
+      "variants": {
+        "id": 217,
+        "title": "Fulfill Engine",
+        "variants": [
+          {
+            "id": 147705,
+            "title": "One Size / Black PVD coating",
+            "options": {
+              "size": "One Size",
+              "color": "Black PVD coating"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "laser-engraving",
+                "height": 192,
+                "width": 936
+              }
+            ]
+          },
+          {
+            "id": 147706,
+            "title": "One Size / 18K Gold PVD coating",
+            "options": {
+              "size": "One Size",
+              "color": "18K Gold PVD coating"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "laser-engraving",
+                "height": 192,
+                "width": 936
+              }
+            ]
+          },
+          {
+            "id": 147707,
+            "title": "One Size / Rainbow PVD coating",
+            "options": {
+              "size": "One Size",
+              "color": "Rainbow PVD coating"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "laser-engraving",
+                "height": 192,
+                "width": 936
+              }
+            ]
+          },
+          {
+            "id": 147708,
+            "title": "One Size / 18K Rose Gold PVD coating",
+            "options": {
+              "size": "One Size",
+              "color": "18K Rose Gold PVD coating"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "laser-engraving",
+                "height": 192,
+                "width": 936
+              }
+            ]
+          },
+          {
+            "id": 147709,
+            "title": "One Size / Stainless Steel (No coating)",
+            "options": {
+              "size": "One Size",
+              "color": "Stainless Steel (No coating)"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "laser-engraving",
+                "height": 192,
+                "width": 936
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              147705,
+              147706,
+              147707,
+              147708,
+              147709
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 449
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 209
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              147705,
+              147706,
+              147707,
+              147708,
+              147709
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 569
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              147705,
+              147706,
+              147707,
+              147708,
+              147709
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              147705,
+              147706,
+              147707,
+              147708,
+              147709
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 939
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "blueprint": {
+    "id": 976,
+    "title": "Garden \u0026 House Banner",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d1c062b64c590da20931f4",
+      "https://images.printify.com/66d1c0609722d8c74d080ba8",
+      "https://images.printify.com/673305911e385aeba00f5582",
+      "https://images.printify.com/628ceb0953e9d19c1408b5cc",
+      "https://images.printify.com/628ceb4748327d73840b1e4f",
+      "https://images.printify.com/628ceb47569b1d0fef013934"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 92,
+        "title": "Pic the Gift"
+      },
+      "variants": {
+        "id": 92,
+        "title": "Pic the Gift",
+        "variants": [
+          {
+            "id": 78841,
+            "title": "12\u0027\u0027 \u00D7 18\u0027\u0027",
+            "options": {
+              "size": "12\u0027\u0027 \u00D7 18\u0027\u0027"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 5700,
+                "width": 3900
+              }
+            ]
+          },
+          {
+            "id": 78842,
+            "title": "24.5\u0027\u0027 \u00D7 32\u0027\u0027",
+            "options": {
+              "size": "24.5\u0027\u0027 \u00D7 32\u0027\u0027"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 10012,
+                "width": 7800
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              78841,
+              78842
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 609
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              78841,
+              78842
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 929
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              78841,
+              78842
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1099
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

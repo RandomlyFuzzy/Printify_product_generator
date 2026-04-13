@@ -1,0 +1,70 @@
+{
+  "blueprint": {
+    "id": 1555,
+    "title": "Pre-Workout Supplement, Watermelon (300g, 10.58oz)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66c449c5639c0c35b80d0b23",
+      "https://images.printify.com/66c449c4639c0c35b80d0b22",
+      "https://images.printify.com/66e19cda3d4bff7aec04dd73",
+      "https://images.printify.com/66a8dd9c7f33892f6105bd53",
+      "https://images.printify.com/66b34443db49d667ab0c0fe2"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 294,
+        "title": "Rocktomic"
+      },
+      "variants": {
+        "id": 294,
+        "title": "Rocktomic",
+        "variants": [
+          {
+            "id": 109743,
+            "title": "Black jar \u002B lid / Watermelon / NET WT 10.58 OZ (300g)",
+            "options": {
+              "color": "Black jar \u002B lid",
+              "flavor": "Watermelon",
+              "size": "NET WT 10.58 OZ (300g)"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 2197,
+                "width": 3378
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              109743
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 649
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,275 @@
+{
+  "blueprint": {
+    "id": 919,
+    "title": "Apron, 5-Color Straps (AOP)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d05fcc8a5f8df5d805eb43",
+      "https://images.printify.com/66d05fced4afb6fcfc0334a5",
+      "https://images.printify.com/6601a54127dd1e9c4a065686",
+      "https://images.printify.com/6601a5a0390e9a747d09dd27",
+      "https://images.printify.com/6601a59f5dbde2cef20e2cd6"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 48,
+        "title": "Colorway"
+      },
+      "variants": {
+        "id": 48,
+        "title": "Colorway",
+        "variants": [
+          {
+            "id": 77521,
+            "title": "One size / Black",
+            "options": {
+              "size": "One size",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 4961,
+                "width": 4075
+              }
+            ]
+          },
+          {
+            "id": 77522,
+            "title": "One size / White",
+            "options": {
+              "size": "One size",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 4961,
+                "width": 4075
+              }
+            ]
+          },
+          {
+            "id": 81426,
+            "title": "One size / Beige",
+            "options": {
+              "size": "One size",
+              "color": "Beige"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 4961,
+                "width": 4075
+              }
+            ]
+          },
+          {
+            "id": 81427,
+            "title": "One size / Blue",
+            "options": {
+              "size": "One size",
+              "color": "Blue"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 4961,
+                "width": 4075
+              }
+            ]
+          },
+          {
+            "id": 81428,
+            "title": "One size / Pink",
+            "options": {
+              "size": "One size",
+              "color": "Pink"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 4961,
+                "width": 4075
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              77521,
+              77522,
+              81426,
+              81427,
+              81428
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 899
+            },
+            "countries": [
+              "NL",
+              "DE",
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "DK",
+              "EE",
+              "FO",
+              "FI",
+              "FR",
+              "GE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IS",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "LV",
+              "LI",
+              "LT",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NO",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "SE",
+              "CH",
+              "TR",
+              "UA",
+              "XK"
+            ]
+          },
+          {
+            "variant_ids": [
+              77521,
+              77522,
+              81426,
+              81427,
+              81428
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1239
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 309
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              77521,
+              77522,
+              81426,
+              81427,
+              81428
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2279
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1139
+            },
+            "countries": [
+              "CA",
+              "MX",
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              77521,
+              77522,
+              81426,
+              81427,
+              81428
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 599
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 299
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              77521,
+              77522,
+              81426,
+              81427,
+              81428
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 549
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 299
+            },
+            "countries": [
+              "GB"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

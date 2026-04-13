@@ -1,0 +1,113 @@
+{
+  "blueprint": {
+    "id": 1413,
+    "title": "Rock Creek Coffee Blend (Medium Roast)",
+    "brand": "Roastify",
+    "model": "",
+    "images": [
+      "https://images.printify.com/67b71b9edf7c1742a7097452",
+      "https://images.printify.com/67b72331d5ad4e28eb0d77b2",
+      "https://images.printify.com/67b71bcadf7c1742a7097453",
+      "https://images.printify.com/67b71bda7464474b9e0f4b33",
+      "https://images.printify.com/67b71bd1d2b35ac34b0bc9c2",
+      "https://images.printify.com/67b71bd21563b0c2810a0f63",
+      "https://images.printify.com/67b71bd91563b0c2810a0f65",
+      "https://images.printify.com/67b71bcc48ba4d1aba04e662",
+      "https://images.printify.com/67b71bcd7464474b9e0f4b32",
+      "https://images.printify.com/67b71bd4df7c1742a7097454",
+      "https://images.printify.com/67b71bcf1563b0c2810a0f62",
+      "https://images.printify.com/67b71bd5c2e0e58df20efea2",
+      "https://images.printify.com/67b71bd71563b0c2810a0f64",
+      "https://images.printify.com/67b71bd8df7c1742a7097455",
+      "https://images.printify.com/66c354772b63c1d4430f7a65"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 291,
+        "title": "Roastify"
+      },
+      "variants": {
+        "id": 291,
+        "title": "Roastify",
+        "variants": [
+          {
+            "id": 104841,
+            "title": "Whole Bean / 12oz",
+            "options": {
+              "grind": "Whole Bean",
+              "size": "12oz"
+            },
+            "placeholders": [
+              {
+                "position": "coffee_front",
+                "decoration_method": "digital-printing",
+                "height": 4444,
+                "width": 3900
+              }
+            ]
+          },
+          {
+            "id": 104842,
+            "title": "Ground / 12oz",
+            "options": {
+              "grind": "Ground",
+              "size": "12oz"
+            },
+            "placeholders": [
+              {
+                "position": "coffee_front",
+                "decoration_method": "digital-printing",
+                "height": 4444,
+                "width": 3900
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              104841,
+              104842
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 759
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              104841,
+              104842
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2099
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 189
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

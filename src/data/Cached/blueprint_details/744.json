@@ -1,0 +1,175 @@
+{
+  "blueprint": {
+    "id": 744,
+    "title": "Throw Blanket",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d6d74dbbf24030df047692",
+      "https://images.printify.com/66d6d74bc46383c0b9056062",
+      "https://images.printify.com/616e96fa9e71207606796612",
+      "https://images.printify.com/6170fb02bea84c7f013e89a4",
+      "https://images.printify.com/6733041d1c0fa2d2490bf572"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 59,
+        "title": "Imagine Your Photos"
+      },
+      "variants": {
+        "id": 59,
+        "title": "Imagine Your Photos",
+        "variants": [
+          {
+            "id": 75114,
+            "title": "White base / 50\u0022 \u00D7 60\u0022",
+            "options": {
+              "color": "White base",
+              "size": "50\u0022 \u00D7 60\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 18945,
+                "width": 15945
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              75114
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2169
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1419
+            },
+            "countries": [
+              "REST_OF_THE_WORLD",
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "DK",
+              "EE",
+              "FO",
+              "FI",
+              "FR",
+              "GE",
+              "DE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IS",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "LV",
+              "LI",
+              "LT",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "NO",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "SE",
+              "CH",
+              "TR",
+              "UA",
+              "GB",
+              "XK"
+            ]
+          },
+          {
+            "variant_ids": [
+              75114
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2579
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1419
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              75114
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1199
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 629
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              75114
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 429
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

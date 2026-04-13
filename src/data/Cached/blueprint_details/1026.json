@@ -1,0 +1,93 @@
+{
+  "blueprint": {
+    "id": 1026,
+    "title": "Holiday Cards (Two-sided print)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d889186bc0a431910ec3a7",
+      "https://images.printify.com/66d889173e7448d5f80acb12",
+      "https://images.printify.com/625314befc03f38eeb036267",
+      "https://images.printify.com/625538dc7af77c660004bc46",
+      "https://images.printify.com/672dfa73372939a413085552"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 66,
+        "title": "Prima Printing"
+      },
+      "variants": {
+        "id": 66,
+        "title": "Prima Printing",
+        "variants": [
+          {
+            "id": 79854,
+            "title": "6.9\u0022 x 4.9\u0022 / Matte / 1 pc",
+            "options": {
+              "size": "6.9\u0022 x 4.9\u0022",
+              "paper": "Matte",
+              "quantity": "1 pc"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 1500,
+                "width": 2102
+              },
+              {
+                "position": "back",
+                "decoration_method": "digital-printing",
+                "height": 1500,
+                "width": 2102
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              79854
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 99
+            },
+            "countries": [
+              "AU",
+              "NZ"
+            ]
+          },
+          {
+            "variant_ids": [
+              79854
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1599
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1599
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

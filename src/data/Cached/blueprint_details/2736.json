@@ -1,0 +1,159 @@
+{
+  "blueprint": {
+    "id": 2736,
+    "title": "Toilet Three-Piece Set",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/69207e4287085509bd07a7a3",
+      "https://images.printify.com/69207e40a4f4fd3c110d2452"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 332,
+        "title": "Printdoors"
+      },
+      "variants": {
+        "id": 332,
+        "title": "Printdoors",
+        "variants": [
+          {
+            "id": 149189,
+            "title": "Set of 3",
+            "options": {
+              "size": "Set of 3"
+            },
+            "placeholders": [
+              {
+                "position": "toilet_mat",
+                "decoration_method": "dye-sublimation",
+                "height": 5948,
+                "width": 4768
+              },
+              {
+                "position": "footpad",
+                "decoration_method": "dye-sublimation",
+                "height": 5362,
+                "width": 6539
+              },
+              {
+                "position": "carpet",
+                "decoration_method": "dye-sublimation",
+                "height": 5360,
+                "width": 7721
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              149189
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 379
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "CN"
+            ]
+          },
+          {
+            "variant_ids": [
+              149189
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 879
+            },
+            "countries": [
+              "DE",
+              "FR",
+              "GB"
+            ]
+          },
+          {
+            "variant_ids": [
+              149189
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1319
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1199
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              149189
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1469
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1219
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              149189
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1199
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              149189
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1749
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1549
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

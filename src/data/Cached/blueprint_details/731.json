@@ -1,0 +1,269 @@
+{
+  "blueprint": {
+    "id": 731,
+    "title": "Organic Cotton Tote Bag",
+    "brand": "Westford Mill\u00AE",
+    "model": "W801",
+    "images": [
+      "https://images.printify.com/66d6cd9f00bdf88bbf0a7352",
+      "https://images.printify.com/66d6cd9ed50ebf51740b5db4",
+      "https://images.printify.com/67ee771f530be42ac70d0cf2",
+      "https://images.printify.com/69c63c956c949764ac076a61",
+      "https://images.printify.com/6481a21512db6f168909ab53",
+      "https://images.printify.com/6481a216a40754dbd106aba6",
+      "https://images.printify.com/6481a2154479af721909d855"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 26,
+        "title": "Textildruck Europa"
+      },
+      "variants": {
+        "id": 26,
+        "title": "Textildruck Europa",
+        "variants": [
+          {
+            "id": 79434,
+            "title": "Black / 15\u0022 x 16.5\u0022",
+            "options": {
+              "color": "Black",
+              "size": "15\u0022 x 16.5\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3543,
+                "width": 2953
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 3543,
+                "width": 2953
+              }
+            ]
+          },
+          {
+            "id": 79435,
+            "title": "Classic Red / 15\u0022 x 16.5\u0022",
+            "options": {
+              "color": "Classic Red",
+              "size": "15\u0022 x 16.5\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3543,
+                "width": 2953
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 3543,
+                "width": 2953
+              }
+            ]
+          },
+          {
+            "id": 79436,
+            "title": "French Navy / 15\u0022 x 16.5\u0022",
+            "options": {
+              "color": "French Navy",
+              "size": "15\u0022 x 16.5\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3543,
+                "width": 2953
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 3543,
+                "width": 2953
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              79434,
+              79435,
+              79436
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 389
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 119
+            },
+            "countries": [
+              "DE"
+            ]
+          },
+          {
+            "variant_ids": [
+              79434,
+              79435,
+              79436
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 699
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 119
+            },
+            "countries": [
+              "IE",
+              "GB",
+              "DK",
+              "LV",
+              "FI",
+              "EE",
+              "IS",
+              "LI",
+              "CH",
+              "LT",
+              "SE",
+              "NO"
+            ]
+          },
+          {
+            "variant_ids": [
+              79434,
+              79435,
+              79436
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2249
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 659
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              79434,
+              79435,
+              79436
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 549
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 119
+            },
+            "countries": [
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "FO",
+              "FR",
+              "GE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IM",
+              "IT",
+              "JE",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "TR",
+              "UA",
+              "XK"
+            ]
+          },
+          {
+            "variant_ids": [
+              79434,
+              79435,
+              79436
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1249
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 659
+            },
+            "countries": [
+              "CA",
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              79434,
+              79435,
+              79436
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 859
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

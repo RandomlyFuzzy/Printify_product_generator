@@ -1,0 +1,297 @@
+{
+  "blueprint": {
+    "id": 2336,
+    "title": "Infant Long Legged Baby Rib Bodysuit",
+    "brand": "Rabbit Skins",
+    "model": "4412",
+    "images": [
+      "https://images.printify.com/68bae1d4d7d507952e065052",
+      "https://images.printify.com/68bae1d3c97b1907c80cb892",
+      "https://images.printify.com/68bae1d1eb361f2829065002",
+      "https://images.printify.com/68bae1d29fbe7d8cf406b702",
+      "https://images.printify.com/68bae1c79fc369ddfb09b1d2"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 73,
+        "title": "Printed Simply"
+      },
+      "variants": {
+        "id": 73,
+        "title": "Printed Simply",
+        "variants": [
+          {
+            "id": 130452,
+            "title": "6M / Black",
+            "options": {
+              "size": "6M",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 1583,
+                "width": 1391
+              }
+            ]
+          },
+          {
+            "id": 130453,
+            "title": "12M / Black",
+            "options": {
+              "size": "12M",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 2126,
+                "width": 1864
+              }
+            ]
+          },
+          {
+            "id": 130454,
+            "title": "18M / Black",
+            "options": {
+              "size": "18M",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 2126,
+                "width": 1864
+              }
+            ]
+          },
+          {
+            "id": 130455,
+            "title": "24M / Black",
+            "options": {
+              "size": "24M",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 2126,
+                "width": 1864
+              }
+            ]
+          },
+          {
+            "id": 130456,
+            "title": "6M / White",
+            "options": {
+              "size": "6M",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 1583,
+                "width": 1391
+              }
+            ]
+          },
+          {
+            "id": 130457,
+            "title": "12M / White",
+            "options": {
+              "size": "12M",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 2126,
+                "width": 1864
+              }
+            ]
+          },
+          {
+            "id": 130458,
+            "title": "18M / White",
+            "options": {
+              "size": "18M",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 2126,
+                "width": 1864
+              }
+            ]
+          },
+          {
+            "id": 130459,
+            "title": "24M / White",
+            "options": {
+              "size": "24M",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 2126,
+                "width": 1864
+              }
+            ]
+          },
+          {
+            "id": 130492,
+            "title": "NB (0-3M) / Black",
+            "options": {
+              "size": "NB (0-3M)",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 2126,
+                "width": 1864
+              }
+            ]
+          },
+          {
+            "id": 130493,
+            "title": "NB (0-3M) / White",
+            "options": {
+              "size": "NB (0-3M)",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 2126,
+                "width": 1864
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              130452,
+              130453,
+              130454,
+              130455,
+              130456,
+              130457,
+              130458,
+              130459,
+              130492,
+              130493
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1000
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 400
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              130452,
+              130453,
+              130454,
+              130455,
+              130456,
+              130457,
+              130458,
+              130459,
+              130492,
+              130493
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1249
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              130452,
+              130453,
+              130454,
+              130455,
+              130456,
+              130457,
+              130458,
+              130459,
+              130492,
+              130493
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 939
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              130452,
+              130453,
+              130454,
+              130455,
+              130456,
+              130457,
+              130458,
+              130459,
+              130492,
+              130493
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 519
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 219
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "blueprint": {
+    "id": 1065,
+    "title": "PLA Bento Box with Band and Utensils",
+    "brand": "Leed\u0027s",
+    "model": "",
+    "images": [
+      "https://images.printify.com/62850f6192fed71892060c3d",
+      "https://images.printify.com/634fef2522704354450a076d",
+      "https://images.printify.com/627a100bbeca17b32d080de3",
+      "https://images.printify.com/6284ccea5e9b3b475e089689",
+      "https://images.printify.com/6284cceaecdcbb57a5095d73",
+      "https://images.printify.com/6284cce95e9b3b475e089685"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 75,
+        "title": "SwagRabbit"
+      },
+      "variants": {
+        "id": 75,
+        "title": "SwagRabbit",
+        "variants": [
+          {
+            "id": 80777,
+            "title": "Black / 7.4\u0022 x 5.1\u0022 x 2.3\u0022",
+            "options": {
+              "color": "Black",
+              "size": "7.4\u0022 x 5.1\u0022 x 2.3\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1501,
+                "width": 2207
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              80777
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 969
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 289
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              80777
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 749
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              80777
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1069
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 279
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

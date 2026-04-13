@@ -1,0 +1,123 @@
+{
+  "blueprint": {
+    "id": 468,
+    "title": "Fanny Pack",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66cc8314c02d89fe070257f6",
+      "https://images.printify.com/66f4046d0364bde0520beeb2",
+      "https://images.printify.com/5fbcbc87a937802388135283",
+      "https://images.printify.com/5fbcc0d5ca162e12544c83b4",
+      "https://images.printify.com/5fbcc0d7a937802388135287",
+      "https://images.printify.com/5fbcbc82654c816d887a7a99"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 10,
+        "title": "MWW On Demand"
+      },
+      "variants": {
+        "id": 10,
+        "title": "MWW On Demand",
+        "variants": [
+          {
+            "id": 65045,
+            "title": "One size",
+            "options": {
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 846,
+                "width": 2323
+              },
+              {
+                "position": "top_part_to_front",
+                "decoration_method": "dye-sublimation",
+                "height": 306,
+                "width": 2335
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              65045
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 509
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 169
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              65045
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 589
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 239
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              65045
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1119
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 539
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              65045
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1069
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 389
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

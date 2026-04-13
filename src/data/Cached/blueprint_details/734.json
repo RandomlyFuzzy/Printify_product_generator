@@ -1,0 +1,119 @@
+{
+  "blueprint": {
+    "id": 734,
+    "title": "Christmas Stocking",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d6cf35b0e46a22ff08256c",
+      "https://images.printify.com/66d6cf36d626b86df502bc95",
+      "https://images.printify.com/61d4056386cb4b25496c2674",
+      "https://images.printify.com/616d7a794c7fb153d84471e4"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 59,
+        "title": "Imagine Your Photos"
+      },
+      "variants": {
+        "id": 59,
+        "title": "Imagine Your Photos",
+        "variants": [
+          {
+            "id": 74056,
+            "title": "One size / Red and Black/Natural",
+            "options": {
+              "size": "One size",
+              "color": "Red and Black/Natural"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 3246,
+                "width": 3184
+              }
+            ]
+          },
+          {
+            "id": 74057,
+            "title": "One size / White and Black/Natural",
+            "options": {
+              "size": "One size",
+              "color": "White and Black/Natural"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 3246,
+                "width": 3184
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              74056,
+              74057
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1089
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              74056,
+              74057
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1109
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 459
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              74056,
+              74057
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 839
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

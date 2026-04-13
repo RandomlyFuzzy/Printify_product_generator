@@ -1,0 +1,354 @@
+{
+  "blueprint": {
+    "id": 417,
+    "title": "Youth Ultra Cotton Tee",
+    "brand": "Gildan",
+    "model": "2000B",
+    "images": [
+      "https://images.printify.com/68a5b71728fc279bc90946c2",
+      "https://images.printify.com/68a5bb6928fc279bc90946c3",
+      "https://images.printify.com/68ee02ea960d197bd20d4862",
+      "https://images.printify.com/68a5afa720d11feeaf01f223"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 29,
+        "title": "Monster Digital"
+      },
+      "variants": {
+        "id": 29,
+        "title": "Monster Digital",
+        "variants": [
+          {
+            "id": 61430,
+            "title": "Black / S",
+            "options": {
+              "color": "Black",
+              "size": "S"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3469,
+                "width": 2828
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 3469,
+                "width": 2828
+              }
+            ]
+          },
+          {
+            "id": 61431,
+            "title": "Black / M",
+            "options": {
+              "color": "Black",
+              "size": "M"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3758,
+                "width": 3064
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 3758,
+                "width": 3064
+              }
+            ]
+          },
+          {
+            "id": 61432,
+            "title": "Black / L",
+            "options": {
+              "color": "Black",
+              "size": "L"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 4007,
+                "width": 3300
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 4007,
+                "width": 3300
+              }
+            ]
+          },
+          {
+            "id": 61574,
+            "title": "White / S",
+            "options": {
+              "color": "White",
+              "size": "S"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3469,
+                "width": 2828
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 3469,
+                "width": 2828
+              }
+            ]
+          },
+          {
+            "id": 61575,
+            "title": "White / M",
+            "options": {
+              "color": "White",
+              "size": "M"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3758,
+                "width": 3064
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 3758,
+                "width": 3064
+              }
+            ]
+          },
+          {
+            "id": 61576,
+            "title": "White / L",
+            "options": {
+              "color": "White",
+              "size": "L"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 4007,
+                "width": 3300
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 4007,
+                "width": 3300
+              }
+            ]
+          },
+          {
+            "id": 61637,
+            "title": "Navy / S",
+            "options": {
+              "color": "Navy",
+              "size": "S"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3469,
+                "width": 2828
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 3469,
+                "width": 2828
+              }
+            ]
+          },
+          {
+            "id": 61638,
+            "title": "Navy / M",
+            "options": {
+              "color": "Navy",
+              "size": "M"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3758,
+                "width": 3064
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 3758,
+                "width": 3064
+              }
+            ]
+          },
+          {
+            "id": 61639,
+            "title": "Navy / L",
+            "options": {
+              "color": "Navy",
+              "size": "L"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 4007,
+                "width": 3300
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 4007,
+                "width": 3300
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              61430,
+              61431,
+              61432,
+              61574,
+              61575,
+              61576,
+              61637,
+              61638,
+              61639
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 429
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 209
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              61430,
+              61431,
+              61432,
+              61574,
+              61575,
+              61576,
+              61637,
+              61638,
+              61639
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 939
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              61430,
+              61431,
+              61432,
+              61574,
+              61575,
+              61576,
+              61637,
+              61638,
+              61639
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1249
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              61430,
+              61431,
+              61432,
+              61574,
+              61575,
+              61576,
+              61637,
+              61638,
+              61639
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1000
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 400
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              61430,
+              61431,
+              61432,
+              61574,
+              61575,
+              61576,
+              61637,
+              61638,
+              61639
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 475
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 240
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

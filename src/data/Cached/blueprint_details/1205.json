@@ -1,0 +1,279 @@
+{
+  "blueprint": {
+    "id": 1205,
+    "title": "Plastic Yard Sign",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d09721419dfc905a065db5",
+      "https://images.printify.com/66d0971ece53c3a96a0e0db6",
+      "https://images.printify.com/63286098b166a12d8600192a",
+      "https://images.printify.com/63285f66e94769a7ef02ed11"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 228,
+        "title": "Taylor"
+      },
+      "variants": {
+        "id": 228,
+        "title": "Taylor",
+        "variants": [
+          {
+            "id": 92131,
+            "title": "18\u2033 x 12\u2033 (Horizontal)",
+            "options": {
+              "size": "18\u2033 x 12\u2033 (Horizontal)"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 7500,
+                "width": 11100
+              }
+            ]
+          },
+          {
+            "id": 92132,
+            "title": "24\u2033 x 18\u2033 (Horizontal)",
+            "options": {
+              "size": "24\u2033 x 18\u2033 (Horizontal)"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 11100,
+                "width": 14700
+              }
+            ]
+          },
+          {
+            "id": 92133,
+            "title": "36\u2033 x 24\u2033 (Horizontal)",
+            "options": {
+              "size": "36\u2033 x 24\u2033 (Horizontal)"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 14700,
+                "width": 21900
+              }
+            ]
+          },
+          {
+            "id": 92134,
+            "title": "12\u2033 x 18\u2033 (Vertical)",
+            "options": {
+              "size": "12\u2033 x 18\u2033 (Vertical)"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 11100,
+                "width": 7500
+              }
+            ]
+          },
+          {
+            "id": 92135,
+            "title": "18\u2033 x 24\u2033 (Vertical)",
+            "options": {
+              "size": "18\u2033 x 24\u2033 (Vertical)"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 14700,
+                "width": 11100
+              }
+            ]
+          },
+          {
+            "id": 92136,
+            "title": "24\u0022 x 36\u0022 (Vertical)",
+            "options": {
+              "size": "24\u0022 x 36\u0022 (Vertical)"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 21900,
+                "width": 14700
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              92131,
+              92134
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1769
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 529
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              92131,
+              92134
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 4599
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 4599
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              92131,
+              92134
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2999
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              92133,
+              92136
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2059
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 629
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              92132,
+              92135
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1849
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 629
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              92133,
+              92136
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 9099
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 9099
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              92132,
+              92135
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 6599
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 6599
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              92133,
+              92136
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 6099
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 6099
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              92132,
+              92135
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 5099
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 5099
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

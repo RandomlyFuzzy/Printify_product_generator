@@ -1,0 +1,212 @@
+{
+  "blueprint": {
+    "id": 1481,
+    "title": "Hard Backed Journal",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66deb034aa121dbf49066a12",
+      "https://images.printify.com/66deb03179048dd773042832",
+      "https://images.printify.com/664f0a2f09472a76a1023292"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 69,
+        "title": "Prodigi"
+      },
+      "variants": {
+        "id": 69,
+        "title": "Prodigi",
+        "variants": [
+          {
+            "id": 107225,
+            "title": "Blank / 5.2\u0022 x 7.4\u0022",
+            "options": {
+              "paper": "Blank",
+              "size": "5.2\u0022 x 7.4\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 2622,
+                "width": 3735
+              }
+            ]
+          },
+          {
+            "id": 107226,
+            "title": "Graph / 5.2\u0022 x 7.4\u0022",
+            "options": {
+              "paper": "Graph",
+              "size": "5.2\u0022 x 7.4\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 2622,
+                "width": 3735
+              }
+            ]
+          },
+          {
+            "id": 107227,
+            "title": "Ruled line / 5.2\u0022 x 7.4\u0022",
+            "options": {
+              "paper": "Ruled line",
+              "size": "5.2\u0022 x 7.4\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 2622,
+                "width": 3735
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              107225,
+              107226,
+              107227
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1899
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 99
+            },
+            "countries": [
+              "REST_OF_THE_WORLD",
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              107225,
+              107226,
+              107227
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 3299
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              107225,
+              107226,
+              107227
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 449
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 99
+            },
+            "countries": [
+              "GB"
+            ]
+          },
+          {
+            "variant_ids": [
+              107225,
+              107226,
+              107227
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1119
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 119
+            },
+            "countries": [
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "DK",
+              "EE",
+              "FO",
+              "FI",
+              "FR",
+              "GE",
+              "DE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IS",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "LV",
+              "LI",
+              "LT",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "NO",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "SE",
+              "CH",
+              "TR",
+              "UA",
+              "XK"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

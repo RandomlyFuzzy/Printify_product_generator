@@ -1,0 +1,163 @@
+{
+  "blueprint": {
+    "id": 1640,
+    "title": "Christmas Stocking (Paw)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/67091027ebde523d9c026c52",
+      "https://images.printify.com/670910289cf8ceb76e0e2612",
+      "https://images.printify.com/6709101f6e0a27dca1053552",
+      "https://images.printify.com/670910216e0a27dca1053553",
+      "https://images.printify.com/67091047bf755f39a00946f2",
+      "https://images.printify.com/670910496e0a27dca1053554"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 332,
+        "title": "Printdoors"
+      },
+      "variants": {
+        "id": 332,
+        "title": "Printdoors",
+        "variants": [
+          {
+            "id": 113595,
+            "title": "One size",
+            "options": {
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtf",
+                "height": 2493,
+                "width": 1731
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtf",
+                "height": 2493,
+                "width": 1731
+              },
+              {
+                "position": "top",
+                "decoration_method": "dtf",
+                "height": 737,
+                "width": 1329
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              113595
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 919
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 789
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              113595
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 649
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 529
+            },
+            "countries": [
+              "FR",
+              "DE",
+              "GB"
+            ]
+          },
+          {
+            "variant_ids": [
+              113595
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1049
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 359
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              113595
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 379
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "CN"
+            ]
+          },
+          {
+            "variant_ids": [
+              113595
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1149
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 979
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              113595
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 799
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 549
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

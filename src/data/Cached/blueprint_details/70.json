@@ -1,0 +1,115 @@
+{
+  "blueprint": {
+    "id": 70,
+    "title": "Stainless Steel Travel Mug",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66c42f4161b2691da8085443",
+      "https://images.printify.com/66c42f4561b2691da8085444",
+      "https://images.printify.com/58ac0e46b2439209155d3375",
+      "https://images.printify.com/58ac5ac0b2439214ad09bd1b"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 1,
+        "title": "SPOKE Custom Products"
+      },
+      "variants": {
+        "id": 1,
+        "title": "SPOKE Custom Products",
+        "variants": [
+          {
+            "id": 33765,
+            "title": "15oz",
+            "options": {
+              "size": "15oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 2024,
+                "width": 2376
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              33765
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 569
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 299
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              33765
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1619
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 579
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              33765
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1249
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 489
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              33765
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 589
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 349
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

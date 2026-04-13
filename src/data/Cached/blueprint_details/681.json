@@ -1,0 +1,179 @@
+{
+  "blueprint": {
+    "id": 681,
+    "title": "Christmas Ball Ornament",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d707469138a291110a81c2",
+      "https://images.printify.com/66d70748c4839a6fab07f852",
+      "https://images.printify.com/672df93d9003fd78160475d2",
+      "https://images.printify.com/611ccc989a5c46295352a263"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 59,
+        "title": "Imagine Your Photos"
+      },
+      "variants": {
+        "id": 59,
+        "title": "Imagine Your Photos",
+        "variants": [
+          {
+            "id": 72878,
+            "title": "Bells / Round / 2.5\u0022 \u00D7 3\u0022",
+            "options": {
+              "design": "Bells",
+              "shape": "Round",
+              "size": "2.5\u0022 \u00D7 3\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 525,
+                "width": 525
+              }
+            ]
+          },
+          {
+            "id": 72879,
+            "title": "Tree / Round / 2.5\u0022 \u00D7 3\u0022",
+            "options": {
+              "design": "Tree",
+              "shape": "Round",
+              "size": "2.5\u0022 \u00D7 3\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 525,
+                "width": 525
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              72878,
+              72879
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 949
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "DK",
+              "EE",
+              "FO",
+              "FI",
+              "FR",
+              "GE",
+              "DE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IS",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "LV",
+              "LI",
+              "LT",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "NO",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "SE",
+              "CH",
+              "TR",
+              "UA",
+              "GB",
+              "XK",
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              72878,
+              72879
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 959
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 219
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              72878,
+              72879
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 569
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 69
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

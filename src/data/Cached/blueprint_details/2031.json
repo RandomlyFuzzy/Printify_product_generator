@@ -1,0 +1,154 @@
+{
+  "blueprint": {
+    "id": 2031,
+    "title": "Custom Shape Mini Plush Keychain",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/6928130f5a47e826c40d0942",
+      "https://images.printify.com/69280cd3dacf57c6300d4dd2",
+      "https://images.printify.com/69280cdaa32545895c09ca12",
+      "https://images.printify.com/69280cc25b540d37a804f5a2",
+      "https://images.printify.com/69280cd6b870c42b1a0700f3",
+      "https://images.printify.com/69280cd8a25badbee00122e2",
+      "https://images.printify.com/69280cdb1f7826d49606eef2",
+      "https://images.printify.com/69280cdcb0054173c90f5552",
+      "https://images.printify.com/69280cdda7a91c986b0062b2"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 332,
+        "title": "Printdoors"
+      },
+      "variants": {
+        "id": 332,
+        "title": "Printdoors",
+        "variants": [
+          {
+            "id": 125118,
+            "title": "4\u0022 x 4\u0022",
+            "options": {
+              "size": "4\u0022 x 4\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1181,
+                "width": 1181
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              125118
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 909
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 779
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              125118
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 599
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 469
+            },
+            "countries": [
+              "DE",
+              "FR",
+              "GB"
+            ]
+          },
+          {
+            "variant_ids": [
+              125118
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 379
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 259
+            },
+            "countries": [
+              "CN"
+            ]
+          },
+          {
+            "variant_ids": [
+              125118
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1039
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 869
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              125118
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 759
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              125118
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1049
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 349
+            },
+            "countries": [
+              "AU"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

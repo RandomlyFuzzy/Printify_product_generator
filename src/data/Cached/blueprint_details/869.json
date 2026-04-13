@@ -1,0 +1,241 @@
+{
+  "blueprint": {
+    "id": 869,
+    "title": "Men\u0027s Indoor Slippers",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d8566cfd409df6780e79e2",
+      "https://images.printify.com/66d8566f4fe1c3b8e6027b82",
+      "https://images.printify.com/62381c0d0f36752c29379b3b",
+      "https://images.printify.com/62381c0aed12c15a482dd571",
+      "https://images.printify.com/6238c6fc6310a6167802f88f"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 90,
+        "title": "Smart Printee"
+      },
+      "variants": {
+        "id": 90,
+        "title": "Smart Printee",
+        "variants": [
+          {
+            "id": 76881,
+            "title": "US 11 - 12 / Black sole",
+            "options": {
+              "size": "US 11 - 12",
+              "color": "Black sole"
+            },
+            "placeholders": [
+              {
+                "position": "right_shoe",
+                "decoration_method": "dye-sublimation",
+                "height": 2381,
+                "width": 2555
+              },
+              {
+                "position": "left_shoe",
+                "decoration_method": "dye-sublimation",
+                "height": 2381,
+                "width": 2555
+              }
+            ]
+          },
+          {
+            "id": 76882,
+            "title": "US 13 - 14 / Black sole",
+            "options": {
+              "size": "US 13 - 14",
+              "color": "Black sole"
+            },
+            "placeholders": [
+              {
+                "position": "right_shoe",
+                "decoration_method": "dye-sublimation",
+                "height": 2381,
+                "width": 2555
+              },
+              {
+                "position": "left_shoe",
+                "decoration_method": "dye-sublimation",
+                "height": 2381,
+                "width": 2555
+              }
+            ]
+          },
+          {
+            "id": 76883,
+            "title": "US 7 - 8 / Black sole",
+            "options": {
+              "size": "US 7 - 8",
+              "color": "Black sole"
+            },
+            "placeholders": [
+              {
+                "position": "right_shoe",
+                "decoration_method": "dye-sublimation",
+                "height": 2381,
+                "width": 2555
+              },
+              {
+                "position": "left_shoe",
+                "decoration_method": "dye-sublimation",
+                "height": 2381,
+                "width": 2555
+              }
+            ]
+          },
+          {
+            "id": 76884,
+            "title": "US 9 - 10 / Black sole",
+            "options": {
+              "size": "US 9 - 10",
+              "color": "Black sole"
+            },
+            "placeholders": [
+              {
+                "position": "right_shoe",
+                "decoration_method": "dye-sublimation",
+                "height": 2381,
+                "width": 2555
+              },
+              {
+                "position": "left_shoe",
+                "decoration_method": "dye-sublimation",
+                "height": 2381,
+                "width": 2555
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              76881,
+              76882,
+              76883,
+              76884
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1149
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1149
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              76881,
+              76882,
+              76883,
+              76884
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1359
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1359
+            },
+            "countries": [
+              "GB",
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "DK",
+              "EE",
+              "FO",
+              "FI",
+              "FR",
+              "GE",
+              "DE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IS",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "LV",
+              "LI",
+              "LT",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "NO",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "SE",
+              "CH",
+              "TR",
+              "UA",
+              "XK"
+            ]
+          },
+          {
+            "variant_ids": [
+              76881,
+              76882,
+              76883,
+              76884
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1729
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1729
+            },
+            "countries": [
+              "REST_OF_THE_WORLD",
+              "AU",
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

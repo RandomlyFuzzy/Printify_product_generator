@@ -1,0 +1,101 @@
+{
+  "blueprint": {
+    "id": 1995,
+    "title": "Bamboo Serving Tray (Engraving)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/6901dd0a112b92b40e038b52",
+      "https://images.printify.com/6901dd0cad76c2dbbf0c9642",
+      "https://images.printify.com/686d31cefb9b53dc79049282",
+      "https://images.printify.com/6900b64267b790da070d68c2"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 217,
+        "title": "Fulfill Engine"
+      },
+      "variants": {
+        "id": 217,
+        "title": "Fulfill Engine",
+        "variants": [
+          {
+            "id": 122944,
+            "title": "16.5\u2033 \u00D7 9.75\u2033 \u00D7 2.5\u2033 / Bamboo",
+            "options": {
+              "size": "16.5\u2033 \u00D7 9.75\u2033 \u00D7 2.5\u2033",
+              "color": "Bamboo"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "engraving",
+                "height": 2100,
+                "width": 3600
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              122944
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2299
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              122944
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2679
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 879
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              122944
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 3659
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2539
+            },
+            "countries": [
+              "REST_OF_THE_WORLD",
+              "AU"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

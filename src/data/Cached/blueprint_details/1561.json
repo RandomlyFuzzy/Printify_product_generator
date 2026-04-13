@@ -1,0 +1,70 @@
+{
+  "blueprint": {
+    "id": 1561,
+    "title": "Multivitamin for Men Supplement (60 Capsules)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66c351ae3d9f63f1010d2172",
+      "https://images.printify.com/66c351ad7d9c6a491105acd4",
+      "https://images.printify.com/66e3dd724abd41d1cf0893f2",
+      "https://images.printify.com/66a8efde8508abba2207f283",
+      "https://images.printify.com/66b3470117dfe1db410307f2"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 294,
+        "title": "Rocktomic"
+      },
+      "variants": {
+        "id": 294,
+        "title": "Rocktomic",
+        "variants": [
+          {
+            "id": 109758,
+            "title": "White bottle \u002B cap / Unflavored / 60 Vegetable capsules",
+            "options": {
+              "color": "White bottle \u002B cap",
+              "flavor": "Unflavored",
+              "size": "60 Vegetable capsules"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 1114,
+                "width": 1660
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              109758
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 449
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

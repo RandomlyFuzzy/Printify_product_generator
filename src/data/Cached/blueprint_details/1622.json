@@ -1,0 +1,116 @@
+{
+  "blueprint": {
+    "id": 1622,
+    "title": "Quilted Table Runner",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66f2ca614f387686b00e5c23",
+      "https://images.printify.com/66f2c96dbf9240cf8902b152",
+      "https://images.printify.com/66f2caa44f387686b00e5c25",
+      "https://images.printify.com/66f2c976709dc89bb601241e"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 10,
+        "title": "MWW On Demand"
+      },
+      "variants": {
+        "id": 10,
+        "title": "MWW On Demand",
+        "variants": [
+          {
+            "id": 112820,
+            "title": "14\u0027\u0027 \u00D7 72\u0027\u0027 / Polyester",
+            "options": {
+              "size": "14\u0027\u0027 \u00D7 72\u0027\u0027",
+              "material": "Polyester"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 2400,
+                "width": 11100
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              112820
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 789
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 299
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              112820
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 819
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 359
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              112820
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1867
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1079
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              112820
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1259
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

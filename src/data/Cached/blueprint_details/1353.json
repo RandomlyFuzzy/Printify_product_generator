@@ -1,0 +1,178 @@
+{
+  "blueprint": {
+    "id": 1353,
+    "title": "Desktop Calendar (2026 grid)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/68d3fcdd907eb8a1370f57a2",
+      "https://images.printify.com/68d3fcda3508011158090b22",
+      "https://images.printify.com/68d3fdcfb0ac4550a709b623",
+      "https://images.printify.com/68d3fcdef9d1b4edb9064972",
+      "https://images.printify.com/68d3fcd49c9561f2d5099ce2",
+      "https://images.printify.com/68d3fcd5f1fa7f121b0c01c2"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 28,
+        "title": "District Photo"
+      },
+      "variants": {
+        "id": 28,
+        "title": "District Photo",
+        "variants": [
+          {
+            "id": 102440,
+            "title": "10\u0022 x 5\u0022 / Satin",
+            "options": {
+              "size": "10\u0022 x 5\u0022",
+              "paper": "Satin"
+            },
+            "placeholders": [
+              {
+                "position": "front_cover",
+                "decoration_method": "digital-printing",
+                "height": 1571,
+                "width": 3075
+              },
+              {
+                "position": "january",
+                "decoration_method": "digital-printing",
+                "height": 1571,
+                "width": 1862
+              },
+              {
+                "position": "february",
+                "decoration_method": "digital-printing",
+                "height": 1571,
+                "width": 1862
+              },
+              {
+                "position": "march",
+                "decoration_method": "digital-printing",
+                "height": 1571,
+                "width": 1862
+              },
+              {
+                "position": "april",
+                "decoration_method": "digital-printing",
+                "height": 1571,
+                "width": 1862
+              },
+              {
+                "position": "may",
+                "decoration_method": "digital-printing",
+                "height": 1571,
+                "width": 1862
+              },
+              {
+                "position": "june",
+                "decoration_method": "digital-printing",
+                "height": 1571,
+                "width": 1862
+              },
+              {
+                "position": "july",
+                "decoration_method": "digital-printing",
+                "height": 1571,
+                "width": 1862
+              },
+              {
+                "position": "august",
+                "decoration_method": "digital-printing",
+                "height": 1571,
+                "width": 1862
+              },
+              {
+                "position": "september",
+                "decoration_method": "digital-printing",
+                "height": 1571,
+                "width": 1862
+              },
+              {
+                "position": "october",
+                "decoration_method": "digital-printing",
+                "height": 1571,
+                "width": 1862
+              },
+              {
+                "position": "november",
+                "decoration_method": "digital-printing",
+                "height": 1571,
+                "width": 1862
+              },
+              {
+                "position": "december",
+                "decoration_method": "digital-printing",
+                "height": 1571,
+                "width": 1862
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              102440
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 649
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 159
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              102440
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1259
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 379
+            },
+            "countries": [
+              "REST_OF_THE_WORLD",
+              "AU",
+              "CA",
+              "NO",
+              "NZ"
+            ]
+          },
+          {
+            "variant_ids": [
+              102440
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 749
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

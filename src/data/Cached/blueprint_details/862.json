@@ -1,0 +1,266 @@
+{
+  "blueprint": {
+    "id": 862,
+    "title": "Men\u0027s Slide Sandals",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d85574ceb510b858099553",
+      "https://images.printify.com/66d855769db423899709ec62",
+      "https://images.printify.com/621d3db0e8b94d6d63723bc6",
+      "https://images.printify.com/6231e134a4d4854d07591c21"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 14,
+        "title": "ArtsAdd"
+      },
+      "variants": {
+        "id": 14,
+        "title": "ArtsAdd",
+        "variants": [
+          {
+            "id": 77092,
+            "title": "Black sole / US 6",
+            "options": {
+              "color": "Black sole",
+              "size": "US 6"
+            },
+            "placeholders": [
+              {
+                "position": "left_shoe",
+                "decoration_method": "dye-sublimation",
+                "height": 969,
+                "width": 2515
+              },
+              {
+                "position": "right_shoe",
+                "decoration_method": "dye-sublimation",
+                "height": 969,
+                "width": 2515
+              }
+            ]
+          },
+          {
+            "id": 77093,
+            "title": "Black sole / US 7",
+            "options": {
+              "color": "Black sole",
+              "size": "US 7"
+            },
+            "placeholders": [
+              {
+                "position": "left_shoe",
+                "decoration_method": "dye-sublimation",
+                "height": 969,
+                "width": 2515
+              },
+              {
+                "position": "right_shoe",
+                "decoration_method": "dye-sublimation",
+                "height": 969,
+                "width": 2515
+              }
+            ]
+          },
+          {
+            "id": 77094,
+            "title": "Black sole / US 8",
+            "options": {
+              "color": "Black sole",
+              "size": "US 8"
+            },
+            "placeholders": [
+              {
+                "position": "left_shoe",
+                "decoration_method": "dye-sublimation",
+                "height": 1000,
+                "width": 2646
+              },
+              {
+                "position": "right_shoe",
+                "decoration_method": "dye-sublimation",
+                "height": 1000,
+                "width": 2646
+              }
+            ]
+          },
+          {
+            "id": 77095,
+            "title": "Black sole / US 9",
+            "options": {
+              "color": "Black sole",
+              "size": "US 9"
+            },
+            "placeholders": [
+              {
+                "position": "left_shoe",
+                "decoration_method": "dye-sublimation",
+                "height": 1000,
+                "width": 2646
+              },
+              {
+                "position": "right_shoe",
+                "decoration_method": "dye-sublimation",
+                "height": 1000,
+                "width": 2646
+              }
+            ]
+          },
+          {
+            "id": 77096,
+            "title": "Black sole / US 10",
+            "options": {
+              "color": "Black sole",
+              "size": "US 10"
+            },
+            "placeholders": [
+              {
+                "position": "left_shoe",
+                "decoration_method": "dye-sublimation",
+                "height": 1057,
+                "width": 2742
+              },
+              {
+                "position": "right_shoe",
+                "decoration_method": "dye-sublimation",
+                "height": 1057,
+                "width": 2742
+              }
+            ]
+          },
+          {
+            "id": 77097,
+            "title": "Black sole / US 11",
+            "options": {
+              "color": "Black sole",
+              "size": "US 11"
+            },
+            "placeholders": [
+              {
+                "position": "left_shoe",
+                "decoration_method": "dye-sublimation",
+                "height": 1057,
+                "width": 2742
+              },
+              {
+                "position": "right_shoe",
+                "decoration_method": "dye-sublimation",
+                "height": 1057,
+                "width": 2742
+              }
+            ]
+          },
+          {
+            "id": 77098,
+            "title": "Black sole / US 12",
+            "options": {
+              "color": "Black sole",
+              "size": "US 12"
+            },
+            "placeholders": [
+              {
+                "position": "left_shoe",
+                "decoration_method": "dye-sublimation",
+                "height": 1094,
+                "width": 2899
+              },
+              {
+                "position": "right_shoe",
+                "decoration_method": "dye-sublimation",
+                "height": 1094,
+                "width": 2899
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              77092,
+              77093,
+              77094,
+              77095,
+              77096,
+              77097,
+              77098,
+              77099
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 840
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 840
+            },
+            "countries": [
+              "NL",
+              "DK",
+              "NZ",
+              "US",
+              "BR",
+              "MX",
+              "CA",
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              77092,
+              77093,
+              77094,
+              77095,
+              77096,
+              77097,
+              77098,
+              77099
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "CN"
+            ]
+          },
+          {
+            "variant_ids": [
+              77092,
+              77093,
+              77094,
+              77095,
+              77096,
+              77097,
+              77098,
+              77099
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 949
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 949
+            },
+            "countries": [
+              "AU"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

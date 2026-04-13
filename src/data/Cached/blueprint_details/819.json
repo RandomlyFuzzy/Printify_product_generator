@@ -1,0 +1,174 @@
+{
+  "blueprint": {
+    "id": 819,
+    "title": "Greeting cards (8, 16, and 24 pcs)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66cd963e778600154d0b2403",
+      "https://images.printify.com/66cd963f04b4bc6e7a0c0a79",
+      "https://images.printify.com/618cbbcb7f648031890027eb",
+      "https://images.printify.com/618bf5736682fc154d38a5f8"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 84,
+        "title": "CatPrint"
+      },
+      "variants": {
+        "id": 84,
+        "title": "CatPrint",
+        "variants": [
+          {
+            "id": 76175,
+            "title": "8 pcs / Matte / 4.25\u201D x 5.5\u201D",
+            "options": {
+              "quantity": "8 pcs",
+              "paper": "Matte",
+              "size": "4.25\u201D x 5.5\u201D"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 1725,
+                "width": 2625
+              },
+              {
+                "position": "inside",
+                "decoration_method": "digital-printing",
+                "height": 1725,
+                "width": 2625
+              }
+            ]
+          },
+          {
+            "id": 77839,
+            "title": "16 pcs / Matte / 4.25\u201D x 5.5\u201D",
+            "options": {
+              "quantity": "16 pcs",
+              "paper": "Matte",
+              "size": "4.25\u201D x 5.5\u201D"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 1725,
+                "width": 2625
+              },
+              {
+                "position": "inside",
+                "decoration_method": "digital-printing",
+                "height": 1725,
+                "width": 2625
+              }
+            ]
+          },
+          {
+            "id": 77840,
+            "title": "24 pcs / Matte / 4.25\u201D x 5.5\u201D",
+            "options": {
+              "quantity": "24 pcs",
+              "paper": "Matte",
+              "size": "4.25\u201D x 5.5\u201D"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 1725,
+                "width": 2625
+              },
+              {
+                "position": "inside",
+                "decoration_method": "digital-printing",
+                "height": 1725,
+                "width": 2625
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              76175
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 899
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 159
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              76175,
+              77839,
+              77840
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1169
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              76175,
+              77839,
+              77840
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1059
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              77839,
+              77840
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 969
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 159
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

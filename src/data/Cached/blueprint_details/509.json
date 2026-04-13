@@ -1,0 +1,361 @@
+{
+  "blueprint": {
+    "id": 509,
+    "title": "Women\u0027s Casual Spandex Leggings (AOP)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66e1a8f498839a250002c092",
+      "https://images.printify.com/66e1a9d34f6f593796058132",
+      "https://images.printify.com/66e1ab58475a50581c0982a2",
+      "https://images.printify.com/66e1ac19475a50581c0982a3"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 48,
+        "title": "Colorway"
+      },
+      "variants": {
+        "id": 48,
+        "title": "Colorway",
+        "variants": [
+          {
+            "id": 112129,
+            "title": "XS / Black stitching",
+            "options": {
+              "size": "XS",
+              "color": "Black stitching"
+            },
+            "placeholders": [
+              {
+                "position": "right_leg",
+                "decoration_method": "aop",
+                "height": 5706,
+                "width": 3144
+              },
+              {
+                "position": "left_leg",
+                "decoration_method": "aop",
+                "height": 5706,
+                "width": 3144
+              }
+            ]
+          },
+          {
+            "id": 112130,
+            "title": "S / Black stitching",
+            "options": {
+              "size": "S",
+              "color": "Black stitching"
+            },
+            "placeholders": [
+              {
+                "position": "right_leg",
+                "decoration_method": "aop",
+                "height": 5762,
+                "width": 3175
+              },
+              {
+                "position": "left_leg",
+                "decoration_method": "aop",
+                "height": 5762,
+                "width": 3175
+              }
+            ]
+          },
+          {
+            "id": 112131,
+            "title": "M / Black stitching",
+            "options": {
+              "size": "M",
+              "color": "Black stitching"
+            },
+            "placeholders": [
+              {
+                "position": "right_leg",
+                "decoration_method": "aop",
+                "height": 5822,
+                "width": 3207
+              },
+              {
+                "position": "left_leg",
+                "decoration_method": "aop",
+                "height": 5822,
+                "width": 3207
+              }
+            ]
+          },
+          {
+            "id": 112132,
+            "title": "L / Black stitching",
+            "options": {
+              "size": "L",
+              "color": "Black stitching"
+            },
+            "placeholders": [
+              {
+                "position": "right_leg",
+                "decoration_method": "aop",
+                "height": 5909,
+                "width": 3255
+              },
+              {
+                "position": "left_leg",
+                "decoration_method": "aop",
+                "height": 5909,
+                "width": 3255
+              }
+            ]
+          },
+          {
+            "id": 112133,
+            "title": "XL / Black stitching",
+            "options": {
+              "size": "XL",
+              "color": "Black stitching"
+            },
+            "placeholders": [
+              {
+                "position": "right_leg",
+                "decoration_method": "aop",
+                "height": 5999,
+                "width": 3305
+              },
+              {
+                "position": "left_leg",
+                "decoration_method": "aop",
+                "height": 5999,
+                "width": 3305
+              }
+            ]
+          },
+          {
+            "id": 112134,
+            "title": "2XL / Black stitching",
+            "options": {
+              "size": "2XL",
+              "color": "Black stitching"
+            },
+            "placeholders": [
+              {
+                "position": "right_leg",
+                "decoration_method": "aop",
+                "height": 6163,
+                "width": 3395
+              },
+              {
+                "position": "left_leg",
+                "decoration_method": "aop",
+                "height": 6163,
+                "width": 3395
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              72429,
+              72430,
+              72431,
+              72432,
+              72433,
+              72434,
+              112129,
+              112130,
+              112131,
+              112132,
+              112133,
+              112134
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 899
+            },
+            "countries": [
+              "NL",
+              "DE",
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "DK",
+              "EE",
+              "FO",
+              "FI",
+              "FR",
+              "GE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IS",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "LV",
+              "LI",
+              "LT",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NO",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "SE",
+              "CH",
+              "TR",
+              "UA",
+              "XK"
+            ]
+          },
+          {
+            "variant_ids": [
+              72429,
+              72430,
+              72431,
+              72432,
+              72433,
+              72434,
+              112129,
+              112130,
+              112131,
+              112132,
+              112133,
+              112134
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1239
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 309
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              72429,
+              72430,
+              72431,
+              72432,
+              72433,
+              72434,
+              112129,
+              112130,
+              112131,
+              112132,
+              112133,
+              112134
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2279
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1139
+            },
+            "countries": [
+              "CA",
+              "MX",
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              72429,
+              72430,
+              72431,
+              72432,
+              72433,
+              72434,
+              112129,
+              112130,
+              112131,
+              112132,
+              112133,
+              112134
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 589
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 289
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              72429,
+              72430,
+              72431,
+              72432,
+              72433,
+              72434,
+              112129,
+              112130,
+              112131,
+              112132,
+              112133,
+              112134
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 549
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 299
+            },
+            "countries": [
+              "GB"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

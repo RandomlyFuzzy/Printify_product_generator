@@ -1,0 +1,99 @@
+{
+  "blueprint": {
+    "id": 2759,
+    "title": "Can Glass with Lid, 16oz (Engraving)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/69241fa99dacfbf66d026a92",
+      "https://images.printify.com/69241fa796e63a71cf0cc3c3",
+      "https://images.printify.com/69242d7b685d79eaf805a452",
+      "https://images.printify.com/69242d7908393e692d0772e2"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 228,
+        "title": "Taylor"
+      },
+      "variants": {
+        "id": 228,
+        "title": "Taylor",
+        "variants": [
+          {
+            "id": 149511,
+            "title": "16oz",
+            "options": {
+              "size": "16oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "engraving",
+                "height": 1800,
+                "width": 1200
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              149511
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 949
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              149511
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2459
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1529
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              149511
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1579
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1099
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

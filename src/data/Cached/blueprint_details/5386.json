@@ -1,0 +1,255 @@
+{
+  "blueprint": {
+    "id": 5386,
+    "title": "Frame Cap",
+    "brand": "AS Colour",
+    "model": "1160",
+    "images": [
+      "https://images.printify.com/69ba5c45e50f7081200ba5e0",
+      "https://images.printify.com/69ba57d1fd3f2584940c0d20",
+      "https://images.printify.com/69ba6437a8393adb1d089232",
+      "https://images.printify.com/69ba57d3e96320510e06aaf0",
+      "https://images.printify.com/69ba57d5b855f122db005eb2",
+      "https://images.printify.com/69ba57d2af900a24db05af32",
+      "https://images.printify.com/69ba57ce3e3d5b63690eb880"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 217,
+        "title": "Fulfill Engine"
+      },
+      "variants": {
+        "id": 217,
+        "title": "Fulfill Engine",
+        "variants": [
+          {
+            "id": 244981,
+            "title": "Black / One size",
+            "options": {
+              "color": "Black",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtf",
+                "height": 675,
+                "width": 1200
+              },
+              {
+                "position": "front_embroidery",
+                "decoration_method": "embroidery",
+                "height": 675,
+                "width": 1200
+              }
+            ]
+          },
+          {
+            "id": 244982,
+            "title": "Bone / One size",
+            "options": {
+              "color": "Bone",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtf",
+                "height": 675,
+                "width": 1200
+              },
+              {
+                "position": "front_embroidery",
+                "decoration_method": "embroidery",
+                "height": 675,
+                "width": 1200
+              }
+            ]
+          },
+          {
+            "id": 244983,
+            "title": "Ecru / One size",
+            "options": {
+              "color": "Ecru",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtf",
+                "height": 675,
+                "width": 1200
+              },
+              {
+                "position": "front_embroidery",
+                "decoration_method": "embroidery",
+                "height": 675,
+                "width": 1200
+              }
+            ]
+          },
+          {
+            "id": 244984,
+            "title": "Navy / One size",
+            "options": {
+              "color": "Navy",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtf",
+                "height": 675,
+                "width": 1200
+              },
+              {
+                "position": "front_embroidery",
+                "decoration_method": "embroidery",
+                "height": 675,
+                "width": 1200
+              }
+            ]
+          },
+          {
+            "id": 244985,
+            "title": "Storm / One size",
+            "options": {
+              "color": "Storm",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtf",
+                "height": 675,
+                "width": 1200
+              },
+              {
+                "position": "front_embroidery",
+                "decoration_method": "embroidery",
+                "height": 675,
+                "width": 1200
+              }
+            ]
+          },
+          {
+            "id": 244986,
+            "title": "Walnut / One size",
+            "options": {
+              "color": "Walnut",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtf",
+                "height": 675,
+                "width": 1200
+              },
+              {
+                "position": "front_embroidery",
+                "decoration_method": "embroidery",
+                "height": 675,
+                "width": 1200
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              244981,
+              244982,
+              244983,
+              244984,
+              244985,
+              244986
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 449
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 209
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              244981,
+              244982,
+              244983,
+              244984,
+              244985,
+              244986
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 939
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              244981,
+              244982,
+              244983,
+              244984,
+              244985,
+              244986
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 489
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 219
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              244981,
+              244982,
+              244983,
+              244984,
+              244985,
+              244986
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1000
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 400
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

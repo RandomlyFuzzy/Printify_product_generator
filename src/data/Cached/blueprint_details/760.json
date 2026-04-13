@@ -1,0 +1,192 @@
+{
+  "blueprint": {
+    "id": 760,
+    "title": "Lunch Bag",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66cc7a33517d433ce70e8e44",
+      "https://images.printify.com/66cc7a357c10c5405b052c93",
+      "https://images.printify.com/615dc4304ff5f43a473208b8",
+      "https://images.printify.com/615dc42f1acaa10b807c74ba",
+      "https://images.printify.com/67ee78a184cf30eb8b02e042",
+      "https://images.printify.com/615dc42e1acaa10b807c74b6"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 48,
+        "title": "Colorway"
+      },
+      "variants": {
+        "id": 48,
+        "title": "Colorway",
+        "variants": [
+          {
+            "id": 74699,
+            "title": "One size / Black",
+            "options": {
+              "size": "One size",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1214,
+                "width": 1568
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              74699
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2409
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1209
+            },
+            "countries": [
+              "CA",
+              "MX",
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              74699
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 859
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 209
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              74699
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2129
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 899
+            },
+            "countries": [
+              "NL",
+              "DE",
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "DK",
+              "EE",
+              "FO",
+              "FI",
+              "FR",
+              "GE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IS",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "LV",
+              "LI",
+              "LT",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NO",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "SE",
+              "CH",
+              "TR",
+              "UA",
+              "XK"
+            ]
+          },
+          {
+            "variant_ids": [
+              74699
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1129
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 309
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              74699
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 879
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 509
+            },
+            "countries": [
+              "GB"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

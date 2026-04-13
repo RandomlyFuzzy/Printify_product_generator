@@ -1,0 +1,329 @@
+{
+  "blueprint": {
+    "id": 996,
+    "title": "Square Poly Canvas Pillow",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d1c4de5ca4cd29d8056432",
+      "https://images.printify.com/66d1c4dcf9f53ab19a085f02",
+      "https://images.printify.com/624d2e77872c26a0a4052cd0",
+      "https://images.printify.com/624d27420341c2c63c0dd3f4",
+      "https://images.printify.com/624d2a61872c26a0a4052cac"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 48,
+        "title": "Colorway"
+      },
+      "variants": {
+        "id": 48,
+        "title": "Colorway",
+        "variants": [
+          {
+            "id": 79311,
+            "title": "16\u0022 \u00D7 16\u0022",
+            "options": {
+              "size": "16\u0022 \u00D7 16\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 2550,
+                "width": 2550
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 2550,
+                "width": 2550
+              }
+            ]
+          },
+          {
+            "id": 79312,
+            "title": "18\u0022 \u00D7 18\u0022",
+            "options": {
+              "size": "18\u0022 \u00D7 18\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 2850,
+                "width": 2850
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 2850,
+                "width": 2850
+              }
+            ]
+          },
+          {
+            "id": 79313,
+            "title": "20\u0022 \u00D7 20\u0022",
+            "options": {
+              "size": "20\u0022 \u00D7 20\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 3150,
+                "width": 3150
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 3150,
+                "width": 3150
+              }
+            ]
+          },
+          {
+            "id": 79314,
+            "title": "24\u0022 \u00D7 24\u0022",
+            "options": {
+              "size": "24\u0022 \u00D7 24\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 3750,
+                "width": 3750
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 3750,
+                "width": 3750
+              }
+            ]
+          },
+          {
+            "id": 79315,
+            "title": "26\u0022 \u00D7 26\u0022",
+            "options": {
+              "size": "26\u0022 \u00D7 26\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 4050,
+                "width": 4050
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 4050,
+                "width": 4050
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              79311,
+              79312,
+              79313,
+              79314,
+              79315
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1289
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1289
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              79311,
+              79312,
+              79313,
+              79314,
+              79315
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 939
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 939
+            },
+            "countries": [
+              "GB"
+            ]
+          },
+          {
+            "variant_ids": [
+              79311,
+              79312,
+              79313,
+              79314,
+              79315
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 3779
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 3779
+            },
+            "countries": [
+              "DE",
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "DK",
+              "EE",
+              "FO",
+              "FI",
+              "FR",
+              "GE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IS",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "LV",
+              "LI",
+              "LT",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NO",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "SE",
+              "CH",
+              "TR",
+              "UA",
+              "XK"
+            ]
+          },
+          {
+            "variant_ids": [
+              79313,
+              79314,
+              79315
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1699
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1699
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              79311,
+              79312,
+              79313,
+              79314,
+              79315
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 7739
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 7739
+            },
+            "countries": [
+              "MX",
+              "CA",
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              79312
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1159
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1159
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              79311
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1039
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1039
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

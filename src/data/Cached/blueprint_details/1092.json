@@ -1,0 +1,162 @@
+{
+  "blueprint": {
+    "id": 1092,
+    "title": "Canvas Shopping Tote",
+    "brand": "Bagmasters",
+    "model": "A250",
+    "images": [
+      "https://images.printify.com/66d5b05663e9169a5e0e3993",
+      "https://images.printify.com/66d5b05463e9169a5e0e3992",
+      "https://images.printify.com/62d54725a0bf489738058dca"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 41,
+        "title": "Duplium"
+      },
+      "variants": {
+        "id": 41,
+        "title": "Duplium",
+        "variants": [
+          {
+            "id": 81758,
+            "title": "18\u0022 x 15\u0022",
+            "options": {
+              "size": "18\u0022 x 15\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3600,
+                "width": 3000
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 3600,
+                "width": 3000
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              81758
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1099
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "AD",
+              "GL",
+              "IS",
+              "BY",
+              "AT",
+              "GE",
+              "DE",
+              "LU",
+              "NL",
+              "PL",
+              "GP",
+              "MK",
+              "RE",
+              "TR",
+              "BV",
+              "VA",
+              "SM",
+              "BA",
+              "FO",
+              "HU",
+              "ES",
+              "UA",
+              "AX",
+              "EE",
+              "IM",
+              "LV",
+              "LI",
+              "LT",
+              "SK",
+              "CH",
+              "GB",
+              "XK",
+              "MC",
+              "RO",
+              "SE",
+              "AL",
+              "MT",
+              "HR",
+              "DK",
+              "GI",
+              "PT",
+              "RS",
+              "CZ",
+              "REST_OF_THE_WORLD",
+              "AM",
+              "BE",
+              "CY",
+              "GR",
+              "ME",
+              "NO",
+              "IE",
+              "FR",
+              "JE",
+              "MD",
+              "BG",
+              "FI",
+              "GG",
+              "IT",
+              "SI"
+            ]
+          },
+          {
+            "variant_ids": [
+              81758
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 829
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              81758
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1659
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 289
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,232 @@
+{
+  "blueprint": {
+    "id": 1283,
+    "title": " Men\u2019s Sports Shorts (AOP)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66cdd1d5df33e1c857017bf3",
+      "https://images.printify.com/66cdd1d45a972cc6da0f8462",
+      "https://images.printify.com/63dd0ce57166cf61b3058a5a",
+      "https://images.printify.com/67f3a720fb2ef7353803f412",
+      "https://images.printify.com/63dd0baa7166cf61b3058a53",
+      "https://images.printify.com/63dd1a5e4c7ed4f453024538",
+      "https://images.printify.com/63fc8d8660e13493540a8804",
+      "https://images.printify.com/63dd16404b504eca5c09a7c3",
+      "https://images.printify.com/63c524a8699ab5ce5f097d64"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 47,
+        "title": "Miami Sublimation"
+      },
+      "variants": {
+        "id": 47,
+        "title": "Miami Sublimation",
+        "variants": [
+          {
+            "id": 96413,
+            "title": "XS",
+            "options": {
+              "size": "XS"
+            },
+            "placeholders": [
+              {
+                "position": "right_leg",
+                "decoration_method": "aop",
+                "height": 3383,
+                "width": 4665
+              },
+              {
+                "position": "left_leg",
+                "decoration_method": "aop",
+                "height": 3383,
+                "width": 4665
+              }
+            ]
+          },
+          {
+            "id": 96414,
+            "title": "S",
+            "options": {
+              "size": "S"
+            },
+            "placeholders": [
+              {
+                "position": "right_leg",
+                "decoration_method": "aop",
+                "height": 3732,
+                "width": 5146
+              },
+              {
+                "position": "left_leg",
+                "decoration_method": "aop",
+                "height": 3732,
+                "width": 5146
+              }
+            ]
+          },
+          {
+            "id": 96415,
+            "title": "M",
+            "options": {
+              "size": "M"
+            },
+            "placeholders": [
+              {
+                "position": "right_leg",
+                "decoration_method": "aop",
+                "height": 3855,
+                "width": 5316
+              },
+              {
+                "position": "left_leg",
+                "decoration_method": "aop",
+                "height": 3855,
+                "width": 5316
+              }
+            ]
+          },
+          {
+            "id": 96416,
+            "title": "L",
+            "options": {
+              "size": "L"
+            },
+            "placeholders": [
+              {
+                "position": "right_leg",
+                "decoration_method": "aop",
+                "height": 3920,
+                "width": 5406
+              },
+              {
+                "position": "left_leg",
+                "decoration_method": "aop",
+                "height": 3920,
+                "width": 5406
+              }
+            ]
+          },
+          {
+            "id": 96417,
+            "title": "XL",
+            "options": {
+              "size": "XL"
+            },
+            "placeholders": [
+              {
+                "position": "right_leg",
+                "decoration_method": "aop",
+                "height": 3972,
+                "width": 5478
+              },
+              {
+                "position": "left_leg",
+                "decoration_method": "aop",
+                "height": 3972,
+                "width": 5478
+              }
+            ]
+          },
+          {
+            "id": 96418,
+            "title": "2XL",
+            "options": {
+              "size": "2XL"
+            },
+            "placeholders": [
+              {
+                "position": "right_leg",
+                "decoration_method": "aop",
+                "height": 4295,
+                "width": 5924
+              },
+              {
+                "position": "left_leg",
+                "decoration_method": "aop",
+                "height": 4295,
+                "width": 5924
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              96413,
+              96414,
+              96415,
+              96416,
+              96417,
+              96418
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 609
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              96413,
+              96414,
+              96415,
+              96416,
+              96417,
+              96418
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 599
+            },
+            "countries": [
+              "NZ",
+              "AU",
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              96413,
+              96414,
+              96415,
+              96416,
+              96417,
+              96418
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1699
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

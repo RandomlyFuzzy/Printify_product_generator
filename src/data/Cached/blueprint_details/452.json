@@ -1,0 +1,106 @@
+{
+  "blueprint": {
+    "id": 452,
+    "title": "Recycled Poly Socks",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66cc7b1903ddc688cd026732",
+      "https://images.printify.com/66cc7b1c2d049cd4100f1df2",
+      "https://images.printify.com/5db851cec211f858df13c2a3",
+      "https://images.printify.com/5db851dac211f858df13c2a6",
+      "https://images.printify.com/5dc4474f3f7cce630168c5bd"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 33,
+        "title": "Tribe Socks"
+      },
+      "variants": {
+        "id": 33,
+        "title": "Tribe Socks",
+        "variants": [
+          {
+            "id": 63289,
+            "title": "One size",
+            "options": {
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "right_leg",
+                "decoration_method": "dtg",
+                "height": 5848,
+                "width": 3150
+              },
+              {
+                "position": "left_leg",
+                "decoration_method": "dtg",
+                "height": 5848,
+                "width": 3150
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              63289
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2279
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              63289
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 509
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 75
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              63289
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1869
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 219
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

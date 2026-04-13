@@ -1,0 +1,263 @@
+{
+  "blueprint": {
+    "id": 1725,
+    "title": "Polyester Sports Bra (AOP)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/68261930efb0a61ef208cc72",
+      "https://images.printify.com/6793b2c18d4184ef400b7635",
+      "https://images.printify.com/68261ae409b7e93b27016112",
+      "https://images.printify.com/68261636677d572654061e32"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 332,
+        "title": "Printdoors"
+      },
+      "variants": {
+        "id": 332,
+        "title": "Printdoors",
+        "variants": [
+          {
+            "id": 118121,
+            "title": "S",
+            "options": {
+              "size": "S"
+            },
+            "placeholders": [
+              {
+                "position": "front_side_dye-sublimation",
+                "decoration_method": "dye-sublimation",
+                "height": 1729,
+                "width": 1692
+              },
+              {
+                "position": "back_side_dye-sublimation",
+                "decoration_method": "dye-sublimation",
+                "height": 1685,
+                "width": 1643
+              }
+            ]
+          },
+          {
+            "id": 118122,
+            "title": "M",
+            "options": {
+              "size": "M"
+            },
+            "placeholders": [
+              {
+                "position": "front_side_dye-sublimation",
+                "decoration_method": "dye-sublimation",
+                "height": 1788,
+                "width": 1750
+              },
+              {
+                "position": "back_side_dye-sublimation",
+                "decoration_method": "dye-sublimation",
+                "height": 1746,
+                "width": 1702
+              }
+            ]
+          },
+          {
+            "id": 118123,
+            "title": "L",
+            "options": {
+              "size": "L"
+            },
+            "placeholders": [
+              {
+                "position": "front_side_dye-sublimation",
+                "decoration_method": "dye-sublimation",
+                "height": 1847,
+                "width": 1808
+              },
+              {
+                "position": "back_side_dye-sublimation",
+                "decoration_method": "dye-sublimation",
+                "height": 1807,
+                "width": 1762
+              }
+            ]
+          },
+          {
+            "id": 118124,
+            "title": "XL",
+            "options": {
+              "size": "XL"
+            },
+            "placeholders": [
+              {
+                "position": "front_side_dye-sublimation",
+                "decoration_method": "dye-sublimation",
+                "height": 1906,
+                "width": 1866
+              },
+              {
+                "position": "back_side_dye-sublimation",
+                "decoration_method": "dye-sublimation",
+                "height": 1868,
+                "width": 1821
+              }
+            ]
+          },
+          {
+            "id": 118125,
+            "title": "2XL",
+            "options": {
+              "size": "2XL"
+            },
+            "placeholders": [
+              {
+                "position": "front_side_dye-sublimation",
+                "decoration_method": "dye-sublimation",
+                "height": 1965,
+                "width": 1923
+              },
+              {
+                "position": "back_side_dye-sublimation",
+                "decoration_method": "dye-sublimation",
+                "height": 1928,
+                "width": 1880
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              118121,
+              118122,
+              118123,
+              118124,
+              118125
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1129
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              118121,
+              118122,
+              118123,
+              118124,
+              118125
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 989
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 729
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              118121,
+              118122,
+              118123,
+              118124,
+              118125
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 809
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 689
+            },
+            "countries": [
+              "DE",
+              "FR",
+              "GB"
+            ]
+          },
+          {
+            "variant_ids": [
+              118121,
+              118122,
+              118123,
+              118124,
+              118125
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 379
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "CN"
+            ]
+          },
+          {
+            "variant_ids": [
+              118121,
+              118122,
+              118123,
+              118124,
+              118125
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1719
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1549
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              118121,
+              118122,
+              118123,
+              118124,
+              118125
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1149
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 459
+            },
+            "countries": [
+              "AU"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

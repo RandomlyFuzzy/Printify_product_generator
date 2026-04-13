@@ -1,0 +1,275 @@
+{
+  "blueprint": {
+    "id": 1352,
+    "title": "Simplex Desk Calendar (2026 grid)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/68dbc3c993f4a7d8b9041b72",
+      "https://images.printify.com/68dbc3cbbe87a8f1250d3ae4",
+      "https://images.printify.com/68dbc3cf28713b4b6200bf62",
+      "https://images.printify.com/64fedfe2b1d8c9a4120b60dd",
+      "https://images.printify.com/68dbc3cd380d2dad280327d2"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 94,
+        "title": "Harrier"
+      },
+      "variants": {
+        "id": 94,
+        "title": "Harrier",
+        "variants": [
+          {
+            "id": 102439,
+            "title": "10\u0022 x 5\u0022 / Satin",
+            "options": {
+              "size": "10\u0022 x 5\u0022",
+              "paper": "Satin"
+            },
+            "placeholders": [
+              {
+                "position": "front_cover",
+                "decoration_method": "digital-printing",
+                "height": 1571,
+                "width": 3071
+              },
+              {
+                "position": "january",
+                "decoration_method": "digital-printing",
+                "height": 1571,
+                "width": 1858
+              },
+              {
+                "position": "february",
+                "decoration_method": "digital-printing",
+                "height": 1571,
+                "width": 1858
+              },
+              {
+                "position": "march",
+                "decoration_method": "digital-printing",
+                "height": 1571,
+                "width": 1858
+              },
+              {
+                "position": "april",
+                "decoration_method": "digital-printing",
+                "height": 1571,
+                "width": 1858
+              },
+              {
+                "position": "may",
+                "decoration_method": "digital-printing",
+                "height": 1571,
+                "width": 1858
+              },
+              {
+                "position": "june",
+                "decoration_method": "digital-printing",
+                "height": 1571,
+                "width": 1858
+              },
+              {
+                "position": "july",
+                "decoration_method": "digital-printing",
+                "height": 1571,
+                "width": 1858
+              },
+              {
+                "position": "august",
+                "decoration_method": "digital-printing",
+                "height": 1571,
+                "width": 1858
+              },
+              {
+                "position": "september",
+                "decoration_method": "digital-printing",
+                "height": 1571,
+                "width": 1858
+              },
+              {
+                "position": "october",
+                "decoration_method": "digital-printing",
+                "height": 1571,
+                "width": 1858
+              },
+              {
+                "position": "november",
+                "decoration_method": "digital-printing",
+                "height": 1571,
+                "width": 1858
+              },
+              {
+                "position": "december",
+                "decoration_method": "digital-printing",
+                "height": 1571,
+                "width": 1858
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              102439
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 139
+            },
+            "countries": [
+              "CZ",
+              "DE"
+            ]
+          },
+          {
+            "variant_ids": [
+              102439
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2719
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              102439
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 839
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 239
+            },
+            "countries": [
+              "EE",
+              "LV",
+              "NO",
+              "LU",
+              "FI",
+              "LI",
+              "DK",
+              "CH",
+              "IS",
+              "LT",
+              "SE"
+            ]
+          },
+          {
+            "variant_ids": [
+              102439
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1719
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              102439
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 549
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 139
+            },
+            "countries": [
+              "BE",
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "FO",
+              "GE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IE",
+              "IM",
+              "JE",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "TR",
+              "UA",
+              "XK",
+              "FR",
+              "IT",
+              "NL"
+            ]
+          },
+          {
+            "variant_ids": [
+              102439
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 129
+            },
+            "countries": [
+              "GB"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

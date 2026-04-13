@@ -1,0 +1,200 @@
+{
+  "blueprint": {
+    "id": 1601,
+    "title": "Polyester Doormat",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d6f64488f2123c19098982",
+      "https://images.printify.com/66d6f933b4a82efebd020a13"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 48,
+        "title": "Colorway"
+      },
+      "variants": {
+        "id": 48,
+        "title": "Colorway",
+        "variants": [
+          {
+            "id": 112062,
+            "title": "18\u0027\u0027 \u00D7 30\u0027\u0027",
+            "options": {
+              "size": "18\u0027\u0027 \u00D7 30\u0027\u0027"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 2850,
+                "width": 4650
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              112062
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1949
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1759
+            },
+            "countries": [
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "DK",
+              "EE",
+              "FO",
+              "FI",
+              "FR",
+              "GE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IS",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "LV",
+              "LI",
+              "LT",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NO",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "SE",
+              "CH",
+              "TR",
+              "UA",
+              "XK",
+              "DE"
+            ]
+          },
+          {
+            "variant_ids": [
+              112062
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2629
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2429
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              112062
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1339
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1149
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              112062
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1309
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 539
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              112062
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 759
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 559
+            },
+            "countries": [
+              "GB"
+            ]
+          },
+          {
+            "variant_ids": [
+              112062
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2849
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2649
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

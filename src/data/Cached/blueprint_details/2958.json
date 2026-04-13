@@ -1,0 +1,150 @@
+{
+  "blueprint": {
+    "id": 2958,
+    "title": "Hidden Message Sliding Blank Bar Necklace (Engraving)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/696a3e771a4d375e10052452",
+      "https://images.printify.com/696a3e7b5d238a04fa05edf2",
+      "https://images.printify.com/696a3e80fed756a3f70d04e2",
+      "https://images.printify.com/696a3e75800662702a068493",
+      "https://images.printify.com/696a3e788007daba300681a4",
+      "https://images.printify.com/696a3e79336fa6b7a006d2b2"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 217,
+        "title": "Fulfill Engine"
+      },
+      "variants": {
+        "id": 217,
+        "title": "Fulfill Engine",
+        "variants": [
+          {
+            "id": 164457,
+            "title": "18K Gold PVD Coating / Stainless Steel / One Size",
+            "options": {
+              "color": "18K Gold PVD Coating / Stainless Steel",
+              "size": "One Size"
+            },
+            "placeholders": [
+              {
+                "position": "inside_front",
+                "decoration_method": "laser-engraving",
+                "height": 1020,
+                "width": 144
+              },
+              {
+                "position": "front",
+                "decoration_method": "laser-engraving",
+                "height": 1260,
+                "width": 204
+              }
+            ]
+          },
+          {
+            "id": 164458,
+            "title": "Stainless Steel  / 18K Gold PVD Coating / One Size",
+            "options": {
+              "color": "Stainless Steel  / 18K Gold PVD Coating",
+              "size": "One Size"
+            },
+            "placeholders": [
+              {
+                "position": "inside_front",
+                "decoration_method": "laser-engraving",
+                "height": 1020,
+                "width": 144
+              },
+              {
+                "position": "front",
+                "decoration_method": "laser-engraving",
+                "height": 1260,
+                "width": 204
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              164457,
+              164458
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 449
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 209
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              164457,
+              164458
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 569
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              164457,
+              164458
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              164457,
+              164458
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 939
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "blueprint": {
+    "id": 844,
+    "title": "Tufted Floor Pillow, Square",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d8457ed8835d42460c93e2",
+      "https://images.printify.com/66d8457d36f47bc2dd0c4502",
+      "https://images.printify.com/61c02aa8c569cf4ff846a5a4",
+      "https://images.printify.com/61c033bdaaad49298532ada6",
+      "https://images.printify.com/61c2c9c1433d2b2cbc31df26",
+      "https://images.printify.com/61c1c8b29598b95af25d5eb1"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 10,
+        "title": "MWW On Demand"
+      },
+      "variants": {
+        "id": 10,
+        "title": "MWW On Demand",
+        "variants": [
+          {
+            "id": 77090,
+            "title": "26\u0022 \u00D7 26\u0022",
+            "options": {
+              "size": "26\u0022 \u00D7 26\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 4125,
+                "width": 4125
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 4125,
+                "width": 4125
+              }
+            ]
+          },
+          {
+            "id": 77091,
+            "title": "30\u0022 \u00D7 30\u0022",
+            "options": {
+              "size": "30\u0022 \u00D7 30\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 4725,
+                "width": 4725
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 4725,
+                "width": 4725
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              77090,
+              77091
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 3699
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2499
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              77090,
+              77091
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 3999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 3999
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              77090,
+              77091
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 3649
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 3649
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

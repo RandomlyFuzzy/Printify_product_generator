@@ -1,0 +1,244 @@
+{
+  "blueprint": {
+    "id": 1385,
+    "title": "Fleece Sherpa Blanket",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66cc70d1d0f7f62df0037b92",
+      "https://images.printify.com/66cc70d3d0f7f62df0037b93",
+      "https://images.printify.com/66e13ca3e846143a21020532",
+      "https://images.printify.com/66e13d96e25289adf80aabe3",
+      "https://images.printify.com/66e13db284751bc1a90c91c2",
+      "https://images.printify.com/66e13dc1e846143a21020533",
+      "https://images.printify.com/66e13e28e25289adf80aabe4",
+      "https://images.printify.com/66e13e0ee846143a21020536",
+      "https://images.printify.com/66e13de6634252373f0d2de4",
+      "https://images.printify.com/66e13ddfac3f1fac3f0ba1b2",
+      "https://images.printify.com/66e13dd9e846143a21020534",
+      "https://images.printify.com/66e13dfde846143a21020535"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 1,
+        "title": "SPOKE Custom Products"
+      },
+      "variants": {
+        "id": 1,
+        "title": "SPOKE Custom Products",
+        "variants": [
+          {
+            "id": 103554,
+            "title": "50\u0022 \u00D7 60\u0022 / Grey",
+            "options": {
+              "size": "50\u0022 \u00D7 60\u0022",
+              "color": "Grey"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 18900,
+                "width": 15900
+              }
+            ]
+          },
+          {
+            "id": 103555,
+            "title": "60\u0022 \u00D7 80\u0022 / Grey",
+            "options": {
+              "size": "60\u0022 \u00D7 80\u0022",
+              "color": "Grey"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 24844,
+                "width": 18900
+              }
+            ]
+          },
+          {
+            "id": 103556,
+            "title": "50\u0022 \u00D7 60\u0022 / Beige",
+            "options": {
+              "size": "50\u0022 \u00D7 60\u0022",
+              "color": "Beige"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 18900,
+                "width": 15900
+              }
+            ]
+          },
+          {
+            "id": 103557,
+            "title": "60\u0022 \u00D7 80\u0022 / Beige",
+            "options": {
+              "size": "60\u0022 \u00D7 80\u0022",
+              "color": "Beige"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 24844,
+                "width": 18900
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              103554,
+              103556
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 829
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 269
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              103555,
+              103557
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1029
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 299
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              103555,
+              103557
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1599
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              103555,
+              103557
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1899
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              103555,
+              103557
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1199
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 629
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              103554,
+              103556
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              103554,
+              103556
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1369
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 819
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              103554,
+              103556
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

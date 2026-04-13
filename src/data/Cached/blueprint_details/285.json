@@ -1,0 +1,323 @@
+{
+  "blueprint": {
+    "id": 285,
+    "title": "Women\u0027s Pencil Skirt (AOP)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d70aab008985a3f0034d92",
+      "https://images.printify.com/66d708fff6cf8a489a0124d2",
+      "https://images.printify.com/5d42fd63f902f00885766759"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 10,
+        "title": "MWW On Demand"
+      },
+      "variants": {
+        "id": 10,
+        "title": "MWW On Demand",
+        "variants": [
+          {
+            "id": 43187,
+            "title": "XS / 4 oz.",
+            "options": {
+              "size": "XS",
+              "weight": "4 oz."
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "aop",
+                "height": 2993,
+                "width": 3293
+              },
+              {
+                "position": "back",
+                "decoration_method": "aop",
+                "height": 3176,
+                "width": 3205
+              },
+              {
+                "position": "front_waistband",
+                "decoration_method": "aop",
+                "height": 900,
+                "width": 2953
+              },
+              {
+                "position": "back_waistband",
+                "decoration_method": "aop",
+                "height": 900,
+                "width": 2617
+              }
+            ]
+          },
+          {
+            "id": 43189,
+            "title": "S / 4 oz.",
+            "options": {
+              "size": "S",
+              "weight": "4 oz."
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "aop",
+                "height": 2993,
+                "width": 3293
+              },
+              {
+                "position": "back",
+                "decoration_method": "aop",
+                "height": 3176,
+                "width": 3205
+              },
+              {
+                "position": "front_waistband",
+                "decoration_method": "aop",
+                "height": 900,
+                "width": 2953
+              },
+              {
+                "position": "back_waistband",
+                "decoration_method": "aop",
+                "height": 900,
+                "width": 2617
+              }
+            ]
+          },
+          {
+            "id": 43191,
+            "title": "M / 4 oz.",
+            "options": {
+              "size": "M",
+              "weight": "4 oz."
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "aop",
+                "height": 2993,
+                "width": 3293
+              },
+              {
+                "position": "back",
+                "decoration_method": "aop",
+                "height": 3176,
+                "width": 3205
+              },
+              {
+                "position": "front_waistband",
+                "decoration_method": "aop",
+                "height": 900,
+                "width": 2953
+              },
+              {
+                "position": "back_waistband",
+                "decoration_method": "aop",
+                "height": 900,
+                "width": 2617
+              }
+            ]
+          },
+          {
+            "id": 43193,
+            "title": "L / 4 oz.",
+            "options": {
+              "size": "L",
+              "weight": "4 oz."
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "aop",
+                "height": 2993,
+                "width": 3293
+              },
+              {
+                "position": "back",
+                "decoration_method": "aop",
+                "height": 3176,
+                "width": 3205
+              },
+              {
+                "position": "front_waistband",
+                "decoration_method": "aop",
+                "height": 900,
+                "width": 2953
+              },
+              {
+                "position": "back_waistband",
+                "decoration_method": "aop",
+                "height": 900,
+                "width": 2617
+              }
+            ]
+          },
+          {
+            "id": 43195,
+            "title": "XL / 4 oz.",
+            "options": {
+              "size": "XL",
+              "weight": "4 oz."
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "aop",
+                "height": 2993,
+                "width": 3293
+              },
+              {
+                "position": "back",
+                "decoration_method": "aop",
+                "height": 3176,
+                "width": 3205
+              },
+              {
+                "position": "front_waistband",
+                "decoration_method": "aop",
+                "height": 900,
+                "width": 2953
+              },
+              {
+                "position": "back_waistband",
+                "decoration_method": "aop",
+                "height": 900,
+                "width": 2617
+              }
+            ]
+          },
+          {
+            "id": 43197,
+            "title": "2XL / 4 oz.",
+            "options": {
+              "size": "2XL",
+              "weight": "4 oz."
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "aop",
+                "height": 2993,
+                "width": 3293
+              },
+              {
+                "position": "back",
+                "decoration_method": "aop",
+                "height": 3176,
+                "width": 3205
+              },
+              {
+                "position": "front_waistband",
+                "decoration_method": "aop",
+                "height": 900,
+                "width": 2953
+              },
+              {
+                "position": "back_waistband",
+                "decoration_method": "aop",
+                "height": 900,
+                "width": 2617
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              43187,
+              43189,
+              43191,
+              43193,
+              43195,
+              43197
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 569
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 259
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              43187,
+              43189,
+              43191,
+              43193,
+              43195,
+              43197
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 919
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 359
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              43187,
+              43189,
+              43191,
+              43193,
+              43195,
+              43197
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1199
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 379
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              43187,
+              43189,
+              43191,
+              43193,
+              43195,
+              43197
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 589
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 299
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

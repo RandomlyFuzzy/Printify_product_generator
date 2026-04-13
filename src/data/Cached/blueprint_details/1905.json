@@ -1,0 +1,853 @@
+{
+  "blueprint": {
+    "id": 1905,
+    "title": "Pom-Pom Knit Cap (Embroidery)",
+    "brand": "Sportsman",
+    "model": "SP15",
+    "images": [
+      "https://images.printify.com/68414fbf3a789ba6e204de63",
+      "https://images.printify.com/6926c0f6ca73b43f7a0f8632",
+      "https://images.printify.com/6926c0f3b96f82e9630d6162",
+      "https://images.printify.com/684153e5f6437c963a0279c2",
+      "https://images.printify.com/6842b79d6bd03550f20f8362",
+      "https://images.printify.com/6842c3e20a439b45750376d3",
+      "https://images.printify.com/683ee1c9c5085c27840d9f42",
+      "https://images.printify.com/68415225d82a591fc50ae562",
+      "https://images.printify.com/683ee1cb6a6c1f9b02082382"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 410,
+        "title": "Printful"
+      },
+      "variants": {
+        "id": 410,
+        "title": "Printful",
+        "variants": [
+          {
+            "id": 119211,
+            "title": "One size / Black",
+            "options": {
+              "size": "One size",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 525,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 119212,
+            "title": "One size / Dark Heather Grey",
+            "options": {
+              "size": "One size",
+              "color": "Dark Heather Grey"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 525,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 119213,
+            "title": "One size / Dark Heather Grey / Black",
+            "options": {
+              "size": "One size",
+              "color": "Dark Heather Grey / Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 525,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 119214,
+            "title": "One size / Dark Heather Grey / Navy",
+            "options": {
+              "size": "One size",
+              "color": "Dark Heather Grey / Navy"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 525,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 119215,
+            "title": "One size / Dark Heather Grey / Red",
+            "options": {
+              "size": "One size",
+              "color": "Dark Heather Grey / Red"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 525,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 119216,
+            "title": "One size / Gold",
+            "options": {
+              "size": "One size",
+              "color": "Gold"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 525,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 119217,
+            "title": "One size / Heather Grey",
+            "options": {
+              "size": "One size",
+              "color": "Heather Grey"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 525,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 119218,
+            "title": "One size / Navy",
+            "options": {
+              "size": "One size",
+              "color": "Navy"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 525,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 119219,
+            "title": "One size / Neon Green",
+            "options": {
+              "size": "One size",
+              "color": "Neon Green"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 525,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 119220,
+            "title": "One size / Neon Pink",
+            "options": {
+              "size": "One size",
+              "color": "Neon Pink"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 525,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 119221,
+            "title": "One size / Red",
+            "options": {
+              "size": "One size",
+              "color": "Red"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 525,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 119222,
+            "title": "One size / Royal / Heather Grey",
+            "options": {
+              "size": "One size",
+              "color": "Royal / Heather Grey"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 525,
+                "width": 1500
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              119211,
+              119212,
+              119213,
+              119214,
+              119215,
+              119216,
+              119217,
+              119218,
+              119219,
+              119220,
+              119221,
+              119222
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 449
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 209
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              119211,
+              119212,
+              119213,
+              119214,
+              119215,
+              119216,
+              119217,
+              119218,
+              119219,
+              119220,
+              119221,
+              119222
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 489
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 219
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              119211,
+              119212,
+              119213,
+              119214,
+              119215,
+              119216,
+              119217,
+              119218,
+              119219,
+              119220,
+              119221,
+              119222
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 459
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 145
+            },
+            "countries": [
+              "JE",
+              "MT",
+              "LU",
+              "MD",
+              "SK",
+              "LT",
+              "HU",
+              "MK",
+              "BE",
+              "AT",
+              "RO",
+              "IE",
+              "AX",
+              "FO",
+              "DE",
+              "MC",
+              "SE",
+              "ES",
+              "CY",
+              "DK",
+              "VA",
+              "LV",
+              "HR",
+              "GI",
+              "AL",
+              "SM",
+              "BG",
+              "AD",
+              "UA",
+              "GR",
+              "CZ",
+              "EE",
+              "GP",
+              "BY",
+              "GG",
+              "NL",
+              "GE",
+              "FR",
+              "BA",
+              "IM",
+              "RE",
+              "PT",
+              "ME",
+              "TR",
+              "PL",
+              "RS",
+              "XK",
+              "BV",
+              "GL",
+              "AM",
+              "FI",
+              "IT",
+              "SI"
+            ]
+          },
+          {
+            "variant_ids": [
+              119211,
+              119212,
+              119213,
+              119214,
+              119215,
+              119216,
+              119217,
+              119218,
+              119219,
+              119220,
+              119221,
+              119222
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 110
+            },
+            "countries": [
+              "LI",
+              "NO",
+              "IS",
+              "CH"
+            ]
+          },
+          {
+            "variant_ids": [
+              119211,
+              119212,
+              119213,
+              119214,
+              119215,
+              119216,
+              119217,
+              119218,
+              119219,
+              119220,
+              119221,
+              119222
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "JP",
+              "REST_OF_THE_WORLD",
+              "BR"
+            ]
+          },
+          {
+            "variant_ids": [
+              119211,
+              119212,
+              119213,
+              119214,
+              119215,
+              119216,
+              119217,
+              119218,
+              119219,
+              119220,
+              119221,
+              119222
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 939
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              119211,
+              119212,
+              119213,
+              119214,
+              119215,
+              119216,
+              119217,
+              119218,
+              119219,
+              119220,
+              119221,
+              119222
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 159
+            },
+            "countries": [
+              "GB"
+            ]
+          },
+          {
+            "variant_ids": [
+              119211,
+              119212,
+              119213,
+              119214,
+              119215,
+              119216,
+              119217,
+              119218,
+              119219,
+              119220,
+              119221,
+              119222
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1249
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 239
+            },
+            "countries": [
+              "AU"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "provider": {
+        "id": 99,
+        "title": "Printify Choice"
+      },
+      "variants": {
+        "id": 99,
+        "title": "Printify Choice",
+        "variants": [
+          {
+            "id": 119211,
+            "title": "One size / Black",
+            "options": {
+              "size": "One size",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 525,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 119212,
+            "title": "One size / Dark Heather Grey",
+            "options": {
+              "color": "Dark Heather Grey",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 525,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 119213,
+            "title": "One size / Dark Heather Grey / Black",
+            "options": {
+              "size": "One size",
+              "color": "Dark Heather Grey / Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 525,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 119214,
+            "title": "One size / Dark Heather Grey / Navy",
+            "options": {
+              "size": "One size",
+              "color": "Dark Heather Grey / Navy"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 525,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 119215,
+            "title": "One size / Dark Heather Grey / Red",
+            "options": {
+              "size": "One size",
+              "color": "Dark Heather Grey / Red"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 525,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 119216,
+            "title": "One size / Gold",
+            "options": {
+              "color": "Gold",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 525,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 119217,
+            "title": "One size / Heather Grey",
+            "options": {
+              "size": "One size",
+              "color": "Heather Grey"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 525,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 119218,
+            "title": "One size / Navy",
+            "options": {
+              "color": "Navy",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 525,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 119219,
+            "title": "One size / Neon Green",
+            "options": {
+              "size": "One size",
+              "color": "Neon Green"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 525,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 119220,
+            "title": "One size / Neon Pink",
+            "options": {
+              "size": "One size",
+              "color": "Neon Pink"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 525,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 119221,
+            "title": "One size / Red",
+            "options": {
+              "color": "Red",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 525,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 119222,
+            "title": "One size / Royal / Heather Grey",
+            "options": {
+              "size": "One size",
+              "color": "Royal / Heather Grey"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 525,
+                "width": 1500
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              119211,
+              119212,
+              119213,
+              119214,
+              119215,
+              119216,
+              119217,
+              119218,
+              119219,
+              119220,
+              119221,
+              119222
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 449
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 209
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              119211,
+              119212,
+              119213,
+              119214,
+              119215,
+              119216,
+              119217,
+              119218,
+              119219,
+              119220,
+              119221,
+              119222
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              119211,
+              119212,
+              119213,
+              119214,
+              119215,
+              119216,
+              119217,
+              119218,
+              119219,
+              119220,
+              119221,
+              119222
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1249
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 239
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              119211,
+              119212,
+              119213,
+              119214,
+              119215,
+              119216,
+              119217,
+              119218,
+              119219,
+              119220,
+              119221,
+              119222
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 939
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              119211,
+              119212,
+              119213,
+              119214,
+              119215,
+              119216,
+              119217,
+              119218,
+              119219,
+              119220,
+              119221,
+              119222
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 489
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 219
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

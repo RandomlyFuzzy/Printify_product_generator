@@ -1,0 +1,147 @@
+{
+  "blueprint": {
+    "id": 535,
+    "title": "11oz White Mug",
+    "brand": "ORCA Coatings",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d6e00f333cb662f000fa96",
+      "https://images.printify.com/66d6e00e333cb662f000fa95",
+      "https://images.printify.com/5f8d7f5bb22aa16dbd2f1c73",
+      "https://images.printify.com/5f914b7a840cce66030e4f63"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 6,
+        "title": "T Shirt and Sons"
+      },
+      "variants": {
+        "id": 6,
+        "title": "T Shirt and Sons",
+        "variants": [
+          {
+            "id": 69010,
+            "title": "11oz",
+            "options": {
+              "size": "11oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1120,
+                "width": 2582
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              69010
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2279
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 619
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              69010
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 3279
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 619
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              69010
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 379
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "GB"
+            ]
+          },
+          {
+            "variant_ids": [
+              69010
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1199
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "GI",
+              "AT",
+              "BE",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "FR",
+              "GR",
+              "HU",
+              "IT",
+              "LU",
+              "MT",
+              "PT",
+              "RO",
+              "SK",
+              "SI",
+              "ES",
+              "TR",
+              "NL",
+              "PL",
+              "SE",
+              "DK",
+              "FI",
+              "EE",
+              "IS",
+              "LT",
+              "LV",
+              "NO",
+              "LI",
+              "CH",
+              "DE",
+              "IE"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

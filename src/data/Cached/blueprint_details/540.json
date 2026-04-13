@@ -1,0 +1,1046 @@
+{
+  "blueprint": {
+    "id": 540,
+    "title": "Framed Vertical Poster",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d6e1c7ddae87362f0f9442",
+      "https://images.printify.com/66d6e1c5182360b15c04fa35",
+      "https://images.printify.com/600fbd752df2be438264fab7",
+      "https://images.printify.com/5ff5d779a7c975267356d0f3"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 99,
+        "title": "Printify Choice"
+      },
+      "variants": {
+        "id": 99,
+        "title": "Printify Choice",
+        "variants": [
+          {
+            "id": 69663,
+            "title": "11\u0022 x 14\u0022 / Black",
+            "options": {
+              "color": "Black",
+              "size": "11\u0022 x 14\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 4200,
+                "width": 3300
+              }
+            ]
+          },
+          {
+            "id": 69664,
+            "title": "12\u2033 x 16\u2033 / Black",
+            "options": {
+              "color": "Black",
+              "size": "12\u2033 x 16\u2033"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 4800,
+                "width": 3600
+              }
+            ]
+          },
+          {
+            "id": 69666,
+            "title": "16\u2033 x 16\u2033 / Black",
+            "options": {
+              "color": "Black",
+              "size": "16\u2033 x 16\u2033"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 4800,
+                "width": 4800
+              }
+            ]
+          },
+          {
+            "id": 69667,
+            "title": "16\u2033 x 20\u2033 / Black",
+            "options": {
+              "color": "Black",
+              "size": "16\u2033 x 20\u2033"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 6000,
+                "width": 4800
+              }
+            ]
+          },
+          {
+            "id": 69669,
+            "title": "20\u0022 x 30\u0022 / Black",
+            "options": {
+              "color": "Black",
+              "size": "20\u0022 x 30\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 9000,
+                "width": 6000
+              }
+            ]
+          },
+          {
+            "id": 69677,
+            "title": "11\u0022 x 14\u0022 / White",
+            "options": {
+              "color": "White",
+              "size": "11\u0022 x 14\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 4200,
+                "width": 3300
+              }
+            ]
+          },
+          {
+            "id": 69678,
+            "title": "12\u2033 x 16\u2033 / White",
+            "options": {
+              "color": "White",
+              "size": "12\u2033 x 16\u2033"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 4800,
+                "width": 3600
+              }
+            ]
+          },
+          {
+            "id": 69680,
+            "title": "16\u2033 x 16\u2033 / White",
+            "options": {
+              "color": "White",
+              "size": "16\u2033 x 16\u2033"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 4800,
+                "width": 4800
+              }
+            ]
+          },
+          {
+            "id": 69681,
+            "title": "16\u2033 x 20\u2033 / White",
+            "options": {
+              "color": "White",
+              "size": "16\u2033 x 20\u2033"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 6000,
+                "width": 4800
+              }
+            ]
+          },
+          {
+            "id": 69683,
+            "title": "20\u0022 x 30\u0022 / White",
+            "options": {
+              "color": "White",
+              "size": "20\u0022 x 30\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 9000,
+                "width": 6000
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              69669,
+              69683
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 6719
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 4999
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              69667,
+              69681
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 7149
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 6589
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              69669,
+              69683
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 20799
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 19999
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              69667,
+              69681
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1639
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 589
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              69669,
+              69683
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 19759
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 18999
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              69667,
+              69681
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 4879
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2499
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              69669,
+              69683
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2079
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              69663,
+              69677
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 4589
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2399
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              69664,
+              69666,
+              69678,
+              69680
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 4679
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2499
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              69663,
+              69664,
+              69666,
+              69677,
+              69678,
+              69680
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 5439
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 5229
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              69663,
+              69664,
+              69666,
+              69677,
+              69678,
+              69680
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1189
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 599
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "provider": {
+        "id": 2,
+        "title": "Sensaria"
+      },
+      "variants": {
+        "id": 2,
+        "title": "Sensaria",
+        "variants": [
+          {
+            "id": 69663,
+            "title": "11\u0022 x 14\u0022 / Black",
+            "options": {
+              "size": "11\u0022 x 14\u0022",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 4200,
+                "width": 3300
+              }
+            ]
+          },
+          {
+            "id": 69664,
+            "title": "12\u2033 x 16\u2033 / Black",
+            "options": {
+              "size": "12\u2033 x 16\u2033",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 4800,
+                "width": 3600
+              }
+            ]
+          },
+          {
+            "id": 69665,
+            "title": "12\u2033 x 36\u2033 / Black",
+            "options": {
+              "size": "12\u2033 x 36\u2033",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 10800,
+                "width": 3600
+              }
+            ]
+          },
+          {
+            "id": 69666,
+            "title": "16\u2033 x 16\u2033 / Black",
+            "options": {
+              "size": "16\u2033 x 16\u2033",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 4800,
+                "width": 4800
+              }
+            ]
+          },
+          {
+            "id": 69667,
+            "title": "16\u2033 x 20\u2033 / Black",
+            "options": {
+              "size": "16\u2033 x 20\u2033",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 6000,
+                "width": 4800
+              }
+            ]
+          },
+          {
+            "id": 69668,
+            "title": "16\u2033 x 24\u2033 / Black",
+            "options": {
+              "size": "16\u2033 x 24\u2033",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 7200,
+                "width": 4800
+              }
+            ]
+          },
+          {
+            "id": 69669,
+            "title": "20\u0022 x 30\u0022 / Black",
+            "options": {
+              "size": "20\u0022 x 30\u0022",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 9000,
+                "width": 6000
+              }
+            ]
+          },
+          {
+            "id": 69670,
+            "title": "11\u0022 x 14\u0022 / Walnut",
+            "options": {
+              "size": "11\u0022 x 14\u0022",
+              "color": "Walnut"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 4200,
+                "width": 3300
+              }
+            ]
+          },
+          {
+            "id": 69671,
+            "title": "12\u2033 x 16\u2033 / Walnut",
+            "options": {
+              "size": "12\u2033 x 16\u2033",
+              "color": "Walnut"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 4800,
+                "width": 3600
+              }
+            ]
+          },
+          {
+            "id": 69672,
+            "title": "12\u2033 x 36\u2033 / Walnut",
+            "options": {
+              "size": "12\u2033 x 36\u2033",
+              "color": "Walnut"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 10800,
+                "width": 3600
+              }
+            ]
+          },
+          {
+            "id": 69673,
+            "title": "16\u2033 x 16\u2033 / Walnut",
+            "options": {
+              "size": "16\u2033 x 16\u2033",
+              "color": "Walnut"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 4800,
+                "width": 4800
+              }
+            ]
+          },
+          {
+            "id": 69674,
+            "title": "16\u2033 x 20\u2033 / Walnut",
+            "options": {
+              "size": "16\u2033 x 20\u2033",
+              "color": "Walnut"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 6000,
+                "width": 4800
+              }
+            ]
+          },
+          {
+            "id": 69675,
+            "title": "16\u2033 x 24\u2033 / Walnut",
+            "options": {
+              "size": "16\u2033 x 24\u2033",
+              "color": "Walnut"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 7200,
+                "width": 4800
+              }
+            ]
+          },
+          {
+            "id": 69676,
+            "title": "20\u0022 x 30\u0022 / Walnut",
+            "options": {
+              "size": "20\u0022 x 30\u0022",
+              "color": "Walnut"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 9000,
+                "width": 6000
+              }
+            ]
+          },
+          {
+            "id": 69677,
+            "title": "11\u0022 x 14\u0022 / White",
+            "options": {
+              "size": "11\u0022 x 14\u0022",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 4200,
+                "width": 3300
+              }
+            ]
+          },
+          {
+            "id": 69678,
+            "title": "12\u2033 x 16\u2033 / White",
+            "options": {
+              "size": "12\u2033 x 16\u2033",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 4800,
+                "width": 3600
+              }
+            ]
+          },
+          {
+            "id": 69679,
+            "title": "12\u2033 x 36\u2033 / White",
+            "options": {
+              "size": "12\u2033 x 36\u2033",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 10800,
+                "width": 3600
+              }
+            ]
+          },
+          {
+            "id": 69680,
+            "title": "16\u2033 x 16\u2033 / White",
+            "options": {
+              "size": "16\u2033 x 16\u2033",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 4800,
+                "width": 4800
+              }
+            ]
+          },
+          {
+            "id": 69681,
+            "title": "16\u2033 x 20\u2033 / White",
+            "options": {
+              "size": "16\u2033 x 20\u2033",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 6000,
+                "width": 4800
+              }
+            ]
+          },
+          {
+            "id": 69682,
+            "title": "16\u2033 x 24\u2033 / White",
+            "options": {
+              "size": "16\u2033 x 24\u2033",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 7200,
+                "width": 4800
+              }
+            ]
+          },
+          {
+            "id": 69683,
+            "title": "20\u0022 x 30\u0022 / White",
+            "options": {
+              "size": "20\u0022 x 30\u0022",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 9000,
+                "width": 6000
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              69669,
+              69676,
+              69683
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 7049
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 5249
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              69665,
+              69672,
+              69679
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 7049
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 6779
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              69665,
+              69669,
+              69672,
+              69676,
+              69679,
+              69683
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 22259
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 21399
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              69665,
+              69669,
+              69672,
+              69676,
+              69679,
+              69683
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 21139
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 20329
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              69669,
+              69676,
+              69683
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2189
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1159
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              69667,
+              69668,
+              69674,
+              69675,
+              69681,
+              69682
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 5119
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2629
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              69668,
+              69675,
+              69682
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 11129
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 10699
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              69667,
+              69668,
+              69674,
+              69675,
+              69681,
+              69682
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1719
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 729
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              69668,
+              69675,
+              69682
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 14249
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 13699
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              69667,
+              69674,
+              69681
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 7649
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 7049
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              69665,
+              69672,
+              69679
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2269
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1159
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              69664,
+              69666,
+              69671,
+              69673,
+              69678,
+              69680
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 4909
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2629
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              69663,
+              69664,
+              69666,
+              69670,
+              69671,
+              69673,
+              69677,
+              69678,
+              69680
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1249
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 739
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              69663,
+              69664,
+              69666,
+              69670,
+              69671,
+              69673,
+              69677,
+              69678,
+              69680
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 5819
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 5599
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              69663,
+              69670,
+              69677
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 4819
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2519
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

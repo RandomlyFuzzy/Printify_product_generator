@@ -1,0 +1,173 @@
+{
+  "blueprint": {
+    "id": 1115,
+    "title": "Enamel Camp Cup",
+    "brand": "ORCA Coatings",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66dad90c8ad8173913083a6a",
+      "https://images.printify.com/66d591049bcb23130900a2a2",
+      "https://images.printify.com/62c7ea0904e6bf9a6e0ed083",
+      "https://images.printify.com/67e3e897b1b5cf596903a945"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 59,
+        "title": "Imagine Your Photos"
+      },
+      "variants": {
+        "id": 59,
+        "title": "Imagine Your Photos",
+        "variants": [
+          {
+            "id": 87867,
+            "title": "12oz / Black Rim",
+            "options": {
+              "size": "12oz",
+              "color": "Black Rim"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 871,
+                "width": 2334
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              87867
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1459
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              87867
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1379
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 419
+            },
+            "countries": [
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "DK",
+              "EE",
+              "FO",
+              "FI",
+              "FR",
+              "GE",
+              "DE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IS",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "LV",
+              "LI",
+              "LT",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "NO",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "SE",
+              "CH",
+              "TR",
+              "UA",
+              "GB",
+              "XK"
+            ]
+          },
+          {
+            "variant_ids": [
+              87867
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 759
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 309
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              87867
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1719
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

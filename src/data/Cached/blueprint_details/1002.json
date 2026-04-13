@@ -1,0 +1,179 @@
+{
+  "blueprint": {
+    "id": 1002,
+    "title": "Table Runner (Cotton, Poly)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d56aed92c6c7109e0cfc76",
+      "https://images.printify.com/66d56aefc19697133f0c86d2",
+      "https://images.printify.com/67ef83776e66c316c70542c2",
+      "https://images.printify.com/62440538732bbec0d6039a33",
+      "https://images.printify.com/624ff21bd1ad80775a04c45c",
+      "https://images.printify.com/624ff0fe2fa79b4cdd06f8e6",
+      "https://images.printify.com/624ff10681cb3d3dc30fcbc1"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 10,
+        "title": "MWW On Demand"
+      },
+      "variants": {
+        "id": 10,
+        "title": "MWW On Demand",
+        "variants": [
+          {
+            "id": 79530,
+            "title": "16\u0022 \u00D7 72\u0022 / Cotton Twill",
+            "options": {
+              "size": "16\u0022 \u00D7 72\u0022",
+              "material": "Cotton Twill"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 11100,
+                "width": 2700
+              }
+            ]
+          },
+          {
+            "id": 79531,
+            "title": "16\u0022 \u00D7 72\u0022 / Polyester",
+            "options": {
+              "size": "16\u0022 \u00D7 72\u0022",
+              "material": "Polyester"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 11100,
+                "width": 2700
+              }
+            ]
+          },
+          {
+            "id": 79532,
+            "title": "16\u0022 \u00D7 90\u0022 / Cotton Twill",
+            "options": {
+              "size": "16\u0022 \u00D7 90\u0022",
+              "material": "Cotton Twill"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 14063,
+                "width": 2700
+              }
+            ]
+          },
+          {
+            "id": 79533,
+            "title": "16\u0022 \u00D7 90\u0022 / Polyester",
+            "options": {
+              "size": "16\u0022 \u00D7 90\u0022",
+              "material": "Polyester"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 14063,
+                "width": 2700
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              79530,
+              79531,
+              79532,
+              79533
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 789
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 299
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              79530,
+              79531,
+              79532,
+              79533
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 819
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 359
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              79530,
+              79531,
+              79532,
+              79533
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1867
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1079
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              79530,
+              79531,
+              79532,
+              79533
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1259
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

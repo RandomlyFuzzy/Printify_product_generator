@@ -1,0 +1,104 @@
+{
+  "blueprint": {
+    "id": 1972,
+    "title": "Glass Coffee Mug, 12.25oz (Engraving)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/68a5d77884d89a05d301ad72",
+      "https://images.printify.com/68a5d77670a59ee2b00a2773"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 217,
+        "title": "Fulfill Engine"
+      },
+      "variants": {
+        "id": 217,
+        "title": "Fulfill Engine",
+        "variants": [
+          {
+            "id": 121749,
+            "title": "12.25oz",
+            "options": {
+              "size": "12.25oz"
+            },
+            "placeholders": [
+              {
+                "position": "right",
+                "decoration_method": "engraving",
+                "height": 750,
+                "width": 750
+              },
+              {
+                "position": "left",
+                "decoration_method": "engraving",
+                "height": 750,
+                "width": 750
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              121749
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 949
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              121749
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1469
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 699
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              121749
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1899
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 899
+            },
+            "countries": [
+              "REST_OF_THE_WORLD",
+              "AU"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

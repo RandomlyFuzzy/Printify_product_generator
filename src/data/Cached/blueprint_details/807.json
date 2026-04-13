@@ -1,0 +1,100 @@
+{
+  "blueprint": {
+    "id": 807,
+    "title": "Hardboard Back Coaster",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66cd8e59d6dd1247fb0a5894",
+      "https://images.printify.com/66cd8e585022b0528b0c1bf3",
+      "https://images.printify.com/618c10007f648031890027e3"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 70,
+        "title": "Printed Mint"
+      },
+      "variants": {
+        "id": 70,
+        "title": "Printed Mint",
+        "variants": [
+          {
+            "id": 75138,
+            "title": "3.5\u0022 \u00D7 3.5\u0022 / Square / Hardboard",
+            "options": {
+              "size": "3.5\u0022 \u00D7 3.5\u0022",
+              "shape": "Square",
+              "material": "Hardboard"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1125,
+                "width": 1125
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              75138
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 549
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 99
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              75138
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1029
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 119
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              75138
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1029
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

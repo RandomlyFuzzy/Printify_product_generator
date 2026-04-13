@@ -1,0 +1,163 @@
+{
+  "blueprint": {
+    "id": 1624,
+    "title": "Tablecloths",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/691464f2b49128db7307a5c2",
+      "https://images.printify.com/691465c6b5bb9539f007c222",
+      "https://images.printify.com/691464f46818256ee608e672"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 10,
+        "title": "MWW On Demand"
+      },
+      "variants": {
+        "id": 10,
+        "title": "MWW On Demand",
+        "variants": [
+          {
+            "id": 112701,
+            "title": "58\u0027\u0027 \u00D7 58\u0027\u0027 / Cotton Twill",
+            "options": {
+              "size": "58\u0027\u0027 \u00D7 58\u0027\u0027",
+              "material": "Cotton Twill"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "direct-to-fabric",
+                "height": 9000,
+                "width": 9000
+              }
+            ]
+          },
+          {
+            "id": 112702,
+            "title": "58\u0027\u0027 \u00D7 102\u0027\u0027 / Cotton Twill",
+            "options": {
+              "size": "58\u0027\u0027 \u00D7 102\u0027\u0027",
+              "material": "Cotton Twill"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "direct-to-fabric",
+                "height": 15600,
+                "width": 9000
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              112702
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1899
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1839
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              112702
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2169
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1569
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              112702
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1599
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1179
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              112701
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1199
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 629
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              112701
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1749
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 899
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              112701
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1479
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1479
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

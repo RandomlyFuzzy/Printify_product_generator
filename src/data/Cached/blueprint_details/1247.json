@@ -1,0 +1,117 @@
+{
+  "blueprint": {
+    "id": 1247,
+    "title": "Coasters (50, 100 pcs)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66dead057c8a5b9f47032592",
+      "https://images.printify.com/66dead07edc007da9b0f9ac3",
+      "https://images.printify.com/672e054cbbc3fbf4680831e2"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 228,
+        "title": "Taylor"
+      },
+      "variants": {
+        "id": 228,
+        "title": "Taylor",
+        "variants": [
+          {
+            "id": 94265,
+            "title": "4\u0022 \u00D7 4\u0022 / 50 piece",
+            "options": {
+              "size": "4\u0022 \u00D7 4\u0022",
+              "quantity": "50 piece"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1275,
+                "width": 1275
+              }
+            ]
+          },
+          {
+            "id": 94266,
+            "title": "4\u0022 \u00D7 4\u0022 / 100 piece",
+            "options": {
+              "size": "4\u0022 \u00D7 4\u0022",
+              "quantity": "100 piece"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1275,
+                "width": 1275
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              94265
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1139
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 529
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              94265,
+              94266
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 5599
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2199
+            },
+            "countries": [
+              "REST_OF_THE_WORLD",
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              94266
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1269
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 829
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

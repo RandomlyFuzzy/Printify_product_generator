@@ -1,0 +1,244 @@
+{
+  "blueprint": {
+    "id": 1300,
+    "title": "Adjustable Tote Bag (AOP)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66cdb4431de5d1a798064b52",
+      "https://images.printify.com/66cdb44139118511b90bd522",
+      "https://images.printify.com/67ee8021530be42ac70d0cf7",
+      "https://images.printify.com/642d6184949ed457310b4825",
+      "https://images.printify.com/642d618e243e11dc6e004e04",
+      "https://images.printify.com/642d62145cde8f61bb02c87e",
+      "https://images.printify.com/642d4e5e36d85ed57404e3e4",
+      "https://images.printify.com/642d61ae5cde8f61bb02c878"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 10,
+        "title": "MWW On Demand"
+      },
+      "variants": {
+        "id": 10,
+        "title": "MWW On Demand",
+        "variants": [
+          {
+            "id": 98547,
+            "title": "16\u0022 \u00D7 16\u0027\u0027",
+            "options": {
+              "size": "16\u0022 \u00D7 16\u0027\u0027"
+            },
+            "placeholders": [
+              {
+                "position": "all",
+                "decoration_method": "dye-sublimation",
+                "height": 5250,
+                "width": 2625
+              }
+            ]
+          },
+          {
+            "id": 98548,
+            "title": "18\u0022 \u00D7 18\u0027\u0027",
+            "options": {
+              "size": "18\u0022 \u00D7 18\u0027\u0027"
+            },
+            "placeholders": [
+              {
+                "position": "all",
+                "decoration_method": "dye-sublimation",
+                "height": 5850,
+                "width": 2925
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              98547,
+              98548
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 569
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 149
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              98547,
+              98548
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 569
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 139
+            },
+            "countries": [
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "FO",
+              "FR",
+              "GE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "TR",
+              "UA",
+              "GB",
+              "XK",
+              "LU"
+            ]
+          },
+          {
+            "variant_ids": [
+              98547,
+              98548
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 569
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 99
+            },
+            "countries": [
+              "DE"
+            ]
+          },
+          {
+            "variant_ids": [
+              98547,
+              98548
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1069
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              98547,
+              98548
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1069
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 359
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              98547,
+              98548
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 699
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 139
+            },
+            "countries": [
+              "EE",
+              "LI",
+              "LT",
+              "LV",
+              "IS",
+              "CH",
+              "FI",
+              "SE",
+              "NO",
+              "DK"
+            ]
+          },
+          {
+            "variant_ids": [
+              98547,
+              98548
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 589
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 149
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

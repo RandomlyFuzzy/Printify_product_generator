@@ -1,0 +1,73 @@
+{
+  "blueprint": {
+    "id": 1545,
+    "title": "Acai Berry Complex Supplement (60 Capsules)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66c4510067fe3582a206dad3",
+      "https://images.printify.com/66c450ff3c8b01906f01a8a3",
+      "https://images.printify.com/66e2a043aa5c787a40093daa",
+      "https://images.printify.com/66a34176911ae1f5490e5f95",
+      "https://images.printify.com/66a3417d625fa9bc77053160",
+      "https://images.printify.com/66e2a044c9dc3b1b290da2e2",
+      "https://images.printify.com/66a36858ebfc61ed4708cb50",
+      "https://images.printify.com/66b34348fbfa4e61ef089b22"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 294,
+        "title": "Rocktomic"
+      },
+      "variants": {
+        "id": 294,
+        "title": "Rocktomic",
+        "variants": [
+          {
+            "id": 109733,
+            "title": "White bottle \u002B cap / Unflavored / 60 Vegetable capsules",
+            "options": {
+              "color": "White bottle \u002B cap",
+              "flavor": "Unflavored",
+              "size": "60 Vegetable capsules"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 1110,
+                "width": 1866
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              109733
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 449
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

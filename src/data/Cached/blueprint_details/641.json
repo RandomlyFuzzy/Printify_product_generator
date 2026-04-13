@@ -1,0 +1,102 @@
+{
+  "blueprint": {
+    "id": 641,
+    "title": "Cosmetic Bag",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d6fc9d45235efbfc022792",
+      "https://images.printify.com/66d6fc9b671a3507e00682d2",
+      "https://images.printify.com/60dad5d5ebc2294332359eb2",
+      "https://images.printify.com/60cdee85a4f25a0b1c6d7626",
+      "https://images.printify.com/60cc793480dec0716e4d628c",
+      "https://images.printify.com/60dc6007e5e4223b647a232d"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 70,
+        "title": "Printed Mint"
+      },
+      "variants": {
+        "id": 70,
+        "title": "Printed Mint",
+        "variants": [
+          {
+            "id": 72233,
+            "title": "White / One size",
+            "options": {
+              "color": "White",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 1425,
+                "width": 2250
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              72233
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 549
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 99
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              72233
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1009
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 219
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              72233
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

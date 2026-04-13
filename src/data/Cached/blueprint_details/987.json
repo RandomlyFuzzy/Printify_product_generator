@@ -1,0 +1,160 @@
+{
+  "blueprint": {
+    "id": 987,
+    "title": "License Plate",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d891e895f27e8a8d0d4308",
+      "https://images.printify.com/66d891e7c0281a60d00e19d7",
+      "https://images.printify.com/67ef8c98f9cbd02bd60f76c4",
+      "https://images.printify.com/62271861fefe9a676d2e02e5",
+      "https://images.printify.com/622864933ce71a28ff1665a0"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 90,
+        "title": "Smart Printee"
+      },
+      "variants": {
+        "id": 90,
+        "title": "Smart Printee",
+        "variants": [
+          {
+            "id": 78723,
+            "title": "11.8\u0022 x 6.1\u0022 / Matte",
+            "options": {
+              "size": "11.8\u0022 x 6.1\u0022",
+              "finish": "Matte"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1832,
+                "width": 3544
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              78723
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1109
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 869
+            },
+            "countries": [
+              "REST_OF_THE_WORLD",
+              "CA",
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              78723
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 739
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 619
+            },
+            "countries": [
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "DK",
+              "EE",
+              "FO",
+              "FI",
+              "FR",
+              "GE",
+              "DE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IS",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "LV",
+              "LI",
+              "LT",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "NO",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "SE",
+              "CH",
+              "TR",
+              "UA",
+              "GB",
+              "XK"
+            ]
+          },
+          {
+            "variant_ids": [
+              78723
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 759
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 629
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

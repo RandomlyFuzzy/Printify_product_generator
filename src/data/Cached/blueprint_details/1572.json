@@ -1,0 +1,208 @@
+{
+  "blueprint": {
+    "id": 1572,
+    "title": "Throw Pillow",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66e97227b5284b45070a84d2",
+      "https://images.printify.com/66e972266143e6793c032592",
+      "https://images.printify.com/66e97228751c7e49b60fdcb2",
+      "https://images.printify.com/66a22cbd8d725502b802be74",
+      "https://images.printify.com/66a22cbcccf0f805880961b2",
+      "https://images.printify.com/66a22ad718b6d920c0045aa2",
+      "https://images.printify.com/66a22adacbf0c9ff84047f62",
+      "https://images.printify.com/66a22ad6d52c67af4f089f12",
+      "https://images.printify.com/66a22ad98d725502b802be72"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 10,
+        "title": "MWW On Demand"
+      },
+      "variants": {
+        "id": 10,
+        "title": "MWW On Demand",
+        "variants": [
+          {
+            "id": 110270,
+            "title": "25\u0027\u0027 \u00D7 18\u0027\u0027",
+            "options": {
+              "size": "25\u0027\u0027 \u00D7 18\u0027\u0027"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 2925,
+                "width": 4055
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 2925,
+                "width": 4055
+              }
+            ]
+          },
+          {
+            "id": 110271,
+            "title": "26\u0027\u0027 \u00D7 26\u0027\u0027",
+            "options": {
+              "size": "26\u0027\u0027 \u00D7 26\u0027\u0027"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 4125,
+                "width": 4125
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 4125,
+                "width": 4125
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              110270,
+              110271
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1399
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 699
+            },
+            "countries": [
+              "EE",
+              "LI",
+              "LT",
+              "LV",
+              "IS",
+              "CH",
+              "FI",
+              "SE",
+              "NO",
+              "DK",
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "FO",
+              "FR",
+              "GE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "TR",
+              "UA",
+              "GB",
+              "XK",
+              "LU",
+              "DE"
+            ]
+          },
+          {
+            "variant_ids": [
+              110270,
+              110271
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1699
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1699
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              110270,
+              110271
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2499
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2499
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              110270,
+              110271
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2599
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2499
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

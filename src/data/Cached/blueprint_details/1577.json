@@ -1,0 +1,126 @@
+{
+  "blueprint": {
+    "id": 1577,
+    "title": "Sling Bag",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/698cce8a49c68a2ca60f4ce2",
+      "https://images.printify.com/698ce31649c5c730e2072152",
+      "https://images.printify.com/698ce32aae4cb895120e4812",
+      "https://images.printify.com/69832434b4766b3ef5013212",
+      "https://images.printify.com/6983243059a7b5e6f90ef2d2",
+      "https://images.printify.com/69832432dbd85afc530de952",
+      "https://images.printify.com/6983242d6cb6a93888020183"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 10,
+        "title": "MWW On Demand"
+      },
+      "variants": {
+        "id": 10,
+        "title": "MWW On Demand",
+        "variants": [
+          {
+            "id": 110376,
+            "title": "14.5\u0022 \u00D7 9\u0027\u0027",
+            "options": {
+              "size": "14.5\u0022 \u00D7 9\u0027\u0027"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 2100,
+                "width": 1065
+              },
+              {
+                "position": "front_bottom",
+                "decoration_method": "dye-sublimation",
+                "height": 441,
+                "width": 1143
+              },
+              {
+                "position": "front_pocket",
+                "decoration_method": "dye-sublimation",
+                "height": 908,
+                "width": 1275
+              },
+              {
+                "position": "front_pocket_flap",
+                "decoration_method": "dye-sublimation",
+                "height": 465,
+                "width": 1275
+              },
+              {
+                "position": "gusset",
+                "decoration_method": "dye-sublimation",
+                "height": 585,
+                "width": 4440
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              110376
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 649
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 299
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              110376
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1089
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 359
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              110376
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1199
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 379
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

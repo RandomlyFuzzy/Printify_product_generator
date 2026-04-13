@@ -1,0 +1,158 @@
+{
+  "blueprint": {
+    "id": 1661,
+    "title": "Wooden Hanging Sign",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/672218fa66245db2e7066874",
+      "https://images.printify.com/6724a23562a53c62d8073692",
+      "https://images.printify.com/672218cd899c084e6a075692",
+      "https://images.printify.com/672218d0df1c829f7100aaf2",
+      "https://images.printify.com/672218d466245db2e7066873",
+      "https://images.printify.com/672218f71697cc1a1b02c523",
+      "https://images.printify.com/672218db1697cc1a1b02c522",
+      "https://images.printify.com/6724a2387e9970ba0301d592",
+      "https://images.printify.com/6722193c782c5357a208a1b3",
+      "https://images.printify.com/6722193f1697cc1a1b02c524",
+      "https://images.printify.com/672219431697cc1a1b02c525",
+      "https://images.printify.com/672218d84bda358fe6075514"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 332,
+        "title": "Printdoors"
+      },
+      "variants": {
+        "id": 332,
+        "title": "Printdoors",
+        "variants": [
+          {
+            "id": 114826,
+            "title": "12\u0027\u0027 \u00D7 12\u0027\u0027 / Round",
+            "options": {
+              "size": "12\u0027\u0027 \u00D7 12\u0027\u0027",
+              "shape": "Round"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 2480,
+                "width": 2480
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              114826
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1229
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1099
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              114826
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 379
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "CN"
+            ]
+          },
+          {
+            "variant_ids": [
+              114826
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 909
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 779
+            },
+            "countries": [
+              "GB",
+              "FR",
+              "DE"
+            ]
+          },
+          {
+            "variant_ids": [
+              114826
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1189
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 489
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              114826
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1789
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1629
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              114826
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1059
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 809
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

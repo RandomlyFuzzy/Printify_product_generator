@@ -1,0 +1,292 @@
+{
+  "blueprint": {
+    "id": 1599,
+    "title": "Ceramic Ornaments, 2-Side Print",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/67af3084f37afede890d2fc2",
+      "https://images.printify.com/67aefab428db0f94f10e6944",
+      "https://images.printify.com/67aefab15250abf29a036862",
+      "https://images.printify.com/67aefab391530509bd0279b3"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 48,
+        "title": "Colorway"
+      },
+      "variants": {
+        "id": 48,
+        "title": "Colorway",
+        "variants": [
+          {
+            "id": 111546,
+            "title": "Circle / One size",
+            "options": {
+              "shape": "Circle",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 886,
+                "width": 886
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 886,
+                "width": 886
+              }
+            ]
+          },
+          {
+            "id": 111547,
+            "title": "Heart / One size",
+            "options": {
+              "shape": "Heart",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 886,
+                "width": 945
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 886,
+                "width": 945
+              }
+            ]
+          },
+          {
+            "id": 111548,
+            "title": "Oval / One size",
+            "options": {
+              "shape": "Oval",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1004,
+                "width": 720
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 1004,
+                "width": 720
+              }
+            ]
+          },
+          {
+            "id": 111549,
+            "title": "Star / One size",
+            "options": {
+              "shape": "Star",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 921,
+                "width": 961
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 921,
+                "width": 961
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              111546,
+              111547,
+              111548,
+              111549
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1619
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1419
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              111546,
+              111547,
+              111548,
+              111549
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1569
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1369
+            },
+            "countries": [
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "DK",
+              "EE",
+              "FO",
+              "FI",
+              "FR",
+              "GE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IS",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "LV",
+              "LI",
+              "LT",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NO",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "SE",
+              "CH",
+              "TR",
+              "UA",
+              "XK"
+            ]
+          },
+          {
+            "variant_ids": [
+              111546,
+              111547,
+              111548,
+              111549
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1699
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1499
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              111546,
+              111547,
+              111548,
+              111549
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 569
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 69
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              111546,
+              111547,
+              111548,
+              111549
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 389
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 99
+            },
+            "countries": [
+              "GB"
+            ]
+          },
+          {
+            "variant_ids": [
+              111546,
+              111547,
+              111548,
+              111549
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1059
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 859
+            },
+            "countries": [
+              "AU"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

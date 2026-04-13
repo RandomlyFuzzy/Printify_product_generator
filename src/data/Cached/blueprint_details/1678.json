@@ -1,0 +1,124 @@
+{
+  "blueprint": {
+    "id": 1678,
+    "title": "Pet Tags",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/69ce3f3b3af90b9deb047ec2",
+      "https://images.printify.com/69ce573070a925cdc604cd80",
+      "https://images.printify.com/69c655a25af9128fad0f68d0",
+      "https://images.printify.com/69c6559444cc70d9570f7c20",
+      "https://images.printify.com/69945bdcedad21c54701ff72",
+      "https://images.printify.com/69945cc3d46fc8b09c0e46f3",
+      "https://images.printify.com/69934f75444daf91f2049fe2"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 228,
+        "title": "Taylor"
+      },
+      "variants": {
+        "id": 228,
+        "title": "Taylor",
+        "variants": [
+          {
+            "id": 115596,
+            "title": "Bone / One size / White",
+            "options": {
+              "shape": "Bone",
+              "size": "One size",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 450,
+                "width": 559
+              }
+            ]
+          },
+          {
+            "id": 115597,
+            "title": "Circle / One size / White",
+            "options": {
+              "shape": "Circle",
+              "size": "One size",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 523,
+                "width": 448
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              115596,
+              115597
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 549
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 99
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              115596,
+              115597
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1159
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              115596,
+              115597
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1089
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 129
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

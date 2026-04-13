@@ -1,0 +1,215 @@
+{
+  "blueprint": {
+    "id": 1051,
+    "title": "Snuggle Blanket",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d884798fc7c91985051317",
+      "https://images.printify.com/66d8847696efd368a6086b7d",
+      "https://images.printify.com/62e7b29bbd36e517af0b2a44",
+      "https://images.printify.com/62e79bde312c3786750d4934",
+      "https://images.printify.com/62de94b2586b563f1e0fc42a",
+      "https://images.printify.com/62de95f2ae3f2dcbf10543b3",
+      "https://images.printify.com/630c9fea1e756de904048b07",
+      "https://images.printify.com/63072a7065fa2f5a270b9c33"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 83,
+        "title": "Subliminator"
+      },
+      "variants": {
+        "id": 83,
+        "title": "Subliminator",
+        "variants": [
+          {
+            "id": 91883,
+            "title": "80\u0022 \u00D7 55\u0022 / Microfiber Fleece",
+            "options": {
+              "size": "80\u0022 \u00D7 55\u0022",
+              "material": "Microfiber Fleece"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 8250,
+                "width": 12000
+              }
+            ]
+          },
+          {
+            "id": 92068,
+            "title": "80\u0022 \u00D7 55\u0022 / Sherpa",
+            "options": {
+              "size": "80\u0022 \u00D7 55\u0022",
+              "material": "Sherpa"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 8250,
+                "width": 12000
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              91883,
+              92068
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 4999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 4879
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              91883,
+              92068
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2689
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2559
+            },
+            "countries": [
+              "AU",
+              "NZ"
+            ]
+          },
+          {
+            "variant_ids": [
+              91883,
+              92068
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2699
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              91883,
+              92068
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 5629
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 5499
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              91883,
+              92068
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2629
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2499
+            },
+            "countries": [
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "DK",
+              "EE",
+              "FO",
+              "FI",
+              "FR",
+              "GE",
+              "DE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IS",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "LV",
+              "LI",
+              "LT",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "NO",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "SE",
+              "CH",
+              "TR",
+              "UA",
+              "GB",
+              "XK"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

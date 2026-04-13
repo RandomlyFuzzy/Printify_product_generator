@@ -1,0 +1,106 @@
+{
+  "blueprint": {
+    "id": 1003,
+    "title": "Tea Towels (cotton, poly)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d56c2f643935b0eb058e22",
+      "https://images.printify.com/66d56c2eb50f08a40704abb2",
+      "https://images.printify.com/627cbedaca6bf1a82407b163",
+      "https://images.printify.com/627cbef5674f7569510c55f7",
+      "https://images.printify.com/624a927b3436879dca0297bc",
+      "https://images.printify.com/624a927d3436879dca0297c1",
+      "https://images.printify.com/673205b9d7599a43340b4bc2"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 10,
+        "title": "MWW On Demand"
+      },
+      "variants": {
+        "id": 10,
+        "title": "MWW On Demand",
+        "variants": [
+          {
+            "id": 79428,
+            "title": "Cotton Twill / 18\u0022 \u00D7 30\u0022",
+            "options": {
+              "material": "Cotton Twill",
+              "size": "18\u0022 \u00D7 30\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 4800,
+                "width": 3000
+              }
+            ]
+          },
+          {
+            "id": 79429,
+            "title": "Polyester / 18\u0022 \u00D7 30\u0022",
+            "options": {
+              "material": "Polyester",
+              "size": "18\u0022 \u00D7 30\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 4800,
+                "width": 3000
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              79428,
+              79429
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1119
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 359
+            },
+            "countries": [
+              "CA",
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              79428,
+              79429
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 539
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 259
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

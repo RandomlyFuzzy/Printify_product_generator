@@ -1,0 +1,200 @@
+{
+  "blueprint": {
+    "id": 806,
+    "title": "Round Stickers, Indoor\\Outdoor",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66ed349b5af6cf161d0e9a52",
+      "https://images.printify.com/66d709722f58081e200711ee",
+      "https://images.printify.com/67335ef018b95caaf30a6642"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 77,
+        "title": "SunFrog Solutions"
+      },
+      "variants": {
+        "id": 77,
+        "title": "SunFrog Solutions",
+        "variants": [
+          {
+            "id": 75125,
+            "title": "2\u0022 \u00D7 2\u0022 / Round / White",
+            "options": {
+              "size": "2\u0022 \u00D7 2\u0022",
+              "shape": "Round",
+              "surface": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 529,
+                "width": 529
+              }
+            ]
+          },
+          {
+            "id": 75127,
+            "title": "3\u0022 \u00D7 3\u0022 / Round / White",
+            "options": {
+              "size": "3\u0022 \u00D7 3\u0022",
+              "shape": "Round",
+              "surface": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 817,
+                "width": 817
+              }
+            ]
+          },
+          {
+            "id": 75129,
+            "title": "4\u0022 \u00D7 4\u0022 / Round / White",
+            "options": {
+              "size": "4\u0022 \u00D7 4\u0022",
+              "shape": "Round",
+              "surface": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1106,
+                "width": 1106
+              }
+            ]
+          },
+          {
+            "id": 75131,
+            "title": "5\u0022 \u00D7 5\u0022 / Round / White",
+            "options": {
+              "size": "5\u0022 \u00D7 5\u0022",
+              "shape": "Round",
+              "surface": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1394,
+                "width": 1394
+              }
+            ]
+          },
+          {
+            "id": 75133,
+            "title": "6\u0022 \u00D7 6\u0022 / Round / White",
+            "options": {
+              "size": "6\u0022 \u00D7 6\u0022",
+              "shape": "Round",
+              "surface": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1682,
+                "width": 1682
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              75125,
+              75127,
+              75129,
+              75131,
+              75133
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 459
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 9
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              75125,
+              75127,
+              75129,
+              75131,
+              75133
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 479
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 19
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              75125,
+              75127,
+              75129,
+              75131,
+              75133
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 919
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 49
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              75125,
+              75127,
+              75129,
+              75131,
+              75133
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1159
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 59
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

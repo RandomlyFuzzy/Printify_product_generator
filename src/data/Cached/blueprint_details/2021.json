@@ -1,0 +1,212 @@
+{
+  "blueprint": {
+    "id": 2021,
+    "title": "Beach Holographic Tote Bag",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/687ddff86af52be741081242",
+      "https://images.printify.com/6891d38c6376b75c6b0e8062",
+      "https://images.printify.com/6878c4ef7077a6f33305e65d",
+      "https://images.printify.com/6878c4e5b510a1ac450603e6",
+      "https://images.printify.com/6878c4ea3a27543c4a0eeaf4"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 90,
+        "title": "Smart Printee"
+      },
+      "variants": {
+        "id": 90,
+        "title": "Smart Printee",
+        "variants": [
+          {
+            "id": 122937,
+            "title": "15.9\u0022 x 12\u0022 x 3.9\u0022 / Holographic",
+            "options": {
+              "size": "15.9\u0022 x 12\u0022 x 3.9\u0022",
+              "color": "Holographic"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 2172,
+                "width": 3229
+              },
+              {
+                "position": "back",
+                "decoration_method": "uv",
+                "height": 2172,
+                "width": 3229
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              122937
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1239
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 989
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              122937
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 989
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 739
+            },
+            "countries": [
+              "GB"
+            ]
+          },
+          {
+            "variant_ids": [
+              122937
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1729
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1359
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              122937
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1109
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 869
+            },
+            "countries": [
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "DK",
+              "EE",
+              "FO",
+              "FI",
+              "FR",
+              "GE",
+              "DE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IS",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "LV",
+              "LI",
+              "LT",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "NO",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "SE",
+              "CH",
+              "TR",
+              "UA",
+              "GB",
+              "XK"
+            ]
+          },
+          {
+            "variant_ids": [
+              122937
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1479
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1239
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              122937
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1609
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1359
+            },
+            "countries": [
+              "AU"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

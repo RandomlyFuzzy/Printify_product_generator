@@ -1,0 +1,107 @@
+{
+  "blueprint": {
+    "id": 808,
+    "title": "Slim Can Cooler",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66cd9129b51af994a50a0e72",
+      "https://images.printify.com/66cd91288f764bedbc0d0622",
+      "https://images.printify.com/619b86638fae281f0e3b02ce",
+      "https://images.printify.com/61929cfb15f0870f8445b39f",
+      "https://images.printify.com/61929e4addfe326c49296181"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 70,
+        "title": "Printed Mint"
+      },
+      "variants": {
+        "id": 70,
+        "title": "Printed Mint",
+        "variants": [
+          {
+            "id": 75186,
+            "title": "One size / White",
+            "options": {
+              "size": "One size",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 2175,
+                "width": 1275
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 2175,
+                "width": 1275
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              75186
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1019
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              75186
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 219
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              75186
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 559
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 99
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "blueprint": {
+    "id": 357,
+    "title": "Accessory Pouch w T-bottom",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66c5d88f752f380bad0e3423",
+      "https://images.printify.com/66c5d892752f380bad0e3424",
+      "https://images.printify.com/5ecf9bb4790e0f3fd6712e0d",
+      "https://images.printify.com/6900b1f0f70c1130750ecba2"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 10,
+        "title": "MWW On Demand"
+      },
+      "variants": {
+        "id": 10,
+        "title": "MWW On Demand",
+        "variants": [
+          {
+            "id": 44526,
+            "title": "Large / Black zipper",
+            "options": {
+              "size": "Large",
+              "color": "Black zipper"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 2850,
+                "width": 2100
+              }
+            ]
+          },
+          {
+            "id": 44527,
+            "title": "Large / White zipper",
+            "options": {
+              "size": "Large",
+              "color": "White zipper"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 2850,
+                "width": 2100
+              }
+            ]
+          },
+          {
+            "id": 44528,
+            "title": "Small / Black zipper",
+            "options": {
+              "size": "Small",
+              "color": "Black zipper"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1950,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 44529,
+            "title": "Small / White zipper",
+            "options": {
+              "size": "Small",
+              "color": "White zipper"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1950,
+                "width": 1500
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              44526,
+              44527,
+              44528,
+              44529
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 479
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 169
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              44526,
+              44527,
+              44528,
+              44529
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1119
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 359
+            },
+            "countries": [
+              "REST_OF_THE_WORLD",
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              44526,
+              44527,
+              44528,
+              44529
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 509
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -25,7 +25,7 @@ if (string.IsNullOrWhiteSpace(token))
 // ── Clients ────────────────────────────────────────────────────────────────────
 PrintifyClient printify = new PrintifyClient(token);
 // OllamaClient   ollama   = new OllamaClient("http://192.168.0.151:11434");
-OllamaClient   ollama   = new OllamaClient();//"http://192.168.0.151:11434");
+OllamaClient   ollama   = new OllamaClient();//"http://192.168.0.131:11434");
 
 // ── Auto-resolve shop ID ───────────────────────────────────────────────────────
 Console.WriteLine("Fetching shop list from Printify...");
@@ -44,7 +44,7 @@ var generator = new MockupGenerator(
     ollama:       ollama,
     shopId:       shopId,
     dataBasePath: "./src/data",
-    visionModel:  "moondream:latest");
+    visionModel:  "gemma4:e2b");
 
 // ── Collect candidate images from phase_3 results ─────────────────────────────
 const string checkingPath = "./src/data/Checking";
@@ -99,19 +99,21 @@ int success = 0, failed = 0;
 foreach (var (imagePath, idx) in imagePaths.Select((p, i) => (p, i)))
 {
     Console.WriteLine($"[{idx + 1}/{imagePaths.Count}] {imagePath}");
-    var result = await generator.ProcessImageAsync(imagePath);
-
-    if (result.Success)
+    
+    await foreach (var result in generator.ProcessImageAsync(imagePath))
     {
-        Console.WriteLine($"  ✓ Draft created – product ID: {result.Draft!.ProductId}");
-        Console.WriteLine($"  Blueprint: {result.Draft.BlueprintTitle}");
-        Console.WriteLine($"  Reason:    {result.Draft.LlmReason}");
-        success++;
-    }
-    else
-    {
-        Console.Error.WriteLine($"  ✗ Failed: {result.Error}");
-        failed++;
+        if (result.Success)
+        {
+            Console.WriteLine($"  ✓ Draft created – product ID: {result.Draft!.ProductId}");
+            Console.WriteLine($"  Blueprint: {result.Draft.BlueprintTitle}");
+            Console.WriteLine($"  Reason:    {result.Draft.LlmReason}");
+            success++;
+        }
+        else
+        {
+            Console.Error.WriteLine($"  ✗ Failed: {result.Error}");
+            failed++;
+        }
     }
 
     Console.WriteLine();

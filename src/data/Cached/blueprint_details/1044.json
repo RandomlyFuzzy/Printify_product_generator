@@ -1,0 +1,228 @@
+{
+  "blueprint": {
+    "id": 1044,
+    "title": "Velveteen Microfiber Blanket",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d5ada8d1a8f93c4f002213",
+      "https://images.printify.com/66d5ada918437d4b8e043a95",
+      "https://images.printify.com/6295ae1a6e7c3fc1030d8e7b",
+      "https://images.printify.com/6294a6c73377fa9209055e27",
+      "https://images.printify.com/6294ab6fe21b0cf993039695",
+      "https://images.printify.com/6299a76e0fc2ae902302fb2f",
+      "https://images.printify.com/6299a85d2117059dd109dcac"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 92,
+        "title": "Pic the Gift"
+      },
+      "variants": {
+        "id": 92,
+        "title": "Pic the Gift",
+        "variants": [
+          {
+            "id": 80251,
+            "title": "40\u0022 \u00D7 30\u0022",
+            "options": {
+              "size": "40\u0022 \u00D7 30\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 8400,
+                "width": 6400
+              }
+            ]
+          },
+          {
+            "id": 80252,
+            "title": "60\u0022 \u00D7 50\u0022",
+            "options": {
+              "size": "60\u0022 \u00D7 50\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 12600,
+                "width": 10800
+              }
+            ]
+          },
+          {
+            "id": 80253,
+            "title": "80\u0022 \u00D7 60\u0022",
+            "options": {
+              "size": "80\u0022 \u00D7 60\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 17200,
+                "width": 12700
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              80253
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1199
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 629
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              80253
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2399
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1209
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              80252
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              80253
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 3269
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1569
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              80252
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1709
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 879
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              80252
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2359
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 799
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              80251
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1309
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 459
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              80251
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 729
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 559
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              80251
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1419
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

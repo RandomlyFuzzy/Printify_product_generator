@@ -1,0 +1,100 @@
+{
+  "blueprint": {
+    "id": 1204,
+    "title": "Metal License Plate Frame",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d0978b9e7c2657030ef718",
+      "https://images.printify.com/66d097849e7c2657030ef717",
+      "https://images.printify.com/67ef8e870c5eddf67d0e85a5",
+      "https://images.printify.com/630f37d5f37745efac03b4a8"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 92,
+        "title": "Pic the Gift"
+      },
+      "variants": {
+        "id": 92,
+        "title": "Pic the Gift",
+        "variants": [
+          {
+            "id": 92296,
+            "title": "12.3\u0022 x 6.5\u0022 / Glossy",
+            "options": {
+              "size": "12.3\u0022 x 6.5\u0022",
+              "finish": "Glossy"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 2005,
+                "width": 3726
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              92296
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1229
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 429
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              92296
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1139
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 279
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              92296
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 729
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 119
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

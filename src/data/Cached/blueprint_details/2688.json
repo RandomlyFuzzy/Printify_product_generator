@@ -1,0 +1,155 @@
+{
+  "blueprint": {
+    "id": 2688,
+    "title": "Woven-Style Coverlet",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/69bbd2268e93b01296088ae0",
+      "https://images.printify.com/69bbd222eac5c951670b2831",
+      "https://images.printify.com/69bc01fc49471f2773055bf0",
+      "https://images.printify.com/69bbd229e45da1c3fb037fb2",
+      "https://images.printify.com/69bbd2272d997e5ace00e210",
+      "https://images.printify.com/69bbd22335ae2dc53e0d69b0"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 10,
+        "title": "MWW On Demand"
+      },
+      "variants": {
+        "id": 10,
+        "title": "MWW On Demand",
+        "variants": [
+          {
+            "id": 148306,
+            "title": "104\u2033 x 88\u2033 (King)",
+            "options": {
+              "size": "104\u2033 x 88\u2033 (King)"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 9024,
+                "width": 10944
+              }
+            ]
+          },
+          {
+            "id": 148307,
+            "title": "88\u2033 x 88\u2033 (Queen)",
+            "options": {
+              "size": "88\u2033 x 88\u2033 (Queen)"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 9024,
+                "width": 9408
+              }
+            ]
+          },
+          {
+            "id": 148308,
+            "title": "68\u2033 x 88\u2033 (Twin)",
+            "options": {
+              "size": "68\u2033 x 88\u2033 (Twin)"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 9024,
+                "width": 7488
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              148306,
+              148307,
+              148308
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1279
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              148306,
+              148307,
+              148308
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              148306,
+              148307,
+              148308
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1699
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 819
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              148306,
+              148307,
+              148308
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1599
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1179
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

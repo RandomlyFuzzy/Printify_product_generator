@@ -1,0 +1,188 @@
+{
+  "blueprint": {
+    "id": 1000,
+    "title": "Large Fanny Pack",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d88e020edb6d20f105be54",
+      "https://images.printify.com/66d88e006d380c49040e5864",
+      "https://images.printify.com/62a2f9403c8265926a0383eb",
+      "https://images.printify.com/62a2f9433c8265926a0383ee",
+      "https://images.printify.com/627bb61117206d897f0ac6fa",
+      "https://images.printify.com/62a2f929fa4e7ff17f06d3e5",
+      "https://images.printify.com/62a2fa03fa4e7ff17f06d3f4",
+      "https://images.printify.com/62a2f935fa4e7ff17f06d3e8",
+      "https://images.printify.com/62a2f9327439d713ac0bb895",
+      "https://images.printify.com/62a2f939fa4e7ff17f06d3eb"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 90,
+        "title": "Smart Printee"
+      },
+      "variants": {
+        "id": 90,
+        "title": "Smart Printee",
+        "variants": [
+          {
+            "id": 79393,
+            "title": "8\u0022 \u00D7 9\u0022 \u00D7 4\u0027\u0027",
+            "options": {
+              "size": "8\u0022 \u00D7 9\u0022 \u00D7 4\u0027\u0027"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 795,
+                "width": 2390
+              },
+              {
+                "position": "front_pocket_flap",
+                "decoration_method": "dye-sublimation",
+                "height": 363,
+                "width": 2759
+              },
+              {
+                "position": "front_pocket",
+                "decoration_method": "dye-sublimation",
+                "height": 895,
+                "width": 2795
+              },
+              {
+                "position": "right_side",
+                "decoration_method": "dye-sublimation",
+                "height": 727,
+                "width": 503
+              },
+              {
+                "position": "left_side",
+                "decoration_method": "dye-sublimation",
+                "height": 727,
+                "width": 503
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              79393
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 619
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 619
+            },
+            "countries": [
+              "GB",
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "DK",
+              "EE",
+              "FO",
+              "FI",
+              "FR",
+              "GE",
+              "DE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IS",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "LV",
+              "LI",
+              "LT",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "NO",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "SE",
+              "CH",
+              "TR",
+              "UA",
+              "XK"
+            ]
+          },
+          {
+            "variant_ids": [
+              79393
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 989
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 989
+            },
+            "countries": [
+              "CA",
+              "AU",
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              79393
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 629
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

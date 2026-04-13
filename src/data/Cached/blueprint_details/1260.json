@@ -1,0 +1,183 @@
+{
+  "blueprint": {
+    "id": 1260,
+    "title": "Kids Lounge Pants (AOP)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d0569202517c1b600a9014",
+      "https://images.printify.com/66d05690e23e05e0870defc3",
+      "https://images.printify.com/638787699036608fd102913d",
+      "https://images.printify.com/638787c54593e4aba003e854",
+      "https://images.printify.com/638787c94593e4aba003e857",
+      "https://images.printify.com/638e25bd0914e2ceff0ab1de",
+      "https://images.printify.com/638e24c00914e2ceff0ab1db",
+      "https://images.printify.com/639ca0960169dae77203bddd"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 47,
+        "title": "Miami Sublimation"
+      },
+      "variants": {
+        "id": 47,
+        "title": "Miami Sublimation",
+        "variants": [
+          {
+            "id": 95117,
+            "title": "XS",
+            "options": {
+              "size": "XS"
+            },
+            "placeholders": [
+              {
+                "position": "right_leg",
+                "decoration_method": "aop",
+                "height": 4429,
+                "width": 2913
+              },
+              {
+                "position": "left_leg",
+                "decoration_method": "aop",
+                "height": 4429,
+                "width": 2913
+              }
+            ]
+          },
+          {
+            "id": 95118,
+            "title": "S",
+            "options": {
+              "size": "S"
+            },
+            "placeholders": [
+              {
+                "position": "right_leg",
+                "decoration_method": "aop",
+                "height": 5433,
+                "width": 3574
+              },
+              {
+                "position": "left_leg",
+                "decoration_method": "aop",
+                "height": 5433,
+                "width": 3574
+              }
+            ]
+          },
+          {
+            "id": 95119,
+            "title": "M",
+            "options": {
+              "size": "M"
+            },
+            "placeholders": [
+              {
+                "position": "right_leg",
+                "decoration_method": "aop",
+                "height": 6102,
+                "width": 4013
+              },
+              {
+                "position": "left_leg",
+                "decoration_method": "aop",
+                "height": 6102,
+                "width": 4013
+              }
+            ]
+          },
+          {
+            "id": 95120,
+            "title": "L",
+            "options": {
+              "size": "L"
+            },
+            "placeholders": [
+              {
+                "position": "right_leg",
+                "decoration_method": "aop",
+                "height": 6547,
+                "width": 4306
+              },
+              {
+                "position": "left_leg",
+                "decoration_method": "aop",
+                "height": 6547,
+                "width": 4306
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              95117,
+              95118,
+              95119,
+              95120
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 609
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              95117,
+              95118,
+              95119,
+              95120
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 599
+            },
+            "countries": [
+              "NZ",
+              "AU",
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              95117,
+              95118,
+              95119,
+              95120
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1699
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

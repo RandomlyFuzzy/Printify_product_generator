@@ -1,0 +1,195 @@
+{
+  "blueprint": {
+    "id": 538,
+    "title": "Spun Polyester Lumbar Pillow",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d6e136182360b15c04fa32",
+      "https://images.printify.com/66d6e13487fa4f8f200877c2",
+      "https://images.printify.com/5f89ac66e8c7e4728f226026",
+      "https://images.printify.com/5f902fea41143812480588a3",
+      "https://images.printify.com/5fbb7800fcee15091e68ee77"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 10,
+        "title": "MWW On Demand"
+      },
+      "variants": {
+        "id": 10,
+        "title": "MWW On Demand",
+        "variants": [
+          {
+            "id": 69371,
+            "title": "20\u0022 \u00D7 14\u0022",
+            "options": {
+              "size": "20\u0022 \u00D7 14\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 2325,
+                "width": 3225
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 2325,
+                "width": 3225
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              69371
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 979
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 949
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              69371
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1329
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 569
+            },
+            "countries": [
+              "EE",
+              "LI",
+              "LT",
+              "LV",
+              "IS",
+              "CH",
+              "FI",
+              "SE",
+              "NO",
+              "DK",
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "FO",
+              "FR",
+              "GE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "TR",
+              "UA",
+              "GB",
+              "XK",
+              "LU",
+              "DE"
+            ]
+          },
+          {
+            "variant_ids": [
+              69371
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1159
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1159
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              69371
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1549
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 839
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              69371
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1339
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 839
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

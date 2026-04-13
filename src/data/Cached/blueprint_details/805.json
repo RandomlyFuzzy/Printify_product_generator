@@ -1,0 +1,138 @@
+{
+  "blueprint": {
+    "id": 805,
+    "title": "Scented Soy Candles, 13.75oz",
+    "brand": "Candle Builders",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d708817c26ffab64034412",
+      "https://images.printify.com/66d708827c26ffab64034413",
+      "https://images.printify.com/676ad4847b520917ce091f73"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 91,
+        "title": "Candle Builders"
+      },
+      "variants": {
+        "id": 91,
+        "title": "Candle Builders",
+        "variants": [
+          {
+            "id": 76262,
+            "title": "Comfort Spice / 13.75oz",
+            "options": {
+              "scent": "Comfort Spice",
+              "size": "13.75oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 1125,
+                "width": 900
+              }
+            ]
+          },
+          {
+            "id": 76263,
+            "title": "Sea Breeze / 13.75oz",
+            "options": {
+              "scent": "Sea Breeze",
+              "size": "13.75oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 1125,
+                "width": 900
+              }
+            ]
+          },
+          {
+            "id": 76264,
+            "title": "Vanilla Bean / 13.75oz",
+            "options": {
+              "scent": "Vanilla Bean",
+              "size": "13.75oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 1125,
+                "width": 900
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              76262,
+              76263,
+              76264
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2669
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1439
+            },
+            "countries": [
+              "REST_OF_THE_WORLD",
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              76262,
+              76263,
+              76264
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1859
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1029
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              76262,
+              76263,
+              76264
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 339
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "blueprint": {
+    "id": 5442,
+    "title": "Diamond Quilt Blanket (Embroidery)",
+    "brand": "TravisMathew",
+    "model": "TMA41481",
+    "images": [
+      "https://images.printify.com/69c515adfbdb88e2df0394c0",
+      "https://images.printify.com/69c515af437c7c6268019282",
+      "https://images.printify.com/69c515b1824a14616306bf72"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 217,
+        "title": "Fulfill Engine"
+      },
+      "variants": {
+        "id": 217,
+        "title": "Fulfill Engine",
+        "variants": [
+          {
+            "id": 246811,
+            "title": "Dark Grey Heather / One size",
+            "options": {
+              "color": "Dark Grey Heather",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "bottom_left",
+                "decoration_method": "embroidery",
+                "height": 1800,
+                "width": 1800
+              },
+              {
+                "position": "bottom_center",
+                "decoration_method": "embroidery",
+                "height": 1800,
+                "width": 1800
+              },
+              {
+                "position": "bottom_right",
+                "decoration_method": "embroidery",
+                "height": 1800,
+                "width": 1800
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              246811
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 829
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 269
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1599
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1369
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 819
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

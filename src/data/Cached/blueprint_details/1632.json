@@ -1,0 +1,237 @@
+{
+  "blueprint": {
+    "id": 1632,
+    "title": "Ceramic Decoration Ornament, (1pc)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/681c89174b97c177ab09e3c3",
+      "https://images.printify.com/68259439a7687098650fd2d2",
+      "https://images.printify.com/6904d6f324454e0ba60f8405",
+      "https://images.printify.com/6904d6f75d1a81530c0255a2",
+      "https://images.printify.com/681c89017e165e393c060a42",
+      "https://images.printify.com/681c88fe4b97c177ab09e3c2",
+      "https://images.printify.com/6900b0b1f9cc698a250419d2",
+      "https://images.printify.com/69c64aa6913946de2b01df65",
+      "https://images.printify.com/69c64aa8f3afbda1cf05ddd0"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 39,
+        "title": "SwiftPOD"
+      },
+      "variants": {
+        "id": 39,
+        "title": "SwiftPOD",
+        "variants": [
+          {
+            "id": 112959,
+            "title": "Round / One size",
+            "options": {
+              "shape": "Round",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 900,
+                "width": 900
+              },
+              {
+                "position": "back",
+                "decoration_method": "uv",
+                "height": 900,
+                "width": 900
+              }
+            ]
+          },
+          {
+            "id": 148368,
+            "title": "Heart / One size",
+            "options": {
+              "shape": "Heart",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 908,
+                "width": 962
+              },
+              {
+                "position": "back",
+                "decoration_method": "uv",
+                "height": 908,
+                "width": 962
+              }
+            ]
+          },
+          {
+            "id": 244845,
+            "title": "Heart \u002B White Gift Packaging / One size",
+            "options": {
+              "shape": "Heart \u002B White Gift Packaging",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 908,
+                "width": 962
+              },
+              {
+                "position": "back",
+                "decoration_method": "uv",
+                "height": 908,
+                "width": 962
+              }
+            ]
+          },
+          {
+            "id": 244846,
+            "title": "Round \u002B White Gift Packaging / One size",
+            "options": {
+              "shape": "Round \u002B White Gift Packaging",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 900,
+                "width": 900
+              },
+              {
+                "position": "back",
+                "decoration_method": "uv",
+                "height": 900,
+                "width": 900
+              }
+            ]
+          },
+          {
+            "id": 244847,
+            "title": "Heart \u002B Gold Gift Packaging / One size",
+            "options": {
+              "shape": "Heart \u002B Gold Gift Packaging",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 908,
+                "width": 962
+              },
+              {
+                "position": "back",
+                "decoration_method": "uv",
+                "height": 908,
+                "width": 962
+              }
+            ]
+          },
+          {
+            "id": 244848,
+            "title": "Round \u002B Gold Gift Packaging / One size",
+            "options": {
+              "shape": "Round \u002B Gold Gift Packaging",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 900,
+                "width": 900
+              },
+              {
+                "position": "back",
+                "decoration_method": "uv",
+                "height": 900,
+                "width": 900
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              112959,
+              148368,
+              244845,
+              244846,
+              244847,
+              244848
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 459
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 49
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              112959,
+              148368,
+              244845,
+              244846,
+              244847,
+              244848
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 569
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 69
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              112959,
+              148368,
+              244845,
+              244846,
+              244847,
+              244848
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 949
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "REST_OF_THE_WORLD",
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

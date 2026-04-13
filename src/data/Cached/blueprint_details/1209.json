@@ -1,0 +1,391 @@
+{
+  "blueprint": {
+    "id": 1209,
+    "title": "Unisex Basketball Jersey (AOP)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d094f8419dfc905a065db3",
+      "https://images.printify.com/66d094f1419dfc905a065db2",
+      "https://images.printify.com/66dea9b09a233f8daa02de02",
+      "https://images.printify.com/6314a4e30490dc6d7e00f7f9",
+      "https://images.printify.com/632497e2da04f885fd05a657",
+      "https://images.printify.com/6314a4e2e587ab9bed09b1b3",
+      "https://images.printify.com/6314a4e5e587ab9bed09b1b6",
+      "https://images.printify.com/6310bb017b5cb674bb02538f",
+      "https://images.printify.com/6310bb0006bc2f3f91096b09",
+      "https://images.printify.com/6310baff06bc2f3f91096b03"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 83,
+        "title": "Subliminator"
+      },
+      "variants": {
+        "id": 83,
+        "title": "Subliminator",
+        "variants": [
+          {
+            "id": 92054,
+            "title": "XS / Black rib",
+            "options": {
+              "size": "XS",
+              "color": "Black rib"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "aop",
+                "height": 6000,
+                "width": 6000
+              },
+              {
+                "position": "back",
+                "decoration_method": "aop",
+                "height": 6000,
+                "width": 6000
+              }
+            ]
+          },
+          {
+            "id": 92055,
+            "title": "S / Black rib",
+            "options": {
+              "size": "S",
+              "color": "Black rib"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "aop",
+                "height": 6000,
+                "width": 6000
+              },
+              {
+                "position": "back",
+                "decoration_method": "aop",
+                "height": 6000,
+                "width": 6000
+              }
+            ]
+          },
+          {
+            "id": 92056,
+            "title": "M / Black rib",
+            "options": {
+              "size": "M",
+              "color": "Black rib"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "aop",
+                "height": 6000,
+                "width": 6000
+              },
+              {
+                "position": "back",
+                "decoration_method": "aop",
+                "height": 6000,
+                "width": 6000
+              }
+            ]
+          },
+          {
+            "id": 92057,
+            "title": "L / Black rib",
+            "options": {
+              "size": "L",
+              "color": "Black rib"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "aop",
+                "height": 6000,
+                "width": 6000
+              },
+              {
+                "position": "back",
+                "decoration_method": "aop",
+                "height": 6000,
+                "width": 6000
+              }
+            ]
+          },
+          {
+            "id": 92058,
+            "title": "XL / Black rib",
+            "options": {
+              "size": "XL",
+              "color": "Black rib"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "aop",
+                "height": 6000,
+                "width": 6000
+              },
+              {
+                "position": "back",
+                "decoration_method": "aop",
+                "height": 6000,
+                "width": 6000
+              }
+            ]
+          },
+          {
+            "id": 92059,
+            "title": "2XL / Black rib",
+            "options": {
+              "size": "2XL",
+              "color": "Black rib"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "aop",
+                "height": 6000,
+                "width": 6000
+              },
+              {
+                "position": "back",
+                "decoration_method": "aop",
+                "height": 6000,
+                "width": 6000
+              }
+            ]
+          },
+          {
+            "id": 92060,
+            "title": "3XL / Black rib",
+            "options": {
+              "size": "3XL",
+              "color": "Black rib"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "aop",
+                "height": 6000,
+                "width": 6000
+              },
+              {
+                "position": "back",
+                "decoration_method": "aop",
+                "height": 6000,
+                "width": 6000
+              }
+            ]
+          },
+          {
+            "id": 92061,
+            "title": "4XL / Black rib",
+            "options": {
+              "size": "4XL",
+              "color": "Black rib"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "aop",
+                "height": 6000,
+                "width": 6000
+              },
+              {
+                "position": "back",
+                "decoration_method": "aop",
+                "height": 6000,
+                "width": 6000
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              92054,
+              92055,
+              92056,
+              92057,
+              92058,
+              92059,
+              92060,
+              92061
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1629
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1559
+            },
+            "countries": [
+              "AU",
+              "NZ"
+            ]
+          },
+          {
+            "variant_ids": [
+              92054,
+              92055,
+              92056,
+              92057,
+              92058,
+              92059,
+              92060,
+              92061
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1899
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              92054,
+              92055,
+              92056,
+              92057,
+              92058,
+              92059,
+              92060,
+              92061
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2189
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2059
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              92054,
+              92055,
+              92056,
+              92057,
+              92058,
+              92059,
+              92060,
+              92061
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1569
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1499
+            },
+            "countries": [
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "DK",
+              "EE",
+              "FO",
+              "FI",
+              "FR",
+              "GE",
+              "DE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IS",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "LV",
+              "LI",
+              "LT",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "NO",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "SE",
+              "CH",
+              "TR",
+              "UA",
+              "GB",
+              "XK"
+            ]
+          },
+          {
+            "variant_ids": [
+              92054,
+              92055,
+              92056,
+              92057,
+              92058,
+              92059,
+              92060,
+              92061
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2569
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2429
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

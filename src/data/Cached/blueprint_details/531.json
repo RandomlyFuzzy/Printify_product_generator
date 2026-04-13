@@ -1,0 +1,198 @@
+{
+  "blueprint": {
+    "id": 531,
+    "title": "Ceramic Ornament, 4 Shapes",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66dadb61a9991ba7c400ab41",
+      "https://images.printify.com/66d5d140d3333ecfb30f1a96",
+      "https://images.printify.com/65575ff0c7b047a5330ddc26",
+      "https://images.printify.com/66dadc2eea9614ca90052642",
+      "https://images.printify.com/6900b4a7c97de0b578067c92"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 59,
+        "title": "Imagine Your Photos"
+      },
+      "variants": {
+        "id": 59,
+        "title": "Imagine Your Photos",
+        "variants": [
+          {
+            "id": 68983,
+            "title": "Star / One Size",
+            "options": {
+              "shape": "Star",
+              "size": "One Size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 996,
+                "width": 1043
+              }
+            ]
+          },
+          {
+            "id": 69370,
+            "title": "Circle / One Size",
+            "options": {
+              "shape": "Circle",
+              "size": "One Size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 954,
+                "width": 954
+              }
+            ]
+          },
+          {
+            "id": 74403,
+            "title": "Heart / One Size",
+            "options": {
+              "shape": "Heart",
+              "size": "One Size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 972,
+                "width": 978
+              }
+            ]
+          },
+          {
+            "id": 74404,
+            "title": "Snowflake / One Size",
+            "options": {
+              "shape": "Snowflake",
+              "size": "One Size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 960,
+                "width": 866
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              68983,
+              69370,
+              74403,
+              74404
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 949
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "CA",
+              "REST_OF_THE_WORLD",
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "DK",
+              "EE",
+              "FO",
+              "FI",
+              "FR",
+              "GE",
+              "DE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IS",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "LV",
+              "LI",
+              "LT",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "NO",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "SE",
+              "CH",
+              "TR",
+              "UA",
+              "GB",
+              "XK"
+            ]
+          },
+          {
+            "variant_ids": [
+              68983,
+              69370,
+              74403,
+              74404
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 569
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 69
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

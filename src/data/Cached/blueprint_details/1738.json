@@ -1,0 +1,214 @@
+{
+  "blueprint": {
+    "id": 1738,
+    "title": "Party Triangle Flags",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/6799e9ef61c73767440b6823",
+      "https://images.printify.com/6799ea9b5b6b3373c9063563",
+      "https://images.printify.com/6799e9ee0a82d70b39007ea2"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 332,
+        "title": "Printdoors"
+      },
+      "variants": {
+        "id": 332,
+        "title": "Printdoors",
+        "variants": [
+          {
+            "id": 118576,
+            "title": "One size",
+            "options": {
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "flag_1",
+                "decoration_method": "dye-sublimation",
+                "height": 1502,
+                "width": 1193
+              },
+              {
+                "position": "flag_2",
+                "decoration_method": "dye-sublimation",
+                "height": 1502,
+                "width": 1193
+              },
+              {
+                "position": "flag_3",
+                "decoration_method": "dye-sublimation",
+                "height": 1502,
+                "width": 1193
+              },
+              {
+                "position": "flag_4",
+                "decoration_method": "dye-sublimation",
+                "height": 1502,
+                "width": 1193
+              },
+              {
+                "position": "flag_5",
+                "decoration_method": "dye-sublimation",
+                "height": 1502,
+                "width": 1193
+              },
+              {
+                "position": "flag_6",
+                "decoration_method": "dye-sublimation",
+                "height": 1502,
+                "width": 1193
+              },
+              {
+                "position": "flag_7",
+                "decoration_method": "dye-sublimation",
+                "height": 1502,
+                "width": 1193
+              },
+              {
+                "position": "flag_8",
+                "decoration_method": "dye-sublimation",
+                "height": 1502,
+                "width": 1193
+              },
+              {
+                "position": "flag_9",
+                "decoration_method": "dye-sublimation",
+                "height": 1502,
+                "width": 1193
+              },
+              {
+                "position": "flag_10",
+                "decoration_method": "dye-sublimation",
+                "height": 1502,
+                "width": 1193
+              },
+              {
+                "position": "flag_11",
+                "decoration_method": "dye-sublimation",
+                "height": 1502,
+                "width": 1193
+              },
+              {
+                "position": "flag_12",
+                "decoration_method": "dye-sublimation",
+                "height": 1502,
+                "width": 1193
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              118576
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 379
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "CN"
+            ]
+          },
+          {
+            "variant_ids": [
+              118576
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 949
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 819
+            },
+            "countries": [
+              "FR",
+              "DE",
+              "GB"
+            ]
+          },
+          {
+            "variant_ids": [
+              118576
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1099
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 849
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              118576
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1849
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1679
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              118576
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1269
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1139
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              118576
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1209
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "AU"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

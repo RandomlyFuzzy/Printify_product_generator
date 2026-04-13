@@ -1,0 +1,252 @@
+{
+  "blueprint": {
+    "id": 5363,
+    "title": "Woven Straw Tote Bag",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/69a6e7b89607c3bcb709a863",
+      "https://images.printify.com/69a6e7c4365f8b4cf40db890",
+      "https://images.printify.com/69a6e7c7992c19ff07066f32",
+      "https://images.printify.com/69a6e7bf121b1097240eb082",
+      "https://images.printify.com/69a6e7c125580e6397046a91",
+      "https://images.printify.com/69a6e7bc98c299fded0da0e2",
+      "https://images.printify.com/69a7d936cf07d567a504e430"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 90,
+        "title": "Smart Printee"
+      },
+      "variants": {
+        "id": 90,
+        "title": "Smart Printee",
+        "variants": [
+          {
+            "id": 244687,
+            "title": "Ellipse / 17\u0022 x 10\u0022",
+            "options": {
+              "shape": "Ellipse",
+              "size": "17\u0022 x 10\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1772,
+                "width": 1772
+              }
+            ]
+          },
+          {
+            "id": 244688,
+            "title": "Inverted Rounded Rectangle / 17\u0022 x 10\u0022",
+            "options": {
+              "shape": "Inverted Rounded Rectangle",
+              "size": "17\u0022 x 10\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1772,
+                "width": 1772
+              }
+            ]
+          },
+          {
+            "id": 244689,
+            "title": "Rounded Rectangle / 17\u0022 x 10\u0022",
+            "options": {
+              "shape": "Rounded Rectangle",
+              "size": "17\u0022 x 10\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1772,
+                "width": 1772
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              244687,
+              244688,
+              244689
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2249
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1999
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              244687,
+              244688,
+              244689
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1929
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1749
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              244687,
+              244688,
+              244689
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1679
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1379
+            },
+            "countries": [
+              "GB"
+            ]
+          },
+          {
+            "variant_ids": [
+              244687,
+              244688,
+              244689
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1729
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1499
+            },
+            "countries": [
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "DK",
+              "EE",
+              "FO",
+              "FI",
+              "FR",
+              "GE",
+              "DE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IS",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "LV",
+              "LI",
+              "LT",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "NO",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "SE",
+              "CH",
+              "TR",
+              "UA",
+              "GB",
+              "XK"
+            ]
+          },
+          {
+            "variant_ids": [
+              244687,
+              244688,
+              244689
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1849
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1629
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              244687,
+              244688,
+              244689
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2949
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2629
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

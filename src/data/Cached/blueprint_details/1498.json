@@ -1,0 +1,334 @@
+{
+  "blueprint": {
+    "id": 1498,
+    "title": "Insulated Travel Mug, 40oz",
+    "brand": "Polar Camel",
+    "model": "",
+    "images": [
+      "https://images.printify.com/67163a9e2519efe99d019463",
+      "https://images.printify.com/67163b8caf0da8a41a06fe22",
+      "https://images.printify.com/67163a9dc8aa789a830102f3",
+      "https://images.printify.com/67f3dbee32a71fa53c0fda18",
+      "https://images.printify.com/67f3dbed32a71fa53c0fda17",
+      "https://images.printify.com/67f3dbeb0d28dda3d20de085",
+      "https://images.printify.com/67f3dbf00fe926b01d0319a6",
+      "https://images.printify.com/67f3dbefa5a748d58f043888",
+      "https://images.printify.com/67f3dbf132a71fa53c0fda19",
+      "https://images.printify.com/67f3dbea32a71fa53c0fda16",
+      "https://images.printify.com/67f3dbe80fe926b01d0319a4"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 217,
+        "title": "Fulfill Engine"
+      },
+      "variants": {
+        "id": 217,
+        "title": "Fulfill Engine",
+        "variants": [
+          {
+            "id": 107781,
+            "title": "40oz / Dark Gray",
+            "options": {
+              "size": "40oz",
+              "color": "Dark Gray"
+            },
+            "placeholders": [
+              {
+                "position": "mug_front",
+                "decoration_method": "dtf",
+                "height": 1200,
+                "width": 900
+              },
+              {
+                "position": "mug_back",
+                "decoration_method": "dtf",
+                "height": 1200,
+                "width": 900
+              }
+            ]
+          },
+          {
+            "id": 107782,
+            "title": "40oz / Navy Blue",
+            "options": {
+              "size": "40oz",
+              "color": "Navy Blue"
+            },
+            "placeholders": [
+              {
+                "position": "mug_front",
+                "decoration_method": "dtf",
+                "height": 1200,
+                "width": 900
+              },
+              {
+                "position": "mug_back",
+                "decoration_method": "dtf",
+                "height": 1200,
+                "width": 900
+              }
+            ]
+          },
+          {
+            "id": 107783,
+            "title": "40oz / Olive Green",
+            "options": {
+              "size": "40oz",
+              "color": "Olive Green"
+            },
+            "placeholders": [
+              {
+                "position": "mug_front",
+                "decoration_method": "dtf",
+                "height": 1200,
+                "width": 900
+              },
+              {
+                "position": "mug_back",
+                "decoration_method": "dtf",
+                "height": 1200,
+                "width": 900
+              }
+            ]
+          },
+          {
+            "id": 107784,
+            "title": "40oz / Black",
+            "options": {
+              "size": "40oz",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "mug_front",
+                "decoration_method": "dtf",
+                "height": 1200,
+                "width": 900
+              },
+              {
+                "position": "mug_back",
+                "decoration_method": "dtf",
+                "height": 1200,
+                "width": 900
+              }
+            ]
+          },
+          {
+            "id": 107785,
+            "title": "40oz / Red",
+            "options": {
+              "size": "40oz",
+              "color": "Red"
+            },
+            "placeholders": [
+              {
+                "position": "mug_front",
+                "decoration_method": "dtf",
+                "height": 1200,
+                "width": 900
+              },
+              {
+                "position": "mug_back",
+                "decoration_method": "dtf",
+                "height": 1200,
+                "width": 900
+              }
+            ]
+          },
+          {
+            "id": 107786,
+            "title": "40oz / Royal Blue",
+            "options": {
+              "size": "40oz",
+              "color": "Royal Blue"
+            },
+            "placeholders": [
+              {
+                "position": "mug_front",
+                "decoration_method": "dtf",
+                "height": 1200,
+                "width": 900
+              },
+              {
+                "position": "mug_back",
+                "decoration_method": "dtf",
+                "height": 1200,
+                "width": 900
+              }
+            ]
+          },
+          {
+            "id": 107787,
+            "title": "40oz / Teal",
+            "options": {
+              "size": "40oz",
+              "color": "Teal"
+            },
+            "placeholders": [
+              {
+                "position": "mug_front",
+                "decoration_method": "dtf",
+                "height": 1200,
+                "width": 900
+              },
+              {
+                "position": "mug_back",
+                "decoration_method": "dtf",
+                "height": 1200,
+                "width": 900
+              }
+            ]
+          },
+          {
+            "id": 107788,
+            "title": "40oz / White",
+            "options": {
+              "size": "40oz",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "mug_front",
+                "decoration_method": "dtf",
+                "height": 1200,
+                "width": 900
+              },
+              {
+                "position": "mug_back",
+                "decoration_method": "dtf",
+                "height": 1200,
+                "width": 900
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              107781,
+              107782,
+              107783,
+              107784,
+              107785,
+              107786,
+              107787,
+              107788
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 759
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 299
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              107781,
+              107782,
+              107783,
+              107784,
+              107785,
+              107786,
+              107787,
+              107788
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1469
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 659
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              107781,
+              107782,
+              107783,
+              107784,
+              107785,
+              107786,
+              107787,
+              107788
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 979
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              107781,
+              107782,
+              107783,
+              107784,
+              107785,
+              107786,
+              107787,
+              107788
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2199
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              107781,
+              107782,
+              107783,
+              107784,
+              107785,
+              107786,
+              107787,
+              107788
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 699
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

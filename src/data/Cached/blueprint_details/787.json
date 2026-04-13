@@ -1,0 +1,176 @@
+{
+  "blueprint": {
+    "id": 787,
+    "title": "Shot Glass",
+    "brand": "ORCA Coatings",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66cd846e5b9a37814609dc06",
+      "https://images.printify.com/66cd846e23cb8ec974071c43",
+      "https://images.printify.com/617589f3bffe7759ee130e7b"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 41,
+        "title": "Duplium"
+      },
+      "variants": {
+        "id": 41,
+        "title": "Duplium",
+        "variants": [
+          {
+            "id": 74930,
+            "title": "1.9oz / Black",
+            "options": {
+              "size": "1.9oz",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 525,
+                "width": 900
+              }
+            ]
+          },
+          {
+            "id": 74931,
+            "title": "1.9oz / White",
+            "options": {
+              "size": "1.9oz",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 525,
+                "width": 900
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              74930,
+              74931
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1349
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "AX",
+              "AM",
+              "BY",
+              "FO",
+              "BA",
+              "FR",
+              "AL",
+              "GE",
+              "LI",
+              "BG",
+              "MT",
+              "RS",
+              "DK",
+              "SE",
+              "FI",
+              "IM",
+              "LU",
+              "GL",
+              "VA",
+              "LV",
+              "AD",
+              "GP",
+              "MK",
+              "RE",
+              "ME",
+              "JE",
+              "HR",
+              "CZ",
+              "MC",
+              "NL",
+              "XK",
+              "GR",
+              "IS",
+              "AT",
+              "EE",
+              "DE",
+              "GG",
+              "PT",
+              "BE",
+              "GI",
+              "RO",
+              "SK",
+              "TR",
+              "UA",
+              "ES",
+              "CH",
+              "REST_OF_THE_WORLD",
+              "BV",
+              "IE",
+              "PL",
+              "CY",
+              "MD",
+              "NO",
+              "SM",
+              "SI",
+              "GB",
+              "HU",
+              "IT",
+              "LT"
+            ]
+          },
+          {
+            "variant_ids": [
+              74930,
+              74931
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1899
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 299
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              74930,
+              74931
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 829
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

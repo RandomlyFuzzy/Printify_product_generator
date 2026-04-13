@@ -1,0 +1,209 @@
+{
+  "blueprint": {
+    "id": 893,
+    "title": "Car Mats (Set of 4)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66cf24a51b50bde0460a6c22",
+      "https://images.printify.com/67ef88aa2fc51a86f207e7c2",
+      "https://images.printify.com/67ef887d97144cf40208afa3",
+      "https://images.printify.com/67ef8867d35e79abda0cec12",
+      "https://images.printify.com/61dfe78bbc8e305f75605567",
+      "https://images.printify.com/62455f4c384dd140de078cd3",
+      "https://images.printify.com/61eec6f0aab4ed643115e33b"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 59,
+        "title": "Imagine Your Photos"
+      },
+      "variants": {
+        "id": 59,
+        "title": "Imagine Your Photos",
+        "variants": [
+          {
+            "id": 78184,
+            "title": "Set of 4",
+            "options": {
+              "size": "Set of 4"
+            },
+            "placeholders": [
+              {
+                "position": "left_front",
+                "decoration_method": "dye-sublimation",
+                "height": 8100,
+                "width": 5100
+              },
+              {
+                "position": "right_front",
+                "decoration_method": "dye-sublimation",
+                "height": 8100,
+                "width": 5100
+              },
+              {
+                "position": "left_rear",
+                "decoration_method": "dye-sublimation",
+                "height": 4063,
+                "width": 5312
+              },
+              {
+                "position": "right_rear",
+                "decoration_method": "dye-sublimation",
+                "height": 4063,
+                "width": 5312
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              78184
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1889
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 769
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              78184
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 5099
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 5099
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              78184
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 6619
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 6619
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              78184
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 3339
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 3339
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              78184
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 4059
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 4059
+            },
+            "countries": [
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "DK",
+              "EE",
+              "FO",
+              "FI",
+              "FR",
+              "GE",
+              "DE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IS",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "LV",
+              "LI",
+              "LT",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "NO",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "SE",
+              "CH",
+              "TR",
+              "UA",
+              "GB",
+              "XK"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

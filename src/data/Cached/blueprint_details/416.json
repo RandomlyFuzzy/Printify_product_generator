@@ -1,0 +1,166 @@
+{
+  "blueprint": {
+    "id": 416,
+    "title": "Comforter",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66cc23e1a21deb216a0cdcd3",
+      "https://images.printify.com/66cc2453a21deb216a0cdcd4",
+      "https://images.printify.com/5ecf8c1ed59bd0077253ada3"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 10,
+        "title": "MWW On Demand"
+      },
+      "variants": {
+        "id": 10,
+        "title": "MWW On Demand",
+        "variants": [
+          {
+            "id": 61418,
+            "title": "68\u0022 \u00D7 92\u0022",
+            "options": {
+              "size": "68\u0022 \u00D7 92\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 14175,
+                "width": 10500
+              }
+            ]
+          },
+          {
+            "id": 61419,
+            "title": "88\u0022 \u00D7 88\u0022",
+            "options": {
+              "size": "88\u0022 \u00D7 88\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 13500,
+                "width": 13500
+              }
+            ]
+          },
+          {
+            "id": 61420,
+            "title": "104\u0022 \u00D7 88\u0022",
+            "options": {
+              "size": "104\u0022 \u00D7 88\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 13500,
+                "width": 15900
+              }
+            ]
+          },
+          {
+            "id": 61421,
+            "title": "68\u0022 \u00D7 88\u0022",
+            "options": {
+              "size": "68\u0022 \u00D7 88\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 13500,
+                "width": 10500
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              61418,
+              61421
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 3999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 3999
+            },
+            "countries": [
+              "REST_OF_THE_WORLD",
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              61418,
+              61419,
+              61420,
+              61421
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 3229
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2639
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              61419,
+              61420
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 4999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 4999
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              61419,
+              61420
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 4599
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 4599
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

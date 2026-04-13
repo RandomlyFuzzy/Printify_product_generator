@@ -1,0 +1,158 @@
+{
+  "blueprint": {
+    "id": 746,
+    "title": "Plastic Tumbler with Straw",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d6d8225e505904640c9412",
+      "https://images.printify.com/66d6d8211837bb10480b6ce2",
+      "https://images.printify.com/614c72936d1a1b00da575d87",
+      "https://images.printify.com/67e406490d4e73a0ae09edb3"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 41,
+        "title": "Duplium"
+      },
+      "variants": {
+        "id": 41,
+        "title": "Duplium",
+        "variants": [
+          {
+            "id": 74070,
+            "title": "20oz / Transparent",
+            "options": {
+              "size": "20oz",
+              "color": "Transparent"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 1839,
+                "width": 2953
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              74070
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1349
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "REST_OF_THE_WORLD",
+              "IS",
+              "DK",
+              "AD",
+              "EE",
+              "AL",
+              "FR",
+              "BV",
+              "BE",
+              "GL",
+              "HU",
+              "CH",
+              "AT",
+              "AX",
+              "CZ",
+              "BY",
+              "PT",
+              "JE",
+              "RS",
+              "RE",
+              "SM",
+              "BA",
+              "LU",
+              "MC",
+              "GB",
+              "BG",
+              "MT",
+              "ME",
+              "GR",
+              "LI",
+              "ES",
+              "AM",
+              "FI",
+              "IT",
+              "LV",
+              "NL",
+              "SI",
+              "SE",
+              "GI",
+              "GP",
+              "IM",
+              "MK",
+              "HR",
+              "CY",
+              "FO",
+              "GG",
+              "PL",
+              "UA",
+              "GE",
+              "DE",
+              "IE",
+              "NO",
+              "XK",
+              "VA",
+              "SK",
+              "RO",
+              "LT",
+              "MD",
+              "TR"
+            ]
+          },
+          {
+            "variant_ids": [
+              74070
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1099
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 239
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              74070
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 299
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

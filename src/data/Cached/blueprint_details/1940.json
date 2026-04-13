@@ -1,0 +1,149 @@
+{
+  "blueprint": {
+    "id": 1940,
+    "title": "Flip Straw 25oz Bottle with Tritan\u2122 Renew",
+    "brand": "CamelBak",
+    "model": "Thrive\u2122",
+    "images": [
+      "https://images.printify.com/67f69c64bee891708d026143",
+      "https://images.printify.com/67f65b2054de5f3a470ec213",
+      "https://images.printify.com/67f65b1c273f1ed0ad051692",
+      "https://images.printify.com/67f65b1f273f1ed0ad051693",
+      "https://images.printify.com/67f65b1df63b5c5fd506a762",
+      "https://images.printify.com/67f65b1a5c8048400c0e35b2"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 75,
+        "title": "SwagRabbit"
+      },
+      "variants": {
+        "id": 75,
+        "title": "SwagRabbit",
+        "variants": [
+          {
+            "id": 120461,
+            "title": "Charcoal / 25oz",
+            "options": {
+              "color": "Charcoal",
+              "size": "25oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1200,
+                "width": 2911
+              }
+            ]
+          },
+          {
+            "id": 120462,
+            "title": "Oxford / 25oz",
+            "options": {
+              "color": "Oxford",
+              "size": "25oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1200,
+                "width": 2911
+              }
+            ]
+          },
+          {
+            "id": 120464,
+            "title": "Clear / 25oz",
+            "options": {
+              "color": "Clear",
+              "size": "25oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1200,
+                "width": 2911
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              120461,
+              120462,
+              120463,
+              120464,
+              120465,
+              120466
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 969
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 289
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              120461,
+              120462,
+              120463,
+              120464,
+              120465,
+              120466
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1069
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 279
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              120461,
+              120462,
+              120463,
+              120464,
+              120465,
+              120466
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 659
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

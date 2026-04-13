@@ -1,0 +1,161 @@
+{
+  "blueprint": {
+    "id": 2948,
+    "title": "Hidden Message Heart Necklace (Engraving)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/695e395853d37665f102d1a3",
+      "https://images.printify.com/69708018084a5af0d60935c5",
+      "https://images.printify.com/695e417e85fe469fbe04acd2",
+      "https://images.printify.com/695e3959677bd61c8b0a5b14",
+      "https://images.printify.com/695e395bfdc2feedd808b242"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 217,
+        "title": "Fulfill Engine"
+      },
+      "variants": {
+        "id": 217,
+        "title": "Fulfill Engine",
+        "variants": [
+          {
+            "id": 164433,
+            "title": "18K Gold PVD Coating / Stainless Steel / One Size",
+            "options": {
+              "color": "18K Gold PVD Coating / Stainless Steel",
+              "size": "One Size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "laser-engraving",
+                "height": 255,
+                "width": 300
+              },
+              {
+                "position": "inside_front",
+                "decoration_method": "laser-engraving",
+                "height": 660,
+                "width": 660
+              },
+              {
+                "position": "front",
+                "decoration_method": "laser-engraving",
+                "height": 255,
+                "width": 300
+              }
+            ]
+          },
+          {
+            "id": 164434,
+            "title": "Stainless Steel  / 18K Gold PVD Coating / One Size",
+            "options": {
+              "color": "Stainless Steel  / 18K Gold PVD Coating",
+              "size": "One Size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "laser-engraving",
+                "height": 255,
+                "width": 300
+              },
+              {
+                "position": "inside_front",
+                "decoration_method": "laser-engraving",
+                "height": 660,
+                "width": 660
+              },
+              {
+                "position": "front",
+                "decoration_method": "laser-engraving",
+                "height": 255,
+                "width": 300
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              164433,
+              164434
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 449
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 209
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              164433,
+              164434
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 569
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              164433,
+              164434
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              164433,
+              164434
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 939
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

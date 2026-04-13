@@ -1,0 +1,314 @@
+{
+  "blueprint": {
+    "id": 618,
+    "title": "Ceramic Mugs (11oz\\15oz\\20oz)",
+    "brand": "ORCA Coatings",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66dae136fc79245ff401e2c5",
+      "https://images.printify.com/66d6f521b03e7e858b0c89f6",
+      "https://images.printify.com/61938b3415f0870f8445b509",
+      "https://images.printify.com/60b9f1940c74676c0a09af32"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 41,
+        "title": "Duplium"
+      },
+      "variants": {
+        "id": 41,
+        "title": "Duplium",
+        "variants": [
+          {
+            "id": 72109,
+            "title": "11oz / White",
+            "options": {
+              "size": "11oz",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1098,
+                "width": 2550
+              }
+            ]
+          },
+          {
+            "id": 75533,
+            "title": "15oz / White",
+            "options": {
+              "size": "15oz",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1200,
+                "width": 2775
+              }
+            ]
+          },
+          {
+            "id": 77203,
+            "title": "20oz / White",
+            "options": {
+              "size": "20oz",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1275,
+                "width": 3000
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              77203
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1429
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 599
+            },
+            "countries": [
+              "DE",
+              "AM",
+              "BE",
+              "IE",
+              "REST_OF_THE_WORLD",
+              "AD",
+              "CY",
+              "MC",
+              "RS",
+              "IS",
+              "AL",
+              "HR",
+              "AX",
+              "SI",
+              "UA",
+              "GL",
+              "GB",
+              "CZ",
+              "AT",
+              "BA",
+              "LI",
+              "GE",
+              "GR",
+              "RO",
+              "GP",
+              "NO",
+              "PL",
+              "PT",
+              "GI",
+              "JE",
+              "LT",
+              "BV",
+              "DK",
+              "HU",
+              "LV",
+              "MD",
+              "ES",
+              "ME",
+              "CH",
+              "XK",
+              "MK",
+              "RE",
+              "IM",
+              "BY",
+              "BG",
+              "LU",
+              "SK",
+              "FO",
+              "MT",
+              "SM",
+              "TR",
+              "FI",
+              "FR",
+              "IT",
+              "NL",
+              "SE",
+              "EE",
+              "GG",
+              "VA"
+            ]
+          },
+          {
+            "variant_ids": [
+              77203
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2299
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 739
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              77203
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1199
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              72109,
+              75533
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1350
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 490
+            },
+            "countries": [
+              "LU",
+              "CZ",
+              "FI",
+              "RO",
+              "TR",
+              "MT",
+              "NL",
+              "ES",
+              "XK",
+              "AM",
+              "HU",
+              "IM",
+              "AT",
+              "DE",
+              "GI",
+              "IT",
+              "AX",
+              "AL",
+              "REST_OF_THE_WORLD",
+              "VA",
+              "HR",
+              "BV",
+              "SM",
+              "IE",
+              "GG",
+              "DK",
+              "EE",
+              "GL",
+              "GP",
+              "SK",
+              "CY",
+              "LT",
+              "MD",
+              "AD",
+              "BY",
+              "LI",
+              "MK",
+              "IS",
+              "LV",
+              "FR",
+              "GR",
+              "RE",
+              "SI",
+              "BA",
+              "BG",
+              "ME",
+              "SE",
+              "UA",
+              "JE",
+              "MC",
+              "FO",
+              "BE",
+              "PL",
+              "GE",
+              "PT",
+              "NO",
+              "GB",
+              "RS",
+              "CH"
+            ]
+          },
+          {
+            "variant_ids": [
+              75533
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 959
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              72109,
+              75533
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2230
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 290
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              72109
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 799
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "blueprint": {
+    "id": 999,
+    "title": "Makeup Bag",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d88e70d2daf58467092d85",
+      "https://images.printify.com/66d88e6f95f27e8a8d0d4303",
+      "https://images.printify.com/67ef97a933dda1c3da08d842",
+      "https://images.printify.com/62ac6a9734303d680d0bb163",
+      "https://images.printify.com/62ac6bfa34303d680d0bb178",
+      "https://images.printify.com/62ac6b4634303d680d0bb16b",
+      "https://images.printify.com/62ac6c7ee65f3013130c0ae1"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 90,
+        "title": "Smart Printee"
+      },
+      "variants": {
+        "id": 90,
+        "title": "Smart Printee",
+        "variants": [
+          {
+            "id": 79392,
+            "title": "6.3\u0022 \u00D7 9.4\u0022 \u00D7 3.3\u0027\u0027",
+            "options": {
+              "size": "6.3\u0022 \u00D7 9.4\u0022 \u00D7 3.3\u0027\u0027"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 4732,
+                "width": 4138
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              79392
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 739
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 619
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              79392
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 619
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 619
+            },
+            "countries": [
+              "GB",
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "DK",
+              "EE",
+              "FO",
+              "FI",
+              "FR",
+              "GE",
+              "DE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IS",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "LV",
+              "LI",
+              "LT",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "NO",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "SE",
+              "CH",
+              "TR",
+              "UA",
+              "XK"
+            ]
+          },
+          {
+            "variant_ids": [
+              79392
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 989
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 989
+            },
+            "countries": [
+              "CA",
+              "REST_OF_THE_WORLD",
+              "AU"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

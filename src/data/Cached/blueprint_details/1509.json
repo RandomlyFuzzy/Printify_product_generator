@@ -1,0 +1,203 @@
+{
+  "blueprint": {
+    "id": 1509,
+    "title": "Tumbler, 40oz",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66b340f9b982bc5b0909bcb4",
+      "https://images.printify.com/66b340f7b73bb1b65c0eecd3",
+      "https://images.printify.com/66b340fae7159f50120ba4a6",
+      "https://images.printify.com/66b340f8474b49203708a8c3",
+      "https://images.printify.com/69ca6e5c9fde775a53036292"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 94,
+        "title": "Harrier"
+      },
+      "variants": {
+        "id": 94,
+        "title": "Harrier",
+        "variants": [
+          {
+            "id": 108949,
+            "title": "40oz / White",
+            "options": {
+              "size": "40oz",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1713,
+                "width": 3000
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              108949
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 599
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 239
+            },
+            "countries": [
+              "DE",
+              "CZ"
+            ]
+          },
+          {
+            "variant_ids": [
+              108949
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 359
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              108949
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 4099
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 359
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              108949
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 799
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 239
+            },
+            "countries": [
+              "BE",
+              "IT",
+              "NL",
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "FO",
+              "GE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IE",
+              "IM",
+              "JE",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "TR",
+              "UA",
+              "XK",
+              "FR"
+            ]
+          },
+          {
+            "variant_ids": [
+              108949
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 239
+            },
+            "countries": [
+              "EE",
+              "LV",
+              "NO",
+              "LU",
+              "FI",
+              "LI",
+              "DK",
+              "CH",
+              "IS",
+              "LT",
+              "SE"
+            ]
+          },
+          {
+            "variant_ids": [
+              108949
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 449
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 129
+            },
+            "countries": [
+              "GB"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

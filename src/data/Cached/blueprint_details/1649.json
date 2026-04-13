@@ -1,0 +1,160 @@
+{
+  "blueprint": {
+    "id": 1649,
+    "title": "Woven Wall Tapestry",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/6731e993a9b2a54091032182",
+      "https://images.printify.com/6731e98880aba1655c0718b2",
+      "https://images.printify.com/6731e9957617b48e7b001dd5",
+      "https://images.printify.com/6731e9897617b48e7b001dd2",
+      "https://images.printify.com/6731e98b80aba1655c0718b3",
+      "https://images.printify.com/6731ea237c79d9019f052122",
+      "https://images.printify.com/6731ea2b5aee7fe61f021592"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 10,
+        "title": "MWW On Demand"
+      },
+      "variants": {
+        "id": 10,
+        "title": "MWW On Demand",
+        "variants": [
+          {
+            "id": 113927,
+            "title": "Artwork / 26\u0027\u0027 \u00D7 36\u0027\u0027",
+            "options": {
+              "finish": "Artwork",
+              "size": "26\u0027\u0027 \u00D7 36\u0027\u0027"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "weaving",
+                "height": 3552,
+                "width": 2592
+              }
+            ]
+          },
+          {
+            "id": 113928,
+            "title": "Photo / 26\u0027\u0027 \u00D7 36\u0027\u0027",
+            "options": {
+              "finish": "Photo",
+              "size": "26\u0027\u0027 \u00D7 36\u0027\u0027"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "weaving",
+                "height": 3552,
+                "width": 2592
+              }
+            ]
+          },
+          {
+            "id": 113929,
+            "title": "Artwork / 36\u0027\u0027 \u00D7 26\u0027\u0027",
+            "options": {
+              "finish": "Artwork",
+              "size": "36\u0027\u0027 \u00D7 26\u0027\u0027"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "weaving",
+                "height": 2592,
+                "width": 3552
+              }
+            ]
+          },
+          {
+            "id": 113930,
+            "title": "Photo / 36\u0027\u0027 \u00D7 26\u0027\u0027",
+            "options": {
+              "finish": "Photo",
+              "size": "36\u0027\u0027 \u00D7 26\u0027\u0027"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "weaving",
+                "height": 2592,
+                "width": 3552
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              113927,
+              113928,
+              113929,
+              113930
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 819
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 359
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              113927,
+              113928,
+              113929,
+              113930
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1867
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1079
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              113927,
+              113928,
+              113929,
+              113930
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1259
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

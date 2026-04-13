@@ -1,0 +1,224 @@
+{
+  "blueprint": {
+    "id": 850,
+    "title": "Santa Stocking",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66cdcd51b8d8868f690dd1d3",
+      "https://images.printify.com/66cdcd50676d923fcb011ad2",
+      "https://images.printify.com/69d4d7bb6fad9ba7ca0f4602",
+      "https://images.printify.com/61c42ef08a0abc1d7f486c1b"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 72,
+        "title": "Print Clever"
+      },
+      "variants": {
+        "id": 72,
+        "title": "Print Clever",
+        "variants": [
+          {
+            "id": 94177,
+            "title": "13\u0022 \u00D7 19.3\u0027\u0027",
+            "options": {
+              "size": "13\u0022 \u00D7 19.3\u0027\u0027"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 3329,
+                "width": 2150
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 3329,
+                "width": 2150
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              94177
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 779
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 299
+            },
+            "countries": [
+              "IE",
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "FO",
+              "FR",
+              "GE",
+              "DE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IT",
+              "JE",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "TR",
+              "UA",
+              "XK"
+            ]
+          },
+          {
+            "variant_ids": [
+              94177
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1139
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              94177
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1249
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              94177
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2299
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              94177
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1119
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              94177
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 299
+            },
+            "countries": [
+              "IS",
+              "LV",
+              "EE",
+              "DK",
+              "LT",
+              "NO",
+              "LI",
+              "SE",
+              "CH",
+              "FI"
+            ]
+          },
+          {
+            "variant_ids": [
+              94177
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 449
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 159
+            },
+            "countries": [
+              "GB",
+              "IM"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

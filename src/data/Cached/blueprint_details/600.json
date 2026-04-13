@@ -1,0 +1,182 @@
+{
+  "blueprint": {
+    "id": 600,
+    "title": "Die-Cut Stickers",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d6efc0c47fa4c3c4040a53",
+      "https://images.printify.com/66d6efbec47fa4c3c4040a52",
+      "https://images.printify.com/66f55b80927eeda73f02d132",
+      "https://images.printify.com/66f55b82eee484ad170f8065",
+      "https://images.printify.com/66f55b85927eeda73f02d133"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 73,
+        "title": "Printed Simply"
+      },
+      "variants": {
+        "id": 73,
+        "title": "Printed Simply",
+        "variants": [
+          {
+            "id": 72006,
+            "title": "White / Die-Cut / 2\u0022 \u00D7 2\u0022",
+            "options": {
+              "surface": "White",
+              "shape": "Die-Cut",
+              "size": "2\u0022 \u00D7 2\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 600,
+                "width": 600
+              }
+            ]
+          },
+          {
+            "id": 72007,
+            "title": "White / Die-Cut / 3\u0022 \u00D7 3\u0022",
+            "options": {
+              "surface": "White",
+              "shape": "Die-Cut",
+              "size": "3\u0022 \u00D7 3\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 900,
+                "width": 900
+              }
+            ]
+          },
+          {
+            "id": 72008,
+            "title": "White / Die-Cut / 4\u0022 \u00D7 4\u0022",
+            "options": {
+              "surface": "White",
+              "shape": "Die-Cut",
+              "size": "4\u0022 \u00D7 4\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1200,
+                "width": 1200
+              }
+            ]
+          },
+          {
+            "id": 72009,
+            "title": "White / Die-Cut / 5\u0022 \u00D7 5\u0022",
+            "options": {
+              "surface": "White",
+              "shape": "Die-Cut",
+              "size": "5\u0022 \u00D7 5\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1500,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 72010,
+            "title": "White / Die-Cut / 6\u0022 \u00D7 6\u0022",
+            "options": {
+              "surface": "White",
+              "shape": "Die-Cut",
+              "size": "6\u0022 \u00D7 6\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1800,
+                "width": 1800
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              72006,
+              72007,
+              72008,
+              72009,
+              72010
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 929
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 49
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              72006,
+              72007,
+              72008,
+              72009,
+              72010
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 509
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 7
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              72006,
+              72007,
+              72008,
+              72009,
+              72010
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1049
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 55
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,403 @@
+{
+  "blueprint": {
+    "id": 476,
+    "title": "Square Vinyl Stickers",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66cc887396560da7c503ef47",
+      "https://images.printify.com/66cc88761bd8fd6d2f092fb3",
+      "https://images.printify.com/6735c052db9a4bac3c090dc4",
+      "https://images.printify.com/6735c053b8b0770eb8010cc2",
+      "https://images.printify.com/6735c054bbe2e4bcbb02d0b2"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 73,
+        "title": "Printed Simply"
+      },
+      "variants": {
+        "id": 73,
+        "title": "Printed Simply",
+        "variants": [
+          {
+            "id": 65210,
+            "title": "15\u0022 \u00D7 15\u0022",
+            "options": {
+              "size": "15\u0022 \u00D7 15\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 4500,
+                "width": 4500
+              }
+            ]
+          },
+          {
+            "id": 65211,
+            "title": "2\u0022 \u00D7 2\u0022",
+            "options": {
+              "size": "2\u0022 \u00D7 2\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 600,
+                "width": 600
+              }
+            ]
+          },
+          {
+            "id": 65212,
+            "title": "3.5\u0022 \u00D7 3.5\u0022",
+            "options": {
+              "size": "3.5\u0022 \u00D7 3.5\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 900,
+                "width": 900
+              }
+            ]
+          },
+          {
+            "id": 65213,
+            "title": "5\u0022 \u00D7 5\u0022",
+            "options": {
+              "size": "5\u0022 \u00D7 5\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1500,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 65214,
+            "title": "8\u0022 \u00D7 8\u0022",
+            "options": {
+              "size": "8\u0022 \u00D7 8\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 2400,
+                "width": 2400
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              65210,
+              65211,
+              65212,
+              65213,
+              65214
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 929
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 49
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              65210,
+              65211,
+              65212,
+              65213,
+              65214
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 509
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 7
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              65210,
+              65211,
+              65212,
+              65213,
+              65214
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1049
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 55
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "provider": {
+        "id": 30,
+        "title": "OPT OnDemand"
+      },
+      "variants": {
+        "id": 30,
+        "title": "OPT OnDemand",
+        "variants": [
+          {
+            "id": 65210,
+            "title": "15\u0022 \u00D7 15\u0022",
+            "options": {
+              "size": "15\u0022 \u00D7 15\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 4500,
+                "width": 4500
+              }
+            ]
+          },
+          {
+            "id": 65211,
+            "title": "2\u0022 \u00D7 2\u0022",
+            "options": {
+              "size": "2\u0022 \u00D7 2\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 600,
+                "width": 600
+              }
+            ]
+          },
+          {
+            "id": 65212,
+            "title": "3.5\u0022 \u00D7 3.5\u0022",
+            "options": {
+              "size": "3.5\u0022 \u00D7 3.5\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 900,
+                "width": 900
+              }
+            ]
+          },
+          {
+            "id": 65213,
+            "title": "5\u0022 \u00D7 5\u0022",
+            "options": {
+              "size": "5\u0022 \u00D7 5\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1500,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 65214,
+            "title": "8\u0022 \u00D7 8\u0022",
+            "options": {
+              "size": "8\u0022 \u00D7 8\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 2400,
+                "width": 2400
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              65210,
+              65211,
+              65212,
+              65213,
+              65214
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 529
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 10
+            },
+            "countries": [
+              "CZ",
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "FO",
+              "FR",
+              "GE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IM",
+              "IT",
+              "JE",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "TR",
+              "UA",
+              "XK",
+              "LV",
+              "FI",
+              "NO",
+              "IS",
+              "CH",
+              "SE",
+              "DK",
+              "EE",
+              "LT",
+              "LI"
+            ]
+          },
+          {
+            "variant_ids": [
+              65210,
+              65211,
+              65212,
+              65213,
+              65214
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 629
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 10
+            },
+            "countries": [
+              "IE",
+              "GB"
+            ]
+          },
+          {
+            "variant_ids": [
+              65210,
+              65211,
+              65212,
+              65213,
+              65214
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 10
+            },
+            "countries": [
+              "DE"
+            ]
+          },
+          {
+            "variant_ids": [
+              65210,
+              65211,
+              65212,
+              65213,
+              65214
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 799
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 49
+            },
+            "countries": [
+              "CA",
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,278 @@
+{
+  "blueprint": {
+    "id": 1216,
+    "title": "Vinyl Kiss-Cut Stickers",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d0854a40d1e5815e0834a5",
+      "https://images.printify.com/66d085473db0dd9bb30cfbb2",
+      "https://images.printify.com/67ed265167fa16d433071935",
+      "https://images.printify.com/67ed2650e1c37922070f52b2"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 255,
+        "title": "Sticky Products Europe"
+      },
+      "variants": {
+        "id": 255,
+        "title": "Sticky Products Europe",
+        "variants": [
+          {
+            "id": 92313,
+            "title": "2\u0022 \u00D7 2\u0022 / 1 pc / Matte",
+            "options": {
+              "size": "2\u0022 \u00D7 2\u0022",
+              "quantity": "1 pc",
+              "finish": "Matte"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 744,
+                "width": 744
+              }
+            ]
+          },
+          {
+            "id": 92314,
+            "title": "3\u0022 \u00D7 3\u0022 / 1 pc / Matte",
+            "options": {
+              "size": "3\u0022 \u00D7 3\u0022",
+              "quantity": "1 pc",
+              "finish": "Matte"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1191,
+                "width": 1191
+              }
+            ]
+          },
+          {
+            "id": 92315,
+            "title": "4\u0022 \u00D7 4\u0022 / 1 pc / Matte",
+            "options": {
+              "size": "4\u0022 \u00D7 4\u0022",
+              "quantity": "1 pc",
+              "finish": "Matte"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1641,
+                "width": 1641
+              }
+            ]
+          },
+          {
+            "id": 92316,
+            "title": "5\u0022 \u00D7 5\u0022 / 1 pc / Matte",
+            "options": {
+              "size": "5\u0022 \u00D7 5\u0022",
+              "quantity": "1 pc",
+              "finish": "Matte"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 2095,
+                "width": 2095
+              }
+            ]
+          },
+          {
+            "id": 92317,
+            "title": "6\u0022 \u00D7 6\u0022 / 1 pc / Matte",
+            "options": {
+              "size": "6\u0022 \u00D7 6\u0022",
+              "quantity": "1 pc",
+              "finish": "Matte"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 2541,
+                "width": 2541
+              }
+            ]
+          },
+          {
+            "id": 92318,
+            "title": "9\u0027\u0027 x 9\u0027\u0027 / 1 pc / Matte",
+            "options": {
+              "size": "9\u0027\u0027 x 9\u0027\u0027",
+              "quantity": "1 pc",
+              "finish": "Matte"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 3891,
+                "width": 3891
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              92313,
+              92314,
+              92315,
+              92316,
+              92317,
+              92318
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 739
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 5
+            },
+            "countries": [
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "DK",
+              "EE",
+              "FO",
+              "FI",
+              "FR",
+              "GE",
+              "DE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IS",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "LV",
+              "LI",
+              "LT",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "NO",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "SE",
+              "CH",
+              "TR",
+              "UA",
+              "XK"
+            ]
+          },
+          {
+            "variant_ids": [
+              92313,
+              92314,
+              92315,
+              92316,
+              92317,
+              92318
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2299
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 5
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              92313,
+              92314,
+              92315,
+              92316,
+              92317,
+              92318
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 649
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 5
+            },
+            "countries": [
+              "GB"
+            ]
+          },
+          {
+            "variant_ids": [
+              92313,
+              92314,
+              92315,
+              92316,
+              92317,
+              92318
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1969
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 5
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

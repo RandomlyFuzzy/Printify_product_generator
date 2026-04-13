@@ -1,0 +1,101 @@
+{
+  "blueprint": {
+    "id": 1646,
+    "title": "Cotton Twill Napkin",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/670e49f5fce992222800b652",
+      "https://images.printify.com/6720c4a31099e952920d9a52",
+      "https://images.printify.com/670e4a11fb9c765e9f071112",
+      "https://images.printify.com/6720c49199d6da84380dd622"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 10,
+        "title": "MWW On Demand"
+      },
+      "variants": {
+        "id": 10,
+        "title": "MWW On Demand",
+        "variants": [
+          {
+            "id": 113861,
+            "title": "10\u0027\u0027 \u00D7 10\u0027\u0027",
+            "options": {
+              "size": "10\u0027\u0027 \u00D7 10\u0027\u0027"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "direct-to-fabric",
+                "height": 3450,
+                "width": 3450
+              }
+            ]
+          },
+          {
+            "id": 113862,
+            "title": "22\u0027\u0027 \u00D7 22\u0027\u0027",
+            "options": {
+              "size": "22\u0027\u0027 \u00D7 22\u0027\u0027"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "direct-to-fabric",
+                "height": 7050,
+                "width": 7050
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              113861,
+              113862
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1119
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 359
+            },
+            "countries": [
+              "CA",
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              113861,
+              113862
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 509
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

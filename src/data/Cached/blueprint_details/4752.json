@@ -1,0 +1,100 @@
+{
+  "blueprint": {
+    "id": 4752,
+    "title": "Kindle Case",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/6978af305cc95f35b60a4ee2",
+      "https://images.printify.com/69832fadfe171b9b2d0ca162",
+      "https://images.printify.com/69832fe6c371fa694103b852",
+      "https://images.printify.com/6978af294b34a0dc1b0b27b2",
+      "https://images.printify.com/6978af2a75e2323cb9026b42"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 88,
+        "title": "Casestry"
+      },
+      "variants": {
+        "id": 88,
+        "title": "Casestry",
+        "variants": [
+          {
+            "id": 240903,
+            "title": "Colorsoft / Paperwhite (7\u201D) 12 Gen. (2024-2025)",
+            "options": {
+              "size": "Colorsoft / Paperwhite (7\u201D) 12 Gen. (2024-2025)"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 2213,
+                "width": 1650
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              240903
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 519
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 150
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              240903
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 800
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 100
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              240903
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 820
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 115
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

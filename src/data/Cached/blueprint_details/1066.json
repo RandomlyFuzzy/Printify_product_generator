@@ -1,0 +1,163 @@
+{
+  "blueprint": {
+    "id": 1066,
+    "title": "Multifunctional Diaper Backpack",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d8811882f976b1e305ea22",
+      "https://images.printify.com/66d8811a1bd5dfd8c0079e32",
+      "https://images.printify.com/65b0dbd151dceaad2c07be12",
+      "https://images.printify.com/62a205f6449770ecc6036edd",
+      "https://images.printify.com/62a205f63ec07199b70be4e5",
+      "https://images.printify.com/62a205f6449770ecc6036ee2",
+      "https://images.printify.com/62a205f8449770ecc6036ee7",
+      "https://images.printify.com/62a205f9449770ecc6036eeb",
+      "https://images.printify.com/62a34a4dacdff8d2310639a2",
+      "https://images.printify.com/62a205fbaee72e126f0b3d44"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 14,
+        "title": "ArtsAdd"
+      },
+      "variants": {
+        "id": 14,
+        "title": "ArtsAdd",
+        "variants": [
+          {
+            "id": 80776,
+            "title": "15.0\u0022 \u00D7 10.8\u0022 \u00D7 6.7\u0027\u0027",
+            "options": {
+              "size": "15.0\u0022 \u00D7 10.8\u0022 \u00D7 6.7\u0027\u0027"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1249,
+                "width": 1606
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 2416,
+                "width": 1606
+              },
+              {
+                "position": "front_pocket",
+                "decoration_method": "dye-sublimation",
+                "height": 1516,
+                "width": 1622
+              },
+              {
+                "position": "front_pocket_flap",
+                "decoration_method": "dye-sublimation",
+                "height": 654,
+                "width": 3392
+              },
+              {
+                "position": "right_side",
+                "decoration_method": "dye-sublimation",
+                "height": 2469,
+                "width": 1329
+              },
+              {
+                "position": "left_side",
+                "decoration_method": "dye-sublimation",
+                "height": 2469,
+                "width": 1329
+              },
+              {
+                "position": "bottom",
+                "decoration_method": "dye-sublimation",
+                "height": 1004,
+                "width": 1600
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              80776
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 840
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 840
+            },
+            "countries": [
+              "DK",
+              "NL",
+              "CA",
+              "BR",
+              "MX",
+              "NZ",
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              80776
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1479
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1479
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              80776
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1240
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1240
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              80776
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "CN"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

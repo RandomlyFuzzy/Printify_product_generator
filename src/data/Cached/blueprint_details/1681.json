@@ -1,0 +1,353 @@
+{
+  "blueprint": {
+    "id": 1681,
+    "title": "Youth T-shirt (AOP)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/673cacea17ee6d9fb0014324",
+      "https://images.printify.com/673cace917ee6d9fb0014323",
+      "https://images.printify.com/673cace8748011444e012fc2",
+      "https://images.printify.com/673cace617ee6d9fb0014322"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 332,
+        "title": "Printdoors"
+      },
+      "variants": {
+        "id": 332,
+        "title": "Printdoors",
+        "variants": [
+          {
+            "id": 115626,
+            "title": "XS",
+            "options": {
+              "size": "XS"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "aop",
+                "height": 2278,
+                "width": 1713
+              },
+              {
+                "position": "back",
+                "decoration_method": "aop",
+                "height": 2276,
+                "width": 1711
+              },
+              {
+                "position": "left_sleeve",
+                "decoration_method": "aop",
+                "height": 771,
+                "width": 1440
+              },
+              {
+                "position": "right_sleeve",
+                "decoration_method": "aop",
+                "height": 771,
+                "width": 1440
+              },
+              {
+                "position": "Collar",
+                "decoration_method": "aop",
+                "height": 218,
+                "width": 1924
+              }
+            ]
+          },
+          {
+            "id": 115627,
+            "title": "S",
+            "options": {
+              "size": "S"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "aop",
+                "height": 2436,
+                "width": 1831
+              },
+              {
+                "position": "back",
+                "decoration_method": "aop",
+                "height": 2434,
+                "width": 1830
+              },
+              {
+                "position": "left_sleeve",
+                "decoration_method": "aop",
+                "height": 811,
+                "width": 1514
+              },
+              {
+                "position": "right_sleeve",
+                "decoration_method": "aop",
+                "height": 811,
+                "width": 1514
+              },
+              {
+                "position": "Collar",
+                "decoration_method": "aop",
+                "height": 218,
+                "width": 1924
+              }
+            ]
+          },
+          {
+            "id": 115628,
+            "title": "M",
+            "options": {
+              "size": "M"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "aop",
+                "height": 2594,
+                "width": 1950
+              },
+              {
+                "position": "back",
+                "decoration_method": "aop",
+                "height": 2591,
+                "width": 1948
+              },
+              {
+                "position": "left_sleeve",
+                "decoration_method": "aop",
+                "height": 850,
+                "width": 1587
+              },
+              {
+                "position": "right_sleeve",
+                "decoration_method": "aop",
+                "height": 850,
+                "width": 1587
+              },
+              {
+                "position": "Collar",
+                "decoration_method": "aop",
+                "height": 218,
+                "width": 1924
+              }
+            ]
+          },
+          {
+            "id": 115629,
+            "title": "L",
+            "options": {
+              "size": "L"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "aop",
+                "height": 2751,
+                "width": 2068
+              },
+              {
+                "position": "back",
+                "decoration_method": "aop",
+                "height": 2748,
+                "width": 2066
+              },
+              {
+                "position": "left_sleeve",
+                "decoration_method": "aop",
+                "height": 889,
+                "width": 1661
+              },
+              {
+                "position": "right_sleeve",
+                "decoration_method": "aop",
+                "height": 889,
+                "width": 1661
+              },
+              {
+                "position": "Collar",
+                "decoration_method": "aop",
+                "height": 218,
+                "width": 1924
+              }
+            ]
+          },
+          {
+            "id": 115630,
+            "title": "XL",
+            "options": {
+              "size": "XL"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "aop",
+                "height": 2909,
+                "width": 2187
+              },
+              {
+                "position": "back",
+                "decoration_method": "aop",
+                "height": 2906,
+                "width": 2185
+              },
+              {
+                "position": "left_sleeve",
+                "decoration_method": "aop",
+                "height": 929,
+                "width": 1735
+              },
+              {
+                "position": "right_sleeve",
+                "decoration_method": "aop",
+                "height": 929,
+                "width": 1735
+              },
+              {
+                "position": "Collar",
+                "decoration_method": "aop",
+                "height": 218,
+                "width": 1924
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              115626,
+              115627,
+              115628,
+              115629,
+              115630
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1149
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 989
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              115626,
+              115627,
+              115628,
+              115629,
+              115630
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 549
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 429
+            },
+            "countries": [
+              "DE",
+              "GB",
+              "FR"
+            ]
+          },
+          {
+            "variant_ids": [
+              115626,
+              115627,
+              115628,
+              115629,
+              115630
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1079
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 369
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              115626,
+              115627,
+              115628,
+              115629,
+              115630
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1129
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              115626,
+              115627,
+              115628,
+              115629,
+              115630
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 719
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 459
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              115626,
+              115627,
+              115628,
+              115629,
+              115630
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 379
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "CN"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

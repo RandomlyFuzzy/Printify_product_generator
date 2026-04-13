@@ -1,0 +1,159 @@
+{
+  "blueprint": {
+    "id": 2020,
+    "title": "Charcuterie Board (Engraving)",
+    "brand": "JDS Industries",
+    "model": "",
+    "images": [
+      "https://images.printify.com/69020881eab7b23ebc083cf2",
+      "https://images.printify.com/690208848bd5bc9670043d72",
+      "https://images.printify.com/69020880ea19f6fd4f06fa63",
+      "https://images.printify.com/6902087932bb96173e056372",
+      "https://images.printify.com/6902087b6407ca0607075b62",
+      "https://images.printify.com/6902087dba4ffe98310361a2"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 261,
+        "title": "Fancy Fanny "
+      },
+      "variants": {
+        "id": 261,
+        "title": "Fancy Fanny ",
+        "variants": [
+          {
+            "id": 123099,
+            "title": "Acacia / Slate / 12 1/2 \u0022 x 7 3/4\u0022",
+            "options": {
+              "color": "Acacia / Slate",
+              "size": "12 1/2 \u0022 x 7 3/4\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "engraving",
+                "height": 1950,
+                "width": 1950
+              }
+            ]
+          },
+          {
+            "id": 123100,
+            "title": "Acacia / Slate / 13 1/4\u0022 x 7\u0022",
+            "options": {
+              "color": "Acacia / Slate",
+              "size": "13 1/4\u0022 x 7\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "engraving",
+                "height": 2700,
+                "width": 1763
+              }
+            ]
+          },
+          {
+            "id": 123101,
+            "title": "Acacia / Slate / 13 3/4\u0022 x 9 3/4\u0022",
+            "options": {
+              "color": "Acacia / Slate",
+              "size": "13 3/4\u0022 x 9 3/4\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "engraving",
+                "height": 2550,
+                "width": 2100
+              }
+            ]
+          },
+          {
+            "id": 123102,
+            "title": "Acacia / Slate / 8 1/4\u0022 x 12 1/4\u0022",
+            "options": {
+              "color": "Acacia / Slate",
+              "size": "8 1/4\u0022 x 12 1/4\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "engraving",
+                "height": 2100,
+                "width": 2100
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              123099,
+              123100,
+              123101,
+              123102
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2969
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2809
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              123099,
+              123100,
+              123101,
+              123102
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2599
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2459
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              123099,
+              123100,
+              123101,
+              123102
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1769
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 329
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

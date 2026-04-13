@@ -1,0 +1,225 @@
+{
+  "blueprint": {
+    "id": 5353,
+    "title": "Throw Pillow Case",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/699480fc3306f01a520aea92",
+      "https://images.printify.com/699480eb57df5fdabb0c8b32",
+      "https://images.printify.com/699480e92c4e9f99b90991b2",
+      "https://images.printify.com/699480e7ba78056af3067d52"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 92,
+        "title": "Pic the Gift"
+      },
+      "variants": {
+        "id": 92,
+        "title": "Pic the Gift",
+        "variants": [
+          {
+            "id": 244223,
+            "title": "12\u0022 \u00D7 12\u0022",
+            "options": {
+              "size": "12\u0022 \u00D7 12\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 2100,
+                "width": 2100
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 2100,
+                "width": 2100
+              }
+            ]
+          },
+          {
+            "id": 244224,
+            "title": "12\u0022 \u00D7 18\u0022",
+            "options": {
+              "size": "12\u0022 \u00D7 18\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 2100,
+                "width": 3000
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 2100,
+                "width": 3000
+              }
+            ]
+          },
+          {
+            "id": 244225,
+            "title": "16\u0022 \u00D7 16\u0022",
+            "options": {
+              "size": "16\u0022 \u00D7 16\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 2700,
+                "width": 2700
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 2700,
+                "width": 2700
+              }
+            ]
+          },
+          {
+            "id": 244226,
+            "title": "18\u0022 \u00D7 18\u0022",
+            "options": {
+              "size": "18\u0022 \u00D7 18\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 3000,
+                "width": 3000
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 3000,
+                "width": 3000
+              }
+            ]
+          },
+          {
+            "id": 244227,
+            "title": "20\u0022 \u00D7 20\u0022",
+            "options": {
+              "size": "20\u0022 \u00D7 20\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 3300,
+                "width": 3300
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 3300,
+                "width": 3300
+              }
+            ]
+          },
+          {
+            "id": 244228,
+            "title": "24\u0022 \u00D7 24\u0022",
+            "options": {
+              "size": "24\u0022 \u00D7 24\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 3900,
+                "width": 3900
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 3900,
+                "width": 3900
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              244223,
+              244224,
+              244225,
+              244226,
+              244227,
+              244228
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 609
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              244223,
+              244224,
+              244225,
+              244226,
+              244227,
+              244228
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 929
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              244223,
+              244224,
+              244225,
+              244226,
+              244227,
+              244228
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1099
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

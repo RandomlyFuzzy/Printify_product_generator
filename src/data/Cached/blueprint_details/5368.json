@@ -1,0 +1,253 @@
+{
+  "blueprint": {
+    "id": 5368,
+    "title": "Handwoven Straw Bag",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/69a6907ed63a15a4c10b6120",
+      "https://images.printify.com/69a6906fc685902e30033880",
+      "https://images.printify.com/69a69073cfb9502cd20adde2",
+      "https://images.printify.com/69a69078d2a6d7cb3e0a8a02",
+      "https://images.printify.com/69a6fecab96a05519d0e9cd0"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 90,
+        "title": "Smart Printee"
+      },
+      "variants": {
+        "id": 90,
+        "title": "Smart Printee",
+        "variants": [
+          {
+            "id": 244715,
+            "title": "Ellipse / 14.6\u0022 \u00D7 11.8\u0022 / Sand / Black",
+            "options": {
+              "shape": "Ellipse",
+              "size": "14.6\u0022 \u00D7 11.8\u0022",
+              "color": "Sand / Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1772,
+                "width": 1772
+              }
+            ]
+          },
+          {
+            "id": 244716,
+            "title": "Inverted Rounded Rectangle / 14.6\u0022 \u00D7 11.8\u0022 / Sand / Black",
+            "options": {
+              "shape": "Inverted Rounded Rectangle",
+              "size": "14.6\u0022 \u00D7 11.8\u0022",
+              "color": "Sand / Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1772,
+                "width": 1772
+              }
+            ]
+          },
+          {
+            "id": 244717,
+            "title": "Rectangle / 14.6\u0022 \u00D7 11.8\u0022 / Sand / Black",
+            "options": {
+              "shape": "Rectangle",
+              "size": "14.6\u0022 \u00D7 11.8\u0022",
+              "color": "Sand / Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1772,
+                "width": 1772
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              244715,
+              244716,
+              244717
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2759
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2499
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              244715,
+              244716,
+              244717
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2319
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1999
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              244715,
+              244716,
+              244717
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1929
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1629
+            },
+            "countries": [
+              "GB"
+            ]
+          },
+          {
+            "variant_ids": [
+              244715,
+              244716,
+              244717
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2049
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1879
+            },
+            "countries": [
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "DK",
+              "EE",
+              "FO",
+              "FI",
+              "FR",
+              "GE",
+              "DE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IS",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "LV",
+              "LI",
+              "LT",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "NO",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "SE",
+              "CH",
+              "TR",
+              "UA",
+              "GB",
+              "XK"
+            ]
+          },
+          {
+            "variant_ids": [
+              244715,
+              244716,
+              244717
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2119
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1879
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              244715,
+              244716,
+              244717
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 3599
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 3249
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

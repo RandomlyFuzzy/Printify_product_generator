@@ -1,0 +1,119 @@
+{
+  "blueprint": {
+    "id": 612,
+    "title": "Metallic Mug (Silver\\Gold)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d6f3bbd7f9efc9b907c2b3",
+      "https://images.printify.com/66d6f3b9d7f9efc9b907c2b2",
+      "https://images.printify.com/6124caa970422a0e422bfed4",
+      "https://images.printify.com/6124cb01897da410907cf26b"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 70,
+        "title": "Printed Mint"
+      },
+      "variants": {
+        "id": 70,
+        "title": "Printed Mint",
+        "variants": [
+          {
+            "id": 71935,
+            "title": "11oz / Gold",
+            "options": {
+              "size": "11oz",
+              "color": "Gold"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 960,
+                "width": 2370
+              }
+            ]
+          },
+          {
+            "id": 71936,
+            "title": "11oz / Silver",
+            "options": {
+              "size": "11oz",
+              "color": "Silver"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 960,
+                "width": 2370
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              71935,
+              71936
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2109
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 449
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              71935,
+              71936
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1579
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 489
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              71935,
+              71936
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 699
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 309
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

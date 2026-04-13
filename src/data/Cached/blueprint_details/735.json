@@ -1,0 +1,98 @@
+{
+  "blueprint": {
+    "id": 735,
+    "title": "Gift Bag",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d6cfddadd723553f0ed4f2",
+      "https://images.printify.com/66d6cfdb611b329cb2045f52",
+      "https://images.printify.com/615da3f91acaa10b807c7402"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 59,
+        "title": "Imagine Your Photos"
+      },
+      "variants": {
+        "id": 59,
+        "title": "Imagine Your Photos",
+        "variants": [
+          {
+            "id": 77030,
+            "title": "19.7\u0022 x 26\u0022",
+            "options": {
+              "size": "19.7\u0022 x 26\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 6822,
+                "width": 6268
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              77030
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1429
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 779
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              77030
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1299
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              77030
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1189
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 229
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

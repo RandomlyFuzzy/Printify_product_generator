@@ -1,0 +1,243 @@
+{
+  "blueprint": {
+    "id": 620,
+    "title": "Chill Wine Tumbler",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d6f5829d70554a0e037982",
+      "https://images.printify.com/690a09113b0c65d8170fecb3",
+      "https://images.printify.com/66d6f585b03e7e858b0c89f9",
+      "https://images.printify.com/690a0a5586e364b2260f1262",
+      "https://images.printify.com/67e402b31389081ba1062b72"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 86,
+        "title": "Chill"
+      },
+      "variants": {
+        "id": 86,
+        "title": "Chill",
+        "variants": [
+          {
+            "id": 72113,
+            "title": "White / 12oz",
+            "options": {
+              "color": "White",
+              "size": "12oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 900,
+                "width": 3279
+              }
+            ]
+          },
+          {
+            "id": 148005,
+            "title": "Steel / 12oz",
+            "options": {
+              "color": "Steel",
+              "size": "12oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 900,
+                "width": 3279
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              72113,
+              148005
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 659
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              72113,
+              148005
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 599
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "DE",
+              "NL"
+            ]
+          },
+          {
+            "variant_ids": [
+              72113,
+              148005
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1229
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 529
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              72113,
+              148005
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 799
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "FO",
+              "FR",
+              "GE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "TR",
+              "UA",
+              "GB",
+              "XK"
+            ]
+          },
+          {
+            "variant_ids": [
+              72113,
+              148005
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 699
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              72113,
+              148005
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1329
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 699
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              72113,
+              148005
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "EE",
+              "CH",
+              "LV",
+              "SE",
+              "NO",
+              "LI",
+              "FI",
+              "LT",
+              "DK",
+              "IS"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

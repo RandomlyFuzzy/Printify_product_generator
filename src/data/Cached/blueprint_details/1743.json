@@ -1,0 +1,786 @@
+{
+  "blueprint": {
+    "id": 1743,
+    "title": "Snapback Trucker Cap",
+    "brand": "Richardson",
+    "model": "112",
+    "images": [
+      "https://images.printify.com/67ee6f80b6ff6deb0b0cb322",
+      "https://images.printify.com/67ecddbafa777246c309d614",
+      "https://images.printify.com/67ed0cdaaa5b643297005359",
+      "https://images.printify.com/6926c5d81a8a35e74006ccc3",
+      "https://images.printify.com/6926c5d44a3ef34e7804aa4d",
+      "https://images.printify.com/67ecddc5d3164d32020f5056",
+      "https://images.printify.com/67ecddbf518625bfa405b76f",
+      "https://images.printify.com/67ecdb0e06cdfdfccd0791ce",
+      "https://images.printify.com/67ecda0afa777246c309d613",
+      "https://images.printify.com/67ecd9ffb116fb44b7051cd4",
+      "https://images.printify.com/67ecda03b116fb44b7051cd5",
+      "https://images.printify.com/67ecda06518625bfa405b76d",
+      "https://images.printify.com/67ecda16b116fb44b7051cd6"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 41,
+        "title": "Duplium"
+      },
+      "variants": {
+        "id": 41,
+        "title": "Duplium",
+        "variants": [
+          {
+            "id": 118723,
+            "title": "One size / Black / Charcoal",
+            "options": {
+              "size": "One size",
+              "color": "Black / Charcoal"
+            },
+            "placeholders": [
+              {
+                "position": "front_dtf",
+                "decoration_method": "dtf",
+                "height": 756,
+                "width": 1654
+              }
+            ]
+          },
+          {
+            "id": 118726,
+            "title": "One size / Charcoal / Black",
+            "options": {
+              "size": "One size",
+              "color": "Charcoal / Black"
+            },
+            "placeholders": [
+              {
+                "position": "front_dtf",
+                "decoration_method": "dtf",
+                "height": 756,
+                "width": 1654
+              }
+            ]
+          },
+          {
+            "id": 244821,
+            "title": "One size / White / White",
+            "options": {
+              "size": "One size",
+              "color": "White / White"
+            },
+            "placeholders": [
+              {
+                "position": "front_dtf",
+                "decoration_method": "dtf",
+                "height": 756,
+                "width": 1654
+              }
+            ]
+          },
+          {
+            "id": 244822,
+            "title": "One size / Black / Black",
+            "options": {
+              "size": "One size",
+              "color": "Black / Black"
+            },
+            "placeholders": [
+              {
+                "position": "front_dtf",
+                "decoration_method": "dtf",
+                "height": 756,
+                "width": 1654
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              118723,
+              118726,
+              244821,
+              244822
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 929
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              118723,
+              118726,
+              244821,
+              244822
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1199
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 599
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              118723,
+              118726,
+              244821,
+              244822
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 749
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 99
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "provider": {
+        "id": 410,
+        "title": "Printful"
+      },
+      "variants": {
+        "id": 410,
+        "title": "Printful",
+        "variants": [
+          {
+            "id": 118722,
+            "title": "One size / Black",
+            "options": {
+              "size": "One size",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 600,
+                "width": 1770
+              }
+            ]
+          },
+          {
+            "id": 118723,
+            "title": "One size / Black / Charcoal",
+            "options": {
+              "size": "One size",
+              "color": "Black / Charcoal"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 600,
+                "width": 1770
+              }
+            ]
+          },
+          {
+            "id": 118724,
+            "title": "One size / Black / White",
+            "options": {
+              "size": "One size",
+              "color": "Black / White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 600,
+                "width": 1770
+              }
+            ]
+          },
+          {
+            "id": 118726,
+            "title": "One size / Charcoal / Black",
+            "options": {
+              "size": "One size",
+              "color": "Charcoal / Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 600,
+                "width": 1770
+              }
+            ]
+          },
+          {
+            "id": 118727,
+            "title": "One size / Heather Grey / Black",
+            "options": {
+              "size": "One size",
+              "color": "Heather Grey / Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 600,
+                "width": 1770
+              }
+            ]
+          },
+          {
+            "id": 118728,
+            "title": "One size / Heather Grey / White",
+            "options": {
+              "size": "One size",
+              "color": "Heather Grey / White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 600,
+                "width": 1770
+              }
+            ]
+          },
+          {
+            "id": 118729,
+            "title": "One size / Loden",
+            "options": {
+              "size": "One size",
+              "color": "Loden"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 600,
+                "width": 1770
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              118722,
+              118723,
+              118724,
+              118725,
+              118726,
+              118727,
+              118728,
+              118729
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 449
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 209
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              118722,
+              118723,
+              118724,
+              118725,
+              118726,
+              118727,
+              118728,
+              118729
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 489
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 219
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              118722,
+              118723,
+              118724,
+              118725,
+              118726,
+              118727,
+              118728,
+              118729
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 459
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 145
+            },
+            "countries": [
+              "JE",
+              "MT",
+              "LU",
+              "MD",
+              "SK",
+              "LT",
+              "HU",
+              "MK",
+              "BE",
+              "AT",
+              "RO",
+              "IE",
+              "AX",
+              "FO",
+              "DE",
+              "MC",
+              "SE",
+              "ES",
+              "CY",
+              "DK",
+              "VA",
+              "LV",
+              "HR",
+              "GI",
+              "AL",
+              "SM",
+              "BG",
+              "AD",
+              "UA",
+              "GR",
+              "CZ",
+              "EE",
+              "GP",
+              "BY",
+              "GG",
+              "NL",
+              "GE",
+              "FR",
+              "BA",
+              "IM",
+              "RE",
+              "PT",
+              "ME",
+              "TR",
+              "PL",
+              "RS",
+              "XK",
+              "BV",
+              "GL",
+              "AM",
+              "FI",
+              "IT",
+              "SI"
+            ]
+          },
+          {
+            "variant_ids": [
+              118722,
+              118723,
+              118724,
+              118725,
+              118726,
+              118727,
+              118728,
+              118729
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 110
+            },
+            "countries": [
+              "LI",
+              "NO",
+              "IS",
+              "CH"
+            ]
+          },
+          {
+            "variant_ids": [
+              118722,
+              118723,
+              118724,
+              118725,
+              118726,
+              118727,
+              118728,
+              118729
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "JP",
+              "REST_OF_THE_WORLD",
+              "BR"
+            ]
+          },
+          {
+            "variant_ids": [
+              118722,
+              118723,
+              118724,
+              118725,
+              118726,
+              118727,
+              118728,
+              118729
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 939
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              118722,
+              118723,
+              118724,
+              118725,
+              118726,
+              118727,
+              118728,
+              118729
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 159
+            },
+            "countries": [
+              "GB"
+            ]
+          },
+          {
+            "variant_ids": [
+              118722,
+              118723,
+              118724,
+              118725,
+              118726,
+              118727,
+              118728,
+              118729
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1249
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 239
+            },
+            "countries": [
+              "AU"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "provider": {
+        "id": 99,
+        "title": "Printify Choice"
+      },
+      "variants": {
+        "id": 99,
+        "title": "Printify Choice",
+        "variants": [
+          {
+            "id": 118722,
+            "title": "One size / Black",
+            "options": {
+              "size": "One size",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 600,
+                "width": 1770
+              }
+            ]
+          },
+          {
+            "id": 118723,
+            "title": "One size / Black/Charcoal",
+            "options": {
+              "size": "One size",
+              "color": "Black / Charcoal"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 600,
+                "width": 1770
+              }
+            ]
+          },
+          {
+            "id": 118724,
+            "title": "One size / Black/White",
+            "options": {
+              "size": "One size",
+              "color": "Black / White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 600,
+                "width": 1770
+              }
+            ]
+          },
+          {
+            "id": 118726,
+            "title": "One size / Charcoal/Black",
+            "options": {
+              "size": "One size",
+              "color": "Charcoal / Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 600,
+                "width": 1770
+              }
+            ]
+          },
+          {
+            "id": 118727,
+            "title": "One size / Heather Grey/Black",
+            "options": {
+              "size": "One size",
+              "color": "Heather Grey / Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 600,
+                "width": 1770
+              }
+            ]
+          },
+          {
+            "id": 118728,
+            "title": "One size / Heather Grey/White",
+            "options": {
+              "size": "One size",
+              "color": "Heather Grey / White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 600,
+                "width": 1770
+              }
+            ]
+          },
+          {
+            "id": 118729,
+            "title": "One size / Loden",
+            "options": {
+              "size": "One size",
+              "color": "Loden"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 600,
+                "width": 1770
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              118722,
+              118723,
+              118724,
+              118725,
+              118726,
+              118727,
+              118728,
+              118729
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 449
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 209
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              118722,
+              118723,
+              118724,
+              118725,
+              118726,
+              118727,
+              118728,
+              118729
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              118722,
+              118723,
+              118724,
+              118725,
+              118726,
+              118727,
+              118728,
+              118729
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1249
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 239
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              118722,
+              118723,
+              118724,
+              118725,
+              118726,
+              118727,
+              118728,
+              118729
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 939
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              118722,
+              118723,
+              118724,
+              118725,
+              118726,
+              118727,
+              118728,
+              118729
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 489
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 219
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

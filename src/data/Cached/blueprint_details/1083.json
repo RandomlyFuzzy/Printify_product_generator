@@ -1,0 +1,86 @@
+{
+  "blueprint": {
+    "id": 1083,
+    "title": "Round Rug",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d5b3db084ec852f4001a85",
+      "https://images.printify.com/66d5b3ddb686b4d2070418b6",
+      "https://images.printify.com/62a7293b4933622cd3078cd2",
+      "https://images.printify.com/62a6d53f4bf3aa54ec046f6a",
+      "https://images.printify.com/62a6d7964bf3aa54ec046f6e",
+      "https://images.printify.com/62a6d79a5246284505050d1c"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 10,
+        "title": "MWW On Demand"
+      },
+      "variants": {
+        "id": 10,
+        "title": "MWW On Demand",
+        "variants": [
+          {
+            "id": 81470,
+            "title": "60\u0022 \u00D7 60\u0022",
+            "options": {
+              "size": "60\u0022 \u00D7 60\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 9450,
+                "width": 9450
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              81470
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 4499
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2499
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              81470
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 3699
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1999
+            },
+            "countries": [
+              "CA",
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

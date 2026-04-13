@@ -1,0 +1,351 @@
+{
+  "blueprint": {
+    "id": 1360,
+    "title": "Desk Calendar (2025 grid)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66bb4d1eca369b865706e5f2",
+      "https://images.printify.com/66bb4d1d470c73bd3203e8a3",
+      "https://images.printify.com/66bb4d1f3da1090a51025e63",
+      "https://images.printify.com/66bb4d1b470c73bd3203e8a2",
+      "https://images.printify.com/66bb4d1b2441a1f0fb0a9372",
+      "https://images.printify.com/66bb4d1a1608eb49eb0193b2"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 66,
+        "title": "Prima Printing"
+      },
+      "variants": {
+        "id": 66,
+        "title": "Prima Printing",
+        "variants": [
+          {
+            "id": 102567,
+            "title": "10\u0022 x 5\u0022 / Glossy",
+            "options": {
+              "size": "10\u0022 x 5\u0022",
+              "paper": "Glossy"
+            },
+            "placeholders": [
+              {
+                "position": "front_cover",
+                "decoration_method": "digital-printing",
+                "height": 1571,
+                "width": 3083
+              },
+              {
+                "position": "january",
+                "decoration_method": "digital-printing",
+                "height": 1571,
+                "width": 1872
+              },
+              {
+                "position": "february",
+                "decoration_method": "digital-printing",
+                "height": 1571,
+                "width": 1872
+              },
+              {
+                "position": "march",
+                "decoration_method": "digital-printing",
+                "height": 1571,
+                "width": 1872
+              },
+              {
+                "position": "april",
+                "decoration_method": "digital-printing",
+                "height": 1571,
+                "width": 1872
+              },
+              {
+                "position": "may",
+                "decoration_method": "digital-printing",
+                "height": 1571,
+                "width": 1872
+              },
+              {
+                "position": "june",
+                "decoration_method": "digital-printing",
+                "height": 1571,
+                "width": 1872
+              },
+              {
+                "position": "july",
+                "decoration_method": "digital-printing",
+                "height": 1571,
+                "width": 1872
+              },
+              {
+                "position": "august",
+                "decoration_method": "digital-printing",
+                "height": 1571,
+                "width": 1872
+              },
+              {
+                "position": "september",
+                "decoration_method": "digital-printing",
+                "height": 1571,
+                "width": 1872
+              },
+              {
+                "position": "october",
+                "decoration_method": "digital-printing",
+                "height": 1571,
+                "width": 1872
+              },
+              {
+                "position": "november",
+                "decoration_method": "digital-printing",
+                "height": 1571,
+                "width": 1872
+              },
+              {
+                "position": "december",
+                "decoration_method": "digital-printing",
+                "height": 1571,
+                "width": 1872
+              }
+            ]
+          },
+          {
+            "id": 102568,
+            "title": "10\u0022 x 5\u0022 / Matte",
+            "options": {
+              "size": "10\u0022 x 5\u0022",
+              "paper": "Matte"
+            },
+            "placeholders": [
+              {
+                "position": "front_cover",
+                "decoration_method": "digital-printing",
+                "height": 1571,
+                "width": 3083
+              },
+              {
+                "position": "january",
+                "decoration_method": "digital-printing",
+                "height": 1571,
+                "width": 1872
+              },
+              {
+                "position": "february",
+                "decoration_method": "digital-printing",
+                "height": 1571,
+                "width": 1872
+              },
+              {
+                "position": "march",
+                "decoration_method": "digital-printing",
+                "height": 1571,
+                "width": 1872
+              },
+              {
+                "position": "april",
+                "decoration_method": "digital-printing",
+                "height": 1571,
+                "width": 1872
+              },
+              {
+                "position": "may",
+                "decoration_method": "digital-printing",
+                "height": 1571,
+                "width": 1872
+              },
+              {
+                "position": "june",
+                "decoration_method": "digital-printing",
+                "height": 1571,
+                "width": 1872
+              },
+              {
+                "position": "july",
+                "decoration_method": "digital-printing",
+                "height": 1571,
+                "width": 1872
+              },
+              {
+                "position": "august",
+                "decoration_method": "digital-printing",
+                "height": 1571,
+                "width": 1872
+              },
+              {
+                "position": "september",
+                "decoration_method": "digital-printing",
+                "height": 1571,
+                "width": 1872
+              },
+              {
+                "position": "october",
+                "decoration_method": "digital-printing",
+                "height": 1571,
+                "width": 1872
+              },
+              {
+                "position": "november",
+                "decoration_method": "digital-printing",
+                "height": 1571,
+                "width": 1872
+              },
+              {
+                "position": "december",
+                "decoration_method": "digital-printing",
+                "height": 1571,
+                "width": 1872
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              102567,
+              102568
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 669
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "AU",
+              "NZ"
+            ]
+          },
+          {
+            "variant_ids": [
+              102567,
+              102568
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 919
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 919
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              102567,
+              102568
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1239
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1239
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              102567,
+              102568
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1249
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1249
+            },
+            "countries": [
+              "AX",
+              "AL",
+              "AD",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "DK",
+              "EE",
+              "FO",
+              "FI",
+              "FR",
+              "DE",
+              "GI",
+              "GR",
+              "GG",
+              "VA",
+              "HU",
+              "IS",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "LV",
+              "LI",
+              "LT",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "NO",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "SE",
+              "CH",
+              "GB",
+              "XK"
+            ]
+          },
+          {
+            "variant_ids": [
+              102567,
+              102568
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2949
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2949
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

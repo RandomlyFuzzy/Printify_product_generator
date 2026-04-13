@@ -1,0 +1,254 @@
+{
+  "blueprint": {
+    "id": 1110,
+    "title": "Women\u0027s Shorts (AOP)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66dff2041fb884d43109d102",
+      "https://images.printify.com/66dff2961fb884d43109d103",
+      "https://images.printify.com/688ca555b3faec93a60aca72",
+      "https://images.printify.com/688ca560a73627e93602f7b2",
+      "https://images.printify.com/688ca55b1e3aa8a60608e042",
+      "https://images.printify.com/688ca5591a2ac415480819b2"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 10,
+        "title": "MWW On Demand"
+      },
+      "variants": {
+        "id": 10,
+        "title": "MWW On Demand",
+        "variants": [
+          {
+            "id": 86201,
+            "title": "XS / Brushed Faux Suede",
+            "options": {
+              "size": "XS",
+              "material": "Brushed Faux Suede"
+            },
+            "placeholders": [
+              {
+                "position": "right_leg",
+                "decoration_method": "aop",
+                "height": 2382,
+                "width": 3491
+              },
+              {
+                "position": "left_leg",
+                "decoration_method": "aop",
+                "height": 2382,
+                "width": 3491
+              }
+            ]
+          },
+          {
+            "id": 86202,
+            "title": "S / Brushed Faux Suede",
+            "options": {
+              "size": "S",
+              "material": "Brushed Faux Suede"
+            },
+            "placeholders": [
+              {
+                "position": "right_leg",
+                "decoration_method": "aop",
+                "height": 2439,
+                "width": 3575
+              },
+              {
+                "position": "left_leg",
+                "decoration_method": "aop",
+                "height": 2439,
+                "width": 3575
+              }
+            ]
+          },
+          {
+            "id": 86203,
+            "title": "M / Brushed Faux Suede",
+            "options": {
+              "size": "M",
+              "material": "Brushed Faux Suede"
+            },
+            "placeholders": [
+              {
+                "position": "right_leg",
+                "decoration_method": "aop",
+                "height": 2504,
+                "width": 3669
+              },
+              {
+                "position": "left_leg",
+                "decoration_method": "aop",
+                "height": 2504,
+                "width": 3669
+              }
+            ]
+          },
+          {
+            "id": 86204,
+            "title": "L / Brushed Faux Suede",
+            "options": {
+              "size": "L",
+              "material": "Brushed Faux Suede"
+            },
+            "placeholders": [
+              {
+                "position": "right_leg",
+                "decoration_method": "aop",
+                "height": 2576,
+                "width": 3775
+              },
+              {
+                "position": "left_leg",
+                "decoration_method": "aop",
+                "height": 2576,
+                "width": 3775
+              }
+            ]
+          },
+          {
+            "id": 86205,
+            "title": "XL / Brushed Faux Suede",
+            "options": {
+              "size": "XL",
+              "material": "Brushed Faux Suede"
+            },
+            "placeholders": [
+              {
+                "position": "right_leg",
+                "decoration_method": "aop",
+                "height": 2647,
+                "width": 3880
+              },
+              {
+                "position": "left_leg",
+                "decoration_method": "aop",
+                "height": 2647,
+                "width": 3880
+              }
+            ]
+          },
+          {
+            "id": 86206,
+            "title": "2XL / Brushed Faux Suede",
+            "options": {
+              "size": "2XL",
+              "material": "Brushed Faux Suede"
+            },
+            "placeholders": [
+              {
+                "position": "right_leg",
+                "decoration_method": "aop",
+                "height": 2717,
+                "width": 3982
+              },
+              {
+                "position": "left_leg",
+                "decoration_method": "aop",
+                "height": 2717,
+                "width": 3982
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              86201,
+              86202,
+              86203,
+              86204,
+              86205,
+              86206
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 569
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 259
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              86201,
+              86202,
+              86203,
+              86204,
+              86205,
+              86206
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 919
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 359
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              86201,
+              86202,
+              86203,
+              86204,
+              86205,
+              86206
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1199
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 379
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              86201,
+              86202,
+              86203,
+              86204,
+              86205,
+              86206
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 589
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 299
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

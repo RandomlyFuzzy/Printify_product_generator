@@ -1,0 +1,188 @@
+{
+  "blueprint": {
+    "id": 1491,
+    "title": "Women\u0027s Hooded Blanket",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66f6714b59133b977c06e7f2",
+      "https://images.printify.com/66f6714a4714fcc9940981d2",
+      "https://images.printify.com/66f671489f37bc1c56026f54",
+      "https://images.printify.com/66f671467942780f1f04b732",
+      "https://images.printify.com/66fbcda5e479962b30024043",
+      "https://images.printify.com/66fbcda306da22b3db0bb272"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 14,
+        "title": "ArtsAdd"
+      },
+      "variants": {
+        "id": 14,
+        "title": "ArtsAdd",
+        "variants": [
+          {
+            "id": 107700,
+            "title": "One size / White",
+            "options": {
+              "size": "One size",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 5038,
+                "width": 4360
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 5446,
+                "width": 4361
+              },
+              {
+                "position": "left_sleeve",
+                "decoration_method": "dye-sublimation",
+                "height": 3377,
+                "width": 3638
+              },
+              {
+                "position": "right_sleeve",
+                "decoration_method": "dye-sublimation",
+                "height": 3377,
+                "width": 3638
+              },
+              {
+                "position": "right_hood",
+                "decoration_method": "dye-sublimation",
+                "height": 2256,
+                "width": 1838
+              },
+              {
+                "position": "left_hood",
+                "decoration_method": "dye-sublimation",
+                "height": 2256,
+                "width": 1838
+              }
+            ]
+          },
+          {
+            "id": 107701,
+            "title": "One size / Black",
+            "options": {
+              "size": "One size",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 5038,
+                "width": 4360
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 5446,
+                "width": 4361
+              },
+              {
+                "position": "left_sleeve",
+                "decoration_method": "dye-sublimation",
+                "height": 3377,
+                "width": 3638
+              },
+              {
+                "position": "right_sleeve",
+                "decoration_method": "dye-sublimation",
+                "height": 3377,
+                "width": 3638
+              },
+              {
+                "position": "right_hood",
+                "decoration_method": "dye-sublimation",
+                "height": 2256,
+                "width": 1838
+              },
+              {
+                "position": "left_hood",
+                "decoration_method": "dye-sublimation",
+                "height": 2256,
+                "width": 1838
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              107700,
+              107701
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 840
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 840
+            },
+            "countries": [
+              "NZ",
+              "DK",
+              "US",
+              "CA",
+              "BR",
+              "NL",
+              "REST_OF_THE_WORLD",
+              "MX"
+            ]
+          },
+          {
+            "variant_ids": [
+              107700,
+              107701
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "CN"
+            ]
+          },
+          {
+            "variant_ids": [
+              107700,
+              107701
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1469
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1469
+            },
+            "countries": [
+              "AU"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "blueprint": {
+    "id": 1169,
+    "title": "Microfiber Tea Towel",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d0a1d3d89fe553800a78e9",
+      "https://images.printify.com/66d0a1d5cfebb6ad860ad914",
+      "https://images.printify.com/62f1fc4e648688ae2108a964",
+      "https://images.printify.com/636badb56b90aeb1e903ac8f",
+      "https://images.printify.com/62f1fc50ce62f9596a094b05",
+      "https://images.printify.com/62f1fc52648688ae2108a967",
+      "https://images.printify.com/62f1fc57648688ae2108a96a",
+      "https://images.printify.com/62ecbe2aada7a8147e01bea7",
+      "https://images.printify.com/62ecbe2bada7a8147e01beab"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 28,
+        "title": "District Photo"
+      },
+      "variants": {
+        "id": 28,
+        "title": "District Photo",
+        "variants": [
+          {
+            "id": 91087,
+            "title": "16\u0027\u0027 \u00D7 25\u0027\u0027",
+            "options": {
+              "size": "16\u0027\u0027 \u00D7 25\u0027\u0027"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 5512,
+                "width": 3500
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              91087
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 479
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 149
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              91087
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1399
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "REST_OF_THE_WORLD",
+              "NZ",
+              "CA",
+              "AU",
+              "NO"
+            ]
+          },
+          {
+            "variant_ids": [
+              91087
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 549
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 239
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

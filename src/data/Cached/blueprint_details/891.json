@@ -1,0 +1,157 @@
+{
+  "blueprint": {
+    "id": 891,
+    "title": "Stein Mug",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d869a9f2339fd5fd07f692",
+      "https://images.printify.com/66d869a7ebad0b0b73049a42",
+      "https://images.printify.com/61ddbe1e04820e0e1947a474"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 41,
+        "title": "Duplium"
+      },
+      "variants": {
+        "id": 41,
+        "title": "Duplium",
+        "variants": [
+          {
+            "id": 77101,
+            "title": "22oz / White",
+            "options": {
+              "size": "22oz",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 900,
+                "width": 2250
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              77101
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1429
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 599
+            },
+            "countries": [
+              "AL",
+              "DE",
+              "BV",
+              "SI",
+              "ES",
+              "GI",
+              "VA",
+              "LI",
+              "DK",
+              "AX",
+              "BG",
+              "FI",
+              "MC",
+              "RO",
+              "SE",
+              "AT",
+              "MK",
+              "GE",
+              "FR",
+              "AM",
+              "CY",
+              "AD",
+              "BY",
+              "GL",
+              "HU",
+              "UA",
+              "BE",
+              "CZ",
+              "NO",
+              "LU",
+              "EE",
+              "GG",
+              "IS",
+              "IE",
+              "TR",
+              "LT",
+              "XK",
+              "RE",
+              "FO",
+              "GP",
+              "MT",
+              "HR",
+              "JE",
+              "PL",
+              "RS",
+              "CH",
+              "SK",
+              "GB",
+              "LV",
+              "SM",
+              "GR",
+              "IM",
+              "IT",
+              "ME",
+              "PT",
+              "BA",
+              "MD",
+              "NL",
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              77101
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2299
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 739
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              77101
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1199
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

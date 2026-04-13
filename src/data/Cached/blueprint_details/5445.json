@@ -1,0 +1,128 @@
+{
+  "blueprint": {
+    "id": 5445,
+    "title": "Unisex Terry Shawl Robe (Embroidery)",
+    "brand": "Port Authority",
+    "model": "R103",
+    "images": [
+      "https://images.printify.com/69ca488ac13e5073a4007e62",
+      "https://images.printify.com/69ca3cfe898437402a07f142",
+      "https://images.printify.com/69ca3cfda0ceb2684b045731"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 217,
+        "title": "Fulfill Engine"
+      },
+      "variants": {
+        "id": 217,
+        "title": "Fulfill Engine",
+        "variants": [
+          {
+            "id": 246824,
+            "title": "S/M",
+            "options": {
+              "size": "S/M"
+            },
+            "placeholders": [
+              {
+                "position": "front_left_chest",
+                "decoration_method": "embroidery",
+                "height": 1050,
+                "width": 1200
+              },
+              {
+                "position": "front_right_chest",
+                "decoration_method": "embroidery",
+                "height": 1050,
+                "width": 1200
+              }
+            ]
+          },
+          {
+            "id": 246825,
+            "title": "L/XL",
+            "options": {
+              "size": "L/XL"
+            },
+            "placeholders": [
+              {
+                "position": "front_left_chest",
+                "decoration_method": "embroidery",
+                "height": 1050,
+                "width": 1200
+              },
+              {
+                "position": "front_right_chest",
+                "decoration_method": "embroidery",
+                "height": 1050,
+                "width": 1200
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              246824,
+              246825
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1579
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 929
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              246824,
+              246825
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1439
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 419
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              246824,
+              246825
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1849
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 949
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "blueprint": {
+    "id": 1998,
+    "title": "Bamboo Pizza Board (Engraving)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/6902115585156d317f013422",
+      "https://images.printify.com/690211560569d5824a025522",
+      "https://images.printify.com/69032fc450ec3d148d0979a2",
+      "https://images.printify.com/690330702c099f44d60aef62"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 217,
+        "title": "Fulfill Engine"
+      },
+      "variants": {
+        "id": 217,
+        "title": "Fulfill Engine",
+        "variants": [
+          {
+            "id": 122988,
+            "title": "15 1/2\u0022 x 11\u0022 / Bamboo",
+            "options": {
+              "size": "15 1/2\u0022 x 11\u0022",
+              "color": "Bamboo"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "engraving",
+                "height": 2625,
+                "width": 3000
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              122988
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2199
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              122988
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1179
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 579
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              122988
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2059
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 759
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

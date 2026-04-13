@@ -1,0 +1,175 @@
+{
+  "blueprint": {
+    "id": 711,
+    "title": "Copper Vacuum Insulated Cup, 12oz",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d5c528cf080073d4017052",
+      "https://images.printify.com/66d5c5268082897bc30194c8",
+      "https://images.printify.com/617abb235d9ae75c45105b0a"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 75,
+        "title": "SwagRabbit"
+      },
+      "variants": {
+        "id": 75,
+        "title": "SwagRabbit",
+        "variants": [
+          {
+            "id": 73928,
+            "title": "Black / 12oz",
+            "options": {
+              "color": "Black",
+              "size": "12oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 450,
+                "width": 3224
+              }
+            ]
+          },
+          {
+            "id": 73929,
+            "title": "Red / 12oz",
+            "options": {
+              "color": "Red",
+              "size": "12oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 450,
+                "width": 3224
+              }
+            ]
+          },
+          {
+            "id": 73930,
+            "title": "Turquoise / 12oz",
+            "options": {
+              "color": "Turquoise",
+              "size": "12oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 450,
+                "width": 3224
+              }
+            ]
+          },
+          {
+            "id": 73931,
+            "title": "White / 12oz",
+            "options": {
+              "color": "White",
+              "size": "12oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 450,
+                "width": 3224
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              73928,
+              73929,
+              73930,
+              73931
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 559
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 299
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              73928,
+              73929,
+              73930,
+              73931
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1069
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 279
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              73928,
+              73929,
+              73930,
+              73931
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 969
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 289
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              73928,
+              73929,
+              73930,
+              73931
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 589
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 369
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

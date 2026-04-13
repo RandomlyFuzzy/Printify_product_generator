@@ -1,0 +1,137 @@
+{
+  "blueprint": {
+    "id": 1677,
+    "title": "Clip-on Pet Collar",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/6941689adfe2c4c0320b9752",
+      "https://images.printify.com/6941697889a13e02520e4822",
+      "https://images.printify.com/694168df2a0a451ac10c6702",
+      "https://images.printify.com/6941689793a4471907072a72",
+      "https://images.printify.com/6939bd78752e24cef90771a2",
+      "https://images.printify.com/694177d1d07bc685b50ccf72"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 228,
+        "title": "Taylor"
+      },
+      "variants": {
+        "id": 228,
+        "title": "Taylor",
+        "variants": [
+          {
+            "id": 115591,
+            "title": "S",
+            "options": {
+              "size": "S"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 270,
+                "width": 3750
+              }
+            ]
+          },
+          {
+            "id": 115592,
+            "title": "M",
+            "options": {
+              "size": "M"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 270,
+                "width": 3750
+              }
+            ]
+          },
+          {
+            "id": 115593,
+            "title": "L",
+            "options": {
+              "size": "L"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 270,
+                "width": 3750
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              115591,
+              115592,
+              115593
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 549
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 99
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              115591,
+              115592,
+              115593
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1159
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              115591,
+              115592,
+              115593
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1089
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 129
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

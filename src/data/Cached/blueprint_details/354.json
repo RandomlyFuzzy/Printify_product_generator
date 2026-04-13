@@ -1,0 +1,116 @@
+{
+  "blueprint": {
+    "id": 354,
+    "title": "Tumbler 10oz",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/6980774396fb272e610bb7a2",
+      "https://images.printify.com/698077479aa09836dd0cc8b2",
+      "https://images.printify.com/69807748b9e29e9f68031582",
+      "https://images.printify.com/69807744b9f257eb200969a2",
+      "https://images.printify.com/69807746d62a7b9bbd0cd6b2"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 1,
+        "title": "SPOKE Custom Products"
+      },
+      "variants": {
+        "id": 1,
+        "title": "SPOKE Custom Products",
+        "variants": [
+          {
+            "id": 44447,
+            "title": "10oz",
+            "options": {
+              "size": "10oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1418,
+                "width": 3356
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              44447
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 569
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 299
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              44447
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 589
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 349
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              44447
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1179
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 409
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              44447
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1679
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 489
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

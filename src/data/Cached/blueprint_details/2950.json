@@ -1,0 +1,149 @@
+{
+  "blueprint": {
+    "id": 2950,
+    "title": "Hidden Message Circle Necklace (Engraving)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/695f624aec24b517350ad9f2",
+      "https://images.printify.com/697071bc2a7e5707f5025b92",
+      "https://images.printify.com/695f624caa8d7a59b908c032",
+      "https://images.printify.com/695f624da2bb5452be042fd2",
+      "https://images.printify.com/695f624f0864eca31307bd93"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 217,
+        "title": "Fulfill Engine"
+      },
+      "variants": {
+        "id": 217,
+        "title": "Fulfill Engine",
+        "variants": [
+          {
+            "id": 164436,
+            "title": "One Size / 18K Gold PVD Coating / Stainless Steel",
+            "options": {
+              "size": "One Size",
+              "color": "18K Gold PVD Coating / Stainless Steel"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "laser-engraving",
+                "height": 1020,
+                "width": 1080
+              },
+              {
+                "position": "inside_front",
+                "decoration_method": "laser-engraving",
+                "height": 660,
+                "width": 660
+              }
+            ]
+          },
+          {
+            "id": 164437,
+            "title": "One Size / Stainless Steel  / 18K Gold PVD Coating",
+            "options": {
+              "size": "One Size",
+              "color": "Stainless Steel  / 18K Gold PVD Coating"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "laser-engraving",
+                "height": 1020,
+                "width": 1080
+              },
+              {
+                "position": "inside_front",
+                "decoration_method": "laser-engraving",
+                "height": 660,
+                "width": 660
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              164436,
+              164437
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 449
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 209
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              164436,
+              164437
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 569
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              164436,
+              164437
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              164436,
+              164437
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 939
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "blueprint": {
+    "id": 1122,
+    "title": "White Coined Napkins",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d58f08cf82e5f4740c8687",
+      "https://images.printify.com/66f13c1712ce4beeac085822",
+      "https://images.printify.com/67ef878597144cf40208afa2",
+      "https://images.printify.com/6319bf58d15b28251a095a34",
+      "https://images.printify.com/6319c02d0a080925bb021514",
+      "https://images.printify.com/63283eb0c079102f4704889d"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 228,
+        "title": "Taylor"
+      },
+      "variants": {
+        "id": 228,
+        "title": "Taylor",
+        "variants": [
+          {
+            "id": 91958,
+            "title": "4.8\u0022 x 4.8\u0022 / White / 100 pcs",
+            "options": {
+              "size": "4.8\u0022 x 4.8\u0022",
+              "color": "White",
+              "quantity": "100 pcs"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 863,
+                "width": 863
+              }
+            ]
+          },
+          {
+            "id": 91959,
+            "title": "4.8\u0022 x 4.8\u0022 / White / 50 pcs",
+            "options": {
+              "size": "4.8\u0022 x 4.8\u0022",
+              "color": "White",
+              "quantity": "50 pcs"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 863,
+                "width": 863
+              }
+            ]
+          },
+          {
+            "id": 91960,
+            "title": "6.5\u0022 x 6.5\u0022 / White / 100 pcs",
+            "options": {
+              "size": "6.5\u0022 x 6.5\u0022",
+              "color": "White",
+              "quantity": "100 pcs"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 1275,
+                "width": 1275
+              }
+            ]
+          },
+          {
+            "id": 91961,
+            "title": "6.5\u0022 x 6.5\u0022 / White / 50 pcs",
+            "options": {
+              "size": "6.5\u0022 x 6.5\u0022",
+              "color": "White",
+              "quantity": "50 pcs"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 1275,
+                "width": 1275
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              91959,
+              91961
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 729
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 669
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              91958,
+              91959,
+              91960,
+              91961
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 3239
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1149
+            },
+            "countries": [
+              "REST_OF_THE_WORLD",
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              91958,
+              91960
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1339
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 669
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

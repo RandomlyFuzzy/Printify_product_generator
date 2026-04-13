@@ -1,0 +1,156 @@
+{
+  "blueprint": {
+    "id": 2658,
+    "title": "Heart Cutout Necklace (Engraving)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/68dbe498d4ff169b0c0fd712",
+      "https://images.printify.com/68e763cd359066d67e021612",
+      "https://images.printify.com/68e763d248db674f0b05a202",
+      "https://images.printify.com/68e763d030c9d088c0041f02"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 217,
+        "title": "Fulfill Engine"
+      },
+      "variants": {
+        "id": 217,
+        "title": "Fulfill Engine",
+        "variants": [
+          {
+            "id": 147729,
+            "title": "One Size / 18K Gold PVD coating",
+            "options": {
+              "size": "One Size",
+              "color": "18K Gold PVD coating"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "laser-engraving",
+                "height": 564,
+                "width": 564
+              }
+            ]
+          },
+          {
+            "id": 147730,
+            "title": "One Size / 18K Rose Gold PVD coating",
+            "options": {
+              "size": "One Size",
+              "color": "18K Rose Gold PVD coating"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "laser-engraving",
+                "height": 564,
+                "width": 564
+              }
+            ]
+          },
+          {
+            "id": 147731,
+            "title": "One Size / Stainless Steel (No coating)",
+            "options": {
+              "size": "One Size",
+              "color": "Stainless Steel (No coating)"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "laser-engraving",
+                "height": 564,
+                "width": 564
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              147729,
+              147730,
+              147731
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 449
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 209
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              147729,
+              147730,
+              147731
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 569
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              147729,
+              147730,
+              147731
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              147729,
+              147730,
+              147731
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 939
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

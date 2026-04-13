@@ -1,0 +1,205 @@
+{
+  "blueprint": {
+    "id": 1591,
+    "title": "Quilted Bed Runner",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66e96e9f673e6b6ca103e7e3",
+      "https://images.printify.com/66e96f0775bacc0efa0c61d2",
+      "https://images.printify.com/66e96e9d3afd47ba6a0fc832",
+      "https://images.printify.com/66e96e9b93aa3260670b30d2",
+      "https://images.printify.com/66e96e9c93aa3260670b30d3",
+      "https://images.printify.com/66c4404b3ed5cde9500f7b42",
+      "https://images.printify.com/66bc8154f03bd293720fd133",
+      "https://images.printify.com/66c4404986866740b607ca83",
+      "https://images.printify.com/66c440473cf08f7223003193",
+      "https://images.printify.com/66c440baaad6791f6502d902"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 10,
+        "title": "MWW On Demand"
+      },
+      "variants": {
+        "id": 10,
+        "title": "MWW On Demand",
+        "variants": [
+          {
+            "id": 110819,
+            "title": "20\u0027\u0027 \u00D7 60\u0027\u0027",
+            "options": {
+              "size": "20\u0027\u0027 \u00D7 60\u0027\u0027"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 3300,
+                "width": 9300
+              }
+            ]
+          },
+          {
+            "id": 110820,
+            "title": "20\u0027\u0027 \u00D7 71\u0027\u0027",
+            "options": {
+              "size": "20\u0027\u0027 \u00D7 71\u0027\u0027"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 3300,
+                "width": 10950
+              }
+            ]
+          },
+          {
+            "id": 110821,
+            "title": "25\u0027\u0027 \u00D7 80\u0027\u0027",
+            "options": {
+              "size": "25\u0027\u0027 \u00D7 80\u0027\u0027"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 4050,
+                "width": 12300
+              }
+            ]
+          },
+          {
+            "id": 110822,
+            "title": "25\u0027\u0027 \u00D7 96\u0027\u0027",
+            "options": {
+              "size": "25\u0027\u0027 \u00D7 96\u0027\u0027"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 4050,
+                "width": 14850
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              110821,
+              110822
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1119
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              110821,
+              110822
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              110821,
+              110822
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1479
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1479
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              110819,
+              110820
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1509
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 599
+            },
+            "countries": [
+              "CA",
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              110819,
+              110820
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 959
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 239
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              110821,
+              110822
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1699
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 819
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

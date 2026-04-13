@@ -1,0 +1,386 @@
+{
+  "blueprint": {
+    "id": 264,
+    "title": "Poly Scarf",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d6fbee70a0051b3f0545a2",
+      "https://images.printify.com/66d7004027a5fb315300f892",
+      "https://images.printify.com/67efa82aa537c7ef05043182",
+      "https://images.printify.com/6267ec3f8cb0ef1043068875"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 48,
+        "title": "Colorway"
+      },
+      "variants": {
+        "id": 48,
+        "title": "Colorway",
+        "variants": [
+          {
+            "id": 42318,
+            "title": "Poly chiffon / 25\u0022 \u00D7 25\u0022",
+            "options": {
+              "color": "Poly chiffon",
+              "size": "25\u0022 \u00D7 25\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 7726,
+                "width": 7734
+              }
+            ]
+          },
+          {
+            "id": 42319,
+            "title": "Poly chiffon / 50\u0022 \u00D7 50\u0022",
+            "options": {
+              "color": "Poly chiffon",
+              "size": "50\u0022 \u00D7 50\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 15239,
+                "width": 15239
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              42318,
+              42319
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1789
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              42318,
+              42319
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1599
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 459
+            },
+            "countries": [
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "DK",
+              "EE",
+              "FO",
+              "FI",
+              "FR",
+              "GE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IS",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "LV",
+              "LI",
+              "LT",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NO",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "SE",
+              "CH",
+              "TR",
+              "UA",
+              "XK",
+              "NL",
+              "DE"
+            ]
+          },
+          {
+            "variant_ids": [
+              42318,
+              42319
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1809
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              42318,
+              42319
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 559
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 259
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              42318,
+              42319
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 529
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "GB"
+            ]
+          },
+          {
+            "variant_ids": [
+              42318,
+              42319
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1049
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 359
+            },
+            "countries": [
+              "AU"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "provider": {
+        "id": 10,
+        "title": "MWW On Demand"
+      },
+      "variants": {
+        "id": 10,
+        "title": "MWW On Demand",
+        "variants": [
+          {
+            "id": 42316,
+            "title": "Poly voile / 25\u0022 \u00D7 25\u0022",
+            "options": {
+              "color": "Poly voile",
+              "size": "25\u0022 \u00D7 25\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 7726,
+                "width": 7734
+              }
+            ]
+          },
+          {
+            "id": 42317,
+            "title": "Poly voile / 50\u0022 \u00D7 50\u0022",
+            "options": {
+              "color": "Poly voile",
+              "size": "50\u0022 \u00D7 50\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 15239,
+                "width": 15239
+              }
+            ]
+          },
+          {
+            "id": 42318,
+            "title": "Poly chiffon / 25\u0022 \u00D7 25\u0022",
+            "options": {
+              "color": "Poly chiffon",
+              "size": "25\u0022 \u00D7 25\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 7726,
+                "width": 7734
+              }
+            ]
+          },
+          {
+            "id": 42319,
+            "title": "Poly chiffon / 50\u0022 \u00D7 50\u0022",
+            "options": {
+              "color": "Poly chiffon",
+              "size": "50\u0022 \u00D7 50\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 15239,
+                "width": 15239
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              42316,
+              42317,
+              42318,
+              42319
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 509
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 169
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              42316,
+              42317,
+              42318,
+              42319
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1199
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 379
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              42316,
+              42317,
+              42318,
+              42319
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1089
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 359
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              42316,
+              42317,
+              42318,
+              42319
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 559
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 259
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

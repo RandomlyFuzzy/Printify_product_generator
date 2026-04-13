@@ -1,0 +1,91 @@
+{
+  "blueprint": {
+    "id": 2795,
+    "title": "Travel Blanket with Pouch",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/69440209d397d4f63c0af042",
+      "https://images.printify.com/6944020ae7c077ca4c0e1612",
+      "https://images.printify.com/69440285daba5d59440a9362",
+      "https://images.printify.com/694402033e13d380970cb353",
+      "https://images.printify.com/6944020583d36e2b750d6d72"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 10,
+        "title": "MWW On Demand"
+      },
+      "variants": {
+        "id": 10,
+        "title": "MWW On Demand",
+        "variants": [
+          {
+            "id": 155678,
+            "title": "40\u0027\u0027 \u00D7 60\u0027\u0027",
+            "options": {
+              "size": "40\u0027\u0027 \u00D7 60\u0027\u0027"
+            },
+            "placeholders": [
+              {
+                "position": "blanket",
+                "decoration_method": "dye-sublimation",
+                "height": 12600,
+                "width": 8600
+              },
+              {
+                "position": "pouch",
+                "decoration_method": "dye-sublimation",
+                "height": 3000,
+                "width": 2700
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              155678
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1509
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 599
+            },
+            "countries": [
+              "CA",
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              155678
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 959
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 239
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

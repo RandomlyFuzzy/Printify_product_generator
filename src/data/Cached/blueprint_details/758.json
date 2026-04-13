@@ -1,0 +1,119 @@
+{
+  "blueprint": {
+    "id": 758,
+    "title": "UV Phone Sanitizer and Wireless Charging Pad",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66cc7708d2706cdad10f7eaa",
+      "https://images.printify.com/66cc7707bf610a458c085a5e",
+      "https://images.printify.com/615d509e1d2d9562472788f3",
+      "https://images.printify.com/615ef052569d74716b0cd544",
+      "https://images.printify.com/615db0db4ff5f43a4732081d",
+      "https://images.printify.com/615d58b58702561da4193ccb",
+      "https://images.printify.com/615d4f544ff5f43a4731d59a"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 75,
+        "title": "SwagRabbit"
+      },
+      "variants": {
+        "id": 75,
+        "title": "SwagRabbit",
+        "variants": [
+          {
+            "id": 74544,
+            "title": "White / One size",
+            "options": {
+              "color": "White",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 900,
+                "width": 1350
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              74544
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 829
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              74544
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 349
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              74544
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1399
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 449
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              74544
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1539
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 489
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

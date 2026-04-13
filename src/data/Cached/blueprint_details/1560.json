@@ -1,0 +1,70 @@
+{
+  "blueprint": {
+    "id": 1560,
+    "title": "Multivitamin for Women Supplement (60 Capsules)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66c3571d39afbc7d8d08ec12",
+      "https://images.printify.com/66c3571e39afbc7d8d08ec13",
+      "https://images.printify.com/66e2a576d816d08d3d078d83",
+      "https://images.printify.com/66a8efc8cbc98a9b200125d6",
+      "https://images.printify.com/66b346da07f39fd8710dff42"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 294,
+        "title": "Rocktomic"
+      },
+      "variants": {
+        "id": 294,
+        "title": "Rocktomic",
+        "variants": [
+          {
+            "id": 109757,
+            "title": "White bottle \u002B cap / Unflavored / 60 Vegetable capsules",
+            "options": {
+              "color": "White bottle \u002B cap",
+              "flavor": "Unflavored",
+              "size": "60 Vegetable capsules"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 1115,
+                "width": 1660
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              109757
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 449
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

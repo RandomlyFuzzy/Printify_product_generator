@@ -1,0 +1,233 @@
+{
+  "blueprint": {
+    "id": 413,
+    "title": "Backpack",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d834a490f8a21eb5025ec2",
+      "https://images.printify.com/66d834b92c7a67baf9079233",
+      "https://images.printify.com/5d08c6dc47045f000a6da795",
+      "https://images.printify.com/5cd3f14846da1900095e27f3",
+      "https://images.printify.com/5fbcc1feddc15e4c4153f78a"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 10,
+        "title": "MWW On Demand"
+      },
+      "variants": {
+        "id": 10,
+        "title": "MWW On Demand",
+        "variants": [
+          {
+            "id": 61364,
+            "title": "One size",
+            "options": {
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front_pocket",
+                "decoration_method": "dye-sublimation",
+                "height": 1254,
+                "width": 1815
+              },
+              {
+                "position": "front_pocket_flap",
+                "decoration_method": "dye-sublimation",
+                "height": 398,
+                "width": 1787
+              },
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 2796,
+                "width": 1925
+              },
+              {
+                "position": "top_part_to_back",
+                "decoration_method": "dye-sublimation",
+                "height": 544,
+                "width": 3938
+              },
+              {
+                "position": "top_part_to_front",
+                "decoration_method": "dye-sublimation",
+                "height": 351,
+                "width": 3937
+              },
+              {
+                "position": "bottom",
+                "decoration_method": "dye-sublimation",
+                "height": 919,
+                "width": 4282
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              61364
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 879
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 239
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              61364
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 639
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "DE"
+            ]
+          },
+          {
+            "variant_ids": [
+              61364
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 699
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              61364
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1439
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 759
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              61364
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 919
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 699
+            },
+            "countries": [
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "FO",
+              "FR",
+              "GE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "TR",
+              "UA",
+              "GB",
+              "XK",
+              "LU"
+            ]
+          },
+          {
+            "variant_ids": [
+              61364
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1049
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 699
+            },
+            "countries": [
+              "EE",
+              "LI",
+              "LT",
+              "LV",
+              "IS",
+              "CH",
+              "FI",
+              "SE",
+              "NO",
+              "DK"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

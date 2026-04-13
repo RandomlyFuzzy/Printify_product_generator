@@ -1,0 +1,456 @@
+{
+  "blueprint": {
+    "id": 5443,
+    "title": "Matte MacBook Cases",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/69cb874b21f9cce2280bba30",
+      "https://images.printify.com/69cb874c240a22891001d73e",
+      "https://images.printify.com/69cb874d65c18e2b720550e3",
+      "https://images.printify.com/69cb8755c1b232f24705f6f3",
+      "https://images.printify.com/69cb87528c6a8b491b0bd992",
+      "https://images.printify.com/69d682eea47e9016d40cbea0",
+      "https://images.printify.com/69d67653b30f06f800055bc0"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 23,
+        "title": "WOYC"
+      },
+      "variants": {
+        "id": 23,
+        "title": "WOYC",
+        "variants": [
+          {
+            "id": 246816,
+            "title": "MacBook Pro 16 / Matte",
+            "options": {
+              "size": "MacBook Pro 16",
+              "finish": "Matte"
+            },
+            "placeholders": [
+              {
+                "position": "front_uv",
+                "decoration_method": "uv",
+                "height": 2918,
+                "width": 4193
+              }
+            ]
+          },
+          {
+            "id": 246817,
+            "title": "MacBook Pro 14 / Matte",
+            "options": {
+              "size": "MacBook Pro 14",
+              "finish": "Matte"
+            },
+            "placeholders": [
+              {
+                "position": "front_uv",
+                "decoration_method": "uv",
+                "height": 2611,
+                "width": 3674
+              }
+            ]
+          },
+          {
+            "id": 246818,
+            "title": "MacBook Pro 13.3 / Matte",
+            "options": {
+              "size": "MacBook Pro 13.3",
+              "finish": "Matte"
+            },
+            "placeholders": [
+              {
+                "position": "front_uv",
+                "decoration_method": "uv",
+                "height": 2516,
+                "width": 3591
+              }
+            ]
+          },
+          {
+            "id": 246819,
+            "title": "MacBook Air 15.3 / Matte",
+            "options": {
+              "size": "MacBook Air 15.3",
+              "finish": "Matte"
+            },
+            "placeholders": [
+              {
+                "position": "front_uv",
+                "decoration_method": "uv",
+                "height": 2800,
+                "width": 4016
+              }
+            ]
+          },
+          {
+            "id": 246820,
+            "title": "MacBook Air 13.6 / Matte",
+            "options": {
+              "size": "MacBook Air 13.6",
+              "finish": "Matte"
+            },
+            "placeholders": [
+              {
+                "position": "front_uv",
+                "decoration_method": "uv",
+                "height": 2540,
+                "width": 3603
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              246816,
+              246817,
+              246818,
+              246819,
+              246820
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 599
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 299
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              246816,
+              246817,
+              246818,
+              246819,
+              246820
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 859
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 319
+            },
+            "countries": [
+              "DK",
+              "EE",
+              "AL",
+              "BE",
+              "FI",
+              "IM",
+              "ME",
+              "RE",
+              "RO",
+              "NL",
+              "SI",
+              "ES",
+              "RS",
+              "NO",
+              "CH",
+              "UA",
+              "BA",
+              "BY",
+              "FO",
+              "LU",
+              "AX",
+              "BG",
+              "AT",
+              "CY",
+              "BV",
+              "SK",
+              "AM",
+              "GI",
+              "SM",
+              "FR",
+              "VA",
+              "HU",
+              "HR",
+              "LV",
+              "GP",
+              "LI",
+              "GG",
+              "LT",
+              "JE",
+              "TR",
+              "MD",
+              "AD",
+              "XK",
+              "GE",
+              "MC",
+              "CZ",
+              "GR",
+              "MT",
+              "SE",
+              "GL",
+              "IE",
+              "MK",
+              "PL",
+              "PT",
+              "IS",
+              "IT"
+            ]
+          },
+          {
+            "variant_ids": [
+              246816,
+              246817,
+              246818,
+              246819,
+              246820
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1899
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 629
+            },
+            "countries": [
+              "CC",
+              "IO",
+              "YE",
+              "HK",
+              "IN",
+              "AF",
+              "JO",
+              "BN",
+              "IR",
+              "PH",
+              "AZ",
+              "BH",
+              "CX",
+              "JP",
+              "SA",
+              "LB",
+              "MO",
+              "BT",
+              "KH",
+              "TH",
+              "IL",
+              "TM",
+              "MN",
+              "PK",
+              "AE",
+              "CN",
+              "LK",
+              "TJ",
+              "KZ",
+              "SY",
+              "KR",
+              "TW",
+              "SG",
+              "ID",
+              "MM",
+              "NP",
+              "OM",
+              "PS",
+              "RU",
+              "VN",
+              "KW",
+              "KG",
+              "MV",
+              "QA",
+              "BD",
+              "IQ",
+              "LA",
+              "MY",
+              "UZ"
+            ]
+          },
+          {
+            "variant_ids": [
+              246816,
+              246817,
+              246818,
+              246819,
+              246820
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1939
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 749
+            },
+            "countries": [
+              "FK",
+              "GY",
+              "AN",
+              "CO",
+              "VE",
+              "BO",
+              "GF",
+              "CL",
+              "BR",
+              "EC",
+              "PY",
+              "SR",
+              "AR",
+              "PE",
+              "UY"
+            ]
+          },
+          {
+            "variant_ids": [
+              246816,
+              246817,
+              246818,
+              246819,
+              246820
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1939
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 449
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              246816,
+              246817,
+              246818,
+              246819,
+              246820
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2199
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 299
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              246816,
+              246817,
+              246818,
+              246819,
+              246820
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 939
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 419
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              246816,
+              246817,
+              246818,
+              246819,
+              246820
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1709
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 519
+            },
+            "countries": [
+              "NZ"
+            ]
+          },
+          {
+            "variant_ids": [
+              246816,
+              246817,
+              246818,
+              246819,
+              246820
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 729
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 269
+            },
+            "countries": [
+              "DE"
+            ]
+          },
+          {
+            "variant_ids": [
+              246816,
+              246817,
+              246818,
+              246819,
+              246820
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 699
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 299
+            },
+            "countries": [
+              "GB"
+            ]
+          },
+          {
+            "variant_ids": [
+              246816,
+              246817,
+              246818,
+              246819,
+              246820
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 649
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

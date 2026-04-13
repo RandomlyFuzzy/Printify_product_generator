@@ -1,0 +1,260 @@
+{
+  "blueprint": {
+    "id": 5383,
+    "title": "Classic Dad Hat",
+    "brand": "ValuCap",
+    "model": "VC300A",
+    "images": [
+      "https://images.printify.com/69c40511f89645f00907e330",
+      "https://images.printify.com/69c521602a3781c6b003fa40",
+      "https://images.printify.com/69c4013140fad1bab10236c0",
+      "https://images.printify.com/69c2a4664680a4e9c80092cb",
+      "https://images.printify.com/69c51deea07851f344073052",
+      "https://images.printify.com/69c51dcf1d56aab5160b26d3",
+      "https://images.printify.com/69c51db4fecc3e1bf80abe55",
+      "https://images.printify.com/69c51dc7bc358e2c6407df22",
+      "https://images.printify.com/69c51dc0395c25073100c698",
+      "https://images.printify.com/69c51de55b3ec8326e0ec394",
+      "https://images.printify.com/69c51daee384584e930c1906",
+      "https://images.printify.com/69c51da76f2f177733078e97"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 41,
+        "title": "Duplium"
+      },
+      "variants": {
+        "id": 41,
+        "title": "Duplium",
+        "variants": [
+          {
+            "id": 244931,
+            "title": "White / One size",
+            "options": {
+              "color": "White",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtf",
+                "height": 756,
+                "width": 1654
+              }
+            ]
+          },
+          {
+            "id": 244947,
+            "title": "Black / One size",
+            "options": {
+              "color": "Black",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtf",
+                "height": 756,
+                "width": 1654
+              }
+            ]
+          },
+          {
+            "id": 244948,
+            "title": "Charcoal / One size",
+            "options": {
+              "color": "Charcoal",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtf",
+                "height": 756,
+                "width": 1654
+              }
+            ]
+          },
+          {
+            "id": 244949,
+            "title": "Forest Green / One size",
+            "options": {
+              "color": "Forest Green",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtf",
+                "height": 756,
+                "width": 1654
+              }
+            ]
+          },
+          {
+            "id": 244950,
+            "title": "Maroon / One size",
+            "options": {
+              "color": "Maroon",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtf",
+                "height": 756,
+                "width": 1654
+              }
+            ]
+          },
+          {
+            "id": 244951,
+            "title": "Navy / One size",
+            "options": {
+              "color": "Navy",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtf",
+                "height": 756,
+                "width": 1654
+              }
+            ]
+          },
+          {
+            "id": 244952,
+            "title": "Olive / One size",
+            "options": {
+              "color": "Olive",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtf",
+                "height": 756,
+                "width": 1654
+              }
+            ]
+          },
+          {
+            "id": 244953,
+            "title": "Red / One size",
+            "options": {
+              "color": "Red",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtf",
+                "height": 756,
+                "width": 1654
+              }
+            ]
+          },
+          {
+            "id": 244954,
+            "title": "Stone / One size",
+            "options": {
+              "color": "Stone",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtf",
+                "height": 756,
+                "width": 1654
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              244931,
+              244947,
+              244948,
+              244949,
+              244950,
+              244951,
+              244952,
+              244953,
+              244954
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 929
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              244931,
+              244947,
+              244948,
+              244949,
+              244950,
+              244951,
+              244952,
+              244953,
+              244954
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1199
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 599
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              244931,
+              244947,
+              244948,
+              244949,
+              244950,
+              244951,
+              244952,
+              244953,
+              244954
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 749
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 99
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

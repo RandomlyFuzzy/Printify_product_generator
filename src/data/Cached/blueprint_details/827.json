@@ -1,0 +1,208 @@
+{
+  "blueprint": {
+    "id": 827,
+    "title": "White Ceramic Mug, 11oz and 15oz",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66cda8ab4b912339550e2f02",
+      "https://images.printify.com/66cda8aa743d7f18ad0b2a83",
+      "https://images.printify.com/61b8ec68e188dc55036a77e6",
+      "https://images.printify.com/61b8ec6977704b6803772b5d"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 95,
+        "title": "Ideju Druka"
+      },
+      "variants": {
+        "id": 95,
+        "title": "Ideju Druka",
+        "variants": [
+          {
+            "id": 75653,
+            "title": "11oz / White",
+            "options": {
+              "size": "11oz",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1134,
+                "width": 2362
+              }
+            ]
+          },
+          {
+            "id": 75654,
+            "title": "15oz / White",
+            "options": {
+              "size": "15oz",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1252,
+                "width": 2362
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              75653,
+              75654
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1799
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 699
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              75653,
+              75654
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2799
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 699
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              75653,
+              75654
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 939
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 129
+            },
+            "countries": [
+              "LT",
+              "EE"
+            ]
+          },
+          {
+            "variant_ids": [
+              75653,
+              75654
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 299
+            },
+            "countries": [
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "DK",
+              "FO",
+              "FI",
+              "FR",
+              "GE",
+              "DE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IS",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "LI",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "NO",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "SE",
+              "CH",
+              "TR",
+              "UA",
+              "GB",
+              "XK"
+            ]
+          },
+          {
+            "variant_ids": [
+              75653,
+              75654
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 669
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 129
+            },
+            "countries": [
+              "LV"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

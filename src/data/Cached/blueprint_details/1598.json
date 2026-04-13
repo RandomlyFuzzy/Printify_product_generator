@@ -1,0 +1,390 @@
+{
+  "blueprint": {
+    "id": 1598,
+    "title": "Tablet Folio Case",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d841cc51590981bf0baff2",
+      "https://images.printify.com/66d8432a51590981bf0baff4",
+      "https://images.printify.com/66d841cea8c3c8eed6087453"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 23,
+        "title": "WOYC"
+      },
+      "variants": {
+        "id": 23,
+        "title": "WOYC",
+        "variants": [
+          {
+            "id": 111492,
+            "title": "iPad Pro 11",
+            "options": {
+              "size": "iPad Pro 11"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 3079,
+                "width": 4791
+              }
+            ]
+          },
+          {
+            "id": 111493,
+            "title": "iPad Pro 12.9",
+            "options": {
+              "size": "iPad Pro 12.9"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 3473,
+                "width": 5624
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              111492,
+              111493,
+              244213,
+              244214,
+              244215,
+              244216,
+              244217,
+              244218
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 749
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 299
+            },
+            "countries": [
+              "AT",
+              "BV",
+              "AM",
+              "HU",
+              "SM",
+              "HR",
+              "CY",
+              "GG",
+              "BA",
+              "CZ",
+              "MC",
+              "PT",
+              "SE",
+              "FR",
+              "MD",
+              "IT",
+              "RO",
+              "FO",
+              "AL",
+              "GR",
+              "LI",
+              "BG",
+              "AX",
+              "GI",
+              "IE",
+              "RE",
+              "LT",
+              "LV",
+              "NL",
+              "PL",
+              "CH",
+              "XK",
+              "RS",
+              "GP",
+              "UA",
+              "AD",
+              "BY",
+              "DK",
+              "JE",
+              "GE",
+              "IS",
+              "MT",
+              "LU",
+              "ME",
+              "ES",
+              "BE",
+              "EE",
+              "FI",
+              "IM",
+              "MK",
+              "NO",
+              "GL",
+              "SK",
+              "VA",
+              "SI",
+              "TR"
+            ]
+          },
+          {
+            "variant_ids": [
+              111492,
+              111493,
+              244213,
+              244214,
+              244215,
+              244216,
+              244217,
+              244218
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1939
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "CL",
+              "EC",
+              "CO",
+              "PE",
+              "BO",
+              "PY",
+              "AN",
+              "BR",
+              "FK",
+              "REST_OF_THE_WORLD",
+              "AR",
+              "GF",
+              "VE",
+              "UY",
+              "GY",
+              "SR"
+            ]
+          },
+          {
+            "variant_ids": [
+              111492,
+              111493,
+              244213,
+              244214,
+              244215,
+              244216,
+              244217,
+              244218
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2429
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 319
+            },
+            "countries": [
+              "IN",
+              "ID",
+              "RU",
+              "BD",
+              "BT",
+              "CX",
+              "IQ",
+              "LA",
+              "SG",
+              "TJ",
+              "AF",
+              "KH",
+              "JP",
+              "SY",
+              "JO",
+              "MY",
+              "UZ",
+              "TH",
+              "VN",
+              "HK",
+              "IL",
+              "PH",
+              "NP",
+              "IO",
+              "KG",
+              "MV",
+              "PS",
+              "TW",
+              "AE",
+              "KW",
+              "OM",
+              "AZ",
+              "KR",
+              "MM",
+              "YE",
+              "IR",
+              "KZ",
+              "LB",
+              "PK",
+              "CC",
+              "MO",
+              "CN",
+              "QA",
+              "SA",
+              "BH",
+              "MN",
+              "LK",
+              "BN",
+              "TM"
+            ]
+          },
+          {
+            "variant_ids": [
+              111492,
+              111493,
+              244213,
+              244214,
+              244215,
+              244216,
+              244217,
+              244218
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 449
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "GB"
+            ]
+          },
+          {
+            "variant_ids": [
+              111492,
+              111493,
+              244213,
+              244214,
+              244215,
+              244216,
+              244217,
+              244218
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 939
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 189
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              111492,
+              111493,
+              244213,
+              244214,
+              244215,
+              244216,
+              244217,
+              244218
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 549
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "DE"
+            ]
+          },
+          {
+            "variant_ids": [
+              111492,
+              111493,
+              244213,
+              244214,
+              244215,
+              244216,
+              244217,
+              244218
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1709
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 519
+            },
+            "countries": [
+              "NZ"
+            ]
+          },
+          {
+            "variant_ids": [
+              111492,
+              111493,
+              244213,
+              244214,
+              244215,
+              244216,
+              244217,
+              244218
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 599
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              111492,
+              111493,
+              244213,
+              244214,
+              244215,
+              244216,
+              244217,
+              244218
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2199
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 299
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

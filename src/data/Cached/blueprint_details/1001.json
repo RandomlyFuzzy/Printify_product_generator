@@ -1,0 +1,332 @@
+{
+  "blueprint": {
+    "id": 1001,
+    "title": "Square Poly Canvas Pillowcase",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d88db3d2daf58467092d82",
+      "https://images.printify.com/66d88db16d380c49040e5863",
+      "https://images.printify.com/67ee2a8015a168f639027d83",
+      "https://images.printify.com/63ecd1370a3258d111053980",
+      "https://images.printify.com/63ecd1347e4cfda8c5079a47",
+      "https://images.printify.com/63ecd1fb19acf8535600b379",
+      "https://images.printify.com/63ecd1360a3258d11105397c"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 48,
+        "title": "Colorway"
+      },
+      "variants": {
+        "id": 48,
+        "title": "Colorway",
+        "variants": [
+          {
+            "id": 79394,
+            "title": "16\u0022 \u00D7 16\u0022",
+            "options": {
+              "size": "16\u0022 \u00D7 16\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 2557,
+                "width": 2557
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 2557,
+                "width": 2557
+              }
+            ]
+          },
+          {
+            "id": 79395,
+            "title": "18\u0022 \u00D7 18\u0022",
+            "options": {
+              "size": "18\u0022 \u00D7 18\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 2856,
+                "width": 2856
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 2856,
+                "width": 2856
+              }
+            ]
+          },
+          {
+            "id": 79396,
+            "title": "20\u0022 \u00D7 20\u0022",
+            "options": {
+              "size": "20\u0022 \u00D7 20\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 3152,
+                "width": 3152
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 3152,
+                "width": 3152
+              }
+            ]
+          },
+          {
+            "id": 79397,
+            "title": "24\u0022 \u00D7 24\u0022",
+            "options": {
+              "size": "24\u0022 \u00D7 24\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 3750,
+                "width": 3750
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 3750,
+                "width": 3750
+              }
+            ]
+          },
+          {
+            "id": 79398,
+            "title": "26\u0022 \u00D7 26\u0022",
+            "options": {
+              "size": "26\u0022 \u00D7 26\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 4054,
+                "width": 4054
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 4054,
+                "width": 4054
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              79394,
+              79395,
+              79396,
+              79397,
+              79398
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2279
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1139
+            },
+            "countries": [
+              "REST_OF_THE_WORLD",
+              "MX",
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              79394,
+              79395,
+              79396,
+              79397,
+              79398
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1869
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 899
+            },
+            "countries": [
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "DK",
+              "EE",
+              "FO",
+              "FI",
+              "FR",
+              "GE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IS",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "LV",
+              "LI",
+              "LT",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NO",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "SE",
+              "CH",
+              "TR",
+              "UA",
+              "XK",
+              "DE",
+              "NL"
+            ]
+          },
+          {
+            "variant_ids": [
+              79394,
+              79395,
+              79396,
+              79397,
+              79398
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1099
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 309
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              79397,
+              79398
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 609
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 209
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              79394,
+              79395,
+              79396,
+              79397,
+              79398
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 569
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 299
+            },
+            "countries": [
+              "GB"
+            ]
+          },
+          {
+            "variant_ids": [
+              79395,
+              79396
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 569
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 209
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              79394
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 509
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 209
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

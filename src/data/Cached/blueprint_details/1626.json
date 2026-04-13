@@ -1,0 +1,469 @@
+{
+  "blueprint": {
+    "id": 1626,
+    "title": "Woven Blanket",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66ffe1700303ca57d00119b3",
+      "https://images.printify.com/67179ea01cae75dbb50ff7d2",
+      "https://images.printify.com/67179e9750dd282ecb05f2bf",
+      "https://images.printify.com/66ffe0bec6a5238bfc0644c9",
+      "https://images.printify.com/66ffe0c5c6a5238bfc0644ca",
+      "https://images.printify.com/66ffe0c7c6a5238bfc0644cb",
+      "https://images.printify.com/6705337bd3db19d0a00d8e32",
+      "https://images.printify.com/670533764cb119d78b06c122",
+      "https://images.printify.com/690491f18948137a460a2692"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 10,
+        "title": "MWW On Demand"
+      },
+      "variants": {
+        "id": 10,
+        "title": "MWW On Demand",
+        "variants": [
+          {
+            "id": 112794,
+            "title": "Artwork / 52\u0027\u0027 \u00D7 37\u0027\u0027",
+            "options": {
+              "finish": "Artwork",
+              "size": "52\u0027\u0027 \u00D7 37\u0027\u0027"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "weaving",
+                "height": 3552,
+                "width": 4992
+              }
+            ]
+          },
+          {
+            "id": 112795,
+            "title": "Artwork / 60\u0022 \u00D7 50\u0022",
+            "options": {
+              "finish": "Artwork",
+              "size": "60\u0022 \u00D7 50\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "weaving",
+                "height": 4800,
+                "width": 5760
+              }
+            ]
+          },
+          {
+            "id": 112796,
+            "title": "Artwork / 80\u0022 \u00D7 60\u0022",
+            "options": {
+              "finish": "Artwork",
+              "size": "80\u0022 \u00D7 60\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "weaving",
+                "height": 5760,
+                "width": 7680
+              }
+            ]
+          },
+          {
+            "id": 112797,
+            "title": "Photo / 52\u0027\u0027 \u00D7 37\u0027\u0027",
+            "options": {
+              "finish": "Photo",
+              "size": "52\u0027\u0027 \u00D7 37\u0027\u0027"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "weaving",
+                "height": 3552,
+                "width": 4992
+              }
+            ]
+          },
+          {
+            "id": 112798,
+            "title": "Photo / 60\u0022 \u00D7 50\u0022",
+            "options": {
+              "finish": "Photo",
+              "size": "60\u0022 \u00D7 50\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "weaving",
+                "height": 4800,
+                "width": 5760
+              }
+            ]
+          },
+          {
+            "id": 112799,
+            "title": "Photo / 80\u0022 \u00D7 60\u0022",
+            "options": {
+              "finish": "Photo",
+              "size": "80\u0022 \u00D7 60\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "weaving",
+                "height": 5760,
+                "width": 7680
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              112796,
+              112799
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1899
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              112796,
+              112799
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1599
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              112796,
+              112799
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1199
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 629
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              112794,
+              112795,
+              112797,
+              112798
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              112794,
+              112795,
+              112797,
+              112798
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              112794,
+              112795,
+              112797,
+              112798
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1699
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 819
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "provider": {
+        "id": 99,
+        "title": "Printify Choice"
+      },
+      "variants": {
+        "id": 99,
+        "title": "Printify Choice",
+        "variants": [
+          {
+            "id": 112794,
+            "title": "Artwork / 52\u0027\u0027 \u00D7 37\u0027\u0027",
+            "options": {
+              "finish": "Artwork",
+              "size": "52\u0027\u0027 \u00D7 37\u0027\u0027"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "weaving",
+                "height": 3552,
+                "width": 4992
+              }
+            ]
+          },
+          {
+            "id": 112795,
+            "title": "Artwork / 60\u0022 \u00D7 50\u0022",
+            "options": {
+              "finish": "Artwork",
+              "size": "60\u0022 \u00D7 50\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "weaving",
+                "height": 4800,
+                "width": 5760
+              }
+            ]
+          },
+          {
+            "id": 112796,
+            "title": "Artwork / 80\u0022 \u00D7 60\u0022",
+            "options": {
+              "finish": "Artwork",
+              "size": "80\u0022 \u00D7 60\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "weaving",
+                "height": 5760,
+                "width": 7680
+              }
+            ]
+          },
+          {
+            "id": 112797,
+            "title": "Photo / 52\u0027\u0027 \u00D7 37\u0027\u0027",
+            "options": {
+              "finish": "Photo",
+              "size": "52\u0027\u0027 \u00D7 37\u0027\u0027"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "weaving",
+                "height": 3552,
+                "width": 4992
+              }
+            ]
+          },
+          {
+            "id": 112798,
+            "title": "Photo / 60\u0022 \u00D7 50\u0022",
+            "options": {
+              "finish": "Photo",
+              "size": "60\u0022 \u00D7 50\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "weaving",
+                "height": 4800,
+                "width": 5760
+              }
+            ]
+          },
+          {
+            "id": 112799,
+            "title": "Photo / 80\u0022 \u00D7 60\u0022",
+            "options": {
+              "finish": "Photo",
+              "size": "80\u0022 \u00D7 60\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "weaving",
+                "height": 5760,
+                "width": 7680
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              112796,
+              112799
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1899
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              112796,
+              112799
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1599
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              112796,
+              112799
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1199
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 629
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              112794,
+              112795,
+              112797,
+              112798
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              112794,
+              112795,
+              112797,
+              112798
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              112794,
+              112795,
+              112797,
+              112798
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1699
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 819
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

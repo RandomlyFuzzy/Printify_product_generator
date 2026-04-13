@@ -1,0 +1,219 @@
+{
+  "blueprint": {
+    "id": 1081,
+    "title": "Vinyl Banners",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d5b48aadd325a33709ce72",
+      "https://images.printify.com/66d5b48b084ec852f4001a87",
+      "https://images.printify.com/67ed30d8a6151de5c40d8162",
+      "https://images.printify.com/64106555699c5f44bf0ce3e4"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 2,
+        "title": "Sensaria"
+      },
+      "variants": {
+        "id": 2,
+        "title": "Sensaria",
+        "variants": [
+          {
+            "id": 81429,
+            "title": "48\u0022 x 24\u0022 (Horizontal)",
+            "options": {
+              "size": "48\u0022 x 24\u0022 (Horizontal)"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 3602,
+                "width": 7199
+              }
+            ]
+          },
+          {
+            "id": 81430,
+            "title": "72\u0022 x 24\u0022 (Horizontal)",
+            "options": {
+              "size": "72\u0022 x 24\u0022 (Horizontal)"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 3602,
+                "width": 10801
+              }
+            ]
+          },
+          {
+            "id": 81431,
+            "title": "72\u0022 x 36\u0022 (Horizontal)",
+            "options": {
+              "size": "72\u0022 x 36\u0022 (Horizontal)"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 5398,
+                "width": 10801
+              }
+            ]
+          },
+          {
+            "id": 81432,
+            "title": "24\u0022 x 48\u0022 (Vertical)",
+            "options": {
+              "size": "24\u0022 x 48\u0022 (Vertical)"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 7199,
+                "width": 3602
+              }
+            ]
+          },
+          {
+            "id": 81433,
+            "title": "24\u0022 x 72\u0022 (Vertical)",
+            "options": {
+              "size": "24\u0022 x 72\u0022 (Vertical)"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 10801,
+                "width": 3602
+              }
+            ]
+          },
+          {
+            "id": 81434,
+            "title": "36\u0022 x 72\u0022 (Vertical)",
+            "options": {
+              "size": "36\u0022 x 72\u0022 (Vertical)"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 10801,
+                "width": 5398
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              81431,
+              81434
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 5819
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 5599
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              81429,
+              81430,
+              81431,
+              81432,
+              81433,
+              81434
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 4909
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 4729
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              81431,
+              81434
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1529
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1049
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              81429,
+              81430,
+              81432,
+              81433
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1449
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 839
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              81429,
+              81430,
+              81432,
+              81433
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 5249
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 5049
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

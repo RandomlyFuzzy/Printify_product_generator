@@ -1,0 +1,143 @@
+{
+  "blueprint": {
+    "id": 961,
+    "title": "Acrylic Prints (Triptych)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d1a428b0d1184bc3055b32",
+      "https://images.printify.com/66d1a42732d8bd021c048972",
+      "https://images.printify.com/62b081e815ff242ea40f21f5",
+      "https://images.printify.com/62b0804bffe9e97b29026a25"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 104,
+        "title": "Acrylic Idea Factory"
+      },
+      "variants": {
+        "id": 104,
+        "title": "Acrylic Idea Factory",
+        "variants": [
+          {
+            "id": 78406,
+            "title": "12\u0022 x 36\u0022 (Vertical) / 0.25\u0027\u0027",
+            "options": {
+              "size": "12\u0022 x 36\u0022 (Vertical)",
+              "depth": "0.25\u0027\u0027"
+            },
+            "placeholders": [
+              {
+                "position": "panel_one",
+                "decoration_method": "uv",
+                "height": 10838,
+                "width": 3638
+              },
+              {
+                "position": "panel_two",
+                "decoration_method": "uv",
+                "height": 10838,
+                "width": 3638
+              },
+              {
+                "position": "panel_three",
+                "decoration_method": "uv",
+                "height": 10838,
+                "width": 3638
+              }
+            ]
+          },
+          {
+            "id": 78407,
+            "title": "36\u0022 x 12\u0022 (Horizontal) / 0.25\u0027\u0027",
+            "options": {
+              "size": "36\u0022 x 12\u0022 (Horizontal)",
+              "depth": "0.25\u0027\u0027"
+            },
+            "placeholders": [
+              {
+                "position": "panel_one",
+                "decoration_method": "uv",
+                "height": 3638,
+                "width": 10838
+              },
+              {
+                "position": "panel_two",
+                "decoration_method": "uv",
+                "height": 3638,
+                "width": 10838
+              },
+              {
+                "position": "panel_three",
+                "decoration_method": "uv",
+                "height": 3638,
+                "width": 10838
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              78406,
+              78407
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 3519
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 3519
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              78406,
+              78407
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 5799
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 5799
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              78406,
+              78407
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 11019
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 11019
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

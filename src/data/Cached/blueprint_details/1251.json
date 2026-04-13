@@ -1,0 +1,279 @@
+{
+  "blueprint": {
+    "id": 1251,
+    "title": "Women\u0027s Pajama Pants (AOP)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66e003864346e974780feb42",
+      "https://images.printify.com/66e00396699d8ad2d909a423",
+      "https://images.printify.com/634e64557aacaa18e70880f9",
+      "https://images.printify.com/63a1d04e2cbe89f48905e9c3",
+      "https://images.printify.com/6346999843508eeaee065a9a",
+      "https://images.printify.com/63469a5a43508eeaee065aa1",
+      "https://images.printify.com/63469bb98fde52c8eb033807",
+      "https://images.printify.com/63469bbceece687c4106b033"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 47,
+        "title": "Miami Sublimation"
+      },
+      "variants": {
+        "id": 47,
+        "title": "Miami Sublimation",
+        "variants": [
+          {
+            "id": 94289,
+            "title": "S",
+            "options": {
+              "size": "S"
+            },
+            "placeholders": [
+              {
+                "position": "left_leg",
+                "decoration_method": "dye-sublimation",
+                "height": 6616,
+                "width": 5642
+              },
+              {
+                "position": "right_leg",
+                "decoration_method": "dye-sublimation",
+                "height": 6616,
+                "width": 5642
+              }
+            ]
+          },
+          {
+            "id": 94290,
+            "title": "M",
+            "options": {
+              "size": "M"
+            },
+            "placeholders": [
+              {
+                "position": "left_leg",
+                "decoration_method": "dye-sublimation",
+                "height": 6684,
+                "width": 5701
+              },
+              {
+                "position": "right_leg",
+                "decoration_method": "dye-sublimation",
+                "height": 6684,
+                "width": 5701
+              }
+            ]
+          },
+          {
+            "id": 94291,
+            "title": "L",
+            "options": {
+              "size": "L"
+            },
+            "placeholders": [
+              {
+                "position": "left_leg",
+                "decoration_method": "dye-sublimation",
+                "height": 6821,
+                "width": 5818
+              },
+              {
+                "position": "right_leg",
+                "decoration_method": "dye-sublimation",
+                "height": 6821,
+                "width": 5818
+              }
+            ]
+          },
+          {
+            "id": 94292,
+            "title": "XL",
+            "options": {
+              "size": "XL"
+            },
+            "placeholders": [
+              {
+                "position": "left_leg",
+                "decoration_method": "dye-sublimation",
+                "height": 6899,
+                "width": 5884
+              },
+              {
+                "position": "right_leg",
+                "decoration_method": "dye-sublimation",
+                "height": 6899,
+                "width": 5884
+              }
+            ]
+          },
+          {
+            "id": 94293,
+            "title": "2XL",
+            "options": {
+              "size": "2XL"
+            },
+            "placeholders": [
+              {
+                "position": "left_leg",
+                "decoration_method": "dye-sublimation",
+                "height": 7004,
+                "width": 5974
+              },
+              {
+                "position": "right_leg",
+                "decoration_method": "dye-sublimation",
+                "height": 7004,
+                "width": 5974
+              }
+            ]
+          },
+          {
+            "id": 94294,
+            "title": "3XL",
+            "options": {
+              "size": "3XL"
+            },
+            "placeholders": [
+              {
+                "position": "left_leg",
+                "decoration_method": "dye-sublimation",
+                "height": 7057,
+                "width": 6018
+              },
+              {
+                "position": "right_leg",
+                "decoration_method": "dye-sublimation",
+                "height": 7057,
+                "width": 6018
+              }
+            ]
+          },
+          {
+            "id": 94295,
+            "title": "4XL",
+            "options": {
+              "size": "4XL"
+            },
+            "placeholders": [
+              {
+                "position": "left_leg",
+                "decoration_method": "dye-sublimation",
+                "height": 7057,
+                "width": 6018
+              },
+              {
+                "position": "right_leg",
+                "decoration_method": "dye-sublimation",
+                "height": 7057,
+                "width": 6018
+              }
+            ]
+          },
+          {
+            "id": 95503,
+            "title": "XS",
+            "options": {
+              "size": "XS"
+            },
+            "placeholders": [
+              {
+                "position": "left_leg",
+                "decoration_method": "dye-sublimation",
+                "height": 6547,
+                "width": 5584
+              },
+              {
+                "position": "right_leg",
+                "decoration_method": "dye-sublimation",
+                "height": 6547,
+                "width": 5584
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              94289,
+              94290,
+              94291,
+              94292,
+              94293,
+              94294,
+              94295,
+              95503
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 609
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              94289,
+              94290,
+              94291,
+              94292,
+              94293,
+              94294,
+              94295,
+              95503
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 599
+            },
+            "countries": [
+              "NZ",
+              "AU",
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              94289,
+              94290,
+              94291,
+              94292,
+              94293,
+              94294,
+              94295,
+              95503
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1699
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

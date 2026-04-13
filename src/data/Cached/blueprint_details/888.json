@@ -1,0 +1,128 @@
+{
+  "blueprint": {
+    "id": 888,
+    "title": "Waterproof Travel Bag",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66cf200373476ab2ab0d9c12",
+      "https://images.printify.com/66cf2001e43206c47409c422",
+      "https://images.printify.com/61d54e8020ffa634ba67dd19",
+      "https://images.printify.com/620df0f27411fa595e199cf5",
+      "https://images.printify.com/621613bee8b94d6d63723274",
+      "https://images.printify.com/620df1087411fa595e199cf8",
+      "https://images.printify.com/620df10b61f4ae7ee5066b8d"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 14,
+        "title": "ArtsAdd"
+      },
+      "variants": {
+        "id": 14,
+        "title": "ArtsAdd",
+        "variants": [
+          {
+            "id": 77708,
+            "title": "20\u0022 x 12\u0022 / Brown",
+            "options": {
+              "size": "20\u0022 x 12\u0022",
+              "color": "Brown"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 2316,
+                "width": 3167
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 2316,
+                "width": 3167
+              },
+              {
+                "position": "right_side",
+                "decoration_method": "dye-sublimation",
+                "height": 1775,
+                "width": 1472
+              },
+              {
+                "position": "left_side",
+                "decoration_method": "dye-sublimation",
+                "height": 1775,
+                "width": 1472
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              77708
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1399
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1399
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              77708
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 840
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 840
+            },
+            "countries": [
+              "REST_OF_THE_WORLD",
+              "NL",
+              "BR",
+              "US",
+              "MX",
+              "CA",
+              "DK",
+              "NZ"
+            ]
+          },
+          {
+            "variant_ids": [
+              77708
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "CN"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

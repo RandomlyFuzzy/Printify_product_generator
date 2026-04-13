@@ -1,0 +1,325 @@
+{
+  "blueprint": {
+    "id": 530,
+    "title": "Pewter Snowflake Ornament",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66f4fb317a0f7a1aac0a3382",
+      "https://images.printify.com/66f4fb3591fd01c127054092",
+      "https://images.printify.com/5f7d7e13ee8ca053e0696473"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 66,
+        "title": "Prima Printing"
+      },
+      "variants": {
+        "id": 66,
+        "title": "Prima Printing",
+        "variants": [
+          {
+            "id": 68981,
+            "title": "Snowflake / One Size",
+            "options": {
+              "shape": "Snowflake",
+              "size": "One Size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 562,
+                "width": 562
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              68981
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 449
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 269
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              68981
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 609
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 549
+            },
+            "countries": [
+              "NZ"
+            ]
+          },
+          {
+            "variant_ids": [
+              68981
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 809
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 809
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              68981
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1169
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1169
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              68981
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1489
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1489
+            },
+            "countries": [
+              "AX",
+              "AL",
+              "AD",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "DK",
+              "EE",
+              "FO",
+              "FI",
+              "FR",
+              "DE",
+              "GI",
+              "GR",
+              "GG",
+              "VA",
+              "HU",
+              "IS",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "LV",
+              "LI",
+              "LT",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "NO",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "SE",
+              "CH",
+              "GB",
+              "XK"
+            ]
+          },
+          {
+            "variant_ids": [
+              68981
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2579
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2579
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "provider": {
+        "id": 59,
+        "title": "Imagine Your Photos"
+      },
+      "variants": {
+        "id": 59,
+        "title": "Imagine Your Photos",
+        "variants": [
+          {
+            "id": 68981,
+            "title": "Snowflake / One Size",
+            "options": {
+              "shape": "Snowflake",
+              "size": "One Size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 562,
+                "width": 562
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              68981
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 949
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "CA",
+              "REST_OF_THE_WORLD",
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "DK",
+              "EE",
+              "FO",
+              "FI",
+              "FR",
+              "GE",
+              "DE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IS",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "LV",
+              "LI",
+              "LT",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "NO",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "SE",
+              "CH",
+              "TR",
+              "UA",
+              "GB",
+              "XK"
+            ]
+          },
+          {
+            "variant_ids": [
+              68981
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 569
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 69
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

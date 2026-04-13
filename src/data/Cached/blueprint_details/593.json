@@ -1,0 +1,365 @@
+{
+  "blueprint": {
+    "id": 593,
+    "title": "Men\u0027s Baseball Jersey (AOP)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d6ed025e152581a00207c9",
+      "https://images.printify.com/66d6ecff905ca5d3f104c1f5",
+      "https://images.printify.com/60be1667ac3b3e65c337434f",
+      "https://images.printify.com/60be131249465c56d743fd59",
+      "https://images.printify.com/60be1311ac3b3e65c3374347",
+      "https://images.printify.com/60be13122c38d354f81b5d81"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 83,
+        "title": "Subliminator"
+      },
+      "variants": {
+        "id": 83,
+        "title": "Subliminator",
+        "variants": [
+          {
+            "id": 72387,
+            "title": "S / Seam thread color automatically matched to design",
+            "options": {
+              "size": "S",
+              "color": "Seam thread color automatically matched to design"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "aop",
+                "height": 6000,
+                "width": 6000
+              },
+              {
+                "position": "back",
+                "decoration_method": "aop",
+                "height": 6000,
+                "width": 6000
+              },
+              {
+                "position": "inside",
+                "decoration_method": "aop",
+                "height": 6000,
+                "width": 3200
+              },
+              {
+                "position": "sleeves",
+                "decoration_method": "aop",
+                "height": 2200,
+                "width": 8800
+              }
+            ]
+          },
+          {
+            "id": 72388,
+            "title": "M / Seam thread color automatically matched to design",
+            "options": {
+              "size": "M",
+              "color": "Seam thread color automatically matched to design"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "aop",
+                "height": 6000,
+                "width": 6000
+              },
+              {
+                "position": "back",
+                "decoration_method": "aop",
+                "height": 6000,
+                "width": 6000
+              },
+              {
+                "position": "inside",
+                "decoration_method": "aop",
+                "height": 6000,
+                "width": 3200
+              },
+              {
+                "position": "sleeves",
+                "decoration_method": "aop",
+                "height": 2200,
+                "width": 8800
+              }
+            ]
+          },
+          {
+            "id": 72389,
+            "title": "L / Seam thread color automatically matched to design",
+            "options": {
+              "size": "L",
+              "color": "Seam thread color automatically matched to design"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "aop",
+                "height": 6000,
+                "width": 6000
+              },
+              {
+                "position": "back",
+                "decoration_method": "aop",
+                "height": 6000,
+                "width": 6000
+              },
+              {
+                "position": "inside",
+                "decoration_method": "aop",
+                "height": 6000,
+                "width": 3200
+              },
+              {
+                "position": "sleeves",
+                "decoration_method": "aop",
+                "height": 2200,
+                "width": 8800
+              }
+            ]
+          },
+          {
+            "id": 72390,
+            "title": "XL / Seam thread color automatically matched to design",
+            "options": {
+              "size": "XL",
+              "color": "Seam thread color automatically matched to design"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "aop",
+                "height": 6000,
+                "width": 6000
+              },
+              {
+                "position": "back",
+                "decoration_method": "aop",
+                "height": 6000,
+                "width": 6000
+              },
+              {
+                "position": "inside",
+                "decoration_method": "aop",
+                "height": 6000,
+                "width": 3200
+              },
+              {
+                "position": "sleeves",
+                "decoration_method": "aop",
+                "height": 2200,
+                "width": 8800
+              }
+            ]
+          },
+          {
+            "id": 72391,
+            "title": "2XL / Seam thread color automatically matched to design",
+            "options": {
+              "size": "2XL",
+              "color": "Seam thread color automatically matched to design"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "aop",
+                "height": 6000,
+                "width": 6000
+              },
+              {
+                "position": "back",
+                "decoration_method": "aop",
+                "height": 6000,
+                "width": 6000
+              },
+              {
+                "position": "inside",
+                "decoration_method": "aop",
+                "height": 6000,
+                "width": 3200
+              },
+              {
+                "position": "sleeves",
+                "decoration_method": "aop",
+                "height": 2200,
+                "width": 8800
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              72387,
+              72388,
+              72389,
+              72390,
+              72391
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1629
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1559
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              72387,
+              72388,
+              72389,
+              72390,
+              72391
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1899
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              72387,
+              72388,
+              72389,
+              72390,
+              72391
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1569
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1499
+            },
+            "countries": [
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "DK",
+              "EE",
+              "FO",
+              "FI",
+              "FR",
+              "GE",
+              "DE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IS",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "LV",
+              "LI",
+              "LT",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "NO",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "SE",
+              "CH",
+              "TR",
+              "UA",
+              "GB",
+              "XK"
+            ]
+          },
+          {
+            "variant_ids": [
+              72387,
+              72388,
+              72389,
+              72390,
+              72391
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2569
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2459
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              72387,
+              72388,
+              72389,
+              72390,
+              72391
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2199
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2069
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

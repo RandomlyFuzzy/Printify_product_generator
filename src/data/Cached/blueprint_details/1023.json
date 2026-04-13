@@ -1,0 +1,520 @@
+{
+  "blueprint": {
+    "id": 1023,
+    "title": "Lightweight Sweatshirt (AOP)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d88a5e9a844c72e40a68e5",
+      "https://images.printify.com/66f54f11e50171e0d8017ef2",
+      "https://images.printify.com/62e250b8e067f200570aa177",
+      "https://images.printify.com/62e250b96dcb096af305c21f",
+      "https://images.printify.com/634d3644508d94ff4709d9df",
+      "https://images.printify.com/62e243c9f447ff43090eb787"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 90,
+        "title": "Smart Printee"
+      },
+      "variants": {
+        "id": 90,
+        "title": "Smart Printee",
+        "variants": [
+          {
+            "id": 91089,
+            "title": "S",
+            "options": {
+              "size": "S"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "aop",
+                "height": 4270,
+                "width": 3789
+              },
+              {
+                "position": "back",
+                "decoration_method": "aop",
+                "height": 4269,
+                "width": 3793
+              },
+              {
+                "position": "waistband",
+                "decoration_method": "aop",
+                "height": 944,
+                "width": 6247
+              },
+              {
+                "position": "right_sleeve",
+                "decoration_method": "aop",
+                "height": 3804,
+                "width": 2964
+              },
+              {
+                "position": "right_cuff_panel",
+                "decoration_method": "aop",
+                "height": 909,
+                "width": 1466
+              },
+              {
+                "position": "left_sleeve",
+                "decoration_method": "aop",
+                "height": 3804,
+                "width": 2964
+              },
+              {
+                "position": "left_cuff_panel",
+                "decoration_method": "aop",
+                "height": 909,
+                "width": 1466
+              }
+            ]
+          },
+          {
+            "id": 91090,
+            "title": "M",
+            "options": {
+              "size": "M"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "aop",
+                "height": 4270,
+                "width": 3789
+              },
+              {
+                "position": "back",
+                "decoration_method": "aop",
+                "height": 4269,
+                "width": 3793
+              },
+              {
+                "position": "waistband",
+                "decoration_method": "aop",
+                "height": 944,
+                "width": 6247
+              },
+              {
+                "position": "right_sleeve",
+                "decoration_method": "aop",
+                "height": 3804,
+                "width": 2964
+              },
+              {
+                "position": "right_cuff_panel",
+                "decoration_method": "aop",
+                "height": 909,
+                "width": 1466
+              },
+              {
+                "position": "left_sleeve",
+                "decoration_method": "aop",
+                "height": 3804,
+                "width": 2964
+              },
+              {
+                "position": "left_cuff_panel",
+                "decoration_method": "aop",
+                "height": 909,
+                "width": 1466
+              }
+            ]
+          },
+          {
+            "id": 91091,
+            "title": "L",
+            "options": {
+              "size": "L"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "aop",
+                "height": 4270,
+                "width": 3789
+              },
+              {
+                "position": "back",
+                "decoration_method": "aop",
+                "height": 4269,
+                "width": 3793
+              },
+              {
+                "position": "waistband",
+                "decoration_method": "aop",
+                "height": 944,
+                "width": 6247
+              },
+              {
+                "position": "right_sleeve",
+                "decoration_method": "aop",
+                "height": 3804,
+                "width": 2964
+              },
+              {
+                "position": "right_cuff_panel",
+                "decoration_method": "aop",
+                "height": 909,
+                "width": 1466
+              },
+              {
+                "position": "left_sleeve",
+                "decoration_method": "aop",
+                "height": 3804,
+                "width": 2964
+              },
+              {
+                "position": "left_cuff_panel",
+                "decoration_method": "aop",
+                "height": 909,
+                "width": 1466
+              }
+            ]
+          },
+          {
+            "id": 91092,
+            "title": "XL",
+            "options": {
+              "size": "XL"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "aop",
+                "height": 4270,
+                "width": 3789
+              },
+              {
+                "position": "back",
+                "decoration_method": "aop",
+                "height": 4269,
+                "width": 3793
+              },
+              {
+                "position": "waistband",
+                "decoration_method": "aop",
+                "height": 944,
+                "width": 6247
+              },
+              {
+                "position": "right_sleeve",
+                "decoration_method": "aop",
+                "height": 3804,
+                "width": 2964
+              },
+              {
+                "position": "right_cuff_panel",
+                "decoration_method": "aop",
+                "height": 909,
+                "width": 1466
+              },
+              {
+                "position": "left_sleeve",
+                "decoration_method": "aop",
+                "height": 3804,
+                "width": 2964
+              },
+              {
+                "position": "left_cuff_panel",
+                "decoration_method": "aop",
+                "height": 909,
+                "width": 1466
+              }
+            ]
+          },
+          {
+            "id": 91093,
+            "title": "2XL",
+            "options": {
+              "size": "2XL"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "aop",
+                "height": 4270,
+                "width": 3789
+              },
+              {
+                "position": "back",
+                "decoration_method": "aop",
+                "height": 4269,
+                "width": 3793
+              },
+              {
+                "position": "waistband",
+                "decoration_method": "aop",
+                "height": 944,
+                "width": 6247
+              },
+              {
+                "position": "right_sleeve",
+                "decoration_method": "aop",
+                "height": 3804,
+                "width": 2964
+              },
+              {
+                "position": "right_cuff_panel",
+                "decoration_method": "aop",
+                "height": 909,
+                "width": 1466
+              },
+              {
+                "position": "left_sleeve",
+                "decoration_method": "aop",
+                "height": 3804,
+                "width": 2964
+              },
+              {
+                "position": "left_cuff_panel",
+                "decoration_method": "aop",
+                "height": 909,
+                "width": 1466
+              }
+            ]
+          },
+          {
+            "id": 91094,
+            "title": "3XL",
+            "options": {
+              "size": "3XL"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "aop",
+                "height": 4270,
+                "width": 3789
+              },
+              {
+                "position": "back",
+                "decoration_method": "aop",
+                "height": 4269,
+                "width": 3793
+              },
+              {
+                "position": "waistband",
+                "decoration_method": "aop",
+                "height": 944,
+                "width": 6247
+              },
+              {
+                "position": "right_sleeve",
+                "decoration_method": "aop",
+                "height": 3804,
+                "width": 2964
+              },
+              {
+                "position": "right_cuff_panel",
+                "decoration_method": "aop",
+                "height": 909,
+                "width": 1466
+              },
+              {
+                "position": "left_sleeve",
+                "decoration_method": "aop",
+                "height": 3804,
+                "width": 2964
+              },
+              {
+                "position": "left_cuff_panel",
+                "decoration_method": "aop",
+                "height": 909,
+                "width": 1466
+              }
+            ]
+          },
+          {
+            "id": 91095,
+            "title": "4XL",
+            "options": {
+              "size": "4XL"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "aop",
+                "height": 4270,
+                "width": 3789
+              },
+              {
+                "position": "back",
+                "decoration_method": "aop",
+                "height": 4269,
+                "width": 3793
+              },
+              {
+                "position": "waistband",
+                "decoration_method": "aop",
+                "height": 944,
+                "width": 6247
+              },
+              {
+                "position": "right_sleeve",
+                "decoration_method": "aop",
+                "height": 3804,
+                "width": 2964
+              },
+              {
+                "position": "right_cuff_panel",
+                "decoration_method": "aop",
+                "height": 909,
+                "width": 1466
+              },
+              {
+                "position": "left_sleeve",
+                "decoration_method": "aop",
+                "height": 3804,
+                "width": 2964
+              },
+              {
+                "position": "left_cuff_panel",
+                "decoration_method": "aop",
+                "height": 909,
+                "width": 1466
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              91089,
+              91090,
+              91091,
+              91092,
+              91093,
+              91094,
+              91095
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1799
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1669
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              91089,
+              91090,
+              91091,
+              91092,
+              91093,
+              91094,
+              91095
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1359
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1359
+            },
+            "countries": [
+              "GB",
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "DK",
+              "EE",
+              "FO",
+              "FI",
+              "FR",
+              "GE",
+              "DE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IS",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "LV",
+              "LI",
+              "LT",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "NO",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "SE",
+              "CH",
+              "TR",
+              "UA",
+              "XK"
+            ]
+          },
+          {
+            "variant_ids": [
+              91089,
+              91090,
+              91091,
+              91092,
+              91093,
+              91094,
+              91095
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1729
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1729
+            },
+            "countries": [
+              "REST_OF_THE_WORLD",
+              "AU",
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

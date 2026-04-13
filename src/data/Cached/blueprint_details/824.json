@@ -1,0 +1,223 @@
+{
+  "blueprint": {
+    "id": 824,
+    "title": "Metal Plaque Ornament",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d818a90372654ad000a944",
+      "https://images.printify.com/66d818a84a1a05f38407da22",
+      "https://images.printify.com/63514401f9b981d229062f14",
+      "https://images.printify.com/635144014bded8a9c7073318",
+      "https://images.printify.com/619f6ef8ca6a276e4d69ef22",
+      "https://images.printify.com/619ea471d824a8673f57de4c",
+      "https://images.printify.com/619ea4746186cb008b68cbbd",
+      "https://images.printify.com/619ea477ca6a276e4d69ecba"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 72,
+        "title": "Print Clever"
+      },
+      "variants": {
+        "id": 72,
+        "title": "Print Clever",
+        "variants": [
+          {
+            "id": 75590,
+            "title": "One size / Vintage Petal",
+            "options": {
+              "size": "One size",
+              "shape": "Vintage Petal"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 956,
+                "width": 1276
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              75590
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 69
+            },
+            "countries": [
+              "IS",
+              "LV",
+              "EE",
+              "DK",
+              "LT",
+              "NO",
+              "LI",
+              "SE",
+              "CH",
+              "FI"
+            ]
+          },
+          {
+            "variant_ids": [
+              75590
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 69
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              75590
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1249
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 299
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              75590
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 779
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 69
+            },
+            "countries": [
+              "IE",
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "FO",
+              "FR",
+              "GE",
+              "DE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IT",
+              "JE",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "TR",
+              "UA",
+              "XK"
+            ]
+          },
+          {
+            "variant_ids": [
+              75590
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1139
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 69
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              75590
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 299
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 99
+            },
+            "countries": [
+              "GB",
+              "IM"
+            ]
+          },
+          {
+            "variant_ids": [
+              75590
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1119
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 299
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

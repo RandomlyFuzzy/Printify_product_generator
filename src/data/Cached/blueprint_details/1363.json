@@ -1,0 +1,396 @@
+{
+  "blueprint": {
+    "id": 1363,
+    "title": "Acrylic Ornaments",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66dee3083964aa06650feed5",
+      "https://images.printify.com/66cc76a2bf610a458c085a5d",
+      "https://images.printify.com/651e95655ac111facc013a53",
+      "https://images.printify.com/65167d695dbc2184190c5f32"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 70,
+        "title": "Printed Mint"
+      },
+      "variants": {
+        "id": 70,
+        "title": "Printed Mint",
+        "variants": [
+          {
+            "id": 102663,
+            "title": "1 pc / Round / One size",
+            "options": {
+              "quantity": "1 pc",
+              "shape": "Round",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1069,
+                "width": 1069
+              }
+            ]
+          },
+          {
+            "id": 102664,
+            "title": "5 pcs / Round / One size",
+            "options": {
+              "quantity": "5 pcs",
+              "shape": "Round",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1069,
+                "width": 1069
+              }
+            ]
+          },
+          {
+            "id": 102665,
+            "title": "10 pcs / Round / One size",
+            "options": {
+              "quantity": "10 pcs",
+              "shape": "Round",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1069,
+                "width": 1069
+              }
+            ]
+          },
+          {
+            "id": 102666,
+            "title": "25 pcs / Round / One size",
+            "options": {
+              "quantity": "25 pcs",
+              "shape": "Round",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1069,
+                "width": 1069
+              }
+            ]
+          },
+          {
+            "id": 102667,
+            "title": "50 pcs / Round / One size",
+            "options": {
+              "quantity": "50 pcs",
+              "shape": "Round",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1069,
+                "width": 1069
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              102663
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 569
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 69
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              102663
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 799
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 49
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              102663
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 799
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 79
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              102663
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 799
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 89
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              102666
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 799
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              102664
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 599
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              102664
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 859
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 819
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              102664
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 939
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 889
+            },
+            "countries": [
+              "CA",
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              102665
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 699
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 699
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              102665
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1189
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1129
+            },
+            "countries": [
+              "CA",
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              102665
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1049
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              102666
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1759
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1669
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              102666
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1689
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1599
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              102666
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1919
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1819
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              102667
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1599
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1599
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              102667
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2699
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2559
+            },
+            "countries": [
+              "CA",
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              102667
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 3119
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2959
+            },
+            "countries": [
+              "AU"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

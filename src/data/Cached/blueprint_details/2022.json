@@ -1,0 +1,180 @@
+{
+  "blueprint": {
+    "id": 2022,
+    "title": "Jewelry Travel Case",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/6888acbf7b3055f99b0fba52",
+      "https://images.printify.com/6888accc88bb2cdb330f4cd2",
+      "https://images.printify.com/68a2e321a08516f451044732",
+      "https://images.printify.com/68a2e334112549e3fc0180f2",
+      "https://images.printify.com/6888aeda1dae1cedab094532",
+      "https://images.printify.com/687f6d785c23e9cca60d8602",
+      "https://images.printify.com/687f6d81dad8100be707d542"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 219,
+        "title": "Lumient"
+      },
+      "variants": {
+        "id": 219,
+        "title": "Lumient",
+        "variants": [
+          {
+            "id": 122939,
+            "title": "Ivory / 4\u0022 x 4\u0022 x 2\u0022",
+            "options": {
+              "color": "Ivory",
+              "size": "4\u0022 x 4\u0022 x 2\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 960,
+                "width": 960
+              }
+            ]
+          },
+          {
+            "id": 122940,
+            "title": "Pink / 4\u0022 x 4\u0022 x 2\u0022",
+            "options": {
+              "color": "Pink",
+              "size": "4\u0022 x 4\u0022 x 2\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 960,
+                "width": 960
+              }
+            ]
+          },
+          {
+            "id": 122941,
+            "title": "Soft Gold / 4\u0022 x 4\u0022 x 2\u0022",
+            "options": {
+              "color": "Soft Gold",
+              "size": "4\u0022 x 4\u0022 x 2\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 960,
+                "width": 960
+              }
+            ]
+          },
+          {
+            "id": 122942,
+            "title": "Tiffany Blue / 4\u0022 x 4\u0022 x 2\u0022",
+            "options": {
+              "color": "Tiffany Blue",
+              "size": "4\u0022 x 4\u0022 x 2\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 960,
+                "width": 960
+              }
+            ]
+          },
+          {
+            "id": 122943,
+            "title": "Brown / 4\u0022 x 4\u0022 x 2\u0022",
+            "options": {
+              "color": "Brown",
+              "size": "4\u0022 x 4\u0022 x 2\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 960,
+                "width": 960
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              122939,
+              122940,
+              122941,
+              122942,
+              122943
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 649
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 269
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              122939,
+              122940,
+              122941,
+              122942,
+              122943
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2619
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 609
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              122939,
+              122940,
+              122941,
+              122942,
+              122943
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2919
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 879
+            },
+            "countries": [
+              "AU",
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

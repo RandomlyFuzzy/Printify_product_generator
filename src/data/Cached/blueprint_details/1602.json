@@ -1,0 +1,204 @@
+{
+  "blueprint": {
+    "id": 1602,
+    "title": "Napkins, 4-set",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d6f0f41c68fda51206f7bd",
+      "https://images.printify.com/66d6f0ef1c68fda51206f7ba",
+      "https://images.printify.com/66d6f0eb82063f364e0a80c2",
+      "https://images.printify.com/66d6f0f21c68fda51206f7bc",
+      "https://images.printify.com/66d6f1b158d91778c1068242",
+      "https://images.printify.com/66d6f198de6cb5bd030752a3"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 48,
+        "title": "Colorway"
+      },
+      "variants": {
+        "id": 48,
+        "title": "Colorway",
+        "variants": [
+          {
+            "id": 112063,
+            "title": "18\u0027\u0027 \u00D7 18\u0027\u0027 / 4-piece set",
+            "options": {
+              "size": "18\u0027\u0027 \u00D7 18\u0027\u0027",
+              "quantity": "4-piece set"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 2864,
+                "width": 2864
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              112063
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 759
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 559
+            },
+            "countries": [
+              "GB"
+            ]
+          },
+          {
+            "variant_ids": [
+              112063
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1059
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 859
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              112063
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2049
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1849
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              112063
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1679
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1489
+            },
+            "countries": [
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "DK",
+              "EE",
+              "FO",
+              "FI",
+              "FR",
+              "GE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IS",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "LV",
+              "LI",
+              "LT",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NO",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "SE",
+              "CH",
+              "TR",
+              "UA",
+              "XK"
+            ]
+          },
+          {
+            "variant_ids": [
+              112063
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2139
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1939
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              112063
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 619
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 429
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

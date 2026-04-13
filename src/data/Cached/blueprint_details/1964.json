@@ -1,0 +1,107 @@
+{
+  "blueprint": {
+    "id": 1964,
+    "title": "Champagne Glass, 8oz (Engraving)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/68dd34ff8c136ce75706c052",
+      "https://images.printify.com/68dd35042568a1d54f0f4a02",
+      "https://images.printify.com/68dd3501b2d757598a021022",
+      "https://images.printify.com/68dd356a4aebf3f57903ff62",
+      "https://images.printify.com/69048f62d57bd598800eacc2"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 217,
+        "title": "Fulfill Engine"
+      },
+      "variants": {
+        "id": 217,
+        "title": "Fulfill Engine",
+        "variants": [
+          {
+            "id": 121311,
+            "title": "8oz",
+            "options": {
+              "size": "8oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "engraving",
+                "height": 900,
+                "width": 600
+              },
+              {
+                "position": "back",
+                "decoration_method": "engraving",
+                "height": 900,
+                "width": 600
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              121311
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 699
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 309
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              121311
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1179
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 479
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              121311
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1679
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 489
+            },
+            "countries": [
+              "REST_OF_THE_WORLD",
+              "AU"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "blueprint": {
+    "id": 628,
+    "title": "Black Coffee Mug, 11oz",
+    "brand": "ORCA Coatings",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d6f7685bca5b4be408d8f5",
+      "https://images.printify.com/66d6f76ac3419d5f9602c5c2",
+      "https://images.printify.com/60c07317d73b7547221e1ff3"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 70,
+        "title": "Printed Mint"
+      },
+      "variants": {
+        "id": 70,
+        "title": "Printed Mint",
+        "variants": [
+          {
+            "id": 72212,
+            "title": "11oz / Black",
+            "options": {
+              "size": "11oz",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1050,
+                "width": 2400
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              72212
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2109
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 449
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              72212
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1579
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 489
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              72212
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 699
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 309
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

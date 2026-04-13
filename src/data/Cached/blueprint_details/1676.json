@@ -1,0 +1,187 @@
+{
+  "blueprint": {
+    "id": 1676,
+    "title": "Ceramic Ornament, 2-Side Print",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/68ee643ed82e0ad5620f4192",
+      "https://images.printify.com/68ee643df3cad88bfe00ea82",
+      "https://images.printify.com/68ee643a3cd63ed2a50f77e2",
+      "https://images.printify.com/68ee6440b7751dc885063bf2"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 94,
+        "title": "Harrier"
+      },
+      "variants": {
+        "id": 94,
+        "title": "Harrier",
+        "variants": [
+          {
+            "id": 115590,
+            "title": "2.95\u0027\u0027 \u00D7 2.95\u0027\u0027 / Round",
+            "options": {
+              "size": "2.95\u0027\u0027 \u00D7 2.95\u0027\u0027",
+              "shape": "Round"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 990,
+                "width": 990
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              115590
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 549
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 99
+            },
+            "countries": [
+              "CZ",
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "FO",
+              "GE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IE",
+              "IM",
+              "JE",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "TR",
+              "UA",
+              "XK",
+              "IT",
+              "DE",
+              "NL",
+              "FR",
+              "BE"
+            ]
+          },
+          {
+            "variant_ids": [
+              115590
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2379
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 359
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              115590
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 759
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 99
+            },
+            "countries": [
+              "EE",
+              "LV",
+              "NO",
+              "LU",
+              "FI",
+              "LI",
+              "DK",
+              "CH",
+              "IS",
+              "LT",
+              "SE"
+            ]
+          },
+          {
+            "variant_ids": [
+              115590
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1379
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 359
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              115590
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 349
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 99
+            },
+            "countries": [
+              "GB"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

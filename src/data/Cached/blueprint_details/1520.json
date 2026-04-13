@@ -1,0 +1,493 @@
+{
+  "blueprint": {
+    "id": 1520,
+    "title": "Pet Bowl, 18oz",
+    "brand": "Polar Camel",
+    "model": "",
+    "images": [
+      "https://images.printify.com/6984b225c0e20822e90f8d12",
+      "https://images.printify.com/698a2b5676dadae6d20ccc52",
+      "https://images.printify.com/698a1f07f4597fd176095e22",
+      "https://images.printify.com/698a1f0aed3d63852d0b9692",
+      "https://images.printify.com/698a1f12bbdffc985b0e1e22",
+      "https://images.printify.com/698a1f153e1f21c6d80b12b2",
+      "https://images.printify.com/698a1f183e69591dc80587c2",
+      "https://images.printify.com/6984b31bc0e20822e90f8d13",
+      "https://images.printify.com/6984b23af3f1dc9b710769f2"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 217,
+        "title": "Fulfill Engine"
+      },
+      "variants": {
+        "id": 217,
+        "title": "Fulfill Engine",
+        "variants": [
+          {
+            "id": 109205,
+            "title": "18oz / Black",
+            "options": {
+              "size": "18oz",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 450,
+                "width": 1200
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 450,
+                "width": 1200
+              }
+            ]
+          },
+          {
+            "id": 109206,
+            "title": "18oz / Navy",
+            "options": {
+              "size": "18oz",
+              "color": "Navy"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 450,
+                "width": 1200
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 450,
+                "width": 1200
+              }
+            ]
+          },
+          {
+            "id": 109207,
+            "title": "18oz / Pink",
+            "options": {
+              "size": "18oz",
+              "color": "Pink"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 450,
+                "width": 1200
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 450,
+                "width": 1200
+              }
+            ]
+          },
+          {
+            "id": 109208,
+            "title": "18oz / Red",
+            "options": {
+              "size": "18oz",
+              "color": "Red"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 450,
+                "width": 1200
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 450,
+                "width": 1200
+              }
+            ]
+          },
+          {
+            "id": 109209,
+            "title": "18oz / Teal",
+            "options": {
+              "size": "18oz",
+              "color": "Teal"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 450,
+                "width": 1200
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 450,
+                "width": 1200
+              }
+            ]
+          },
+          {
+            "id": 109210,
+            "title": "18oz / White",
+            "options": {
+              "size": "18oz",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 450,
+                "width": 1200
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 450,
+                "width": 1200
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              109205,
+              109206,
+              109207,
+              109208,
+              109209,
+              109210
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2199
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              109205,
+              109206,
+              109207,
+              109208,
+              109209,
+              109210
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2019
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 709
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              109205,
+              109206,
+              109207,
+              109208,
+              109209,
+              109210
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 929
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              109205,
+              109206,
+              109207,
+              109208,
+              109209,
+              109210
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2039
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 739
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "provider": {
+        "id": 99,
+        "title": "Printify Choice"
+      },
+      "variants": {
+        "id": 99,
+        "title": "Printify Choice",
+        "variants": [
+          {
+            "id": 109205,
+            "title": "18oz / Black",
+            "options": {
+              "size": "18oz",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 450,
+                "width": 1200
+              },
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 450,
+                "width": 1200
+              }
+            ]
+          },
+          {
+            "id": 109206,
+            "title": "18oz / Navy",
+            "options": {
+              "size": "18oz",
+              "color": "Navy"
+            },
+            "placeholders": [
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 450,
+                "width": 1200
+              },
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 450,
+                "width": 1200
+              }
+            ]
+          },
+          {
+            "id": 109207,
+            "title": "18oz / Pink",
+            "options": {
+              "size": "18oz",
+              "color": "Pink"
+            },
+            "placeholders": [
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 450,
+                "width": 1200
+              },
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 450,
+                "width": 1200
+              }
+            ]
+          },
+          {
+            "id": 109208,
+            "title": "18oz / Red",
+            "options": {
+              "size": "18oz",
+              "color": "Red"
+            },
+            "placeholders": [
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 450,
+                "width": 1200
+              },
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 450,
+                "width": 1200
+              }
+            ]
+          },
+          {
+            "id": 109209,
+            "title": "18oz / Teal",
+            "options": {
+              "size": "18oz",
+              "color": "Teal"
+            },
+            "placeholders": [
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 450,
+                "width": 1200
+              },
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 450,
+                "width": 1200
+              }
+            ]
+          },
+          {
+            "id": 109210,
+            "title": "18oz / White",
+            "options": {
+              "size": "18oz",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 450,
+                "width": 1200
+              },
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 450,
+                "width": 1200
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              109205,
+              109206,
+              109207,
+              109208,
+              109209,
+              109210
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 929
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 299
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              109205,
+              109206,
+              109207,
+              109208,
+              109209,
+              109210
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1229
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 579
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              109205,
+              109206,
+              109207,
+              109208,
+              109209,
+              109210
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 799
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              109205,
+              109206,
+              109207,
+              109208,
+              109209,
+              109210
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1049
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 799
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,182 @@
+{
+  "blueprint": {
+    "id": 811,
+    "title": "Holographic Die-cut Stickers",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d70ecd87695c47390acec2",
+      "https://images.printify.com/66d70ecbfa46f1ac0a0bdc38",
+      "https://images.printify.com/67ed25881254a48251033a65",
+      "https://images.printify.com/67ed25861254a48251033a64",
+      "https://images.printify.com/67ed258767fa16d433071934"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 73,
+        "title": "Printed Simply"
+      },
+      "variants": {
+        "id": 73,
+        "title": "Printed Simply",
+        "variants": [
+          {
+            "id": 76266,
+            "title": "2\u0022 \u00D7 2\u0022 / Die-Cut / Holographic",
+            "options": {
+              "size": "2\u0022 \u00D7 2\u0022",
+              "shape": "Die-Cut",
+              "surface": "Holographic"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 600,
+                "width": 600
+              }
+            ]
+          },
+          {
+            "id": 76267,
+            "title": "3\u0022 \u00D7 3\u0022 / Die-Cut / Holographic",
+            "options": {
+              "size": "3\u0022 \u00D7 3\u0022",
+              "shape": "Die-Cut",
+              "surface": "Holographic"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 900,
+                "width": 900
+              }
+            ]
+          },
+          {
+            "id": 76268,
+            "title": "4\u0022 \u00D7 4\u0022 / Die-Cut / Holographic",
+            "options": {
+              "size": "4\u0022 \u00D7 4\u0022",
+              "shape": "Die-Cut",
+              "surface": "Holographic"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1200,
+                "width": 1200
+              }
+            ]
+          },
+          {
+            "id": 76269,
+            "title": "5\u0022 \u00D7 5\u0022 / Die-Cut / Holographic",
+            "options": {
+              "size": "5\u0022 \u00D7 5\u0022",
+              "shape": "Die-Cut",
+              "surface": "Holographic"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1500,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 76270,
+            "title": "6\u0022 \u00D7 6\u0022 / Die-Cut / Holographic",
+            "options": {
+              "size": "6\u0022 \u00D7 6\u0022",
+              "shape": "Die-Cut",
+              "surface": "Holographic"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1800,
+                "width": 1800
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              76266,
+              76267,
+              76268,
+              76269,
+              76270
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 929
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 49
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              76266,
+              76267,
+              76268,
+              76269,
+              76270
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 509
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 7
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              76266,
+              76267,
+              76268,
+              76269,
+              76270
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1049
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 55
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

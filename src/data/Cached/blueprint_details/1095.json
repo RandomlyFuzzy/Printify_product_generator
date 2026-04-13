@@ -1,0 +1,216 @@
+{
+  "blueprint": {
+    "id": 1095,
+    "title": "Women\u0027s Indoor Slippers",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d5afa98c321bdc340930c4",
+      "https://images.printify.com/66d5afaaf524c32a840fe245",
+      "https://images.printify.com/62959aa0da5a4ace6e0674e4",
+      "https://images.printify.com/62959a9b3377fa92090560bc",
+      "https://images.printify.com/62959a9adc49645e72063211"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 90,
+        "title": "Smart Printee"
+      },
+      "variants": {
+        "id": 90,
+        "title": "Smart Printee",
+        "variants": [
+          {
+            "id": 81807,
+            "title": "US 7 - 8 / Black sole",
+            "options": {
+              "size": "US 7 - 8",
+              "color": "Black sole"
+            },
+            "placeholders": [
+              {
+                "position": "right_shoe",
+                "decoration_method": "dye-sublimation",
+                "height": 2381,
+                "width": 2555
+              },
+              {
+                "position": "left_shoe",
+                "decoration_method": "dye-sublimation",
+                "height": 2381,
+                "width": 2555
+              }
+            ]
+          },
+          {
+            "id": 81808,
+            "title": "US 9 - 10 / Black sole",
+            "options": {
+              "size": "US 9 - 10",
+              "color": "Black sole"
+            },
+            "placeholders": [
+              {
+                "position": "right_shoe",
+                "decoration_method": "dye-sublimation",
+                "height": 2381,
+                "width": 2555
+              },
+              {
+                "position": "left_shoe",
+                "decoration_method": "dye-sublimation",
+                "height": 2381,
+                "width": 2555
+              }
+            ]
+          },
+          {
+            "id": 81809,
+            "title": "US 11 - 12 / Black sole",
+            "options": {
+              "size": "US 11 - 12",
+              "color": "Black sole"
+            },
+            "placeholders": [
+              {
+                "position": "right_shoe",
+                "decoration_method": "dye-sublimation",
+                "height": 2381,
+                "width": 2555
+              },
+              {
+                "position": "left_shoe",
+                "decoration_method": "dye-sublimation",
+                "height": 2381,
+                "width": 2555
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              81807,
+              81808,
+              81809
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1149
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1149
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              81807,
+              81808,
+              81809
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1359
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1359
+            },
+            "countries": [
+              "GB",
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "DK",
+              "EE",
+              "FO",
+              "FI",
+              "FR",
+              "GE",
+              "DE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IS",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "LV",
+              "LI",
+              "LT",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "NO",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "SE",
+              "CH",
+              "TR",
+              "UA",
+              "XK"
+            ]
+          },
+          {
+            "variant_ids": [
+              81807,
+              81808,
+              81809
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1729
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1729
+            },
+            "countries": [
+              "REST_OF_THE_WORLD",
+              "AU",
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

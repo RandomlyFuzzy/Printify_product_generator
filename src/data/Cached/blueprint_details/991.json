@@ -1,0 +1,185 @@
+{
+  "blueprint": {
+    "id": 991,
+    "title": "Polyester Car Seat Covers",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d8911595f27e8a8d0d4306",
+      "https://images.printify.com/66d891143d7133b94f053ed4",
+      "https://images.printify.com/624d803eb40375a6870fc25c",
+      "https://images.printify.com/627512714ba6f0927a0557a3",
+      "https://images.printify.com/6262335ba241e81e8e0231b4",
+      "https://images.printify.com/62751271955d4b947a0521fa",
+      "https://images.printify.com/624b144b35c4ad9afb0c254f",
+      "https://images.printify.com/624b17933436879dca0299c8",
+      "https://images.printify.com/672e093135ee89067907c612"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 83,
+        "title": "Subliminator"
+      },
+      "variants": {
+        "id": 83,
+        "title": "Subliminator",
+        "variants": [
+          {
+            "id": 78839,
+            "title": "49.60\u0022 \u00D7 18.50\u0022 / Black",
+            "options": {
+              "size": "49.60\u0022 \u00D7 18.50\u0022",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "left_side",
+                "decoration_method": "dye-sublimation",
+                "height": 8000,
+                "width": 3273
+              },
+              {
+                "position": "right_side",
+                "decoration_method": "dye-sublimation",
+                "height": 8000,
+                "width": 3273
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              78839
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2019
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1959
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              78839
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1899
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              78839
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 3129
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2999
+            },
+            "countries": [
+              "CA",
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              78839
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1939
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1829
+            },
+            "countries": [
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "DK",
+              "EE",
+              "FO",
+              "FI",
+              "FR",
+              "GE",
+              "DE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IS",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "LV",
+              "LI",
+              "LT",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "NO",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "SE",
+              "CH",
+              "TR",
+              "UA",
+              "GB",
+              "XK"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

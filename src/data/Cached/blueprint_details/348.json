@@ -1,0 +1,130 @@
+{
+  "blueprint": {
+    "id": 348,
+    "title": "Unisex Fabric Backpack",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d71898647df6d4a40528ab",
+      "https://images.printify.com/66d7189e4d6cfef3b605d2c2",
+      "https://images.printify.com/5b9905d7a342bc6b1c7cf8f9",
+      "https://images.printify.com/5b9905dca342bc6a4a739bd1"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 14,
+        "title": "ArtsAdd"
+      },
+      "variants": {
+        "id": 14,
+        "title": "ArtsAdd",
+        "variants": [
+          {
+            "id": 44420,
+            "title": "One size",
+            "options": {
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front_pocket",
+                "decoration_method": "dye-sublimation",
+                "height": 2466,
+                "width": 3679
+              },
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 2993,
+                "width": 3541
+              },
+              {
+                "position": "top_part_to_front",
+                "decoration_method": "dye-sublimation",
+                "height": 2979,
+                "width": 8226
+              },
+              {
+                "position": "left_side",
+                "decoration_method": "dye-sublimation",
+                "height": 2296,
+                "width": 1922
+              },
+              {
+                "position": "right_side",
+                "decoration_method": "dye-sublimation",
+                "height": 2296,
+                "width": 1922
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              44420
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1399
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1399
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              44420
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 840
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 840
+            },
+            "countries": [
+              "REST_OF_THE_WORLD",
+              "NL",
+              "BR",
+              "US",
+              "MX",
+              "CA",
+              "DK",
+              "NZ"
+            ]
+          },
+          {
+            "variant_ids": [
+              44420
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "CN"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

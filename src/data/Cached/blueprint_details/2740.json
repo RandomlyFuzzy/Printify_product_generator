@@ -1,0 +1,182 @@
+{
+  "blueprint": {
+    "id": 2740,
+    "title": "Titan Thermal Straw Tumbler, 24oz",
+    "brand": "Arctic Zone",
+    "model": "BP20054",
+    "images": [
+      "https://images.printify.com/697384332aa30326420bef82",
+      "https://images.printify.com/6973967c4da571820107dc92",
+      "https://images.printify.com/6973825624096f43b70474b2",
+      "https://images.printify.com/69738252b29cbcb0b6069fb2",
+      "https://images.printify.com/69738253894bcdfd1204af44",
+      "https://images.printify.com/69738255e6389441d30954f3"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 1,
+        "title": "SPOKE Custom Products"
+      },
+      "variants": {
+        "id": 1,
+        "title": "SPOKE Custom Products",
+        "variants": [
+          {
+            "id": 149406,
+            "title": "White / 24oz",
+            "options": {
+              "color": "White",
+              "size": "24oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 1050,
+                "width": 2987
+              }
+            ]
+          },
+          {
+            "id": 149407,
+            "title": "Silver / 24oz",
+            "options": {
+              "color": "Silver",
+              "size": "24oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 1050,
+                "width": 2987
+              }
+            ]
+          },
+          {
+            "id": 149408,
+            "title": "Navy / 24oz",
+            "options": {
+              "color": "Navy",
+              "size": "24oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 1050,
+                "width": 2987
+              }
+            ]
+          },
+          {
+            "id": 149410,
+            "title": "Grey / 24oz",
+            "options": {
+              "color": "Grey",
+              "size": "24oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 1050,
+                "width": 2987
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              149406,
+              149407,
+              149408,
+              149409,
+              149410
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 759
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 299
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              149406,
+              149407,
+              149408,
+              149409,
+              149410
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1619
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 579
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              149406,
+              149407,
+              149408,
+              149409,
+              149410
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 979
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              149406,
+              149407,
+              149408,
+              149409,
+              149410
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1249
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 489
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

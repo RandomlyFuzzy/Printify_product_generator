@@ -1,0 +1,289 @@
+{
+  "blueprint": {
+    "id": 1486,
+    "title": "Women\u0027s Crewneck Sweatshirt (AOP)",
+    "brand": "Generic brand",
+    "model": "H18",
+    "images": [
+      "https://images.printify.com/66f67a543991571ccb0c4f44",
+      "https://images.printify.com/66f67a52cd627dbb92044df2",
+      "https://images.printify.com/66f67a503991571ccb0c4f43",
+      "https://images.printify.com/66f67a4f8a4cc63a5808eba3",
+      "https://images.printify.com/66fbcc1198588f3052045592",
+      "https://images.printify.com/66fbcd53b42f51ec020e1a12"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 14,
+        "title": "ArtsAdd"
+      },
+      "variants": {
+        "id": 14,
+        "title": "ArtsAdd",
+        "variants": [
+          {
+            "id": 107556,
+            "title": "XS",
+            "options": {
+              "size": "XS"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 3498,
+                "width": 2793
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 3490,
+                "width": 2793
+              },
+              {
+                "position": "right_sleeve",
+                "decoration_method": "dye-sublimation",
+                "height": 3013,
+                "width": 2768
+              },
+              {
+                "position": "left_sleeve",
+                "decoration_method": "dye-sublimation",
+                "height": 3013,
+                "width": 2768
+              }
+            ]
+          },
+          {
+            "id": 107557,
+            "title": "S",
+            "options": {
+              "size": "S"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 3632,
+                "width": 3093
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 3624,
+                "width": 3093
+              },
+              {
+                "position": "right_sleeve",
+                "decoration_method": "dye-sublimation",
+                "height": 3131,
+                "width": 2834
+              },
+              {
+                "position": "left_sleeve",
+                "decoration_method": "dye-sublimation",
+                "height": 3131,
+                "width": 2834
+              }
+            ]
+          },
+          {
+            "id": 107558,
+            "title": "M",
+            "options": {
+              "size": "M"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 3782,
+                "width": 3393
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 3775,
+                "width": 3393
+              },
+              {
+                "position": "right_sleeve",
+                "decoration_method": "dye-sublimation",
+                "height": 3249,
+                "width": 2916
+              },
+              {
+                "position": "left_sleeve",
+                "decoration_method": "dye-sublimation",
+                "height": 3249,
+                "width": 2916
+              }
+            ]
+          },
+          {
+            "id": 107559,
+            "title": "L",
+            "options": {
+              "size": "L"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 3932,
+                "width": 3693
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 3924,
+                "width": 3693
+              },
+              {
+                "position": "right_sleeve",
+                "decoration_method": "dye-sublimation",
+                "height": 3367,
+                "width": 2997
+              },
+              {
+                "position": "left_sleeve",
+                "decoration_method": "dye-sublimation",
+                "height": 3367,
+                "width": 2997
+              }
+            ]
+          },
+          {
+            "id": 107560,
+            "title": "XL",
+            "options": {
+              "size": "XL"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 4082,
+                "width": 3993
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 4074,
+                "width": 3993
+              },
+              {
+                "position": "right_sleeve",
+                "decoration_method": "dye-sublimation",
+                "height": 3485,
+                "width": 3079
+              },
+              {
+                "position": "left_sleeve",
+                "decoration_method": "dye-sublimation",
+                "height": 3485,
+                "width": 3079
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              107556,
+              107557,
+              107558,
+              107559,
+              107560
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "CA",
+              "CN"
+            ]
+          },
+          {
+            "variant_ids": [
+              107556,
+              107557,
+              107558,
+              107559,
+              107560
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 799
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              107556,
+              107557,
+              107558,
+              107559,
+              107560
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 360
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 360
+            },
+            "countries": [
+              "NL",
+              "REST_OF_THE_WORLD",
+              "MX",
+              "DK",
+              "NZ",
+              "BR"
+            ]
+          },
+          {
+            "variant_ids": [
+              107556,
+              107557,
+              107558,
+              107559,
+              107560
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 889
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 889
+            },
+            "countries": [
+              "AU"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

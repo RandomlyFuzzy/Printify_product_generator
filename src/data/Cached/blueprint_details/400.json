@@ -1,0 +1,418 @@
+{
+  "blueprint": {
+    "id": 400,
+    "title": "Kiss-Cut Stickers",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66c5e3b718c4f0cee80b1e52",
+      "https://images.printify.com/66c5e3bb6b5dc7c71c0c9673",
+      "https://images.printify.com/66f68efbe9789ec38a01a032",
+      "https://images.printify.com/66f69208012603f7b904bc52",
+      "https://images.printify.com/66f6920c31a73866a505ae12",
+      "https://images.printify.com/690490d0af12c980350fc9a2"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 1,
+        "title": "SPOKE Custom Products"
+      },
+      "variants": {
+        "id": 1,
+        "title": "SPOKE Custom Products",
+        "variants": [
+          {
+            "id": 45747,
+            "title": "2\u0022 \u00D7 2\u0022 / Transparent",
+            "options": {
+              "size": "2\u0022 \u00D7 2\u0022",
+              "surface": "Transparent"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 559,
+                "width": 559
+              }
+            ]
+          },
+          {
+            "id": 45748,
+            "title": "2\u0022 \u00D7 2\u0022 / White",
+            "options": {
+              "size": "2\u0022 \u00D7 2\u0022",
+              "surface": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 559,
+                "width": 559
+              }
+            ]
+          },
+          {
+            "id": 45749,
+            "title": "3\u0022 \u00D7 3\u0022 / Transparent",
+            "options": {
+              "size": "3\u0022 \u00D7 3\u0022",
+              "surface": "Transparent"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 832,
+                "width": 832
+              }
+            ]
+          },
+          {
+            "id": 45750,
+            "title": "3\u0022 \u00D7 3\u0022 / White",
+            "options": {
+              "size": "3\u0022 \u00D7 3\u0022",
+              "surface": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 832,
+                "width": 832
+              }
+            ]
+          },
+          {
+            "id": 45751,
+            "title": "4\u0022 \u00D7 4\u0022 / Transparent",
+            "options": {
+              "size": "4\u0022 \u00D7 4\u0022",
+              "surface": "Transparent"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1113,
+                "width": 1113
+              }
+            ]
+          },
+          {
+            "id": 45752,
+            "title": "4\u0022 \u00D7 4\u0022 / White",
+            "options": {
+              "size": "4\u0022 \u00D7 4\u0022",
+              "surface": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1113,
+                "width": 1113
+              }
+            ]
+          },
+          {
+            "id": 45753,
+            "title": "6\u0022 \u00D7 6\u0022 / Transparent",
+            "options": {
+              "size": "6\u0022 \u00D7 6\u0022",
+              "surface": "Transparent"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1664,
+                "width": 1664
+              }
+            ]
+          },
+          {
+            "id": 45754,
+            "title": "6\u0022 \u00D7 6\u0022 / White",
+            "options": {
+              "size": "6\u0022 \u00D7 6\u0022",
+              "surface": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1664,
+                "width": 1664
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              45747,
+              45748,
+              45749,
+              45750,
+              45751,
+              45752,
+              45753,
+              45754
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 429
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 9
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              45747,
+              45748,
+              45749,
+              45750,
+              45751,
+              45752,
+              45753,
+              45754
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 879
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 49
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              45747,
+              45748,
+              45749,
+              45750,
+              45751,
+              45752,
+              45753,
+              45754
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 459
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 9
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              45747,
+              45748,
+              45749,
+              45750,
+              45751,
+              45752,
+              45753,
+              45754
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1099
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 99
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "provider": {
+        "id": 99,
+        "title": "Printify Choice"
+      },
+      "variants": {
+        "id": 99,
+        "title": "Printify Choice",
+        "variants": [
+          {
+            "id": 45748,
+            "title": "2\u0022 \u00D7 2\u0022 / White",
+            "options": {
+              "size": "2\u0022 \u00D7 2\u0022",
+              "surface": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 559,
+                "width": 559
+              }
+            ]
+          },
+          {
+            "id": 45750,
+            "title": "3\u0022 \u00D7 3\u0022 / White",
+            "options": {
+              "size": "3\u0022 \u00D7 3\u0022",
+              "surface": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 832,
+                "width": 832
+              }
+            ]
+          },
+          {
+            "id": 45752,
+            "title": "4\u0022 \u00D7 4\u0022 / White",
+            "options": {
+              "size": "4\u0022 \u00D7 4\u0022",
+              "surface": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1113,
+                "width": 1113
+              }
+            ]
+          },
+          {
+            "id": 45754,
+            "title": "6\u0022 \u00D7 6\u0022 / White",
+            "options": {
+              "size": "6\u0022 \u00D7 6\u0022",
+              "surface": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1664,
+                "width": 1664
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              45748,
+              45750,
+              45752,
+              45754
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 429
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 9
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              45748,
+              45750,
+              45752,
+              45754
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1099
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 99
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              45748,
+              45750,
+              45752,
+              45754
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 459
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 9
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              45748,
+              45750,
+              45752,
+              45754
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 879
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 49
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

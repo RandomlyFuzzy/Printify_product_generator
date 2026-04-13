@@ -1,0 +1,904 @@
+{
+  "blueprint": {
+    "id": 1061,
+    "title": "Classic Canvas",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d5b124487bab3ecc00ec17",
+      "https://images.printify.com/66d5b125084ec852f4001a82",
+      "https://images.printify.com/62c2b54664cc6e7b3e100374",
+      "https://images.printify.com/62c2b5473e082eb854059079",
+      "https://images.printify.com/62c2b5cae467419a4009afd2"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 66,
+        "title": "Prima Printing"
+      },
+      "variants": {
+        "id": 66,
+        "title": "Prima Printing",
+        "variants": [
+          {
+            "id": 80696,
+            "title": "8\u0022 x 12\u0022 (Vertical) / 1.18\u0022",
+            "options": {
+              "size": "8\u0022 x 12\u0022 (Vertical)",
+              "depth": "1.18\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 3567,
+                "width": 2350
+              }
+            ]
+          },
+          {
+            "id": 80697,
+            "title": "12\u0022 x 8\u0022 (Horizontal) / 1.18\u0022",
+            "options": {
+              "size": "12\u0022 x 8\u0022 (Horizontal)",
+              "depth": "1.18\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 2350,
+                "width": 3567
+              }
+            ]
+          },
+          {
+            "id": 80698,
+            "title": "12\u2033 x 16\u2033 (Vertical) / 1.18\u0022",
+            "options": {
+              "size": "12\u2033 x 16\u2033 (Vertical)",
+              "depth": "1.18\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 4795,
+                "width": 3579
+              }
+            ]
+          },
+          {
+            "id": 80699,
+            "title": "12\u2033 x 18\u2033 (Vertical) / 1.18\u0022",
+            "options": {
+              "size": "12\u2033 x 18\u2033 (Vertical)",
+              "depth": "1.18\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 5374,
+                "width": 3567
+              }
+            ]
+          },
+          {
+            "id": 80700,
+            "title": "12\u2033 x 12\u2033 / 1.18\u0022",
+            "options": {
+              "size": "12\u2033 x 12\u2033",
+              "depth": "1.18\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 3567,
+                "width": 3567
+              }
+            ]
+          },
+          {
+            "id": 80701,
+            "title": "16\u2033 x 12\u2033 (Horizontal) / 1.18\u0022",
+            "options": {
+              "size": "16\u2033 x 12\u2033 (Horizontal)",
+              "depth": "1.18\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 3579,
+                "width": 4795
+              }
+            ]
+          },
+          {
+            "id": 80703,
+            "title": "18\u2033 x 12\u2033 (Horizontal) / 1.18\u0022",
+            "options": {
+              "size": "18\u2033 x 12\u2033 (Horizontal)",
+              "depth": "1.18\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 3567,
+                "width": 5374
+              }
+            ]
+          },
+          {
+            "id": 80704,
+            "title": "16\u2033 x 16\u2033 / 1.18\u0022",
+            "options": {
+              "size": "16\u2033 x 16\u2033",
+              "depth": "1.18\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 4783,
+                "width": 4783
+              }
+            ]
+          },
+          {
+            "id": 80705,
+            "title": "24\u2033 x 24\u2033 / 1.18\u0022",
+            "options": {
+              "size": "24\u2033 x 24\u2033",
+              "depth": "1.18\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 7181,
+                "width": 7181
+              }
+            ]
+          },
+          {
+            "id": 80706,
+            "title": "30\u2033 x 30\u2033 / 1.18\u0022",
+            "options": {
+              "size": "30\u2033 x 30\u2033",
+              "depth": "1.18\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 8976,
+                "width": 8976
+              }
+            ]
+          },
+          {
+            "id": 80707,
+            "title": "16\u0022 x 20\u0022 (Vertical) / 1.18\u0022",
+            "options": {
+              "size": "16\u0022 x 20\u0022 (Vertical)",
+              "depth": "1.18\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 5965,
+                "width": 4772
+              }
+            ]
+          },
+          {
+            "id": 80708,
+            "title": "20\u0022 x 16\u0022 (Horizontal) / 1.18\u0022",
+            "options": {
+              "size": "20\u0022 x 16\u0022 (Horizontal)",
+              "depth": "1.18\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 4772,
+                "width": 5965
+              }
+            ]
+          },
+          {
+            "id": 80709,
+            "title": "16\u2033 x 24\u2033 (Vertical) / 1.18\u0022",
+            "options": {
+              "size": "16\u2033 x 24\u2033 (Vertical)",
+              "depth": "1.18\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 7134,
+                "width": 4807
+              }
+            ]
+          },
+          {
+            "id": 80710,
+            "title": "24\u2033 x 16\u2033 (Horizontal) / 1.18\u0022",
+            "options": {
+              "size": "24\u2033 x 16\u2033 (Horizontal)",
+              "depth": "1.18\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 4807,
+                "width": 7134
+              }
+            ]
+          },
+          {
+            "id": 80711,
+            "title": "12\u0022 x 24\u0022 (Vertical) / 1.18\u0022",
+            "options": {
+              "size": "12\u0022 x 24\u0022 (Vertical)",
+              "depth": "1.18\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 7146,
+                "width": 3591
+              }
+            ]
+          },
+          {
+            "id": 80712,
+            "title": "24\u0022 x 12\u0022 (Horizontal) / 1.18\u0022",
+            "options": {
+              "size": "24\u0022 x 12\u0022 (Horizontal)",
+              "depth": "1.18\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 3591,
+                "width": 7146
+              }
+            ]
+          },
+          {
+            "id": 80713,
+            "title": "20\u2033 x 30\u2033 (Vertical) / 1.18\u0022",
+            "options": {
+              "size": "20\u2033 x 30\u2033 (Vertical)",
+              "depth": "1.18\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 8953,
+                "width": 5965
+              }
+            ]
+          },
+          {
+            "id": 80714,
+            "title": "30\u2033 x 20\u2033 (Horizontal) / 1.18\u0022",
+            "options": {
+              "size": "30\u2033 x 20\u2033 (Horizontal)",
+              "depth": "1.18\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 5965,
+                "width": 8953
+              }
+            ]
+          },
+          {
+            "id": 80715,
+            "title": "12\u0022 x 40\u0022 (Vertical) / 1.18\u0022",
+            "options": {
+              "size": "12\u0022 x 40\u0022 (Vertical)",
+              "depth": "1.18\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 11953,
+                "width": 3555
+              }
+            ]
+          },
+          {
+            "id": 80716,
+            "title": "40\u0022 x 12\u0022 (Horizontal) / 1.18\u0022",
+            "options": {
+              "size": "40\u0022 x 12\u0022 (Horizontal)",
+              "depth": "1.18\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 3555,
+                "width": 11953
+              }
+            ]
+          },
+          {
+            "id": 80717,
+            "title": "20\u0022 x 40\u0022 (Vertical) / 1.18\u0022",
+            "options": {
+              "size": "20\u0022 x 40\u0022 (Vertical)",
+              "depth": "1.18\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 11953,
+                "width": 5988
+              }
+            ]
+          },
+          {
+            "id": 80718,
+            "title": "40\u0022 x 20\u0022 (Horizontal) / 1.18\u0022",
+            "options": {
+              "size": "40\u0022 x 20\u0022 (Horizontal)",
+              "depth": "1.18\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 5988,
+                "width": 11953
+              }
+            ]
+          },
+          {
+            "id": 80719,
+            "title": "30\u0022 x 60\u0022 (Vertical) / 1.18\u0022",
+            "options": {
+              "size": "30\u0022 x 60\u0022 (Vertical)",
+              "depth": "1.18\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 17953,
+                "width": 9000
+              }
+            ]
+          },
+          {
+            "id": 80720,
+            "title": "60\u0022 x 30\u0022 (Horizontal) / 1.18\u0022",
+            "options": {
+              "size": "60\u0022 x 30\u0022 (Horizontal)",
+              "depth": "1.18\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 9000,
+                "width": 17953
+              }
+            ]
+          },
+          {
+            "id": 80721,
+            "title": "20\u0022 x 60\u0022 (Vertical) / 1.18\u0022",
+            "options": {
+              "size": "20\u0022 x 60\u0022 (Vertical)",
+              "depth": "1.18\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 17976,
+                "width": 5988
+              }
+            ]
+          },
+          {
+            "id": 80722,
+            "title": "30\u0022 x 40\u0022 (Vertical) / 1.18\u0022",
+            "options": {
+              "size": "30\u0022 x 40\u0022 (Vertical)",
+              "depth": "1.18\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 11953,
+                "width": 8976
+              }
+            ]
+          },
+          {
+            "id": 80723,
+            "title": "40\u0022 x 30\u0022 (Horizontal) / 1.18\u0022",
+            "options": {
+              "size": "40\u0022 x 30\u0022 (Horizontal)",
+              "depth": "1.18\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 8976,
+                "width": 11953
+              }
+            ]
+          },
+          {
+            "id": 80724,
+            "title": "60\u0022 x 20\u0022 (Horizontal) / 1.18\u0022",
+            "options": {
+              "size": "60\u0022 x 20\u0022 (Horizontal)",
+              "depth": "1.18\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 5988,
+                "width": 17976
+              }
+            ]
+          },
+          {
+            "id": 80725,
+            "title": "40\u0022 x 60\u0022 (Vertical) / 1.18\u0022",
+            "options": {
+              "size": "40\u0022 x 60\u0022 (Vertical)",
+              "depth": "1.18\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 17976,
+                "width": 11953
+              }
+            ]
+          },
+          {
+            "id": 80726,
+            "title": "60\u0022 x 40\u0022 (Horizontal) / 1.18\u0022",
+            "options": {
+              "size": "60\u0022 x 40\u0022 (Horizontal)",
+              "depth": "1.18\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 11953,
+                "width": 17976
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              80696,
+              80697,
+              80698,
+              80699,
+              80700,
+              80701,
+              80703,
+              80704,
+              80707,
+              80708,
+              80709,
+              80710,
+              80711,
+              80712
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1039
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 469
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              80696,
+              80697,
+              80698,
+              80699,
+              80700,
+              80701,
+              80703,
+              80704,
+              80707,
+              80708,
+              80709,
+              80710,
+              80711,
+              80712
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1179
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1049
+            },
+            "countries": [
+              "NZ"
+            ]
+          },
+          {
+            "variant_ids": [
+              80696,
+              80697,
+              80698,
+              80699,
+              80700,
+              80701,
+              80703,
+              80704,
+              80707,
+              80708,
+              80709,
+              80710,
+              80711,
+              80712
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2019
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2019
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              80696,
+              80697,
+              80698,
+              80699,
+              80700,
+              80701,
+              80703,
+              80704,
+              80707,
+              80708,
+              80709,
+              80710,
+              80711,
+              80712
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2409
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2409
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              80696,
+              80697,
+              80698,
+              80699,
+              80700,
+              80701,
+              80703,
+              80704,
+              80707,
+              80708,
+              80709,
+              80710,
+              80711,
+              80712
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1999
+            },
+            "countries": [
+              "AX",
+              "AL",
+              "AD",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "DK",
+              "EE",
+              "FO",
+              "FI",
+              "FR",
+              "DE",
+              "GI",
+              "GR",
+              "GG",
+              "VA",
+              "HU",
+              "IS",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "LI",
+              "LT",
+              "LU",
+              "LV",
+              "MT",
+              "MC",
+              "ME",
+              "MK",
+              "MD",
+              "NL",
+              "NO",
+              "PL",
+              "PT",
+              "RE",
+              "SM",
+              "RO",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "SE",
+              "CH",
+              "GB",
+              "XK"
+            ]
+          },
+          {
+            "variant_ids": [
+              80696,
+              80697,
+              80698,
+              80699,
+              80700,
+              80701,
+              80703,
+              80704,
+              80707,
+              80708,
+              80709,
+              80710,
+              80711,
+              80712
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 6219
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 6219
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              80705,
+              80706,
+              80713,
+              80714,
+              80715,
+              80716,
+              80717,
+              80718,
+              80719,
+              80720,
+              80721,
+              80722,
+              80723,
+              80724,
+              80725,
+              80726
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1499
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 769
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              80705
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2819
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2069
+            },
+            "countries": [
+              "NZ"
+            ]
+          },
+          {
+            "variant_ids": [
+              80705
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 3349
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 3349
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              80705
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 3999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 3999
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              80705
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 4599
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 4599
+            },
+            "countries": [
+              "AX",
+              "AL",
+              "AD",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "DK",
+              "EE",
+              "FO",
+              "FI",
+              "FR",
+              "DE",
+              "GI",
+              "GR",
+              "GG",
+              "VA",
+              "HU",
+              "IS",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "LV",
+              "LI",
+              "LT",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "NO",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "SE",
+              "CH",
+              "GB",
+              "XK"
+            ]
+          },
+          {
+            "variant_ids": [
+              80705
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 11679
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 11679
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

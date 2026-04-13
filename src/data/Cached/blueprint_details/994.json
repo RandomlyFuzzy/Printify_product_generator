@@ -1,0 +1,379 @@
+{
+  "blueprint": {
+    "id": 994,
+    "title": "Coasters",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d8901d95f27e8a8d0d4305",
+      "https://images.printify.com/66d8901b1dc58c2df20eb0f6",
+      "https://images.printify.com/6231f5d12cf2df66095578a2",
+      "https://images.printify.com/623350ab7cad130cae52f8d3",
+      "https://images.printify.com/624194857981dc6a310bbd18"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 66,
+        "title": "Prima Printing"
+      },
+      "variants": {
+        "id": 66,
+        "title": "Prima Printing",
+        "variants": [
+          {
+            "id": 79362,
+            "title": "Round / 3.7\u0022 x 3.7\u0022 / 1pc",
+            "options": {
+              "shape": "Round",
+              "size": "3.7\u0022 x 3.7\u0022",
+              "quantity": "1pc"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1193,
+                "width": 1193
+              }
+            ]
+          },
+          {
+            "id": 79363,
+            "title": "Round / 3.7\u0022 x 3.7\u0022 / 4pcs",
+            "options": {
+              "shape": "Round",
+              "size": "3.7\u0022 x 3.7\u0022",
+              "quantity": "4pcs"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1193,
+                "width": 1193
+              }
+            ]
+          },
+          {
+            "id": 79364,
+            "title": "Square / 3.7\u0022 x 3.7\u0022 / 1pc",
+            "options": {
+              "shape": "Square",
+              "size": "3.7\u0022 x 3.7\u0022",
+              "quantity": "1pc"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1193,
+                "width": 1193
+              }
+            ]
+          },
+          {
+            "id": 79365,
+            "title": "Square / 3.7\u0022 x 3.7\u0022 / 4pcs",
+            "options": {
+              "shape": "Square",
+              "size": "3.7\u0022 x 3.7\u0022",
+              "quantity": "4pcs"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1193,
+                "width": 1193
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              79362,
+              79364
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 639
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 139
+            },
+            "countries": [
+              "AU",
+              "NZ"
+            ]
+          },
+          {
+            "variant_ids": [
+              79363,
+              79365
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 639
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "AU",
+              "NZ"
+            ]
+          },
+          {
+            "variant_ids": [
+              79362,
+              79364
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 739
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 739
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              79362,
+              79364
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1119
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1119
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              79362,
+              79364
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1249
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1249
+            },
+            "countries": [
+              "AX",
+              "AL",
+              "AD",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "DK",
+              "EE",
+              "FO",
+              "FI",
+              "FR",
+              "DE",
+              "GI",
+              "GR",
+              "GG",
+              "VA",
+              "HU",
+              "IS",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "LV",
+              "LI",
+              "LT",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "NO",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "SE",
+              "CH",
+              "GB",
+              "XK"
+            ]
+          },
+          {
+            "variant_ids": [
+              79362,
+              79364
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2319
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2319
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              79363,
+              79365
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 959
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 959
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              79363,
+              79365
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1449
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1449
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              79363,
+              79365
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1589
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1589
+            },
+            "countries": [
+              "AX",
+              "AL",
+              "AD",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "DK",
+              "EE",
+              "FO",
+              "FI",
+              "FR",
+              "DE",
+              "GI",
+              "GR",
+              "GG",
+              "VA",
+              "HU",
+              "IS",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "LV",
+              "LI",
+              "LT",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "NO",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "GB",
+              "CH",
+              "XK",
+              "SE"
+            ]
+          },
+          {
+            "variant_ids": [
+              79363,
+              79365
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 3009
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 3009
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

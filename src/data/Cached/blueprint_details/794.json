@@ -1,0 +1,181 @@
+{
+  "blueprint": {
+    "id": 794,
+    "title": "Transparent Outdoor Stickers, Square, 1pc",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d99fd600baf7cf950b98f5",
+      "https://images.printify.com/66d99fe400baf7cf950b98f6",
+      "https://images.printify.com/6735c962780bef78bd0fc592",
+      "https://images.printify.com/6735c9637cfa61d5b109af04"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 73,
+        "title": "Printed Simply"
+      },
+      "variants": {
+        "id": 73,
+        "title": "Printed Simply",
+        "variants": [
+          {
+            "id": 74958,
+            "title": "2\u0022 \u00D7 2\u0022 / Square / Transparent",
+            "options": {
+              "size": "2\u0022 \u00D7 2\u0022",
+              "shape": "Square",
+              "surface": "Transparent"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 600,
+                "width": 600
+              }
+            ]
+          },
+          {
+            "id": 74959,
+            "title": "3\u0022 \u00D7 3\u0022 / Square / Transparent",
+            "options": {
+              "size": "3\u0022 \u00D7 3\u0022",
+              "shape": "Square",
+              "surface": "Transparent"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 900,
+                "width": 900
+              }
+            ]
+          },
+          {
+            "id": 74960,
+            "title": "4\u0022 \u00D7 4\u0022 / Square / Transparent",
+            "options": {
+              "size": "4\u0022 \u00D7 4\u0022",
+              "shape": "Square",
+              "surface": "Transparent"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1200,
+                "width": 1200
+              }
+            ]
+          },
+          {
+            "id": 74961,
+            "title": "5\u0022 \u00D7 5\u0022 / Square / Transparent",
+            "options": {
+              "size": "5\u0022 \u00D7 5\u0022",
+              "shape": "Square",
+              "surface": "Transparent"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1500,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 74962,
+            "title": "6\u0022 \u00D7 6\u0022 / Square / Transparent",
+            "options": {
+              "size": "6\u0022 \u00D7 6\u0022",
+              "shape": "Square",
+              "surface": "Transparent"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1800,
+                "width": 1800
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              74958,
+              74959,
+              74960,
+              74961,
+              74962
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 929
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 49
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              74958,
+              74959,
+              74960,
+              74961,
+              74962
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 509
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 7
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              74958,
+              74959,
+              74960,
+              74961,
+              74962
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1049
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 55
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

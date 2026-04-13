@@ -1,0 +1,174 @@
+{
+  "blueprint": {
+    "id": 717,
+    "title": "Toddler Blanket",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/68f775a385a540f259073f12",
+      "https://images.printify.com/68f7759f91ff77e20e055b03",
+      "https://images.printify.com/68f775a0e5e04556ee0b9012",
+      "https://images.printify.com/613f209348a67818dc6a92e2",
+      "https://images.printify.com/613f2094ae8ba201cc51e31e"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 41,
+        "title": "Duplium"
+      },
+      "variants": {
+        "id": 41,
+        "title": "Duplium",
+        "variants": [
+          {
+            "id": 73397,
+            "title": "White / 30\u0022 \u00D7 40\u0022",
+            "options": {
+              "color": "White",
+              "size": "30\u0022 \u00D7 40\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 6300,
+                "width": 4800
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              73397
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1499
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "countries": [
+              "VA",
+              "BV",
+              "CY",
+              "AT",
+              "MD",
+              "AD",
+              "FO",
+              "HU",
+              "LV",
+              "TR",
+              "AL",
+              "BY",
+              "HR",
+              "RS",
+              "SI",
+              "CZ",
+              "IM",
+              "MC",
+              "ES",
+              "DK",
+              "DE",
+              "GP",
+              "IS",
+              "ME",
+              "PT",
+              "AM",
+              "CH",
+              "IE",
+              "NO",
+              "UA",
+              "BG",
+              "EE",
+              "FR",
+              "AX",
+              "GI",
+              "IT",
+              "GL",
+              "LU",
+              "NL",
+              "RE",
+              "GB",
+              "LI",
+              "SK",
+              "XK",
+              "GE",
+              "PL",
+              "BA",
+              "FI",
+              "JE",
+              "LT",
+              "MT",
+              "SE",
+              "MK",
+              "SM",
+              "BE",
+              "GR",
+              "GG",
+              "RO"
+            ]
+          },
+          {
+            "variant_ids": [
+              73397
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1599
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              73397
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2139
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 289
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              73397
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 929
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

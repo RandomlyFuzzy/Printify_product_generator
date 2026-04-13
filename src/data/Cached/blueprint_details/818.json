@@ -1,0 +1,203 @@
+{
+  "blueprint": {
+    "id": 818,
+    "title": "Square Stickers, Indoor\\Outdoor",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d8161fa3c95cfed203d252",
+      "https://images.printify.com/66d8161e24a2566c980b1bd2",
+      "https://images.printify.com/6735bd8ddb9a4bac3c090dc2",
+      "https://images.printify.com/6735bd8ef9cd9605ab077242",
+      "https://images.printify.com/6735bd90ac7cd3c1210087c2",
+      "https://images.printify.com/6735bd8fdb9a4bac3c090dc3"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 77,
+        "title": "SunFrog Solutions"
+      },
+      "variants": {
+        "id": 77,
+        "title": "SunFrog Solutions",
+        "variants": [
+          {
+            "id": 75378,
+            "title": "Square / 2\u0022 \u00D7 2\u0022 / White",
+            "options": {
+              "shape": "Square",
+              "size": "2\u0022 \u00D7 2\u0022",
+              "surface": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 638,
+                "width": 638
+              }
+            ]
+          },
+          {
+            "id": 75379,
+            "title": "Square / 3\u0022 \u00D7 3\u0022 / White",
+            "options": {
+              "shape": "Square",
+              "size": "3\u0022 \u00D7 3\u0022",
+              "surface": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 938,
+                "width": 938
+              }
+            ]
+          },
+          {
+            "id": 75380,
+            "title": "Square / 4\u0022 \u00D7 4\u0022 / White",
+            "options": {
+              "shape": "Square",
+              "size": "4\u0022 \u00D7 4\u0022",
+              "surface": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1238,
+                "width": 1238
+              }
+            ]
+          },
+          {
+            "id": 75381,
+            "title": "Square / 5\u0022 \u00D7 5\u0022 / White",
+            "options": {
+              "shape": "Square",
+              "size": "5\u0022 \u00D7 5\u0022",
+              "surface": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1538,
+                "width": 1538
+              }
+            ]
+          },
+          {
+            "id": 75382,
+            "title": "Square / 6\u0022 \u00D7 6\u0022 / White",
+            "options": {
+              "shape": "Square",
+              "size": "6\u0022 \u00D7 6\u0022",
+              "surface": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1838,
+                "width": 1838
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              75378,
+              75379,
+              75380,
+              75381,
+              75382
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 459
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 9
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              75378,
+              75379,
+              75380,
+              75381,
+              75382
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 479
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 19
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              75378,
+              75379,
+              75380,
+              75381,
+              75382
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 919
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 49
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              75378,
+              75379,
+              75380,
+              75381,
+              75382
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1159
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 59
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

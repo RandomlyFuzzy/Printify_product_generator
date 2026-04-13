@@ -1,0 +1,205 @@
+{
+  "blueprint": {
+    "id": 537,
+    "title": "Ceramic Ornament, 1-Pack",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d6e0d0333cb662f000fa9c",
+      "https://images.printify.com/66d6e0c6333cb662f000fa9b",
+      "https://images.printify.com/630f6f1fa64d41e1ca0d242e",
+      "https://images.printify.com/5f83f322bfe2fb21e47bc383"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 41,
+        "title": "Duplium"
+      },
+      "variants": {
+        "id": 41,
+        "title": "Duplium",
+        "variants": [
+          {
+            "id": 69368,
+            "title": "Circle / One Size",
+            "options": {
+              "shape": "Circle",
+              "size": "One Size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 975,
+                "width": 975
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 975,
+                "width": 975
+              }
+            ]
+          },
+          {
+            "id": 69369,
+            "title": "Oval / One Size",
+            "options": {
+              "shape": "Oval",
+              "size": "One Size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1108,
+                "width": 824
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 1108,
+                "width": 824
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              69368,
+              69369
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 669
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 129
+            },
+            "countries": [
+              "AM",
+              "ES",
+              "AT",
+              "GG",
+              "BA",
+              "GR",
+              "MC",
+              "SK",
+              "TR",
+              "XK",
+              "CY",
+              "BY",
+              "AD",
+              "BG",
+              "DK",
+              "GE",
+              "NL",
+              "CH",
+              "CZ",
+              "BE",
+              "UA",
+              "FI",
+              "MK",
+              "AL",
+              "FO",
+              "DE",
+              "GL",
+              "IE",
+              "JE",
+              "AX",
+              "GI",
+              "IT",
+              "GP",
+              "HR",
+              "LT",
+              "MT",
+              "MD",
+              "NO",
+              "RO",
+              "ME",
+              "FR",
+              "LV",
+              "PT",
+              "BV",
+              "EE",
+              "HU",
+              "RE",
+              "SM",
+              "SI",
+              "IM",
+              "LU",
+              "PL",
+              "RS",
+              "SE",
+              "GB",
+              "VA",
+              "IS",
+              "LI"
+            ]
+          },
+          {
+            "variant_ids": [
+              69368,
+              69369
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 819
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 189
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              69368,
+              69369
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 799
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 99
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              69368,
+              69369
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1639
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 159
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

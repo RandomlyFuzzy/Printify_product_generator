@@ -1,0 +1,746 @@
+{
+  "blueprint": {
+    "id": 1497,
+    "title": "Women\u0027s Baby Rib Tank",
+    "brand": "Bella\u002BCanvas",
+    "model": "1080",
+    "images": [
+      "https://images.printify.com/66f29be95f14fdf6e60b71c2",
+      "https://images.printify.com/66f29be7a09a13680e0125e3",
+      "https://images.printify.com/66f29be524c0b67302001b14",
+      "https://images.printify.com/66f29be37ab9f0a382023402"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 217,
+        "title": "Fulfill Engine"
+      },
+      "variants": {
+        "id": 217,
+        "title": "Fulfill Engine",
+        "variants": [
+          {
+            "id": 107771,
+            "title": "S / Black",
+            "options": {
+              "size": "S",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 2607,
+                "width": 2291
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 2607,
+                "width": 2291
+              }
+            ]
+          },
+          {
+            "id": 107772,
+            "title": "S / White",
+            "options": {
+              "size": "S",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 2607,
+                "width": 2291
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 2607,
+                "width": 2291
+              }
+            ]
+          },
+          {
+            "id": 107773,
+            "title": "M / Black",
+            "options": {
+              "size": "M",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3009,
+                "width": 2646
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 3009,
+                "width": 2646
+              }
+            ]
+          },
+          {
+            "id": 107774,
+            "title": "M / White",
+            "options": {
+              "size": "M",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3009,
+                "width": 2646
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 3009,
+                "width": 2646
+              }
+            ]
+          },
+          {
+            "id": 107775,
+            "title": "L / Black",
+            "options": {
+              "size": "L",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3413,
+                "width": 3000
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 3413,
+                "width": 3000
+              }
+            ]
+          },
+          {
+            "id": 107776,
+            "title": "L / White",
+            "options": {
+              "size": "L",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3413,
+                "width": 3000
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 3413,
+                "width": 3000
+              }
+            ]
+          },
+          {
+            "id": 107777,
+            "title": "XL / Black",
+            "options": {
+              "size": "XL",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3413,
+                "width": 3000
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 3413,
+                "width": 3000
+              }
+            ]
+          },
+          {
+            "id": 107778,
+            "title": "XL / White",
+            "options": {
+              "size": "XL",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3413,
+                "width": 3000
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 3413,
+                "width": 3000
+              }
+            ]
+          },
+          {
+            "id": 107779,
+            "title": "2XL / Black",
+            "options": {
+              "size": "2XL",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3413,
+                "width": 3000
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 3413,
+                "width": 3000
+              }
+            ]
+          },
+          {
+            "id": 107780,
+            "title": "2XL / White",
+            "options": {
+              "size": "2XL",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3413,
+                "width": 3000
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 3413,
+                "width": 3000
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              107771,
+              107772,
+              107773,
+              107774,
+              107775,
+              107776,
+              107777,
+              107778,
+              107779,
+              107780
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 429
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 209
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              107771,
+              107772,
+              107773,
+              107774,
+              107775,
+              107776,
+              107777,
+              107778,
+              107779,
+              107780
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 519
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 219
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              107771,
+              107772,
+              107773,
+              107774,
+              107775,
+              107776,
+              107777,
+              107778,
+              107779,
+              107780
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 939
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              107771,
+              107772,
+              107773,
+              107774,
+              107775,
+              107776,
+              107777,
+              107778,
+              107779,
+              107780
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1000
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 400
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              107771,
+              107772,
+              107773,
+              107774,
+              107775,
+              107776,
+              107777,
+              107778,
+              107779,
+              107780
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1249
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "AU"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "provider": {
+        "id": 99,
+        "title": "Printify Choice"
+      },
+      "variants": {
+        "id": 99,
+        "title": "Printify Choice",
+        "variants": [
+          {
+            "id": 107771,
+            "title": "S / Black",
+            "options": {
+              "size": "S",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 2606,
+                "width": 2291
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 2606,
+                "width": 2291
+              }
+            ]
+          },
+          {
+            "id": 107772,
+            "title": "S / White",
+            "options": {
+              "size": "S",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 2606,
+                "width": 2291
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 2606,
+                "width": 2291
+              }
+            ]
+          },
+          {
+            "id": 107773,
+            "title": "M / Black",
+            "options": {
+              "size": "M",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3009,
+                "width": 2646
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 3009,
+                "width": 2646
+              }
+            ]
+          },
+          {
+            "id": 107774,
+            "title": "M / White",
+            "options": {
+              "size": "M",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3009,
+                "width": 2646
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 3009,
+                "width": 2646
+              }
+            ]
+          },
+          {
+            "id": 107775,
+            "title": "L / Black",
+            "options": {
+              "size": "L",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3412,
+                "width": 3000
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 3412,
+                "width": 3000
+              }
+            ]
+          },
+          {
+            "id": 107776,
+            "title": "L / White",
+            "options": {
+              "size": "L",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3412,
+                "width": 3000
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 3412,
+                "width": 3000
+              }
+            ]
+          },
+          {
+            "id": 107777,
+            "title": "XL / Black",
+            "options": {
+              "size": "XL",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3412,
+                "width": 3000
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 3412,
+                "width": 3000
+              }
+            ]
+          },
+          {
+            "id": 107778,
+            "title": "XL / White",
+            "options": {
+              "size": "XL",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3412,
+                "width": 3000
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 3412,
+                "width": 3000
+              }
+            ]
+          },
+          {
+            "id": 107779,
+            "title": "2XL / Black",
+            "options": {
+              "color": "Black",
+              "size": "2XL"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3412,
+                "width": 3000
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 3412,
+                "width": 3000
+              }
+            ]
+          },
+          {
+            "id": 107780,
+            "title": "2XL / White",
+            "options": {
+              "size": "2XL",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3412,
+                "width": 3000
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 3412,
+                "width": 3000
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              107771,
+              107772,
+              107773,
+              107774,
+              107775,
+              107776,
+              107777,
+              107778,
+              107779,
+              107780
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 209
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              107771,
+              107772,
+              107773,
+              107774,
+              107775,
+              107776,
+              107777,
+              107778,
+              107779,
+              107780
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 939
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              107771,
+              107772,
+              107773,
+              107774,
+              107775,
+              107776,
+              107777,
+              107778,
+              107779,
+              107780
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1000
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 400
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              107771,
+              107772,
+              107773,
+              107774,
+              107775,
+              107776,
+              107777,
+              107778,
+              107779,
+              107780
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 475
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 240
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              107771,
+              107772,
+              107773,
+              107774,
+              107775,
+              107776,
+              107777,
+              107778,
+              107779,
+              107780
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1249
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "AU"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

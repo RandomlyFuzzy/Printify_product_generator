@@ -1,0 +1,175 @@
+{
+  "blueprint": {
+    "id": 609,
+    "title": "Organic Canvas Tote Bag",
+    "brand": "Econscious",
+    "model": "EC8040",
+    "images": [
+      "https://images.printify.com/66d6f370eff00dce9500ec73",
+      "https://images.printify.com/66d6f37100256358e5092a52",
+      "https://images.printify.com/609e53322249c60eb132ffbe",
+      "https://images.printify.com/609cec096646fa2c0a6b2893",
+      "https://images.printify.com/609cec0bb4e79149d97a6abc"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 74,
+        "title": "Ink Blot"
+      },
+      "variants": {
+        "id": 74,
+        "title": "Ink Blot",
+        "variants": [
+          {
+            "id": 71925,
+            "title": "One size / Black",
+            "options": {
+              "size": "One size",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 2700,
+                "width": 3000
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 2700,
+                "width": 3000
+              }
+            ]
+          },
+          {
+            "id": 71926,
+            "title": "One size / Natural",
+            "options": {
+              "size": "One size",
+              "color": "Natural"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 2700,
+                "width": 3000
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 2700,
+                "width": 3000
+              }
+            ]
+          },
+          {
+            "id": 71927,
+            "title": "One size / Navy",
+            "options": {
+              "size": "One size",
+              "color": "Navy"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 2700,
+                "width": 3000
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 2700,
+                "width": 3000
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              71925,
+              71926,
+              71927
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 489
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 239
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              71925,
+              71926,
+              71927
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 939
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              71925,
+              71926,
+              71927
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              71925,
+              71926,
+              71927
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1249
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "AU"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

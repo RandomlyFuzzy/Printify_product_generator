@@ -1,0 +1,295 @@
+{
+  "blueprint": {
+    "id": 898,
+    "title": "Plush Toy with T-Shirt",
+    "brand": "Plushland",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d89cd366ff46a28c00e4f3",
+      "https://images.printify.com/66d89cd1cc80c572b5051576",
+      "https://images.printify.com/61f1883e58c26b4be43a25aa",
+      "https://images.printify.com/61f1898d2e12a53320414db1",
+      "https://images.printify.com/61f185d1b83f061a3e36971c",
+      "https://images.printify.com/61e92623f0202c20d466c542",
+      "https://images.printify.com/61e7aee02bd4d44d3935abaa",
+      "https://images.printify.com/61e7b03bceaa8f044d2bd829"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 30,
+        "title": "OPT OnDemand"
+      },
+      "variants": {
+        "id": 30,
+        "title": "OPT OnDemand",
+        "variants": [
+          {
+            "id": 77635,
+            "title": "Bunny / White / One size",
+            "options": {
+              "shape": "Bunny",
+              "color": "White",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 472,
+                "width": 591
+              }
+            ]
+          },
+          {
+            "id": 77636,
+            "title": "Elephant / White / One size",
+            "options": {
+              "shape": "Elephant",
+              "color": "White",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 472,
+                "width": 591
+              }
+            ]
+          },
+          {
+            "id": 77637,
+            "title": "Sheep / White / One size",
+            "options": {
+              "shape": "Sheep",
+              "color": "White",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 472,
+                "width": 591
+              }
+            ]
+          },
+          {
+            "id": 77638,
+            "title": "Bear / White / One size",
+            "options": {
+              "shape": "Bear",
+              "color": "White",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 472,
+                "width": 591
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              77635,
+              77636,
+              77637,
+              77638
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1499
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "countries": [
+              "REST_OF_THE_WORLD",
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              77635,
+              77636,
+              77637,
+              77638
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 729
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 239
+            },
+            "countries": [
+              "IE",
+              "GB"
+            ]
+          },
+          {
+            "variant_ids": [
+              77635,
+              77636,
+              77637,
+              77638
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "LV",
+              "FI",
+              "NO",
+              "IS",
+              "CH",
+              "SE",
+              "DK",
+              "EE",
+              "LT",
+              "LI"
+            ]
+          },
+          {
+            "variant_ids": [
+              77635,
+              77636,
+              77637,
+              77638
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2249
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 890
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              77635,
+              77636,
+              77637,
+              77638
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 579
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 239
+            },
+            "countries": [
+              "CZ"
+            ]
+          },
+          {
+            "variant_ids": [
+              77635,
+              77636,
+              77637,
+              77638
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 599
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 149
+            },
+            "countries": [
+              "DE"
+            ]
+          },
+          {
+            "variant_ids": [
+              77635,
+              77636,
+              77637,
+              77638
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 699
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 239
+            },
+            "countries": [
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "FO",
+              "FR",
+              "GE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IM",
+              "IT",
+              "JE",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "TR",
+              "UA",
+              "XK"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

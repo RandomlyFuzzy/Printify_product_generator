@@ -1,0 +1,240 @@
+{
+  "blueprint": {
+    "id": 5382,
+    "title": "Cotton Waffle Throw (Embroidery)",
+    "brand": "Port Authority",
+    "model": "BP92",
+    "images": [
+      "https://images.printify.com/69b91c179b9ed9c4650e7782",
+      "https://images.printify.com/69b91c19fe81c170f008a5a2",
+      "https://images.printify.com/69b91c12ad676e9b0d071f94",
+      "https://images.printify.com/69b91c0d2cb9908b180b3ff3",
+      "https://images.printify.com/69b91c148df735ddc907ceb2",
+      "https://images.printify.com/69b91c0a7a8d8430cc007348",
+      "https://images.printify.com/69b91c10b964c372a506d310",
+      "https://images.printify.com/69b9563072dda9edca0e7232"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 217,
+        "title": "Fulfill Engine"
+      },
+      "variants": {
+        "id": 217,
+        "title": "Fulfill Engine",
+        "variants": [
+          {
+            "id": 244926,
+            "title": "Dusky Orchid / One size",
+            "options": {
+              "color": "Dusky Orchid",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "bottom_left",
+                "decoration_method": "embroidery",
+                "height": 1800,
+                "width": 1800
+              },
+              {
+                "position": "bottom_center",
+                "decoration_method": "embroidery",
+                "height": 1800,
+                "width": 1800
+              },
+              {
+                "position": "bottom_right",
+                "decoration_method": "embroidery",
+                "height": 1800,
+                "width": 1800
+              }
+            ]
+          },
+          {
+            "id": 244927,
+            "title": "Gusty Grey / One size",
+            "options": {
+              "color": "Gusty Grey",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "bottom_left",
+                "decoration_method": "embroidery",
+                "height": 1800,
+                "width": 1800
+              },
+              {
+                "position": "bottom_center",
+                "decoration_method": "embroidery",
+                "height": 1800,
+                "width": 1800
+              },
+              {
+                "position": "bottom_right",
+                "decoration_method": "embroidery",
+                "height": 1800,
+                "width": 1800
+              }
+            ]
+          },
+          {
+            "id": 244928,
+            "title": "Parchment / One size",
+            "options": {
+              "color": "Parchment",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "bottom_left",
+                "decoration_method": "embroidery",
+                "height": 1800,
+                "width": 1800
+              },
+              {
+                "position": "bottom_center",
+                "decoration_method": "embroidery",
+                "height": 1800,
+                "width": 1800
+              },
+              {
+                "position": "bottom_right",
+                "decoration_method": "embroidery",
+                "height": 1800,
+                "width": 1800
+              }
+            ]
+          },
+          {
+            "id": 244929,
+            "title": "River Blue Navy / One size",
+            "options": {
+              "color": "River Blue Navy",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "bottom_left",
+                "decoration_method": "embroidery",
+                "height": 1800,
+                "width": 1800
+              },
+              {
+                "position": "bottom_center",
+                "decoration_method": "embroidery",
+                "height": 1800,
+                "width": 1800
+              },
+              {
+                "position": "bottom_right",
+                "decoration_method": "embroidery",
+                "height": 1800,
+                "width": 1800
+              }
+            ]
+          },
+          {
+            "id": 244930,
+            "title": "Ultramarine Blue / One size",
+            "options": {
+              "color": "Ultramarine Blue",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "bottom_left",
+                "decoration_method": "embroidery",
+                "height": 1800,
+                "width": 1800
+              },
+              {
+                "position": "bottom_center",
+                "decoration_method": "embroidery",
+                "height": 1800,
+                "width": 1800
+              },
+              {
+                "position": "bottom_right",
+                "decoration_method": "embroidery",
+                "height": 1800,
+                "width": 1800
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              244926,
+              244927,
+              244928,
+              244929,
+              244930
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2199
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              244926,
+              244927,
+              244928,
+              244929,
+              244930
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1179
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 579
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              244926,
+              244927,
+              244928,
+              244929,
+              244930
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2059
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 759
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

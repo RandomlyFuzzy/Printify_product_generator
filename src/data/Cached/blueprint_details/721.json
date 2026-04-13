@@ -1,0 +1,178 @@
+{
+  "blueprint": {
+    "id": 721,
+    "title": "Ceramic Photo Tile",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d6c99c86127f5f5d00aa53",
+      "https://images.printify.com/66d6c99b6d03970317039373",
+      "https://images.printify.com/61448a1d4f2eb530b56e11a6",
+      "https://images.printify.com/61448a15f49f033fce7f46b3",
+      "https://images.printify.com/61448924f49f033fce7f46a3"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 59,
+        "title": "Imagine Your Photos"
+      },
+      "variants": {
+        "id": 59,
+        "title": "Imagine Your Photos",
+        "variants": [
+          {
+            "id": 74398,
+            "title": "6\u0022 \u00D7 8\u0022 / Glossy",
+            "options": {
+              "size": "6\u0022 \u00D7 8\u0022",
+              "finish": "Glossy"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1843,
+                "width": 2444
+              }
+            ]
+          },
+          {
+            "id": 74399,
+            "title": "6\u0022 \u00D7 8\u0022 / Matte",
+            "options": {
+              "size": "6\u0022 \u00D7 8\u0022",
+              "finish": "Matte"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1843,
+                "width": 2444
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              74398,
+              74399
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1559
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 529
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              74398,
+              74399
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1919
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1129
+            },
+            "countries": [
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "DK",
+              "EE",
+              "FO",
+              "FI",
+              "FR",
+              "GE",
+              "DE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IS",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "LV",
+              "LI",
+              "LT",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "NO",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "SE",
+              "CH",
+              "TR",
+              "UA",
+              "GB",
+              "XK",
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              74398,
+              74399
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1209
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 179
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

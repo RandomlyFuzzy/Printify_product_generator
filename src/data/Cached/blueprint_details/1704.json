@@ -1,0 +1,261 @@
+{
+  "blueprint": {
+    "id": 1704,
+    "title": "Hand Flag (1pc, 5pcs)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/6786244493ec6c781c051cb5",
+      "https://images.printify.com/67862449a1f0d2cfe10fcf02",
+      "https://images.printify.com/6786244effa8aa632b05b742",
+      "https://images.printify.com/678624545ea9273b8000ca72"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 332,
+        "title": "Printdoors"
+      },
+      "variants": {
+        "id": 332,
+        "title": "Printdoors",
+        "variants": [
+          {
+            "id": 117052,
+            "title": "8.2\u0022 x 5.5\u0022 / 1 pc",
+            "options": {
+              "size": "8.2\u0022 x 5.5\u0022",
+              "quantity": "1 pc"
+            },
+            "placeholders": [
+              {
+                "position": "front_dye-sublimation",
+                "decoration_method": "dye-sublimation",
+                "height": 1891,
+                "width": 2702
+              },
+              {
+                "position": "back_dye-sublimation",
+                "decoration_method": "dye-sublimation",
+                "height": 1891,
+                "width": 2702
+              }
+            ]
+          },
+          {
+            "id": 117053,
+            "title": "8.2\u0022 x 5.5\u0022 / 5 pcs",
+            "options": {
+              "size": "8.2\u0022 x 5.5\u0022",
+              "quantity": "5 pcs"
+            },
+            "placeholders": [
+              {
+                "position": "front_dye-sublimation",
+                "decoration_method": "dye-sublimation",
+                "height": 1891,
+                "width": 2702
+              },
+              {
+                "position": "back_dye-sublimation",
+                "decoration_method": "dye-sublimation",
+                "height": 1891,
+                "width": 2702
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              117052,
+              117053
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 379
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "CN"
+            ]
+          },
+          {
+            "variant_ids": [
+              117052
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 489
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 359
+            },
+            "countries": [
+              "DE",
+              "GB",
+              "FR"
+            ]
+          },
+          {
+            "variant_ids": [
+              117052
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 809
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 679
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              117052
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 739
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              117052
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 629
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 379
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              117052
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1029
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 319
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              117053
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 949
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 819
+            },
+            "countries": [
+              "FR",
+              "DE",
+              "GB"
+            ]
+          },
+          {
+            "variant_ids": [
+              117053
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1099
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 849
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              117053
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1849
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1679
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              117053
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1269
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1139
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              117053
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1209
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "AU"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

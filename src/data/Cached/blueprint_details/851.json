@@ -1,0 +1,182 @@
+{
+  "blueprint": {
+    "id": 851,
+    "title": "Die-Cut Magnets",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66ed2bc2739b5de7cb0042d2",
+      "https://images.printify.com/66cdd63716e70c5328029e73",
+      "https://images.printify.com/67335c26359fa8c8900cc303",
+      "https://images.printify.com/67335c27102f380ca608d5c2",
+      "https://images.printify.com/6900b3b75ef5449d6108d432"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 73,
+        "title": "Printed Simply"
+      },
+      "variants": {
+        "id": 73,
+        "title": "Printed Simply",
+        "variants": [
+          {
+            "id": 76774,
+            "title": "2\u0022 x 2\u0022 / Die-Cut / 1 pc",
+            "options": {
+              "size": "2\u0022 x 2\u0022",
+              "shape": "Die-Cut",
+              "quantity": "1 pc"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 600,
+                "width": 600
+              }
+            ]
+          },
+          {
+            "id": 76775,
+            "title": "3\u0022 x 3\u0022 / Die-Cut / 1 pc",
+            "options": {
+              "size": "3\u0022 x 3\u0022",
+              "shape": "Die-Cut",
+              "quantity": "1 pc"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 900,
+                "width": 900
+              }
+            ]
+          },
+          {
+            "id": 76776,
+            "title": "4\u0022 x 4\u0022 / Die-Cut / 1 pc",
+            "options": {
+              "size": "4\u0022 x 4\u0022",
+              "shape": "Die-Cut",
+              "quantity": "1 pc"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1200,
+                "width": 1200
+              }
+            ]
+          },
+          {
+            "id": 76777,
+            "title": "5\u0022 x 5\u0022 / Die-Cut / 1 pc",
+            "options": {
+              "size": "5\u0022 x 5\u0022",
+              "shape": "Die-Cut",
+              "quantity": "1 pc"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1500,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 76778,
+            "title": "6\u0022 \u00D7 6\u0022 / Die-Cut / 1 pc",
+            "options": {
+              "size": "6\u0022 \u00D7 6\u0022",
+              "shape": "Die-Cut",
+              "quantity": "1 pc"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1800,
+                "width": 1800
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              76774,
+              76775,
+              76776,
+              76777,
+              76778
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 479
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 70
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              76774,
+              76775,
+              76776,
+              76777,
+              76778
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 70
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              76774,
+              76775,
+              76776,
+              76777,
+              76778
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1099
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 59
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

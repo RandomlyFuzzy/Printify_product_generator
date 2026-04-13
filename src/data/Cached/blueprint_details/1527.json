@@ -1,0 +1,258 @@
+{
+  "blueprint": {
+    "id": 1527,
+    "title": "Stainless Steel Flask, 6oz",
+    "brand": "Polar Camel",
+    "model": "",
+    "images": [
+      "https://images.printify.com/67b4904de9a4af57dc025e92",
+      "https://images.printify.com/67b48c00d2c70cef7e098f83",
+      "https://images.printify.com/67b4984135fb1602200decd3",
+      "https://images.printify.com/67b498454432796e110d6003",
+      "https://images.printify.com/67acf131d6984f3a650de016",
+      "https://images.printify.com/67ade75bca4a70e7840bc163"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 217,
+        "title": "Fulfill Engine"
+      },
+      "variants": {
+        "id": 217,
+        "title": "Fulfill Engine",
+        "variants": [
+          {
+            "id": 109614,
+            "title": "6oz / Green",
+            "options": {
+              "size": "6oz",
+              "color": "Green"
+            },
+            "placeholders": [
+              {
+                "position": "mug_front",
+                "decoration_method": "dtf",
+                "height": 900,
+                "width": 900
+              }
+            ]
+          },
+          {
+            "id": 109616,
+            "title": "6oz / Navy",
+            "options": {
+              "size": "6oz",
+              "color": "Navy"
+            },
+            "placeholders": [
+              {
+                "position": "mug_front",
+                "decoration_method": "dtf",
+                "height": 900,
+                "width": 900
+              }
+            ]
+          },
+          {
+            "id": 109617,
+            "title": "6oz / Orange",
+            "options": {
+              "size": "6oz",
+              "color": "Orange"
+            },
+            "placeholders": [
+              {
+                "position": "mug_front",
+                "decoration_method": "dtf",
+                "height": 900,
+                "width": 900
+              }
+            ]
+          },
+          {
+            "id": 109618,
+            "title": "6oz / Pink",
+            "options": {
+              "size": "6oz",
+              "color": "Pink"
+            },
+            "placeholders": [
+              {
+                "position": "mug_front",
+                "decoration_method": "dtf",
+                "height": 900,
+                "width": 900
+              }
+            ]
+          },
+          {
+            "id": 109619,
+            "title": "6oz / Purple",
+            "options": {
+              "size": "6oz",
+              "color": "Purple"
+            },
+            "placeholders": [
+              {
+                "position": "mug_front",
+                "decoration_method": "dtf",
+                "height": 900,
+                "width": 900
+              }
+            ]
+          },
+          {
+            "id": 109620,
+            "title": "6oz / Red",
+            "options": {
+              "size": "6oz",
+              "color": "Red"
+            },
+            "placeholders": [
+              {
+                "position": "mug_front",
+                "decoration_method": "dtf",
+                "height": 900,
+                "width": 900
+              }
+            ]
+          },
+          {
+            "id": 109621,
+            "title": "6oz / Royal",
+            "options": {
+              "size": "6oz",
+              "color": "Royal"
+            },
+            "placeholders": [
+              {
+                "position": "mug_front",
+                "decoration_method": "dtf",
+                "height": 900,
+                "width": 900
+              }
+            ]
+          },
+          {
+            "id": 109622,
+            "title": "6oz / Teal",
+            "options": {
+              "size": "6oz",
+              "color": "Teal"
+            },
+            "placeholders": [
+              {
+                "position": "mug_front",
+                "decoration_method": "dtf",
+                "height": 900,
+                "width": 900
+              }
+            ]
+          },
+          {
+            "id": 109623,
+            "title": "6oz / White",
+            "options": {
+              "size": "6oz",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "mug_front",
+                "decoration_method": "dtf",
+                "height": 900,
+                "width": 900
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              109614,
+              109615,
+              109616,
+              109617,
+              109618,
+              109619,
+              109620,
+              109621,
+              109622,
+              109623
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1679
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 489
+            },
+            "countries": [
+              "REST_OF_THE_WORLD",
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              109614,
+              109615,
+              109616,
+              109617,
+              109618,
+              109619,
+              109620,
+              109621,
+              109622,
+              109623
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 769
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 349
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              109614,
+              109615,
+              109616,
+              109617,
+              109618,
+              109619,
+              109620,
+              109621,
+              109622,
+              109623
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1179
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 479
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

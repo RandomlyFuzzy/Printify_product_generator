@@ -1,0 +1,115 @@
+{
+  "blueprint": {
+    "id": 1039,
+    "title": "Yard Sign",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d5a7c0b2a4d15f120458d2",
+      "https://images.printify.com/66d5a7c13cee41b6340d00c2",
+      "https://images.printify.com/67ed2e9c29703b3de10097b2"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 2,
+        "title": "Sensaria"
+      },
+      "variants": {
+        "id": 2,
+        "title": "Sensaria",
+        "variants": [
+          {
+            "id": 80149,
+            "title": "18\u0022 x 24\u0022 / White",
+            "options": {
+              "size": "18\u0022 x 24\u0022",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 5475,
+                "width": 7275
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              80149
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 14229
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 13679
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              80149
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 5279
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 3779
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              80149
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 11129
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 10699
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              80149
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1529
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1049
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

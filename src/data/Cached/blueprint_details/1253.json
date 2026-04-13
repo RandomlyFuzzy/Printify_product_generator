@@ -1,0 +1,172 @@
+{
+  "blueprint": {
+    "id": 1253,
+    "title": "Calendar (2026)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/68d29f8ffd6cd3545304b932",
+      "https://images.printify.com/68d29ffe97298ac5190159e2",
+      "https://images.printify.com/68d400aaa3beac8f7f0f4fb2",
+      "https://images.printify.com/68d29f8c3246eb63ea06b292"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 234,
+        "title": "Today\u0027s Graphics"
+      },
+      "variants": {
+        "id": 234,
+        "title": "Today\u0027s Graphics",
+        "variants": [
+          {
+            "id": 94860,
+            "title": "10.8\u0022 x 8.4\u0022 / Semi Glossy",
+            "options": {
+              "size": "10.8\u0022 x 8.4\u0022",
+              "paper": "Semi Glossy"
+            },
+            "placeholders": [
+              {
+                "position": "front_cover",
+                "decoration_method": "digital-printing",
+                "height": 2725,
+                "width": 3454
+              },
+              {
+                "position": "january",
+                "decoration_method": "digital-printing",
+                "height": 2725,
+                "width": 3454
+              },
+              {
+                "position": "february",
+                "decoration_method": "digital-printing",
+                "height": 2725,
+                "width": 3454
+              },
+              {
+                "position": "march",
+                "decoration_method": "digital-printing",
+                "height": 2725,
+                "width": 3454
+              },
+              {
+                "position": "april",
+                "decoration_method": "digital-printing",
+                "height": 2725,
+                "width": 3454
+              },
+              {
+                "position": "may",
+                "decoration_method": "digital-printing",
+                "height": 2725,
+                "width": 3454
+              },
+              {
+                "position": "june",
+                "decoration_method": "digital-printing",
+                "height": 2725,
+                "width": 3454
+              },
+              {
+                "position": "july",
+                "decoration_method": "digital-printing",
+                "height": 2725,
+                "width": 3454
+              },
+              {
+                "position": "august",
+                "decoration_method": "digital-printing",
+                "height": 2725,
+                "width": 3454
+              },
+              {
+                "position": "september",
+                "decoration_method": "digital-printing",
+                "height": 2725,
+                "width": 3454
+              },
+              {
+                "position": "october",
+                "decoration_method": "digital-printing",
+                "height": 2725,
+                "width": 3454
+              },
+              {
+                "position": "november",
+                "decoration_method": "digital-printing",
+                "height": 2725,
+                "width": 3454
+              },
+              {
+                "position": "december",
+                "decoration_method": "digital-printing",
+                "height": 2725,
+                "width": 3454
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              94860
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2219
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 799
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              94860
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2799
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 799
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              94860
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 679
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 129
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

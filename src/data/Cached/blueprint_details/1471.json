@@ -1,0 +1,116 @@
+{
+  "blueprint": {
+    "id": 1471,
+    "title": "Photo Block",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66f284fa5def0ba43b0fe8b2",
+      "https://images.printify.com/66f2a802abc756301709f6b3",
+      "https://images.printify.com/669613f0439a1b3084060704"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 104,
+        "title": "Acrylic Idea Factory"
+      },
+      "variants": {
+        "id": 104,
+        "title": "Acrylic Idea Factory",
+        "variants": [
+          {
+            "id": 106189,
+            "title": "7\u0027\u0027 \u00D7 5\u0027\u0027 (Horizontal)",
+            "options": {
+              "size": "7\u0027\u0027 \u00D7 5\u0027\u0027 (Horizontal)"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1538,
+                "width": 2138
+              }
+            ]
+          },
+          {
+            "id": 106190,
+            "title": "5\u0027\u0027 \u00D7 7\u0027\u0027 (Vertical)",
+            "options": {
+              "size": "5\u0027\u0027 \u00D7 7\u0027\u0027 (Vertical)"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 2138,
+                "width": 1538
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              106189,
+              106190
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1599
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              106189,
+              106190
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 3139
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1689
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              106189,
+              106190
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 3209
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1689
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

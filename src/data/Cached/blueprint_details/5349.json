@@ -1,0 +1,186 @@
+{
+  "blueprint": {
+    "id": 5349,
+    "title": "Waterproof Canvas Bag",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/69a970d3ea603d34b10a6ef1",
+      "https://images.printify.com/69a970cb086fd8a32602c751",
+      "https://images.printify.com/69a970ced304e3666f001b52",
+      "https://images.printify.com/69a9713ca5ab3ef1e10a3bc0"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 14,
+        "title": "ArtsAdd"
+      },
+      "variants": {
+        "id": 14,
+        "title": "ArtsAdd",
+        "variants": [
+          {
+            "id": 244112,
+            "title": "Black / One size",
+            "options": {
+              "color": "Black",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 2631,
+                "width": 3239
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 2199,
+                "width": 3253
+              },
+              {
+                "position": "flap",
+                "decoration_method": "dye-sublimation",
+                "height": 2713,
+                "width": 3200
+              },
+              {
+                "position": "left",
+                "decoration_method": "dye-sublimation",
+                "height": 2546,
+                "width": 1409
+              },
+              {
+                "position": "right",
+                "decoration_method": "dye-sublimation",
+                "height": 2546,
+                "width": 1409
+              },
+              {
+                "position": "bottom",
+                "decoration_method": "dye-sublimation",
+                "height": 1250,
+                "width": 3236
+              }
+            ]
+          },
+          {
+            "id": 244113,
+            "title": "Brown / One size",
+            "options": {
+              "color": "Brown",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 2631,
+                "width": 3239
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 2199,
+                "width": 3253
+              },
+              {
+                "position": "flap",
+                "decoration_method": "dye-sublimation",
+                "height": 2713,
+                "width": 3200
+              },
+              {
+                "position": "left",
+                "decoration_method": "dye-sublimation",
+                "height": 2546,
+                "width": 1409
+              },
+              {
+                "position": "right",
+                "decoration_method": "dye-sublimation",
+                "height": 2546,
+                "width": 1409
+              },
+              {
+                "position": "bottom",
+                "decoration_method": "dye-sublimation",
+                "height": 1250,
+                "width": 3236
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              244112,
+              244113
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 840
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 840
+            },
+            "countries": [
+              "DK",
+              "NL",
+              "US",
+              "CA",
+              "BR",
+              "MX",
+              "NZ",
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              244112,
+              244113
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1079
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1079
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              244112,
+              244113
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "CN"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

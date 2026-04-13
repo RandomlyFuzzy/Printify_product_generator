@@ -1,0 +1,163 @@
+{
+  "blueprint": {
+    "id": 1463,
+    "title": "Soapstone Car Coaster",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66c463ecd4c683fbcc07d272",
+      "https://images.printify.com/66c463ea22beadc1750fba12",
+      "https://images.printify.com/6620cb2fd03748c6cd0562e3",
+      "https://images.printify.com/6617b13c890f0eb3ff0b0243",
+      "https://images.printify.com/6617b16a37f64cfbe0072546",
+      "https://images.printify.com/6617b279e3f369339f08abf8"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 28,
+        "title": "District Photo"
+      },
+      "variants": {
+        "id": 28,
+        "title": "District Photo",
+        "variants": [
+          {
+            "id": 105476,
+            "title": "2.6\u0027\u0027 \u00D7 2.6\u0022 / 1pc",
+            "options": {
+              "size": "2.6\u0027\u0027 \u00D7 2.6\u0022",
+              "quantity": "1pc"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 1650,
+                "width": 1650
+              }
+            ]
+          },
+          {
+            "id": 105477,
+            "title": "2.6\u0027\u0027 \u00D7 2.6\u0022 / 2pcs",
+            "options": {
+              "size": "2.6\u0027\u0027 \u00D7 2.6\u0022",
+              "quantity": "2pcs"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 1650,
+                "width": 1650
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              105476,
+              105477,
+              105478
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 459
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 49
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              105478
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1399
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "NZ",
+              "REST_OF_THE_WORLD",
+              "CA",
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              105476,
+              105477,
+              105478
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 99
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              105476
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1159
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "NZ",
+              "AU",
+              "CA",
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              105477
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1199
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "AU",
+              "CA",
+              "NZ",
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

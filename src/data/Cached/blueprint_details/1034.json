@@ -1,0 +1,148 @@
+{
+  "blueprint": {
+    "id": 1034,
+    "title": "Laundry Bag",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d59ccd53e4d7d4790c4e13",
+      "https://images.printify.com/66d59ccc9f58d0d54e057344",
+      "https://images.printify.com/626be267f6da5d15630768c0",
+      "https://images.printify.com/626659237c9205a1ff0d0063",
+      "https://images.printify.com/6261295fd91d6d60590cc531",
+      "https://images.printify.com/6267d4477f319b7452006ee0"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 10,
+        "title": "MWW On Demand"
+      },
+      "variants": {
+        "id": 10,
+        "title": "MWW On Demand",
+        "variants": [
+          {
+            "id": 79956,
+            "title": "18\u0022 \u00D7 29\u0022",
+            "options": {
+              "size": "18\u0022 \u00D7 29\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 4800,
+                "width": 3000
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 4800,
+                "width": 3000
+              }
+            ]
+          },
+          {
+            "id": 79957,
+            "title": "28\u0022 \u00D7 36\u0022",
+            "options": {
+              "size": "28\u0022 \u00D7 36\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 5738,
+                "width": 4425
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 5738,
+                "width": 4425
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              79956,
+              79957
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 569
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 259
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              79956,
+              79957
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1119
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 359
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              79956,
+              79957
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 599
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 299
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              79956,
+              79957
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1199
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 379
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

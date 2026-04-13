@@ -1,0 +1,73 @@
+{
+  "blueprint": {
+    "id": 1567,
+    "title": "Collagen Peptides Type I \u0026 III Supplement (350g, 12.3oz)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d85d21d617292f2e02dc24",
+      "https://images.printify.com/66d85d1dd617292f2e02dc22",
+      "https://images.printify.com/66e1a11c2c78ba40090acd84",
+      "https://images.printify.com/66d85d1ed617292f2e02dc23",
+      "https://images.printify.com/66d85d20ae63b6bb8d012b85",
+      "https://images.printify.com/66d85d1b1fc66626e70f1014",
+      "https://images.printify.com/66e1a11da2d01b989c00f254",
+      "https://images.printify.com/66d85d1dae63b6bb8d012b84"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 294,
+        "title": "Rocktomic"
+      },
+      "variants": {
+        "id": 294,
+        "title": "Rocktomic",
+        "variants": [
+          {
+            "id": 109764,
+            "title": "White jar \u002B lid / NET WT 12.35 OZ (350g) / Unflavored",
+            "options": {
+              "color": "White jar \u002B lid",
+              "size": "NET WT 12.35 OZ (350g)",
+              "flavor": "Unflavored"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 2197,
+                "width": 3378
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              109764
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 799
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

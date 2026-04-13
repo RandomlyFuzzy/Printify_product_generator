@@ -1,0 +1,156 @@
+{
+  "blueprint": {
+    "id": 1394,
+    "title": "Ringneck Tumbler, 20oz",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66cc6d2e7b8e0dd0d6065e37",
+      "https://images.printify.com/66cc6d2cda561839cf0b5ef7",
+      "https://images.printify.com/65730743e215eca861055134",
+      "https://images.printify.com/67ed05d51f4b863f6f09d117"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 86,
+        "title": "Chill"
+      },
+      "variants": {
+        "id": 86,
+        "title": "Chill",
+        "variants": [
+          {
+            "id": 103867,
+            "title": "Black / 20oz",
+            "options": {
+              "color": "Black",
+              "size": "20oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1346,
+                "width": 3058
+              }
+            ]
+          },
+          {
+            "id": 103868,
+            "title": "White / 20oz",
+            "options": {
+              "color": "White",
+              "size": "20oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1346,
+                "width": 3058
+              }
+            ]
+          },
+          {
+            "id": 103869,
+            "title": "Steel / 20oz",
+            "options": {
+              "color": "Steel",
+              "size": "20oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1346,
+                "width": 3058
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              103867,
+              103868,
+              103869
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 659
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              103867,
+              103868,
+              103869
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1329
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 699
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              103867,
+              103868,
+              103869
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1229
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 529
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              103867,
+              103868,
+              103869
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 699
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

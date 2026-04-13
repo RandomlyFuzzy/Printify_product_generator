@@ -1,0 +1,133 @@
+{
+  "blueprint": {
+    "id": 897,
+    "title": "Balloons (Round and Heart-shaped), 6\u0022",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66cf280fca91a75cc00aba53",
+      "https://images.printify.com/66cf280d46ed83d0890d4463",
+      "https://images.printify.com/6242c1d1dc049cdb0909c9b6",
+      "https://images.printify.com/67ed2b210acfce1bc7000d48"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 102,
+        "title": "Photo Balloon Store"
+      },
+      "variants": {
+        "id": 102,
+        "title": "Photo Balloon Store",
+        "variants": [
+          {
+            "id": 77475,
+            "title": "Heart / 6\u0027\u0027 / White",
+            "options": {
+              "shape": "Heart",
+              "size": "6\u0027\u0027",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 2228,
+                "width": 2225
+              },
+              {
+                "position": "back",
+                "decoration_method": "digital-printing",
+                "height": 2228,
+                "width": 2225
+              }
+            ]
+          },
+          {
+            "id": 77476,
+            "title": "Round / 6\u0027\u0027 / White",
+            "options": {
+              "shape": "Round",
+              "size": "6\u0027\u0027",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 2201,
+                "width": 2201
+              },
+              {
+                "position": "back",
+                "decoration_method": "digital-printing",
+                "height": 2201,
+                "width": 2201
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              77475,
+              77476
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 929
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 329
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              77475,
+              77476
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 539
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 119
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              77475,
+              77476
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1899
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

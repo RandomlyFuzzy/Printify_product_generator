@@ -1,0 +1,110 @@
+{
+  "blueprint": {
+    "id": 1176,
+    "title": "Balloon (Round and Heart-shaped), 11\u0022",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d0a05d9e7c2657030ef722",
+      "https://images.printify.com/66d0a05b892c8db36c04a52c",
+      "https://images.printify.com/6449470b3b9f02dfbc0faa1a",
+      "https://images.printify.com/67ed32025629108c3a0a0f94"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 102,
+        "title": "Photo Balloon Store"
+      },
+      "variants": {
+        "id": 102,
+        "title": "Photo Balloon Store",
+        "variants": [
+          {
+            "id": 91273,
+            "title": "Round / 11\u0027\u0027 / White",
+            "options": {
+              "shape": "Round",
+              "size": "11\u0027\u0027",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 3463,
+                "width": 3463
+              },
+              {
+                "position": "back",
+                "decoration_method": "digital-printing",
+                "height": 3463,
+                "width": 3463
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              91272,
+              91273
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 929
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 329
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              91272,
+              91273
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 539
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 119
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              91272,
+              91273
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1899
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

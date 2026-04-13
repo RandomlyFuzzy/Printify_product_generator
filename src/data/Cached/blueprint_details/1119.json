@@ -1,0 +1,99 @@
+{
+  "blueprint": {
+    "id": 1119,
+    "title": "Mini License Plate",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d5903a5a89615b7f0cf625",
+      "https://images.printify.com/66d59039145f601bbe0df502",
+      "https://images.printify.com/67ef8d280c5eddf67d0e85a4",
+      "https://images.printify.com/62b0624415ff242ea40f2165"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 92,
+        "title": "Pic the Gift"
+      },
+      "variants": {
+        "id": 92,
+        "title": "Pic the Gift",
+        "variants": [
+          {
+            "id": 82965,
+            "title": "6\u0022 x 3\u0022",
+            "options": {
+              "size": "6\u0022 x 3\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 994,
+                "width": 1899
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              82965
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 549
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 49
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              82965
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 889
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 79
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              82965
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 859
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 99
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

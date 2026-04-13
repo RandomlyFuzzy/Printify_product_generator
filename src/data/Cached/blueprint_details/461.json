@@ -1,0 +1,192 @@
+{
+  "blueprint": {
+    "id": 461,
+    "title": "Men\u0027s Lightweight V-Neck Tee",
+    "brand": "Anvil",
+    "model": "982",
+    "images": [
+      "https://images.printify.com/5def93696b0c5664a85a07a3",
+      "https://images.printify.com/5def936ccba75873a00e974f",
+      "https://images.printify.com/5df8cc4a42606b379d1958a3"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 29,
+        "title": "Monster Digital"
+      },
+      "variants": {
+        "id": 29,
+        "title": "Monster Digital",
+        "variants": [
+          {
+            "id": 63993,
+            "title": "White / S",
+            "options": {
+              "color": "White",
+              "size": "S"
+            },
+            "placeholders": [
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 3761,
+                "width": 3319
+              },
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3761,
+                "width": 3319
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              63987,
+              63988,
+              63989,
+              63990,
+              63991,
+              63992,
+              63993,
+              63994,
+              63995,
+              63996,
+              63997,
+              63998
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 429
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 209
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              63987,
+              63988,
+              63989,
+              63990,
+              63991,
+              63992,
+              63993,
+              63994,
+              63995,
+              63996,
+              63997,
+              63998
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 939
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              63987,
+              63988,
+              63989,
+              63990,
+              63991,
+              63992,
+              63993,
+              63994,
+              63995,
+              63996,
+              63997,
+              63998
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1249
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              63987,
+              63988,
+              63989,
+              63990,
+              63991,
+              63992,
+              63993,
+              63994,
+              63995,
+              63996,
+              63997,
+              63998
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1000
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 400
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              63987,
+              63988,
+              63989,
+              63990,
+              63991,
+              63992,
+              63993,
+              63994,
+              63995,
+              63996,
+              63997,
+              63998
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 475
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 240
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

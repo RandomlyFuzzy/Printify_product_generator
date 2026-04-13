@@ -1,0 +1,266 @@
+{
+  "blueprint": {
+    "id": 2697,
+    "title": "Poly Velvet Pillow",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/6995cefa0d9e91096f0ceb82",
+      "https://images.printify.com/6995c64ab53abe913206d5b2",
+      "https://images.printify.com/6996d3df0738c6e74e01ffb2",
+      "https://images.printify.com/6995c706b294042b1207b793"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 10,
+        "title": "MWW On Demand"
+      },
+      "variants": {
+        "id": 10,
+        "title": "MWW On Demand",
+        "variants": [
+          {
+            "id": 148196,
+            "title": "16\u0027\u0027 \u00D7 16\u0027\u0027 / White",
+            "options": {
+              "size": "16\u0027\u0027 \u00D7 16\u0027\u0027",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 2925,
+                "width": 2925
+              }
+            ]
+          },
+          {
+            "id": 148197,
+            "title": "18\u0027\u0027 \u00D7 18\u0027\u0027 / White",
+            "options": {
+              "size": "18\u0027\u0027 \u00D7 18\u0027\u0027",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 3075,
+                "width": 3075
+              }
+            ]
+          },
+          {
+            "id": 148198,
+            "title": "20\u0027\u0027 \u00D7 20\u0027\u0027 / White",
+            "options": {
+              "size": "20\u0027\u0027 \u00D7 20\u0027\u0027",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 3375,
+                "width": 3375
+              }
+            ]
+          },
+          {
+            "id": 148199,
+            "title": "26\u0027\u0027 \u00D7 26\u0027\u0027 / White",
+            "options": {
+              "size": "26\u0027\u0027 \u00D7 26\u0027\u0027",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 4275,
+                "width": 4275
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              148198,
+              148199
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1499
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1499
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              148197
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1059
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1029
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              148196
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 959
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 929
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              148197
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1159
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1159
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              148196,
+              148197
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1669
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 919
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              148196,
+              148197
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1419
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 799
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              148198,
+              148199
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1699
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1699
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              148198,
+              148199
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2599
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2499
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              148198,
+              148199
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2499
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2499
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              148196
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1039
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1039
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

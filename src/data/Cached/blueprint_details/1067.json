@@ -1,0 +1,130 @@
+{
+  "blueprint": {
+    "id": 1067,
+    "title": "Small Cell Phone Wallet",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d880b437f6f0d45d0b8704",
+      "https://images.printify.com/66d880b38fc7c91985051316",
+      "https://images.printify.com/6298b7b82117059dd109dbd1",
+      "https://images.printify.com/6299c1532117059dd109dd94",
+      "https://images.printify.com/6298b80eda5a4ace6e068918",
+      "https://images.printify.com/6298b72b2117059dd109dbcb",
+      "https://images.printify.com/6298b7a92117059dd109dbce"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 14,
+        "title": "ArtsAdd"
+      },
+      "variants": {
+        "id": 14,
+        "title": "ArtsAdd",
+        "variants": [
+          {
+            "id": 80778,
+            "title": "7.5\u0022 \u00D7 4.9\u0022 \u00D7 1\u0022",
+            "options": {
+              "size": "7.5\u0022 \u00D7 4.9\u0022 \u00D7 1\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1040,
+                "width": 867
+              },
+              {
+                "position": "front_pocket_flap",
+                "decoration_method": "dye-sublimation",
+                "height": 885,
+                "width": 838
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              80778
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 360
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 360
+            },
+            "countries": [
+              "REST_OF_THE_WORLD",
+              "BR",
+              "NL",
+              "DK",
+              "NZ",
+              "MX"
+            ]
+          },
+          {
+            "variant_ids": [
+              80778
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 569
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              80778
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "CA",
+              "CN"
+            ]
+          },
+          {
+            "variant_ids": [
+              80778
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 649
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 649
+            },
+            "countries": [
+              "AU"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

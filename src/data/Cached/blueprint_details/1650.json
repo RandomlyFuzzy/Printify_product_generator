@@ -1,0 +1,122 @@
+{
+  "blueprint": {
+    "id": 1650,
+    "title": "Woven Pillow",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/67bf0783a46eb32fa900a323",
+      "https://images.printify.com/67bf05d861394d4cce02c8d5",
+      "https://images.printify.com/67bf07892dc202e18905b132",
+      "https://images.printify.com/67bdc6d03b9ec9c706000802",
+      "https://images.printify.com/67bf07933ff00b30570d3b38",
+      "https://images.printify.com/67209f351030b577dd07557c",
+      "https://images.printify.com/67209f46b4b3ba6c260e56e9"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 10,
+        "title": "MWW On Demand"
+      },
+      "variants": {
+        "id": 10,
+        "title": "MWW On Demand",
+        "variants": [
+          {
+            "id": 114341,
+            "title": "Artwork / 17\u0022 \u00D7 18\u0022",
+            "options": {
+              "finish": "Artwork",
+              "size": "17\u0022 \u00D7 18\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "weaving",
+                "height": 1824,
+                "width": 1728
+              }
+            ]
+          },
+          {
+            "id": 114342,
+            "title": "Photo / 17\u0022 \u00D7 18\u0022",
+            "options": {
+              "finish": "Photo",
+              "size": "17\u0022 \u00D7 18\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "weaving",
+                "height": 1824,
+                "width": 1728
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              114341,
+              114342
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1159
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1159
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              114341,
+              114342
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1669
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 919
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              114341,
+              114342
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1419
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 799
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

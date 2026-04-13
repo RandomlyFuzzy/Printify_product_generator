@@ -1,0 +1,57 @@
+{
+  "blueprint": {
+    "id": 5359,
+    "title": "Hooded Baby Towel",
+    "brand": "Generic brand",
+    "model": "PHD1616-2",
+    "images": [
+      "https://images.printify.com/69d4ffe413c28a5a070181b0",
+      "https://images.printify.com/69d4ffe6934950f71d021512",
+      "https://images.printify.com/69d4ffe2c59e0e783d097000",
+      "https://images.printify.com/69a16403f5421e9c5f06ef32",
+      "https://images.printify.com/69a16a6c1744be8ddf0a7e72"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 92,
+        "title": "Pic the Gift"
+      },
+      "variants": {
+        "id": 92,
+        "title": "Pic the Gift",
+        "variants": [
+          {
+            "id": 244603,
+            "title": "30\u0022 \u00D7 30\u0022",
+            "options": {
+              "size": "30\u0022 \u00D7 30\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 4650,
+                "width": 4650
+              },
+              {
+                "position": "hood",
+                "decoration_method": "dye-sublimation",
+                "height": 1166,
+                "width": 2702
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": []
+      }
+    }
+  ]
+}

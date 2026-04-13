@@ -1,0 +1,157 @@
+{
+  "blueprint": {
+    "id": 895,
+    "title": "Rectangular Mouse Pad",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d86adbd369476bf601d642",
+      "https://images.printify.com/66d86ad97d1e6e1e6d0c7922",
+      "https://images.printify.com/673204bc4e00e25bc00f2002"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 41,
+        "title": "Duplium"
+      },
+      "variants": {
+        "id": 41,
+        "title": "Duplium",
+        "variants": [
+          {
+            "id": 77202,
+            "title": "9.3\u2033 x 7.8\u0022 / Rectangle",
+            "options": {
+              "size": "9.3\u2033 x 7.8\u0022",
+              "shape": "Rectangle"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 2325,
+                "width": 2775
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              77202
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1099
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "BY",
+              "LV",
+              "GG",
+              "HR",
+              "IE",
+              "SM",
+              "TR",
+              "AX",
+              "GR",
+              "VA",
+              "HU",
+              "RS",
+              "FI",
+              "GL",
+              "EE",
+              "FR",
+              "IS",
+              "REST_OF_THE_WORLD",
+              "AM",
+              "AL",
+              "DK",
+              "DE",
+              "LT",
+              "MT",
+              "ME",
+              "CZ",
+              "NO",
+              "AT",
+              "AD",
+              "IM",
+              "IT",
+              "MK",
+              "MC",
+              "SE",
+              "GB",
+              "BV",
+              "BG",
+              "GI",
+              "LI",
+              "RE",
+              "SI",
+              "CH",
+              "XK",
+              "MD",
+              "RO",
+              "BA",
+              "CY",
+              "PL",
+              "FO",
+              "GP",
+              "BE",
+              "LU",
+              "SK",
+              "ES",
+              "PT",
+              "UA",
+              "GE",
+              "JE",
+              "NL"
+            ]
+          },
+          {
+            "variant_ids": [
+              77202
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 829
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              77202
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1659
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 289
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

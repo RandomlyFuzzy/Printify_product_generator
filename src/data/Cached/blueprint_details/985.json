@@ -1,0 +1,176 @@
+{
+  "blueprint": {
+    "id": 985,
+    "title": "Colorful Accent Mugs, 11oz",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d1c18a9722d8c74d080ba9",
+      "https://images.printify.com/66d1c189795f4d42d40e31ea",
+      "https://images.printify.com/623d7575ebfee87fe71a73a5"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 66,
+        "title": "Prima Printing"
+      },
+      "variants": {
+        "id": 66,
+        "title": "Prima Printing",
+        "variants": [
+          {
+            "id": 78565,
+            "title": "11oz / Black",
+            "options": {
+              "size": "11oz",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1181,
+                "width": 2457
+              }
+            ]
+          },
+          {
+            "id": 88602,
+            "title": "11oz / Blue",
+            "options": {
+              "size": "11oz",
+              "color": "Blue"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1181,
+                "width": 2457
+              }
+            ]
+          },
+          {
+            "id": 88603,
+            "title": "11oz / Pink",
+            "options": {
+              "size": "11oz",
+              "color": "Pink"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1181,
+                "width": 2457
+              }
+            ]
+          },
+          {
+            "id": 88604,
+            "title": "11oz / Red",
+            "options": {
+              "size": "11oz",
+              "color": "Red"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1181,
+                "width": 2457
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              78565,
+              88602,
+              88603,
+              88604
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1389
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1389
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              78565,
+              88602,
+              88603,
+              88604
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 4019
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 4019
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              78565,
+              88602,
+              88603,
+              88604
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 719
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 269
+            },
+            "countries": [
+              "AU",
+              "NZ"
+            ]
+          },
+          {
+            "variant_ids": [
+              78565,
+              88602,
+              88603,
+              88604
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "countries": [
+              "GB"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

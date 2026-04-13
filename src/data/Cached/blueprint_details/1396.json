@@ -1,0 +1,259 @@
+{
+  "blueprint": {
+    "id": 1396,
+    "title": "Women\u0027s Denim Jacket",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66dec169476765ea08081542",
+      "https://images.printify.com/66dec167753bcc966204e152",
+      "https://images.printify.com/658d785b94101b978d0f6fe9",
+      "https://images.printify.com/658d785de5d495438d0a2a52",
+      "https://images.printify.com/65c1e802d9291f50500b78f3",
+      "https://images.printify.com/65c081b6fd4a0729d50e6f52",
+      "https://images.printify.com/658d786037827094e8086786",
+      "https://images.printify.com/65c1e801d9291f50500b78f2",
+      "https://images.printify.com/658d7865e5d495438d0a2a53"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 10,
+        "title": "MWW On Demand"
+      },
+      "variants": {
+        "id": 10,
+        "title": "MWW On Demand",
+        "variants": [
+          {
+            "id": 103910,
+            "title": "Medium Denim Wash / S",
+            "options": {
+              "color": "Medium Denim Wash",
+              "size": "S"
+            },
+            "placeholders": [
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 3150,
+                "width": 3150
+              }
+            ]
+          },
+          {
+            "id": 103911,
+            "title": "Medium Denim Wash / M",
+            "options": {
+              "color": "Medium Denim Wash",
+              "size": "M"
+            },
+            "placeholders": [
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 3150,
+                "width": 3150
+              }
+            ]
+          },
+          {
+            "id": 103912,
+            "title": "Medium Denim Wash / L",
+            "options": {
+              "color": "Medium Denim Wash",
+              "size": "L"
+            },
+            "placeholders": [
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 3150,
+                "width": 3150
+              }
+            ]
+          },
+          {
+            "id": 103913,
+            "title": "Medium Denim Wash / XL",
+            "options": {
+              "color": "Medium Denim Wash",
+              "size": "XL"
+            },
+            "placeholders": [
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 3150,
+                "width": 3150
+              }
+            ]
+          },
+          {
+            "id": 103914,
+            "title": "Medium Denim Wash / 2XL",
+            "options": {
+              "color": "Medium Denim Wash",
+              "size": "2XL"
+            },
+            "placeholders": [
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 3150,
+                "width": 3150
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              103910,
+              103911,
+              103912,
+              103913,
+              103914
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1279
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 379
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              103910,
+              103911,
+              103912,
+              103913,
+              103914
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1579
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1579
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              103910,
+              103911,
+              103912,
+              103913,
+              103914
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1439
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 419
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              103910,
+              103911,
+              103912,
+              103913,
+              103914
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1849
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1849
+            },
+            "countries": [
+              "EE",
+              "LI",
+              "LT",
+              "LV",
+              "IS",
+              "CH",
+              "FI",
+              "SE",
+              "NO",
+              "DK",
+              "REST_OF_THE_WORLD",
+              "DE",
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "FO",
+              "FR",
+              "GE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "TR",
+              "UA",
+              "GB",
+              "XK",
+              "LU"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

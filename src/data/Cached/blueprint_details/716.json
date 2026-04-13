@@ -1,0 +1,269 @@
+{
+  "blueprint": {
+    "id": 716,
+    "title": "Sky Water Bottle",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d6bf29d23b4a3f020bc943",
+      "https://images.printify.com/66d6bf28d23b4a3f020bc942",
+      "https://images.printify.com/61559fd958bb884bd07ed15c",
+      "https://images.printify.com/6155a0bbc50a6577637fe5e2",
+      "https://images.printify.com/677fa533f6bbd93bfc008662"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 6,
+        "title": "T Shirt and Sons"
+      },
+      "variants": {
+        "id": 6,
+        "title": "T Shirt and Sons",
+        "variants": [
+          {
+            "id": 73358,
+            "title": "21.9oz / Lime",
+            "options": {
+              "size": "21.9oz",
+              "color": "Lime"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 2067,
+                "width": 2534
+              }
+            ]
+          },
+          {
+            "id": 73359,
+            "title": "21.9oz / Magenta",
+            "options": {
+              "size": "21.9oz",
+              "color": "Magenta"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 2067,
+                "width": 2534
+              }
+            ]
+          },
+          {
+            "id": 73360,
+            "title": "21.9oz / Orange",
+            "options": {
+              "size": "21.9oz",
+              "color": "Orange"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 2067,
+                "width": 2534
+              }
+            ]
+          },
+          {
+            "id": 73361,
+            "title": "21.9oz / Red",
+            "options": {
+              "size": "21.9oz",
+              "color": "Red"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 2067,
+                "width": 2534
+              }
+            ]
+          },
+          {
+            "id": 73362,
+            "title": "21.9oz / Royal",
+            "options": {
+              "size": "21.9oz",
+              "color": "Royal"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 2067,
+                "width": 2534
+              }
+            ]
+          },
+          {
+            "id": 73363,
+            "title": "21.9oz / White",
+            "options": {
+              "size": "21.9oz",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 2067,
+                "width": 2534
+              }
+            ]
+          },
+          {
+            "id": 73364,
+            "title": "21.9oz / Black",
+            "options": {
+              "size": "21.9oz",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 2067,
+                "width": 2534
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              73358,
+              73359,
+              73360,
+              73361,
+              73362,
+              73363,
+              73364
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 899
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "SE",
+              "DK",
+              "FI",
+              "EE",
+              "IS",
+              "LT",
+              "LV",
+              "NO",
+              "LI",
+              "CH",
+              "NL",
+              "PL",
+              "DE",
+              "IE",
+              "GI",
+              "AT",
+              "BE",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "FR",
+              "GR",
+              "HU",
+              "IT",
+              "LU",
+              "MT",
+              "PT",
+              "RO",
+              "SK",
+              "SI",
+              "ES",
+              "TR"
+            ]
+          },
+          {
+            "variant_ids": [
+              73358,
+              73359,
+              73360,
+              73361,
+              73362,
+              73363,
+              73364
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 449
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 299
+            },
+            "countries": [
+              "GB"
+            ]
+          },
+          {
+            "variant_ids": [
+              73358,
+              73359,
+              73360,
+              73361,
+              73362,
+              73363,
+              73364
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2279
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 619
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              73358,
+              73359,
+              73360,
+              73361,
+              73362,
+              73363,
+              73364
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 3379
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 619
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

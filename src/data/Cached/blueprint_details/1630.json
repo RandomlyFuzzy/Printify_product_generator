@@ -1,0 +1,251 @@
+{
+  "blueprint": {
+    "id": 1630,
+    "title": "Bible Cover",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/67c5b7676b164df2cf01b313",
+      "https://images.printify.com/67d29869fe9440e49808ec42",
+      "https://images.printify.com/67c5b769c979b1ec7c001852",
+      "https://images.printify.com/67cafb0b89f10416da0224b8",
+      "https://images.printify.com/67caef65071bfb64cd05cfc2",
+      "https://images.printify.com/67c5b80fc979b1ec7c001853"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 90,
+        "title": "Smart Printee"
+      },
+      "variants": {
+        "id": 90,
+        "title": "Smart Printee",
+        "variants": [
+          {
+            "id": 112836,
+            "title": "M",
+            "options": {
+              "size": "M"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 3118,
+                "width": 4654
+              }
+            ]
+          },
+          {
+            "id": 112837,
+            "title": "L",
+            "options": {
+              "size": "L"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 3413,
+                "width": 5126
+              }
+            ]
+          },
+          {
+            "id": 112838,
+            "title": "XL",
+            "options": {
+              "size": "XL"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 3756,
+                "width": 5894
+              }
+            ]
+          },
+          {
+            "id": 113743,
+            "title": "2XL",
+            "options": {
+              "size": "2XL"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 3980,
+                "width": 6520
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              112836,
+              112837,
+              112838,
+              113743
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1109
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 869
+            },
+            "countries": [
+              "GB"
+            ]
+          },
+          {
+            "variant_ids": [
+              112836,
+              112837,
+              112838,
+              113743
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1539
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1409
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              112836,
+              112837,
+              112838,
+              113743
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1729
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1109
+            },
+            "countries": [
+              "AU",
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              112836,
+              112837,
+              112838,
+              113743
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1849
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1109
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              112836,
+              112837,
+              112838,
+              113743
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1239
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 989
+            },
+            "countries": [
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "DK",
+              "EE",
+              "FO",
+              "FI",
+              "FR",
+              "GE",
+              "DE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IS",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "LV",
+              "LI",
+              "LT",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "NO",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "SE",
+              "CH",
+              "TR",
+              "UA",
+              "GB",
+              "XK"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

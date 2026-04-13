@@ -1,0 +1,176 @@
+{
+  "blueprint": {
+    "id": 1692,
+    "title": "Trucker Retro Hat",
+    "brand": "Yupoong",
+    "model": "6606",
+    "images": [
+      "https://images.printify.com/694951405b10cff51502ed62",
+      "https://images.printify.com/694a7bff2056efc42a007622",
+      "https://images.printify.com/69495142532c7f5bdf0c5c92",
+      "https://images.printify.com/694a73130b6266923a0439f2"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 41,
+        "title": "Duplium"
+      },
+      "variants": {
+        "id": 41,
+        "title": "Duplium",
+        "variants": [
+          {
+            "id": 116761,
+            "title": "One size / Black",
+            "options": {
+              "size": "One size",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtf",
+                "height": 750,
+                "width": 1650
+              }
+            ]
+          },
+          {
+            "id": 116762,
+            "title": "One size / White",
+            "options": {
+              "size": "One size",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtf",
+                "height": 750,
+                "width": 1650
+              }
+            ]
+          },
+          {
+            "id": 116763,
+            "title": "One size / Black/White",
+            "options": {
+              "size": "One size",
+              "color": "Black/White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtf",
+                "height": 750,
+                "width": 1650
+              }
+            ]
+          },
+          {
+            "id": 116764,
+            "title": "One size / Charcoal",
+            "options": {
+              "size": "One size",
+              "color": "Charcoal"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtf",
+                "height": 750,
+                "width": 1650
+              }
+            ]
+          },
+          {
+            "id": 116765,
+            "title": "One size / Heather Grey/Black",
+            "options": {
+              "size": "One size",
+              "color": "Heather Grey/Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtf",
+                "height": 750,
+                "width": 1650
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              116761,
+              116762,
+              116763,
+              116764,
+              116765
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 929
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              116761,
+              116762,
+              116763,
+              116764,
+              116765
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1199
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 599
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              116761,
+              116762,
+              116763,
+              116764,
+              116765
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 749
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 99
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

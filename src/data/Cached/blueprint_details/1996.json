@@ -1,0 +1,123 @@
+{
+  "blueprint": {
+    "id": 1996,
+    "title": "Large Serving Tray",
+    "brand": "Unisub",
+    "model": "",
+    "images": [
+      "https://images.printify.com/686e7f23172dc994680502a2",
+      "https://images.printify.com/686e7f28f3e79288d7023942",
+      "https://images.printify.com/686e7f1f743fb531da07dc62",
+      "https://images.printify.com/686e7f266dc9a51ead012a32",
+      "https://images.printify.com/686e808085c45680bb05a4b2",
+      "https://images.printify.com/686e7f219b44c420e60ad722",
+      "https://images.printify.com/686e7f29b842c2aff801e332"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 92,
+        "title": "Pic the Gift"
+      },
+      "variants": {
+        "id": 92,
+        "title": "Pic the Gift",
+        "variants": [
+          {
+            "id": 122880,
+            "title": "Natural Bamboo / 19\u0022 x 13.75\u0022",
+            "options": {
+              "material": "Natural Bamboo",
+              "size": "19\u0022 x 13.75\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 3496,
+                "width": 5256
+              }
+            ]
+          },
+          {
+            "id": 122881,
+            "title": "Espresso Black / 19\u0022 x 13.75\u0022",
+            "options": {
+              "material": "Espresso Black",
+              "size": "19\u0022 x 13.75\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 3496,
+                "width": 5256
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              122880,
+              122881
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 3659
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2539
+            },
+            "countries": [
+              "REST_OF_THE_WORLD",
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              122880,
+              122881
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2299
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 879
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              122880,
+              122881
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2679
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 879
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

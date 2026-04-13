@@ -1,0 +1,104 @@
+{
+  "blueprint": {
+    "id": 1006,
+    "title": "Boho Beach Cloth",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d57a14b481ed2fc40d62a2",
+      "https://images.printify.com/69d4ddd450baa3d4390a45a0",
+      "https://images.printify.com/66d57a1390a73065c1095423",
+      "https://images.printify.com/673304a5e999da365801cf62",
+      "https://images.printify.com/62557f867af77c660004bdca",
+      "https://images.printify.com/625581b87af77c660004bdd5",
+      "https://images.printify.com/62557f957af77c660004bdd0",
+      "https://images.printify.com/625581af2288b4957d074ec8"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 10,
+        "title": "MWW On Demand"
+      },
+      "variants": {
+        "id": 10,
+        "title": "MWW On Demand",
+        "variants": [
+          {
+            "id": 79535,
+            "title": "38\u0022 \u00D7 81\u0022 / Polyester",
+            "options": {
+              "size": "38\u0022 \u00D7 81\u0022",
+              "material": "Polyester"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 12450,
+                "width": 6000
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              79535
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1259
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 299
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              79535
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 899
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 209
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              79535
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1479
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 825
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

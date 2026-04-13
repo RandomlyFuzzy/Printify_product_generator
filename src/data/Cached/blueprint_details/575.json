@@ -1,0 +1,101 @@
+{
+  "blueprint": {
+    "id": 575,
+    "title": "Soft Fleece Baby Blanket",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d6e808a2663ed69a03cfe2",
+      "https://images.printify.com/66d6e806d3dc76a11c03f6ed",
+      "https://images.printify.com/6049e1d2bef3397e050868bc",
+      "https://images.printify.com/604f381909fcb1494b23baae",
+      "https://images.printify.com/604f1c5b91ef9e2c146ad502"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 70,
+        "title": "Printed Mint"
+      },
+      "variants": {
+        "id": 70,
+        "title": "Printed Mint",
+        "variants": [
+          {
+            "id": 72949,
+            "title": "30\u0022 \u00D7 40\u0022 / White",
+            "options": {
+              "size": "30\u0022 \u00D7 40\u0022",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 6225,
+                "width": 4725
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              72949
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1499
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              72949
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 709
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              72949
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1379
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 459
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

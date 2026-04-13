@@ -1,0 +1,180 @@
+{
+  "blueprint": {
+    "id": 1012,
+    "title": "Lunch Bag",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d88d0c2b79a14b010f9036",
+      "https://images.printify.com/66d88d0b0edb6d20f105be53",
+      "https://images.printify.com/63e396ca0bf44efc7f0d73f4",
+      "https://images.printify.com/625021a72f8fb5f1f0099790",
+      "https://images.printify.com/62502278dcbcd127fc04fb6e",
+      "https://images.printify.com/62544a4bafeda5ccc8053e45"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 90,
+        "title": "Smart Printee"
+      },
+      "variants": {
+        "id": 90,
+        "title": "Smart Printee",
+        "variants": [
+          {
+            "id": 79552,
+            "title": "9.3\u0022 x 7.7\u0022 x 4.7\u0022 / White",
+            "options": {
+              "size": "9.3\u0022 x 7.7\u0022 x 4.7\u0022",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 6735,
+                "width": 4447
+              }
+            ]
+          },
+          {
+            "id": 96960,
+            "title": "9.3\u0022 x 7.7\u0022 x 4.7\u0022 / Black",
+            "options": {
+              "size": "9.3\u0022 x 7.7\u0022 x 4.7\u0022",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 6735,
+                "width": 4447
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              79552,
+              96960
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 989
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 989
+            },
+            "countries": [
+              "CA",
+              "REST_OF_THE_WORLD",
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              79552,
+              96960
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 619
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 619
+            },
+            "countries": [
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "DK",
+              "EE",
+              "FO",
+              "FI",
+              "FR",
+              "GE",
+              "DE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IS",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "LV",
+              "LI",
+              "LT",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "NO",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "SE",
+              "CH",
+              "TR",
+              "UA",
+              "GB",
+              "XK"
+            ]
+          },
+          {
+            "variant_ids": [
+              79552,
+              96960
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 739
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 619
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

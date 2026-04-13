@@ -1,0 +1,311 @@
+{
+  "blueprint": {
+    "id": 1185,
+    "title": "Kids Leggings (AOP)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d09d62892c8db36c04a526",
+      "https://images.printify.com/66d09d60d89fe553800a78e1",
+      "https://images.printify.com/632936ba3da5e2a480055927",
+      "https://images.printify.com/632936bcd0ec3568a3069f33",
+      "https://images.printify.com/67efbea05547c696d20447b2",
+      "https://images.printify.com/632936bd3da5e2a48005592a",
+      "https://images.printify.com/63294686dfdb0182000416e0"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 83,
+        "title": "Subliminator"
+      },
+      "variants": {
+        "id": 83,
+        "title": "Subliminator",
+        "variants": [
+          {
+            "id": 91871,
+            "title": "XXS",
+            "options": {
+              "size": "XXS"
+            },
+            "placeholders": [
+              {
+                "position": "all",
+                "decoration_method": "aop",
+                "height": 5200,
+                "width": 5200
+              }
+            ]
+          },
+          {
+            "id": 91872,
+            "title": "XS",
+            "options": {
+              "size": "XS"
+            },
+            "placeholders": [
+              {
+                "position": "all",
+                "decoration_method": "aop",
+                "height": 5200,
+                "width": 5200
+              }
+            ]
+          },
+          {
+            "id": 91873,
+            "title": "S",
+            "options": {
+              "size": "S"
+            },
+            "placeholders": [
+              {
+                "position": "all",
+                "decoration_method": "aop",
+                "height": 5200,
+                "width": 5200
+              }
+            ]
+          },
+          {
+            "id": 91874,
+            "title": "M",
+            "options": {
+              "size": "M"
+            },
+            "placeholders": [
+              {
+                "position": "all",
+                "decoration_method": "aop",
+                "height": 5200,
+                "width": 5200
+              }
+            ]
+          },
+          {
+            "id": 91875,
+            "title": "L",
+            "options": {
+              "size": "L"
+            },
+            "placeholders": [
+              {
+                "position": "all",
+                "decoration_method": "aop",
+                "height": 5200,
+                "width": 5200
+              }
+            ]
+          },
+          {
+            "id": 91876,
+            "title": "XL",
+            "options": {
+              "size": "XL"
+            },
+            "placeholders": [
+              {
+                "position": "all",
+                "decoration_method": "aop",
+                "height": 5200,
+                "width": 5200
+              }
+            ]
+          },
+          {
+            "id": 91877,
+            "title": "2XL",
+            "options": {
+              "size": "2XL"
+            },
+            "placeholders": [
+              {
+                "position": "all",
+                "decoration_method": "aop",
+                "height": 5200,
+                "width": 5200
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              91871,
+              91872,
+              91873,
+              91874,
+              91875,
+              91876,
+              91877
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1819
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1689
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              91871,
+              91872,
+              91873,
+              91874,
+              91875,
+              91876,
+              91877
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1069
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 939
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              91871,
+              91872,
+              91873,
+              91874,
+              91875,
+              91876,
+              91877
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1689
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1569
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              91871,
+              91872,
+              91873,
+              91874,
+              91875,
+              91876,
+              91877
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 879
+            },
+            "countries": [
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "DK",
+              "EE",
+              "FO",
+              "FI",
+              "FR",
+              "GE",
+              "DE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IS",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "LV",
+              "LI",
+              "LT",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "NO",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "SE",
+              "CH",
+              "TR",
+              "UA",
+              "GB",
+              "XK"
+            ]
+          },
+          {
+            "variant_ids": [
+              91871,
+              91872,
+              91873,
+              91874,
+              91875,
+              91876,
+              91877
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1899
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,339 @@
+{
+  "blueprint": {
+    "id": 1302,
+    "title": "Two-Tone Coffee Mugs, 11oz",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66deb66b69c185b23b0ac4f2",
+      "https://images.printify.com/66cdb2fdc0ac3bdc1800e377",
+      "https://images.printify.com/67e3f7eed8e44450ea012423",
+      "https://images.printify.com/67e3f7ec7b5075db08030103",
+      "https://images.printify.com/67e3f5fc67c0934e9f0fbdb4",
+      "https://images.printify.com/67e3f7f17b5075db08030104",
+      "https://images.printify.com/67e3f7efca58c848940a5d32"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 72,
+        "title": "Print Clever"
+      },
+      "variants": {
+        "id": 72,
+        "title": "Print Clever",
+        "variants": [
+          {
+            "id": 98602,
+            "title": "Pink / 11oz",
+            "options": {
+              "color": "Pink",
+              "size": "11oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1181,
+                "width": 2409
+              }
+            ]
+          },
+          {
+            "id": 98603,
+            "title": "Yellow / 11oz",
+            "options": {
+              "color": "Yellow",
+              "size": "11oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1181,
+                "width": 2409
+              }
+            ]
+          },
+          {
+            "id": 98604,
+            "title": "Red / 11oz",
+            "options": {
+              "color": "Red",
+              "size": "11oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1181,
+                "width": 2409
+              }
+            ]
+          },
+          {
+            "id": 98605,
+            "title": "Light Green / 11oz",
+            "options": {
+              "color": "Light Green",
+              "size": "11oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1181,
+                "width": 2409
+              }
+            ]
+          },
+          {
+            "id": 98606,
+            "title": "Blue / 11oz",
+            "options": {
+              "color": "Blue",
+              "size": "11oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1181,
+                "width": 2409
+              }
+            ]
+          },
+          {
+            "id": 98607,
+            "title": "Dark Blue / 11oz",
+            "options": {
+              "color": "Dark Blue",
+              "size": "11oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1181,
+                "width": 2409
+              }
+            ]
+          },
+          {
+            "id": 98608,
+            "title": "Black / 11oz",
+            "options": {
+              "color": "Black",
+              "size": "11oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1181,
+                "width": 2409
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              98602,
+              98603,
+              98604,
+              98605,
+              98606,
+              98607,
+              98608
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1799
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 899
+            },
+            "countries": [
+              "AU",
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              98602,
+              98603,
+              98604,
+              98605,
+              98606,
+              98607,
+              98608
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2499
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              98602,
+              98603,
+              98604,
+              98605,
+              98606,
+              98607,
+              98608
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "FO",
+              "FR",
+              "GE",
+              "DE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IT",
+              "JE",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "TR",
+              "UA",
+              "XK",
+              "IE"
+            ]
+          },
+          {
+            "variant_ids": [
+              98602,
+              98603,
+              98604,
+              98605,
+              98606,
+              98607,
+              98608
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 379
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 299
+            },
+            "countries": [
+              "GB",
+              "IM"
+            ]
+          },
+          {
+            "variant_ids": [
+              98602,
+              98603,
+              98604,
+              98605,
+              98606,
+              98607,
+              98608
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1629
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              98602,
+              98603,
+              98604,
+              98605,
+              98606,
+              98607,
+              98608
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1299
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "IS",
+              "LV",
+              "EE",
+              "DK",
+              "LT",
+              "NO",
+              "LI",
+              "SE",
+              "CH",
+              "FI"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

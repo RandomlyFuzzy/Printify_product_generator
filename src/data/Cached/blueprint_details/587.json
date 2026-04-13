@@ -1,0 +1,177 @@
+{
+  "blueprint": {
+    "id": 587,
+    "title": "Flip Flops",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d6eb11b493c2e242042e42",
+      "https://images.printify.com/66d6eb0fcebeb519880cde25",
+      "https://images.printify.com/60a648fbb23ebc3c4e3d5696",
+      "https://images.printify.com/60b3af066500ff2c5916208c",
+      "https://images.printify.com/60b50f9ea5008631a056b5db"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 1,
+        "title": "SPOKE Custom Products"
+      },
+      "variants": {
+        "id": 1,
+        "title": "SPOKE Custom Products",
+        "variants": [
+          {
+            "id": 72175,
+            "title": "S / Black sole",
+            "options": {
+              "size": "S",
+              "color": "Black sole"
+            },
+            "placeholders": [
+              {
+                "position": "all",
+                "decoration_method": "dye-sublimation",
+                "height": 4498,
+                "width": 4119
+              }
+            ]
+          },
+          {
+            "id": 72176,
+            "title": "M / Black sole",
+            "options": {
+              "size": "M",
+              "color": "Black sole"
+            },
+            "placeholders": [
+              {
+                "position": "all",
+                "decoration_method": "dye-sublimation",
+                "height": 4498,
+                "width": 4119
+              }
+            ]
+          },
+          {
+            "id": 72177,
+            "title": "L / Black sole",
+            "options": {
+              "size": "L",
+              "color": "Black sole"
+            },
+            "placeholders": [
+              {
+                "position": "all",
+                "decoration_method": "dye-sublimation",
+                "height": 4498,
+                "width": 4119
+              }
+            ]
+          },
+          {
+            "id": 72178,
+            "title": "XL / Black sole",
+            "options": {
+              "size": "XL",
+              "color": "Black sole"
+            },
+            "placeholders": [
+              {
+                "position": "all",
+                "decoration_method": "dye-sublimation",
+                "height": 4498,
+                "width": 4119
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              72175,
+              72176,
+              72177,
+              72178
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 599
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              72175,
+              72176,
+              72177,
+              72178
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 609
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 519
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              72175,
+              72176,
+              72177,
+              72178
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1019
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 329
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              72175,
+              72176,
+              72177,
+              72178
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1499
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 549
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

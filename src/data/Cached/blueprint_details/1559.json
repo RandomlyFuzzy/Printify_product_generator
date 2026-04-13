@@ -1,0 +1,69 @@
+{
+  "blueprint": {
+    "id": 1559,
+    "title": "Omega 3 Fish Oil Supplement (60 Softgels)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66c44881480b9bfc1006ada2",
+      "https://images.printify.com/66c4487fa9f8644df4021b92",
+      "https://images.printify.com/66c3328dbcd84d27d301a7c2",
+      "https://images.printify.com/66b344aea05bec97e40894a2"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 294,
+        "title": "Rocktomic"
+      },
+      "variants": {
+        "id": 294,
+        "title": "Rocktomic",
+        "variants": [
+          {
+            "id": 110425,
+            "title": "White bottle \u002B cap / Lemon / 60 Softgels",
+            "options": {
+              "color": "White bottle \u002B cap",
+              "flavor": "Lemon",
+              "size": "60 Softgels"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 1039,
+                "width": 1866
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              110425
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 449
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

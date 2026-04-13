@@ -1,0 +1,122 @@
+{
+  "blueprint": {
+    "id": 480,
+    "title": "Cork Back Coaster",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d5c1b8b827aa477403b425",
+      "https://images.printify.com/66dad9e05d3fa722ab0bb894",
+      "https://images.printify.com/67f8e546682eeb82a70d51a3",
+      "https://images.printify.com/61fcde4e51095f1234446eff",
+      "https://images.printify.com/609278785beb0e1edb0062bd"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 70,
+        "title": "Printed Mint"
+      },
+      "variants": {
+        "id": 70,
+        "title": "Printed Mint",
+        "variants": [
+          {
+            "id": 71689,
+            "title": "Square / 3.75\u0022 \u00D7 3.75\u0022 / Cork",
+            "options": {
+              "shape": "Square",
+              "size": "3.75\u0022 \u00D7 3.75\u0022",
+              "material": "Cork"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1200,
+                "width": 1200
+              }
+            ]
+          },
+          {
+            "id": 74633,
+            "title": "Round / 4\u0022 x 4\u0022 / Cork",
+            "options": {
+              "shape": "Round",
+              "size": "4\u0022 x 4\u0022",
+              "material": "Cork"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1320,
+                "width": 1320
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              71689,
+              74633
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 559
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 99
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              71689,
+              74633
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1029
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 129
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              71689,
+              74633
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1079
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

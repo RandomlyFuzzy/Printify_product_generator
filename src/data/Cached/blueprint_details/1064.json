@@ -1,0 +1,180 @@
+{
+  "blueprint": {
+    "id": 1064,
+    "title": "Luggage Cover",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d881b482f976b1e305ea23",
+      "https://images.printify.com/66d881b6128da9f5a80f4827",
+      "https://images.printify.com/67ef99b76977d0de1f02f6e3",
+      "https://images.printify.com/62a025d5c9c6a38b9708d2e1",
+      "https://images.printify.com/62a024eb2f8dfa5fc40046fa",
+      "https://images.printify.com/629d9b54c9c6a38b9708c813",
+      "https://images.printify.com/629dcfe909ee4a5601073d24"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 14,
+        "title": "ArtsAdd"
+      },
+      "variants": {
+        "id": 14,
+        "title": "ArtsAdd",
+        "variants": [
+          {
+            "id": 80773,
+            "title": "21\u0027\u0027 \u00D7 14\u0027\u0027",
+            "options": {
+              "size": "21\u0027\u0027 \u00D7 14\u0027\u0027"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 3756,
+                "width": 3077
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 3756,
+                "width": 3077
+              }
+            ]
+          },
+          {
+            "id": 80774,
+            "title": "25\u0027\u0027 \u00D7 16\u0027\u0027",
+            "options": {
+              "size": "25\u0027\u0027 \u00D7 16\u0027\u0027"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 4388,
+                "width": 3177
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 4388,
+                "width": 3177
+              }
+            ]
+          },
+          {
+            "id": 80775,
+            "title": "28\u0027\u0027 \u00D7 20\u0027\u0027",
+            "options": {
+              "size": "28\u0027\u0027 \u00D7 20\u0027\u0027"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 4724,
+                "width": 3963
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 4724,
+                "width": 3963
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              80773,
+              80774,
+              80775
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 360
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 360
+            },
+            "countries": [
+              "REST_OF_THE_WORLD",
+              "BR",
+              "NL",
+              "DK",
+              "NZ",
+              "MX"
+            ]
+          },
+          {
+            "variant_ids": [
+              80773,
+              80774,
+              80775
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 569
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              80773,
+              80774,
+              80775
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "CA",
+              "CN"
+            ]
+          },
+          {
+            "variant_ids": [
+              80773,
+              80774,
+              80775
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 649
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 649
+            },
+            "countries": [
+              "AU"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

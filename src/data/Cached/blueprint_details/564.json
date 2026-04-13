@@ -1,0 +1,173 @@
+{
+  "blueprint": {
+    "id": 564,
+    "title": "Round Vinyl Stickers",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d6e537b2fd5de7ea066737",
+      "https://images.printify.com/66d6e535ddae87362f0f9447",
+      "https://images.printify.com/6735bb34050543499b02a412",
+      "https://images.printify.com/6735bb35a5818c1b3507dd42",
+      "https://images.printify.com/6735bb3648ea2619400289e2",
+      "https://images.printify.com/6735bb3848ea2619400289e3"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 73,
+        "title": "Printed Simply"
+      },
+      "variants": {
+        "id": 73,
+        "title": "Printed Simply",
+        "variants": [
+          {
+            "id": 70875,
+            "title": "2\u0022 \u00D7 2\u0022",
+            "options": {
+              "size": "2\u0022 \u00D7 2\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 671,
+                "width": 671
+              }
+            ]
+          },
+          {
+            "id": 70876,
+            "title": "3\u0022 \u00D7 3\u0022",
+            "options": {
+              "size": "3\u0022 \u00D7 3\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 971,
+                "width": 971
+              }
+            ]
+          },
+          {
+            "id": 70877,
+            "title": "4\u0022 \u00D7 4\u0022",
+            "options": {
+              "size": "4\u0022 \u00D7 4\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1271,
+                "width": 1271
+              }
+            ]
+          },
+          {
+            "id": 70878,
+            "title": "5\u0022 \u00D7 5\u0022",
+            "options": {
+              "size": "5\u0022 \u00D7 5\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1571,
+                "width": 1571
+              }
+            ]
+          },
+          {
+            "id": 70879,
+            "title": "6\u0022 \u00D7 6\u0022",
+            "options": {
+              "size": "6\u0022 \u00D7 6\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1871,
+                "width": 1871
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              70875,
+              70876,
+              70877,
+              70878,
+              70879
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 929
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 49
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              70875,
+              70876,
+              70877,
+              70878,
+              70879
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 509
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 7
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              70875,
+              70876,
+              70877,
+              70878,
+              70879
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1049
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 55
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

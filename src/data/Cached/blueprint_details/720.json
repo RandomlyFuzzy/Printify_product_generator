@@ -1,0 +1,365 @@
+{
+  "blueprint": {
+    "id": 720,
+    "title": "Cotton Tote",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66cc5a7b82c2c1852b0e76d2",
+      "https://images.printify.com/66cc5a7ab6bd9f8c140da32a",
+      "https://images.printify.com/612cd288d70e0f42503f43eb",
+      "https://images.printify.com/6144433ff56c903386703b87",
+      "https://images.printify.com/6127787cb188593a3b2c22a4",
+      "https://images.printify.com/612772a5eb559a1621040493",
+      "https://images.printify.com/612cd7d4359bfb414521661d"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 6,
+        "title": "T Shirt and Sons"
+      },
+      "variants": {
+        "id": 6,
+        "title": "T Shirt and Sons",
+        "variants": [
+          {
+            "id": 73419,
+            "title": "One size / Grey",
+            "options": {
+              "size": "One size",
+              "color": "Grey"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3780,
+                "width": 2953
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 3780,
+                "width": 2953
+              }
+            ]
+          },
+          {
+            "id": 73420,
+            "title": "One size / Lavender",
+            "options": {
+              "size": "One size",
+              "color": "Lavender"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3780,
+                "width": 2953
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 3780,
+                "width": 2953
+              }
+            ]
+          },
+          {
+            "id": 73421,
+            "title": "One size / Lime",
+            "options": {
+              "size": "One size",
+              "color": "Lime"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3780,
+                "width": 2953
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 3780,
+                "width": 2953
+              }
+            ]
+          },
+          {
+            "id": 73422,
+            "title": "One size / Navy Blue",
+            "options": {
+              "size": "One size",
+              "color": "Navy Blue"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3780,
+                "width": 2953
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 3780,
+                "width": 2953
+              }
+            ]
+          },
+          {
+            "id": 73423,
+            "title": "One size / Orange",
+            "options": {
+              "size": "One size",
+              "color": "Orange"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3780,
+                "width": 2953
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 3780,
+                "width": 2953
+              }
+            ]
+          },
+          {
+            "id": 73424,
+            "title": "One size / Red",
+            "options": {
+              "size": "One size",
+              "color": "Red"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3780,
+                "width": 2953
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 3780,
+                "width": 2953
+              }
+            ]
+          },
+          {
+            "id": 73425,
+            "title": "One size / Royal Blue",
+            "options": {
+              "size": "One size",
+              "color": "Royal Blue"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3780,
+                "width": 2953
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 3780,
+                "width": 2953
+              }
+            ]
+          },
+          {
+            "id": 73426,
+            "title": "One size / White",
+            "options": {
+              "size": "One size",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3780,
+                "width": 2953
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 3780,
+                "width": 2953
+              }
+            ]
+          },
+          {
+            "id": 73428,
+            "title": "One size / Black",
+            "options": {
+              "size": "One size",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3780,
+                "width": 2953
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 3780,
+                "width": 2953
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              73419,
+              73420,
+              73421,
+              73422,
+              73423,
+              73424,
+              73425,
+              73426,
+              73428
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 599
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 149
+            },
+            "countries": [
+              "SE",
+              "DK",
+              "FI",
+              "EE",
+              "IS",
+              "LT",
+              "LV",
+              "NO",
+              "LI",
+              "CH",
+              "IE",
+              "NL",
+              "PL",
+              "GI",
+              "AT",
+              "BE",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "FR",
+              "GR",
+              "HU",
+              "IT",
+              "LU",
+              "MT",
+              "PT",
+              "RO",
+              "SK",
+              "SI",
+              "ES",
+              "TR",
+              "DE"
+            ]
+          },
+          {
+            "variant_ids": [
+              73419,
+              73420,
+              73421,
+              73422,
+              73423,
+              73424,
+              73425,
+              73426,
+              73428
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 349
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "GB"
+            ]
+          },
+          {
+            "variant_ids": [
+              73419,
+              73420,
+              73421,
+              73422,
+              73423,
+              73424,
+              73425,
+              73426,
+              73428
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2279
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 619
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              73419,
+              73420,
+              73421,
+              73422,
+              73423,
+              73424,
+              73425,
+              73426,
+              73428
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 3279
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 619
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

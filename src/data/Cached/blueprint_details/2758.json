@@ -1,0 +1,131 @@
+{
+  "blueprint": {
+    "id": 2758,
+    "title": "Body Pillow",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/6985d3d9546d43ad9e067a95",
+      "https://images.printify.com/6985d3d4987d5c12f10a635d",
+      "https://images.printify.com/6985ecadc76d5e720c0ff3c8",
+      "https://images.printify.com/6985d3d34bbaa1c0ab048821"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 10,
+        "title": "MWW On Demand"
+      },
+      "variants": {
+        "id": 10,
+        "title": "MWW On Demand",
+        "variants": [
+          {
+            "id": 149505,
+            "title": "20\u0027\u0027 \u00D7 54\u0027\u0027 / Polyester Fleece",
+            "options": {
+              "size": "20\u0027\u0027 \u00D7 54\u0027\u0027",
+              "material": "Polyester Fleece"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 3225,
+                "width": 8325
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 3225,
+                "width": 8325
+              }
+            ]
+          },
+          {
+            "id": 149506,
+            "title": "20\u0027\u0027 \u00D7 54\u0027\u0027 / Microfiber",
+            "options": {
+              "size": "20\u0027\u0027 \u00D7 54\u0027\u0027",
+              "material": "Microfiber"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 3225,
+                "width": 8325
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 3225,
+                "width": 8325
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              149505,
+              149506
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1699
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1699
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              149505,
+              149506
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2599
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2499
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              149505,
+              149506
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2499
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2499
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

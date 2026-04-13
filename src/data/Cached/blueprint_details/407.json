@@ -1,0 +1,292 @@
+{
+  "blueprint": {
+    "id": 407,
+    "title": "Women\u0027s Briefs (AOP)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d832bea7ae3af9d40b4d95",
+      "https://images.printify.com/66d832c97175952a3202dad2",
+      "https://images.printify.com/5c8ce77921a6ed00477e8fe2",
+      "https://images.printify.com/5c8ce77621a6ed004d44c5f2",
+      "https://images.printify.com/5c8cf59621a6ed004b63b572"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 14,
+        "title": "ArtsAdd"
+      },
+      "variants": {
+        "id": 14,
+        "title": "ArtsAdd",
+        "variants": [
+          {
+            "id": 61893,
+            "title": "XS / Black stitching",
+            "options": {
+              "size": "XS",
+              "color": "Black stitching"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "aop",
+                "height": 2220,
+                "width": 4653
+              },
+              {
+                "position": "back",
+                "decoration_method": "aop",
+                "height": 2808,
+                "width": 5090
+              },
+              {
+                "position": "gusset",
+                "decoration_method": "aop",
+                "height": 1431,
+                "width": 1422
+              }
+            ]
+          },
+          {
+            "id": 61894,
+            "title": "S / Black stitching",
+            "options": {
+              "size": "S",
+              "color": "Black stitching"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "aop",
+                "height": 2220,
+                "width": 4653
+              },
+              {
+                "position": "back",
+                "decoration_method": "aop",
+                "height": 2808,
+                "width": 5090
+              },
+              {
+                "position": "gusset",
+                "decoration_method": "aop",
+                "height": 1431,
+                "width": 1422
+              }
+            ]
+          },
+          {
+            "id": 61895,
+            "title": "M / Black stitching",
+            "options": {
+              "size": "M",
+              "color": "Black stitching"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "aop",
+                "height": 2220,
+                "width": 4653
+              },
+              {
+                "position": "back",
+                "decoration_method": "aop",
+                "height": 2808,
+                "width": 5090
+              },
+              {
+                "position": "gusset",
+                "decoration_method": "aop",
+                "height": 1431,
+                "width": 1422
+              }
+            ]
+          },
+          {
+            "id": 61896,
+            "title": "L / Black stitching",
+            "options": {
+              "size": "L",
+              "color": "Black stitching"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "aop",
+                "height": 2220,
+                "width": 4653
+              },
+              {
+                "position": "back",
+                "decoration_method": "aop",
+                "height": 2808,
+                "width": 5090
+              },
+              {
+                "position": "gusset",
+                "decoration_method": "aop",
+                "height": 1431,
+                "width": 1422
+              }
+            ]
+          },
+          {
+            "id": 61897,
+            "title": "XL / Black stitching",
+            "options": {
+              "size": "XL",
+              "color": "Black stitching"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "aop",
+                "height": 2220,
+                "width": 4653
+              },
+              {
+                "position": "back",
+                "decoration_method": "aop",
+                "height": 2808,
+                "width": 5090
+              },
+              {
+                "position": "gusset",
+                "decoration_method": "aop",
+                "height": 1431,
+                "width": 1422
+              }
+            ]
+          },
+          {
+            "id": 61898,
+            "title": "2XL / Black stitching",
+            "options": {
+              "size": "2XL",
+              "color": "Black stitching"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "aop",
+                "height": 2220,
+                "width": 4653
+              },
+              {
+                "position": "back",
+                "decoration_method": "aop",
+                "height": 2808,
+                "width": 5090
+              },
+              {
+                "position": "gusset",
+                "decoration_method": "aop",
+                "height": 1431,
+                "width": 1422
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              61893,
+              61894,
+              61895,
+              61896,
+              61897,
+              61898
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 360
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 360
+            },
+            "countries": [
+              "REST_OF_THE_WORLD",
+              "DK",
+              "NL",
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              61893,
+              61894,
+              61895,
+              61896,
+              61897,
+              61898
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "CN"
+            ]
+          },
+          {
+            "variant_ids": [
+              61893,
+              61894,
+              61895,
+              61896,
+              61897,
+              61898
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 569
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              61893,
+              61894,
+              61895,
+              61896,
+              61897,
+              61898
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 649
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 649
+            },
+            "countries": [
+              "AU"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

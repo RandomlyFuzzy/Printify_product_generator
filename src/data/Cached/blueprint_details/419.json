@@ -1,0 +1,225 @@
+{
+  "blueprint": {
+    "id": 419,
+    "title": "Pet Bed",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d83b415d53a711630043e3",
+      "https://images.printify.com/66d83b4e5d53a711630043e4",
+      "https://images.printify.com/5c94c36ab04d1a00184fd627",
+      "https://images.printify.com/5c8fbfae4dd299000e3ae632"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 10,
+        "title": "MWW On Demand"
+      },
+      "variants": {
+        "id": 10,
+        "title": "MWW On Demand",
+        "variants": [
+          {
+            "id": 61435,
+            "title": "50\u0022 \u00D7 40\u0022",
+            "options": {
+              "size": "50\u0022 \u00D7 40\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 12600,
+                "width": 15600
+              }
+            ]
+          },
+          {
+            "id": 61436,
+            "title": "28\u0022 \u00D7 18\u0022",
+            "options": {
+              "size": "28\u0022 \u00D7 18\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 5850,
+                "width": 8850
+              }
+            ]
+          },
+          {
+            "id": 61437,
+            "title": "40\u0022 \u00D7 30\u0022",
+            "options": {
+              "size": "40\u0022 \u00D7 30\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 9750,
+                "width": 12750
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              61435
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 8500
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 4000
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              61435
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 4999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2999
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              61435
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 7500
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2500
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              61437
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 7500
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 3000
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              61437
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 6000
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2000
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              61436
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 7000
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2000
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              61437
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2999
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              61436
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2619
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2499
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              61436
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 4500
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2500
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

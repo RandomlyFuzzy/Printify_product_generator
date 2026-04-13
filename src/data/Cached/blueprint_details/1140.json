@@ -1,0 +1,250 @@
+{
+  "blueprint": {
+    "id": 1140,
+    "title": "Framed Posters, Black",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d57de66d0188cdce0c24c3",
+      "https://images.printify.com/66d57de54c44ded1340f9062",
+      "https://images.printify.com/63206820e8a73f960501fcf3",
+      "https://images.printify.com/632022843d58d2911d053a13",
+      "https://images.printify.com/67ed116c2ee68e27830392f3",
+      "https://images.printify.com/67ed116e1fdedc2747070743"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 66,
+        "title": "Prima Printing"
+      },
+      "variants": {
+        "id": 66,
+        "title": "Prima Printing",
+        "variants": [
+          {
+            "id": 87613,
+            "title": "7\u0022 x 5\u0022 (Horizontal) / Black Frame",
+            "options": {
+              "size": "7\u0022 x 5\u0022 (Horizontal)",
+              "color": "Black Frame"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 1524,
+                "width": 2126
+              }
+            ]
+          },
+          {
+            "id": 87615,
+            "title": "8\u0022 x 6\u0022 (Horizontal) / Black Frame",
+            "options": {
+              "size": "8\u0022 x 6\u0022 (Horizontal)",
+              "color": "Black Frame"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 1819,
+                "width": 2374
+              }
+            ]
+          },
+          {
+            "id": 87617,
+            "title": "10\u0022 x 8\u0022 (Horizontal) / Black Frame",
+            "options": {
+              "size": "10\u0022 x 8\u0022 (Horizontal)",
+              "color": "Black Frame"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 2374,
+                "width": 3012
+              }
+            ]
+          },
+          {
+            "id": 87618,
+            "title": "12\u0022 x 8\u0022 (Horizontal) / Black Frame",
+            "options": {
+              "size": "12\u0022 x 8\u0022 (Horizontal)",
+              "color": "Black Frame"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 2374,
+                "width": 3555
+              }
+            ]
+          },
+          {
+            "id": 87620,
+            "title": "5\u0022 x 7\u0022 (Vertical) / Black Frame",
+            "options": {
+              "size": "5\u0022 x 7\u0022 (Vertical)",
+              "color": "Black Frame"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 2126,
+                "width": 1524
+              }
+            ]
+          },
+          {
+            "id": 87622,
+            "title": "6\u0022 x 8\u0022 (Vertical) / Black Frame",
+            "options": {
+              "size": "6\u0022 x 8\u0022 (Vertical)",
+              "color": "Black Frame"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 2374,
+                "width": 1819
+              }
+            ]
+          },
+          {
+            "id": 87624,
+            "title": "8\u0022 x 10\u0022 (Vertical) / Black Frame",
+            "options": {
+              "size": "8\u0022 x 10\u0022 (Vertical)",
+              "color": "Black Frame"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 3012,
+                "width": 2374
+              }
+            ]
+          },
+          {
+            "id": 87625,
+            "title": "8\u0022 x 12\u0022 (Vertical) / Black Frame",
+            "options": {
+              "size": "8\u0022 x 12\u0022 (Vertical)",
+              "color": "Black Frame"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 3555,
+                "width": 2374
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              87613,
+              87615,
+              87617,
+              87618,
+              87620,
+              87622,
+              87624,
+              87625
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 879
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 349
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              87613,
+              87615,
+              87620,
+              87622
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 899
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 719
+            },
+            "countries": [
+              "NZ"
+            ]
+          },
+          {
+            "variant_ids": [
+              87613,
+              87615,
+              87617,
+              87618,
+              87620,
+              87622,
+              87624,
+              87625
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 4919
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 4919
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              87617,
+              87618,
+              87624,
+              87625
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1009
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 819
+            },
+            "countries": [
+              "NZ"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

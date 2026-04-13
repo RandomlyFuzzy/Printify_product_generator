@@ -1,0 +1,209 @@
+{
+  "blueprint": {
+    "id": 1404,
+    "title": "Softcover Journal (with Inside Prints)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66cc694c906b87ab4c0e4474",
+      "https://images.printify.com/66cc694bfb1be5610900cf62",
+      "https://images.printify.com/661f91c56125f4f1550bd4b3",
+      "https://images.printify.com/661f91c46125f4f1550bd4b2",
+      "https://images.printify.com/67ed1fe882c1908499044052"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 28,
+        "title": "District Photo"
+      },
+      "variants": {
+        "id": 28,
+        "title": "District Photo",
+        "variants": [
+          {
+            "id": 104026,
+            "title": "100 pages (50 sheets) / Ruled line / 5.75\u0022 x 8\u0022",
+            "options": {
+              "quantity": "100 pages (50 sheets)",
+              "paper": "Ruled line",
+              "size": "5.75\u0022 x 8\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "outside_cover",
+                "decoration_method": "dtg",
+                "height": 2475,
+                "width": 3714
+              },
+              {
+                "position": "inside_cover",
+                "decoration_method": "dtg",
+                "height": 2475,
+                "width": 3714
+              },
+              {
+                "position": "page1_front",
+                "decoration_method": "dtg",
+                "height": 2475,
+                "width": 1800
+              },
+              {
+                "position": "page1_back",
+                "decoration_method": "dtg",
+                "height": 2475,
+                "width": 1800
+              },
+              {
+                "position": "page2_front",
+                "decoration_method": "dtg",
+                "height": 2475,
+                "width": 1800
+              },
+              {
+                "position": "page2_back",
+                "decoration_method": "dtg",
+                "height": 2475,
+                "width": 1800
+              },
+              {
+                "position": "page3_front",
+                "decoration_method": "dtg",
+                "height": 2475,
+                "width": 1800
+              },
+              {
+                "position": "page3_back",
+                "decoration_method": "dtg",
+                "height": 2475,
+                "width": 1800
+              }
+            ]
+          },
+          {
+            "id": 104027,
+            "title": "200 pages (100 sheets) / Ruled line / 5.75\u0022 x 8\u0022",
+            "options": {
+              "quantity": "200 pages (100 sheets)",
+              "paper": "Ruled line",
+              "size": "5.75\u0022 x 8\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "outside_cover",
+                "decoration_method": "dtg",
+                "height": 2475,
+                "width": 3714
+              },
+              {
+                "position": "inside_cover",
+                "decoration_method": "dtg",
+                "height": 2475,
+                "width": 3714
+              },
+              {
+                "position": "page1_front",
+                "decoration_method": "dtg",
+                "height": 2475,
+                "width": 1800
+              },
+              {
+                "position": "page1_back",
+                "decoration_method": "dtg",
+                "height": 2475,
+                "width": 1800
+              },
+              {
+                "position": "page2_front",
+                "decoration_method": "dtg",
+                "height": 2475,
+                "width": 1800
+              },
+              {
+                "position": "page2_back",
+                "decoration_method": "dtg",
+                "height": 2475,
+                "width": 1800
+              },
+              {
+                "position": "page3_front",
+                "decoration_method": "dtg",
+                "height": 2475,
+                "width": 1800
+              },
+              {
+                "position": "page3_back",
+                "decoration_method": "dtg",
+                "height": 2475,
+                "width": 1800
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              104026,
+              104027
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 529
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              104026,
+              104027
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1399
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "AU",
+              "NZ",
+              "CA",
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              104026,
+              104027
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 599
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 240
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

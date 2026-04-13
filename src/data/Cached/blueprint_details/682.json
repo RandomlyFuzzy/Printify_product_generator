@@ -1,0 +1,231 @@
+{
+  "blueprint": {
+    "id": 682,
+    "title": "Jewelry Box",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d70788458c4d6fc30daf32",
+      "https://images.printify.com/66d707874d11dac33605bb44",
+      "https://images.printify.com/610803449b67df28782d6ef3",
+      "https://images.printify.com/67ee9124c49839bb58005d53"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 59,
+        "title": "Imagine Your Photos"
+      },
+      "variants": {
+        "id": 59,
+        "title": "Imagine Your Photos",
+        "variants": [
+          {
+            "id": 72880,
+            "title": "Ebony Black / One size",
+            "options": {
+              "color": "Ebony Black",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 1875,
+                "width": 1875
+              }
+            ]
+          },
+          {
+            "id": 72881,
+            "title": "Golden Oak / One size",
+            "options": {
+              "color": "Golden Oak",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 1875,
+                "width": 1875
+              }
+            ]
+          },
+          {
+            "id": 72882,
+            "title": "Red Mahogany / One size",
+            "options": {
+              "color": "Red Mahogany",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 1875,
+                "width": 1875
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              72880,
+              72881,
+              72882
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1949
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 709
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              72880,
+              72881,
+              72882
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1689
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 459
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              72880,
+              72881,
+              72882
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 3199
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 739
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              72880,
+              72881,
+              72882
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1849
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 739
+            },
+            "countries": [
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "DK",
+              "EE",
+              "FO",
+              "FI",
+              "FR",
+              "GE",
+              "DE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IS",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "LV",
+              "LI",
+              "LT",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "NO",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "SE",
+              "CH",
+              "TR",
+              "UA",
+              "GB",
+              "XK"
+            ]
+          },
+          {
+            "variant_ids": [
+              72880,
+              72881,
+              72882
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2899
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 739
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

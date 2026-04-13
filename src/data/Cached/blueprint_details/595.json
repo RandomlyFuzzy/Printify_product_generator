@@ -1,0 +1,239 @@
+{
+  "blueprint": {
+    "id": 595,
+    "title": "Accent Mugs",
+    "brand": "ORCA Coatings",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66dae068fc79245ff401e2c4",
+      "https://images.printify.com/66dae07027a4eb88e50b8673",
+      "https://images.printify.com/608a3e1ea33dec17504baf64"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 70,
+        "title": "Printed Mint"
+      },
+      "variants": {
+        "id": 70,
+        "title": "Printed Mint",
+        "variants": [
+          {
+            "id": 71527,
+            "title": "11oz / Pink",
+            "options": {
+              "size": "11oz",
+              "color": "Pink"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1155,
+                "width": 2550
+              }
+            ]
+          },
+          {
+            "id": 71528,
+            "title": "11oz / Red",
+            "options": {
+              "size": "11oz",
+              "color": "Red"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1155,
+                "width": 2550
+              }
+            ]
+          },
+          {
+            "id": 71538,
+            "title": "11oz / Black",
+            "options": {
+              "size": "11oz",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1155,
+                "width": 2550
+              }
+            ]
+          },
+          {
+            "id": 71712,
+            "title": "15oz / Black",
+            "options": {
+              "size": "15oz",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1278,
+                "width": 2550
+              }
+            ]
+          },
+          {
+            "id": 71713,
+            "title": "15oz / Pink",
+            "options": {
+              "size": "15oz",
+              "color": "Pink"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1278,
+                "width": 2550
+              }
+            ]
+          },
+          {
+            "id": 71714,
+            "title": "15oz / Red",
+            "options": {
+              "size": "15oz",
+              "color": "Red"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1278,
+                "width": 2550
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              71527,
+              71528,
+              71538
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2109
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 449
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              71527,
+              71528,
+              71538
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1579
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 489
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              71527,
+              71528,
+              71538
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 699
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 309
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              71712,
+              71713,
+              71714
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 899
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              71712,
+              71713,
+              71714
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1629
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 809
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              71712,
+              71713,
+              71714
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 739
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

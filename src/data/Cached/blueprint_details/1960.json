@@ -1,0 +1,106 @@
+{
+  "blueprint": {
+    "id": 1960,
+    "title": "Pint Mixing Glass, 16oz (Engraving)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/68e7dc48b87c7ec72507ea52",
+      "https://images.printify.com/68e7dc1a77a346dfb80a61c2",
+      "https://images.printify.com/68e7dc1716f6be414409fb52",
+      "https://images.printify.com/68e7dc46130e374af3018c52"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 217,
+        "title": "Fulfill Engine"
+      },
+      "variants": {
+        "id": 217,
+        "title": "Fulfill Engine",
+        "variants": [
+          {
+            "id": 121258,
+            "title": "16oz",
+            "options": {
+              "size": "16oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "engraving",
+                "height": 1500,
+                "width": 675
+              },
+              {
+                "position": "back",
+                "decoration_method": "engraving",
+                "height": 1500,
+                "width": 675
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              121258
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 949
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              121258
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1469
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 699
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              121258
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1899
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 899
+            },
+            "countries": [
+              "REST_OF_THE_WORLD",
+              "AU"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

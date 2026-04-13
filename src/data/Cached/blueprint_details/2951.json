@@ -1,0 +1,158 @@
+{
+  "blueprint": {
+    "id": 2951,
+    "title": "Paperclip Heart Necklace (Engraving)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/696625388386bd38fa08a157",
+      "https://images.printify.com/69662702f4bc64159406e544",
+      "https://images.printify.com/696757e44bca012fc50f31d2",
+      "https://images.printify.com/696757dc76f06bccbe0c13f2",
+      "https://images.printify.com/696757d894638ec64f077ae2",
+      "https://images.printify.com/696625359862b3d1a5068648"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 217,
+        "title": "Fulfill Engine"
+      },
+      "variants": {
+        "id": 217,
+        "title": "Fulfill Engine",
+        "variants": [
+          {
+            "id": 164438,
+            "title": "18K Gold PVD coating / One Size",
+            "options": {
+              "color": "18K Gold PVD coating",
+              "size": "One Size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "laser-engraving",
+                "height": 420,
+                "width": 600
+              }
+            ]
+          },
+          {
+            "id": 164439,
+            "title": "18K Rose Gold PVD coating / One Size",
+            "options": {
+              "color": "18K Rose Gold PVD coating",
+              "size": "One Size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "laser-engraving",
+                "height": 420,
+                "width": 600
+              }
+            ]
+          },
+          {
+            "id": 164440,
+            "title": "Stainless Steel / One Size",
+            "options": {
+              "color": "Stainless Steel",
+              "size": "One Size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "laser-engraving",
+                "height": 420,
+                "width": 600
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              164438,
+              164439,
+              164440
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 449
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 209
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              164438,
+              164439,
+              164440
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 569
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              164438,
+              164439,
+              164440
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              164438,
+              164439,
+              164440
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 939
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

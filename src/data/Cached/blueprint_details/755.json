@@ -1,0 +1,259 @@
+{
+  "blueprint": {
+    "id": 755,
+    "title": "Scented Soy Candles with White Lid, 9oz",
+    "brand": "Candle Builders",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66cc7556bf610a458c085a5b",
+      "https://images.printify.com/66cc7557b38813cead0d17eb",
+      "https://images.printify.com/61545049255dc63d4a7ead6b",
+      "https://images.printify.com/676ad3e0b4c38b4940038fc2",
+      "https://images.printify.com/676ad3e17b520917ce091f72",
+      "https://images.printify.com/676ad3e24d46c4e1d00ba454",
+      "https://images.printify.com/676ad3e34d46c4e1d00ba455"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 91,
+        "title": "Candle Builders"
+      },
+      "variants": {
+        "id": 91,
+        "title": "Candle Builders",
+        "variants": [
+          {
+            "id": 74407,
+            "title": "Comfort Spice / One size",
+            "options": {
+              "scent": "Comfort Spice",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 600,
+                "width": 900
+              }
+            ]
+          },
+          {
+            "id": 74408,
+            "title": "Sea Breeze / One size",
+            "options": {
+              "scent": "Sea Breeze",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 600,
+                "width": 900
+              }
+            ]
+          },
+          {
+            "id": 74409,
+            "title": "Vanilla Bean / One size",
+            "options": {
+              "scent": "Vanilla Bean",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 600,
+                "width": 900
+              }
+            ]
+          },
+          {
+            "id": 104023,
+            "title": "Fresh Balsam / One size",
+            "options": {
+              "scent": "Fresh Balsam",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 600,
+                "width": 900
+              }
+            ]
+          },
+          {
+            "id": 104024,
+            "title": "Spiced Pumpkin Ginger / One size",
+            "options": {
+              "scent": "Spiced Pumpkin Ginger",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 600,
+                "width": 900
+              }
+            ]
+          },
+          {
+            "id": 104025,
+            "title": "Unscented / One size",
+            "options": {
+              "scent": "Unscented",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 600,
+                "width": 900
+              }
+            ]
+          },
+          {
+            "id": 104467,
+            "title": "Eucalyptus Lavender Herb / One size",
+            "options": {
+              "scent": "Eucalyptus Lavender Herb",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 600,
+                "width": 900
+              }
+            ]
+          },
+          {
+            "id": 104468,
+            "title": "Pink Grapefruit / One size",
+            "options": {
+              "scent": "Pink Grapefruit",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 600,
+                "width": 900
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              74407,
+              74408,
+              74409,
+              104023,
+              104024,
+              104025,
+              104467,
+              104468
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 799
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 349
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              74407,
+              74408,
+              74409,
+              104023,
+              104024,
+              104025,
+              104467,
+              104468
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1429
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              74407,
+              74408,
+              74409,
+              104023,
+              104024,
+              104025,
+              104467,
+              104468
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1699
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 449
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              74407,
+              74408,
+              74409,
+              104023,
+              104024,
+              104025,
+              104467,
+              104468
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1799
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 449
+            },
+            "countries": [
+              "AU"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

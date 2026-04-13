@@ -1,0 +1,169 @@
+{
+  "blueprint": {
+    "id": 2706,
+    "title": "Cotton Comforter",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/696e2dbbd23a57e4300b64c2",
+      "https://images.printify.com/696e2f0a09f284995a0c9f12",
+      "https://images.printify.com/696e2db8443a35cd140fbfd2",
+      "https://images.printify.com/696e2db77d3ab8127c0b8eb2",
+      "https://images.printify.com/696e2db905b61284e40c632b",
+      "https://images.printify.com/696e2db54f90834fea0dd814"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 10,
+        "title": "MWW On Demand"
+      },
+      "variants": {
+        "id": 10,
+        "title": "MWW On Demand",
+        "variants": [
+          {
+            "id": 148374,
+            "title": "104\u0027\u0027 x 88\u0022",
+            "options": {
+              "size": "104\u0027\u0027 x 88\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "direct-to-fabric",
+                "height": 13500,
+                "width": 15900
+              }
+            ]
+          },
+          {
+            "id": 148375,
+            "title": "88\u0022 x 88\u0022",
+            "options": {
+              "size": "88\u0022 x 88\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "direct-to-fabric",
+                "height": 13500,
+                "width": 13500
+              }
+            ]
+          },
+          {
+            "id": 148376,
+            "title": "68\u0022 x 88\u0022",
+            "options": {
+              "size": "68\u0022 x 88\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "direct-to-fabric",
+                "height": 13500,
+                "width": 10500
+              }
+            ]
+          },
+          {
+            "id": 148377,
+            "title": "68\u0022 x 92\u0027\u0027",
+            "options": {
+              "size": "68\u0022 x 92\u0027\u0027"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "direct-to-fabric",
+                "height": 14175,
+                "width": 10500
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              148376,
+              148377
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 3999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 3999
+            },
+            "countries": [
+              "REST_OF_THE_WORLD",
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              148374,
+              148375,
+              148376,
+              148377
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 3229
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2639
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              148374,
+              148375
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 4999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 4999
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              148374,
+              148375
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 4599
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 4599
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

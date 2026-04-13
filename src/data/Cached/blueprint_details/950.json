@@ -1,0 +1,311 @@
+{
+  "blueprint": {
+    "id": 950,
+    "title": "Heavy Duty Floor Mat",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d17509ad8fad0c4b0b9603",
+      "https://images.printify.com/66d17507ad8fad0c4b0b9602",
+      "https://images.printify.com/621e15f49013d6003d3986ba",
+      "https://images.printify.com/621cd350e8b94d6d63723afd",
+      "https://images.printify.com/621cd352d7b7d84017282e4c",
+      "https://images.printify.com/621cd35c91029142f5349ae3"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 92,
+        "title": "Pic the Gift"
+      },
+      "variants": {
+        "id": 92,
+        "title": "Pic the Gift",
+        "variants": [
+          {
+            "id": 78178,
+            "title": "48\u0022 \u00D7 72\u0022",
+            "options": {
+              "size": "48\u0022 \u00D7 72\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 7350,
+                "width": 10950
+              }
+            ]
+          },
+          {
+            "id": 78179,
+            "title": "36\u0022 \u00D7 60\u0022",
+            "options": {
+              "size": "36\u0022 \u00D7 60\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 5550,
+                "width": 9150
+              }
+            ]
+          },
+          {
+            "id": 78180,
+            "title": "24\u0022 \u00D7 36\u0022",
+            "options": {
+              "size": "24\u0022 \u00D7 36\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 3750,
+                "width": 5550
+              }
+            ]
+          },
+          {
+            "id": 78181,
+            "title": "18\u0022 \u00D7 24\u0022",
+            "options": {
+              "size": "18\u0022 \u00D7 24\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 2850,
+                "width": 3750
+              }
+            ]
+          },
+          {
+            "id": 78182,
+            "title": "18\u0022 \u00D7 27\u0022",
+            "options": {
+              "size": "18\u0022 \u00D7 27\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 2850,
+                "width": 4200
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              78178,
+              78179
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 4699
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1999
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              78178,
+              78179
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 4999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2499
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              78178
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 5499
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2199
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              78179
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 4399
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2199
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              78180
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2679
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 879
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              78181,
+              78182
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2459
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 879
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              78180
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 3099
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1569
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              78181,
+              78182
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1309
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 539
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              78181,
+              78182
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2389
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 899
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              78180
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 3899
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1569
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              78181,
+              78182
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2239
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 799
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              78180
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2319
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 529
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "blueprint": {
+    "id": 1040,
+    "title": "Passport Cover",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d5a8bd9ef629047303ee07",
+      "https://images.printify.com/66d5a8bca208e7c0ee0e8f96",
+      "https://images.printify.com/67ef98d96182df965d0bb517",
+      "https://images.printify.com/632d77552a2fe5751a05b4d3",
+      "https://images.printify.com/632d7752eee227a36507fb0d"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 81,
+        "title": "Personalized Luggage"
+      },
+      "variants": {
+        "id": 81,
+        "title": "Personalized Luggage",
+        "variants": [
+          {
+            "id": 80151,
+            "title": "3.9\u0022 x 5.8\u0022 / Black",
+            "options": {
+              "size": "3.9\u0022 x 5.8\u0022",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1842,
+                "width": 1410
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              80151
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1249
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 119
+            },
+            "countries": [
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "FO",
+              "FR",
+              "GE",
+              "DE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "TR",
+              "UA",
+              "XK",
+              "LV",
+              "IS",
+              "SE",
+              "LT",
+              "NO",
+              "CH",
+              "LI",
+              "FI",
+              "EE",
+              "DK"
+            ]
+          },
+          {
+            "variant_ids": [
+              80151
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2499
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 259
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              80151
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2499
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              80151
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 829
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 139
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              80151
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 629
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "GB"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

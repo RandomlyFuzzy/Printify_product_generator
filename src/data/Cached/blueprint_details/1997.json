@@ -1,0 +1,112 @@
+{
+  "blueprint": {
+    "id": 1997,
+    "title": "Whiskey Glass, 10.5oz (Engraving)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/68f770fd0f646ccf790f8af2",
+      "https://images.printify.com/68f770ff18238c4bec00ac12",
+      "https://images.printify.com/68f770f9b7f3bf70de090352",
+      "https://images.printify.com/68f770fad2a7e3d77402e032"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 217,
+        "title": "Fulfill Engine"
+      },
+      "variants": {
+        "id": 217,
+        "title": "Fulfill Engine",
+        "variants": [
+          {
+            "id": 122883,
+            "title": "10.5oz",
+            "options": {
+              "size": "10.5oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "engraving",
+                "height": 750,
+                "width": 750
+              },
+              {
+                "position": "back",
+                "decoration_method": "engraving",
+                "height": 750,
+                "width": 750
+              },
+              {
+                "position": "drinkware_bottom",
+                "decoration_method": "engraving",
+                "height": 472,
+                "width": 472
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              122883
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 949
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              122883
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1469
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 699
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              122883
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1899
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 899
+            },
+            "countries": [
+              "REST_OF_THE_WORLD",
+              "AU"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

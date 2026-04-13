@@ -1,0 +1,173 @@
+{
+  "blueprint": {
+    "id": 2945,
+    "title": "Transparent Fanny Pack",
+    "brand": "Port Authority",
+    "model": "BG930",
+    "images": [
+      "https://images.printify.com/69a18d6283b8b4e85b0bb180",
+      "https://images.printify.com/69a18d5f7bfe72a40b0ea290",
+      "https://images.printify.com/69a18d642cfc723a3008f5f0"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 217,
+        "title": "Fulfill Engine"
+      },
+      "variants": {
+        "id": 217,
+        "title": "Fulfill Engine",
+        "variants": [
+          {
+            "id": 164403,
+            "title": "One size / Black Smoke/Black",
+            "options": {
+              "size": "One size",
+              "color": "Black Smoke/Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 900,
+                "width": 1800
+              }
+            ]
+          },
+          {
+            "id": 164404,
+            "title": "One size / Iridescent/Black",
+            "options": {
+              "size": "One size",
+              "color": "Iridescent/Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 900,
+                "width": 1800
+              }
+            ]
+          },
+          {
+            "id": 164405,
+            "title": "One size / Clear/Black",
+            "options": {
+              "size": "One size",
+              "color": "Clear/Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 900,
+                "width": 1800
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              164403,
+              164404,
+              164405
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 569
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 209
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              164403,
+              164404,
+              164405
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1069
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              164403,
+              164404,
+              164405
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1069
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              164403,
+              164404,
+              164405
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 589
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              164403,
+              164404,
+              164405
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1249
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "AU"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

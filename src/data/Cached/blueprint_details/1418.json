@@ -1,0 +1,113 @@
+{
+  "blueprint": {
+    "id": 1418,
+    "title": "Bitterroot Coffee Blend (Dark French Roast)",
+    "brand": "Roastify",
+    "model": "",
+    "images": [
+      "https://images.printify.com/67b71fab48ba4d1aba04e669",
+      "https://images.printify.com/67b723901563b0c2810a0f78",
+      "https://images.printify.com/67b71fe9c2e0e58df20efeb0",
+      "https://images.printify.com/67b71fb67464474b9e0f4b3a",
+      "https://images.printify.com/67b71fe01563b0c2810a0f75",
+      "https://images.printify.com/67b71fe17464474b9e0f4b3b",
+      "https://images.printify.com/67b71fe89055fbacd0032d67",
+      "https://images.printify.com/67b71fb59055fbacd0032d65",
+      "https://images.printify.com/67b71fddc2e0e58df20efeaf",
+      "https://images.printify.com/67b71fe21563b0c2810a0f76",
+      "https://images.printify.com/67b71fdfd2b35ac34b0bc9cc",
+      "https://images.printify.com/67b71fe47464474b9e0f4b3c",
+      "https://images.printify.com/67b71fe51563b0c2810a0f77",
+      "https://images.printify.com/67b71fe69055fbacd0032d66",
+      "https://images.printify.com/66c35433b80ed7a6d30dc3b2"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 291,
+        "title": "Roastify"
+      },
+      "variants": {
+        "id": 291,
+        "title": "Roastify",
+        "variants": [
+          {
+            "id": 104851,
+            "title": "Whole Bean / 12oz",
+            "options": {
+              "grind": "Whole Bean",
+              "size": "12oz"
+            },
+            "placeholders": [
+              {
+                "position": "coffee_front",
+                "decoration_method": "digital-printing",
+                "height": 4444,
+                "width": 3900
+              }
+            ]
+          },
+          {
+            "id": 104852,
+            "title": "Ground / 12oz",
+            "options": {
+              "grind": "Ground",
+              "size": "12oz"
+            },
+            "placeholders": [
+              {
+                "position": "coffee_front",
+                "decoration_method": "digital-printing",
+                "height": 4444,
+                "width": 3900
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              104851,
+              104852
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 759
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              104851,
+              104852
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2099
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 189
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

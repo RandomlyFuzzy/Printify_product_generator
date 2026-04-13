@@ -1,0 +1,124 @@
+{
+  "blueprint": {
+    "id": 5080,
+    "title": "Clear Backpack",
+    "brand": "Port Authority",
+    "model": "BG230",
+    "images": [
+      "https://images.printify.com/69aff025f3b57aa4dc0696f4",
+      "https://images.printify.com/69aff023f26c5ce3e5015580",
+      "https://images.printify.com/6995cc828ce011974c0157a2",
+      "https://images.printify.com/6996e25eab4093389e0573a2",
+      "https://images.printify.com/6995cc7f11ca094ded09a9b2",
+      "https://images.printify.com/6996e2553671184a64073432"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 217,
+        "title": "Fulfill Engine"
+      },
+      "variants": {
+        "id": 217,
+        "title": "Fulfill Engine",
+        "variants": [
+          {
+            "id": 244229,
+            "title": "Clear/ Black / One size",
+            "options": {
+              "color": "Clear/ Black",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "middle_front_pocket",
+                "decoration_method": "uv",
+                "height": 600,
+                "width": 750
+              },
+              {
+                "position": "bottom_front_pocket",
+                "decoration_method": "uv",
+                "height": 750,
+                "width": 1050
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              244229
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2199
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              244229
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2019
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 709
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              244229
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 929
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              244229
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2039
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 739
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

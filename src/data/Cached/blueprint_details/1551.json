@@ -1,0 +1,73 @@
+{
+  "blueprint": {
+    "id": 1551,
+    "title": "Pre-Workout Supplement, Fruit Punch (204g, 7.1oz)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66c44f3dabd97eb43f081052",
+      "https://images.printify.com/66c44f3be8d7362b5d0fb693",
+      "https://images.printify.com/66e1941ecce620751b0f8fb5",
+      "https://images.printify.com/66a8e5c7b5d9298db10c8578",
+      "https://images.printify.com/66a8e5555b6d31aa65040712",
+      "https://images.printify.com/66e1941c93a86778a400fa72",
+      "https://images.printify.com/66a8dd634aaa7a33a9071b92",
+      "https://images.printify.com/66b343dbb854ead1950d7c32"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 294,
+        "title": "Rocktomic"
+      },
+      "variants": {
+        "id": 294,
+        "title": "Rocktomic",
+        "variants": [
+          {
+            "id": 109739,
+            "title": "Black jar \u002B lid / Fruit Punch / NET WT 7.2 OZ (204g)",
+            "options": {
+              "color": "Black jar \u002B lid",
+              "flavor": "Fruit Punch",
+              "size": "NET WT 7.2 OZ (204g)"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 2197,
+                "width": 3378
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              109739
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 649
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

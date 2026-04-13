@@ -1,0 +1,316 @@
+{
+  "blueprint": {
+    "id": 1469,
+    "title": "Sled Ornaments",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66c461f6c8fe28208306d8d3",
+      "https://images.printify.com/66c461f2a7d4da25a1007ff2",
+      "https://images.printify.com/67ee30a1dda326eec3033702",
+      "https://images.printify.com/6645ff023813df5db3054cd2",
+      "https://images.printify.com/6646037328d49d849a05f592"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 28,
+        "title": "District Photo"
+      },
+      "variants": {
+        "id": 28,
+        "title": "District Photo",
+        "variants": [
+          {
+            "id": 106100,
+            "title": "2.1\u0027\u0027 \u00D7 4.6\u0027\u0027 / 1 pc",
+            "options": {
+              "size": "2.1\u0027\u0027 \u00D7 4.6\u0027\u0027",
+              "quantity": "1 pc"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1170,
+                "width": 1170
+              }
+            ]
+          },
+          {
+            "id": 106101,
+            "title": "2.1\u0027\u0027 \u00D7 4.6\u0027\u0027 / 5 pcs",
+            "options": {
+              "size": "2.1\u0027\u0027 \u00D7 4.6\u0027\u0027",
+              "quantity": "5 pcs"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1170,
+                "width": 1170
+              }
+            ]
+          },
+          {
+            "id": 106102,
+            "title": "2.1\u0027\u0027 \u00D7 4.6\u0027\u0027 / 10 pcs",
+            "options": {
+              "size": "2.1\u0027\u0027 \u00D7 4.6\u0027\u0027",
+              "quantity": "10 pcs"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1170,
+                "width": 1170
+              }
+            ]
+          },
+          {
+            "id": 106103,
+            "title": "2.1\u0027\u0027 \u00D7 4.6\u0027\u0027 / 20 pcs",
+            "options": {
+              "size": "2.1\u0027\u0027 \u00D7 4.6\u0027\u0027",
+              "quantity": "20 pcs"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1170,
+                "width": 1170
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [],
+            "first_item": {
+              "currency": "USD",
+              "cost": 729
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              106100
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 459
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 49
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              106102
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 629
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              106101
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 559
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2189
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1379
+            },
+            "countries": [
+              "REST_OF_THE_WORLD",
+              "NO",
+              "AU",
+              "NZ"
+            ]
+          },
+          {
+            "variant_ids": [],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1429
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 569
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              106100
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1159
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "CA",
+              "NZ",
+              "AU",
+              "NO",
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [],
+            "first_item": {
+              "currency": "USD",
+              "cost": 799
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              106100
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 569
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 69
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              106102
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 699
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              106102
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1399
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "NO",
+              "NZ",
+              "AU",
+              "CA",
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              106101
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1199
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "REST_OF_THE_WORLD",
+              "NO",
+              "AU",
+              "CA",
+              "NZ"
+            ]
+          },
+          {
+            "variant_ids": [
+              106101
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 599
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

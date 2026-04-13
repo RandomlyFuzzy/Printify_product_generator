@@ -1,0 +1,728 @@
+{
+  "blueprint": {
+    "id": 1502,
+    "title": "Framed Poster, Multi-Color",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/6834494b8c21ddf2390df982",
+      "https://images.printify.com/6834494ab811b426ab0b5dd2",
+      "https://images.printify.com/683449497d6241730209eb82",
+      "https://images.printify.com/6834494775fbc123880292b2",
+      "https://images.printify.com/68344946e5396ab64a0106a2"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 72,
+        "title": "Print Clever"
+      },
+      "variants": {
+        "id": 72,
+        "title": "Print Clever",
+        "variants": [
+          {
+            "id": 108107,
+            "title": "10\u0022 x 8\u0022 (Horizontal) / Semi Glossy / White",
+            "options": {
+              "size": "10\u0022 x 8\u0022 (Horizontal)",
+              "paper": "Semi Glossy",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 2398,
+                "width": 3000
+              }
+            ]
+          },
+          {
+            "id": 108108,
+            "title": "10\u0022 x 8\u0022 (Horizontal) / Semi Glossy / Black",
+            "options": {
+              "size": "10\u0022 x 8\u0022 (Horizontal)",
+              "paper": "Semi Glossy",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 2398,
+                "width": 3000
+              }
+            ]
+          },
+          {
+            "id": 108120,
+            "title": "16\u2033 x 12\u2033 (Horizontal) / Semi Glossy / Black",
+            "options": {
+              "size": "16\u2033 x 12\u2033 (Horizontal)",
+              "paper": "Semi Glossy",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 3591,
+                "width": 4795
+              }
+            ]
+          },
+          {
+            "id": 108131,
+            "title": "24\u2033 x 18\u2033 (Horizontal) / Semi Glossy / White",
+            "options": {
+              "size": "24\u2033 x 18\u2033 (Horizontal)",
+              "paper": "Semi Glossy",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 5398,
+                "width": 7205
+              }
+            ]
+          },
+          {
+            "id": 108132,
+            "title": "24\u2033 x 18\u2033 (Horizontal) / Semi Glossy / Black",
+            "options": {
+              "size": "24\u2033 x 18\u2033 (Horizontal)",
+              "paper": "Semi Glossy",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 5398,
+                "width": 7205
+              }
+            ]
+          },
+          {
+            "id": 108148,
+            "title": "8\u0022 x 10\u0022 (Vertical) / Semi Glossy / Brown",
+            "options": {
+              "size": "8\u0022 x 10\u0022 (Vertical)",
+              "paper": "Semi Glossy",
+              "color": "Brown"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 3000,
+                "width": 2398
+              }
+            ]
+          },
+          {
+            "id": 108149,
+            "title": "8\u0022 x 10\u0022 (Vertical) / Semi Glossy / White",
+            "options": {
+              "size": "8\u0022 x 10\u0022 (Vertical)",
+              "paper": "Semi Glossy",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 3000,
+                "width": 2398
+              }
+            ]
+          },
+          {
+            "id": 108150,
+            "title": "8\u0022 x 10\u0022 (Vertical) / Semi Glossy / Black",
+            "options": {
+              "size": "8\u0022 x 10\u0022 (Vertical)",
+              "paper": "Semi Glossy",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 3000,
+                "width": 2398
+              }
+            ]
+          },
+          {
+            "id": 108163,
+            "title": "12\u2033 x 16\u2033 (Vertical) / Semi Glossy / Brown",
+            "options": {
+              "size": "12\u2033 x 16\u2033 (Vertical)",
+              "paper": "Semi Glossy",
+              "color": "Brown"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 4795,
+                "width": 3591
+              }
+            ]
+          },
+          {
+            "id": 108165,
+            "title": "12\u2033 x 16\u2033 (Vertical) / Semi Glossy / Black",
+            "options": {
+              "size": "12\u2033 x 16\u2033 (Vertical)",
+              "paper": "Semi Glossy",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 4795,
+                "width": 3591
+              }
+            ]
+          },
+          {
+            "id": 108252,
+            "title": "18\u2033 x 24\u2033 (Vertical) / Semi Glossy / Brown",
+            "options": {
+              "size": "18\u2033 x 24\u2033 (Vertical)",
+              "paper": "Semi Glossy",
+              "color": "Brown"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 7205,
+                "width": 5398
+              }
+            ]
+          },
+          {
+            "id": 108253,
+            "title": "18\u2033 x 24\u2033 (Vertical) / Semi Glossy / White",
+            "options": {
+              "size": "18\u2033 x 24\u2033 (Vertical)",
+              "paper": "Semi Glossy",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 7205,
+                "width": 5398
+              }
+            ]
+          },
+          {
+            "id": 108254,
+            "title": "18\u2033 x 24\u2033 (Vertical) / Semi Glossy / Black",
+            "options": {
+              "size": "18\u2033 x 24\u2033 (Vertical)",
+              "paper": "Semi Glossy",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 7205,
+                "width": 5398
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              108106,
+              108107,
+              108108,
+              108148,
+              108149,
+              108150
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 949
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 599
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              108106,
+              108107,
+              108108,
+              108148,
+              108149,
+              108150
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 3719
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 3719
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              108106,
+              108107,
+              108108,
+              108148,
+              108149,
+              108150
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1199
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1199
+            },
+            "countries": [
+              "IE",
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "FO",
+              "FR",
+              "GE",
+              "DE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IT",
+              "JE",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "TR",
+              "UA",
+              "XK"
+            ]
+          },
+          {
+            "variant_ids": [
+              108106,
+              108107,
+              108108,
+              108148,
+              108149,
+              108150
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 4419
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 4419
+            },
+            "countries": [
+              "CA",
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              108106,
+              108107,
+              108108,
+              108148,
+              108149,
+              108150
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1259
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 100
+            },
+            "countries": [
+              "GB",
+              "IM"
+            ]
+          },
+          {
+            "variant_ids": [
+              108106,
+              108107,
+              108108,
+              108148,
+              108149,
+              108150
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1699
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1699
+            },
+            "countries": [
+              "IS",
+              "LV",
+              "EE",
+              "DK",
+              "LT",
+              "NO",
+              "LI",
+              "SE",
+              "CH",
+              "FI"
+            ]
+          },
+          {
+            "variant_ids": [
+              108118,
+              108119,
+              108120,
+              108163,
+              108164,
+              108165
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1399
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 699
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              108118,
+              108119,
+              108120,
+              108163,
+              108164,
+              108165
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1999
+            },
+            "countries": [
+              "IS",
+              "LV",
+              "EE",
+              "DK",
+              "LT",
+              "NO",
+              "LI",
+              "SE",
+              "CH",
+              "FI"
+            ]
+          },
+          {
+            "variant_ids": [
+              108118,
+              108119,
+              108120,
+              108130,
+              108131,
+              108132,
+              108163,
+              108164,
+              108165,
+              108252,
+              108253,
+              108254
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1569
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "GB",
+              "IM"
+            ]
+          },
+          {
+            "variant_ids": [
+              108118,
+              108119,
+              108120,
+              108163,
+              108164,
+              108165
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 5069
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 5069
+            },
+            "countries": [
+              "REST_OF_THE_WORLD",
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              108118,
+              108119,
+              108120,
+              108130,
+              108131,
+              108132,
+              108163,
+              108164,
+              108165,
+              108252,
+              108253,
+              108254
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1599
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1599
+            },
+            "countries": [
+              "IE",
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "FO",
+              "FR",
+              "GE",
+              "DE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IT",
+              "JE",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "TR",
+              "UA",
+              "XK"
+            ]
+          },
+          {
+            "variant_ids": [
+              108118,
+              108119,
+              108120,
+              108163,
+              108164,
+              108165
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 4259
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 4259
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              108130,
+              108131,
+              108132,
+              108252,
+              108253,
+              108254
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2059
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 899
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              108130,
+              108131,
+              108132,
+              108252,
+              108253,
+              108254
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 6369
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 6369
+            },
+            "countries": [
+              "REST_OF_THE_WORLD",
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              108130,
+              108131,
+              108132,
+              108252,
+              108253,
+              108254
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 5349
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 5349
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              108130,
+              108131,
+              108132,
+              108252,
+              108253,
+              108254
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2399
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2399
+            },
+            "countries": [
+              "IS",
+              "LV",
+              "EE",
+              "DK",
+              "LT",
+              "NO",
+              "LI",
+              "SE",
+              "CH",
+              "FI"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

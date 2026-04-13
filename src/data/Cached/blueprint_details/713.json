@@ -1,0 +1,248 @@
+{
+  "blueprint": {
+    "id": 713,
+    "title": "Cotton Apron",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66cc446e44ce98ed92097342",
+      "https://images.printify.com/66cc446c4d034c547b091092",
+      "https://images.printify.com/61af52b30f4dfc6e7d380454",
+      "https://images.printify.com/61af52bc099399595231c801"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 6,
+        "title": "T Shirt and Sons"
+      },
+      "variants": {
+        "id": 6,
+        "title": "T Shirt and Sons",
+        "variants": [
+          {
+            "id": 74521,
+            "title": "Black / One size",
+            "options": {
+              "color": "Black",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3780,
+                "width": 2953
+              }
+            ]
+          },
+          {
+            "id": 74522,
+            "title": "Grey / One size",
+            "options": {
+              "color": "Grey",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3780,
+                "width": 2953
+              }
+            ]
+          },
+          {
+            "id": 74523,
+            "title": "Lime Green / One size",
+            "options": {
+              "color": "Lime Green",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3780,
+                "width": 2953
+              }
+            ]
+          },
+          {
+            "id": 74525,
+            "title": "Navy / One size",
+            "options": {
+              "color": "Navy",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3780,
+                "width": 2953
+              }
+            ]
+          },
+          {
+            "id": 74526,
+            "title": "Red / One size",
+            "options": {
+              "color": "Red",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3780,
+                "width": 2953
+              }
+            ]
+          },
+          {
+            "id": 74527,
+            "title": "Royal Blue / One size",
+            "options": {
+              "color": "Royal Blue",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3780,
+                "width": 2953
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              74521,
+              74522,
+              74523,
+              74525,
+              74526,
+              74527
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 599
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 149
+            },
+            "countries": [
+              "PL",
+              "SE",
+              "DK",
+              "FI",
+              "EE",
+              "IS",
+              "LT",
+              "LV",
+              "NO",
+              "LI",
+              "CH",
+              "GI",
+              "AT",
+              "BE",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "FR",
+              "GR",
+              "HU",
+              "IT",
+              "LU",
+              "MT",
+              "PT",
+              "RO",
+              "SK",
+              "SI",
+              "ES",
+              "TR",
+              "NL",
+              "IE",
+              "DE"
+            ]
+          },
+          {
+            "variant_ids": [
+              74521,
+              74522,
+              74523,
+              74525,
+              74526,
+              74527
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 349
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "GB"
+            ]
+          },
+          {
+            "variant_ids": [
+              74521,
+              74522,
+              74523,
+              74525,
+              74526,
+              74527
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2279
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 619
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              74521,
+              74522,
+              74523,
+              74525,
+              74526,
+              74527
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 3579
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 619
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

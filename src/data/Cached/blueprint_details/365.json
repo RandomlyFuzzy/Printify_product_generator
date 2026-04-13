@@ -1,0 +1,211 @@
+{
+  "blueprint": {
+    "id": 365,
+    "title": "Crew Socks",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66c5d9343f5e0f2aef07e805",
+      "https://images.printify.com/66c5d9378b5b568cf40e00e2"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 14,
+        "title": "ArtsAdd"
+      },
+      "variants": {
+        "id": 14,
+        "title": "ArtsAdd",
+        "variants": [
+          {
+            "id": 44904,
+            "title": "3/4 Crew",
+            "options": {
+              "size": "3/4 Crew"
+            },
+            "placeholders": [
+              {
+                "position": "front_left_leg",
+                "decoration_method": "dye-sublimation",
+                "height": 3839,
+                "width": 1358
+              },
+              {
+                "position": "front_right_leg",
+                "decoration_method": "dye-sublimation",
+                "height": 3839,
+                "width": 1358
+              },
+              {
+                "position": "back_left_leg",
+                "decoration_method": "dye-sublimation",
+                "height": 3839,
+                "width": 1358
+              },
+              {
+                "position": "back_right_leg",
+                "decoration_method": "dye-sublimation",
+                "height": 3839,
+                "width": 1358
+              }
+            ]
+          },
+          {
+            "id": 44905,
+            "title": "Ankle",
+            "options": {
+              "size": "Ankle"
+            },
+            "placeholders": [
+              {
+                "position": "front_left_leg",
+                "decoration_method": "dye-sublimation",
+                "height": 3248,
+                "width": 1358
+              },
+              {
+                "position": "front_right_leg",
+                "decoration_method": "dye-sublimation",
+                "height": 3248,
+                "width": 1358
+              },
+              {
+                "position": "back_left_leg",
+                "decoration_method": "dye-sublimation",
+                "height": 3248,
+                "width": 1358
+              },
+              {
+                "position": "back_right_leg",
+                "decoration_method": "dye-sublimation",
+                "height": 3248,
+                "width": 1358
+              }
+            ]
+          },
+          {
+            "id": 44906,
+            "title": "Crew",
+            "options": {
+              "size": "Crew"
+            },
+            "placeholders": [
+              {
+                "position": "front_left_leg",
+                "decoration_method": "dye-sublimation",
+                "height": 5551,
+                "width": 1358
+              },
+              {
+                "position": "front_right_leg",
+                "decoration_method": "dye-sublimation",
+                "height": 5551,
+                "width": 1358
+              },
+              {
+                "position": "back_left_leg",
+                "decoration_method": "dye-sublimation",
+                "height": 5551,
+                "width": 1358
+              },
+              {
+                "position": "back_right_leg",
+                "decoration_method": "dye-sublimation",
+                "height": 5551,
+                "width": 1358
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              44904,
+              44905,
+              44906
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 360
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 360
+            },
+            "countries": [
+              "REST_OF_THE_WORLD",
+              "BR",
+              "NL",
+              "DK",
+              "NZ",
+              "MX"
+            ]
+          },
+          {
+            "variant_ids": [
+              44904,
+              44905,
+              44906
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 569
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              44904,
+              44905,
+              44906
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "CA",
+              "CN"
+            ]
+          },
+          {
+            "variant_ids": [
+              44904,
+              44905,
+              44906
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 649
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 649
+            },
+            "countries": [
+              "AU"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

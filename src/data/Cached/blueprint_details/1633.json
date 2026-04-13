@@ -1,0 +1,116 @@
+{
+  "blueprint": {
+    "id": 1633,
+    "title": "Poly Twill Napkin",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66ffdd3f7c487afbbd01d7a2",
+      "https://images.printify.com/66ffdd4a2ed3d9214707d413"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 10,
+        "title": "MWW On Demand"
+      },
+      "variants": {
+        "id": 10,
+        "title": "MWW On Demand",
+        "variants": [
+          {
+            "id": 112992,
+            "title": "10\u0027\u0027 \u00D7 10\u0027\u0027",
+            "options": {
+              "size": "10\u0027\u0027 \u00D7 10\u0027\u0027"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1725,
+                "width": 1725
+              }
+            ]
+          },
+          {
+            "id": 112993,
+            "title": "22\u0027\u0027 \u00D7 22\u0027\u0027",
+            "options": {
+              "size": "22\u0027\u0027 \u00D7 22\u0027\u0027"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 3525,
+                "width": 3525
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              112992,
+              112993
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 479
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 169
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              112992,
+              112993
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 139
+            },
+            "countries": [
+              "REST_OF_THE_WORLD",
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              112992,
+              112993
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 509
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 209
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

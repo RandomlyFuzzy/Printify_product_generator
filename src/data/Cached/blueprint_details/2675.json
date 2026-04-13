@@ -1,0 +1,195 @@
+{
+  "blueprint": {
+    "id": 2675,
+    "title": "Single-Sided Printed Keychain Charm",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/692dabd8f4625c822b0a2f02",
+      "https://images.printify.com/692dabd79b2181a95a0ae7d2",
+      "https://images.printify.com/68ef995f4808a4f99d0509b2",
+      "https://images.printify.com/68e8c6a3c0be4988df063fb3",
+      "https://images.printify.com/68ef995bf847acf8c10e4cd2"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 332,
+        "title": "Printdoors"
+      },
+      "variants": {
+        "id": 332,
+        "title": "Printdoors",
+        "variants": [
+          {
+            "id": 147952,
+            "title": "1.18\u0027\u0027 x 2.36\u0027\u0027 / Transparent",
+            "options": {
+              "size": "1.18\u0027\u0027 x 2.36\u0027\u0027",
+              "color": "Transparent"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1614,
+                "width": 846
+              }
+            ]
+          },
+          {
+            "id": 147953,
+            "title": "1.58\u0027\u0027 x 3.15\u0027\u0027 / Transparent",
+            "options": {
+              "size": "1.58\u0027\u0027 x 3.15\u0027\u0027",
+              "color": "Transparent"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1614,
+                "width": 846
+              }
+            ]
+          },
+          {
+            "id": 147954,
+            "title": "1.77\u0027\u0027 x 3.54\u0027\u0027 / Transparent",
+            "options": {
+              "size": "1.77\u0027\u0027 x 3.54\u0027\u0027",
+              "color": "Transparent"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1614,
+                "width": 846
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              147952,
+              147953,
+              147954
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 379
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "CN"
+            ]
+          },
+          {
+            "variant_ids": [
+              147952,
+              147953,
+              147954
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 539
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 419
+            },
+            "countries": [
+              "DE",
+              "FR",
+              "GB"
+            ]
+          },
+          {
+            "variant_ids": [
+              147952,
+              147953,
+              147954
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 729
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 599
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              147952,
+              147953,
+              147954
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 689
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              147952,
+              147953,
+              147954
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1039
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 329
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              147952,
+              147953,
+              147954
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 929
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 759
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

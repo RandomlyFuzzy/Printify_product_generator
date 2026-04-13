@@ -1,0 +1,122 @@
+{
+  "blueprint": {
+    "id": 1124,
+    "title": "Picnic Blanket",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d58e3eecca10952c00f4b4",
+      "https://images.printify.com/66d58e40ecca10952c00f4b5",
+      "https://images.printify.com/62bc5f2752c2a6e52a050c70",
+      "https://images.printify.com/62bc5e3551182f443510031c",
+      "https://images.printify.com/62bc5e36b476c3e8b803b2a0",
+      "https://images.printify.com/62bc5e37c32d5e02580d96a7",
+      "https://images.printify.com/62bc5e3251182f4435100315",
+      "https://images.printify.com/62bc5e75b476c3e8b803b2a6",
+      "https://images.printify.com/62bc5e3552c2a6e52a050c6c"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 28,
+        "title": "District Photo"
+      },
+      "variants": {
+        "id": 28,
+        "title": "District Photo",
+        "variants": [
+          {
+            "id": 84107,
+            "title": "61\u0022 \u00D7 51\u0022",
+            "options": {
+              "size": "61\u0022 \u00D7 51\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 9300,
+                "width": 7800
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              84107
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 829
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 269
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              84107
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2079
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 579
+            },
+            "countries": [
+              "REST_OF_THE_WORLD",
+              "AU",
+              "NZ"
+            ]
+          },
+          {
+            "variant_ids": [
+              84107
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              84107
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 799
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

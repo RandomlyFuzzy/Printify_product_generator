@@ -1,0 +1,137 @@
+{
+  "blueprint": {
+    "id": 1305,
+    "title": "Acrylic Wall Clock",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66cdb183a0c51076b5024854",
+      "https://images.printify.com/66cdb184c99a19eea107b292",
+      "https://images.printify.com/643cddc56298f544a50bd141",
+      "https://images.printify.com/643cca4c6298f544a50bd115",
+      "https://images.printify.com/6406dead85a75076b902a032",
+      "https://images.printify.com/6406e0914afb4d81c309c537"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 104,
+        "title": "Acrylic Idea Factory"
+      },
+      "variants": {
+        "id": 104,
+        "title": "Acrylic Idea Factory",
+        "variants": [
+          {
+            "id": 98941,
+            "title": "8\u0027\u0027 \u00D7 8\u0027\u0027 (Round)",
+            "options": {
+              "size": "8\u0027\u0027 \u00D7 8\u0027\u0027 (Round)"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 2438,
+                "width": 2438
+              }
+            ]
+          },
+          {
+            "id": 98942,
+            "title": "10.75\u0027\u0027 \u00D7 10.75\u0027\u0027 (Square)",
+            "options": {
+              "size": "10.75\u0027\u0027 \u00D7 10.75\u0027\u0027 (Square)"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 3263,
+                "width": 3263
+              }
+            ]
+          },
+          {
+            "id": 98943,
+            "title": "10.75\u0027\u0027 \u00D7 10.75\u0027\u0027 (Round)",
+            "options": {
+              "size": "10.75\u0027\u0027 \u00D7 10.75\u0027\u0027 (Round)"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 3263,
+                "width": 3263
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              98941,
+              98942,
+              98943
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1599
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              98941,
+              98942,
+              98943
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 3139
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1689
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              98941,
+              98942,
+              98943
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 3209
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1689
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

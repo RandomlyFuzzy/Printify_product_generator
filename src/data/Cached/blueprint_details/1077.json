@@ -1,0 +1,102 @@
+{
+  "blueprint": {
+    "id": 1077,
+    "title": "Lawn Sign",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d5b570084ec852f4001a89",
+      "https://images.printify.com/66d5b56f3ca3152d9c0244f2",
+      "https://images.printify.com/62961b09dc49645e72063cc5",
+      "https://images.printify.com/62bb118d73055d8930035338",
+      "https://images.printify.com/62bb0e84099b9b5be708a866",
+      "https://images.printify.com/6733581c384596615005f012"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 234,
+        "title": "Today\u0027s Graphics"
+      },
+      "variants": {
+        "id": 234,
+        "title": "Today\u0027s Graphics",
+        "variants": [
+          {
+            "id": 81373,
+            "title": "22\u0027\u0027 x 15\u0027\u0027 / White",
+            "options": {
+              "size": "22\u0027\u0027 x 15\u0027\u0027",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 1906,
+                "width": 2781
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              81373
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 5399
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 799
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              81373
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 6199
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 799
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              81373
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2169
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 469
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

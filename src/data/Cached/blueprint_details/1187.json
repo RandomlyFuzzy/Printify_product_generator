@@ -1,0 +1,123 @@
+{
+  "blueprint": {
+    "id": 1187,
+    "title": "Ping Pong Balls, 6 pcs",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d09d05d89fe553800a78e0",
+      "https://images.printify.com/66d09d07eb9bbcfb440fabde",
+      "https://images.printify.com/6316f37f2f11f3372206b1ff",
+      "https://images.printify.com/6317454a573764df1c0a0c48",
+      "https://images.printify.com/631745ad573764df1c0a0c4b",
+      "https://images.printify.com/672e20e2c08c662a1506cd62"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 80,
+        "title": "M.i.A Merchandise"
+      },
+      "variants": {
+        "id": 80,
+        "title": "M.i.A Merchandise",
+        "variants": [
+          {
+            "id": 91579,
+            "title": "Orange / 1.6\u0022 / 6 pcs",
+            "options": {
+              "color": "Orange",
+              "size": "1.6\u0022",
+              "quantity": "6 pcs"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 238,
+                "width": 238
+              }
+            ]
+          },
+          {
+            "id": 91580,
+            "title": "White / 1.6\u0022 / 6 pcs",
+            "options": {
+              "color": "White",
+              "size": "1.6\u0022",
+              "quantity": "6 pcs"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 238,
+                "width": 238
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              91579,
+              91580
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1479
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 569
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              91579,
+              91580
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1679
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 809
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              91579,
+              91580
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 699
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 599
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

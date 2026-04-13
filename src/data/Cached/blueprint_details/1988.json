@@ -1,0 +1,234 @@
+{
+  "blueprint": {
+    "id": 1988,
+    "title": "Protest Sign",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/68b97b490df6fac14200e4f2",
+      "https://images.printify.com/68b97b4c1ec1d989e906b892",
+      "https://images.printify.com/68b97b4e2fa5f95e3c0b8292"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 105,
+        "title": "Jondo"
+      },
+      "variants": {
+        "id": 105,
+        "title": "Jondo",
+        "variants": [
+          {
+            "id": 122672,
+            "title": "18\u0022 x 24\u0022 / White",
+            "options": {
+              "size": "18\u0022 x 24\u0022",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 5440,
+                "width": 7240
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              122672
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1239
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 579
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              122672
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 8909
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 699
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              122672
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 7429
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 599
+            },
+            "countries": [
+              "DE",
+              "ES"
+            ]
+          },
+          {
+            "variant_ids": [
+              122672
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1599
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 599
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              122672
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 7669
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 599
+            },
+            "countries": [
+              "CA",
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "FO",
+              "FR",
+              "GE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "TR",
+              "UA",
+              "XK"
+            ]
+          },
+          {
+            "variant_ids": [
+              122672
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 19249
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 629
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              122672
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 8029
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 629
+            },
+            "countries": [
+              "GB"
+            ]
+          },
+          {
+            "variant_ids": [
+              122672
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 7809
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 609
+            },
+            "countries": [
+              "FI",
+              "DK",
+              "EE",
+              "LT",
+              "LV",
+              "NO",
+              "CH",
+              "SE",
+              "IS",
+              "LI"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

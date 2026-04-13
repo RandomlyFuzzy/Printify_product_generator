@@ -1,0 +1,226 @@
+{
+  "blueprint": {
+    "id": 1232,
+    "title": "Multi-Design Greeting Cards (5-Pack)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d06118d4afb6fcfc0334a8",
+      "https://images.printify.com/66d0611a6153ace45a0086b6",
+      "https://images.printify.com/67ed1ce167e952a8f5060ca4"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 84,
+        "title": "CatPrint"
+      },
+      "variants": {
+        "id": 84,
+        "title": "CatPrint",
+        "variants": [
+          {
+            "id": 93763,
+            "title": "4.25\u0022 x 5.5\u0022 (Vertical) / Uncoated",
+            "options": {
+              "size": "4.25\u0022 x 5.5\u0022 (Vertical)",
+              "paper": "Uncoated"
+            },
+            "placeholders": [
+              {
+                "position": "card1_inside",
+                "decoration_method": "digital-printing",
+                "height": 1725,
+                "width": 2625
+              },
+              {
+                "position": "card2_inside",
+                "decoration_method": "digital-printing",
+                "height": 1725,
+                "width": 2625
+              },
+              {
+                "position": "card3_inside",
+                "decoration_method": "digital-printing",
+                "height": 1725,
+                "width": 2625
+              },
+              {
+                "position": "card4_inside",
+                "decoration_method": "digital-printing",
+                "height": 1725,
+                "width": 2625
+              },
+              {
+                "position": "card5_inside",
+                "decoration_method": "digital-printing",
+                "height": 1725,
+                "width": 2625
+              },
+              {
+                "position": "card1_front",
+                "decoration_method": "digital-printing",
+                "height": 1725,
+                "width": 2625
+              },
+              {
+                "position": "card2_front",
+                "decoration_method": "digital-printing",
+                "height": 1725,
+                "width": 2625
+              },
+              {
+                "position": "card3_front",
+                "decoration_method": "digital-printing",
+                "height": 1725,
+                "width": 2625
+              },
+              {
+                "position": "card4_front",
+                "decoration_method": "digital-printing",
+                "height": 1725,
+                "width": 2625
+              },
+              {
+                "position": "card5_front",
+                "decoration_method": "digital-printing",
+                "height": 1725,
+                "width": 2625
+              }
+            ]
+          },
+          {
+            "id": 93764,
+            "title": "5.5\u0022 x 4.25\u0022 (Horizontal) / Uncoated",
+            "options": {
+              "size": "5.5\u0022 x 4.25\u0022 (Horizontal)",
+              "paper": "Uncoated"
+            },
+            "placeholders": [
+              {
+                "position": "card1_inside",
+                "decoration_method": "digital-printing",
+                "height": 2625,
+                "width": 1725
+              },
+              {
+                "position": "card2_inside",
+                "decoration_method": "digital-printing",
+                "height": 2625,
+                "width": 1725
+              },
+              {
+                "position": "card3_inside",
+                "decoration_method": "digital-printing",
+                "height": 2625,
+                "width": 1725
+              },
+              {
+                "position": "card4_inside",
+                "decoration_method": "digital-printing",
+                "height": 2625,
+                "width": 1725
+              },
+              {
+                "position": "card5_inside",
+                "decoration_method": "digital-printing",
+                "height": 2625,
+                "width": 1725
+              },
+              {
+                "position": "card1_front",
+                "decoration_method": "digital-printing",
+                "height": 2625,
+                "width": 1725
+              },
+              {
+                "position": "card2_front",
+                "decoration_method": "digital-printing",
+                "height": 2625,
+                "width": 1725
+              },
+              {
+                "position": "card3_front",
+                "decoration_method": "digital-printing",
+                "height": 2625,
+                "width": 1725
+              },
+              {
+                "position": "card4_front",
+                "decoration_method": "digital-printing",
+                "height": 2625,
+                "width": 1725
+              },
+              {
+                "position": "card5_front",
+                "decoration_method": "digital-printing",
+                "height": 2625,
+                "width": 1725
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              93763,
+              93764
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1169
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              93763,
+              93764
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1059
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              93763,
+              93764
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 899
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 159
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

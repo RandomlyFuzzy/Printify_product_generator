@@ -1,0 +1,511 @@
+{
+  "blueprint": {
+    "id": 554,
+    "title": "Paper Poster",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d6e2d3b2fd5de7ea066733",
+      "https://images.printify.com/66d6e2d1ba7666e7d70654ab",
+      "https://images.printify.com/5fdc5dd0d000b5262d7fed7a"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 69,
+        "title": "Prodigi"
+      },
+      "variants": {
+        "id": 69,
+        "title": "Prodigi",
+        "variants": [
+          {
+            "id": 70655,
+            "title": "11\u2033 x 14\u2033",
+            "options": {
+              "size": "11\u2033 x 14\u2033"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 4193,
+                "width": 3307
+              }
+            ]
+          },
+          {
+            "id": 70656,
+            "title": "12\u0022 x 18\u0022",
+            "options": {
+              "size": "12\u0022 x 18\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 5315,
+                "width": 3543
+              }
+            ]
+          },
+          {
+            "id": 70657,
+            "title": "14\u2033 x 11\u2033",
+            "options": {
+              "size": "14\u2033 x 11\u2033"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 3307,
+                "width": 4193
+              }
+            ]
+          },
+          {
+            "id": 70658,
+            "title": "16\u2033 x 20\u2033",
+            "options": {
+              "size": "16\u2033 x 20\u2033"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 5906,
+                "width": 4724
+              }
+            ]
+          },
+          {
+            "id": 70659,
+            "title": "18\u2033 x 12\u2033",
+            "options": {
+              "size": "18\u2033 x 12\u2033"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 3543,
+                "width": 5315
+              }
+            ]
+          },
+          {
+            "id": 70660,
+            "title": "18\u0022 x 24\u0022",
+            "options": {
+              "size": "18\u0022 x 24\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 7087,
+                "width": 5315
+              }
+            ]
+          },
+          {
+            "id": 70661,
+            "title": "20\u0022 x 16\u0022",
+            "options": {
+              "size": "20\u0022 x 16\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 4724,
+                "width": 5906
+              }
+            ]
+          },
+          {
+            "id": 70662,
+            "title": "20\u0022 x 30\u0022",
+            "options": {
+              "size": "20\u0022 x 30\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 8858,
+                "width": 5906
+              }
+            ]
+          },
+          {
+            "id": 70663,
+            "title": "24\u2033 x 18\u2033",
+            "options": {
+              "size": "24\u2033 x 18\u2033"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 5315,
+                "width": 7087
+              }
+            ]
+          },
+          {
+            "id": 70664,
+            "title": "24\u2033 x 36\u2033",
+            "options": {
+              "size": "24\u2033 x 36\u2033"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 10630,
+                "width": 7087
+              }
+            ]
+          },
+          {
+            "id": 70665,
+            "title": "30\u0022 x 20\u0022",
+            "options": {
+              "size": "30\u0022 x 20\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 5906,
+                "width": 8858
+              }
+            ]
+          },
+          {
+            "id": 70666,
+            "title": "36\u0022 x 24\u0022",
+            "options": {
+              "size": "36\u0022 x 24\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 7087,
+                "width": 10630
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              70655,
+              70656,
+              70657,
+              70658,
+              70659,
+              70660,
+              70661,
+              70662,
+              70663,
+              70664,
+              70665,
+              70666
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1149
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 29
+            },
+            "countries": [
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "DK",
+              "EE",
+              "FO",
+              "FI",
+              "FR",
+              "GE",
+              "DE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IS",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "LV",
+              "LI",
+              "LT",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "NO",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "SE",
+              "CH",
+              "TR",
+              "UA",
+              "XK"
+            ]
+          },
+          {
+            "variant_ids": [
+              70662,
+              70664,
+              70665,
+              70666
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1689
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 29
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              70662,
+              70665
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1829
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              70655,
+              70656,
+              70657,
+              70658,
+              70659,
+              70660,
+              70661,
+              70662,
+              70663,
+              70664,
+              70665,
+              70666
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 869
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 29
+            },
+            "countries": [
+              "GB"
+            ]
+          },
+          {
+            "variant_ids": [
+              70664,
+              70666
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1649
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              70658,
+              70660,
+              70661,
+              70662,
+              70663,
+              70664,
+              70665,
+              70666
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1249
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 29
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              70655,
+              70656,
+              70657,
+              70658,
+              70659,
+              70660,
+              70661,
+              70663
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 809
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 29
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              70660,
+              70663
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1739
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              70658,
+              70661
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1579
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              70655,
+              70657
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1329
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 29
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              70656,
+              70659
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1389
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 29
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              70655,
+              70656,
+              70657,
+              70659
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1669
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "AU"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "blueprint": {
+    "id": 2944,
+    "title": "Stainless Steel Heart Signet Ring (Engraving)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/695289b7075f114efc0419e2",
+      "https://images.printify.com/695fccba4e9de77b6300b6d2",
+      "https://images.printify.com/695289b4f818cf69540579e2",
+      "https://images.printify.com/695289b3f30fe9b057055ab2"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 217,
+        "title": "Fulfill Engine"
+      },
+      "variants": {
+        "id": 217,
+        "title": "Fulfill Engine",
+        "variants": [
+          {
+            "id": 164400,
+            "title": "6 / 18K Gold PVD coating",
+            "options": {
+              "size": "6",
+              "color": "18K Gold PVD coating"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "laser-engraving",
+                "height": 331,
+                "width": 425
+              }
+            ]
+          },
+          {
+            "id": 164401,
+            "title": "7 / 18K Gold PVD coating",
+            "options": {
+              "size": "7",
+              "color": "18K Gold PVD coating"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "laser-engraving",
+                "height": 331,
+                "width": 425
+              }
+            ]
+          },
+          {
+            "id": 164402,
+            "title": "8 / 18K Gold PVD coating",
+            "options": {
+              "size": "8",
+              "color": "18K Gold PVD coating"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "laser-engraving",
+                "height": 331,
+                "width": 425
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              164400,
+              164401,
+              164402
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 449
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 209
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              164400,
+              164401,
+              164402
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 569
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              164400,
+              164401,
+              164402
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              164400,
+              164401,
+              164402
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 939
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

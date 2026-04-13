@@ -1,0 +1,241 @@
+{
+  "blueprint": {
+    "id": 5376,
+    "title": "Clean Up Cap",
+    "brand": "47 Brand",
+    "model": "4700",
+    "images": [
+      "https://images.printify.com/69b2910df40a6fb9820baaa1",
+      "https://images.printify.com/69b29111e976e4f7870a4d22",
+      "https://images.printify.com/69c108e8a929105af801e530",
+      "https://images.printify.com/69b2913d6aa5d9da730dec1c",
+      "https://images.printify.com/69b29143c830d3a1fd078e13",
+      "https://images.printify.com/69c108d5c5de901a4c018b90",
+      "https://images.printify.com/69c108dde4118aeff60969d2",
+      "https://images.printify.com/69c108e55b1cc813a50bc172",
+      "https://images.printify.com/69c108d97b96155192071340",
+      "https://images.printify.com/69c108caa093b1565c0dade0",
+      "https://images.printify.com/69c108e18f34aabb68077062",
+      "https://images.printify.com/69c108d0531aebca6a07a0b0"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 41,
+        "title": "Duplium"
+      },
+      "variants": {
+        "id": 41,
+        "title": "Duplium",
+        "variants": [
+          {
+            "id": 244823,
+            "title": "Black / One size",
+            "options": {
+              "color": "Black",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtf",
+                "height": 756,
+                "width": 1654
+              }
+            ]
+          },
+          {
+            "id": 244824,
+            "title": "White / One size",
+            "options": {
+              "color": "White",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtf",
+                "height": 756,
+                "width": 1654
+              }
+            ]
+          },
+          {
+            "id": 244825,
+            "title": "Columbia Blue / One size",
+            "options": {
+              "color": "Columbia Blue",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtf",
+                "height": 756,
+                "width": 1654
+              }
+            ]
+          },
+          {
+            "id": 244826,
+            "title": "Navy / One size",
+            "options": {
+              "color": "Navy",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtf",
+                "height": 756,
+                "width": 1654
+              }
+            ]
+          },
+          {
+            "id": 244827,
+            "title": "Royal / One size",
+            "options": {
+              "color": "Royal",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtf",
+                "height": 756,
+                "width": 1654
+              }
+            ]
+          },
+          {
+            "id": 244828,
+            "title": "Khaki / One size",
+            "options": {
+              "color": "Khaki",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtf",
+                "height": 756,
+                "width": 1654
+              }
+            ]
+          },
+          {
+            "id": 244829,
+            "title": "Red / One size",
+            "options": {
+              "color": "Red",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtf",
+                "height": 756,
+                "width": 1654
+              }
+            ]
+          },
+          {
+            "id": 244830,
+            "title": "Dark Green / One size",
+            "options": {
+              "color": "Dark Green",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtf",
+                "height": 756,
+                "width": 1654
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              244823,
+              244824,
+              244825,
+              244826,
+              244827,
+              244828,
+              244829,
+              244830
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 929
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              244823,
+              244824,
+              244825,
+              244826,
+              244827,
+              244828,
+              244829,
+              244830
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1199
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 599
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              244823,
+              244824,
+              244825,
+              244826,
+              244827,
+              244828,
+              244829,
+              244830
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 749
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 99
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "blueprint": {
+    "id": 1030,
+    "title": "Pennant",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d595f802751c03d80c7382",
+      "https://images.printify.com/66d595f931bfd5fd5b0e7b32",
+      "https://images.printify.com/627e3d8574d17c39150fda17",
+      "https://images.printify.com/627e3d87054c41cdf00e519c",
+      "https://images.printify.com/627e3d85054c41cdf00e5199",
+      "https://images.printify.com/627e3d86b025c75502060d9b",
+      "https://images.printify.com/673306261e385aeba00f5583"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 10,
+        "title": "MWW On Demand"
+      },
+      "variants": {
+        "id": 10,
+        "title": "MWW On Demand",
+        "variants": [
+          {
+            "id": 79919,
+            "title": "18\u0022 \u00D7 21\u0022",
+            "options": {
+              "size": "18\u0022 \u00D7 21\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 3450,
+                "width": 2925
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              79919
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1259
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 639
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              79919
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1279
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 699
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              79919
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 689
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 239
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

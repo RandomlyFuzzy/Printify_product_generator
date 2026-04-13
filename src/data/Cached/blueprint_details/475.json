@@ -1,0 +1,267 @@
+{
+  "blueprint": {
+    "id": 475,
+    "title": "Spiral Journal (EU)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66cc87701c389bd4960c2582",
+      "https://images.printify.com/66cc877496560da7c503ef46",
+      "https://images.printify.com/5e7359a27ce8fb0bb12f23b6"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 30,
+        "title": "OPT OnDemand"
+      },
+      "variants": {
+        "id": 30,
+        "title": "OPT OnDemand",
+        "variants": [
+          {
+            "id": 65482,
+            "title": "Blank / One Size",
+            "options": {
+              "paper": "Blank",
+              "size": "One Size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 2409,
+                "width": 1512
+              }
+            ]
+          },
+          {
+            "id": 65483,
+            "title": "Dotgrid / One Size",
+            "options": {
+              "paper": "Dotgrid",
+              "size": "One Size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 2409,
+                "width": 1512
+              }
+            ]
+          },
+          {
+            "id": 65484,
+            "title": "Lined / One Size",
+            "options": {
+              "paper": "Lined",
+              "size": "One Size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 2409,
+                "width": 1512
+              }
+            ]
+          },
+          {
+            "id": 65485,
+            "title": "Task / One Size",
+            "options": {
+              "paper": "Task",
+              "size": "One Size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 2409,
+                "width": 1512
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              65482,
+              65483,
+              65484,
+              65485
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1149
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 289
+            },
+            "countries": [
+              "CA",
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              65482,
+              65483,
+              65484,
+              65485
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 749
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 139
+            },
+            "countries": [
+              "IE",
+              "GB"
+            ]
+          },
+          {
+            "variant_ids": [
+              65482,
+              65483,
+              65484,
+              65485
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 549
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 139
+            },
+            "countries": [
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "FO",
+              "FR",
+              "GE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IM",
+              "IT",
+              "JE",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "TR",
+              "UA",
+              "XK"
+            ]
+          },
+          {
+            "variant_ids": [
+              65482,
+              65483,
+              65484,
+              65485
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 419
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 139
+            },
+            "countries": [
+              "DE"
+            ]
+          },
+          {
+            "variant_ids": [
+              65482,
+              65483,
+              65484,
+              65485
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 139
+            },
+            "countries": [
+              "CZ"
+            ]
+          },
+          {
+            "variant_ids": [
+              65482,
+              65483,
+              65484,
+              65485
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 839
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 229
+            },
+            "countries": [
+              "LV",
+              "FI",
+              "NO",
+              "IS",
+              "CH",
+              "SE",
+              "DK",
+              "EE",
+              "LT",
+              "LI"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

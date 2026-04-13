@@ -1,0 +1,231 @@
+{
+  "blueprint": {
+    "id": 1647,
+    "title": "Woven Tote",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/697a07b8e5b6a7928e087342",
+      "https://images.printify.com/697a0a1436d2aaace90a8213",
+      "https://images.printify.com/672a04ac4cd1e90397044232",
+      "https://images.printify.com/697a07c24040cb183906a042",
+      "https://images.printify.com/697a07a34168360b840f4532",
+      "https://images.printify.com/697a07a9944f5d2bbb0a6b52",
+      "https://images.printify.com/697a07ae38df60478a0a5bb2",
+      "https://images.printify.com/697a07b384d9d4c6270c2ba2",
+      "https://images.printify.com/672a04a803f8cafa0d036ae4",
+      "https://images.printify.com/672a04a403f8cafa0d036ae3"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 10,
+        "title": "MWW On Demand"
+      },
+      "variants": {
+        "id": 10,
+        "title": "MWW On Demand",
+        "variants": [
+          {
+            "id": 113895,
+            "title": "Artwork / 17\u0022 \u00D7 18\u0027\u0027",
+            "options": {
+              "finish": "Artwork",
+              "size": "17\u0022 \u00D7 18\u0027\u0027"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "weaving",
+                "height": 1824,
+                "width": 1728
+              }
+            ]
+          },
+          {
+            "id": 113896,
+            "title": "Photo / 17\u0022 \u00D7 18\u0027\u0027",
+            "options": {
+              "finish": "Photo",
+              "size": "17\u0022 \u00D7 18\u0027\u0027"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "weaving",
+                "height": 1824,
+                "width": 1728
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              113895,
+              113896
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1069
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              113895,
+              113896
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1069
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 359
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              113895,
+              113896
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 699
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 139
+            },
+            "countries": [
+              "EE",
+              "LI",
+              "LT",
+              "LV",
+              "IS",
+              "CH",
+              "FI",
+              "SE",
+              "NO",
+              "DK"
+            ]
+          },
+          {
+            "variant_ids": [
+              113895,
+              113896
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 589
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 149
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              113895,
+              113896
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 569
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 139
+            },
+            "countries": [
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "FO",
+              "FR",
+              "GE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "TR",
+              "UA",
+              "GB",
+              "XK",
+              "LU"
+            ]
+          },
+          {
+            "variant_ids": [
+              113895,
+              113896
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 569
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 99
+            },
+            "countries": [
+              "DE"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

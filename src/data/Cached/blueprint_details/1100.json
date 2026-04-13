@@ -1,0 +1,240 @@
+{
+  "blueprint": {
+    "id": 1100,
+    "title": "Gift Wrap Papers",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d596c97176468b98088092",
+      "https://images.printify.com/66d596c9f863229a4c0c5e46",
+      "https://images.printify.com/64118eaa25513a538f03f798",
+      "https://images.printify.com/690b0f49c4866d9262056ed2"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 215,
+        "title": "Stickers \u0026 Posters"
+      },
+      "variants": {
+        "id": 215,
+        "title": "Stickers \u0026 Posters",
+        "variants": [
+          {
+            "id": 147685,
+            "title": "29\u0027\u0027 x 20\u0022 / Matte",
+            "options": {
+              "size": "29\u0027\u0027 x 20\u0022",
+              "paper": "Matte"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 4205,
+                "width": 5874
+              }
+            ]
+          },
+          {
+            "id": 147686,
+            "title": "29\u0027\u0027 x 144\u0022 / Matte",
+            "options": {
+              "size": "29\u0027\u0027 x 144\u0022",
+              "paper": "Matte"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 28913,
+                "width": 5874
+              }
+            ]
+          },
+          {
+            "id": 147687,
+            "title": "29\u0027\u0027 x 72\u0022 / Matte",
+            "options": {
+              "size": "29\u0027\u0027 x 72\u0022",
+              "paper": "Matte"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 14614,
+                "width": 5874
+              }
+            ]
+          },
+          {
+            "id": 147688,
+            "title": "29\u0027\u0027 x 20\u0022 / Satin",
+            "options": {
+              "size": "29\u0027\u0027 x 20\u0022",
+              "paper": "Satin"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 4205,
+                "width": 5874
+              }
+            ]
+          },
+          {
+            "id": 147689,
+            "title": "29\u0027\u0027 x 144\u0022 / Satin",
+            "options": {
+              "size": "29\u0027\u0027 x 144\u0022",
+              "paper": "Satin"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 28913,
+                "width": 5874
+              }
+            ]
+          },
+          {
+            "id": 147690,
+            "title": "29\u0027\u0027 x 72\u0022 / Satin",
+            "options": {
+              "size": "29\u0027\u0027 x 72\u0022",
+              "paper": "Satin"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 14614,
+                "width": 5874
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              82082,
+              82083,
+              91970,
+              91971,
+              91972,
+              91973,
+              147685,
+              147686,
+              147687,
+              147688,
+              147689,
+              147690
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 849
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 139
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              82082,
+              82083,
+              91970,
+              91971,
+              91972,
+              91973,
+              147685,
+              147686,
+              147687,
+              147688,
+              147689,
+              147690
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1499
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              82082,
+              82083,
+              91970,
+              91971,
+              91972,
+              91973,
+              147685,
+              147686,
+              147687,
+              147688,
+              147689,
+              147690
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1349
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 149
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              82082,
+              82083,
+              91970,
+              91971,
+              91972,
+              91973,
+              147685,
+              147686,
+              147687,
+              147688,
+              147689,
+              147690
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1629
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 659
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

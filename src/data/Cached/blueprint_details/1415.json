@@ -1,0 +1,113 @@
+{
+  "blueprint": {
+    "id": 1415,
+    "title": "Colombia Single Origin Coffee (Light-Medium Roast)",
+    "brand": "Roastify",
+    "model": "",
+    "images": [
+      "https://images.printify.com/67b71d317464474b9e0f4b34",
+      "https://images.printify.com/67b71d30df7c1742a709745a",
+      "https://images.printify.com/67b71d61c2e0e58df20efea8",
+      "https://images.printify.com/67b71d4a1563b0c2810a0f6a",
+      "https://images.printify.com/67b71d571563b0c2810a0f6b",
+      "https://images.printify.com/67b71d59d2b35ac34b0bc9c5",
+      "https://images.printify.com/67b71d6048ba4d1aba04e664",
+      "https://images.printify.com/67b71d4c7464474b9e0f4b35",
+      "https://images.printify.com/67b71d55c2e0e58df20efea7",
+      "https://images.printify.com/67b71d5a1563b0c2810a0f6c",
+      "https://images.printify.com/67b71d56df7c1742a709745b",
+      "https://images.printify.com/67b71d5cdf7c1742a709745c",
+      "https://images.printify.com/67b71d5d7464474b9e0f4b36",
+      "https://images.printify.com/67b71d5f7464474b9e0f4b37",
+      "https://images.printify.com/66c354662b63c1d4430f7a64"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 291,
+        "title": "Roastify"
+      },
+      "variants": {
+        "id": 291,
+        "title": "Roastify",
+        "variants": [
+          {
+            "id": 104845,
+            "title": "Whole Bean / 12oz",
+            "options": {
+              "grind": "Whole Bean",
+              "size": "12oz"
+            },
+            "placeholders": [
+              {
+                "position": "coffee_front",
+                "decoration_method": "digital-printing",
+                "height": 4444,
+                "width": 3900
+              }
+            ]
+          },
+          {
+            "id": 104846,
+            "title": "Ground / 12oz",
+            "options": {
+              "grind": "Ground",
+              "size": "12oz"
+            },
+            "placeholders": [
+              {
+                "position": "coffee_front",
+                "decoration_method": "digital-printing",
+                "height": 4444,
+                "width": 3900
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              104845,
+              104846
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 759
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              104845,
+              104846
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2099
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 189
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

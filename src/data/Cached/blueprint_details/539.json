@@ -1,0 +1,222 @@
+{
+  "blueprint": {
+    "id": 539,
+    "title": "Vertical Desk Calendar (2025)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66def9bf5588dd405d04c7c2",
+      "https://images.printify.com/66def61d02abd309890a7ad2",
+      "https://images.printify.com/5fa574e14bfb540f8c5361c9"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 36,
+        "title": "Print Pigeons"
+      },
+      "variants": {
+        "id": 36,
+        "title": "Print Pigeons",
+        "variants": [
+          {
+            "id": 69380,
+            "title": "One size",
+            "options": {
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "january",
+                "decoration_method": "digital-printing",
+                "height": 992,
+                "width": 1181
+              },
+              {
+                "position": "february",
+                "decoration_method": "digital-printing",
+                "height": 992,
+                "width": 1181
+              },
+              {
+                "position": "march",
+                "decoration_method": "digital-printing",
+                "height": 992,
+                "width": 1181
+              },
+              {
+                "position": "april",
+                "decoration_method": "digital-printing",
+                "height": 992,
+                "width": 1181
+              },
+              {
+                "position": "may",
+                "decoration_method": "digital-printing",
+                "height": 992,
+                "width": 1181
+              },
+              {
+                "position": "june",
+                "decoration_method": "digital-printing",
+                "height": 992,
+                "width": 1181
+              },
+              {
+                "position": "july",
+                "decoration_method": "digital-printing",
+                "height": 992,
+                "width": 1181
+              },
+              {
+                "position": "august",
+                "decoration_method": "digital-printing",
+                "height": 992,
+                "width": 1181
+              },
+              {
+                "position": "september",
+                "decoration_method": "digital-printing",
+                "height": 992,
+                "width": 1181
+              },
+              {
+                "position": "october",
+                "decoration_method": "digital-printing",
+                "height": 992,
+                "width": 1181
+              },
+              {
+                "position": "november",
+                "decoration_method": "digital-printing",
+                "height": 992,
+                "width": 1181
+              },
+              {
+                "position": "december",
+                "decoration_method": "digital-printing",
+                "height": 992,
+                "width": 1181
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              69380
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1899
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1899
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              69380
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1199
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1199
+            },
+            "countries": [
+              "GB",
+              "DK",
+              "LT",
+              "LV",
+              "FI",
+              "EE",
+              "CH",
+              "IS",
+              "LI",
+              "SE",
+              "NO",
+              "NL",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "TR",
+              "UA",
+              "XK",
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "FO",
+              "FR",
+              "GE",
+              "DE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              69380
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2199
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1199
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

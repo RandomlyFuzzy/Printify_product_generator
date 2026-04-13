@@ -1,0 +1,498 @@
+{
+  "blueprint": {
+    "id": 697,
+    "title": "Wooden Ornaments",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d70a43650830a5b305c266",
+      "https://images.printify.com/66d70a41a49032925e059532",
+      "https://images.printify.com/67ee2d713577acad400e5f82",
+      "https://images.printify.com/64c26de87b5f101ff502c593",
+      "https://images.printify.com/64c26de878193096df013aa3",
+      "https://images.printify.com/64c26de97b5f101ff502c597"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 23,
+        "title": "WOYC"
+      },
+      "variants": {
+        "id": 23,
+        "title": "WOYC",
+        "variants": [
+          {
+            "id": 72960,
+            "title": "Christmas Stocking / One Size",
+            "options": {
+              "shape": "Christmas Stocking",
+              "size": "One Size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1874,
+                "width": 1158
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 1874,
+                "width": 1158
+              }
+            ]
+          },
+          {
+            "id": 72961,
+            "title": "Heart / One Size",
+            "options": {
+              "shape": "Heart",
+              "size": "One Size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1430,
+                "width": 1098
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 1430,
+                "width": 1098
+              }
+            ]
+          },
+          {
+            "id": 72962,
+            "title": "Oval / One Size",
+            "options": {
+              "shape": "Oval",
+              "size": "One Size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1545,
+                "width": 1085
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 1545,
+                "width": 1085
+              }
+            ]
+          },
+          {
+            "id": 72963,
+            "title": "Tree / One Size",
+            "options": {
+              "shape": "Tree",
+              "size": "One Size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1606,
+                "width": 1149
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 1606,
+                "width": 1149
+              }
+            ]
+          },
+          {
+            "id": 72964,
+            "title": "Bell / One Size",
+            "options": {
+              "shape": "Bell",
+              "size": "One Size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1299,
+                "width": 1097
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 1299,
+                "width": 1097
+              }
+            ]
+          },
+          {
+            "id": 72965,
+            "title": "Star / One Size",
+            "options": {
+              "shape": "Star",
+              "size": "One Size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1214,
+                "width": 1097
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 1214,
+                "width": 1097
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              72960,
+              72961,
+              72962,
+              72963,
+              72964,
+              72965
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 459
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 49
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              72960,
+              72961,
+              72962,
+              72963,
+              72964,
+              72965
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 549
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "DE"
+            ]
+          },
+          {
+            "variant_ids": [
+              72960,
+              72961,
+              72962,
+              72963,
+              72964,
+              72965
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 599
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 149
+            },
+            "countries": [
+              "NL",
+              "ES",
+              "BY",
+              "IE",
+              "RS",
+              "UA",
+              "IT",
+              "NO",
+              "MT",
+              "ME",
+              "TR",
+              "CZ",
+              "AT",
+              "BE",
+              "GR",
+              "BV",
+              "BG",
+              "AL",
+              "AD",
+              "EE",
+              "GP",
+              "IM",
+              "MC",
+              "AX",
+              "HU",
+              "CY",
+              "GE",
+              "DK",
+              "GI",
+              "LV",
+              "MD",
+              "RE",
+              "SM",
+              "SE",
+              "CH",
+              "BA",
+              "JE",
+              "VA",
+              "LU",
+              "PL",
+              "FR",
+              "GL",
+              "LI",
+              "LT",
+              "XK",
+              "MK",
+              "PT",
+              "FO",
+              "RO",
+              "GG",
+              "SI",
+              "IS",
+              "AM",
+              "HR",
+              "FI",
+              "SK"
+            ]
+          },
+          {
+            "variant_ids": [
+              72960,
+              72961,
+              72962,
+              72963,
+              72964,
+              72965
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 569
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 69
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              72960,
+              72961,
+              72962,
+              72963,
+              72964,
+              72965
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 949
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "MN",
+              "RU",
+              "AZ",
+              "PK",
+              "BN",
+              "IL",
+              "QA",
+              "AE",
+              "BH",
+              "CN",
+              "NP",
+              "SA",
+              "KW",
+              "SY",
+              "AF",
+              "KZ",
+              "ID",
+              "MV",
+              "MM",
+              "TW",
+              "BD",
+              "BT",
+              "HK",
+              "LK",
+              "LB",
+              "IN",
+              "IR",
+              "IQ",
+              "KR",
+              "PH",
+              "KH",
+              "TH",
+              "YE",
+              "JO",
+              "TJ",
+              "VN",
+              "CC",
+              "KG",
+              "MO",
+              "UZ",
+              "IO",
+              "CX",
+              "SG",
+              "TM",
+              "JP",
+              "LA",
+              "MY",
+              "OM",
+              "PS"
+            ]
+          },
+          {
+            "variant_ids": [
+              72960,
+              72961,
+              72962,
+              72963,
+              72964,
+              72965
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1429
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "BO",
+              "VE",
+              "CL",
+              "UY",
+              "CO",
+              "GF",
+              "EC",
+              "AN",
+              "AR",
+              "BR",
+              "SR",
+              "PY",
+              "FK",
+              "PE",
+              "REST_OF_THE_WORLD",
+              "GY"
+            ]
+          },
+          {
+            "variant_ids": [
+              72960,
+              72961,
+              72962,
+              72963,
+              72964,
+              72965
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 299
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 99
+            },
+            "countries": [
+              "GB"
+            ]
+          },
+          {
+            "variant_ids": [
+              72960,
+              72961,
+              72962,
+              72963,
+              72964,
+              72965
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 929
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 349
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              72960,
+              72961,
+              72962,
+              72963,
+              72964,
+              72965
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1399
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "NZ"
+            ]
+          },
+          {
+            "variant_ids": [
+              72960,
+              72961,
+              72962,
+              72963,
+              72964,
+              72965
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

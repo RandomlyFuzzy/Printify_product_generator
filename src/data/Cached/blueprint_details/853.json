@@ -1,0 +1,179 @@
+{
+  "blueprint": {
+    "id": 853,
+    "title": "Bean Bag Chair Cover",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66b35d2fa4868e21a50ceb72",
+      "https://images.printify.com/66b35d0ae8759da96b0d73c2",
+      "https://images.printify.com/61f0fd291bda4d4b8700f6b6",
+      "https://images.printify.com/67331f7e038b813638037313",
+      "https://images.printify.com/61f0fd2a6cbce33e931e1dfb",
+      "https://images.printify.com/61f0fd2a98f8695dd21f201b",
+      "https://images.printify.com/61f0fd2ccff79748a777b4aa"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 10,
+        "title": "MWW On Demand"
+      },
+      "variants": {
+        "id": 10,
+        "title": "MWW On Demand",
+        "variants": [
+          {
+            "id": 78176,
+            "title": "27\u0022 \u00D7 30\u0022 \u00D7 25\u0022 / Without insert",
+            "options": {
+              "size": "27\u0022 \u00D7 30\u0022 \u00D7 25\u0022",
+              "material": "Without insert"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 4128,
+                "width": 4128
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 4128,
+                "width": 4128
+              }
+            ]
+          },
+          {
+            "id": 78177,
+            "title": "38\u0022 \u00D7 42\u0022 \u00D7 29\u0022 / Without insert",
+            "options": {
+              "size": "38\u0022 \u00D7 42\u0022 \u00D7 29\u0022",
+              "material": "Without insert"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 5760,
+                "width": 5760
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 5760,
+                "width": 5760
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              78177
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2599
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2599
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              78177
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1829
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 729
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              78177
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1259
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 389
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              78176
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1259
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 469
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              78176
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1409
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 729
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              78176
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1439
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 749
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

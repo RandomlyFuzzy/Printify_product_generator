@@ -91,7 +91,7 @@ public class PrintifyClient
 
     public async Task<List<Product>> GetAllProductsAsync(int shopId)
     {
-        return await GetAllPagesAsync<Product>($"/shops/{shopId}/products.json?limit=50");
+        return await GetAllPagesAsync<Product>($"/shops/{shopId}/products.json");
     }
 
     public async Task<Product> GetProductAsync(int shopId, string productId)
@@ -191,7 +191,7 @@ public class PrintifyClient
 
     public async Task<List<UploadedImage>> GetAllUploadsAsync()
     {
-        return await GetAllPagesAsync<UploadedImage>("/uploads.json?limit=100");
+        return await GetAllPagesAsync<UploadedImage>("/uploads.json?limit=50");
     }
 
     public async Task<UploadedImage> GetUploadAsync(string imageId)
@@ -306,19 +306,26 @@ public class PrintifyClient
     {
         var all = new List<T>();
         string? url = $"{BaseUrl}{firstPagePath}";
+        int pagenum = 1;
+        int limit = 50;
+        List<T>? pageData = new List<T>();
 
-        while (url != null)
+        do
         {
-            var response = await _http.GetAsync(url);
+            string pageurl = url + (url.Contains("?") ? $"&page={pagenum}&limit={limit}" : $"?page={pagenum}&limit={limit}");
+            var response = await _http.GetAsync(pageurl);
             await EnsureSuccessAsync(response);
             var json = await response.Content.ReadAsStringAsync();
             var page = JsonSerializer.Deserialize<PaginatedResponse<T>>(json, JsonOpts)!;
-            all.AddRange(page.Data);
+            pageData = page.Data;
+            all.AddRange(pageData);
+            pagenum++;
 
             url = page.NextPageUrl;
             if (url != null && !url.StartsWith("http"))
                 url = $"{BaseUrl}{url}";
         }
+        while (url != null&&pageData.Count != limit);
 
         return all;
     }

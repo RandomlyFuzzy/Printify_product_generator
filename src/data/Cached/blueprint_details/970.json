@@ -1,0 +1,157 @@
+{
+  "blueprint": {
+    "id": 970,
+    "title": "Midweight Neck Gaiter",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d8953795f27e8a8d0d430c",
+      "https://images.printify.com/66d8953a1dc58c2df20eb0fd",
+      "https://images.printify.com/627e239f77ffee4e0e0811a1",
+      "https://images.printify.com/627e23a8054c41cdf00e50c9",
+      "https://images.printify.com/627e23c474d17c39150fd986",
+      "https://images.printify.com/627e23e0dfad2dcb960d71e9",
+      "https://images.printify.com/627e2345054c41cdf00e50c6",
+      "https://images.printify.com/6232ce73d4a1ca71de717d3d"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 107,
+        "title": "Deco Slides"
+      },
+      "variants": {
+        "id": 107,
+        "title": "Deco Slides",
+        "variants": [
+          {
+            "id": 78496,
+            "title": "L",
+            "options": {
+              "size": "L"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 5300,
+                "width": 2900
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 5300,
+                "width": 2900
+              }
+            ]
+          },
+          {
+            "id": 78497,
+            "title": "M",
+            "options": {
+              "size": "M"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 5300,
+                "width": 2900
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 5300,
+                "width": 2900
+              }
+            ]
+          },
+          {
+            "id": 78498,
+            "title": "S",
+            "options": {
+              "size": "S"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 5300,
+                "width": 2900
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 5300,
+                "width": 2900
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              78496,
+              78497,
+              78498
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 479
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 99
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              78496,
+              78497,
+              78498
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 959
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 139
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              78496,
+              78497,
+              78498
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 949
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 370
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

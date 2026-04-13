@@ -1,0 +1,141 @@
+{
+  "blueprint": {
+    "id": 1433,
+    "title": "Sublimation Crew Socks",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66c47629c088f4b5e7051023",
+      "https://images.printify.com/66c47626c8a10a4c4e02b6c2",
+      "https://images.printify.com/6604f68c6e224a4044084454",
+      "https://images.printify.com/660bf87325856515600e66c4",
+      "https://images.printify.com/69ba642693a21055ce0d9883",
+      "https://images.printify.com/6604f82d8d16f8de9c0d8185",
+      "https://images.printify.com/6604f8326e224a4044084455",
+      "https://images.printify.com/6604f8436e224a4044084456",
+      "https://images.printify.com/6604f84f6e224a4044084457",
+      "https://images.printify.com/660cfcc4627eb150560401e3",
+      "https://images.printify.com/6604f9df8d16f8de9c0d8186"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 92,
+        "title": "Pic the Gift"
+      },
+      "variants": {
+        "id": 92,
+        "title": "Pic the Gift",
+        "variants": [
+          {
+            "id": 104469,
+            "title": "One Size",
+            "options": {
+              "size": "One Size"
+            },
+            "placeholders": [
+              {
+                "position": "front_left_leg",
+                "decoration_method": "dye-sublimation",
+                "height": 2851,
+                "width": 670
+              },
+              {
+                "position": "back_left_leg",
+                "decoration_method": "dye-sublimation",
+                "height": 2851,
+                "width": 670
+              },
+              {
+                "position": "front_right_leg",
+                "decoration_method": "dye-sublimation",
+                "height": 2851,
+                "width": 670
+              },
+              {
+                "position": "back_right_leg",
+                "decoration_method": "dye-sublimation",
+                "height": 2851,
+                "width": 670
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              104469
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 509
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 75
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              104469
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1199
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              104469
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1099
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "GB",
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              104469
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 979
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

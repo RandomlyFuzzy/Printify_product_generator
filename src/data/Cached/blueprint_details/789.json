@@ -1,0 +1,194 @@
+{
+  "blueprint": {
+    "id": 789,
+    "title": "Square Magnet",
+    "brand": "Magnum Magnetics",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66cd85a1aa58e50681043613",
+      "https://images.printify.com/66cd859fa6c5abe87202d922",
+      "https://images.printify.com/6735d7d0d81163b9240eeda2"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 41,
+        "title": "Duplium"
+      },
+      "variants": {
+        "id": 41,
+        "title": "Duplium",
+        "variants": [
+          {
+            "id": 75042,
+            "title": "3\u0022 x 3\u0022 / Square / 1 pc",
+            "options": {
+              "size": "3\u0022 x 3\u0022",
+              "shape": "Square",
+              "quantity": "1 pc"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 938,
+                "width": 938
+              }
+            ]
+          },
+          {
+            "id": 75043,
+            "title": "5\u0022 x 5\u0022 / Square / 1 pc",
+            "options": {
+              "size": "5\u0022 x 5\u0022",
+              "shape": "Square",
+              "quantity": "1 pc"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1538,
+                "width": 1538
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              75042,
+              75043
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 829
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 129
+            },
+            "countries": [
+              "CY",
+              "BA",
+              "GP",
+              "FR",
+              "AL",
+              "HR",
+              "MD",
+              "PT",
+              "BG",
+              "BV",
+              "GE",
+              "NO",
+              "SE",
+              "ME",
+              "IM",
+              "RO",
+              "DK",
+              "AX",
+              "GR",
+              "IS",
+              "LV",
+              "LU",
+              "GB",
+              "AT",
+              "FI",
+              "IE",
+              "VA",
+              "BE",
+              "EE",
+              "GG",
+              "GL",
+              "AD",
+              "AM",
+              "SM",
+              "GI",
+              "FO",
+              "MT",
+              "HU",
+              "LI",
+              "ES",
+              "LT",
+              "NL",
+              "CH",
+              "CZ",
+              "JE",
+              "PL",
+              "SK",
+              "SI",
+              "RS",
+              "TR",
+              "UA",
+              "XK",
+              "BY",
+              "DE",
+              "IT",
+              "MK",
+              "MC",
+              "RE"
+            ]
+          },
+          {
+            "variant_ids": [
+              75042,
+              75043
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 829
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              75042,
+              75043
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1289
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              75042,
+              75043
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

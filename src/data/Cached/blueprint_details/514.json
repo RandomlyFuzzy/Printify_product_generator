@@ -1,0 +1,226 @@
+{
+  "blueprint": {
+    "id": 514,
+    "title": "Hardcover Journal (A5)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66dad4fd111e7693eb083ff5",
+      "https://images.printify.com/66d5c929de3247673e010575",
+      "https://images.printify.com/61ae243d96953c159b6836a7",
+      "https://images.printify.com/61bc61d1efc8de6de92cf112",
+      "https://images.printify.com/6735dc0f54457100dd01e9a2"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 55,
+        "title": "Druk\u0101tava"
+      },
+      "variants": {
+        "id": 55,
+        "title": "Druk\u0101tava",
+        "variants": [
+          {
+            "id": 76905,
+            "title": "A5 / Blank",
+            "options": {
+              "size": "A5",
+              "paper": "Blank"
+            },
+            "placeholders": [
+              {
+                "position": "front_cover",
+                "decoration_method": "digital-printing",
+                "height": 5906,
+                "width": 8268
+              }
+            ]
+          },
+          {
+            "id": 76906,
+            "title": "A5 / Ruled line",
+            "options": {
+              "size": "A5",
+              "paper": "Ruled line"
+            },
+            "placeholders": [
+              {
+                "position": "front_cover",
+                "decoration_method": "digital-printing",
+                "height": 5906,
+                "width": 8268
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              76905,
+              76906
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1969
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 99
+            },
+            "countries": [
+              "EE",
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "DK",
+              "FO",
+              "FI",
+              "FR",
+              "GE",
+              "DE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IS",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "SE",
+              "TR",
+              "UA",
+              "XK",
+              "LV",
+              "LT"
+            ]
+          },
+          {
+            "variant_ids": [
+              76905,
+              76906
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2619
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 99
+            },
+            "countries": [
+              "NO",
+              "CH",
+              "LI"
+            ]
+          },
+          {
+            "variant_ids": [
+              76905,
+              76906
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1959
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 99
+            },
+            "countries": [
+              "GB"
+            ]
+          },
+          {
+            "variant_ids": [
+              76905,
+              76906
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 3139
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              76905,
+              76906
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 3399
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              76905,
+              76906
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 4649
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

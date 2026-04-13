@@ -1,0 +1,100 @@
+{
+  "blueprint": {
+    "id": 1042,
+    "title": "Polyester Lunch Bag",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d5ab6ed1a8f93c4f002212",
+      "https://images.printify.com/66d5ab6ff2b5b3b7b4078388",
+      "https://images.printify.com/626795f1f1805f6b2a0f7cf0",
+      "https://images.printify.com/626795f5f1805f6b2a0f7cf4",
+      "https://images.printify.com/6731f5372d68d477440f6722"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 10,
+        "title": "MWW On Demand"
+      },
+      "variants": {
+        "id": 10,
+        "title": "MWW On Demand",
+        "variants": [
+          {
+            "id": 80176,
+            "title": "11.75\u0027\u0027 \u00D7 7.25\u0027\u0027 \u00D7 4.75\u0027\u0027",
+            "options": {
+              "size": "11.75\u0027\u0027 \u00D7 7.25\u0027\u0027 \u00D7 4.75\u0027\u0027"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 4988,
+                "width": 2400
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              80176
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 649
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 299
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              80176
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1089
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 359
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              80176
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1199
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 379
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

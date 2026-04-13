@@ -1,0 +1,152 @@
+{
+  "blueprint": {
+    "id": 428,
+    "title": "Magnets",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66cc5ea5bb8995f16f04c7a2",
+      "https://images.printify.com/66cc5ea88133e5176a0fe973",
+      "https://images.printify.com/6733600ec301d024c70962c4"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 1,
+        "title": "SPOKE Custom Products"
+      },
+      "variants": {
+        "id": 1,
+        "title": "SPOKE Custom Products",
+        "variants": [
+          {
+            "id": 62034,
+            "title": "3\u0022 \u00D7 3\u0022",
+            "options": {
+              "size": "3\u0022 \u00D7 3\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 832,
+                "width": 832
+              }
+            ]
+          },
+          {
+            "id": 62035,
+            "title": "4\u0022 \u00D7 4\u0022",
+            "options": {
+              "size": "4\u0022 \u00D7 4\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1113,
+                "width": 1113
+              }
+            ]
+          },
+          {
+            "id": 62036,
+            "title": "6\u0022 \u00D7 6\u0022",
+            "options": {
+              "size": "6\u0022 \u00D7 6\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1664,
+                "width": 1664
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              62034,
+              62035,
+              62036
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 429
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 49
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              62034,
+              62035,
+              62036
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 789
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 49
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              62034,
+              62035,
+              62036
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1099
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 99
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              62034,
+              62035,
+              62036
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 459
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 69
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

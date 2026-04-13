@@ -1,0 +1,252 @@
+{
+  "blueprint": {
+    "id": 256,
+    "title": "Women\u0027s Cut \u0026 Sew Casual Leggings (AOP)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d6fa6e05663339ab0f42f2",
+      "https://images.printify.com/66d6f9825f51b60b060df392",
+      "https://images.printify.com/5d01ee609a8172000a15587d",
+      "https://images.printify.com/5d01ee629a8172000b425f3f"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 10,
+        "title": "MWW On Demand"
+      },
+      "variants": {
+        "id": 10,
+        "title": "MWW On Demand",
+        "variants": [
+          {
+            "id": 45661,
+            "title": "XS / White stitching",
+            "options": {
+              "size": "XS",
+              "color": "White stitching"
+            },
+            "placeholders": [
+              {
+                "position": "left_side",
+                "decoration_method": "aop",
+                "height": 12103,
+                "width": 7616
+              },
+              {
+                "position": "right_side",
+                "decoration_method": "aop",
+                "height": 12103,
+                "width": 7616
+              }
+            ]
+          },
+          {
+            "id": 45663,
+            "title": "S / White stitching",
+            "options": {
+              "size": "S",
+              "color": "White stitching"
+            },
+            "placeholders": [
+              {
+                "position": "left_side",
+                "decoration_method": "aop",
+                "height": 12216,
+                "width": 7687
+              },
+              {
+                "position": "right_side",
+                "decoration_method": "aop",
+                "height": 12216,
+                "width": 7687
+              }
+            ]
+          },
+          {
+            "id": 45665,
+            "title": "M / White stitching",
+            "options": {
+              "size": "M",
+              "color": "White stitching"
+            },
+            "placeholders": [
+              {
+                "position": "left_side",
+                "decoration_method": "aop",
+                "height": 12328,
+                "width": 7758
+              },
+              {
+                "position": "right_side",
+                "decoration_method": "aop",
+                "height": 12328,
+                "width": 7758
+              }
+            ]
+          },
+          {
+            "id": 45667,
+            "title": "L / White stitching",
+            "options": {
+              "size": "L",
+              "color": "White stitching"
+            },
+            "placeholders": [
+              {
+                "position": "left_side",
+                "decoration_method": "aop",
+                "height": 12441,
+                "width": 7829
+              },
+              {
+                "position": "right_side",
+                "decoration_method": "aop",
+                "height": 12441,
+                "width": 7829
+              }
+            ]
+          },
+          {
+            "id": 45669,
+            "title": "XL / White stitching",
+            "options": {
+              "size": "XL",
+              "color": "White stitching"
+            },
+            "placeholders": [
+              {
+                "position": "left_side",
+                "decoration_method": "aop",
+                "height": 12560,
+                "width": 7904
+              },
+              {
+                "position": "right_side",
+                "decoration_method": "aop",
+                "height": 12560,
+                "width": 7904
+              }
+            ]
+          },
+          {
+            "id": 45671,
+            "title": "2XL / White stitching",
+            "options": {
+              "size": "2XL",
+              "color": "White stitching"
+            },
+            "placeholders": [
+              {
+                "position": "left_side",
+                "decoration_method": "aop",
+                "height": 12666,
+                "width": 7970
+              },
+              {
+                "position": "right_side",
+                "decoration_method": "aop",
+                "height": 12666,
+                "width": 7970
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              45661,
+              45663,
+              45665,
+              45667,
+              45669,
+              45671
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 569
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 259
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              45661,
+              45663,
+              45665,
+              45667,
+              45669,
+              45671
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 939
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 379
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              45661,
+              45663,
+              45665,
+              45667,
+              45669,
+              45671
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 919
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 359
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              45661,
+              45663,
+              45665,
+              45667,
+              45669,
+              45671
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 649
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 299
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

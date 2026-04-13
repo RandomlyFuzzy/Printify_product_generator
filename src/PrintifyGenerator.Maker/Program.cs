@@ -59,6 +59,7 @@ if (File.Exists("./main.env"))
 // return;
 OllamaClient ollama = new OllamaClient("http://localhost:11434");
 // OllamaClient ollamaExternal = new OllamaClient("http://192.168.0.151:11434");
+OllamaClient ollamaExternal = new OllamaClient("http://192.168.0.131:11434");
 
 WebSocketEventEmitter emitter = new WebSocketEventEmitter();
 ComfyUiClient comfyUi = new ComfyUiClient("http://192.168.0.151:8188",emitter);
@@ -67,7 +68,7 @@ await comfyUi.StartListener();
 
 while(!Console.KeyAvailable)
 {
-    string status = await ollama.CheckStatusAsync();
+    string status = await ollamaExternal.CheckStatusAsync();
     Console.WriteLine($"Ollama Status: {status}");
     if(status == string.Empty)
     {
@@ -78,6 +79,8 @@ while(!Console.KeyAvailable)
 
     const string initalPrompt = @"You are a prompt engineer for AI image generation. Output ONLY a valid JSON array with no markdown, no explanation, no code fences, and no extra text — just raw JSON.
     Generate 2 creative Stable Diffusion prompts for print-on-demand products (t-shirts, posters, mugs). Each should be visually striking, commercially appealing, and varied in style (e.g. illustration, watercolor, retro, minimalist, photorealistic).
+    You should try and make it appealing to a wide audience and not too niche. Avoid text in the image, as it can be hard to read on products. Each prompt should have a positive part describing the main subject and style, and a negative part specifying what to avoid.
+    Due to what this is going to be used for you can you make it either landscape portrait or square to give a wide range of products the prompt can be put onto.
     Use this exact format:
     [
     {
@@ -97,7 +100,7 @@ while(!Console.KeyAvailable)
 
     var toProcess = GetPendingSuitabilityImages().ToList();
 
-    await foreach(var suitabilities in GenerateImageSuitability(ollama, toProcess,SutabilityPrompt))
+    await foreach(var suitabilities in GenerateImageSuitability(ollamaExternal, toProcess,SutabilityPrompt))
     {
         string newPath = WriteSuitabilityRecord(suitabilities);
         Console.WriteLine(newPath);
@@ -115,7 +118,7 @@ while(!Console.KeyAvailable)
         images.Add(image);
         if (images.Count > 4)
         {
-            await foreach(var suitabilities in GenerateImageSuitability(ollama, images,SutabilityPrompt))
+            await foreach(var suitabilities in GenerateImageSuitability(ollamaExternal, images,SutabilityPrompt))
             {
                 Console.WriteLine(suitabilities.PrityJsonString());
                 WriteSuitabilityRecord(suitabilities);
@@ -125,16 +128,6 @@ while(!Console.KeyAvailable)
         }
     }
 
-    if (images.Count > 0)
-    {
-        await foreach (var suitabilities in GenerateImageSuitability(ollama, images, SutabilityPrompt))
-        {
-            Console.WriteLine(suitabilities.PrityJsonString());
-            WriteSuitabilityRecord(suitabilities);
-            Console.WriteLine("Generated suitability for " + suitabilities.imageURL);
-        }
-        images.Clear();
-    }
 }
 
 async IAsyncEnumerable<ImageSuitability> GenerateImageSuitability(OllamaClient ol,List<string> images,string SutabilityPrompt)
@@ -184,7 +177,7 @@ async IAsyncEnumerable<Prompt> GeneratePrompt(string initalPrompt,CancellationTo
         {
             await foreach (var response in ollama.GenerateStreamAsync("llama3.2:1b", initalPrompt))
             {
-                // Console.Write(response);
+                Console.Write(response);
                 returnedPrompt += response;
             }
             //json parse the returned prompt

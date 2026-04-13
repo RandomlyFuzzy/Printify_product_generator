@@ -1,0 +1,164 @@
+{
+  "blueprint": {
+    "id": 1746,
+    "title": "Rug",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/69d6281507fd086b100ce050",
+      "https://images.printify.com/69d62817790728ba75088193",
+      "https://images.printify.com/69d63bca7c24602b80097da2",
+      "https://images.printify.com/69d6281d2d208bfacc0a1c23"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 259,
+        "title": "merchOne"
+      },
+      "variants": {
+        "id": 259,
+        "title": "merchOne",
+        "variants": [
+          {
+            "id": 118759,
+            "title": "20\u0027\u0027 \u00D7 28\u0027\u0027 / Rectangular",
+            "options": {
+              "size": "20\u0027\u0027 \u00D7 28\u0027\u0027",
+              "shape": "Rectangular"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 3307,
+                "width": 4488
+              }
+            ]
+          },
+          {
+            "id": 118760,
+            "title": "35\u0027\u0027 \u00D7 55\u0027\u0027 / Rectangular",
+            "options": {
+              "size": "35\u0027\u0027 \u00D7 55\u0027\u0027",
+              "shape": "Rectangular"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 5669,
+                "width": 8622
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              118759
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1309
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 659
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              118759
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1959
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 979
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              118759
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 7359
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 4419
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              118760
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2319
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 659
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              118760
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2499
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 979
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              118760
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 9319
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 5599
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

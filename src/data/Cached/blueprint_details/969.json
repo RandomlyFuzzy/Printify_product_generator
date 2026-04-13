@@ -1,0 +1,219 @@
+{
+  "blueprint": {
+    "id": 969,
+    "title": "LED Gaming Mouse Pad",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d1bbb668d01e40720ffd05",
+      "https://images.printify.com/66d1bbb5795f4d42d40e31e9",
+      "https://images.printify.com/623872841cbfa337bf3067c3",
+      "https://images.printify.com/623872889bbab07e437eb4b3",
+      "https://images.printify.com/621fc15ee8b94d6d6372404a",
+      "https://images.printify.com/621fc163d7b7d84017283420",
+      "https://images.printify.com/621fc16891029142f534a2a5"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 90,
+        "title": "Smart Printee"
+      },
+      "variants": {
+        "id": 90,
+        "title": "Smart Printee",
+        "variants": [
+          {
+            "id": 78488,
+            "title": "23.6\u0022 x 11.8\u0022 / Rectangle",
+            "options": {
+              "size": "23.6\u0022 x 11.8\u0022",
+              "shape": "Rectangle"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 3661,
+                "width": 7205
+              }
+            ]
+          },
+          {
+            "id": 78489,
+            "title": "27.6\u0022 x 13.8\u0022 / Rectangle",
+            "options": {
+              "size": "27.6\u0022 x 13.8\u0022",
+              "shape": "Rectangle"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 4252,
+                "width": 8386
+              }
+            ]
+          },
+          {
+            "id": 78490,
+            "title": "31.5\u0022 \u00D7 11.8\u0022 / Rectangle",
+            "options": {
+              "size": "31.5\u0022 \u00D7 11.8\u0022",
+              "shape": "Rectangle"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 3661,
+                "width": 9567
+              }
+            ]
+          },
+          {
+            "id": 78491,
+            "title": "35.4\u0022 \u00D7 15.7\u0022 / Rectangle",
+            "options": {
+              "size": "35.4\u0022 \u00D7 15.7\u0022",
+              "shape": "Rectangle"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 4843,
+                "width": 10748
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              78488,
+              78489,
+              78490,
+              78491
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1539
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1409
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              78488,
+              78489,
+              78490,
+              78491
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1359
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1359
+            },
+            "countries": [
+              "GB",
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "DK",
+              "EE",
+              "FO",
+              "FI",
+              "FR",
+              "GE",
+              "DE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IS",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "LV",
+              "LI",
+              "LT",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "NO",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "SE",
+              "CH",
+              "TR",
+              "UA",
+              "XK"
+            ]
+          },
+          {
+            "variant_ids": [
+              78488,
+              78489,
+              78490,
+              78491
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1729
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1729
+            },
+            "countries": [
+              "REST_OF_THE_WORLD",
+              "AU",
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

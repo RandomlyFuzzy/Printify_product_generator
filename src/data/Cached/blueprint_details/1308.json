@@ -1,0 +1,101 @@
+{
+  "blueprint": {
+    "id": 1308,
+    "title": "Luggage Tag",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66cdafe7ec8306a71c081154",
+      "https://images.printify.com/66cdafe89b1240cd7b060cd2",
+      "https://images.printify.com/641b116e28ada029d6005ca1",
+      "https://images.printify.com/6418380cb52d97abac0658b7",
+      "https://images.printify.com/641b11630895c08c3c0d2f03",
+      "https://images.printify.com/64183817b52d97abac0658ba"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 104,
+        "title": "Acrylic Idea Factory"
+      },
+      "variants": {
+        "id": 104,
+        "title": "Acrylic Idea Factory",
+        "variants": [
+          {
+            "id": 99003,
+            "title": "2.4\u0027\u0027 \u00D7 4\u0027\u0027",
+            "options": {
+              "size": "2.4\u0027\u0027 \u00D7 4\u0027\u0027"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1237,
+                "width": 750
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              99003
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 599
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 99
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              99003
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1359
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 629
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              99003
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1359
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 699
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

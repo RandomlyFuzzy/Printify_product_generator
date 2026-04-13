@@ -1,0 +1,152 @@
+{
+  "blueprint": {
+    "id": 1664,
+    "title": "Wood Panel Painting (Rectangular)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/67236a73f4d6d65854070f14",
+      "https://images.printify.com/672a043099b7dfe8860f23c6",
+      "https://images.printify.com/67236a69f4d6d65854070f13",
+      "https://images.printify.com/672b210e8c399c1c07057ea2",
+      "https://images.printify.com/67236a64bab9af1698024c64",
+      "https://images.printify.com/67236a68d02250067f07d1e5"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 332,
+        "title": "Printdoors"
+      },
+      "variants": {
+        "id": 332,
+        "title": "Printdoors",
+        "variants": [
+          {
+            "id": 114857,
+            "title": "4\u0027\u0027 \u00D7 7.9\u0027\u0027 / Rectangular",
+            "options": {
+              "size": "4\u0027\u0027 \u00D7 7.9\u0027\u0027",
+              "shape": "Rectangular"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 865,
+                "width": 1656
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              114857
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1059
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 359
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              114857
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1099
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 939
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              114857
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 629
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "FR",
+              "GB",
+              "DE"
+            ]
+          },
+          {
+            "variant_ids": [
+              114857
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1079
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 949
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              114857
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 779
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 529
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              114857
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 379
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "CN"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

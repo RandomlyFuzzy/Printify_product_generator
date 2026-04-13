@@ -1,0 +1,156 @@
+{
+  "blueprint": {
+    "id": 2660,
+    "title": "Mini Circle Necklace (Engraving)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/68da621c147d2660d90e5b02",
+      "https://images.printify.com/68e63b311fbeb865ab04ec42",
+      "https://images.printify.com/68e63b331efb5418d5051532",
+      "https://images.printify.com/68e63b34e4236eee2308d0b2"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 217,
+        "title": "Fulfill Engine"
+      },
+      "variants": {
+        "id": 217,
+        "title": "Fulfill Engine",
+        "variants": [
+          {
+            "id": 147737,
+            "title": "One Size / 18K Gold PVD coating",
+            "options": {
+              "size": "One Size",
+              "color": "18K Gold PVD coating"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "laser-engraving",
+                "height": 420,
+                "width": 420
+              }
+            ]
+          },
+          {
+            "id": 147738,
+            "title": "One Size / 18K Rose Gold PVD coating",
+            "options": {
+              "size": "One Size",
+              "color": "18K Rose Gold PVD coating"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "laser-engraving",
+                "height": 420,
+                "width": 420
+              }
+            ]
+          },
+          {
+            "id": 147739,
+            "title": "One Size / Stainless Steel (No coating)",
+            "options": {
+              "size": "One Size",
+              "color": "Stainless Steel (No coating)"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "laser-engraving",
+                "height": 420,
+                "width": 420
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              147737,
+              147738,
+              147739
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 449
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 209
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              147737,
+              147738,
+              147739
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 569
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              147737,
+              147738,
+              147739
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              147737,
+              147738,
+              147739
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 939
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

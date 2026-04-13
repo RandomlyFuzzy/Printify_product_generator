@@ -1,0 +1,142 @@
+{
+  "blueprint": {
+    "id": 727,
+    "title": "Scented Candle - Full Glass, 11oz",
+    "brand": "Seventh Avenue Apothecary",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d6cca8861f5c50ce02dc32",
+      "https://images.printify.com/66d6cca60329b39239066132",
+      "https://images.printify.com/615f0ae7569d74716b0cd62e",
+      "https://images.printify.com/6165196e469ca972e3439a06",
+      "https://images.printify.com/69d4df834ab653917903b1e0",
+      "https://images.printify.com/61605138569d74716b0ce04e"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 75,
+        "title": "SwagRabbit"
+      },
+      "variants": {
+        "id": 75,
+        "title": "SwagRabbit",
+        "variants": [
+          {
+            "id": 73688,
+            "title": "One size / White Tea and Fig",
+            "options": {
+              "size": "One size",
+              "scent": "White Tea and Fig"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 675,
+                "width": 2972
+              }
+            ]
+          },
+          {
+            "id": 73689,
+            "title": "One size / Ocean Mist and Moss",
+            "options": {
+              "size": "One size",
+              "scent": "Ocean Mist and Moss"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 675,
+                "width": 2972
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              73688,
+              73689,
+              73690
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 829
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              73688,
+              73689,
+              73690
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1399
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 449
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              73688,
+              73689,
+              73690
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 949
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 739
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              73688,
+              73689,
+              73690
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1539
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 449
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

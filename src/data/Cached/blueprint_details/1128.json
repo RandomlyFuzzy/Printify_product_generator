@@ -1,0 +1,220 @@
+{
+  "blueprint": {
+    "id": 1128,
+    "title": "Trucker Caps",
+    "brand": "OTTO Cap",
+    "model": "39-165",
+    "images": [
+      "https://images.printify.com/68628e4b97658483d10973e2",
+      "https://images.printify.com/68628e77353acf801d0c8943",
+      "https://images.printify.com/68628dfa3d45cbf5cf001b63",
+      "https://images.printify.com/68628f2f636d44a7960a5b72",
+      "https://images.printify.com/68628f5ce98a86dfa103a5a2",
+      "https://images.printify.com/68628ed3f5a547be91032a73",
+      "https://images.printify.com/68628f0cbb04e3bac60d4fb3",
+      "https://images.printify.com/68628ef63d45cbf5cf001b64",
+      "https://images.printify.com/68628ef0ce4438edde0a91f2",
+      "https://images.printify.com/68628f05bb04e3bac60d4fb2"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 41,
+        "title": "Duplium"
+      },
+      "variants": {
+        "id": 41,
+        "title": "Duplium",
+        "variants": [
+          {
+            "id": 84650,
+            "title": "Black / One size",
+            "options": {
+              "color": "Black",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtf",
+                "height": 750,
+                "width": 1650
+              }
+            ]
+          },
+          {
+            "id": 84651,
+            "title": "Green / One size",
+            "options": {
+              "color": "Green",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtf",
+                "height": 750,
+                "width": 1650
+              }
+            ]
+          },
+          {
+            "id": 84652,
+            "title": "Pink / One size",
+            "options": {
+              "color": "Pink",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtf",
+                "height": 750,
+                "width": 1650
+              }
+            ]
+          },
+          {
+            "id": 84653,
+            "title": "Blue/Red / One size",
+            "options": {
+              "color": "Blue/Red",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtf",
+                "height": 750,
+                "width": 1650
+              }
+            ]
+          },
+          {
+            "id": 104275,
+            "title": "Dark Green / One size",
+            "options": {
+              "color": "Dark Green",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtf",
+                "height": 750,
+                "width": 1650
+              }
+            ]
+          },
+          {
+            "id": 104276,
+            "title": "Dark Navy / One size",
+            "options": {
+              "color": "Dark Navy",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtf",
+                "height": 750,
+                "width": 1650
+              }
+            ]
+          },
+          {
+            "id": 104277,
+            "title": "Royal / One size",
+            "options": {
+              "color": "Royal",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtf",
+                "height": 750,
+                "width": 1650
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              84650,
+              84651,
+              84652,
+              84653,
+              104275,
+              104276,
+              104277
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 929
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              84650,
+              84651,
+              84652,
+              84653,
+              104275,
+              104276,
+              104277
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1199
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 599
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              84650,
+              84651,
+              84652,
+              84653,
+              104275,
+              104276,
+              104277
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 749
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 99
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

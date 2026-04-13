@@ -1,0 +1,170 @@
+{
+  "blueprint": {
+    "id": 2763,
+    "title": "Baby Fitted Crib Sheet",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/69d6628673fb5d65bb037590",
+      "https://images.printify.com/69d66287971d5cc10d0a6fc0",
+      "https://images.printify.com/69d666ba031c1b224d047a40",
+      "https://images.printify.com/69d66284736eb115e20d7890",
+      "https://images.printify.com/69270bb8b145f4cf5404adc2",
+      "https://images.printify.com/69d6673021fd3c6088042580"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 92,
+        "title": "Pic the Gift"
+      },
+      "variants": {
+        "id": 92,
+        "title": "Pic the Gift",
+        "variants": [
+          {
+            "id": 149517,
+            "title": "24\u0022 x 38\u0022",
+            "options": {
+              "size": "24\u0022 x 38\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 8760,
+                "width": 11600
+              }
+            ]
+          },
+          {
+            "id": 149518,
+            "title": "28\u0022 x 52\u0022",
+            "options": {
+              "size": "28\u0022 x 52\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 9400,
+                "width": 13660
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              149517,
+              149518
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 759
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              149517,
+              149518
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1439
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 599
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              149517,
+              149518
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2359
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 799
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              149517,
+              149518
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1199
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 629
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              149517,
+              149518
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1709
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 599
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              149517,
+              149518
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2599
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 799
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

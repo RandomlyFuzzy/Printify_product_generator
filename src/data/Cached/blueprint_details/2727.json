@@ -1,0 +1,164 @@
+{
+  "blueprint": {
+    "id": 2727,
+    "title": "Board Book",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/690c7c98fd307981420018b3",
+      "https://images.printify.com/6936c04cb3c8f46e7d0d1602",
+      "https://images.printify.com/690c7c952aa3a4951a0f5442",
+      "https://images.printify.com/6936ce81028e7762c508def2"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 28,
+        "title": "District Photo"
+      },
+      "variants": {
+        "id": 28,
+        "title": "District Photo",
+        "variants": [
+          {
+            "id": 148738,
+            "title": "6\u0027\u0027 x 6\u0027\u0027 / With Laminate / Chipboard",
+            "options": {
+              "size": "6\u0027\u0027 x 6\u0027\u0027",
+              "surface": "With Laminate",
+              "paper": "Chipboard"
+            },
+            "placeholders": [
+              {
+                "position": "cover",
+                "decoration_method": "digital-printing",
+                "height": 1875,
+                "width": 3863
+              },
+              {
+                "position": "spread_1",
+                "decoration_method": "digital-printing",
+                "height": 1875,
+                "width": 3675
+              },
+              {
+                "position": "spread_2",
+                "decoration_method": "digital-printing",
+                "height": 1875,
+                "width": 3675
+              },
+              {
+                "position": "spread_3",
+                "decoration_method": "digital-printing",
+                "height": 1875,
+                "width": 3675
+              },
+              {
+                "position": "spread_4",
+                "decoration_method": "digital-printing",
+                "height": 1875,
+                "width": 3675
+              },
+              {
+                "position": "spread_5",
+                "decoration_method": "digital-printing",
+                "height": 1875,
+                "width": 3675
+              },
+              {
+                "position": "spread_6",
+                "decoration_method": "digital-printing",
+                "height": 1875,
+                "width": 3675
+              },
+              {
+                "position": "spread_7",
+                "decoration_method": "digital-printing",
+                "height": 1875,
+                "width": 3675
+              },
+              {
+                "position": "spread_8",
+                "decoration_method": "digital-printing",
+                "height": 1875,
+                "width": 3675
+              },
+              {
+                "position": "spread_9",
+                "decoration_method": "digital-printing",
+                "height": 1875,
+                "width": 3675
+              },
+              {
+                "position": "spread_10",
+                "decoration_method": "digital-printing",
+                "height": 1875,
+                "width": 3675
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              148738
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 529
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              148738
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1399
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "AU",
+              "NZ",
+              "CA",
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              148738
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 599
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 240
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

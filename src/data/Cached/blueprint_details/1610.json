@@ -1,0 +1,224 @@
+{
+  "blueprint": {
+    "id": 1610,
+    "title": "Maker Sip Tumbler,  20oz",
+    "brand": "Maars",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66e3f1629761b35d0206b477",
+      "https://images.printify.com/66e3f12e9761b35d0206b476",
+      "https://images.printify.com/66e3f12bd03fecd2240aeaf2",
+      "https://images.printify.com/66e3f12d9761b35d0206b475",
+      "https://images.printify.com/66e3f128868d009d600ce704",
+      "https://images.printify.com/66e3f12ff3e7b2d690079e25",
+      "https://images.printify.com/66e3f1299761b35d0206b474",
+      "https://images.printify.com/66e3f11e815c681cef0962a9",
+      "https://images.printify.com/66e3f120868d009d600ce703",
+      "https://images.printify.com/66e3f11c815c681cef0962a8",
+      "https://images.printify.com/66e3f11f9761b35d0206b473",
+      "https://images.printify.com/66e3f11a815c681cef0962a7",
+      "https://images.printify.com/66e3f1217b6c9985e2029b12",
+      "https://images.printify.com/66e3f11b9761b35d0206b472"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 261,
+        "title": "Fancy Fanny "
+      },
+      "variants": {
+        "id": 261,
+        "title": "Fancy Fanny ",
+        "variants": [
+          {
+            "id": 112422,
+            "title": "20oz / Candy Blush",
+            "options": {
+              "size": "20oz",
+              "color": "Candy Blush"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 2267,
+                "width": 2757
+              }
+            ]
+          },
+          {
+            "id": 112423,
+            "title": "20oz / High Tide",
+            "options": {
+              "size": "20oz",
+              "color": "High Tide"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 2267,
+                "width": 2757
+              }
+            ]
+          },
+          {
+            "id": 112424,
+            "title": "20oz / Sage Brush",
+            "options": {
+              "size": "20oz",
+              "color": "Sage Brush"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 2267,
+                "width": 2757
+              }
+            ]
+          },
+          {
+            "id": 112425,
+            "title": "20oz / Surfs Up",
+            "options": {
+              "size": "20oz",
+              "color": "Surfs Up"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 2267,
+                "width": 2757
+              }
+            ]
+          },
+          {
+            "id": 112426,
+            "title": "20oz / Nightrider",
+            "options": {
+              "size": "20oz",
+              "color": "Nightrider"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 2267,
+                "width": 2757
+              }
+            ]
+          },
+          {
+            "id": 112427,
+            "title": "20oz / Sand Pebble",
+            "options": {
+              "size": "20oz",
+              "color": "Sand Pebble"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 2267,
+                "width": 2757
+              }
+            ]
+          },
+          {
+            "id": 112428,
+            "title": "20oz / Woodlands",
+            "options": {
+              "size": "20oz",
+              "color": "Woodlands"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 2267,
+                "width": 2757
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              112422,
+              112423,
+              112424,
+              112425,
+              112426,
+              112427,
+              112428
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2929
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 479
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              112422,
+              112423,
+              112424,
+              112425,
+              112426,
+              112427,
+              112428
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 3499
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 459
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              112422,
+              112423,
+              112424,
+              112425,
+              112426,
+              112427,
+              112428
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 779
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 459
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

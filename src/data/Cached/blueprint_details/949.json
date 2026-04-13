@@ -1,0 +1,234 @@
+{
+  "blueprint": {
+    "id": 949,
+    "title": "Basketball Jersey (AOP)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d898145348e4bfbb03cd75",
+      "https://images.printify.com/66d89812cc80c572b5051543",
+      "https://images.printify.com/6268dd138717ecb2ff0d4d70",
+      "https://images.printify.com/6268dd1c3e21d0941c0696b0",
+      "https://images.printify.com/6268dd228717ecb2ff0d4d73"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 47,
+        "title": "Miami Sublimation"
+      },
+      "variants": {
+        "id": 47,
+        "title": "Miami Sublimation",
+        "variants": [
+          {
+            "id": 79386,
+            "title": "XS / Seam thread color automatically matched to design",
+            "options": {
+              "size": "XS",
+              "color": "Seam thread color automatically matched to design"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "aop",
+                "height": 4636,
+                "width": 3529
+              },
+              {
+                "position": "back",
+                "decoration_method": "aop",
+                "height": 4625,
+                "width": 3519
+              }
+            ]
+          },
+          {
+            "id": 79387,
+            "title": "S / Seam thread color automatically matched to design",
+            "options": {
+              "size": "S",
+              "color": "Seam thread color automatically matched to design"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "aop",
+                "height": 4794,
+                "width": 3649
+              },
+              {
+                "position": "back",
+                "decoration_method": "aop",
+                "height": 4794,
+                "width": 3647
+              }
+            ]
+          },
+          {
+            "id": 79388,
+            "title": "M / Seam thread color automatically matched to design",
+            "options": {
+              "size": "M",
+              "color": "Seam thread color automatically matched to design"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "aop",
+                "height": 4945,
+                "width": 3764
+              },
+              {
+                "position": "back",
+                "decoration_method": "aop",
+                "height": 4939,
+                "width": 3758
+              }
+            ]
+          },
+          {
+            "id": 79389,
+            "title": "L / Seam thread color automatically matched to design",
+            "options": {
+              "size": "L",
+              "color": "Seam thread color automatically matched to design"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "aop",
+                "height": 5092,
+                "width": 3876
+              },
+              {
+                "position": "back",
+                "decoration_method": "aop",
+                "height": 5092,
+                "width": 3874
+              }
+            ]
+          },
+          {
+            "id": 79390,
+            "title": "XL / Seam thread color automatically matched to design",
+            "options": {
+              "size": "XL",
+              "color": "Seam thread color automatically matched to design"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "aop",
+                "height": 5247,
+                "width": 3994
+              },
+              {
+                "position": "back",
+                "decoration_method": "aop",
+                "height": 5243,
+                "width": 3989
+              }
+            ]
+          },
+          {
+            "id": 79391,
+            "title": "2XL / Seam thread color automatically matched to design",
+            "options": {
+              "size": "2XL",
+              "color": "Seam thread color automatically matched to design"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "aop",
+                "height": 5417,
+                "width": 4123
+              },
+              {
+                "position": "back",
+                "decoration_method": "aop",
+                "height": 5413,
+                "width": 4118
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              79386,
+              79387,
+              79388,
+              79389,
+              79390,
+              79391
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 609
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              79386,
+              79387,
+              79388,
+              79389,
+              79390,
+              79391
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 599
+            },
+            "countries": [
+              "NZ",
+              "AU",
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              79386,
+              79387,
+              79388,
+              79389,
+              79390,
+              79391
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1699
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

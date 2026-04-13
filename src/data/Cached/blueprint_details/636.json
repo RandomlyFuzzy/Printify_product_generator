@@ -1,0 +1,110 @@
+{
+  "blueprint": {
+    "id": 636,
+    "title": "Can Cooler Sleeve",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d6f9b68dc0da6d7a0641a2",
+      "https://images.printify.com/66d6f9bac0e569aab10bb8a4",
+      "https://images.printify.com/60e07bdf2dd2b625f73889f5",
+      "https://images.printify.com/60dda0e2147f894dcc31a882",
+      "https://images.printify.com/613706702de6312812436883",
+      "https://images.printify.com/60e07bd797be5005902ec924",
+      "https://images.printify.com/67e4044d18cf1a92b70ff736",
+      "https://images.printify.com/60edc69a9751b770bb79c91a"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 59,
+        "title": "Imagine Your Photos"
+      },
+      "variants": {
+        "id": 59,
+        "title": "Imagine Your Photos",
+        "variants": [
+          {
+            "id": 72422,
+            "title": "White / One size",
+            "options": {
+              "color": "White",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1350,
+                "width": 1275
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 1350,
+                "width": 1275
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              72422
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 539
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 99
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              72422
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 959
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 129
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              72422
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 949
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "blueprint": {
+    "id": 826,
+    "title": "Double Wine Tote Bag",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d81b4868291013dc037953",
+      "https://images.printify.com/66d81b4768291013dc037952",
+      "https://images.printify.com/61af563c96953c159b6838a2",
+      "https://images.printify.com/61af563d96953c159b6838a5",
+      "https://images.printify.com/61af563ddfcc3228af1b71a3",
+      "https://images.printify.com/61af563b099399595231c809",
+      "https://images.printify.com/61af563c0f4dfc6e7d380483"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 70,
+        "title": "Printed Mint"
+      },
+      "variants": {
+        "id": 70,
+        "title": "Printed Mint",
+        "variants": [
+          {
+            "id": 75624,
+            "title": "One size / Natural",
+            "options": {
+              "size": "One size",
+              "color": "Natural"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 2250,
+                "width": 1350
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              75624
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1049
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 370
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              75624
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 609
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 99
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              75624
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1019
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 219
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

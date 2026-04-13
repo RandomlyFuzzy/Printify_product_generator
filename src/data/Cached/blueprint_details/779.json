@@ -1,0 +1,159 @@
+{
+  "blueprint": {
+    "id": 779,
+    "title": "Ice Bucket with Tongs",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66cc8cb02c415623080b2513",
+      "https://images.printify.com/66cc8caffcc80057c805aa24",
+      "https://images.printify.com/6189059ceddd483a11261514",
+      "https://images.printify.com/67ee9764d52da0980e060b62",
+      "https://images.printify.com/67ee97629baf5339d20a4ad2"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 59,
+        "title": "Imagine Your Photos"
+      },
+      "variants": {
+        "id": 59,
+        "title": "Imagine Your Photos",
+        "variants": [
+          {
+            "id": 74996,
+            "title": "One Size / Clear",
+            "options": {
+              "size": "One Size",
+              "color": "Clear"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 2120,
+                "width": 2958
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              74996
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 3279
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 3279
+            },
+            "countries": [
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "DK",
+              "EE",
+              "FO",
+              "FI",
+              "FR",
+              "GE",
+              "DE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IS",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "LV",
+              "LI",
+              "LT",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "NO",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "SE",
+              "CH",
+              "TR",
+              "UA",
+              "GB",
+              "XK",
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              74996
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2609
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 619
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              74996
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2739
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 829
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

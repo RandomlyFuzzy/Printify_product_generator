@@ -1,0 +1,101 @@
+{
+  "blueprint": {
+    "id": 326,
+    "title": "Weekender Bag",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66c5cfe80ca2b97d44021ca2",
+      "https://images.printify.com/66c5cfebf12ed2570108db03",
+      "https://images.printify.com/63fde1f32677922919006473",
+      "https://images.printify.com/63fde1f2e7eae23cbc07f744",
+      "https://images.printify.com/63fde1f2fa728e73300cea63",
+      "https://images.printify.com/5fbcc2b2a93780238813528a"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 10,
+        "title": "MWW On Demand"
+      },
+      "variants": {
+        "id": 10,
+        "title": "MWW On Demand",
+        "variants": [
+          {
+            "id": 44271,
+            "title": "24\u0022 \u00D7 13\u0022",
+            "options": {
+              "size": "24\u0022 \u00D7 13\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 4950,
+                "width": 3825
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              44271
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1169
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              44271
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 769
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              44271
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1069
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 359
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

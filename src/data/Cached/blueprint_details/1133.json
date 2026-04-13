@@ -1,0 +1,245 @@
+{
+  "blueprint": {
+    "id": 1133,
+    "title": "Velveteen Microfiber Blanket (Two-sided print)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d58b20e1daf5222209b8c5",
+      "https://images.printify.com/66d58b2267656583d90100c2",
+      "https://images.printify.com/62cc22c0da1effbe69092cd1",
+      "https://images.printify.com/62ea259d99d861fe5208c263",
+      "https://images.printify.com/62ea255be5d0ea180a0dfa54",
+      "https://images.printify.com/62ea25dc74face61820b1945"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 92,
+        "title": "Pic the Gift"
+      },
+      "variants": {
+        "id": 92,
+        "title": "Pic the Gift",
+        "variants": [
+          {
+            "id": 86215,
+            "title": "40\u0022 \u00D7 30\u0022",
+            "options": {
+              "size": "40\u0022 \u00D7 30\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 8400,
+                "width": 6400
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 8400,
+                "width": 6400
+              }
+            ]
+          },
+          {
+            "id": 86216,
+            "title": "60\u0022 \u00D7 50\u0022",
+            "options": {
+              "size": "60\u0022 \u00D7 50\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 12600,
+                "width": 10800
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 12600,
+                "width": 10800
+              }
+            ]
+          },
+          {
+            "id": 86217,
+            "title": "80\u0022 \u00D7 60\u0022",
+            "options": {
+              "size": "80\u0022 \u00D7 60\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 17200,
+                "width": 12700
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 17200,
+                "width": 12700
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              86217
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1199
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 629
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              86217
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2399
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1209
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              86216
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              86217
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 3269
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1569
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              86216
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1709
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 879
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              86216
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2359
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 799
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              86215
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1309
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 459
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              86215
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 729
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 559
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              86215
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1419
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

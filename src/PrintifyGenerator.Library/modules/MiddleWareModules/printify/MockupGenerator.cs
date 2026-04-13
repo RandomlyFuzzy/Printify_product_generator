@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text.Json;
+using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
@@ -74,8 +75,9 @@ public class MockupGenerator
     /// </summary>
     /// <param name="imagePath">Absolute or relative path to a local image file.</param>
     /// <returns>A <see cref="MockupResult"/> describing the outcome.</returns>
-    public async Task<MockupResult> ProcessImageAsync(string imagePath)
+    public async IAsyncEnumerable<MockupResult> ProcessImageAsync(string imagePath)
     {
+        List<MockupResult> mockupresults = new();
         try
         {
             // 1 ── Resolve / upload image
@@ -85,53 +87,69 @@ public class MockupGenerator
             var blueprints = await GetOrDownloadBlueprintsAsync();
 
             // 3 ── Ask LLM which blueprint suits this image best
-            var suggestion = await AskLlmForBlueprintAsync(imagePath, blueprints);
+            var suggestions = await AskLlmForBlueprintAsync(imagePath, blueprints);
 
-            // 4 ── Fetch first available print provider and its variants
-            var providers = await _printify.GetBlueprintPrintProvidersAsync(suggestion.BlueprintId);
-            if (providers.Count == 0)
-                return MockupResult.Fail($"Blueprint {suggestion.BlueprintId} has no print providers.");
-
-            var provider = providers[0];
-            var variantResponse = await _printify.GetBlueprintVariantsAsync(suggestion.BlueprintId, provider.Id);
-            var variants = variantResponse.Variants;
-            if (variants.Count == 0)
-                return MockupResult.Fail($"Blueprint {suggestion.BlueprintId} / provider {provider.Id} has no variants.");
-
-            // 5 ── Create the draft product on Printify (not published)
-            var product = await CreateDraftProductAsync(lookup, suggestion, provider, variants);
-
-            // 6 ── Persist draft record for later inspection
-            var record = new MockupDraftRecord
+            foreach(var suggestion in suggestions)
             {
-                ProductId               = product.Id,
-                LocalImagePath          = imagePath,
-                PrintifyImageId         = lookup.PrintifyImageId,
-                PrintifyImagePreviewUrl = lookup.PreviewUrl,
-                BlueprintId             = suggestion.BlueprintId,
-                BlueprintTitle          = suggestion.BlueprintTitle,
-                LlmReason               = suggestion.Reason,
-                PrintProviderId         = provider.Id,
-                PrintProviderTitle      = provider.Title,
-                CreatedAt               = DateTime.UtcNow.ToString("O"),
-                MockupUrls              = product.Images?.Select(i => i.Src).ToList() ?? new List<string>()
-            };
+                Console.WriteLine($"[MockupGenerator] LLM suggestion: blueprint {suggestion.BlueprintId} – {suggestion.BlueprintTitle} (reason: {suggestion.Reason})");
+                // 4 ── Fetch first available print provider and its variants
+                var providers = await _printify.GetBlueprintPrintProvidersAsync(suggestion.BlueprintId);
+                if (providers.Count == 0)
+                {
+                    continue;
+                }
 
-            await SaveDraftRecordAsync(record);
+                var provider = providers[0];
+                var variantResponse = await _printify.GetBlueprintVariantsAsync(suggestion.BlueprintId, provider.Id);
+                var variants = variantResponse.Variants;
+                if (variants.Count == 0)
+                {
+                    continue;
+                }
 
-            Console.WriteLine($"[MockupGenerator] Done. Draft product ID: {product.Id}");
-            return new MockupResult
-            {
-                Success         = true,
-                PrintifyImageId = lookup.PrintifyImageId,
-                Draft           = record
-            };
+                if(variants.Count > 100)
+                {
+                    Console.WriteLine($"[MockupGenerator] Warning: blueprint {suggestion.BlueprintId} has {variants.Count} variants; only processing the first 100.");
+                    variants = variants.Take(100).ToList();
+                }
+                // 5 ── Create the draft product on Printify (not published)
+                var product = await CreateDraftProductAsync(lookup, suggestion, provider, variants);
+
+                
+                // 6 ── Persist draft record for later inspection
+                var record = new MockupDraftRecord
+                {
+                    ProductId               = product.Id,
+                    LocalImagePath          = imagePath,
+                    PrintifyImageId         = lookup.PrintifyImageId,
+                    PrintifyImagePreviewUrl = lookup.PreviewUrl,
+                    BlueprintId             = suggestion.BlueprintId,
+                    BlueprintTitle          = suggestion.BlueprintTitle,
+                    LlmReason               = suggestion.Reason,
+                    PrintProviderId         = provider.Id,
+                    PrintProviderTitle      = provider.Title,
+                    CreatedAt               = DateTime.UtcNow.ToString("O"),
+                    MockupUrls              = product.Images?.Select(i => i.Src).ToList() ?? new List<string>()
+                };
+                mockupresults.Add(new MockupResult
+                {
+                    Success         = true,
+                    PrintifyImageId = lookup.PrintifyImageId,
+                    Draft           = record
+                });
+
+                await SaveDraftRecordAsync(record);
+
+                Console.WriteLine($"[MockupGenerator] Done. Draft product ID: {product.Id}");
+
+            }
         }
         catch (Exception ex)
         {
             Console.Error.WriteLine($"[MockupGenerator] Error: {ex}");
-            return MockupResult.Fail($"Processing failed: {ex.Message}");
         }
+        foreach(var result in mockupresults)
+            yield return result;
     }
 
     // ── Step 1 – Image resolve / upload ───────────────────────────
@@ -231,33 +249,62 @@ public class MockupGenerator
 
     // ── Step 3 – LLM blueprint selection ──────────────────────────
 
-    private async Task<BlueprintSuggestion> AskLlmForBlueprintAsync(
+    // Common product-type keywords used to pre-filter the 1000+ blueprint
+    // catalogue down to a manageable size for small vision LLMs.
+    private static readonly string[] PopularKeywords = new[]
+    {
+        "t-shirt", "tee", "hoodie", "sweatshirt", "tank top",
+        "mug", "poster", "canvas", "tote bag", "phone case",
+        "pillow", "blanket", "sticker", "mousepad", "coaster",
+        "hat", "cap", "apron", "flag", "towel", "puzzle",
+        "notebook", "journal", "backpack", "socks"
+    };
+
+    private async Task<List<BlueprintSuggestion>> AskLlmForBlueprintAsync(
         string imagePath, List<Blueprint> blueprints)
     {
-        // Compact catalogue for the prompt  (avoid token overflow)
-        var catalogue = blueprints
-            .Select(b => new { id = b.Id, title = b.Title, brand = b.Brand, model = b.Model })
+        // Pre-filter to popular product types so the prompt stays small
+        // enough for lightweight vision models like moondream.
+        var filtered = blueprints
+            .Where(b => PopularKeywords.Any(kw =>
+                b.Title.Contains(kw, StringComparison.OrdinalIgnoreCase)))
+            .GroupBy(b => b.Title.Split('|')[0].Trim(), StringComparer.OrdinalIgnoreCase)
+            .Select(g => g.First())          // deduplicate near-identical titles
+            .Take(80)                         // hard cap
+            .ToList();
+
+        if (filtered.Count == 0)
+            filtered = blueprints.Take(80).ToList();
+
+        Console.WriteLine($"[MockupGenerator] Sending {filtered.Count} candidate blueprints to LLM (from {blueprints.Count} total).");
+
+        var catalogue = filtered
+            .Select(b => new { id = b.Id, title = b.Title })
             .ToList();
 
         string catalogueJson = JsonSerializer.Serialize(catalogue);
 
         string prompt = $$"""
             You are a print-on-demand product specialist.
-            Examine the attached image and decide which of the following Printify product blueprints is the best fit.
-            Consider the visual style, subject matter, colour palette, and commercial viability for each product type.
+            Examine the attached image and decide which product blueprint is the best fit.
+            Consider the visual style, subject matter, colour palette, and commercial viability.
 
-            Available blueprints (JSON array with id, title, brand, model):
+            Available blueprints (JSON array with id and title):
             {{catalogueJson}}
 
             Respond with ONLY valid JSON — no markdown fences, no extra text:
-            {"blueprint_id": <integer>, "blueprint_title": "<string>", "reason": "<one sentence>"}
+            [{"blueprint_id": <integer>, "blueprint_title": "<string>", "reason": "<one sentence>"}]
             """;
 
-        Console.WriteLine($"[MockupGenerator] Querying LLM ({_visionModel}) for blueprint recommendation...");
-        string rawResponse = await _ollama.GenerateWithImageAsync(_visionModel, prompt, imagePath);
 
+        Console.WriteLine($"[MockupGenerator] Prompting LLM with image and catalogue... {prompt}");
+        Console.WriteLine($"[MockupGenerator] Querying LLM ({_visionModel}) for blueprint recommendation...");
+        
+        string rawResponse = await _ollama.GenerateWithImageAsync(_visionModel, prompt, imagePath);
+        JsonObject responseObj = JsonNode.Parse(rawResponse)?.AsObject() ?? new JsonObject();
         // Ollama wraps the answer in {"response": "..."}
-        string responseText = rawResponse;
+        string responseText = responseObj["response"]?.GetValue<string>() ?? rawResponse;
+        Console.WriteLine($"[MockupGenerator] Raw LLM response: {rawResponse}");
         try
         {
             var wrapper = JsonSerializer.Deserialize<JsonElement>(rawResponse, JsonOpts);
@@ -270,11 +317,12 @@ public class MockupGenerator
 
         try
         {
-            var suggestion = JsonSerializer.Deserialize<BlueprintSuggestion>(responseText, JsonOpts);
-            if (suggestion is { BlueprintId: > 0 })
+            var suggestionArray = JsonSerializer.Deserialize<List<BlueprintSuggestion>>(responseText, JsonOpts);
+            var suggestion = suggestionArray?.FirstOrDefault();
+            if(suggestionArray.All(s => s.BlueprintId == 0) && suggestionArray.Count > 1)
             {
-                Console.WriteLine($"[MockupGenerator] LLM chose blueprint {suggestion.BlueprintId}: {suggestion.BlueprintTitle}");
-                return suggestion;
+                Console.WriteLine($"[MockupGenerator] LLM returned multiple suggestions, but all had invalid blueprint_id=0. Ignoring and falling back to first blueprint.");
+                return suggestionArray;
             }
         }
         catch { /* fall through to fallback */ }
@@ -282,11 +330,14 @@ public class MockupGenerator
         // Fallback: first blueprint in catalogue
         var fallback = blueprints[0];
         Console.WriteLine($"[MockupGenerator] LLM response could not be parsed; falling back to blueprint {fallback.Id}: {fallback.Title}");
-        return new BlueprintSuggestion
+        return new List<BlueprintSuggestion>
         {
-            BlueprintId    = fallback.Id,
-            BlueprintTitle = fallback.Title,
-            Reason         = "Fallback – LLM response could not be parsed."
+            new BlueprintSuggestion
+            {
+                BlueprintId    = fallback.Id,
+                BlueprintTitle = fallback.Title,
+                Reason         = "Fallback – LLM response could not be parsed."
+            }
         };
     }
 

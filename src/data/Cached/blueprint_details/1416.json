@@ -1,0 +1,113 @@
+{
+  "blueprint": {
+    "id": 1416,
+    "title": "Trapper Peak Decaf Coffee Blend (Medium Roast)",
+    "brand": "Roastify",
+    "model": "",
+    "images": [
+      "https://images.printify.com/67b71e04c2e0e58df20efea9",
+      "https://images.printify.com/67b71e031563b0c2810a0f6d",
+      "https://images.printify.com/67b71e2d7464474b9e0f4b38",
+      "https://images.printify.com/67b71e181563b0c2810a0f6e",
+      "https://images.printify.com/67b71e239055fbacd0032d62",
+      "https://images.printify.com/67b71e251563b0c2810a0f6f",
+      "https://images.printify.com/67b71e2cc2e0e58df20efeac",
+      "https://images.printify.com/67b71e16c2e0e58df20efeaa",
+      "https://images.printify.com/67b71e2048ba4d1aba04e665",
+      "https://images.printify.com/67b71e269055fbacd0032d63",
+      "https://images.printify.com/67b71e22c2e0e58df20efeab",
+      "https://images.printify.com/67b71e28d2b35ac34b0bc9c6",
+      "https://images.printify.com/67b71e291563b0c2810a0f70",
+      "https://images.printify.com/67b71e2b1563b0c2810a0f71",
+      "https://images.printify.com/66c354462b63c1d4430f7a63"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 291,
+        "title": "Roastify"
+      },
+      "variants": {
+        "id": 291,
+        "title": "Roastify",
+        "variants": [
+          {
+            "id": 104847,
+            "title": "Whole Bean / 12oz",
+            "options": {
+              "grind": "Whole Bean",
+              "size": "12oz"
+            },
+            "placeholders": [
+              {
+                "position": "coffee_front",
+                "decoration_method": "digital-printing",
+                "height": 4444,
+                "width": 3900
+              }
+            ]
+          },
+          {
+            "id": 104848,
+            "title": "Ground / 12oz",
+            "options": {
+              "grind": "Ground",
+              "size": "12oz"
+            },
+            "placeholders": [
+              {
+                "position": "coffee_front",
+                "decoration_method": "digital-printing",
+                "height": 4444,
+                "width": 3900
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              104847,
+              104848
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 759
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              104847,
+              104848
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2099
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 189
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

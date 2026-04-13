@@ -1,0 +1,181 @@
+{
+  "blueprint": {
+    "id": 959,
+    "title": "Lightweight Neck Gaiter",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d8968e5348e4bfbb03cd72",
+      "https://images.printify.com/66d89691ef35feda060fdb63",
+      "https://images.printify.com/627e0b3c054c41cdf00e4fa8",
+      "https://images.printify.com/627e0b3e74d17c39150fd810",
+      "https://images.printify.com/627e0b3db025c75502060ab7",
+      "https://images.printify.com/627e0b40054c41cdf00e4fac",
+      "https://images.printify.com/626fd4628499de87ff01afd6",
+      "https://images.printify.com/62318abc30e86b0a2c305b83"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 107,
+        "title": "Deco Slides"
+      },
+      "variants": {
+        "id": 107,
+        "title": "Deco Slides",
+        "variants": [
+          {
+            "id": 78492,
+            "title": "L",
+            "options": {
+              "size": "L"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 5300,
+                "width": 2900
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 5300,
+                "width": 2900
+              }
+            ]
+          },
+          {
+            "id": 78493,
+            "title": "M",
+            "options": {
+              "size": "M"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 5300,
+                "width": 2900
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 5300,
+                "width": 2900
+              }
+            ]
+          },
+          {
+            "id": 78494,
+            "title": "S",
+            "options": {
+              "size": "S"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 5300,
+                "width": 2900
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 5300,
+                "width": 2900
+              }
+            ]
+          },
+          {
+            "id": 78495,
+            "title": "XS",
+            "options": {
+              "size": "XS"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 5300,
+                "width": 2900
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 5300,
+                "width": 2900
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              78492,
+              78493,
+              78494,
+              78495
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 479
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 99
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              78492,
+              78493,
+              78494,
+              78495
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 959
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 139
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              78492,
+              78493,
+              78494,
+              78495
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 949
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 370
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

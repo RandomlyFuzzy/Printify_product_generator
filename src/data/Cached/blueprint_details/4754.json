@@ -1,0 +1,113 @@
+{
+  "blueprint": {
+    "id": 4754,
+    "title": "Handbag",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/69b175d840755d07da0eac43",
+      "https://images.printify.com/69b40d913f0dd2235a0a2922",
+      "https://images.printify.com/69b43781655518ddbd06da51",
+      "https://images.printify.com/69b7b8bca458c0d6830ad700",
+      "https://images.printify.com/697a447534a4b98446013a82"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 14,
+        "title": "ArtsAdd"
+      },
+      "variants": {
+        "id": 14,
+        "title": "ArtsAdd",
+        "variants": [
+          {
+            "id": 240936,
+            "title": "One size",
+            "options": {
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 3144,
+                "width": 6444
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 3144,
+                "width": 6444
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              240936
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "CN"
+            ]
+          },
+          {
+            "variant_ids": [
+              240936
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 360
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 360
+            },
+            "countries": [
+              "NZ",
+              "REST_OF_THE_WORLD",
+              "US",
+              "BR",
+              "MX",
+              "CA",
+              "DK",
+              "NL"
+            ]
+          },
+          {
+            "variant_ids": [
+              240936
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1079
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1079
+            },
+            "countries": [
+              "AU"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

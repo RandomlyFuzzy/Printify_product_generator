@@ -1,0 +1,653 @@
+{
+  "blueprint": {
+    "id": 1928,
+    "title": "Men\u0027s Champion Crewneck Sweatshirt",
+    "brand": "Champion",
+    "model": "S149",
+    "images": [
+      "https://images.printify.com/67c18792ad9ba87e77073942",
+      "https://images.printify.com/68f72e06ce08406a5f09a023",
+      "https://images.printify.com/692081b7b3820c7496016552",
+      "https://images.printify.com/67c1878e544226f1860d00a2"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 410,
+        "title": "Printful"
+      },
+      "variants": {
+        "id": 410,
+        "title": "Printful",
+        "variants": [
+          {
+            "id": 119525,
+            "title": "S / Black",
+            "options": {
+              "size": "S",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front_left_chest",
+                "decoration_method": "embroidery",
+                "height": 1200,
+                "width": 1200
+              },
+              {
+                "position": "front_center_chest",
+                "decoration_method": "embroidery",
+                "height": 1200,
+                "width": 1200
+              },
+              {
+                "position": "right_wrist",
+                "decoration_method": "embroidery",
+                "height": 900,
+                "width": 600
+              }
+            ]
+          },
+          {
+            "id": 119526,
+            "title": "M / Black",
+            "options": {
+              "size": "M",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front_left_chest",
+                "decoration_method": "embroidery",
+                "height": 1200,
+                "width": 1200
+              },
+              {
+                "position": "front_center_chest",
+                "decoration_method": "embroidery",
+                "height": 1200,
+                "width": 1200
+              },
+              {
+                "position": "right_wrist",
+                "decoration_method": "embroidery",
+                "height": 900,
+                "width": 600
+              }
+            ]
+          },
+          {
+            "id": 119527,
+            "title": "L / Black",
+            "options": {
+              "size": "L",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front_left_chest",
+                "decoration_method": "embroidery",
+                "height": 1200,
+                "width": 1200
+              },
+              {
+                "position": "front_center_chest",
+                "decoration_method": "embroidery",
+                "height": 1200,
+                "width": 1200
+              },
+              {
+                "position": "right_wrist",
+                "decoration_method": "embroidery",
+                "height": 900,
+                "width": 600
+              }
+            ]
+          },
+          {
+            "id": 119528,
+            "title": "XL / Black",
+            "options": {
+              "size": "XL",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front_left_chest",
+                "decoration_method": "embroidery",
+                "height": 1200,
+                "width": 1200
+              },
+              {
+                "position": "front_center_chest",
+                "decoration_method": "embroidery",
+                "height": 1200,
+                "width": 1200
+              },
+              {
+                "position": "right_wrist",
+                "decoration_method": "embroidery",
+                "height": 900,
+                "width": 600
+              }
+            ]
+          },
+          {
+            "id": 119529,
+            "title": "2XL / Black",
+            "options": {
+              "size": "2XL",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front_left_chest",
+                "decoration_method": "embroidery",
+                "height": 1200,
+                "width": 1200
+              },
+              {
+                "position": "front_center_chest",
+                "decoration_method": "embroidery",
+                "height": 1200,
+                "width": 1200
+              },
+              {
+                "position": "right_wrist",
+                "decoration_method": "embroidery",
+                "height": 900,
+                "width": 600
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              119525,
+              119526,
+              119527,
+              119528,
+              119529
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 769
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 209
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              119525,
+              119526,
+              119527,
+              119528,
+              119529
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 699
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 240
+            },
+            "countries": [
+              "AT",
+              "FR",
+              "BG",
+              "MK",
+              "MD",
+              "BA",
+              "NL",
+              "GL",
+              "ES",
+              "FO",
+              "BE",
+              "CZ",
+              "LV",
+              "AX",
+              "FI",
+              "VA",
+              "PL",
+              "GE",
+              "PT",
+              "RO",
+              "IM",
+              "IT",
+              "MT",
+              "UA",
+              "GB",
+              "TR",
+              "BV",
+              "IE",
+              "JE",
+              "CY",
+              "GG",
+              "DE",
+              "AL",
+              "AD",
+              "LU",
+              "SM",
+              "GR",
+              "AM",
+              "BY",
+              "DK",
+              "LT",
+              "RS",
+              "RE",
+              "HU",
+              "ME",
+              "JP",
+              "MC",
+              "XK",
+              "SK",
+              "HR",
+              "GI",
+              "GP",
+              "EE",
+              "SI",
+              "SE"
+            ]
+          },
+          {
+            "variant_ids": [
+              119525,
+              119526,
+              119527,
+              119528,
+              119529
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2199
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              119525,
+              119526,
+              119527,
+              119528,
+              119529
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1099
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 220
+            },
+            "countries": [
+              "CH",
+              "NO",
+              "LI",
+              "IS"
+            ]
+          },
+          {
+            "variant_ids": [
+              119525,
+              119526,
+              119527,
+              119528,
+              119529
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 599
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 300
+            },
+            "countries": [
+              "BR"
+            ]
+          },
+          {
+            "variant_ids": [
+              119525,
+              119526,
+              119527,
+              119528,
+              119529
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 849
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 209
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              119525,
+              119526,
+              119527,
+              119528,
+              119529
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1269
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 659
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              119525,
+              119526,
+              119527,
+              119528,
+              119529
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1500
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1000
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "provider": {
+        "id": 99,
+        "title": "Printify Choice"
+      },
+      "variants": {
+        "id": 99,
+        "title": "Printify Choice",
+        "variants": [
+          {
+            "id": 119525,
+            "title": "S / Black",
+            "options": {
+              "size": "S",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front_left_chest",
+                "decoration_method": "embroidery",
+                "height": 1200,
+                "width": 1200
+              },
+              {
+                "position": "front_center_chest",
+                "decoration_method": "embroidery",
+                "height": 1200,
+                "width": 1200
+              },
+              {
+                "position": "right_wrist",
+                "decoration_method": "embroidery",
+                "height": 900,
+                "width": 600
+              }
+            ]
+          },
+          {
+            "id": 119526,
+            "title": "M / Black",
+            "options": {
+              "size": "M",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front_left_chest",
+                "decoration_method": "embroidery",
+                "height": 1200,
+                "width": 1200
+              },
+              {
+                "position": "front_center_chest",
+                "decoration_method": "embroidery",
+                "height": 1200,
+                "width": 1200
+              },
+              {
+                "position": "right_wrist",
+                "decoration_method": "embroidery",
+                "height": 900,
+                "width": 600
+              }
+            ]
+          },
+          {
+            "id": 119527,
+            "title": "L / Black",
+            "options": {
+              "size": "L",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front_left_chest",
+                "decoration_method": "embroidery",
+                "height": 1200,
+                "width": 1200
+              },
+              {
+                "position": "front_center_chest",
+                "decoration_method": "embroidery",
+                "height": 1200,
+                "width": 1200
+              },
+              {
+                "position": "right_wrist",
+                "decoration_method": "embroidery",
+                "height": 900,
+                "width": 600
+              }
+            ]
+          },
+          {
+            "id": 119528,
+            "title": "XL / Black",
+            "options": {
+              "size": "XL",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front_left_chest",
+                "decoration_method": "embroidery",
+                "height": 1200,
+                "width": 1200
+              },
+              {
+                "position": "front_center_chest",
+                "decoration_method": "embroidery",
+                "height": 1200,
+                "width": 1200
+              },
+              {
+                "position": "right_wrist",
+                "decoration_method": "embroidery",
+                "height": 900,
+                "width": 600
+              }
+            ]
+          },
+          {
+            "id": 119529,
+            "title": "2XL / Black",
+            "options": {
+              "size": "2XL",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front_left_chest",
+                "decoration_method": "embroidery",
+                "height": 1200,
+                "width": 1200
+              },
+              {
+                "position": "front_center_chest",
+                "decoration_method": "embroidery",
+                "height": 1200,
+                "width": 1200
+              },
+              {
+                "position": "right_wrist",
+                "decoration_method": "embroidery",
+                "height": 900,
+                "width": 600
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              119525,
+              119526,
+              119527,
+              119528,
+              119529
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 739
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 209
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              119525,
+              119526,
+              119527,
+              119528,
+              119529
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1500
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1000
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              119525,
+              119526,
+              119527,
+              119528,
+              119529
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2199
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              119525,
+              119526,
+              119527,
+              119528,
+              119529
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 849
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 209
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              119525,
+              119526,
+              119527,
+              119528,
+              119529
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1269
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 659
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "blueprint": {
+    "id": 1482,
+    "title": "Car Air Freshener",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66c45d634184ae6cd90a2fe2",
+      "https://images.printify.com/66c45d645d0ebf49870aec45",
+      "https://images.printify.com/6671830168773fd15705aa93",
+      "https://images.printify.com/67ef905f97144cf40208afa5",
+      "https://images.printify.com/66698cfad5b85c218001b003"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 80,
+        "title": "M.i.A Merchandise"
+      },
+      "variants": {
+        "id": 80,
+        "title": "M.i.A Merchandise",
+        "variants": [
+          {
+            "id": 107442,
+            "title": "2.75\u0027\u0027 \u00D7 4\u0027\u0027 / Rectangle / Black Ice",
+            "options": {
+              "size": "2.75\u0027\u0027 \u00D7 4\u0027\u0027",
+              "shape": "Rectangle",
+              "scent": "Black Ice"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1252,
+                "width": 898
+              }
+            ]
+          },
+          {
+            "id": 107443,
+            "title": "2.75\u0027\u0027 \u00D7 4\u0027\u0027 / Rectangle / New Car",
+            "options": {
+              "size": "2.75\u0027\u0027 \u00D7 4\u0027\u0027",
+              "shape": "Rectangle",
+              "scent": "New Car"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1252,
+                "width": 898
+              }
+            ]
+          },
+          {
+            "id": 107444,
+            "title": "2.75\u0027\u0027 \u00D7 4\u0027\u0027 / Rectangle / Pine",
+            "options": {
+              "size": "2.75\u0027\u0027 \u00D7 4\u0027\u0027",
+              "shape": "Rectangle",
+              "scent": "Pine"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1252,
+                "width": 898
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              107442,
+              107443,
+              107444
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1629
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              107442,
+              107443,
+              107444
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2749
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "REST_OF_THE_WORLD",
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              107442,
+              107443,
+              107444
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 689
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 99
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

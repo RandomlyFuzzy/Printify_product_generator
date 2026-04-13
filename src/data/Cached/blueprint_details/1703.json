@@ -1,0 +1,141 @@
+{
+  "blueprint": {
+    "id": 1703,
+    "title": "Unisex Snapback Hat",
+    "brand": "Yupoong",
+    "model": "6089M",
+    "images": [
+      "https://images.printify.com/6964a5548397d19fae0148c2",
+      "https://images.printify.com/6964ea148a0d66d0040d7582",
+      "https://images.printify.com/6966319080fe1ff3460dfb28",
+      "https://images.printify.com/6964f2b9e120657a310ff0f4",
+      "https://images.printify.com/677fb2b726fc423ea20c22e7",
+      "https://images.printify.com/677fb2b871d38c314a082e23",
+      "https://images.printify.com/677fb2ba0ed8ecd2580006b3"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 41,
+        "title": "Duplium"
+      },
+      "variants": {
+        "id": 41,
+        "title": "Duplium",
+        "variants": [
+          {
+            "id": 117048,
+            "title": "One size / Black",
+            "options": {
+              "size": "One size",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtf",
+                "height": 750,
+                "width": 1654
+              }
+            ]
+          },
+          {
+            "id": 117049,
+            "title": "One size / Dark Heather",
+            "options": {
+              "size": "One size",
+              "color": "Dark Heather"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtf",
+                "height": 750,
+                "width": 1654
+              }
+            ]
+          },
+          {
+            "id": 117050,
+            "title": "One size / White",
+            "options": {
+              "size": "One size",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtf",
+                "height": 750,
+                "width": 1654
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              117048,
+              117049,
+              117050
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 929
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              117048,
+              117049,
+              117050
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1199
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 599
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              117048,
+              117049,
+              117050
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 749
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 99
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

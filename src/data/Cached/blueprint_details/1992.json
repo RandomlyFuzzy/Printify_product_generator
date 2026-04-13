@@ -1,0 +1,283 @@
+{
+  "blueprint": {
+    "id": 1992,
+    "title": "Wooden Cutting Board (Engraving)",
+    "brand": "JDS Industries",
+    "model": "",
+    "images": [
+      "https://images.printify.com/690084e17127a6ff7708a622",
+      "https://images.printify.com/690084e2970aec99dc05d052",
+      "https://images.printify.com/690084e514baa0e36109ba22",
+      "https://images.printify.com/690084e75bd20cb5f7023672",
+      "https://images.printify.com/690084e970956f87ef043982",
+      "https://images.printify.com/690084ee9bfe58b44a02b902",
+      "https://images.printify.com/690084ec06b5f8f9cf0ff0c2",
+      "https://images.printify.com/690084ea687c696af90f50a2",
+      "https://images.printify.com/6888afa61dae1cedab094533"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 261,
+        "title": "Fancy Fanny "
+      },
+      "variants": {
+        "id": 261,
+        "title": "Fancy Fanny ",
+        "variants": [
+          {
+            "id": 122910,
+            "title": "Rectangle / 9\u0022 x 6\u0022 / Maple",
+            "options": {
+              "size": "Rectangle / 9\u0022 x 6\u0022",
+              "color": "Maple"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "engraving",
+                "height": 1575,
+                "width": 1950
+              }
+            ]
+          },
+          {
+            "id": 122911,
+            "title": "Paddle / 13.5\u0022 x 7\u0022 / Maple",
+            "options": {
+              "size": "Paddle / 13.5\u0022 x 7\u0022",
+              "color": "Maple"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "engraving",
+                "height": 1800,
+                "width": 2325
+              }
+            ]
+          },
+          {
+            "id": 122912,
+            "title": "Rectangle / 9\u0022 x 6\u0022 / Walnut",
+            "options": {
+              "size": "Rectangle / 9\u0022 x 6\u0022",
+              "color": "Walnut"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "engraving",
+                "height": 1575,
+                "width": 1950
+              }
+            ]
+          },
+          {
+            "id": 122913,
+            "title": "Paddle / 13.5\u0022 x 7\u0022 / Walnut",
+            "options": {
+              "size": "Paddle / 13.5\u0022 x 7\u0022",
+              "color": "Walnut"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "engraving",
+                "height": 1800,
+                "width": 2325
+              }
+            ]
+          },
+          {
+            "id": 122914,
+            "title": "Rectangle with drip ring / 9\u0022 x 6\u0022 / Maple",
+            "options": {
+              "size": "Rectangle with drip ring / 9\u0022 x 6\u0022",
+              "color": "Maple"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "engraving",
+                "height": 1425,
+                "width": 2325
+              }
+            ]
+          },
+          {
+            "id": 122915,
+            "title": "Paddle with drip ring / 13.5\u0022 x 7\u0022 / Maple",
+            "options": {
+              "size": "Paddle with drip ring / 13.5\u0022 x 7\u0022",
+              "color": "Maple"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "engraving",
+                "height": 1710,
+                "width": 2151
+              }
+            ]
+          },
+          {
+            "id": 122916,
+            "title": "Rectangle with drip ring / 9\u0022 x 6\u0022 / Walnut",
+            "options": {
+              "size": "Rectangle with drip ring / 9\u0022 x 6\u0022",
+              "color": "Walnut"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "engraving",
+                "height": 1425,
+                "width": 2325
+              }
+            ]
+          },
+          {
+            "id": 122917,
+            "title": "Paddle with drip ring / 13.5\u0022 x 7\u0022 / Walnut",
+            "options": {
+              "size": "Paddle with drip ring / 13.5\u0022 x 7\u0022",
+              "color": "Walnut"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "engraving",
+                "height": 1710,
+                "width": 2151
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              122910,
+              122912,
+              122914,
+              122916
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1719
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 599
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              122910,
+              122912,
+              122914,
+              122916
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1459
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 219
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              122910,
+              122912,
+              122914,
+              122916
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1929
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 599
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              122911,
+              122913,
+              122915,
+              122917
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2969
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2809
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              122911,
+              122913,
+              122915,
+              122917
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2599
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2459
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              122911,
+              122913,
+              122915,
+              122917
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1769
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 329
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

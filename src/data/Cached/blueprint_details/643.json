@@ -1,0 +1,165 @@
+{
+  "blueprint": {
+    "id": 643,
+    "title": "Cutting Board",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d6fd2917bbdfb2420530b2",
+      "https://images.printify.com/66d6fd242b373125460caba2",
+      "https://images.printify.com/67ee93d889c30d10430677c2",
+      "https://images.printify.com/6152f863dacc7b6d82378185",
+      "https://images.printify.com/61533f3bae30d72872561334",
+      "https://images.printify.com/6152f8b3a10703405452c9b6",
+      "https://images.printify.com/61530039dacc7b6d82379203"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 70,
+        "title": "Printed Mint"
+      },
+      "variants": {
+        "id": 70,
+        "title": "Printed Mint",
+        "variants": [
+          {
+            "id": 74549,
+            "title": "Large",
+            "options": {
+              "size": "Large"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 3450,
+                "width": 4800
+              }
+            ]
+          },
+          {
+            "id": 74550,
+            "title": "Small",
+            "options": {
+              "size": "Small"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 2550,
+                "width": 3525
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              74549
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1769
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 329
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              74549
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2599
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2459
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              74550
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1459
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 219
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              74550
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1719
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 599
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              74549
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2969
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2809
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              74550
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1929
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 599
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

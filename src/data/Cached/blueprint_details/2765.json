@@ -1,0 +1,310 @@
+{
+  "blueprint": {
+    "id": 2765,
+    "title": "Gym Bag",
+    "brand": "Port \u0026 Company\u00AE",
+    "model": "BG970",
+    "images": [
+      "https://images.printify.com/6926df901b7f789e7b06fa93",
+      "https://images.printify.com/6926df8e4f84b8cbd208b363",
+      "https://images.printify.com/6926df8f21a226308806f673",
+      "https://images.printify.com/6926df91d16aae2ab60b39e2",
+      "https://images.printify.com/6926df98877c7306120fbf24",
+      "https://images.printify.com/6926df950e08fe66660a28f2",
+      "https://images.printify.com/6926df9384d07d391b032d13",
+      "https://images.printify.com/6926df97a6121aa98c04f324",
+      "https://images.printify.com/6926df946e4f0a130d09fdd3",
+      "https://images.printify.com/6926df92825fc914bc0c1f92"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 217,
+        "title": "Fulfill Engine"
+      },
+      "variants": {
+        "id": 217,
+        "title": "Fulfill Engine",
+        "variants": [
+          {
+            "id": 149520,
+            "title": "Black / One size",
+            "options": {
+              "color": "Black",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "back",
+                "decoration_method": "dtf",
+                "height": 1500,
+                "width": 1500
+              },
+              {
+                "position": "back_embroidery",
+                "decoration_method": "embroidery",
+                "height": 1500,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 149521,
+            "title": "Gold / One size",
+            "options": {
+              "color": "Gold",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "back",
+                "decoration_method": "dtf",
+                "height": 1500,
+                "width": 1500
+              },
+              {
+                "position": "back_embroidery",
+                "decoration_method": "embroidery",
+                "height": 1500,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 149522,
+            "title": "Hunter / One size",
+            "options": {
+              "color": "Hunter",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "back",
+                "decoration_method": "dtf",
+                "height": 1500,
+                "width": 1500
+              },
+              {
+                "position": "back_embroidery",
+                "decoration_method": "embroidery",
+                "height": 1500,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 149523,
+            "title": "Maroon / One size",
+            "options": {
+              "color": "Maroon",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "back",
+                "decoration_method": "dtf",
+                "height": 1500,
+                "width": 1500
+              },
+              {
+                "position": "back_embroidery",
+                "decoration_method": "embroidery",
+                "height": 1500,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 149524,
+            "title": "Navy / One size",
+            "options": {
+              "color": "Navy",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "back",
+                "decoration_method": "dtf",
+                "height": 1500,
+                "width": 1500
+              },
+              {
+                "position": "back_embroidery",
+                "decoration_method": "embroidery",
+                "height": 1500,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 149525,
+            "title": "Red / One size",
+            "options": {
+              "color": "Red",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "back",
+                "decoration_method": "dtf",
+                "height": 1500,
+                "width": 1500
+              },
+              {
+                "position": "back_embroidery",
+                "decoration_method": "embroidery",
+                "height": 1500,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 149526,
+            "title": "Royal / One size",
+            "options": {
+              "color": "Royal",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "back",
+                "decoration_method": "dtf",
+                "height": 1500,
+                "width": 1500
+              },
+              {
+                "position": "back_embroidery",
+                "decoration_method": "embroidery",
+                "height": 1500,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 149527,
+            "title": "Tropical Pink / One size",
+            "options": {
+              "color": "Tropical Pink",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "back",
+                "decoration_method": "dtf",
+                "height": 1500,
+                "width": 1500
+              },
+              {
+                "position": "back_embroidery",
+                "decoration_method": "embroidery",
+                "height": 1500,
+                "width": 1500
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              149520,
+              149521,
+              149522,
+              149523,
+              149524,
+              149525,
+              149526,
+              149527
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 929
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              149520,
+              149521,
+              149522,
+              149523,
+              149524,
+              149525,
+              149526,
+              149527
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2199
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              149520,
+              149521,
+              149522,
+              149523,
+              149524,
+              149525,
+              149526,
+              149527
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1179
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 579
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              149520,
+              149521,
+              149522,
+              149523,
+              149524,
+              149525,
+              149526,
+              149527
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2059
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 759
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

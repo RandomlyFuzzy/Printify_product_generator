@@ -1,0 +1,132 @@
+{
+  "blueprint": {
+    "id": 553,
+    "title": "Cotton Tote Bag",
+    "brand": "AS Colour",
+    "model": "1001",
+    "images": [
+      "https://images.printify.com/66dade985b5ac06ef50ad143",
+      "https://images.printify.com/66f4fcad772801d5480badb2",
+      "https://images.printify.com/5fc8e0ebb9621a125d76e8c2",
+      "https://images.printify.com/5fcf9ec762643b60243ef0c3",
+      "https://images.printify.com/5fcf9ec983f0563aa4588b47"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 34,
+        "title": "The Print Bar"
+      },
+      "variants": {
+        "id": 34,
+        "title": "The Print Bar",
+        "variants": [
+          {
+            "id": 70603,
+            "title": "One size / Black",
+            "options": {
+              "size": "One size",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3425,
+                "width": 2835
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 3425,
+                "width": 2835
+              }
+            ]
+          },
+          {
+            "id": 70646,
+            "title": "One size / Cream",
+            "options": {
+              "size": "One size",
+              "color": "Cream"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3425,
+                "width": 2835
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 3425,
+                "width": 2835
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              70603,
+              70646
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 639
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 139
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              70603,
+              70646
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1249
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 139
+            },
+            "countries": [
+              "NZ"
+            ]
+          },
+          {
+            "variant_ids": [
+              70603,
+              70646
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1449
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 159
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

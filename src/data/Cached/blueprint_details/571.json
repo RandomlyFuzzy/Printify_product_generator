@@ -1,0 +1,309 @@
+{
+  "blueprint": {
+    "id": 571,
+    "title": "Pet Tank Top",
+    "brand": "Doggie Skins",
+    "model": "3902",
+    "images": [
+      "https://images.printify.com/66d6e6f94cec23dd2f07e2f2",
+      "https://images.printify.com/66f4fd931c8007b1000f4594",
+      "https://images.printify.com/6059ee9efad83d641e22afde",
+      "https://images.printify.com/6059ee9dca1f497d8e260e65"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 70,
+        "title": "Printed Mint"
+      },
+      "variants": {
+        "id": 70,
+        "title": "Printed Mint",
+        "variants": [
+          {
+            "id": 71115,
+            "title": "M / Black",
+            "options": {
+              "size": "M",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 2100,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 71116,
+            "title": "M / Heather",
+            "options": {
+              "size": "M",
+              "color": "Heather"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 2100,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 71117,
+            "title": "M / Pink",
+            "options": {
+              "size": "M",
+              "color": "Pink"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 2100,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 71118,
+            "title": "M / White",
+            "options": {
+              "size": "M",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 2100,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 71119,
+            "title": "L / Black",
+            "options": {
+              "size": "L",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 2400,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 71120,
+            "title": "L / Heather",
+            "options": {
+              "size": "L",
+              "color": "Heather"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 2400,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 71121,
+            "title": "L / Pink",
+            "options": {
+              "size": "L",
+              "color": "Pink"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 2400,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 71122,
+            "title": "L / White",
+            "options": {
+              "size": "L",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 2400,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 71123,
+            "title": "XL / Black",
+            "options": {
+              "size": "XL",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3300,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 71124,
+            "title": "XL / Heather",
+            "options": {
+              "size": "XL",
+              "color": "Heather"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3300,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 71125,
+            "title": "XL / Pink",
+            "options": {
+              "size": "XL",
+              "color": "Pink"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3300,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 71126,
+            "title": "XL / White",
+            "options": {
+              "size": "XL",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3300,
+                "width": 1500
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              71115,
+              71116,
+              71117,
+              71118,
+              71119,
+              71120,
+              71121,
+              71122,
+              71123,
+              71124,
+              71125,
+              71126
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 579
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 99
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              71115,
+              71116,
+              71117,
+              71118,
+              71119,
+              71120,
+              71121,
+              71122,
+              71123,
+              71124,
+              71125,
+              71126
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 949
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              71115,
+              71116,
+              71117,
+              71118,
+              71119,
+              71120,
+              71121,
+              71122,
+              71123,
+              71124,
+              71125,
+              71126
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 959
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 219
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

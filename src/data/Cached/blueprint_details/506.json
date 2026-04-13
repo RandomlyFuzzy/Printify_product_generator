@@ -1,0 +1,100 @@
+{
+  "blueprint": {
+    "id": 506,
+    "title": "Mixed-Fabric Face Mask",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d5c7f4de3247673e010572",
+      "https://images.printify.com/66d5c7f3132a2ab0ef01cc25",
+      "https://images.printify.com/5f369e247bbfec337225f413",
+      "https://images.printify.com/5f36a1fe7bbfec337225f417",
+      "https://images.printify.com/5f36bd317bbfec337225f435"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 33,
+        "title": "Tribe Socks"
+      },
+      "variants": {
+        "id": 33,
+        "title": "Tribe Socks",
+        "variants": [
+          {
+            "id": 67626,
+            "title": "One size",
+            "options": {
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1612,
+                "width": 2176
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              67626
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 509
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 49
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              67626
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1869
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 219
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              67626
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2279
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

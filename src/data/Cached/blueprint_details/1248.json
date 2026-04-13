@@ -1,0 +1,258 @@
+{
+  "blueprint": {
+    "id": 1248,
+    "title": "Sunsplash Tumbler with Straw, 16oz",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d05ac1e23e05e0870defc6",
+      "https://images.printify.com/66d05abfa619595f71057984",
+      "https://images.printify.com/67ed03341f4b863f6f09d116",
+      "https://images.printify.com/645a44dcbc68ac0af70f9c74"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 228,
+        "title": "Taylor"
+      },
+      "variants": {
+        "id": 228,
+        "title": "Taylor",
+        "variants": [
+          {
+            "id": 94267,
+            "title": "Apple / 16oz",
+            "options": {
+              "color": "Apple",
+              "size": "16oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 1500,
+                "width": 2965
+              }
+            ]
+          },
+          {
+            "id": 94268,
+            "title": "Clear / 16oz",
+            "options": {
+              "color": "Clear",
+              "size": "16oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 1500,
+                "width": 2965
+              }
+            ]
+          },
+          {
+            "id": 94269,
+            "title": "Dark Blue / 16oz",
+            "options": {
+              "color": "Dark Blue",
+              "size": "16oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 1500,
+                "width": 2965
+              }
+            ]
+          },
+          {
+            "id": 94270,
+            "title": "Dark Green / 16oz",
+            "options": {
+              "color": "Dark Green",
+              "size": "16oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 1500,
+                "width": 2965
+              }
+            ]
+          },
+          {
+            "id": 94271,
+            "title": "Fuchsia / 16oz",
+            "options": {
+              "color": "Fuchsia",
+              "size": "16oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 1500,
+                "width": 2965
+              }
+            ]
+          },
+          {
+            "id": 94272,
+            "title": "Graphite Gray / 16oz",
+            "options": {
+              "color": "Graphite Gray",
+              "size": "16oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 1500,
+                "width": 2965
+              }
+            ]
+          },
+          {
+            "id": 94273,
+            "title": "Light Blue / 16oz",
+            "options": {
+              "color": "Light Blue",
+              "size": "16oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 1500,
+                "width": 2965
+              }
+            ]
+          },
+          {
+            "id": 94274,
+            "title": "Pineapple / 16oz",
+            "options": {
+              "color": "Pineapple",
+              "size": "16oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 1500,
+                "width": 2965
+              }
+            ]
+          },
+          {
+            "id": 94277,
+            "title": "Tangerine / 16oz",
+            "options": {
+              "color": "Tangerine",
+              "size": "16oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 1500,
+                "width": 2965
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              94267,
+              94268,
+              94269,
+              94270,
+              94271,
+              94272,
+              94273,
+              94274,
+              94275,
+              94276,
+              94277
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 829
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 349
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              94267,
+              94268,
+              94269,
+              94270,
+              94271,
+              94272,
+              94273,
+              94274,
+              94275,
+              94276,
+              94277
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2459
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1529
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              94267,
+              94268,
+              94269,
+              94270,
+              94271,
+              94272,
+              94273,
+              94274,
+              94275,
+              94276,
+              94277
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1579
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1099
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

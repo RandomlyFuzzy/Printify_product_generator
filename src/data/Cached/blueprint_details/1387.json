@@ -1,0 +1,277 @@
+{
+  "blueprint": {
+    "id": 1387,
+    "title": "Square Sticker Label Rolls",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66cc6ffea053bd48a4024882",
+      "https://images.printify.com/66cc6ffc942f636fe20fcd27",
+      "https://images.printify.com/6560e2f5b6df367a7c0d4ca2",
+      "https://images.printify.com/6560e4c49ef9ef608d078eb2",
+      "https://images.printify.com/6560e4c30a69a2bb3f038062"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 73,
+        "title": "Printed Simply"
+      },
+      "variants": {
+        "id": 73,
+        "title": "Printed Simply",
+        "variants": [
+          {
+            "id": 103571,
+            "title": "1\u0027\u0027 x 1\u0027\u0027 / 50 pcs / Glossy",
+            "options": {
+              "size": "1\u0027\u0027 x 1\u0027\u0027",
+              "quantity": "50 pcs",
+              "paper": "Glossy"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 324,
+                "width": 324
+              }
+            ]
+          },
+          {
+            "id": 103572,
+            "title": "1\u0027\u0027 x 1\u0027\u0027 / 100 pcs / Glossy",
+            "options": {
+              "size": "1\u0027\u0027 x 1\u0027\u0027",
+              "quantity": "100 pcs",
+              "paper": "Glossy"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 324,
+                "width": 324
+              }
+            ]
+          },
+          {
+            "id": 103573,
+            "title": "1\u0027\u0027 x 1\u0027\u0027 / 250 pcs / Glossy",
+            "options": {
+              "size": "1\u0027\u0027 x 1\u0027\u0027",
+              "quantity": "250 pcs",
+              "paper": "Glossy"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 324,
+                "width": 324
+              }
+            ]
+          },
+          {
+            "id": 103574,
+            "title": "2\u0022 \u00D7 2\u0022 / 50 pcs / Glossy",
+            "options": {
+              "size": "2\u0022 \u00D7 2\u0022",
+              "quantity": "50 pcs",
+              "paper": "Glossy"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 624,
+                "width": 624
+              }
+            ]
+          },
+          {
+            "id": 103575,
+            "title": "2\u0022 \u00D7 2\u0022 / 100 pcs / Glossy",
+            "options": {
+              "size": "2\u0022 \u00D7 2\u0022",
+              "quantity": "100 pcs",
+              "paper": "Glossy"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 624,
+                "width": 624
+              }
+            ]
+          },
+          {
+            "id": 103576,
+            "title": "2\u0022 \u00D7 2\u0022 / 250 pcs / Glossy",
+            "options": {
+              "size": "2\u0022 \u00D7 2\u0022",
+              "quantity": "250 pcs",
+              "paper": "Glossy"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 624,
+                "width": 624
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              103571,
+              103574
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1009
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 119
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              103572,
+              103575
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1009
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 289
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              103571,
+              103572,
+              103574,
+              103575
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 559
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 99
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              103571,
+              103574
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 939
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              103572,
+              103575
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1049
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              103573,
+              103576
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1159
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              103573,
+              103576
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 649
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              103573,
+              103576
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1169
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 459
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

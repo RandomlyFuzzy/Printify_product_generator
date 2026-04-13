@@ -1,0 +1,84 @@
+{
+  "blueprint": {
+    "id": 1614,
+    "title": "Golf Towels",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/67c8384b110ed230cd0d4522",
+      "https://images.printify.com/67c97eb6c3c0f068c80ec4c2",
+      "https://images.printify.com/67c8385bf87046ca210bec62",
+      "https://images.printify.com/67c838632c677fe8a10c4f72"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 228,
+        "title": "Taylor"
+      },
+      "variants": {
+        "id": 228,
+        "title": "Taylor",
+        "variants": [
+          {
+            "id": 112488,
+            "title": "16\u0027\u0027 \u00D7 24\u0027\u0027",
+            "options": {
+              "size": "16\u0027\u0027 \u00D7 24\u0027\u0027"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 7350,
+                "width": 5043
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              112488
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 539
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 259
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              112488
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1119
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 359
+            },
+            "countries": [
+              "REST_OF_THE_WORLD",
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

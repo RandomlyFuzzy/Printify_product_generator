@@ -1,0 +1,438 @@
+{
+  "blueprint": {
+    "id": 1086,
+    "title": "Round Pins",
+    "brand": "Tecre",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d5b2f67a23d3f14f09d90d",
+      "https://images.printify.com/66d5b2f728813f3bb10dfdd5",
+      "https://images.printify.com/67330179eafc491839045cf2",
+      "https://images.printify.com/62c4087d0ad977430e0ddf26"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 41,
+        "title": "Duplium"
+      },
+      "variants": {
+        "id": 41,
+        "title": "Duplium",
+        "variants": [
+          {
+            "id": 81495,
+            "title": "1\u0022 / Round / 1 pc",
+            "options": {
+              "size": "1\u0022",
+              "shape": "Round",
+              "quantity": "1 pc"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 450,
+                "width": 450
+              }
+            ]
+          },
+          {
+            "id": 81496,
+            "title": "1\u0022 / Round / 10 pcs",
+            "options": {
+              "size": "1\u0022",
+              "shape": "Round",
+              "quantity": "10 pcs"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 450,
+                "width": 450
+              }
+            ]
+          },
+          {
+            "id": 81497,
+            "title": "1.25\u0022 / Round / 1 pc",
+            "options": {
+              "size": "1.25\u0022",
+              "shape": "Round",
+              "quantity": "1 pc"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 525,
+                "width": 525
+              }
+            ]
+          },
+          {
+            "id": 81498,
+            "title": "1.25\u0022 / Round / 10 pcs",
+            "options": {
+              "size": "1.25\u0022",
+              "shape": "Round",
+              "quantity": "10 pcs"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 525,
+                "width": 525
+              }
+            ]
+          },
+          {
+            "id": 81499,
+            "title": "2.25\u0022 / Round / 1 pc",
+            "options": {
+              "size": "2.25\u0022",
+              "shape": "Round",
+              "quantity": "1 pc"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 825,
+                "width": 825
+              }
+            ]
+          },
+          {
+            "id": 81500,
+            "title": "2.25\u0022 / Round / 10 pcs",
+            "options": {
+              "size": "2.25\u0022",
+              "shape": "Round",
+              "quantity": "10 pcs"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 825,
+                "width": 825
+              }
+            ]
+          },
+          {
+            "id": 81501,
+            "title": "3.5\u0022 / Round / 1 pc",
+            "options": {
+              "size": "3.5\u0022",
+              "shape": "Round",
+              "quantity": "1 pc"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1200,
+                "width": 1200
+              }
+            ]
+          },
+          {
+            "id": 81502,
+            "title": "3.5\u0022 / Round / 10 pcs",
+            "options": {
+              "size": "3.5\u0022",
+              "shape": "Round",
+              "quantity": "10 pcs"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1200,
+                "width": 1200
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              81495,
+              81497,
+              81499,
+              81501
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 799
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 99
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              81495,
+              81497,
+              81499,
+              81501
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 829
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 129
+            },
+            "countries": [
+              "AM",
+              "BG",
+              "DE",
+              "GP",
+              "SM",
+              "NL",
+              "UA",
+              "GB",
+              "BE",
+              "EE",
+              "AD",
+              "GL",
+              "SK",
+              "BV",
+              "HU",
+              "BY",
+              "ME",
+              "AT",
+              "VA",
+              "IT",
+              "PT",
+              "GE",
+              "GI",
+              "GG",
+              "IE",
+              "JE",
+              "LV",
+              "MC",
+              "CY",
+              "AX",
+              "HR",
+              "FR",
+              "LU",
+              "FO",
+              "DK",
+              "NO",
+              "RS",
+              "GR",
+              "PL",
+              "SI",
+              "MK",
+              "ES",
+              "CH",
+              "TR",
+              "SE",
+              "IM",
+              "XK",
+              "MD",
+              "FI",
+              "LI",
+              "RO",
+              "AL",
+              "BA",
+              "CZ",
+              "IS",
+              "LT",
+              "MT",
+              "RE"
+            ]
+          },
+          {
+            "variant_ids": [
+              81495,
+              81497,
+              81499,
+              81501
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 869
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 159
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              81495,
+              81497,
+              81499,
+              81501
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1589
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              81496,
+              81498,
+              81500,
+              81502
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 949
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "BE",
+              "AL",
+              "BV",
+              "GI",
+              "GR",
+              "EE",
+              "BG",
+              "JE",
+              "MK",
+              "ES",
+              "TR",
+              "IE",
+              "IT",
+              "LV",
+              "CH",
+              "GB",
+              "CZ",
+              "GL",
+              "GP",
+              "HU",
+              "MT",
+              "HR",
+              "AX",
+              "PL",
+              "UA",
+              "FR",
+              "LT",
+              "SM",
+              "AD",
+              "AM",
+              "CY",
+              "DE",
+              "GG",
+              "LI",
+              "LU",
+              "FO",
+              "IS",
+              "IM",
+              "BA",
+              "AT",
+              "BY",
+              "NL",
+              "NO",
+              "MD",
+              "RS",
+              "XK",
+              "FI",
+              "RO",
+              "SE",
+              "GE",
+              "ME",
+              "RE",
+              "VA",
+              "MC",
+              "PT",
+              "DK",
+              "SK",
+              "SI"
+            ]
+          },
+          {
+            "variant_ids": [
+              81496,
+              81498,
+              81500,
+              81502
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              81496,
+              81498,
+              81500,
+              81502
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 239
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              81496,
+              81498,
+              81500,
+              81502
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1869
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 299
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

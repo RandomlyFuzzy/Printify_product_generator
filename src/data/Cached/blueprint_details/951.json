@@ -1,0 +1,120 @@
+{
+  "blueprint": {
+    "id": 951,
+    "title": "Can Cooler",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d897665348e4bfbb03cd74",
+      "https://images.printify.com/66d89764cc80c572b5051542",
+      "https://images.printify.com/67efab68175fb95591062a52",
+      "https://images.printify.com/6229e121feed613e16720d50",
+      "https://images.printify.com/6229e11afeed613e16720d45",
+      "https://images.printify.com/6229e11cfeed613e16720d49",
+      "https://images.printify.com/6229e11ee89e737c0d600d24"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 92,
+        "title": "Pic the Gift"
+      },
+      "variants": {
+        "id": 92,
+        "title": "Pic the Gift",
+        "variants": [
+          {
+            "id": 78460,
+            "title": "Regular Can",
+            "options": {
+              "size": "Regular Can"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 3300,
+                "width": 1425
+              }
+            ]
+          },
+          {
+            "id": 78461,
+            "title": "Slim Can",
+            "options": {
+              "size": "Slim Can"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 4161,
+                "width": 1382
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              78460,
+              78461
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 609
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 89
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              78460,
+              78461
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 989
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 159
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              78460,
+              78461
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 939
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 239
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

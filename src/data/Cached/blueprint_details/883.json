@@ -1,0 +1,335 @@
+{
+  "blueprint": {
+    "id": 883,
+    "title": "Mini Clutch Bag",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d98e1d7930ebd8050db5b2",
+      "https://images.printify.com/66d98e2a6d78f41f97045be3",
+      "https://images.printify.com/61d6c5382a306f12f8486ad2"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 23,
+        "title": "WOYC"
+      },
+      "variants": {
+        "id": 23,
+        "title": "WOYC",
+        "variants": [
+          {
+            "id": 77341,
+            "title": "6.3\u201D x 4\u201D / White",
+            "options": {
+              "size": "6.3\u201D x 4\u201D",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1221,
+                "width": 1937
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 1221,
+                "width": 1937
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              77341
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 509
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 169
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              77341
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1709
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 519
+            },
+            "countries": [
+              "NZ"
+            ]
+          },
+          {
+            "variant_ids": [
+              77341
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 799
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "BA",
+              "MK",
+              "AL",
+              "FO",
+              "SK",
+              "AD",
+              "AX",
+              "GE",
+              "GL",
+              "BY",
+              "HR",
+              "PL",
+              "CH",
+              "FR",
+              "FI",
+              "HU",
+              "IS",
+              "MD",
+              "RS",
+              "CZ",
+              "SM",
+              "BE",
+              "MC",
+              "UA",
+              "XK",
+              "GR",
+              "JE",
+              "LI",
+              "TR",
+              "ME",
+              "IE",
+              "IM",
+              "MT",
+              "BV",
+              "GI",
+              "VA",
+              "AT",
+              "CY",
+              "GP",
+              "LU",
+              "PT",
+              "LT",
+              "RO",
+              "SI",
+              "AM",
+              "IT",
+              "DK",
+              "EE",
+              "GG",
+              "LV",
+              "NO",
+              "NL",
+              "RE",
+              "ES",
+              "BG",
+              "SE"
+            ]
+          },
+          {
+            "variant_ids": [
+              77341
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1939
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "PE",
+              "BR",
+              "CL",
+              "GY",
+              "VE",
+              "AN",
+              "FK",
+              "SR",
+              "REST_OF_THE_WORLD",
+              "AR",
+              "CO",
+              "GF",
+              "PY",
+              "BO",
+              "EC",
+              "UY"
+            ]
+          },
+          {
+            "variant_ids": [
+              77341
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2429
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 319
+            },
+            "countries": [
+              "BD",
+              "IL",
+              "KG",
+              "SA",
+              "UZ",
+              "MV",
+              "TH",
+              "IN",
+              "KR",
+              "KW",
+              "MO",
+              "RU",
+              "CX",
+              "KH",
+              "MN",
+              "LA",
+              "AE",
+              "IO",
+              "HK",
+              "NP",
+              "IQ",
+              "SY",
+              "OM",
+              "YE",
+              "TW",
+              "AZ",
+              "ID",
+              "IR",
+              "LB",
+              "QA",
+              "CN",
+              "CC",
+              "MY",
+              "PK",
+              "BN",
+              "JP",
+              "KZ",
+              "AF",
+              "BH",
+              "JO",
+              "SG",
+              "LK",
+              "MM",
+              "PH",
+              "PS",
+              "TJ",
+              "TM",
+              "VN",
+              "BT"
+            ]
+          },
+          {
+            "variant_ids": [
+              77341
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 939
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 189
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              77341
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 549
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "DE"
+            ]
+          },
+          {
+            "variant_ids": [
+              77341
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 449
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "GB"
+            ]
+          },
+          {
+            "variant_ids": [
+              77341
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2199
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 299
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              77341
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 599
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

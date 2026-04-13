@@ -1,0 +1,156 @@
+{
+  "blueprint": {
+    "id": 791,
+    "title": "Latte Mug, 12oz",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66cd880123cb8ec974071c46",
+      "https://images.printify.com/66cd87ff9debc007dc092902"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 41,
+        "title": "Duplium"
+      },
+      "variants": {
+        "id": 41,
+        "title": "Duplium",
+        "variants": [
+          {
+            "id": 74945,
+            "title": "12oz / White",
+            "options": {
+              "size": "12oz",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1197,
+                "width": 2585
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              74945
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1350
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 490
+            },
+            "countries": [
+              "IM",
+              "ME",
+              "SK",
+              "HR",
+              "FR",
+              "LT",
+              "LU",
+              "SM",
+              "AD",
+              "HU",
+              "IE",
+              "CH",
+              "XK",
+              "VA",
+              "NO",
+              "DK",
+              "GR",
+              "NL",
+              "RO",
+              "RS",
+              "AT",
+              "GB",
+              "AL",
+              "BY",
+              "CZ",
+              "SE",
+              "DE",
+              "RE",
+              "SI",
+              "BV",
+              "REST_OF_THE_WORLD",
+              "GG",
+              "MK",
+              "FI",
+              "MC",
+              "GI",
+              "LI",
+              "PT",
+              "AX",
+              "EE",
+              "IT",
+              "MT",
+              "ES",
+              "AM",
+              "BA",
+              "CY",
+              "IS",
+              "PL",
+              "BG",
+              "GL",
+              "BE",
+              "GE",
+              "GP",
+              "JE",
+              "LV",
+              "MD",
+              "TR",
+              "UA",
+              "FO"
+            ]
+          },
+          {
+            "variant_ids": [
+              74945
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 799
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              74945
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2230
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 290
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

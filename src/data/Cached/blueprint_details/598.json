@@ -1,0 +1,141 @@
+{
+  "blueprint": {
+    "id": 598,
+    "title": "Bumper Stickers",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d6ef18d7d6613d59099745",
+      "https://images.printify.com/66d6ef16aef46028ac03a153",
+      "https://images.printify.com/672e06c8507b9a58d80ecdd2",
+      "https://images.printify.com/672e06c97ad2d5d88b08e393"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 73,
+        "title": "Printed Simply"
+      },
+      "variants": {
+        "id": 73,
+        "title": "Printed Simply",
+        "variants": [
+          {
+            "id": 71929,
+            "title": "7.5\u0022 \u00D7 3.75\u0022 / Rectangle / White",
+            "options": {
+              "size": "7.5\u0022 \u00D7 3.75\u0022",
+              "shape": "Rectangle",
+              "surface": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1196,
+                "width": 2321
+              }
+            ]
+          },
+          {
+            "id": 71930,
+            "title": "11\u0022 \u00D7 3\u0022 / Rectangle / White",
+            "options": {
+              "size": "11\u0022 \u00D7 3\u0022",
+              "shape": "Rectangle",
+              "surface": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 971,
+                "width": 3371
+              }
+            ]
+          },
+          {
+            "id": 71931,
+            "title": "15\u0022 \u00D7 3.75\u0022 / Rectangle / White",
+            "options": {
+              "size": "15\u0022 \u00D7 3.75\u0022",
+              "shape": "Rectangle",
+              "surface": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1196,
+                "width": 4571
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              71929,
+              71930,
+              71931
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 929
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 49
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              71929,
+              71930,
+              71931
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 509
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 7
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              71929,
+              71930,
+              71931
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1049
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 55
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

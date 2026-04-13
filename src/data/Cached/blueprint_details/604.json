@@ -1,0 +1,156 @@
+{
+  "blueprint": {
+    "id": 604,
+    "title": "Vacuum Insulated Tumbler, 11oz",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d6f18c6c09f2d56b024076",
+      "https://images.printify.com/66d6f188de6cb5bd030752a2",
+      "https://images.printify.com/60a5da3f67b08531b7257d7b",
+      "https://images.printify.com/60b0f2db1ba151568e7ebd63"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 75,
+        "title": "SwagRabbit"
+      },
+      "variants": {
+        "id": 75,
+        "title": "SwagRabbit",
+        "variants": [
+          {
+            "id": 71802,
+            "title": "Grey / 11oz",
+            "options": {
+              "color": "Grey",
+              "size": "11oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 897,
+                "width": 2910
+              }
+            ]
+          },
+          {
+            "id": 71803,
+            "title": "Turquoise / 11oz",
+            "options": {
+              "color": "Turquoise",
+              "size": "11oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 897,
+                "width": 2910
+              }
+            ]
+          },
+          {
+            "id": 71804,
+            "title": "White / 11oz",
+            "options": {
+              "color": "White",
+              "size": "11oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 897,
+                "width": 2910
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              71802,
+              71803,
+              71804
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 559
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 299
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              71802,
+              71803,
+              71804
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1139
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 279
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              71802,
+              71803,
+              71804
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 589
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 369
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              71802,
+              71803,
+              71804
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 969
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 289
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,159 @@
+{
+  "blueprint": {
+    "id": 892,
+    "title": "Stainless Steel Water Bottle",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66cf2196f83833bab80e02e4",
+      "https://images.printify.com/66cf2194f40e801162084194",
+      "https://images.printify.com/61eec9751dd9303af83f9905",
+      "https://images.printify.com/61eecd72153ef85fcf3f579f",
+      "https://images.printify.com/67e407f81389081ba1062b74"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 41,
+        "title": "Duplium"
+      },
+      "variants": {
+        "id": 41,
+        "title": "Duplium",
+        "variants": [
+          {
+            "id": 77102,
+            "title": "20oz / White",
+            "options": {
+              "size": "20oz",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1688,
+                "width": 2700
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              77102
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1429
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 599
+            },
+            "countries": [
+              "AX",
+              "BA",
+              "FR",
+              "AM",
+              "CY",
+              "CZ",
+              "GR",
+              "RO",
+              "SE",
+              "AT",
+              "BG",
+              "IM",
+              "PL",
+              "GP",
+              "IS",
+              "EE",
+              "GE",
+              "LT",
+              "GI",
+              "LV",
+              "SI",
+              "AL",
+              "HU",
+              "BE",
+              "UA",
+              "JE",
+              "DK",
+              "GL",
+              "FO",
+              "AD",
+              "MT",
+              "MD",
+              "ME",
+              "BY",
+              "CH",
+              "LU",
+              "HR",
+              "MK",
+              "PT",
+              "REST_OF_THE_WORLD",
+              "VA",
+              "FI",
+              "DE",
+              "GG",
+              "LI",
+              "RE",
+              "TR",
+              "XK",
+              "BV",
+              "IT",
+              "SM",
+              "RS",
+              "NL",
+              "ES",
+              "MC",
+              "NO",
+              "IE",
+              "SK",
+              "GB"
+            ]
+          },
+          {
+            "variant_ids": [
+              77102
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              77102
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1099
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 239
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

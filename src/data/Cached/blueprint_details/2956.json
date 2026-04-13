@@ -1,0 +1,200 @@
+{
+  "blueprint": {
+    "id": 2956,
+    "title": "Curved Bar Anklet (Engraving)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/6960e3f619980e17d70cad62",
+      "https://images.printify.com/6967a602dd784c67af0f58f2",
+      "https://images.printify.com/6967a3bb9de17367a1036cb2",
+      "https://images.printify.com/6967a3b2d679225863015ec2",
+      "https://images.printify.com/6967a3ac6a84f56193006b82",
+      "https://images.printify.com/6960e3f5db393063410207f3",
+      "https://images.printify.com/6960e3f3d99f5bbc42025012",
+      "https://images.printify.com/6960e3effcdd4a452a0ef642"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 217,
+        "title": "Fulfill Engine"
+      },
+      "variants": {
+        "id": 217,
+        "title": "Fulfill Engine",
+        "variants": [
+          {
+            "id": 164449,
+            "title": "18K Gold PVD coating / One Size",
+            "options": {
+              "color": "18K Gold PVD coating",
+              "size": "One Size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "laser-engraving",
+                "height": 180,
+                "width": 1800
+              }
+            ]
+          },
+          {
+            "id": 164450,
+            "title": "18K Rose Gold PVD coating / One Size",
+            "options": {
+              "color": "18K Rose Gold PVD coating",
+              "size": "One Size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "laser-engraving",
+                "height": 180,
+                "width": 1800
+              }
+            ]
+          },
+          {
+            "id": 164451,
+            "title": "Stainless Steel / One Size",
+            "options": {
+              "color": "Stainless Steel",
+              "size": "One Size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "laser-engraving",
+                "height": 180,
+                "width": 1800
+              }
+            ]
+          },
+          {
+            "id": 164452,
+            "title": "Black / One Size",
+            "options": {
+              "color": "Black",
+              "size": "One Size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "laser-engraving",
+                "height": 180,
+                "width": 1800
+              }
+            ]
+          },
+          {
+            "id": 164453,
+            "title": "Rainbow / One Size",
+            "options": {
+              "color": "Rainbow",
+              "size": "One Size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "laser-engraving",
+                "height": 180,
+                "width": 1800
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              164449,
+              164450,
+              164451,
+              164452,
+              164453
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 449
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 209
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              164449,
+              164450,
+              164451,
+              164452,
+              164453
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 569
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              164449,
+              164450,
+              164451,
+              164452,
+              164453
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              164449,
+              164450,
+              164451,
+              164452,
+              164453
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 939
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

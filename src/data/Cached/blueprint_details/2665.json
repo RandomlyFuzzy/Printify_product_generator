@@ -1,0 +1,158 @@
+{
+  "blueprint": {
+    "id": 2665,
+    "title": "Soy Wax Candle in Jar, 9oz",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/68f748e21c477fc86b0d87b2",
+      "https://images.printify.com/68f748e4ccec3ca11f088033",
+      "https://images.printify.com/68f748e120c12525280464d2"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 80,
+        "title": "M.i.A Merchandise"
+      },
+      "variants": {
+        "id": 80,
+        "title": "M.i.A Merchandise",
+        "variants": [
+          {
+            "id": 147774,
+            "title": "9oz / Clear / White Sage Lavender",
+            "options": {
+              "size": "9oz",
+              "color": "Clear",
+              "scent": "White Sage Lavender"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 613,
+                "width": 913
+              }
+            ]
+          },
+          {
+            "id": 147775,
+            "title": "9oz / Clear / Cinnamon Vanilla",
+            "options": {
+              "size": "9oz",
+              "color": "Clear",
+              "scent": "Cinnamon Vanilla"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 613,
+                "width": 913
+              }
+            ]
+          },
+          {
+            "id": 147776,
+            "title": "9oz / Clear / Clean Cotton",
+            "options": {
+              "size": "9oz",
+              "color": "Clear",
+              "scent": "Clean Cotton"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 613,
+                "width": 913
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              147774,
+              147775,
+              147776
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 799
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 349
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              147774,
+              147775,
+              147776
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2519
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 879
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              147774,
+              147775,
+              147776
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2099
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 609
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              147774,
+              147775,
+              147776
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 969
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 369
+            },
+            "countries": [
+              "GB"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "blueprint": {
+    "id": 1464,
+    "title": "Car Magnets",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66e942cb699ae1ee3f06a852",
+      "https://images.printify.com/66e946d6e60acb628a029213",
+      "https://images.printify.com/67ed28150acfce1bc7000d42",
+      "https://images.printify.com/66227d110ce7eed20a035a02"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 28,
+        "title": "District Photo"
+      },
+      "variants": {
+        "id": 28,
+        "title": "District Photo",
+        "variants": [
+          {
+            "id": 105489,
+            "title": "5\u0027\u0027 \u00D7 5\u0027\u0027 / Rectangle / 1 pc",
+            "options": {
+              "size": "5\u0027\u0027 \u00D7 5\u0027\u0027",
+              "shape": "Rectangle",
+              "quantity": "1 pc"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1650,
+                "width": 1650
+              }
+            ]
+          },
+          {
+            "id": 105497,
+            "title": "10\u0027\u0027 \u00D7 3\u0027\u0027 / Rectangle / 1 pc",
+            "options": {
+              "size": "10\u0027\u0027 \u00D7 3\u0027\u0027",
+              "shape": "Rectangle",
+              "quantity": "1 pc"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1050,
+                "width": 3150
+              }
+            ]
+          },
+          {
+            "id": 105505,
+            "title": "7.5\u0027\u0027 \u00D7 4.5\u0027\u0027 / Rectangle / 1 pc",
+            "options": {
+              "size": "7.5\u0027\u0027 \u00D7 4.5\u0027\u0027",
+              "shape": "Rectangle",
+              "quantity": "1 pc"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1575,
+                "width": 2475
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              105489,
+              105497,
+              105505
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 459
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 49
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              105489,
+              105497,
+              105505
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1159
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "NZ",
+              "CA",
+              "AU",
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              105489,
+              105497,
+              105505
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 99
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

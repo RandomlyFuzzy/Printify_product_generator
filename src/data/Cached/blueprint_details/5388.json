@@ -1,0 +1,284 @@
+{
+  "blueprint": {
+    "id": 5388,
+    "title": "Frame Two-Tone Cap",
+    "brand": "AS Colour",
+    "model": "1165",
+    "images": [
+      "https://images.printify.com/69b94dd0f34511415f0eddb3",
+      "https://images.printify.com/69b94dcb5c31fe66d00d1a82",
+      "https://images.printify.com/69b94db3a4ce3d1b110ea4c0",
+      "https://images.printify.com/69b94dcdf08a3b9fa008dbe2",
+      "https://images.printify.com/69b94dbcf34511415f0eddb2",
+      "https://images.printify.com/69b94dc97cc6d5da3c03b7b3",
+      "https://images.printify.com/69b94dc5eea18df37c086030",
+      "https://images.printify.com/69b94dc14da79817f60f4e50",
+      "https://images.printify.com/69b94da062ccca5ede0c0cf0",
+      "https://images.printify.com/69b94dc7388918b5730afdd0"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 217,
+        "title": "Fulfill Engine"
+      },
+      "variants": {
+        "id": 217,
+        "title": "Fulfill Engine",
+        "variants": [
+          {
+            "id": 244995,
+            "title": "Natural / Black / One size",
+            "options": {
+              "color": "Natural / Black",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 675,
+                "width": 1200
+              },
+              {
+                "position": "front_dtf",
+                "decoration_method": "dtf",
+                "height": 675,
+                "width": 1200
+              }
+            ]
+          },
+          {
+            "id": 244996,
+            "title": "Natural / Cardinal / One size",
+            "options": {
+              "color": "Natural / Cardinal",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 675,
+                "width": 1200
+              },
+              {
+                "position": "front_dtf",
+                "decoration_method": "dtf",
+                "height": 675,
+                "width": 1200
+              }
+            ]
+          },
+          {
+            "id": 244997,
+            "title": "Natural / Coal / One size",
+            "options": {
+              "color": "Natural / Coal",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 675,
+                "width": 1200
+              },
+              {
+                "position": "front_dtf",
+                "decoration_method": "dtf",
+                "height": 675,
+                "width": 1200
+              }
+            ]
+          },
+          {
+            "id": 244998,
+            "title": "Natural / Forest / One size",
+            "options": {
+              "color": "Natural / Forest",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 675,
+                "width": 1200
+              },
+              {
+                "position": "front_dtf",
+                "decoration_method": "dtf",
+                "height": 675,
+                "width": 1200
+              }
+            ]
+          },
+          {
+            "id": 244999,
+            "title": "Natural / Liberty / One size",
+            "options": {
+              "color": "Natural / Liberty",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 675,
+                "width": 1200
+              },
+              {
+                "position": "front_dtf",
+                "decoration_method": "dtf",
+                "height": 675,
+                "width": 1200
+              }
+            ]
+          },
+          {
+            "id": 245000,
+            "title": "Natural / Midnight / One size",
+            "options": {
+              "color": "Natural / Midnight",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 675,
+                "width": 1200
+              },
+              {
+                "position": "front_dtf",
+                "decoration_method": "dtf",
+                "height": 675,
+                "width": 1200
+              }
+            ]
+          },
+          {
+            "id": 245001,
+            "title": "Natural / Walnut / One size",
+            "options": {
+              "color": "Natural / Walnut",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 675,
+                "width": 1200
+              },
+              {
+                "position": "front_dtf",
+                "decoration_method": "dtf",
+                "height": 675,
+                "width": 1200
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              244995,
+              244996,
+              244997,
+              244998,
+              244999,
+              245000,
+              245001
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 449
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 209
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              244995,
+              244996,
+              244997,
+              244998,
+              244999,
+              245000,
+              245001
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 939
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              244995,
+              244996,
+              244997,
+              244998,
+              244999,
+              245000,
+              245001
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 489
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 219
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              244995,
+              244996,
+              244997,
+              244998,
+              244999,
+              245000,
+              245001
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1000
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 400
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

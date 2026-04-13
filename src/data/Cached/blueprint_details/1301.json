@@ -1,0 +1,253 @@
+{
+  "blueprint": {
+    "id": 1301,
+    "title": "Accent Mugs, 11oz",
+    "brand": "ORCA Coatings",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66cdb3dcaf9e7dd2e20af443",
+      "https://images.printify.com/66f51ab0528b1c85ba01e493",
+      "https://images.printify.com/63fe182ec578a67e570121b3",
+      "https://images.printify.com/67e3f5ae6aa2b62c4306a6d2"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 41,
+        "title": "Duplium"
+      },
+      "variants": {
+        "id": 41,
+        "title": "Duplium",
+        "variants": [
+          {
+            "id": 98595,
+            "title": "Black / 11oz",
+            "options": {
+              "color": "Black",
+              "size": "11oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1125,
+                "width": 2550
+              }
+            ]
+          },
+          {
+            "id": 98596,
+            "title": "Blue / 11oz",
+            "options": {
+              "color": "Blue",
+              "size": "11oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1125,
+                "width": 2550
+              }
+            ]
+          },
+          {
+            "id": 98597,
+            "title": "Light Green / 11oz",
+            "options": {
+              "color": "Light Green",
+              "size": "11oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1125,
+                "width": 2550
+              }
+            ]
+          },
+          {
+            "id": 98598,
+            "title": "Pink / 11oz",
+            "options": {
+              "color": "Pink",
+              "size": "11oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1125,
+                "width": 2550
+              }
+            ]
+          },
+          {
+            "id": 98599,
+            "title": "Red / 11oz",
+            "options": {
+              "color": "Red",
+              "size": "11oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1125,
+                "width": 2550
+              }
+            ]
+          },
+          {
+            "id": 98600,
+            "title": "Yellow / 11oz",
+            "options": {
+              "color": "Yellow",
+              "size": "11oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1125,
+                "width": 2550
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              98595,
+              98596,
+              98597,
+              98598,
+              98599,
+              98600
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1350
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 490
+            },
+            "countries": [
+              "IM",
+              "ME",
+              "SK",
+              "HR",
+              "FR",
+              "LT",
+              "LU",
+              "SM",
+              "AD",
+              "HU",
+              "IE",
+              "CH",
+              "XK",
+              "VA",
+              "NO",
+              "DK",
+              "GR",
+              "NL",
+              "RO",
+              "RS",
+              "AT",
+              "GB",
+              "AL",
+              "BY",
+              "CZ",
+              "SE",
+              "DE",
+              "RE",
+              "SI",
+              "BV",
+              "REST_OF_THE_WORLD",
+              "GG",
+              "MK",
+              "FI",
+              "MC",
+              "GI",
+              "LI",
+              "PT",
+              "AX",
+              "EE",
+              "IT",
+              "MT",
+              "ES",
+              "AM",
+              "BA",
+              "CY",
+              "IS",
+              "PL",
+              "BG",
+              "GL",
+              "BE",
+              "GE",
+              "GP",
+              "JE",
+              "LV",
+              "MD",
+              "TR",
+              "UA",
+              "FO"
+            ]
+          },
+          {
+            "variant_ids": [
+              98595,
+              98596,
+              98597,
+              98598,
+              98599,
+              98600
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 799
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              98595,
+              98596,
+              98597,
+              98598,
+              98599,
+              98600
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2230
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 290
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

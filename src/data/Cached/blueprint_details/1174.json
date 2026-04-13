@@ -1,0 +1,393 @@
+{
+  "blueprint": {
+    "id": 1174,
+    "title": "Plus Size Leggings (AOP)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66dea8b1289e51048e0ec802",
+      "https://images.printify.com/66d0a0ebd89fe553800a78e7",
+      "https://images.printify.com/62f268a865ff8c1c5e0da199",
+      "https://images.printify.com/62f266bbbf6bdcde1f0f2db4",
+      "https://images.printify.com/67f38e57485558fa4c02fb72",
+      "https://images.printify.com/62f493d629a2dcc4eb054727",
+      "https://images.printify.com/62f493b991ea4dff220c52c3",
+      "https://images.printify.com/62f49426331c0b083b05f18e"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 83,
+        "title": "Subliminator"
+      },
+      "variants": {
+        "id": 83,
+        "title": "Subliminator",
+        "variants": [
+          {
+            "id": 91238,
+            "title": "2XL",
+            "options": {
+              "size": "2XL"
+            },
+            "placeholders": [
+              {
+                "position": "right_leg",
+                "decoration_method": "aop",
+                "height": 7000,
+                "width": 7000
+              },
+              {
+                "position": "left_leg",
+                "decoration_method": "aop",
+                "height": 7000,
+                "width": 7000
+              },
+              {
+                "position": "front_waistband",
+                "decoration_method": "aop",
+                "height": 3500,
+                "width": 4500
+              },
+              {
+                "position": "back_waistband",
+                "decoration_method": "aop",
+                "height": 3500,
+                "width": 4500
+              },
+              {
+                "position": "inside_label",
+                "decoration_method": "aop",
+                "height": 219,
+                "width": 502
+              }
+            ]
+          },
+          {
+            "id": 91239,
+            "title": "3XL",
+            "options": {
+              "size": "3XL"
+            },
+            "placeholders": [
+              {
+                "position": "right_leg",
+                "decoration_method": "aop",
+                "height": 7000,
+                "width": 7000
+              },
+              {
+                "position": "left_leg",
+                "decoration_method": "aop",
+                "height": 7000,
+                "width": 7000
+              },
+              {
+                "position": "front_waistband",
+                "decoration_method": "aop",
+                "height": 3500,
+                "width": 4500
+              },
+              {
+                "position": "back_waistband",
+                "decoration_method": "aop",
+                "height": 3500,
+                "width": 4500
+              },
+              {
+                "position": "inside_label",
+                "decoration_method": "aop",
+                "height": 219,
+                "width": 502
+              }
+            ]
+          },
+          {
+            "id": 91240,
+            "title": "4XL",
+            "options": {
+              "size": "4XL"
+            },
+            "placeholders": [
+              {
+                "position": "right_leg",
+                "decoration_method": "aop",
+                "height": 7000,
+                "width": 7000
+              },
+              {
+                "position": "left_leg",
+                "decoration_method": "aop",
+                "height": 7000,
+                "width": 7000
+              },
+              {
+                "position": "front_waistband",
+                "decoration_method": "aop",
+                "height": 3500,
+                "width": 4500
+              },
+              {
+                "position": "back_waistband",
+                "decoration_method": "aop",
+                "height": 3500,
+                "width": 4500
+              },
+              {
+                "position": "inside_label",
+                "decoration_method": "aop",
+                "height": 219,
+                "width": 502
+              }
+            ]
+          },
+          {
+            "id": 91241,
+            "title": "5XL",
+            "options": {
+              "size": "5XL"
+            },
+            "placeholders": [
+              {
+                "position": "right_leg",
+                "decoration_method": "aop",
+                "height": 7000,
+                "width": 7000
+              },
+              {
+                "position": "left_leg",
+                "decoration_method": "aop",
+                "height": 7000,
+                "width": 7000
+              },
+              {
+                "position": "front_waistband",
+                "decoration_method": "aop",
+                "height": 3500,
+                "width": 4500
+              },
+              {
+                "position": "back_waistband",
+                "decoration_method": "aop",
+                "height": 3500,
+                "width": 4500
+              },
+              {
+                "position": "inside_label",
+                "decoration_method": "aop",
+                "height": 219,
+                "width": 502
+              }
+            ]
+          },
+          {
+            "id": 91242,
+            "title": "6XL",
+            "options": {
+              "size": "6XL"
+            },
+            "placeholders": [
+              {
+                "position": "right_leg",
+                "decoration_method": "aop",
+                "height": 7000,
+                "width": 7000
+              },
+              {
+                "position": "left_leg",
+                "decoration_method": "aop",
+                "height": 7000,
+                "width": 7000
+              },
+              {
+                "position": "front_waistband",
+                "decoration_method": "aop",
+                "height": 3500,
+                "width": 4500
+              },
+              {
+                "position": "back_waistband",
+                "decoration_method": "aop",
+                "height": 3500,
+                "width": 4500
+              },
+              {
+                "position": "inside_label",
+                "decoration_method": "aop",
+                "height": 219,
+                "width": 502
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              91238,
+              91239,
+              91240,
+              91241,
+              91242
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1569
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1499
+            },
+            "countries": [
+              "NZ",
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              91238,
+              91239,
+              91240,
+              91241,
+              91242
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2189
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2059
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              91238,
+              91239,
+              91240,
+              91241,
+              91242
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1899
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              91238,
+              91239,
+              91240,
+              91241,
+              91242
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2439
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2359
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              91238,
+              91239,
+              91240,
+              91241,
+              91242
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1519
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1459
+            },
+            "countries": [
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "DK",
+              "EE",
+              "FO",
+              "FI",
+              "FR",
+              "GE",
+              "DE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IS",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "LV",
+              "LI",
+              "LT",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "NO",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "SE",
+              "CH",
+              "TR",
+              "UA",
+              "GB",
+              "XK"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

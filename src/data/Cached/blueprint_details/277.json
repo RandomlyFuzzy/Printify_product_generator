@@ -1,0 +1,221 @@
+{
+  "blueprint": {
+    "id": 277,
+    "title": "Wall Clock",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66e81e63ea1b40da7a0be554",
+      "https://images.printify.com/66c4617d8ed7f12ec50e07e8",
+      "https://images.printify.com/64ddb3974ec8c6ce1305e7c3"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 1,
+        "title": "SPOKE Custom Products"
+      },
+      "variants": {
+        "id": 1,
+        "title": "SPOKE Custom Products",
+        "variants": [
+          {
+            "id": 43008,
+            "title": "Black Base / Black / 10\u0022",
+            "options": {
+              "color": "Black Base",
+              "hands": "Black",
+              "size": "10\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 3000,
+                "width": 3000
+              }
+            ]
+          },
+          {
+            "id": 43009,
+            "title": "Black Base / White / 10\u0022",
+            "options": {
+              "color": "Black Base",
+              "hands": "White",
+              "size": "10\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 3000,
+                "width": 3000
+              }
+            ]
+          },
+          {
+            "id": 43010,
+            "title": "White Base / Black / 10\u0022",
+            "options": {
+              "color": "White Base",
+              "hands": "Black",
+              "size": "10\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 3000,
+                "width": 3000
+              }
+            ]
+          },
+          {
+            "id": 43011,
+            "title": "White Base / White / 10\u0022",
+            "options": {
+              "color": "White Base",
+              "hands": "White",
+              "size": "10\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 3000,
+                "width": 3000
+              }
+            ]
+          },
+          {
+            "id": 43012,
+            "title": "Wooden Base / Black / 10\u0022",
+            "options": {
+              "color": "Wooden Base",
+              "hands": "Black",
+              "size": "10\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 3000,
+                "width": 3000
+              }
+            ]
+          },
+          {
+            "id": 43013,
+            "title": "Wooden Base / White / 10\u0022",
+            "options": {
+              "color": "Wooden Base",
+              "hands": "White",
+              "size": "10\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 3000,
+                "width": 3000
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              43008,
+              43009,
+              43010,
+              43011,
+              43012,
+              43013
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 849
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              43008,
+              43009,
+              43010,
+              43011,
+              43012,
+              43013
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1629
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 769
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              43008,
+              43009,
+              43010,
+              43011,
+              43012,
+              43013
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1869
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 879
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              43008,
+              43009,
+              43010,
+              43011,
+              43012,
+              43013
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 899
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 599
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+{
+  "blueprint": {
+    "id": 1592,
+    "title": "Quilted Coverlet",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66e96cceb51ff86465076db2",
+      "https://images.printify.com/66e96ccba1b75e16cb09da32",
+      "https://images.printify.com/66cc6a4e6897c3d26c013e62",
+      "https://images.printify.com/66cc6a5244ceee25d408f394",
+      "https://images.printify.com/66cc84d746871f7a8100ddc2"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 10,
+        "title": "MWW On Demand"
+      },
+      "variants": {
+        "id": 10,
+        "title": "MWW On Demand",
+        "variants": [
+          {
+            "id": 110823,
+            "title": "104\u0022 x 88\u0022",
+            "options": {
+              "size": "104\u0022 x 88\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 13500,
+                "width": 15900
+              }
+            ]
+          },
+          {
+            "id": 110824,
+            "title": "68\u0022 x 88\u0022",
+            "options": {
+              "size": "68\u0022 x 88\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 13500,
+                "width": 10500
+              }
+            ]
+          },
+          {
+            "id": 110825,
+            "title": "79\u0022 x 79\u0022",
+            "options": {
+              "size": "79\u0022 x 79\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 12150,
+                "width": 12150
+              }
+            ]
+          },
+          {
+            "id": 110826,
+            "title": "88\u0022 x 88\u0022",
+            "options": {
+              "size": "88\u0022 x 88\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 13500,
+                "width": 13500
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              110823,
+              110824,
+              110825,
+              110826
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1279
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              110823,
+              110824,
+              110825,
+              110826
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              110823,
+              110824,
+              110825,
+              110826
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1699
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 819
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              110823,
+              110824,
+              110825,
+              110826
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1599
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1179
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

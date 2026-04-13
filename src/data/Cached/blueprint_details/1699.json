@@ -1,0 +1,122 @@
+{
+  "blueprint": {
+    "id": 1699,
+    "title": "Glass Can with Straw and Lid, 16oz",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/676e994a6c2a94e5380996b2",
+      "https://images.printify.com/69c54bc594459adf61069c52",
+      "https://images.printify.com/676e994f17b737a62103bb93",
+      "https://images.printify.com/676e994c192b315cf207e1d0",
+      "https://images.printify.com/676e994dc5926b51e20328e2",
+      "https://images.printify.com/676e9949192b315cf207e1cf",
+      "https://images.printify.com/6909c3d674efa2c43b07d8b2"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 70,
+        "title": "Printed Mint"
+      },
+      "variants": {
+        "id": 70,
+        "title": "Printed Mint",
+        "variants": [
+          {
+            "id": 116665,
+            "title": "16oz / With lid and straw",
+            "options": {
+              "size": "16oz",
+              "type": "With lid and straw"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1200,
+                "width": 2805
+              }
+            ]
+          },
+          {
+            "id": 116666,
+            "title": "16oz / Without lid or straw",
+            "options": {
+              "size": "16oz",
+              "type": "Without lid or straw"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1200,
+                "width": 2805
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              116665,
+              116666
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 929
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              116665,
+              116666
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1629
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 809
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              116665,
+              116666
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 739
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

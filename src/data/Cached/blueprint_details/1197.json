@@ -1,0 +1,177 @@
+{
+  "blueprint": {
+    "id": 1197,
+    "title": "Wham-O Frisbee",
+    "brand": "Wham-O",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d09a4fd89fe553800a78d2",
+      "https://images.printify.com/66d09a519e7c2657030ef719",
+      "https://images.printify.com/67ef9f93bee9e6d1bc0eb496",
+      "https://images.printify.com/6315ba3263b10c19ba032a3d",
+      "https://images.printify.com/6324898a16893fb49b095a62"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 80,
+        "title": "M.i.A Merchandise"
+      },
+      "variants": {
+        "id": 80,
+        "title": "M.i.A Merchandise",
+        "variants": [
+          {
+            "id": 91862,
+            "title": "Black / 10.9\u0022",
+            "options": {
+              "color": "Black",
+              "size": "10.9\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 2256,
+                "width": 2256
+              }
+            ]
+          },
+          {
+            "id": 91863,
+            "title": "Blue / 10.9\u0022",
+            "options": {
+              "color": "Blue",
+              "size": "10.9\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 2256,
+                "width": 2256
+              }
+            ]
+          },
+          {
+            "id": 91864,
+            "title": "Red / 10.9\u0022",
+            "options": {
+              "color": "Red",
+              "size": "10.9\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 2256,
+                "width": 2256
+              }
+            ]
+          },
+          {
+            "id": 91865,
+            "title": "White / 10.9\u0022",
+            "options": {
+              "color": "White",
+              "size": "10.9\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 2256,
+                "width": 2256
+              }
+            ]
+          },
+          {
+            "id": 91866,
+            "title": "Green / 10.9\u0022",
+            "options": {
+              "color": "Green",
+              "size": "10.9\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 2256,
+                "width": 2256
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              91862,
+              91863,
+              91864,
+              91865,
+              91866
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1629
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 719
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              91862,
+              91863,
+              91864,
+              91865,
+              91866
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 759
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 599
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              91862,
+              91863,
+              91864,
+              91865,
+              91866
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1909
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1039
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

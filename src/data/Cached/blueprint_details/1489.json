@@ -1,0 +1,162 @@
+{
+  "blueprint": {
+    "id": 1489,
+    "title": "Wood Topped Wall Tapestry",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/665dc81c4c762047b70d6442",
+      "https://images.printify.com/665dc81abe33634dc6095e92",
+      "https://images.printify.com/66f2b4cce052ff072b07dc12",
+      "https://images.printify.com/66f2b4ca775197f9db02bc12"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 10,
+        "title": "MWW On Demand"
+      },
+      "variants": {
+        "id": 10,
+        "title": "MWW On Demand",
+        "variants": [
+          {
+            "id": 107623,
+            "title": "26\u0027\u0027 \u00D7 36\u0027\u0027",
+            "options": {
+              "size": "26\u0027\u0027 \u00D7 36\u0027\u0027"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 5850,
+                "width": 4350
+              }
+            ]
+          },
+          {
+            "id": 107624,
+            "title": "36\u0027\u0027 \u00D7 26\u0027\u0027",
+            "options": {
+              "size": "36\u0027\u0027 \u00D7 26\u0027\u0027"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 4350,
+                "width": 5850
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              107624
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1499
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1499
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              107624
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2649
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2649
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              107624
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2599
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2599
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              107623
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 699
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 699
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              107623
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2559
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2559
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              107623
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2499
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 2499
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

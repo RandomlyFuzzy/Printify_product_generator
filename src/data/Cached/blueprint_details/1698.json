@@ -1,0 +1,318 @@
+{
+  "blueprint": {
+    "id": 1698,
+    "title": "Bucket Hat",
+    "brand": "AS Colour",
+    "model": "AS1117",
+    "images": [
+      "https://images.printify.com/693146b0182c66341c092922",
+      "https://images.printify.com/6932f87d30328d4d000009e2",
+      "https://images.printify.com/6932f87f3ce6018682099702",
+      "https://images.printify.com/6932ccdc35bd4f5462075bb2",
+      "https://images.printify.com/693146aae36b7890ea06b1c2",
+      "https://images.printify.com/693146ae531c1a6af7038732"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 217,
+        "title": "Fulfill Engine"
+      },
+      "variants": {
+        "id": 217,
+        "title": "Fulfill Engine",
+        "variants": [
+          {
+            "id": 116653,
+            "title": "One size / Army",
+            "options": {
+              "size": "One size",
+              "color": "Army"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtf",
+                "height": 705,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 116654,
+            "title": "One size / Black",
+            "options": {
+              "size": "One size",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtf",
+                "height": 705,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 116655,
+            "title": "One size / Bone",
+            "options": {
+              "size": "One size",
+              "color": "Bone"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtf",
+                "height": 705,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 116656,
+            "title": "One size / Butter",
+            "options": {
+              "size": "One size",
+              "color": "Butter"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtf",
+                "height": 705,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 116657,
+            "title": "One size / Clay",
+            "options": {
+              "size": "One size",
+              "color": "Clay"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtf",
+                "height": 705,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 116658,
+            "title": "One size / Coffee",
+            "options": {
+              "size": "One size",
+              "color": "Coffee"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtf",
+                "height": 705,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 116659,
+            "title": "One size / Ecru",
+            "options": {
+              "size": "One size",
+              "color": "Ecru"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtf",
+                "height": 705,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 116660,
+            "title": "One size / Navy",
+            "options": {
+              "size": "One size",
+              "color": "Navy"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtf",
+                "height": 705,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 116661,
+            "title": "One size / Orchid",
+            "options": {
+              "size": "One size",
+              "color": "Orchid"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtf",
+                "height": 705,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 116662,
+            "title": "One size / Storm",
+            "options": {
+              "size": "One size",
+              "color": "Storm"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtf",
+                "height": 705,
+                "width": 1500
+              }
+            ]
+          },
+          {
+            "id": 116663,
+            "title": "One size / Walnut",
+            "options": {
+              "size": "One size",
+              "color": "Walnut"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtf",
+                "height": 705,
+                "width": 1500
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              116653,
+              116654,
+              116655,
+              116656,
+              116657,
+              116658,
+              116659,
+              116660,
+              116661,
+              116662,
+              116663
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 449
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 209
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              116653,
+              116654,
+              116655,
+              116656,
+              116657,
+              116658,
+              116659,
+              116660,
+              116661,
+              116662,
+              116663
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 939
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              116653,
+              116654,
+              116655,
+              116656,
+              116657,
+              116658,
+              116659,
+              116660,
+              116661,
+              116662,
+              116663
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 489
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 219
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              116653,
+              116654,
+              116655,
+              116656,
+              116657,
+              116658,
+              116659,
+              116660,
+              116661,
+              116662,
+              116663
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1000
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 400
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

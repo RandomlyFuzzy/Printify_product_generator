@@ -1,0 +1,185 @@
+{
+  "blueprint": {
+    "id": 1182,
+    "title": "Metal Ornaments",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d09e91eb9bbcfb440fabe2",
+      "https://images.printify.com/66d09e90892c8db36c04a527",
+      "https://images.printify.com/67ee2e09dba012ac200f84f2",
+      "https://images.printify.com/630c9758c2603baa3506b356",
+      "https://images.printify.com/63120ab253b91b21fd0516ed",
+      "https://images.printify.com/6900b5df930aa31d510c1e32"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 92,
+        "title": "Pic the Gift"
+      },
+      "variants": {
+        "id": 92,
+        "title": "Pic the Gift",
+        "variants": [
+          {
+            "id": 91407,
+            "title": "Bell / One Size",
+            "options": {
+              "shape": "Bell",
+              "size": "One Size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 722,
+                "width": 716
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 722,
+                "width": 716
+              }
+            ]
+          },
+          {
+            "id": 91408,
+            "title": "Oval / One Size",
+            "options": {
+              "shape": "Oval",
+              "size": "One Size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 650,
+                "width": 525
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 650,
+                "width": 525
+              }
+            ]
+          },
+          {
+            "id": 91409,
+            "title": "Round / One Size",
+            "options": {
+              "shape": "Round",
+              "size": "One Size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 750,
+                "width": 750
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 750,
+                "width": 750
+              }
+            ]
+          },
+          {
+            "id": 91410,
+            "title": "Tree / One Size",
+            "options": {
+              "shape": "Tree",
+              "size": "One Size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 839,
+                "width": 725
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 839,
+                "width": 725
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              91407,
+              91408,
+              91409,
+              91410
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 569
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 69
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              91407,
+              91408,
+              91409,
+              91410
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 859
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 99
+            },
+            "countries": [
+              "GB",
+              "AU",
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              91407,
+              91408,
+              91409,
+              91410
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 889
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 79
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

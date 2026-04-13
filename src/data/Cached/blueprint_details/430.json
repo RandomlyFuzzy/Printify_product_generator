@@ -1,0 +1,152 @@
+{
+  "blueprint": {
+    "id": 430,
+    "title": "Custom Pin Buttons",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66cc6126821637a4630f6ff3",
+      "https://images.printify.com/66f403f8079f4ae1330fef72",
+      "https://images.printify.com/5f451c1ca5d433313e2e1c2d"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 1,
+        "title": "SPOKE Custom Products"
+      },
+      "variants": {
+        "id": 1,
+        "title": "SPOKE Custom Products",
+        "variants": [
+          {
+            "id": 62070,
+            "title": "1.25\u0022",
+            "options": {
+              "size": "1.25\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 519,
+                "width": 519
+              }
+            ]
+          },
+          {
+            "id": 62071,
+            "title": "2.25\u0022",
+            "options": {
+              "size": "2.25\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 788,
+                "width": 788
+              }
+            ]
+          },
+          {
+            "id": 67977,
+            "title": "3\u0022",
+            "options": {
+              "size": "3\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1018,
+                "width": 1018
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              62070,
+              62071,
+              67977
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 429
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 19
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              62070,
+              62071,
+              67977
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 459
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 19
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              62070,
+              62071,
+              67977
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 769
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 29
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              62070,
+              62071,
+              67977
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1249
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 49
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

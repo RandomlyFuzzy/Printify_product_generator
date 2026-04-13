@@ -1,0 +1,158 @@
+{
+  "blueprint": {
+    "id": 524,
+    "title": "Greeting Cards (7 pcs)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66d5ce16b3429a7fe70537fa",
+      "https://images.printify.com/66d5ce148d790465b7032716",
+      "https://images.printify.com/5f578bc88a07e96da4769438",
+      "https://images.printify.com/5f578bc92e71aa14b223b404",
+      "https://images.printify.com/5f578cfd2e71aa14b223b407"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 36,
+        "title": "Print Pigeons"
+      },
+      "variants": {
+        "id": 36,
+        "title": "Print Pigeons",
+        "variants": [
+          {
+            "id": 68326,
+            "title": "One size",
+            "options": {
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 1819,
+                "width": 2409
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              68326
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1179
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "GB",
+              "CA",
+              "DK",
+              "LT",
+              "LV",
+              "FI",
+              "EE",
+              "CH",
+              "IS",
+              "LI",
+              "SE",
+              "NO",
+              "NL",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "TR",
+              "UA",
+              "XK",
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "FO",
+              "FR",
+              "GE",
+              "DE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IE",
+              "IM",
+              "IT",
+              "JE",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME"
+            ]
+          },
+          {
+            "variant_ids": [
+              68326
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2179
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              68326
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1749
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
