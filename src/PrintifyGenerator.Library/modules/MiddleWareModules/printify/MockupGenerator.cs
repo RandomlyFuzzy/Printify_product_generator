@@ -39,6 +39,7 @@ public class MockupGenerator
     private readonly string _lookupFilePath;     // staging/lookup.json
     private readonly string _blueprintCachePath; // staged/blueprints/blueprints.json
     private readonly string _draftsPath;         // staging/drafts/
+    private readonly string _blueprintDetailsPath; // Cached/blueprint_details/
 
     // ── Constructor ────────────────────────────────────────────────
 
@@ -66,6 +67,7 @@ public class MockupGenerator
         _lookupFilePath     = Path.Combine(dataBasePath, "staging",  "lookup.json");
         _blueprintCachePath = Path.Combine(dataBasePath, "staged",   "blueprints", "blueprints.json");
         _draftsPath         = Path.Combine(dataBasePath, "staging",  "drafts");
+        _blueprintDetailsPath = Path.Combine(dataBasePath, "Cached", "blueprint_details");
     }
 
     // ── Public API ─────────────────────────────────────────────────
@@ -279,10 +281,10 @@ public class MockupGenerator
         Console.WriteLine($"[MockupGenerator] Sending {filtered.Count} candidate blueprints to LLM (from {blueprints.Count} total).");
 
         var catalogue = filtered
-            .Select(b => new { id = b.Id, title = b.Title })
+            .Select(b => BuildCatalogueEntry(b))
             .ToList();
 
-        string catalogueJson = JsonSerializer.Serialize(catalogue);
+        string catalogueJson = JsonSerializer.Serialize(catalogue, JsonOpts);
 
         string prompt = $$"""
             You are a print-on-demand product specialist.
@@ -293,18 +295,24 @@ public class MockupGenerator
             {{catalogueJson}}
 
             Respond with ONLY valid JSON — no markdown fences, no extra text:
-            [{"blueprint_id": <integer>, "blueprint_title": "<string>", "reason": "<one sentence>"}]
+            [
+            {
+                "blueprint_id": <integer>, 
+                "blueprint_title": "<string>", 
+                "reason": "<one sentence>"
+            },
+            ... 
+            ]
             """;
 
 
-        Console.WriteLine($"[MockupGenerator] Prompting LLM with image and catalogue... {prompt}");
+        // Console.WriteLine($"[MockupGenerator] Prompting LLM with image and catalogue... {prompt}");
         Console.WriteLine($"[MockupGenerator] Querying LLM ({_visionModel}) for blueprint recommendation...");
         
         string rawResponse = await _ollama.GenerateWithImageAsync(_visionModel, prompt, imagePath);
         JsonObject responseObj = JsonNode.Parse(rawResponse)?.AsObject() ?? new JsonObject();
         // Ollama wraps the answer in {"response": "..."}
         string responseText = responseObj["response"]?.GetValue<string>() ?? rawResponse;
-        Console.WriteLine($"[MockupGenerator] Raw LLM response: {rawResponse}");
         try
         {
             var wrapper = JsonSerializer.Deserialize<JsonElement>(rawResponse, JsonOpts);
@@ -312,6 +320,7 @@ public class MockupGenerator
                 responseText = r.GetString() ?? rawResponse;
         }
         catch { /* use rawResponse as-is */ }
+        Console.WriteLine($"[MockupGenerator] Raw LLM response: {responseText}");
 
         responseText = ExtractFirstJsonObject(responseText);
 
@@ -336,7 +345,7 @@ public class MockupGenerator
             {
                 BlueprintId    = fallback.Id,
                 BlueprintTitle = fallback.Title,
-                Reason         = "Fallback – LLM response could not be parsed."
+                Reason         = ""
             }
         };
     }
@@ -349,6 +358,81 @@ public class MockupGenerator
         if (start >= 0 && end > start)
             return text[start..(end + 1)];
         return text;
+    }
+
+    /// <summary>
+    /// Builds a <see cref="BlueprintCatalogueEntry"/> for a blueprint,
+    /// enriching it with print-location dimensions from the cached
+    /// blueprint_details JSON files when available.
+    /// </summary>
+    private BlueprintCatalogueEntry BuildCatalogueEntry(Blueprint blueprint)
+    {
+        var entry = new BlueprintCatalogueEntry
+        {
+            Id    = blueprint.Id,
+            Title = blueprint.Title
+        };
+
+        var detailFile = Path.Combine(_blueprintDetailsPath, $"{blueprint.Id}.json");
+        if (!File.Exists(detailFile))
+            return entry;
+
+        try
+        {
+            var json   = File.ReadAllText(detailFile);
+            var doc    = JsonDocument.Parse(json);
+            var root   = doc.RootElement;
+
+            // Collect unique positions and their max dimensions across all
+            // providers / variants so the LLM sees the full print surface.
+            var locations = new Dictionary<string, PrintLocationSize>(StringComparer.OrdinalIgnoreCase);
+
+            if (root.TryGetProperty("print_providers", out var providers))
+            {
+                foreach (var pp in providers.EnumerateArray())
+                {
+                    if (!pp.TryGetProperty("variants", out var variantsWrapper))
+                        continue;
+                    if (!variantsWrapper.TryGetProperty("variants", out var variants))
+                        continue;
+
+                    foreach (var v in variants.EnumerateArray())
+                    {
+                        if (!v.TryGetProperty("placeholders", out var placeholders))
+                            continue;
+
+                        foreach (var ph in placeholders.EnumerateArray())
+                        {
+                            var position = ph.GetProperty("position").GetString() ?? "";
+                            var width    = ph.TryGetProperty("width",  out var w) ? w.GetInt32() : 0;
+                            var height   = ph.TryGetProperty("height", out var h) ? h.GetInt32() : 0;
+
+                            if (locations.TryGetValue(position, out var existing))
+                            {
+                                if (width  > existing.SizeX) existing.SizeX = width;
+                                if (height > existing.SizeY) existing.SizeY = height;
+                            }
+                            else
+                            {
+                                locations[position] = new PrintLocationSize { SizeX = width, SizeY = height };
+                            }
+                        }
+
+                        // One variant per provider is enough to capture the positions.
+                        break;
+                    }
+                }
+            }
+
+            entry.PrintLocations = locations.Keys.ToList();
+            entry.Locations      = locations;
+        }
+        catch
+        {
+            // Cached file is corrupt or unexpected format – return basic entry.
+        }
+
+        return entry;
     }
 
     // ── Step 4+5 – Draft product creation ─────────────────────────

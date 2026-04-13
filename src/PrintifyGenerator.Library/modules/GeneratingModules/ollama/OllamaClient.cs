@@ -15,7 +15,7 @@ public class OllamaClient
         _baseUrl = baseUrl;
         _http = new HttpClient()
         {
-            Timeout = TimeSpan.FromMinutes(4) // Set a longer timeout for potentially long-running requests
+            Timeout = TimeSpan.FromMinutes(10) // Set a longer timeout for potentially long-running requests
         };
     }
 

@@ -195,11 +195,65 @@ public record ImagePattern
     [JsonPropertyName("scale")] public double Scale { get; set; }
 }
 
+[JsonConverter(typeof(PrintDetailsConverter))]
 public record PrintDetails
 {
     [JsonPropertyName("print_on_side")] public string? PrintOnSide { get; set; }
     [JsonPropertyName("separator_type")] public string? SeparatorType { get; set; }
     [JsonPropertyName("separator_color")] public string? SeparatorColor { get; set; }
+}
+
+/// <summary>
+/// Handles Printify API returning [] (empty array) instead of an object for print_details.
+/// </summary>
+public class PrintDetailsConverter : JsonConverter<PrintDetails?>
+{
+    public override PrintDetails? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+    {
+        if (reader.TokenType == JsonTokenType.StartArray)
+        {
+            // Skip the entire array
+            while (reader.Read() && reader.TokenType != JsonTokenType.EndArray) { }
+            return null;
+        }
+        if (reader.TokenType == JsonTokenType.Null)
+            return null;
+
+        // Normal object deserialization
+        var element = JsonElement.ParseValue(ref reader);
+        return JsonSerializer.Deserialize<PrintDetailsInner>(element.GetRawText(), options)?.ToRecord();
+    }
+
+    public override void Write(Utf8JsonWriter writer, PrintDetails? value, JsonSerializerOptions options)
+    {
+        if (value is null)
+            writer.WriteNullValue();
+        else
+            JsonSerializer.Serialize(writer, new PrintDetailsInner(value), options);
+    }
+
+    // Inner record without the converter to avoid infinite recursion
+    private record PrintDetailsInner
+    {
+        [JsonPropertyName("print_on_side")] public string? PrintOnSide { get; set; }
+        [JsonPropertyName("separator_type")] public string? SeparatorType { get; set; }
+        [JsonPropertyName("separator_color")] public string? SeparatorColor { get; set; }
+
+        public PrintDetailsInner() { }
+        public PrintDetailsInner(PrintDetails pd)
+        {
+            PrintOnSide = pd.PrintOnSide;
+            SeparatorType = pd.SeparatorType;
+            SeparatorColor = pd.SeparatorColor;
+        }
+
+        public PrintDetails ToRecord() => new()
+        {
+            PrintOnSide = PrintOnSide,
+            SeparatorType = SeparatorType,
+            SeparatorColor = SeparatorColor
+        };
+    }
 }
 
 public record ProductMockupImage

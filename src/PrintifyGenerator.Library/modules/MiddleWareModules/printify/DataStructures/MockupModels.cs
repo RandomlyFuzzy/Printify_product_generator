@@ -51,6 +51,26 @@ public class MockupDraftRecord
     [JsonPropertyName("mockup_urls")]               public List<string> MockupUrls              { get; set; } = new();
 }
 
+// ── Blueprint catalogue entry (for LLM prompts) ───────────────────
+
+/// <summary>
+/// Compact representation of a blueprint sent to the LLM, including
+/// available print locations and their dimensions.
+/// </summary>
+public class BlueprintCatalogueEntry
+{
+    [JsonPropertyName("id")]              public int                                      Id             { get; set; }
+    [JsonPropertyName("title")]           public string                                   Title          { get; set; } = "";
+    [JsonPropertyName("printLocations")]  public List<string>                             PrintLocations { get; set; } = new();
+    [JsonPropertyName("locations")]       public Dictionary<string, PrintLocationSize>?   Locations      { get; set; }
+}
+
+public class PrintLocationSize
+{
+    [JsonPropertyName("size_x")] public int SizeX { get; set; }
+    [JsonPropertyName("size_y")] public int SizeY { get; set; }
+}
+
 // ── Processing result ──────────────────────────────────────────────
 
 /// <summary>
