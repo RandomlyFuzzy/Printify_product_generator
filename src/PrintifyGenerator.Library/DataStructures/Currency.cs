@@ -58,7 +58,7 @@ public class Currency {
 
 
     public async Task<Currency> ConvertTo(CurrencyCode targetCode)
-    {
+    {   
         decimal exchangeRate = await GetCurrentExchangeRate(targetCode);
         return ConvertTo(targetCode, exchangeRate);
     }
