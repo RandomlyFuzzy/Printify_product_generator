@@ -68,7 +68,9 @@ public class WebSocketListener
 
                 if (root.TryGetProperty("type", out var typeProp))
                 {
-                    string type = typeProp.GetString();
+                    string type = typeProp.GetString() ?? string.Empty;
+                    if (string.IsNullOrWhiteSpace(type))
+                        continue;
 
                     // Emit event with full JSON payload
                     _emitter.Emit(type, root);

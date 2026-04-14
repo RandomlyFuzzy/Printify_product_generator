@@ -1270,3 +1270,102 @@ Drafts will be created on Printify but NOT published.
 [MockupGenerator] Done. Draft product ID: 69dda6f5f37f49f9dd0be858
 [MockupGenerator] LLM suggestion: blueprint 804 – Fine Art Posters (reason: This high-quality print format allows the image's strong colors and stylized architectural elements to be showcased as striking wall art.)
 [MockupGenerator] Creating draft product (blueprint 804, provider 72, 42 variants)...
+[MockupGenerator] Draft record saved → ./src/data/staging/drafts/69dda6faf37f49f9dd0be85b.json
+[MockupGenerator] Done. Draft product ID: 69dda6faf37f49f9dd0be85b
+[MockupGenerator] LLM suggestion: blueprint 1612 – Unisex Ultra Heavy Cotton Box Tee (reason: The bold, geometric, and retro-synthwave aesthetic of the image makes it an excellent, wearable graphic piece for a streetwear box tee.)
+[MockupGenerator] Creating draft product (blueprint 1612, provider 26, 45 variants)...
+[MockupGenerator] Draft record saved → ./src/data/staging/drafts/69dda6fe96616affb10447d2.json
+[MockupGenerator] Done. Draft product ID: 69dda6fe96616affb10447d2
+  ✓ Draft created – product ID: 69dda6f5f37f49f9dd0be858
+  Blueprint: Horizontal Framed Poster
+  Reason:    The wide, panoramic composition of the vibrant skyline is perfectly suited for a horizontal poster format, maximizing the visual impact of the art.
+  ✓ Draft created – product ID: 69dda6faf37f49f9dd0be85b
+  Blueprint: Fine Art Posters
+  Reason:    This high-quality print format allows the image's strong colors and stylized architectural elements to be showcased as striking wall art.
+  ✓ Draft created – product ID: 69dda6fe96616affb10447d2
+  Blueprint: Unisex Ultra Heavy Cotton Box Tee
+  Reason:    The bold, geometric, and retro-synthwave aesthetic of the image makes it an excellent, wearable graphic piece for a streetwear box tee.
+
+[17/32] /home/rf/Desktop/Printify_prodcuct_generator/src/data/Checking/2026-04/13/6977dd13-7e4f-410c-bdfd-140a3413ffb3/6977dd13-7e4f-410c-bdfd-140a3413ffb3.png
+[MockupGenerator] Image already on Printify (ID: 69dd9a5d0abffad8c325ef96), skipping upload.
+[MockupGenerator] Loading blueprints from cache.
+[MockupGenerator] Sending 100 candidate blueprints to LLM (from 1359 total).
+[MockupGenerator] Querying LLM (gemma4:e4b) for blueprint recommendation with image /home/rf/Desktop/Printify_prodcuct_generator/src/data/Checking/2026-04/13/6977dd13-7e4f-410c-bdfd-140a3413ffb3/6977dd13-7e4f-410c-bdfd-140a3413ffb3.png...
+[
+{
+    "id": 1716,
+    "title": "Unisex Max Heavyweight Short Sleeve",
+    "reason": "The robust, short-sleeve nature of this shirt provides a perfect canvas to showcase the character and the central peace sign graphic."
+},
+{
+    "id": 1159,
+    "title": "Matte Canvas, Stretched, 1.25'",
+    "reason": "The stretched canvas is ideal for displaying the entire vibrant, pop-art composition as a high-impact piece of wall art."
+},
+{
+    "id": 1697,
+    "title": "Satin Posters",
+    "reason": "The satin poster format is best suited for printing the image's bright, graphic, and pop-art aesthetic."
+}
+][MockupGenerator] Raw LLM response: [
+{
+    "id": 1716,
+    "title": "Unisex Max Heavyweight Short Sleeve",
+    "reason": "The robust, short-sleeve nature of this shirt provides a perfect canvas to showcase the character and the central peace sign graphic."
+},
+{
+    "id": 1159,
+    "title": "Matte Canvas, Stretched, 1.25'",
+    "reason": "The stretched canvas is ideal for displaying the entire vibrant, pop-art composition as a high-impact piece of wall art."
+},
+{
+    "id": 1697,
+    "title": "Satin Posters",
+    "reason": "The satin poster format is best suited for printing the image's bright, graphic, and pop-art aesthetic."
+}
+]
+[MockupGenerator] Parsed LLM suggestions: [
+  {
+    "id": 1716,
+    "title": "Unisex Max Heavyweight Short Sleeve",
+    "reason": "The robust, short-sleeve nature of this shirt provides a perfect canvas to showcase the character and the central peace sign graphic."
+  },
+  {
+    "id": 1159,
+    "title": "Matte Canvas, Stretched, 1.25\u0027",
+    "reason": "The stretched canvas is ideal for displaying the entire vibrant, pop-art composition as a high-impact piece of wall art."
+  },
+  {
+    "id": 1697,
+    "title": "Satin Posters",
+    "reason": "The satin poster format is best suited for printing the image\u0027s bright, graphic, and pop-art aesthetic."
+  }
+]
+[MockupGenerator] LLM suggestion: blueprint 1716 – Unisex Max Heavyweight Short Sleeve (reason: The robust, short-sleeve nature of this shirt provides a perfect canvas to showcase the character and the central peace sign graphic.)
+[MockupGenerator] Warning: blueprint 1716 has 187 variants; only processing the first 100.
+[MockupGenerator] Creating draft product (blueprint 1716, provider 74, 100 variants)...
+[MockupGenerator] Draft record saved → ./src/data/staging/drafts/69dda72760953a3231060974.json
+[MockupGenerator] Done. Draft product ID: 69dda72760953a3231060974
+[MockupGenerator] LLM suggestion: blueprint 1159 – Matte Canvas, Stretched, 1.25' (reason: The stretched canvas is ideal for displaying the entire vibrant, pop-art composition as a high-impact piece of wall art.)
+[MockupGenerator] Creating draft product (blueprint 1159, provider 105, 60 variants)...
+[MockupGenerator] Draft record saved → ./src/data/staging/drafts/69dda729f5462073b20a4d1d.json
+[MockupGenerator] Done. Draft product ID: 69dda729f5462073b20a4d1d
+[MockupGenerator] LLM suggestion: blueprint 1697 – Satin Posters (reason: The satin poster format is best suited for printing the image's bright, graphic, and pop-art aesthetic.)
+[MockupGenerator] Creating draft product (blueprint 1697, provider 39, 6 variants)...
+[MockupGenerator] Draft record saved → ./src/data/staging/drafts/69dda72ec57485debe0e2acc.json
+[MockupGenerator] Done. Draft product ID: 69dda72ec57485debe0e2acc
+  ✓ Draft created – product ID: 69dda72760953a3231060974
+  Blueprint: Unisex Max Heavyweight Short Sleeve
+  Reason:    The robust, short-sleeve nature of this shirt provides a perfect canvas to showcase the character and the central peace sign graphic.
+  ✓ Draft created – product ID: 69dda729f5462073b20a4d1d
+  Blueprint: Matte Canvas, Stretched, 1.25'
+  Reason:    The stretched canvas is ideal for displaying the entire vibrant, pop-art composition as a high-impact piece of wall art.
+  ✓ Draft created – product ID: 69dda72ec57485debe0e2acc
+  Blueprint: Satin Posters
+  Reason:    The satin poster format is best suited for printing the image's bright, graphic, and pop-art aesthetic.
+
+[18/32] /home/rf/Desktop/Printify_prodcuct_generator/src/data/Checking/2026-04/13/4b95ee8a-2aa8-4f80-9581-434d8358a432/4b95ee8a-2aa8-4f80-9581-434d8358a432.png
+[MockupGenerator] Image already on Printify (ID: 69dd9a62cf834fd74e769f70), skipping upload.
+[MockupGenerator] Loading blueprints from cache.
+[MockupGenerator] Sending 100 candidate blueprints to LLM (from 1359 total).
+[MockupGenerator] Querying LLM (gemma4:e4b) for blueprint recommendation with image /home/rf/Desktop/Printify_prodcuct_generator/src/data/Checking/2026-04/13/4b95ee8a-2aa8-4f80-9581-434d8358a432/4b95ee8a-2aa8-4f80-9581-434d8358a432.png...

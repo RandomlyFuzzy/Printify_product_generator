@@ -1,0 +1,148 @@
+@page
+@model QcQueueModel
+@{
+    ViewData["Title"] = "QC Queue";
+    var snapshot = Model.Snapshot;
+    var summary = snapshot.Summary;
+}
+
+<main class="dashboard-shell page-shell">
+    <section class="hero-panel qc-hero-panel">
+        <div>
+            <p class="eyebrow">QC Queue</p>
+            <h1>Simple pass or block decisions for generated images.</h1>
+            <p class="hero-copy">
+                This queue keeps the review step compact: image, current state, QC pass or fail, and the buttons to allow it to continue or block it from continuing.
+            </p>
+        </div>
+        <div class="hero-meta">
+            <div>
+                <span class="meta-label">Current filter</span>
+                <strong>@Model.Status</strong>
+            </div>
+            <div>
+                <span class="meta-label">Images shown</span>
+                <strong>@snapshot.Images.Count</strong>
+            </div>
+            <div>
+                <span class="meta-label">Minimum publish score</span>
+                <strong>@snapshot.Settings.MinimumPublishScore.ToString("0.0")</strong>
+            </div>
+        </div>
+    </section>
+
+    @if (!string.IsNullOrWhiteSpace(Model.FlashMessage))
+    {
+        <section class="flash-banner">@Model.FlashMessage</section>
+    }
+
+    <section class="panel compact-panel">
+        <div class="split-heading panel-heading tight-heading">
+            <div>
+                <p class="eyebrow">Filters</p>
+                <h2>Current image states</h2>
+            </div>
+            <span class="muted">@summary.TotalImages total images discovered in the checking folder.</span>
+        </div>
+        <div class="filter-pills">
+            <a asp-page="/QcQueue" asp-route-status="all" class="filter-pill @(Model.Status == "all" ? "is-active" : null)">All</a>
+            <a asp-page="/QcQueue" asp-route-status="pending" class="filter-pill @(Model.Status == "pending" ? "is-active" : null)">Pending</a>
+            <a asp-page="/QcQueue" asp-route-status="ready" class="filter-pill @(Model.Status == "ready" ? "is-active" : null)">Ready</a>
+            <a asp-page="/QcQueue" asp-route-status="drafted" class="filter-pill @(Model.Status == "drafted" ? "is-active" : null)">Drafted</a>
+            <a asp-page="/QcQueue" asp-route-status="blocked" class="filter-pill @(Model.Status == "blocked" ? "is-active" : null)">Blocked</a>
+        </div>
+    </section>
+
+    <section class="panel review-panel">
+        <div class="panel-heading split-heading">
+            <div>
+                <p class="eyebrow">Queue</p>
+                <h2>QC pass or fail list</h2>
+            </div>
+            <span class="muted">Allow only overrides the score threshold. Safety flags still block continuation.</span>
+        </div>
+
+        @if (snapshot.Images.Count == 0)
+        {
+            <p class="muted">No images matched the current filter.</p>
+        }
+        else
+        {
+            <div class="qc-list">
+                @foreach (var item in snapshot.Images)
+                {
+                    var qcLabel = QcQueueModel.GetQcLabel(item);
+                    var qcCssClass = QcQueueModel.GetQcCssClass(item);
+
+                    <article class="qc-row">
+                        <div class="qc-thumb-wrap">
+                            <div class="image-frame qc-frame">
+                                <img src="@item.ImageUrl" alt="Generated artwork @item.JobId" loading="lazy" />
+                            </div>
+                        </div>
+
+                        <div class="qc-summary">
+                            <div class="qc-heading">
+                                <div>
+                                    <h3>@item.JobId</h3>
+                                    <p class="path-label">@item.RelativeDirectory</p>
+                                    <a asp-page="/GeneratedImages" asp-route-status="@Model.Status" asp-route-focusImagePath="@item.ImagePath" class="filter-pill qc-details-link">View details</a>
+                                </div>
+                                <div class="qc-chip-row">
+                                    <span class="state-pill @item.StatusCssClass">@item.StatusLabel</span>
+                                    <span class="qc-pill @qcCssClass">@qcLabel</span>
+                                </div>
+                            </div>
+
+                            <div class="qc-meta-grid">
+                                <div>
+                                    <span>QC reason</span>
+                                    <strong>@item.EligibilityReason</strong>
+                                </div>
+                                <div>
+                                    <span>Score</span>
+                                    <strong>@(item.ReviewScore is float reviewScore ? reviewScore.ToString("0.0") : "-")</strong>
+                                </div>
+                                <div>
+                                    <span>Override</span>
+                                    <strong>@item.PublishOverrideLabel</strong>
+                                </div>
+                                <div>
+                                    <span>Drafts</span>
+                                    <strong>@item.DraftCount</strong>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="qc-actions">
+                            <form method="post" asp-page-handler="SetOverride" class="qc-action-form">
+                                <input type="hidden" name="imagePath" value="@item.ImagePath" />
+                                <input type="hidden" name="status" value="@Model.Status" />
+
+                                <div class="qc-button-stack">
+                                    <button type="submit" name="mode" value="force-allow" class="primary-button @(item.PublishOverrideMode == PublishingOverrideModes.ForceAllow ? "button-selected" : null)" disabled="@(!item.CanForceAllow)">Allow to Continue</button>
+                                    <button type="submit" name="mode" value="force-block" class="danger-button @(item.PublishOverrideMode == PublishingOverrideModes.ForceBlock ? "button-selected" : null)">Block Continuing</button>
+                                    <button type="submit" name="mode" value="automatic" class="ghost-button @(item.PublishOverrideMode == PublishingOverrideModes.Automatic ? "button-selected" : null)">Automatic</button>
+                                </div>
+                            </form>
+
+                            @if (item.PublishOverrideUpdatedAtUtc is DateTime updatedAtUtc)
+                            {
+                                <p class="muted override-note">@item.PublishOverrideLabel set @updatedAtUtc.ToLocalTime().ToString("dd MMM yyyy HH:mm")</p>
+                            }
+                            else
+                            {
+                                <p class="muted override-note">No manual override set.</p>
+                            }
+
+                            @if (!item.CanForceAllow)
+                            {
+                                <p class="muted override-note">Allow is unavailable until safety checks pass and a suitability file exists.</p>
+                            }
+                        </div>
+                    </article>
+                }
+            </div>
+        }
+    </section>
+</main>

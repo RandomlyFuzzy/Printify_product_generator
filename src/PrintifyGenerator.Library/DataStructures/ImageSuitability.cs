@@ -28,7 +28,7 @@ public record ImageSuitability
 
     public bool isValid()
     {
-        return suitability >= 0.0f && suitability <= 10.0f &&IsSuitableForPrint();
+        return suitability >= 0.0f && suitability <= 10.0f && Issues is not null && Scoring is not null;
     }
     public bool HasIssues()
     {

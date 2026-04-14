@@ -1,18 +1,20 @@
 using System;
+using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 using System.IO;
+using System.Threading;
 
-public class OllamaClient
+public class OllamaClient : IDisposable
 {
     private readonly HttpClient _http;
     private readonly string _baseUrl;
 
     public OllamaClient(string baseUrl = "http://localhost:11434")
     {
-        _baseUrl = baseUrl;
+        _baseUrl = baseUrl.TrimEnd('/');
         _http = new HttpClient()
         {
             Timeout = TimeSpan.FromMinutes(10) // Set a longer timeout for potentially long-running requests
@@ -22,13 +24,28 @@ public class OllamaClient
     // 🔹 1. Health check
     public async Task<string> CheckStatusAsync()
     {
-        return await _http.GetStringAsync(_baseUrl);
+        using var response = await _http.GetAsync(BuildUrl("/api/tags"));
+        response.EnsureSuccessStatusCode();
+
+        var body = await response.Content.ReadAsStringAsync();
+        ParseInstalledModelNames(body);
+
+        return body;
+    }
+
+    public async Task<HashSet<string>> GetInstalledModelNamesAsync(CancellationToken cancellationToken = default)
+    {
+        using var response = await _http.GetAsync(BuildUrl("/api/tags"), cancellationToken);
+        response.EnsureSuccessStatusCode();
+
+        var body = await response.Content.ReadAsStringAsync(cancellationToken);
+        return ParseInstalledModelNames(body);
     }
 
     // 🔹 2. List models
     public async Task<string> ListModelsAsync()
     {
-        return await _http.GetStringAsync($"{_baseUrl}/api/tags");
+        return await _http.GetStringAsync(BuildUrl("/api/tags"));
     }
 
     // 🔹 3. Pull model
@@ -85,7 +102,7 @@ public class OllamaClient
     {
         var body = JsonSerializer.Serialize(new { name = model });
 
-        var request = new HttpRequestMessage(HttpMethod.Delete, $"{_baseUrl}/api/delete")
+        var request = new HttpRequestMessage(HttpMethod.Delete, BuildUrl("/api/delete"))
         {
             Content = new StringContent(body, Encoding.UTF8, "application/json")
         };
@@ -155,7 +172,7 @@ public class OllamaClient
             stream = true
         });
 
-        var request = new HttpRequestMessage(HttpMethod.Post, $"{_baseUrl}/api/generate")
+        var request = new HttpRequestMessage(HttpMethod.Post, BuildUrl("/api/generate"))
         {
             Content = new StringContent(requestBody, Encoding.UTF8, "application/json")
         };
@@ -170,16 +187,23 @@ public class OllamaClient
         await using var stream = await response.Content.ReadAsStreamAsync(cancellationToken);
         using var reader = new StreamReader(stream);
 
-        while (!reader.EndOfStream && !cancellationToken.IsCancellationRequested)
+        while (!cancellationToken.IsCancellationRequested)
         {
             var line = await reader.ReadLineAsync();
+            if (line is null)
+                yield break;
+
             if (string.IsNullOrWhiteSpace(line))
                 continue;
 
             using var doc = JsonDocument.Parse(line);
 
             if (doc.RootElement.TryGetProperty("response", out var token))
-                yield return token.GetString();
+            {
+                var responseText = token.GetString();
+                if (!string.IsNullOrEmpty(responseText))
+                    yield return responseText;
+            }
 
             if (doc.RootElement.TryGetProperty("done", out var done) &&
                 done.GetBoolean())
@@ -210,7 +234,7 @@ public class OllamaClient
         }
     });
 
-    var request = new HttpRequestMessage(HttpMethod.Post, $"{_baseUrl}/api/chat")
+    var request = new HttpRequestMessage(HttpMethod.Post, BuildUrl("/api/chat"))
     {
         Content = new StringContent(requestBody, Encoding.UTF8, "application/json")
     };
@@ -225,9 +249,12 @@ public class OllamaClient
     await using var stream = await response.Content.ReadAsStreamAsync(cancellationToken);
     using var reader = new StreamReader(stream);
 
-    while (!reader.EndOfStream && !cancellationToken.IsCancellationRequested)
+    while (!cancellationToken.IsCancellationRequested)
     {
         var line = await reader.ReadLineAsync();
+        if (line is null)
+            yield break;
+
         if (string.IsNullOrWhiteSpace(line))
             continue;
 
@@ -236,7 +263,9 @@ public class OllamaClient
         if (doc.RootElement.TryGetProperty("message", out var msg) &&
             msg.TryGetProperty("content", out var content))
         {
-            yield return content.GetString();
+            var messageContent = content.GetString();
+            if (!string.IsNullOrEmpty(messageContent))
+                yield return messageContent;
         }
 
         if (doc.RootElement.TryGetProperty("done", out var done) &&
@@ -259,7 +288,7 @@ public class OllamaClient
             }
         });
 
-        var request = new HttpRequestMessage(HttpMethod.Post, $"{_baseUrl}/api/chat")
+        var request = new HttpRequestMessage(HttpMethod.Post, BuildUrl("/api/chat"))
         {
             Content = new StringContent(requestBody, Encoding.UTF8, "application/json")
         };
@@ -274,9 +303,12 @@ public class OllamaClient
         await using var stream = await response.Content.ReadAsStreamAsync(cancellationToken);
         using var reader = new StreamReader(stream);
 
-        while (!reader.EndOfStream && !cancellationToken.IsCancellationRequested)
+        while (!cancellationToken.IsCancellationRequested)
         {
             var line = await reader.ReadLineAsync();
+            if (line is null)
+                yield break;
+
             if (string.IsNullOrWhiteSpace(line))
                 continue;
 
@@ -285,7 +317,9 @@ public class OllamaClient
             if (doc.RootElement.TryGetProperty("message", out var messageObj) &&
                 messageObj.TryGetProperty("content", out var content))
             {
-                yield return content.GetString();
+                var messageContent = content.GetString();
+                if (!string.IsNullOrEmpty(messageContent))
+                    yield return messageContent;
             }
 
             if (doc.RootElement.TryGetProperty("done", out var done) &&
@@ -314,7 +348,7 @@ public class OllamaClient
             }
         });
 
-        var request = new HttpRequestMessage(HttpMethod.Post, $"{_baseUrl}/api/generate")
+        var request = new HttpRequestMessage(HttpMethod.Post, BuildUrl("/api/generate"))
         {
             Content = new StringContent(requestBody, Encoding.UTF8, "application/json")
         };
@@ -329,9 +363,12 @@ public class OllamaClient
         await using var stream = await response.Content.ReadAsStreamAsync(cancellationToken);
         using var reader = new StreamReader(stream);
 
-        while (!reader.EndOfStream && !cancellationToken.IsCancellationRequested)
+        while (!cancellationToken.IsCancellationRequested)
         {
             var line = await reader.ReadLineAsync();
+            if (line is null)
+                yield break;
+
             if (string.IsNullOrWhiteSpace(line))
                 continue;
 
@@ -339,7 +376,9 @@ public class OllamaClient
 
             if (doc.RootElement.TryGetProperty("response", out var token))
             {
-                yield return token.GetString();
+                var responseText = token.GetString();
+                if (!string.IsNullOrEmpty(responseText))
+                    yield return responseText;
             }
 
             // stop condition from Ollama
@@ -351,11 +390,47 @@ public class OllamaClient
         }
     }
 
+    public void Dispose()
+    {
+        _http.Dispose();
+    }
+
     // 🔧 Helper POST method
     private async Task<string> PostAsync(string endpoint, string json)
     {
         var content = new StringContent(json, Encoding.UTF8, "application/json");
-        var response = await _http.PostAsync($"{_baseUrl}{endpoint}", content);
+        var response = await _http.PostAsync(BuildUrl(endpoint), content);
+        response.EnsureSuccessStatusCode();
         return await response.Content.ReadAsStringAsync();
+    }
+
+    private static HashSet<string> ParseInstalledModelNames(string body)
+    {
+        using var document = JsonDocument.Parse(body);
+        if (!document.RootElement.TryGetProperty("models", out var models) || models.ValueKind != JsonValueKind.Array)
+            throw new InvalidOperationException("Endpoint did not return a valid Ollama tags payload.");
+
+        var installedModels = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+        foreach (var model in models.EnumerateArray())
+        {
+            if (!model.TryGetProperty("name", out var nameProperty))
+                continue;
+
+            var name = nameProperty.GetString();
+            if (!string.IsNullOrWhiteSpace(name))
+                installedModels.Add(name);
+        }
+
+        return installedModels;
+    }
+
+    private string BuildUrl(string endpoint)
+    {
+        if (string.IsNullOrWhiteSpace(endpoint))
+            return _baseUrl;
+
+        return endpoint.StartsWith('/')
+            ? $"{_baseUrl}{endpoint}"
+            : $"{_baseUrl}/{endpoint}";
     }
 }

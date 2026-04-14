@@ -1,0 +1,22 @@
+{
+  "PromptModel": "llama3.2:1b",
+  "SuitabilityModel": "gemma4:e2b",
+  "MockupVisionModel": "gemma4:e4b",
+  "MinimumPublishScore": 6,
+  "Ollama": [
+    {
+      "Id": "local-ollama",
+      "Name": "Local Ollama",
+      "BaseUrl": "http://192.168.0.131:11434",
+      "Enabled": true
+    }
+  ],
+  "ComfyUi": [
+    {
+      "Id": "comfyui-151",
+      "Name": "ComfyUI 151",
+      "BaseUrl": "http://192.168.0.151:8188",
+      "Enabled": true
+    }
+  ]
+}
