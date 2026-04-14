@@ -187,7 +187,7 @@ async IAsyncEnumerable<Prompt> GeneratePrompt(
 
             await foreach (var response in ollamaNode.Client.GenerateStreamAsync(orchestrationSettings.PromptModel, initalPrompt))
             {
-                Console.Write(response);
+                // Console.Write(response);
                 returnedPrompt += response;
             }
             //json parse the returned prompt
