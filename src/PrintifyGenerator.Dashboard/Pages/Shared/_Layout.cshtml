@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Printify Generator Dashboard</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/PrintifyGenerator.Dashboard.styles.css" asp-append-version="true" />
+</head>
+@{
+    var requestPath = Context.Request.Path.Value ?? string.Empty;
+    var isStatsPage = string.Equals(requestPath, "/", StringComparison.OrdinalIgnoreCase)
+        || requestPath.StartsWith("/Stats", StringComparison.OrdinalIgnoreCase);
+    var isQcQueuePage = requestPath.StartsWith("/QcQueue", StringComparison.OrdinalIgnoreCase);
+    var isGeneratedImagesPage = requestPath.StartsWith("/GeneratedImages", StringComparison.OrdinalIgnoreCase);
+}
+<body>
+    <div class="app-shell">
+        <header class="app-header">
+            <a class="brand-mark" asp-page="/Stats">Printify Generator Dashboard</a>
+            <nav class="nav-strip">
+                <a class="nav-link @(isStatsPage ? "is-active" : null)" asp-page="/Stats">Stats</a>
+                <a class="nav-link @(isQcQueuePage ? "is-active" : null)" asp-page="/QcQueue">QC Queue</a>
+                <a class="nav-link @(isGeneratedImagesPage ? "is-active" : null)" asp-page="/GeneratedImages">Generated Images</a>
+            </nav>
+        </header>
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

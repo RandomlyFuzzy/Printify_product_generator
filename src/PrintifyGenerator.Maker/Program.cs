@@ -5,8 +5,6 @@ using System.Text;
 using System.Text.Json;
 using System.Text.Json.Nodes;
 using System.Net.WebSockets;
-using System.Text;
-using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Specialized;
@@ -15,7 +13,6 @@ using System.Collections.Generic;
 using System.Linq;
 
 using System.Net.Http.Headers;
-using System.Text.Json;
 using System.Runtime.InteropServices.JavaScript;
 
 
@@ -57,26 +54,32 @@ if (File.Exists("./main.env"))
 
 
 // return;
-OllamaClient ollama =  new OllamaClient("http://192.168.0.131:11434");//new OllamaClient("http://localhost:11434");
-// OllamaClient ollamaExternal = new OllamaClient("http://192.168.0.151:11434");
-OllamaClient ollamaExternal = new OllamaClient("http://192.168.0.131:11434");
+const string dataBasePath = "./src/data";
+var orchestrationSettingsPath = OrchestrationSettingsStore.GetSettingsPath(dataBasePath);
+var orchestrationSettings = OrchestrationSettingsStore.Load(dataBasePath);
 
-WebSocketEventEmitter emitter = new WebSocketEventEmitter();
-ComfyUiClient comfyUi = new ComfyUiClient("http://192.168.0.151:8188",emitter);
-await comfyUi.StartListener();
+var activeOllamaNodes = await LoadActiveOllamaNodesAsync(orchestrationSettings);
+if (activeOllamaNodes.Count == 0)
+{
+    Console.WriteLine($"No enabled Ollama nodes are available. Update {orchestrationSettingsPath} and try again.");
+    return;
+}
+
+var activeComfyNodes = await LoadActiveComfyUiNodesAsync(orchestrationSettings);
+if (activeComfyNodes.Count == 0)
+{
+    Console.WriteLine($"No enabled ComfyUI nodes are available. Update {orchestrationSettingsPath} and try again.");
+    return;
+}
+
+var ollamaPool = new RoundRobinSelector<OllamaNodeConnection>(activeOllamaNodes);
+var comfyPool = new RoundRobinSelector<ComfyUiNodeConnection>(activeComfyNodes);
+
+Console.WriteLine($"Using {activeOllamaNodes.Count} Ollama node(s) and {activeComfyNodes.Count} ComfyUI node(s) from {orchestrationSettingsPath}.");
 
 
 while(!Console.KeyAvailable)
 {
-    string status = await ollamaExternal.CheckStatusAsync();
-    Console.WriteLine($"Ollama Status: {status}");
-    if(status == string.Empty)
-    {
-        Console.WriteLine("Ollama is not running. Please start Ollama and try again.");
-        return;
-    }
-
-
     const string initalPrompt = @"You are a prompt engineer for AI image generation. Output ONLY a valid JSON array with no markdown, no explanation, no code fences, and no extra text — just raw JSON.
     Generate 3 creative Stable Diffusion prompts for print-on-demand products (t-shirts, posters, mugs). Each should be visually striking, commercially appealing, and varied in style (e.g. illustration, watercolor, retro, minimalist, photorealistic).
     You should try and make it appealing to a wide audience and not too niche. Avoid text in the image, as it can be hard to read on products. Each prompt should have a positive part describing the main subject and style, and a negative part specifying what to avoid.
@@ -100,7 +103,7 @@ while(!Console.KeyAvailable)
 
     var toProcess = GetPendingSuitabilityImages().ToList();
 
-    await foreach(var suitabilities in GenerateImageSuitability(ollamaExternal, toProcess,SutabilityPrompt))
+    await foreach(var suitabilities in GenerateImageSuitability(toProcess, SutabilityPrompt))
     {
         string newPath = WriteSuitabilityRecord(suitabilities);
         Console.WriteLine(newPath);
@@ -118,7 +121,7 @@ while(!Console.KeyAvailable)
         images.Add(image);
         if (images.Count > 4)
         {
-            await foreach(var suitabilities in GenerateImageSuitability(ollamaExternal, images,SutabilityPrompt))
+            await foreach(var suitabilities in GenerateImageSuitability(images, SutabilityPrompt))
             {
                 Console.WriteLine(suitabilities.PrityJsonString());
                 WriteSuitabilityRecord(suitabilities);
@@ -130,7 +133,7 @@ while(!Console.KeyAvailable)
 
 }
 
-async IAsyncEnumerable<ImageSuitability> GenerateImageSuitability(OllamaClient ol,List<string> images,string SutabilityPrompt)
+async IAsyncEnumerable<ImageSuitability> GenerateImageSuitability(List<string> images, string SutabilityPrompt)
 {
     foreach (var image in images)
     {
@@ -139,8 +142,10 @@ async IAsyncEnumerable<ImageSuitability> GenerateImageSuitability(OllamaClient o
         start:
         try
         {
-            // await foreach (var response in ol.GenerateWithImageStreamAsync("gemma4:e2b",  SutabilityPrompt,image))
-            await foreach (var response in ol.GenerateWithImageStreamAsync("gemma4:e2b",  SutabilityPrompt,image))
+            var ollamaNode = ollamaPool.Next();
+            Console.WriteLine($"Scoring {Path.GetFileName(image)} on {ollamaNode.Node.Name} ({ollamaNode.Node.BaseUrl})");
+
+            await foreach (var response in ollamaNode.Client.GenerateWithImageStreamAsync(orchestrationSettings.SuitabilityModel, SutabilityPrompt, image))
             {
                 totalResp += response;
                 // Console.Write(response);
@@ -166,16 +171,21 @@ async IAsyncEnumerable<ImageSuitability> GenerateImageSuitability(OllamaClient o
     }
 }
 
-async IAsyncEnumerable<Prompt> GeneratePrompt(string initalPrompt,CancellationToken token = default)
+async IAsyncEnumerable<Prompt> GeneratePrompt(
+    string initalPrompt,
+    [System.Runtime.CompilerServices.EnumeratorCancellation] CancellationToken token = default)
 {
     string returnedPrompt = "";
     int cnt = 0;
     while(!token.IsCancellationRequested){
         returnedPrompt = "";
         List<Prompt> prompts = new();
+        var ollamaNode = ollamaPool.Next();
         try
         {
-            await foreach (var response in ollama.GenerateStreamAsync("llama3.2:1b", initalPrompt))
+            Console.WriteLine($"Generating prompts on {ollamaNode.Node.Name} ({ollamaNode.Node.BaseUrl})");
+
+            await foreach (var response in ollamaNode.Client.GenerateStreamAsync(orchestrationSettings.PromptModel, initalPrompt))
             {
                 // Console.Write(response);
                 returnedPrompt += response;
@@ -193,7 +203,7 @@ async IAsyncEnumerable<Prompt> GeneratePrompt(string initalPrompt,CancellationTo
             }
             prompts = promptList2;
         }
-        catch (Exception ex)
+        catch (Exception)
         {
             // Console.WriteLine("Error: "+ex.Message);
             // Console.WriteLine(returnedPrompt);
@@ -211,7 +221,6 @@ async IAsyncEnumerable<Prompt> GeneratePrompt(string initalPrompt,CancellationTo
 async IAsyncEnumerable<string> GenerateImage(IAsyncEnumerable<Prompt> prompts)
 {
     string path = "src/data/workloads/illustration_lora_base.json";
-    JsonNode baseWorkflow = JsonNode.Parse(File.ReadAllText(path));
     JobStatus jobStatus;
     int job = 0;
     await foreach (var prompt in prompts)
@@ -219,6 +228,8 @@ async IAsyncEnumerable<string> GenerateImage(IAsyncEnumerable<Prompt> prompts)
         var workflowCopy = JsonXPath.Load(path);
 
         if (workflowCopy == null) continue;
+
+        var comfyNode = comfyPool.Next();
 
         // possative is 76:6.inputs.text
         // negative is 76:7.inputs.text
@@ -234,9 +245,10 @@ async IAsyncEnumerable<string> GenerateImage(IAsyncEnumerable<Prompt> prompts)
         workflowCopy = JsonXPath.Set(workflowCopy, "//76:3/inputs/cfg", JsonValue.Create(prompt.cfg));
 
 
-        string jobId = comfyUi.QueuePrompt(workflowCopy);
+        Console.WriteLine($"Dispatching image job to {comfyNode.Node.Name} ({comfyNode.Node.BaseUrl})");
+        string jobId = comfyNode.Client.QueuePrompt(workflowCopy);
         Console.WriteLine($"Job queued with ID: {jobId}");  
-        while ((jobStatus = comfyUi.GetJob(jobId)).Status != "completed")
+        while ((jobStatus = comfyNode.Client.GetJob(jobId)).Status != "completed")
         {
             Console.WriteLine($"Job {jobId} status: {jobStatus.Status} {jobStatus.Progress.ToString("F0")}% {job}"  );
             await Task.Delay(5000); // wait for 5 seconds before checking again
@@ -360,3 +372,65 @@ string CreateImageFileUri(string imagePath)
 {
     return new Uri(Path.GetFullPath(imagePath)).AbsoluteUri;
 }
+
+async Task<List<OllamaNodeConnection>> LoadActiveOllamaNodesAsync(OrchestrationSettings settings)
+{
+    var activeNodes = new List<OllamaNodeConnection>();
+    var requiredModels = new[] { settings.PromptModel, settings.SuitabilityModel }
+        .Where(model => !string.IsNullOrWhiteSpace(model))
+        .Distinct(StringComparer.OrdinalIgnoreCase)
+        .ToArray();
+
+    foreach (var node in settings.Ollama.Where(candidate => candidate.Enabled && !string.IsNullOrWhiteSpace(candidate.BaseUrl)))
+    {
+        try
+        {
+            var client = new OllamaClient(node.BaseUrl);
+            await client.CheckStatusAsync();
+            var installedModels = await client.GetInstalledModelNamesAsync();
+            var missingModels = requiredModels
+                .Where(model => !installedModels.Contains(model))
+                .ToArray();
+
+            if (missingModels.Length > 0)
+            {
+                client.Dispose();
+                Console.WriteLine($"Skipping Ollama node {node.Name} ({node.BaseUrl}): missing model(s): {string.Join(", ", missingModels)}");
+                continue;
+            }
+
+            activeNodes.Add(new OllamaNodeConnection(node, client));
+            Console.WriteLine($"Ollama node online: {node.Name} ({node.BaseUrl})");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Skipping Ollama node {node.Name} ({node.BaseUrl}): {ex.Message}");
+        }
+    }
+
+    return activeNodes;
+}
+
+async Task<List<ComfyUiNodeConnection>> LoadActiveComfyUiNodesAsync(OrchestrationSettings settings)
+{
+    var activeNodes = new List<ComfyUiNodeConnection>();
+    foreach (var node in settings.ComfyUi.Where(candidate => candidate.Enabled && !string.IsNullOrWhiteSpace(candidate.BaseUrl)))
+    {
+        try
+        {
+            var client = new ComfyUiClient(node.BaseUrl, new WebSocketEventEmitter());
+            await client.StartListener();
+            activeNodes.Add(new ComfyUiNodeConnection(node, client));
+            Console.WriteLine($"ComfyUI node online: {node.Name} ({node.BaseUrl})");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Skipping ComfyUI node {node.Name} ({node.BaseUrl}): {ex.Message}");
+        }
+    }
+
+    return activeNodes;
+}
+
+sealed record OllamaNodeConnection(OrchestrationNode Node, OllamaClient Client);
+sealed record ComfyUiNodeConnection(OrchestrationNode Node, ComfyUiClient Client);

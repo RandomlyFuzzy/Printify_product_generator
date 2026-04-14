@@ -1,5 +1,24 @@
 # Printify_prodcuct_generator
 
+## Dashboard
+
+`src/PrintifyGenerator.Dashboard` is a local ASP.NET Core dashboard for the generator workflow.
+
+It currently provides:
+
+- A gallery of generated images under `src/data/Checking`
+- Counts for generated, reviewed, ready-for-draft, and already-drafted images
+- A manager for ComfyUI and Ollama node URLs stored in `src/data/staging/orchestration-settings.json`
+- Per-image publish overrides stored in `src/data/staging/publishing-overrides.json`
+
+The maker process now reads the same orchestration settings file and round-robins image generation and suitability work across all enabled nodes.
+
+Run the dashboard locally:
+
+```bash
+dotnet run --project src/PrintifyGenerator.Dashboard
+```
+
 ## Price updater
 
 `src/PrintifyGenerator.PriceUpdater` periodically recalculates Printify product variant prices for a shop and can push the updated prices back to Printify.

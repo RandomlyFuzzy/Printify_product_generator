@@ -1,0 +1,590 @@
+@page
+@model StatsModel
+@{
+    ViewData["Title"] = "Stats";
+    var snapshot = Model.Snapshot;
+    var runtime = Model.Runtime;
+    var summary = snapshot.Summary;
+    var maxDailyVolume = Model.MaxDailyVolume;
+    var maxScoreBandCount = Model.MaxScoreBandCount;
+}
+
+<main class="dashboard-shell page-shell">
+    <section class="hero-panel">
+        <div>
+            <p class="eyebrow">Printify Generator</p>
+            <h1>Stats, node health, and shared publish rules.</h1>
+            <p class="hero-copy">
+                This page tracks review throughput, score distribution, node status, and the shared settings file
+                the generator uses for models, minimum publish score, and endpoint selection.
+            </p>
+        </div>
+        <div class="hero-meta">
+            <div>
+                <span class="meta-label">Settings file</span>
+                <strong>@snapshot.SettingsPath</strong>
+            </div>
+            <div>
+                <span class="meta-label">Override file</span>
+                <strong>@snapshot.PublishingOverridesPath</strong>
+            </div>
+            <div>
+                <span class="meta-label">Minimum publish score</span>
+                <strong>@snapshot.Settings.MinimumPublishScore.ToString("0.0")</strong>
+            </div>
+        </div>
+    </section>
+
+    @if (!string.IsNullOrWhiteSpace(Model.FlashMessage))
+    {
+        <section class="flash-banner">@Model.FlashMessage</section>
+    }
+
+    <section class="panel runtime-panel" data-runtime-endpoint="?handler=RuntimeState">
+        <div class="panel-heading split-heading">
+            <div>
+                <p class="eyebrow">Live runner</p>
+                <h2>Prompt, image, and suitability queue</h2>
+                <p class="hero-copy runtime-copy">
+                    The dashboard now drives the generation loop: it asks Ollama for fresh prompts, sends them to ComfyUI,
+                    saves the image into the checking queue, and records suitability output while streaming recent activity below.
+                </p>
+            </div>
+
+            <div class="runtime-control-stack">
+                <span id="runner-badge" class="runner-badge @runtime.StateCssClass">@runtime.StateLabel</span>
+                <p id="runner-status-message" class="muted runtime-status-copy">@runtime.StatusMessage</p>
+
+                <div class="button-row">
+                    <form method="post" asp-page-handler="StartRunner">
+                        <button type="submit" class="primary-button">Resume runner</button>
+                    </form>
+                    <form method="post" asp-page-handler="StopRunner">
+                        <button type="submit" class="ghost-button">Pause runner</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="runtime-summary" class="runtime-summary-grid">
+            <article class="runtime-summary-card">
+                <span class="stat-label">Queued now</span>
+                <strong>@runtime.PendingQueueCount</strong>
+                <p>Prompted items waiting for image generation.</p>
+            </article>
+            <article class="runtime-summary-card">
+                <span class="stat-label">Active now</span>
+                <strong>@runtime.ActiveItemCount</strong>
+                <p>Items currently being rendered or reviewed.</p>
+            </article>
+            <article class="runtime-summary-card">
+                <span class="stat-label">Prompts this run</span>
+                <strong>@runtime.SessionPromptCount</strong>
+                <p>Prompts generated since the runner started.</p>
+            </article>
+            <article class="runtime-summary-card">
+                <span class="stat-label">Images saved</span>
+                <strong>@runtime.SessionImageCount</strong>
+                <p>Images written into the checking tree this session.</p>
+            </article>
+            <article class="runtime-summary-card">
+                <span class="stat-label">Suitability done</span>
+                <strong>@runtime.SessionSuitabilityCount</strong>
+                <p>Suitability records written during this run.</p>
+            </article>
+            <article class="runtime-summary-card">
+                <span class="stat-label">Failures</span>
+                <strong>@runtime.SessionFailureCount</strong>
+                <p>Items that failed and need another attempt.</p>
+            </article>
+        </div>
+
+        <div class="runtime-columns">
+            <section class="runtime-column">
+                <div class="panel-heading tight-heading">
+                    <div>
+                        <p class="eyebrow">Queue</p>
+                        <h2>Current items</h2>
+                    </div>
+                </div>
+
+                <div id="runtime-queue" class="runtime-queue-list">
+                    @if (runtime.Items.Count == 0)
+                    {
+                        <p class="muted">No generation activity yet.</p>
+                    }
+                    else
+                    {
+                        @foreach (var item in runtime.Items)
+                        {
+                            var progressWidth = (item.ProgressPercent ?? 0).ToString("0.#", System.Globalization.CultureInfo.InvariantCulture);
+
+                            <article class="runtime-item @item.StageCssClass">
+                                <div class="runtime-item-header">
+                                    <div>
+                                        <strong>@item.DisplayId</strong>
+                                        <span class="subtle-label">@item.StageLabel</span>
+                                    </div>
+                                    <span class="subtle-label">@item.UpdatedAtUtc.ToLocalTime().ToString("HH:mm:ss")</span>
+                                </div>
+
+                                <p class="summary-copy">@item.PromptPreview</p>
+                                <p class="runtime-item-settings">@item.PromptSettingsLabel</p>
+
+                                <div class="runtime-item-meta">
+                                    @if (!string.IsNullOrWhiteSpace(item.PromptNodeName))
+                                    {
+                                        <span>Prompt: @item.PromptNodeName</span>
+                                    }
+                                    @if (!string.IsNullOrWhiteSpace(item.ImageNodeName))
+                                    {
+                                        <span>Image: @item.ImageNodeName</span>
+                                    }
+                                    @if (!string.IsNullOrWhiteSpace(item.SuitabilityNodeName))
+                                    {
+                                        <span>Suitability: @item.SuitabilityNodeName</span>
+                                    }
+                                </div>
+
+                                <div class="runtime-progress-track">
+                                    <span style="width:@progressWidth%"></span>
+                                </div>
+
+                                <p class="runtime-item-message">@item.StatusMessage</p>
+
+                                @if (!string.IsNullOrWhiteSpace(item.ImageUrl))
+                                {
+                                    <a class="runtime-item-link" href="@item.ImageUrl" target="_blank" rel="noreferrer">Open image</a>
+                                }
+
+                                @if (!string.IsNullOrWhiteSpace(item.ErrorMessage))
+                                {
+                                    <p class="runtime-error">@item.ErrorMessage</p>
+                                }
+                            </article>
+                        }
+                    }
+                </div>
+            </section>
+
+            <section class="runtime-column">
+                <div class="panel-heading tight-heading">
+                    <div>
+                        <p class="eyebrow">Recent logs</p>
+                        <h2>Latest events</h2>
+                    </div>
+                </div>
+
+                <div id="runtime-logs" class="runtime-log-list">
+                    @if (runtime.Logs.Count == 0)
+                    {
+                        <p class="muted">No log entries yet.</p>
+                    }
+                    else
+                    {
+                        @foreach (var entry in runtime.Logs.Take(18))
+                        {
+                            <article class="runtime-log-entry @entry.CssClass">
+                                <div class="runtime-log-header">
+                                    <strong>@entry.Level</strong>
+                                    <span>@entry.TimestampUtc.ToLocalTime().ToString("HH:mm:ss")</span>
+                                </div>
+                                <p>@entry.Message</p>
+                            </article>
+                        }
+                    }
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <section class="stats-grid expanded-grid">
+        <article class="stat-card">
+            <span class="stat-label">Generated images</span>
+            <strong>@summary.TotalImages</strong>
+            <p>All image files found beneath the checking folder.</p>
+        </article>
+        <article class="stat-card">
+            <span class="stat-label">Reviewed images</span>
+            <strong>@summary.ReviewedImages</strong>
+            <p>Images that already have a suitability breakdown.</p>
+        </article>
+        <article class="stat-card">
+            <span class="stat-label">Pending review</span>
+            <strong>@summary.PendingReviewImages</strong>
+            <p>Images still waiting for a <code>phase_3.json</code>.</p>
+        </article>
+        <article class="stat-card">
+            <span class="stat-label">Eligible now</span>
+            <strong>@summary.EligibleForPublishingImages</strong>
+            <p>Images that pass the current publish gate and have no drafts yet.</p>
+        </article>
+        <article class="stat-card">
+            <span class="stat-label">Blocked</span>
+            <strong>@summary.BlockedImages</strong>
+            <p>Reviewed images that currently fail the effective publish rules.</p>
+        </article>
+        <article class="stat-card">
+            <span class="stat-label">Drafted images</span>
+            <strong>@summary.DraftedImages</strong>
+            <p>Images with one or more Printify draft records.</p>
+        </article>
+        <article class="stat-card">
+            <span class="stat-label">Manual allow</span>
+            <strong>@summary.ForceAllowedImages</strong>
+            <p>Images with a score-gate allow override.</p>
+        </article>
+        <article class="stat-card">
+            <span class="stat-label">Manual block</span>
+            <strong>@summary.ForceBlockedImages</strong>
+            <p>Images that have been manually blocked.</p>
+        </article>
+        <article class="stat-card">
+            <span class="stat-label">Average score</span>
+            <strong>@summary.AverageReviewedScore.ToString("0.0")</strong>
+            <p>Average of the detailed scoring breakdown across reviewed images.</p>
+        </article>
+    </section>
+
+    <section class="dashboard-grid">
+        <div class="left-rail">
+            <section class="panel">
+                <div class="panel-heading">
+                    <div>
+                        <p class="eyebrow">Activity</p>
+                        <h2>Recent output volume</h2>
+                    </div>
+                </div>
+                <div class="volume-list">
+                    @if (snapshot.DailyVolumes.Count == 0)
+                    {
+                        <p class="muted">No images found yet.</p>
+                    }
+                    else
+                    {
+                        @foreach (var entry in snapshot.DailyVolumes)
+                        {
+                            var width = maxDailyVolume == 0 ? 0 : (int)Math.Round((entry.Count / (double)maxDailyVolume) * 100);
+                            <div class="volume-row">
+                                <span>@entry.Day.ToString("MMM dd")</span>
+                                <div class="volume-track">
+                                    <span style="width:@width%"></span>
+                                </div>
+                                <strong>@entry.Count</strong>
+                            </div>
+                        }
+                    }
+                </div>
+            </section>
+
+            <section class="panel">
+                <div class="panel-heading">
+                    <div>
+                        <p class="eyebrow">Score bands</p>
+                        <h2>Review distribution</h2>
+                    </div>
+                </div>
+                <div class="score-band-list">
+                    @foreach (var band in snapshot.ScoreBands)
+                    {
+                        var width = maxScoreBandCount == 0 ? 0 : (int)Math.Round((band.Count / (double)maxScoreBandCount) * 100);
+                        <div class="score-band-row">
+                            <span>@band.Label</span>
+                            <div class="score-band-track">
+                                <span style="width:@width%"></span>
+                            </div>
+                            <strong>@band.Count</strong>
+                        </div>
+                    }
+                </div>
+            </section>
+
+            <section class="panel">
+                <div class="panel-heading">
+                    <div>
+                        <p class="eyebrow">Shared settings</p>
+                        <h2>Models and publish gate</h2>
+                    </div>
+                </div>
+                <form method="post" asp-page-handler="SaveModels" class="stack-form">
+                    <label>
+                        <span>Prompt model</span>
+                        <input type="text" name="promptModel" value="@snapshot.Settings.PromptModel" />
+                    </label>
+                    <label>
+                        <span>Suitability model</span>
+                        <input type="text" name="suitabilityModel" value="@snapshot.Settings.SuitabilityModel" />
+                    </label>
+                    <label>
+                        <span>Mockup vision model</span>
+                        <input type="text" name="mockupVisionModel" value="@snapshot.Settings.MockupVisionModel" />
+                    </label>
+                    <label>
+                        <span>Minimum publish score</span>
+                        <input type="number" name="minimumPublishScore" min="0" max="10" step="0.1" value="@snapshot.Settings.MinimumPublishScore.ToString("0.0")" />
+                    </label>
+                    <button type="submit" class="primary-button">Save shared settings</button>
+                </form>
+            </section>
+        </div>
+
+        <div class="right-rail">
+            <section class="panel node-panel">
+                <div class="panel-heading split-heading">
+                    <div>
+                        <p class="eyebrow">Ollama</p>
+                        <h2>Inference nodes</h2>
+                    </div>
+                    <span class="muted">Maker and mockup generation read these entries directly.</span>
+                </div>
+
+                <div class="node-list">
+                    @foreach (var node in snapshot.Settings.Ollama)
+                    {
+                        var health = Model.GetNodeHealth(node.Id);
+                        <form method="post" class="node-card">
+                            <input type="hidden" name="nodeType" value="ollama" />
+                            <input type="hidden" name="id" value="@node.Id" />
+                            <label>
+                                <span>Name</span>
+                                <input type="text" name="name" value="@node.Name" />
+                            </label>
+                            <label>
+                                <span>Base URL</span>
+                                <input type="url" name="baseUrl" value="@node.BaseUrl" />
+                            </label>
+                            <label class="toggle-row">
+                                <input type="hidden" name="enabled" value="false" />
+                                <input type="checkbox" name="enabled" value="true" @(node.Enabled ? "checked" : null) />
+                                <span>Enabled</span>
+                            </label>
+                            <div class="node-health @health.CssClass">
+                                <strong>@health.DisplayText</strong>
+                                <span>@health.DetailText</span>
+                            </div>
+                            <div class="button-row">
+                                <button type="submit" asp-page-handler="SaveNode" class="secondary-button">Save</button>
+                                <button type="submit" asp-page-handler="DeleteNode" class="danger-button" formnovalidate>Remove</button>
+                            </div>
+                        </form>
+                    }
+                </div>
+
+                <form method="post" asp-page-handler="AddNode" class="node-create-form">
+                    <input type="hidden" name="nodeType" value="ollama" />
+                    <label>
+                        <span>New Ollama node name</span>
+                        <input type="text" name="name" placeholder="Warehouse LLM" />
+                    </label>
+                    <label>
+                        <span>Base URL</span>
+                        <input type="url" name="baseUrl" placeholder="http://192.168.0.140:11434" />
+                    </label>
+                    <button type="submit" class="ghost-button">Add Ollama node</button>
+                </form>
+            </section>
+
+            <section class="panel node-panel">
+                <div class="panel-heading split-heading">
+                    <div>
+                        <p class="eyebrow">ComfyUI</p>
+                        <h2>Image generation nodes</h2>
+                    </div>
+                    <span class="muted">Jobs are dispatched round-robin across enabled nodes.</span>
+                </div>
+
+                <div class="node-list">
+                    @foreach (var node in snapshot.Settings.ComfyUi)
+                    {
+                        var health = Model.GetNodeHealth(node.Id);
+                        <form method="post" class="node-card">
+                            <input type="hidden" name="nodeType" value="comfyui" />
+                            <input type="hidden" name="id" value="@node.Id" />
+                            <label>
+                                <span>Name</span>
+                                <input type="text" name="name" value="@node.Name" />
+                            </label>
+                            <label>
+                                <span>Base URL</span>
+                                <input type="url" name="baseUrl" value="@node.BaseUrl" />
+                            </label>
+                            <label class="toggle-row">
+                                <input type="hidden" name="enabled" value="false" />
+                                <input type="checkbox" name="enabled" value="true" @(node.Enabled ? "checked" : null) />
+                                <span>Enabled</span>
+                            </label>
+                            <div class="node-health @health.CssClass">
+                                <strong>@health.DisplayText</strong>
+                                <span>@health.DetailText</span>
+                            </div>
+                            <div class="button-row">
+                                <button type="submit" asp-page-handler="SaveNode" class="secondary-button">Save</button>
+                                <button type="submit" asp-page-handler="DeleteNode" class="danger-button" formnovalidate>Remove</button>
+                            </div>
+                        </form>
+                    }
+                </div>
+
+                <form method="post" asp-page-handler="AddNode" class="node-create-form">
+                    <input type="hidden" name="nodeType" value="comfyui" />
+                    <label>
+                        <span>New ComfyUI node name</span>
+                        <input type="text" name="name" placeholder="Comfy worker A" />
+                    </label>
+                    <label>
+                        <span>Base URL</span>
+                        <input type="url" name="baseUrl" placeholder="http://192.168.0.151:8188" />
+                    </label>
+                    <button type="submit" class="ghost-button">Add ComfyUI node</button>
+                </form>
+            </section>
+        </div>
+    </section>
+</main>
+
+@section Scripts {
+    <script>
+        (() => {
+            const runtimePanel = document.querySelector("[data-runtime-endpoint]");
+            if (!runtimePanel) {
+                return;
+            }
+
+            const endpoint = runtimePanel.dataset.runtimeEndpoint;
+            const badge = document.getElementById("runner-badge");
+            const statusMessage = document.getElementById("runner-status-message");
+            const summary = document.getElementById("runtime-summary");
+            const queue = document.getElementById("runtime-queue");
+            const logs = document.getElementById("runtime-logs");
+
+            const htmlEscapeMap = {
+                "&": "&amp;",
+                "<": "&lt;",
+                ">": "&gt;",
+                '"': "&quot;",
+                "'": "&#39;"
+            };
+
+            const escapeHtml = (value) => String(value ?? "").replace(/[&<>"']/g, (character) => htmlEscapeMap[character] ?? character);
+
+            const formatTime = (value) => {
+                if (!value) {
+                    return "--";
+                }
+
+                const parsed = new Date(value);
+                if (Number.isNaN(parsed.valueOf())) {
+                    return "--";
+                }
+
+                return parsed.toLocaleTimeString([], {
+                    hour: "2-digit",
+                    minute: "2-digit",
+                    second: "2-digit"
+                });
+            };
+
+            const summaryCard = (label, value, copy) => `
+                <article class="runtime-summary-card">
+                    <span class="stat-label">${escapeHtml(label)}</span>
+                    <strong>${escapeHtml(value)}</strong>
+                    <p>${escapeHtml(copy)}</p>
+                </article>`;
+
+            const renderSummary = (runtime) => {
+                summary.innerHTML = [
+                    summaryCard("Queued now", runtime.pendingQueueCount, "Prompted items waiting for image generation."),
+                    summaryCard("Active now", runtime.activeItemCount, "Items currently being rendered or reviewed."),
+                    summaryCard("Prompts this run", runtime.sessionPromptCount, "Prompts generated since the runner started."),
+                    summaryCard("Images saved", runtime.sessionImageCount, "Images written into the checking tree this session."),
+                    summaryCard("Suitability done", runtime.sessionSuitabilityCount, "Suitability records written during this run."),
+                    summaryCard("Failures", runtime.sessionFailureCount, "Items that failed and need another attempt.")
+                ].join("");
+            };
+
+            const renderQueue = (items) => {
+                if (!Array.isArray(items) || items.length === 0) {
+                    queue.innerHTML = '<p class="muted">No generation activity yet.</p>';
+                    return;
+                }
+
+                queue.innerHTML = items.map((item) => {
+                    const displayId = item.displayId || item.comfyJobId || item.runtimeId || "queue-item";
+                    const progress = typeof item.progressPercent === "number" ? Math.max(0, Math.min(100, item.progressPercent)) : 0;
+                    const promptNode = item.promptNodeName ? `<span>Prompt: ${escapeHtml(item.promptNodeName)}</span>` : "";
+                    const imageNode = item.imageNodeName ? `<span>Image: ${escapeHtml(item.imageNodeName)}</span>` : "";
+                    const suitabilityNode = item.suitabilityNodeName ? `<span>Suitability: ${escapeHtml(item.suitabilityNodeName)}</span>` : "";
+                    const imageLink = item.imageUrl
+                        ? `<a class="runtime-item-link" href="${escapeHtml(item.imageUrl)}" target="_blank" rel="noreferrer">Open image</a>`
+                        : "";
+                    const error = item.errorMessage
+                        ? `<p class="runtime-error">${escapeHtml(item.errorMessage)}</p>`
+                        : "";
+
+                    return `
+                        <article class="runtime-item ${escapeHtml(item.stageCssClass || "runtime-stage-queued")}">
+                            <div class="runtime-item-header">
+                                <div>
+                                    <strong>${escapeHtml(displayId)}</strong>
+                                    <span class="subtle-label">${escapeHtml(item.stageLabel || "Queued")}</span>
+                                </div>
+                                <span class="subtle-label">${formatTime(item.updatedAtUtc)}</span>
+                            </div>
+                            <p class="summary-copy">${escapeHtml(item.promptPreview || "No prompt preview available.")}</p>
+                            <p class="runtime-item-settings">${escapeHtml(item.promptSettingsLabel || "")}</p>
+                            <div class="runtime-item-meta">${[promptNode, imageNode, suitabilityNode].join("")}</div>
+                            <div class="runtime-progress-track"><span style="width:${progress}%"></span></div>
+                            <p class="runtime-item-message">${escapeHtml(item.statusMessage || "")}</p>
+                            ${imageLink}
+                            ${error}
+                        </article>`;
+                }).join("");
+            };
+
+            const renderLogs = (entries) => {
+                if (!Array.isArray(entries) || entries.length === 0) {
+                    logs.innerHTML = '<p class="muted">No log entries yet.</p>';
+                    return;
+                }
+
+                logs.innerHTML = entries.slice(0, 18).map((entry) => `
+                    <article class="runtime-log-entry ${escapeHtml(entry.cssClass || "runtime-log-info")}">
+                        <div class="runtime-log-header">
+                            <strong>${escapeHtml(entry.level || "info")}</strong>
+                            <span>${formatTime(entry.timestampUtc)}</span>
+                        </div>
+                        <p>${escapeHtml(entry.message || "")}</p>
+                    </article>`).join("");
+            };
+
+            const renderRuntime = (runtime) => {
+                badge.textContent = runtime.stateLabel;
+                badge.className = `runner-badge ${runtime.stateCssClass}`;
+                statusMessage.textContent = runtime.statusMessage;
+                renderSummary(runtime);
+                renderQueue(runtime.items);
+                renderLogs(runtime.logs);
+            };
+
+            const refreshRuntime = async () => {
+                try {
+                    const response = await fetch(endpoint, {
+                        headers: { Accept: "application/json" },
+                        cache: "no-store"
+                    });
+
+                    if (!response.ok) {
+                        return;
+                    }
+
+                    renderRuntime(await response.json());
+                } catch (error) {
+                    console.error("Failed to refresh runtime state.", error);
+                }
+            };
+
+            refreshRuntime();
+            window.setInterval(refreshRuntime, 1500);
+        })();
+    </script>
+}

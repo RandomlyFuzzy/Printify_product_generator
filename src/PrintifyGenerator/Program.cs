@@ -23,9 +23,45 @@ if (string.IsNullOrWhiteSpace(token))
 }
 
 // ── Clients ────────────────────────────────────────────────────────────────────
+const string dataBasePath = "./src/data";
+var orchestrationSettingsPath = OrchestrationSettingsStore.GetSettingsPath(dataBasePath);
+var orchestrationSettings = OrchestrationSettingsStore.Load(dataBasePath);
+var publishingOverrides = PublishingOverrideStore.Load(dataBasePath);
+
 PrintifyClient printify = new PrintifyClient(token);
-OllamaClient   ollama   = new OllamaClient("http://192.168.0.151:11434");
-// OllamaClient   ollama   = new OllamaClient();//"http://192.168.0.131:11434");
+
+OllamaClient? ollama = null;
+OrchestrationNode? selectedOllamaNode = null;
+foreach (var candidate in orchestrationSettings.Ollama.Where(node => node.Enabled && !string.IsNullOrWhiteSpace(node.BaseUrl)))
+{
+    try
+    {
+        var candidateClient = new OllamaClient(candidate.BaseUrl);
+        await candidateClient.CheckStatusAsync();
+        var installedModels = await candidateClient.GetInstalledModelNamesAsync();
+        if (!installedModels.Contains(orchestrationSettings.MockupVisionModel))
+        {
+            candidateClient.Dispose();
+            continue;
+        }
+
+        ollama = candidateClient;
+        selectedOllamaNode = candidate;
+        break;
+    }
+    catch
+    {
+        // try the next configured node
+    }
+}
+
+if (ollama is null || selectedOllamaNode is null)
+{
+    Console.Error.WriteLine($"[ERROR] No reachable Ollama nodes were found in {orchestrationSettingsPath}");
+    return;
+}
+
+Console.WriteLine($"Using Ollama node: {selectedOllamaNode.Name} ({selectedOllamaNode.BaseUrl})");
 
 // ── Auto-resolve shop ID ───────────────────────────────────────────────────────
 Console.WriteLine("Fetching shop list from Printify...");
@@ -43,8 +79,8 @@ var generator = new MockupGenerator(
     printify:     printify,
     ollama:       ollama,
     shopId:       shopId,
-    dataBasePath: "./src/data",
-    visionModel:  "gemma4:e4b");
+    dataBasePath: dataBasePath,
+    visionModel:  orchestrationSettings.MockupVisionModel);
 
 // ── Collect candidate images from phase_3 results ─────────────────────────────
 const string checkingPath = "./src/data/Checking";
@@ -70,13 +106,29 @@ foreach (var jsonFile in jsonFiles)
             await File.ReadAllTextAsync(jsonFile),
             new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
 
-        if (suitability is null)            continue;
-        if (!suitability.IsSuitableForPrint()) continue;
-        if (suitability.OverallScore() < 6.0f) continue;
+        if (suitability is null)
+            continue;
 
         string? path = ResolveImagePath(suitability.imageURL, jsonFile);
-        if (path is not null)
-            imagePaths.Add(path);
+        if (path is null)
+            continue;
+
+        var eligibility = PublishingEligibilityEvaluator.Evaluate(
+            path,
+            suitability,
+            orchestrationSettings.MinimumPublishScore,
+            publishingOverrides);
+
+        if (!eligibility.IsEligibleForPublishing)
+        {
+            Console.WriteLine($"Skipping {path}: {eligibility.Reason}");
+            continue;
+        }
+
+        if (eligibility.HasManualOverride)
+            Console.WriteLine($"Including {path}: {eligibility.Reason}");
+
+        imagePaths.Add(path);
     }
     catch { /* skip malformed records */ }
 }

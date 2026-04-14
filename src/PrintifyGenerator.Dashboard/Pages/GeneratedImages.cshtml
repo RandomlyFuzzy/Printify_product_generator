@@ -1,0 +1,270 @@
+@page
+@model GeneratedImagesModel
+@{
+    ViewData["Title"] = "Generated Images";
+    var snapshot = Model.Snapshot;
+    var summary = snapshot.Summary;
+    var focusedImage = snapshot.Images.Count == 1 ? snapshot.Images[0] : null;
+}
+
+<main class="dashboard-shell page-shell">
+    <section class="hero-panel">
+        <div>
+            <p class="eyebrow">Generated Images</p>
+            <h1>Detailed review queue for every generated image.</h1>
+            <p class="hero-copy">
+                Inspect prompts, safety flags, full score breakdowns, draft history, and the effective publish decision.
+                Manual overrides here only change the minimum score gate; they do not bypass IP, law, or NSFW checks.
+            </p>
+        </div>
+        <div class="hero-meta">
+            <div>
+                <span class="meta-label">Queue filter</span>
+                <strong>@Model.Status</strong>
+            </div>
+            <div>
+                <span class="meta-label">View mode</span>
+                <strong>@(Model.HasFocusedImage ? "Focused image" : "Status list")</strong>
+            </div>
+            <div>
+                <span class="meta-label">Minimum publish score</span>
+                <strong>@snapshot.Settings.MinimumPublishScore.ToString("0.0")</strong>
+            </div>
+            <div>
+                <span class="meta-label">Override file</span>
+                <strong>@snapshot.PublishingOverridesPath</strong>
+            </div>
+        </div>
+    </section>
+
+    @if (!string.IsNullOrWhiteSpace(Model.FlashMessage))
+    {
+        <section class="flash-banner">@Model.FlashMessage</section>
+    }
+
+    <section class="panel compact-panel">
+        <div class="split-heading panel-heading tight-heading">
+            <div>
+                <p class="eyebrow">Filters</p>
+                <h2>@(Model.HasFocusedImage ? "Focused image details" : "Generated image states")</h2>
+            </div>
+            <span class="muted">Showing @(Model.HasFocusedImage ? $"{snapshot.Images.Count} selected image(s)" : $"{snapshot.Images.Count} image(s)") out of @summary.TotalImages total.</span>
+        </div>
+        @if (Model.HasFocusedImage)
+        {
+            <div class="filter-pills">
+                <span class="filter-pill is-active">Focused @(focusedImage?.JobId ?? "image")</span>
+                <a asp-page="/GeneratedImages" asp-route-status="@Model.Status" class="filter-pill">Show full list</a>
+            </div>
+        }
+        else
+        {
+            <div class="filter-pills">
+                <a asp-page="/GeneratedImages" asp-route-status="all" class="filter-pill @(Model.Status == "all" ? "is-active" : null)">All</a>
+                <a asp-page="/GeneratedImages" asp-route-status="pending" class="filter-pill @(Model.Status == "pending" ? "is-active" : null)">Pending</a>
+                <a asp-page="/GeneratedImages" asp-route-status="ready" class="filter-pill @(Model.Status == "ready" ? "is-active" : null)">Ready</a>
+                <a asp-page="/GeneratedImages" asp-route-status="drafted" class="filter-pill @(Model.Status == "drafted" ? "is-active" : null)">Drafted</a>
+                <a asp-page="/GeneratedImages" asp-route-status="blocked" class="filter-pill @(Model.Status == "blocked" ? "is-active" : null)">Blocked</a>
+            </div>
+        }
+    </section>
+
+    <section class="panel review-panel">
+        <div class="panel-heading split-heading">
+            <div>
+                <p class="eyebrow">Review queue</p>
+                <h2>Generated image breakdowns</h2>
+            </div>
+            <span class="muted">Use manual allow to override only the score threshold, or manual block to exclude an image.</span>
+        </div>
+
+        @if (snapshot.Images.Count == 0)
+        {
+            <p class="muted">No images matched the current filter.</p>
+        }
+        else
+        {
+            <div class="image-review-list">
+                @foreach (var item in snapshot.Images)
+                {
+                    <article class="image-review-card">
+                        <div class="image-review-media">
+                            <div class="image-frame portrait-frame">
+                                <img src="@item.ImageUrl" alt="Generated artwork @item.JobId" loading="lazy" />
+                                <span class="status-chip @item.StatusCssClass">@item.StatusLabel</span>
+                            </div>
+                        </div>
+
+                        <div class="image-review-body">
+                            <div class="card-heading review-heading">
+                                <div>
+                                    <h3>@item.JobId</h3>
+                                    <p class="path-label">@item.RelativeDirectory</p>
+                                </div>
+                                <span>@item.CapturedAtUtc.ToLocalTime().ToString("dd MMM yyyy HH:mm")</span>
+                            </div>
+
+                            <div class="decision-strip @item.StatusCssClass">
+                                <strong>@(item.IsEligibleForPublishing ? "Eligible for publish queue" : "Currently blocked")</strong>
+                                <span>@item.EligibilityReason</span>
+                            </div>
+
+                            <div class="meta-grid">
+                                <div>
+                                    <span>Average score</span>
+                                    <strong>@(item.ReviewScore is float reviewScore ? reviewScore.ToString("0.0") : "-")</strong>
+                                </div>
+                                <div>
+                                    <span>Suitability value</span>
+                                    <strong>@(item.SuitabilityScore is float suitabilityScore ? suitabilityScore.ToString("0.0") : "-")</strong>
+                                </div>
+                                <div>
+                                    <span>Drafts</span>
+                                    <strong>@item.DraftCount</strong>
+                                </div>
+                                <div>
+                                    <span>Override</span>
+                                    <strong>@item.PublishOverrideLabel</strong>
+                                </div>
+                            </div>
+
+                            <div class="detail-grid">
+                                <section class="detail-panel">
+                                    <p class="eyebrow">Prompts</p>
+                                    <div class="text-block">
+                                        <span class="subtle-label">Positive</span>
+                                        <p>@item.PositivePrompt</p>
+                                    </div>
+                                    <div class="text-block">
+                                        <span class="subtle-label">Negative</span>
+                                        <p>@(string.IsNullOrWhiteSpace(item.NegativePrompt) ? "No negative prompt recorded." : item.NegativePrompt)</p>
+                                    </div>
+                                    <div class="text-block">
+                                        <span class="subtle-label">Prompt settings</span>
+                                        <p>@item.PromptSettingsLabel</p>
+                                    </div>
+                                </section>
+
+                                <section class="detail-panel">
+                                    <p class="eyebrow">Safety flags</p>
+                                    <div class="flag-list">
+                                        <span class="flag-chip @(item.DoesViolateLaw ? "flag-bad" : "flag-good")">Law @(item.DoesViolateLaw ? "Flagged" : "Clear")</span>
+                                        <span class="flag-chip @(item.DoesViolateIpRights ? "flag-bad" : "flag-good")">IP @(item.DoesViolateIpRights ? "Flagged" : "Clear")</span>
+                                        <span class="flag-chip @(item.IsNsfw ? "flag-bad" : "flag-good")">NSFW @(item.IsNsfw ? "Flagged" : "Clear")</span>
+                                        <span class="flag-chip @(item.PassesSafetyChecks ? "flag-good" : "flag-bad")">Safety gate @(item.PassesSafetyChecks ? "Passed" : "Blocked")</span>
+                                    </div>
+
+                                    <p class="eyebrow override-eyebrow">Publish override</p>
+                                    <form method="post" asp-page-handler="SetOverride" class="override-form">
+                                        <input type="hidden" name="imagePath" value="@item.ImagePath" />
+                                        <input type="hidden" name="status" value="@Model.Status" />
+                                        <input type="hidden" name="focusImagePath" value="@Model.FocusImagePath" />
+                                        <div class="button-row compact-buttons">
+                                            <button type="submit" name="mode" value="automatic" class="ghost-button @(item.PublishOverrideMode == PublishingOverrideModes.Automatic ? "button-selected" : null)">Automatic</button>
+                                            <button type="submit" name="mode" value="force-allow" class="primary-button @(item.PublishOverrideMode == PublishingOverrideModes.ForceAllow ? "button-selected" : null)" disabled="@(!item.CanForceAllow)">Allow low score</button>
+                                            <button type="submit" name="mode" value="force-block" class="danger-button @(item.PublishOverrideMode == PublishingOverrideModes.ForceBlock ? "button-selected" : null)">Block</button>
+                                        </div>
+                                    </form>
+                                    <p class="muted override-note">
+                                        @if (item.PublishOverrideUpdatedAtUtc is DateTime updatedAtUtc)
+                                        {
+                                            <span>@item.PublishOverrideLabel set @updatedAtUtc.ToLocalTime().ToString("dd MMM yyyy HH:mm")</span>
+                                        }
+                                        else
+                                        {
+                                            <span>No manual override set.</span>
+                                        }
+                                    </p>
+                                    @if (!item.CanForceAllow)
+                                    {
+                                        <p class="muted override-note">Manual allow is unavailable until safety checks pass and a suitability file exists.</p>
+                                    }
+                                </section>
+                            </div>
+
+                            <section class="detail-panel full-width-panel">
+                                <p class="eyebrow">Score breakdown</p>
+                                @if (item.ScoreBreakdown.Count == 0)
+                                {
+                                    <p class="muted">No detailed scoring data has been recorded yet.</p>
+                                }
+                                else
+                                {
+                                    <div class="score-breakdown-list">
+                                        @foreach (var score in item.ScoreBreakdown)
+                                        {
+                                            <div class="score-breakdown-row">
+                                                <span>@score.Label</span>
+                                                <div class="score-breakdown-track">
+                                                    <span style="width:@score.Percentage%"></span>
+                                                </div>
+                                                <strong>@score.Value.ToString("0.0")</strong>
+                                            </div>
+                                        }
+                                    </div>
+                                }
+                            </section>
+
+                            <div class="detail-grid secondary-grid">
+                                <section class="detail-panel">
+                                    <p class="eyebrow">Issues</p>
+                                    @if (item.Issues.Count == 0)
+                                    {
+                                        <p class="muted">No review issues recorded.</p>
+                                    }
+                                    else
+                                    {
+                                        <div class="issue-list full-issue-list">
+                                            @foreach (var issue in item.Issues)
+                                            {
+                                                <span>@issue</span>
+                                            }
+                                        </div>
+                                    }
+                                </section>
+
+                                <section class="detail-panel">
+                                    <p class="eyebrow">Draft history</p>
+                                    @if (item.Drafts.Count == 0)
+                                    {
+                                        <p class="muted">No Printify draft records linked to this image yet.</p>
+                                    }
+                                    else
+                                    {
+                                        <div class="draft-list full-draft-list">
+                                            @foreach (var draft in item.Drafts)
+                                            {
+                                                <div>
+                                                    <strong>@draft.BlueprintTitle</strong>
+                                                    <span>@draft.ProductId · @draft.CreatedAtUtc.ToLocalTime().ToString("dd MMM yyyy HH:mm")</span>
+                                                </div>
+                                            }
+                                        </div>
+                                    }
+                                </section>
+                            </div>
+
+                            <section class="detail-panel full-width-panel">
+                                <p class="eyebrow">Paths</p>
+                                <div class="path-stack">
+                                    <div>
+                                        <span class="subtle-label">Image</span>
+                                        <p>@item.ImagePath</p>
+                                    </div>
+                                    <div>
+                                        <span class="subtle-label">Prompt file</span>
+                                        <p>@item.PromptPath</p>
+                                    </div>
+                                    <div>
+                                        <span class="subtle-label">Suitability file</span>
+                                        <p>@item.SuitabilityPath</p>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </article>
+                }
+            </div>
+        }
+    </section>
+</main>

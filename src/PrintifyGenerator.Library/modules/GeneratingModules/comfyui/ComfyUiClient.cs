@@ -8,14 +8,15 @@ using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
 
-public class ComfyUiClient
+#pragma warning disable SYSLIB0014
+
+public class ComfyUiClient : IAsyncDisposable
 {
-    public static string BaseUrl { get; private set; }
     private readonly string _baseUrl;
     public readonly string _wsUrl;
     private readonly string _clientId;
 
-    private ClientWebSocket _socket;
+    private ClientWebSocket? _socket;
     private readonly WebSocketEventEmitter _emitter;
 
     // 🧠 Job tracking
@@ -28,7 +29,6 @@ public class ComfyUiClient
         _baseUrl = baseUrl.TrimEnd('/');
         _clientId = Guid.NewGuid().ToString();
         _wsUrl = $"{_baseUrl.Replace("http", "ws")}/ws?clientId={_clientId}";
-        BaseUrl = _baseUrl;
 
         _emitter = emitter;
 
@@ -37,6 +37,7 @@ public class ComfyUiClient
     }
 
     public WebSocketEventEmitter Events => _emitter;
+    public string BaseUrl => _baseUrl;
 
     // -----------------------------
     // 🔗 Internal Event Wiring
@@ -46,7 +47,11 @@ public class ComfyUiClient
         _emitter.On("execution_start", data =>
         {
             var id = data.GetProperty("prompt_id").GetString();
-            UpdateJob(id, j => j.Status = "running");
+            UpdateJob(id, j =>
+            {
+                j.Status = "running";
+                j.Progress = 0;
+            });
         });
 
         _emitter.On("executing", data =>
@@ -56,7 +61,7 @@ public class ComfyUiClient
 
             UpdateJob(id, j =>
             {
-                j.CurrentNode = node;
+                j.CurrentNode = node ?? string.Empty;
             });
         });
 
@@ -76,9 +81,9 @@ public class ComfyUiClient
                     var type = img.GetProperty("type").GetString();
 
                     string url =
-                        $"{_baseUrl}/view?filename={filename}" +
-                        $"&subfolder={subfolder}" +
-                        $"&type={type}";
+                        $"{_baseUrl}/view?filename={filename ?? string.Empty}" +
+                        $"&subfolder={subfolder ?? string.Empty}" +
+                        $"&type={type ?? string.Empty}";
 
                     urls.Add(url);
                 }
@@ -101,7 +106,7 @@ public class ComfyUiClient
             var value = data.GetProperty("value").GetDouble();
             var max = data.GetProperty("max").GetDouble();
 
-            UpdateJob(id, j => j.Progress = (value / max)*100);
+            UpdateJob(id, j => j.Progress = max <= 0 ? 0 : (value / max) * 100);
         });
 
         _emitter.On("execution_success", async data =>
@@ -112,7 +117,7 @@ public class ComfyUiClient
 
             UpdateJob(id, j =>
             {
-                j.Progress = 1.0;
+                j.Progress = 100.0;
                 j.Status = "completed";
             });
             // // 🔥 Fetch outputs after completion
@@ -155,9 +160,9 @@ public class ComfyUiClient
                     var type = img.GetProperty("type").GetString();
 
                     string url =
-                        $"{_baseUrl}/view?filename={Uri.EscapeDataString(filename)}" +
-                        $"&subfolder={Uri.EscapeDataString(subfolder)}" +
-                        $"&type={Uri.EscapeDataString(type)}";
+                        $"{_baseUrl}/view?filename={Uri.EscapeDataString(filename ?? string.Empty)}" +
+                        $"&subfolder={Uri.EscapeDataString(subfolder ?? string.Empty)}" +
+                        $"&type={Uri.EscapeDataString(type ?? string.Empty)}";
 
                     urls.Add(url);
                 }
@@ -196,11 +201,14 @@ public class ComfyUiClient
 
         using var doc = JsonDocument.Parse(responseText);
         var promptId = doc.RootElement.GetProperty("prompt_id").GetString();
+        if (string.IsNullOrWhiteSpace(promptId))
+            throw new InvalidOperationException("ComfyUI did not return a prompt_id.");
 
         _jobs[promptId] = new JobStatus
         {
             PromptId = promptId,
-            Status = "queued"
+            Status = "queued",
+            BaseUrl = _baseUrl
         };
 
         return promptId;
@@ -211,8 +219,14 @@ public class ComfyUiClient
     // -----------------------------
     public JobStatus GetJob(string promptId)
     {
-        _jobs.TryGetValue(promptId, out var job);
-        return job;
+        return _jobs.TryGetValue(promptId, out var job)
+            ? job
+            : new JobStatus
+            {
+                PromptId = promptId,
+                Status = "unknown",
+                BaseUrl = _baseUrl
+            };
     }
 
     public ConcurrentDictionary<string, JobStatus> GetAllJobs()
@@ -239,6 +253,9 @@ public class ComfyUiClient
     // -----------------------------
     public async Task StartListener()
     {
+        if (_socket is not null && _socket.State == WebSocketState.Open)
+            return;
+
         _socket = new ClientWebSocket();
         await _socket.ConnectAsync(new Uri(_wsUrl), CancellationToken.None);
         Console.WriteLine($"[WS] Connected to {_wsUrl}");
@@ -255,7 +272,7 @@ public class ComfyUiClient
     {
         var buffer = new byte[8192];
 
-        while (_socket.State == WebSocketState.Open)
+        while (_socket is not null && _socket.State == WebSocketState.Open)
         {
             using var ms = new MemoryStream();
             WebSocketReceiveResult result;
@@ -305,7 +322,9 @@ public class ComfyUiClient
             if (!root.TryGetProperty("data", out var data))
                 return;
 
-            string type = typeProp.GetString();
+            string type = typeProp.GetString() ?? string.Empty;
+            if (string.IsNullOrWhiteSpace(type))
+                return;
 
             // 🔥 Emit event
             _emitter.Emit(type, data);
@@ -316,11 +335,37 @@ public class ComfyUiClient
         }
     }
 
-    private void UpdateJob(string id, Action<JobStatus> update)
+    private void UpdateJob(string? id, Action<JobStatus> update)
     {
+        if (string.IsNullOrWhiteSpace(id))
+            return;
+
         if (_jobs.TryGetValue(id, out var job))
         {
             update(job);
+        }
+    }
+
+    public async ValueTask DisposeAsync()
+    {
+        if (_socket is null)
+            return;
+
+        try
+        {
+            if (_socket.State == WebSocketState.Open || _socket.State == WebSocketState.CloseReceived)
+            {
+                await _socket.CloseAsync(WebSocketCloseStatus.NormalClosure, "Shutting down", CancellationToken.None);
+            }
+        }
+        catch
+        {
+            // Ignore shutdown errors so callers can safely dispose dead sockets.
+        }
+        finally
+        {
+            _socket.Dispose();
+            _socket = null;
         }
     }
 }
@@ -330,20 +375,25 @@ public class ComfyUiClient
 // -----------------------------
 public class JobStatus
 {
-    public string PromptId { get; set; }
-    public string Status { get; set; }
-    public string CurrentNode { get; set; }
+    public string PromptId { get; set; } = string.Empty;
+    public string Status { get; set; } = string.Empty;
+    public string CurrentNode { get; set; } = string.Empty;
     public double Progress { get; set; }
+    public string BaseUrl { get; set; } = string.Empty;
 
     // 🆕 Outputs
     public List<string> ImageUrls { get; set; } = new List<string>();
 
-    public async Task<string> DownloadAllImagesAsync(string saveDirectory,string filename = null)
+    public async Task<string> DownloadAllImagesAsync(string saveDirectory,string? filename = null)
     {
         Directory.CreateDirectory(saveDirectory);
 
-        var stamp = DateTime.Now.ToString("yyyyMMdd_HHmmss");
-        var baseUrl = ComfyUiClient.BaseUrl;
+        var baseUrl = (BaseUrl ?? string.Empty).TrimEnd('/');
+        if (string.IsNullOrWhiteSpace(baseUrl))
+        {
+            Console.WriteLine($"Unable to download images for prompt {PromptId}: no ComfyUI base URL was recorded.");
+            return "";
+        }
 
         // Fetch image URLs from history API
         var historyRequest = (HttpWebRequest)WebRequest.Create($"{baseUrl}/history/{PromptId}");
@@ -373,9 +423,9 @@ public class JobStatus
                 var type = img.GetProperty("type").GetString();
 
                 urls.Add(
-                    $"{baseUrl}/view?filename={Uri.EscapeDataString(fn)}" +
-                    $"&subfolder={Uri.EscapeDataString(subfolder)}" +
-                    $"&type={Uri.EscapeDataString(type)}"
+                    $"{baseUrl}/view?filename={Uri.EscapeDataString(fn ?? string.Empty)}" +
+                    $"&subfolder={Uri.EscapeDataString(subfolder ?? string.Empty)}" +
+                    $"&type={Uri.EscapeDataString(type ?? string.Empty)}"
                 );
             }
         }
@@ -390,7 +440,6 @@ public class JobStatus
                 .Where(p => p.Length == 2)
                 .ToDictionary(p => Uri.UnescapeDataString(p[0]), p => Uri.UnescapeDataString(p[1]));
 
-            var originalFilename = query.TryGetValue("filename", out var fn) ? fn : Path.GetFileName(uri.LocalPath);
             var savePath = Path.Combine(saveDirectory, (filename ?? PromptId) + ".png");
             Console.WriteLine($"Downloading {url} to {savePath}...");
             return await DownloadImageAsync(url, savePath);
@@ -411,3 +460,5 @@ public class JobStatus
         return savePath;
     }
 }
+
+#pragma warning restore SYSLIB0014

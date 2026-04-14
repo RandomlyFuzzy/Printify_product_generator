@@ -4,8 +4,8 @@ using System.Text.Json;
 using System.Text.Json.Nodes;
 public record Prompt
 {
-    public string positive { get; set; }
-    public string negative { get; set; }
+    public string positive { get; set; } = string.Empty;
+    public string negative { get; set; } = string.Empty;
     public int width { get; set; } = 512;
     public int height { get; set; }= 512;
     public int steps { get; set; } = 20;
@@ -18,7 +18,7 @@ public record Prompt
                width > 0 && height > 0 &&
                steps > 0 && cfg > 0;
     }
-    public string ToJsonString(JsonSerializerOptions options = null)
+    public string ToJsonString(JsonSerializerOptions? options = null)
     {
         return JsonSerializer.Serialize(this, options);
     }
