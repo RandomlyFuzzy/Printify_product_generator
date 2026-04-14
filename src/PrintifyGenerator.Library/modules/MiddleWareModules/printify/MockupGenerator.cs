@@ -95,19 +95,39 @@ public class MockupGenerator
             {
                 Console.WriteLine($"[MockupGenerator] LLM suggestion: blueprint {suggestion.BlueprintId} – {suggestion.BlueprintTitle} (reason: {suggestion.Reason})");
                 // 4 ── Fetch first available print provider and its variants
-                var providers = await _printify.GetBlueprintPrintProvidersAsync(suggestion.BlueprintId);
+                var providers = await _printify.GetBlueprintPrintProvidersAsync((suggestion.BlueprintId));
                 if (providers.Count == 0)
                 {
                     continue;
                 }
 
+                
+
                 var provider = providers[0];
-                var variantResponse = await _printify.GetBlueprintVariantsAsync(suggestion.BlueprintId, provider.Id);
+                var variantResponse = await _printify.GetBlueprintVariantsAsync((suggestion.BlueprintId), provider.Id);
                 var variants = variantResponse.Variants;
-                if (variants.Count == 0)
-                {
-                    continue;
-                }
+                // if (variants.Count == 0)
+                // {
+                //     continue;
+                // }
+                // //filter variants by price so i can keep cost to a minimum
+                // //find the mid price of each sku and keep all variants that are below a certain threshold (e.g. $15)
+                // var affordableVariants = new List<Variant>();
+                // foreach(var variant in variants)                {
+                //     var prices = variant.Prices;
+                //     if(prices == null || prices.Count == 0)                    {
+                //         continue;
+                //     }
+                //     var midPrice = prices.Average(p => p.Price);
+                //     if(midPrice <= 1500) // $15.00 in cents                    {
+                //         affordableVariants.Add(variant);
+                // }
+                // if(affordableVariants.Count == 0)                {
+                //     Console.WriteLine($"[MockupGenerator] No affordable variants found for blueprint {suggestion.BlueprintId} with provider {provider.Id}. Skipping.");
+                //     continue;
+                // }
+                // variants = affordableVariants;
+
 
                 if(variants.Count > 100)
                 {
@@ -125,7 +145,7 @@ public class MockupGenerator
                     LocalImagePath          = imagePath,
                     PrintifyImageId         = lookup.PrintifyImageId,
                     PrintifyImagePreviewUrl = lookup.PreviewUrl,
-                    BlueprintId             = suggestion.BlueprintId,
+                    BlueprintId             = (suggestion.BlueprintId),
                     BlueprintTitle          = suggestion.BlueprintTitle,
                     LlmReason               = suggestion.Reason,
                     PrintProviderId         = provider.Id,
@@ -267,38 +287,45 @@ public class MockupGenerator
     {
         // Pre-filter to popular product types so the prompt stays small
         // enough for lightweight vision models like moondream.
-        var filtered = blueprints
-            .Where(b => PopularKeywords.Any(kw =>
-                b.Title.Contains(kw, StringComparison.OrdinalIgnoreCase)))
-            .GroupBy(b => b.Title.Split('|')[0].Trim(), StringComparer.OrdinalIgnoreCase)
-            .Select(g => g.First())          // deduplicate near-identical titles
-            .Take(80)                         // hard cap
-            .ToList();
 
-        if (filtered.Count == 0)
-            filtered = blueprints.Take(80).ToList();
+        //TODO implement a more intelligent filtering strategy that considers the image content 
+        //an inital filter to check how much can fit onto the print area of each blueprint and filter out those that are too small for the image, then use the popular keywords filter and if there are still too many blueprints then i can use a more advanced strategy like clustering the blueprints by their print area dimensions and picking a few from each cluster to ensure diversity in the catalogue sent to the LLM
+        var filtered = blueprints.Select(b => new
+        {
+            id = b.Id,
+            title = b.Title,
+        })
+        // .OrderBy(b => b.id)
+        //randomize 
+        .OrderBy(_ => Guid.NewGuid())
+        .Take(100)
+        .ToList();
+
 
         Console.WriteLine($"[MockupGenerator] Sending {filtered.Count} candidate blueprints to LLM (from {blueprints.Count} total).");
 
-        var catalogue = filtered
-            .Select(b => BuildCatalogueEntry(b))
-            .ToList();
+        var catalogue = filtered.ToList();
 
         string catalogueJson = JsonSerializer.Serialize(catalogue, JsonOpts);
 
         string prompt = $$"""
-            You are a print-on-demand product specialist.
-            Examine the attached image and decide which product blueprint is the best fit.
-            Consider the visual style, subject matter, colour palette, and commercial viability.
+            You look upon the image and think about which type of product it would best fit on, 
+            such as a t-shirt, mug, poster, etc. As you are a creative curator, 
+            you also consider the style and composition of the image to determine the most suitable product type.
 
-            Available blueprints (JSON array with id and title):
+            And as your immediate assistant, I give you a catalogue of blueprints with their ids and titles, 
+            which represent the products you can put the image on.
+
+
+            Available blueprints name and ids are as following:
             {{catalogueJson}}
 
-            Respond with ONLY valid JSON — no markdown fences, no extra text:
+            being as profesional and concise as possible, you pick the top 3 best fitting blueprints for this image and explain in one sentence why you picked each one.
+            Now that you know what you want to put the image on, as you very well know i need you to tell me in a very concise manner only using the following JSON format:
             [
             {
-                "blueprint_id": <integer>, 
-                "blueprint_title": "<string>", 
+                "id": "<integer>", 
+                "title": "<string>", 
                 "reason": "<one sentence>"
             },
             ... 
@@ -307,34 +334,33 @@ public class MockupGenerator
 
 
         // Console.WriteLine($"[MockupGenerator] Prompting LLM with image and catalogue... {prompt}");
-        Console.WriteLine($"[MockupGenerator] Querying LLM ({_visionModel}) for blueprint recommendation...");
+        Console.WriteLine($"[MockupGenerator] Querying LLM ({_visionModel}) for blueprint recommendation with image {imagePath}...");
         
-        string rawResponse = await _ollama.GenerateWithImageAsync(_visionModel, prompt, imagePath);
-        JsonObject responseObj = JsonNode.Parse(rawResponse)?.AsObject() ?? new JsonObject();
-        // Ollama wraps the answer in {"response": "..."}
-        string responseText = responseObj["response"]?.GetValue<string>() ?? rawResponse;
+        string rawResponse ="";
+
+        //it keeps saying that their is no image input even tho there is, so maybe i can just send the image in the prompt and not as an input and see if it can understand that
+        await foreach(var data in _ollama.GenerateWithImageStreamAsync(_visionModel, prompt, imagePath))
+        {
+            Console.Write($"{data}");
+            rawResponse += data;
+        }
+        rawResponse = rawResponse.Trim().Substring(rawResponse.IndexOf('['));
+        rawResponse = rawResponse.Substring(0, rawResponse.LastIndexOf(']') + 1);
+
+        Console.WriteLine($"[MockupGenerator] Raw LLM response: {rawResponse}");
+
+
         try
         {
-            var wrapper = JsonSerializer.Deserialize<JsonElement>(rawResponse, JsonOpts);
-            if (wrapper.TryGetProperty("response", out var r))
-                responseText = r.GetString() ?? rawResponse;
+            var suggestionArray = JsonSerializer.Deserialize<List<BlueprintSuggestion>>(rawResponse, JsonOpts);
+            Console.WriteLine($"[MockupGenerator] Parsed LLM suggestions: {JsonSerializer.Serialize(suggestionArray, JsonOpts)}");
+            return suggestionArray ?? new List<BlueprintSuggestion>();
+            
         }
-        catch { /* use rawResponse as-is */ }
-        Console.WriteLine($"[MockupGenerator] Raw LLM response: {responseText}");
-
-        responseText = ExtractFirstJsonObject(responseText);
-
-        try
+        catch (JsonException ex)
         {
-            var suggestionArray = JsonSerializer.Deserialize<List<BlueprintSuggestion>>(responseText, JsonOpts);
-            var suggestion = suggestionArray?.FirstOrDefault();
-            if(suggestionArray.All(s => s.BlueprintId == 0) && suggestionArray.Count > 1)
-            {
-                Console.WriteLine($"[MockupGenerator] LLM returned multiple suggestions, but all had invalid blueprint_id=0. Ignoring and falling back to first blueprint.");
-                return suggestionArray;
-            }
+            Console.Error.WriteLine($"[MockupGenerator] Failed to parse LLM response as JSON: {ex}");
         }
-        catch { /* fall through to fallback */ }
 
         // Fallback: first blueprint in catalogue
         var fallback = blueprints[0];
@@ -354,7 +380,7 @@ public class MockupGenerator
     private static string ExtractFirstJsonObject(string text)
     {
         int start = text.IndexOf('{');
-        int end   = text.LastIndexOf('}');
+        int end   = text.IndexOf('}', start + 1);
         if (start >= 0 && end > start)
             return text[start..(end + 1)];
         return text;
@@ -469,6 +495,7 @@ public class MockupGenerator
                 }
             }
         };
+        //get variant price to produce 
 
         var productVariants = variants.Select(v => new CreateProductVariant
         {

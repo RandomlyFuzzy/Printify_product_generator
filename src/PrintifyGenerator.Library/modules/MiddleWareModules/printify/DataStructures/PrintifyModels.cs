@@ -61,8 +61,17 @@ public record Variant
 {
     [JsonPropertyName("id")] public int Id { get; set; }
     [JsonPropertyName("title")] public string Title { get; set; } = "";
+    [JsonPropertyName("cost")] public int? Cost { get; set; }
+    [JsonPropertyName("price")] public int? Price { get; set; }
+    [JsonPropertyName("prices")] public List<VariantPrice> Prices { get; set; } = new();
     [JsonPropertyName("options")] public Dictionary<string, object>? Options { get; set; }
     [JsonPropertyName("placeholders")] public List<VariantPlaceholder>? Placeholders { get; set; }
+}
+
+public record VariantPrice
+{
+    [JsonPropertyName("currency")] public string Currency { get; set; } = "";
+    [JsonPropertyName("price")] public int Price { get; set; }
 }
 
 public record VariantPlaceholder
@@ -449,6 +458,44 @@ public record ShippingCostResponse
     [JsonPropertyName("priority")] public int Priority { get; set; }
     [JsonPropertyName("printify_express")] public int PrintifyExpress { get; set; }
     [JsonPropertyName("economy")] public int Economy { get; set; }
+}
+
+public record ProductVariantPriceBreakdownRequest
+{
+    [JsonPropertyName("product_id")] public string ProductId { get; set; } = "";
+    [JsonPropertyName("variant_id")] public int VariantId { get; set; }
+    [JsonPropertyName("quantity")] public int Quantity { get; set; } = 1;
+    [JsonPropertyName("address_to")] public Address AddressTo { get; set; } = new();
+}
+
+public record ProductVariantPriceBreakdown
+{
+    [JsonPropertyName("shop_id")] public int ShopId { get; set; }
+    [JsonPropertyName("product_id")] public string ProductId { get; set; } = "";
+    [JsonPropertyName("product_title")] public string ProductTitle { get; set; } = "";
+    [JsonPropertyName("blueprint_id")] public int BlueprintId { get; set; }
+    [JsonPropertyName("print_provider_id")] public int PrintProviderId { get; set; }
+    [JsonPropertyName("variant_id")] public int VariantId { get; set; }
+    [JsonPropertyName("variant_title")] public string VariantTitle { get; set; } = "";
+    [JsonPropertyName("sku")] public string? Sku { get; set; }
+    [JsonPropertyName("quantity")] public int Quantity { get; set; }
+    [JsonPropertyName("is_enabled")] public bool IsEnabled { get; set; }
+    [JsonPropertyName("is_available")] public bool IsAvailable { get; set; }
+    [JsonPropertyName("destination_country")] public string DestinationCountry { get; set; } = "";
+    [JsonPropertyName("destination_region")] public string DestinationRegion { get; set; } = "";
+    [JsonPropertyName("destination_zip")] public string DestinationZip { get; set; } = "";
+    [JsonPropertyName("unit_retail_price")] public int UnitRetailPrice { get; set; }
+    [JsonPropertyName("unit_production_cost")] public int UnitProductionCost { get; set; }
+    [JsonPropertyName("total_retail_price")] public int TotalRetailPrice { get; set; }
+    [JsonPropertyName("total_production_cost")] public int TotalProductionCost { get; set; }
+    [JsonPropertyName("shipping_options")] public List<ProductVariantShippingOptionBreakdown> ShippingOptions { get; set; } = new();
+}
+
+public record ProductVariantShippingOptionBreakdown
+{
+    [JsonPropertyName("method")] public string Method { get; set; } = "";
+    [JsonPropertyName("shipping_cost")] public int ShippingCost { get; set; }
+    [JsonPropertyName("total_cost")] public int TotalCost { get; set; }
 }
 
 // ── Uploads ────────────────────────────────────────────────────────

@@ -1,0 +1,38 @@
+Logging output to /home/rf/Desktop/Printify_prodcuct_generator/src/data/staging/logs/uk-price-breakdown-20260414-002052.log
+Using shop 27067580 (My new store) for temporary draft-product cost probing.
+Uploaded probe image 69dd875660fa3e50ed6626e6 for temporary product creation.
+Scanning 1 blueprint(s) for UK-deliverable provider/variant/options combinations.
+Ranking is based on one-item delivered total to GB: provider amount + first-item shipping, normalized to GBP.
+
+Blueprint 11 - Women's Jersey Short Sleeve Deep V-Neck Tee: 1 UK-capable provider(s)
+  Deleted temporary probe product 69dd8866a46a420a100b31cc.
+  Loaded production costs for 45 variants via temporary draft product.
+[Currency] Using cached exchange rate for USD to GBP: 0.7418397626112759643916913947 at 4/13/2026 5:14:19 PM
+[1] total GBP 15.92 | production cost USD 17.97 + shipping USD 3.49 | additional shipping USD 1.99 | blueprint 11 Women's Jersey Short Sleeve Deep V-Neck Tee | provider 6 T Shirt and Sons | variant 18572 S / Black | options color=Black, size=S
+  -> New cheapest so far: GBP 15.92
+  -> New most expensive so far: GBP 15.92
+
+Finished scanning 1 blueprint(s).
+UK-capable blueprints: 1
+UK-deliverable combinations priced: 1
+
+Cheapest UK-deliverable combination:
+Total to GB: GBP 15.92
+Provider amount: USD 17.97 (production cost)
+First-item shipping: USD 3.49
+Blueprint: 11 - Women's Jersey Short Sleeve Deep V-Neck Tee
+Provider: 6 - T Shirt and Sons
+Variant: 18572 - S / Black
+Options: color=Black, size=S
+Additional-item shipping: USD 1.99
+
+Most expensive UK-deliverable combination:
+Total to GB: GBP 15.92
+Provider amount: USD 17.97 (production cost)
+First-item shipping: USD 3.49
+Blueprint: 11 - Women's Jersey Short Sleeve Deep V-Neck Tee
+Provider: 6 - T Shirt and Sons
+Variant: 18572 - S / Black
+Options: color=Black, size=S
+Additional-item shipping: USD 1.99
+Archived probe image 69dd875660fa3e50ed6626e6.

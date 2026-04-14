@@ -24,8 +24,8 @@ if (string.IsNullOrWhiteSpace(token))
 
 // ── Clients ────────────────────────────────────────────────────────────────────
 PrintifyClient printify = new PrintifyClient(token);
-// OllamaClient   ollama   = new OllamaClient("http://192.168.0.151:11434");
-OllamaClient   ollama   = new OllamaClient();//"http://192.168.0.131:11434");
+OllamaClient   ollama   = new OllamaClient("http://192.168.0.151:11434");
+// OllamaClient   ollama   = new OllamaClient();//"http://192.168.0.131:11434");
 
 // ── Auto-resolve shop ID ───────────────────────────────────────────────────────
 Console.WriteLine("Fetching shop list from Printify...");
@@ -44,7 +44,7 @@ var generator = new MockupGenerator(
     ollama:       ollama,
     shopId:       shopId,
     dataBasePath: "./src/data",
-    visionModel:  "gemma4:e2b");
+    visionModel:  "gemma4:e4b");
 
 // ── Collect candidate images from phase_3 results ─────────────────────────────
 const string checkingPath = "./src/data/Checking";

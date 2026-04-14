@@ -25,8 +25,8 @@ public class ImageLookupEntry
 /// </summary>
 public class BlueprintSuggestion
 {
-    [JsonPropertyName("blueprint_id")]    public int    BlueprintId    { get; set; }
-    [JsonPropertyName("blueprint_title")] public string BlueprintTitle { get; set; } = "";
+    [JsonPropertyName("id")]    public int    BlueprintId    { get; set; }
+    [JsonPropertyName("title")] public string BlueprintTitle { get; set; } = "";
     [JsonPropertyName("reason")]          public string Reason         { get; set; } = "";
 }
 
