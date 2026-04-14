@@ -177,7 +177,7 @@ async IAsyncEnumerable<Prompt> GeneratePrompt(string initalPrompt,CancellationTo
         {
             await foreach (var response in ollama.GenerateStreamAsync("llama3.2:1b", initalPrompt))
             {
-                Console.Write(response);
+                // Console.Write(response);
                 returnedPrompt += response;
             }
             //json parse the returned prompt
