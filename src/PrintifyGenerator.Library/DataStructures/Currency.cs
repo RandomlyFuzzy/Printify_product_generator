@@ -31,7 +31,7 @@ public class Currency {
             var lastTimestamp = long.Parse(lastLine.Split(',').FirstOrDefault() ?? "0");
             if (DateTime.UtcNow - new DateTime(lastTimestamp) < TimeSpan.FromHours(12))
             {                
-                Console.WriteLine($"[Currency] Using cached exchange rate for {Code} to {targetCode}: {lastValue} at {new DateTime(lastTimestamp)}");
+                // Console.WriteLine($"[Currency] Using cached exchange rate for {Code} to {targetCode}: {lastValue} at {new DateTime(lastTimestamp)}");
                 return decimal.Parse(lastValue);
             }
         }
@@ -61,6 +61,11 @@ public class Currency {
     {
         decimal exchangeRate = await GetCurrentExchangeRate(targetCode);
         return ConvertTo(targetCode, exchangeRate);
+    }
+
+    public override string ToString()
+    {
+        return $"{Amount:C2} {Code}";
     }
 }
 

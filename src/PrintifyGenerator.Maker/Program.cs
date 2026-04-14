@@ -57,7 +57,7 @@ if (File.Exists("./main.env"))
 
 
 // return;
-OllamaClient ollama = new OllamaClient("http://localhost:11434");
+OllamaClient ollama =  new OllamaClient("http://192.168.0.131:11434");//new OllamaClient("http://localhost:11434");
 // OllamaClient ollamaExternal = new OllamaClient("http://192.168.0.151:11434");
 OllamaClient ollamaExternal = new OllamaClient("http://192.168.0.131:11434");
 
@@ -78,7 +78,7 @@ while(!Console.KeyAvailable)
 
 
     const string initalPrompt = @"You are a prompt engineer for AI image generation. Output ONLY a valid JSON array with no markdown, no explanation, no code fences, and no extra text — just raw JSON.
-    Generate 2 creative Stable Diffusion prompts for print-on-demand products (t-shirts, posters, mugs). Each should be visually striking, commercially appealing, and varied in style (e.g. illustration, watercolor, retro, minimalist, photorealistic).
+    Generate 3 creative Stable Diffusion prompts for print-on-demand products (t-shirts, posters, mugs). Each should be visually striking, commercially appealing, and varied in style (e.g. illustration, watercolor, retro, minimalist, photorealistic).
     You should try and make it appealing to a wide audience and not too niche. Avoid text in the image, as it can be hard to read on products. Each prompt should have a positive part describing the main subject and style, and a negative part specifying what to avoid.
     Due to what this is going to be used for you can you make it either landscape portrait or square to give a wide range of products the prompt can be put onto.
     Use this exact format:
@@ -86,10 +86,10 @@ while(!Console.KeyAvailable)
     {
         ""positive"": ""detailed positive prompt here, comma separated tags, style, lighting, quality boosters"",
         ""negative"": ""ugly, deformed, blurry, low quality, watermark, text, bad anatomy, extra limbs"",
-        ""width"": 512,
-        ""height"": 512,
-        ""steps"": 25,
-        ""cfg"": 7
+        ""width"": <number>,
+        ""height"": <number>,
+        ""steps"": <range between 20-50>,
+        ""cfg"": <range between 3 and 7>
     }
     ]";
 

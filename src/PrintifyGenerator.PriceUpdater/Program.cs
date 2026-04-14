@@ -74,7 +74,7 @@ Console.CancelKeyPress += (_, eventArgs) =>
 };
 
 Func<int, int, int> priceCalculator = (shippingPrice, productionPrice) =>
-    CalculateVariantPrice(shippingPrice, productionPrice, settings.MarginPercent);
+    CalculateVariantPrice(shippingPrice, productionPrice, settings.MarginPercent, settings.ShippingAddress.Country);
 
 var updater = new PricingUpdater(client, targetShop.Id, settings, priceCalculator);
 
@@ -118,17 +118,45 @@ while (!cancellation.IsCancellationRequested)
 
 return 0;
 
-static int CalculateVariantPrice(int shippingPrice, int productionPrice, decimal marginPercent)
+static int CalculateVariantPrice(int shippingPrice, int productionPrice, decimal marginPercent,string country = "United States")
 {
-    _ = shippingPrice;
-
     if (productionPrice < 0)
     {
         throw new ArgumentOutOfRangeException(nameof(productionPrice), "Production price cannot be negative.");
     }
 
-    var multiplier = 1m + (marginPercent / 100m);
-    return checked((int)Math.Ceiling((productionPrice + shippingPrice) * multiplier));
+    var totalMargin = (100 + marginPercent) / 100;
+
+    Console.Write($"[Calculating] {productionPrice}USD (production) + {shippingPrice}USD (shipping) with margin {totalMargin:P2}% for country {country}.");
+    var marginAmount = (productionPrice + shippingPrice) * totalMargin;
+    var Total = new Currency(CurrencyCode.USD, (productionPrice + shippingPrice*(totalMargin)) / 100m);
+    Console.Write($" Margin amount: {Total}.");
+
+    var targetCurrency = country switch
+    {
+        "United States" => CurrencyCode.USD,
+        "USA" => CurrencyCode.USD,
+        "US" => CurrencyCode.USD,
+        "United Kingdom" => CurrencyCode.GBP,
+        "GB" => CurrencyCode.GBP,
+        _ => throw new NotSupportedException($"Unsupported destination country: {country}")
+    };
+    Total = Total.ConvertTo(targetCurrency).GetAwaiter().GetResult();
+    Console.Write($" Converted total cost to {targetCurrency}: {Total}.");
+    //make it pretty i.e. to X.99 instead of X.YY and round to nearest 0.99 or 0.49 depending on the price range, also make sure it doesn't end up lower than the production cost after conversion
+    Total = Total.Amount switch
+    {
+        < 10 => new Currency(Total.Code, Math.Max(Math.Round(Total.Amount - 0.01m) + 0.99m, productionPrice / 100m)),
+        < 50 => new Currency(Total.Code, Math.Max(Math.Round(Total.Amount - 0.01m) + 0.49m, productionPrice / 100m)),
+        _ => new Currency(Total.Code, Math.Max(Math.Round(Total.Amount - 0.01m) + 0.99m, productionPrice / 100m))
+    };
+    Console.WriteLine($"Rounded total price: {Total}.");
+
+    //convert back to usd
+    Total = Total.ConvertTo(CurrencyCode.USD).GetAwaiter().GetResult();
+    Console.WriteLine($"Converted total cost back to USD: {Total}.");
+
+    return checked((int)(Total.Amount * 100));
 }
 
 static void PrintSummary(PricingUpdateRunSummary summary, bool applyChanges)
