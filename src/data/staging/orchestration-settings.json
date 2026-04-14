@@ -1,8 +1,8 @@
 {
   "PromptModel": "llama3.2:1b",
-  "SuitabilityModel": "gemma4:e2b",
+  "SuitabilityModel": "gemma4:e4b",
   "MockupVisionModel": "gemma4:e4b",
-  "MinimumPublishScore": 6,
+  "MinimumPublishScore": 7,
   "Ollama": [
     {
       "Id": "local-ollama",

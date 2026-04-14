@@ -6,7 +6,7 @@
     var summary = snapshot.Summary;
 }
 
-<main class="dashboard-shell page-shell">
+<main class="dashboard-shell page-shell" data-qc-page>
     <section class="hero-panel qc-hero-panel">
         <div>
             <p class="eyebrow">QC Queue</p>
@@ -22,7 +22,7 @@
             </div>
             <div>
                 <span class="meta-label">Images shown</span>
-                <strong>@snapshot.Images.Count</strong>
+                <strong id="qc-visible-count">@snapshot.Images.Count</strong>
             </div>
             <div>
                 <span class="meta-label">Minimum publish score</span>
@@ -31,10 +31,7 @@
         </div>
     </section>
 
-    @if (!string.IsNullOrWhiteSpace(Model.FlashMessage))
-    {
-        <section class="flash-banner">@Model.FlashMessage</section>
-    }
+    <section id="qc-flash-banner" class="flash-banner" hidden="@string.IsNullOrWhiteSpace(Model.FlashMessage)">@Model.FlashMessage</section>
 
     <section class="panel compact-panel">
         <div class="split-heading panel-heading tight-heading">
@@ -62,19 +59,15 @@
             <span class="muted">Allow only overrides the score threshold. Safety flags still block continuation.</span>
         </div>
 
-        @if (snapshot.Images.Count == 0)
-        {
-            <p class="muted">No images matched the current filter.</p>
-        }
-        else
-        {
-            <div class="qc-list">
-                @foreach (var item in snapshot.Images)
-                {
-                    var qcLabel = QcQueueModel.GetQcLabel(item);
-                    var qcCssClass = QcQueueModel.GetQcCssClass(item);
+        <p id="qc-empty-state" class="muted" hidden="@(snapshot.Images.Count != 0)">No images matched the current filter.</p>
 
-                    <article class="qc-row">
+        <div id="qc-list" class="qc-list" hidden="@(snapshot.Images.Count == 0)">
+            @foreach (var item in snapshot.Images)
+            {
+                var qcLabel = QcQueueModel.GetQcLabel(item);
+                var qcCssClass = QcQueueModel.GetQcCssClass(item);
+
+                    <article class="qc-row" data-qc-row data-image-path="@item.ImagePath">
                         <div class="qc-thumb-wrap">
                             <div class="image-frame qc-frame">
                                 <img src="@item.ImageUrl" alt="Generated artwork @item.JobId" loading="lazy" />
@@ -89,15 +82,15 @@
                                     <a asp-page="/GeneratedImages" asp-route-status="@Model.Status" asp-route-focusImagePath="@item.ImagePath" class="filter-pill qc-details-link">View details</a>
                                 </div>
                                 <div class="qc-chip-row">
-                                    <span class="state-pill @item.StatusCssClass">@item.StatusLabel</span>
-                                    <span class="qc-pill @qcCssClass">@qcLabel</span>
+                                    <span class="state-pill @item.StatusCssClass" data-status-pill>@item.StatusLabel</span>
+                                    <span class="qc-pill @qcCssClass" data-qc-pill>@qcLabel</span>
                                 </div>
                             </div>
 
                             <div class="qc-meta-grid">
                                 <div>
                                     <span>QC reason</span>
-                                    <strong>@item.EligibilityReason</strong>
+                                    <strong data-eligibility-reason>@item.EligibilityReason</strong>
                                 </div>
                                 <div>
                                     <span>Score</span>
@@ -105,7 +98,7 @@
                                 </div>
                                 <div>
                                     <span>Override</span>
-                                    <strong>@item.PublishOverrideLabel</strong>
+                                    <strong data-override-label>@item.PublishOverrideLabel</strong>
                                 </div>
                                 <div>
                                     <span>Drafts</span>
@@ -115,7 +108,7 @@
                         </div>
 
                         <div class="qc-actions">
-                            <form method="post" asp-page-handler="SetOverride" class="qc-action-form">
+                            <form method="post" asp-page-handler="SetOverride" class="qc-action-form" data-override-form>
                                 <input type="hidden" name="imagePath" value="@item.ImagePath" />
                                 <input type="hidden" name="status" value="@Model.Status" />
 
@@ -126,23 +119,160 @@
                                 </div>
                             </form>
 
-                            @if (item.PublishOverrideUpdatedAtUtc is DateTime updatedAtUtc)
-                            {
-                                <p class="muted override-note">@item.PublishOverrideLabel set @updatedAtUtc.ToLocalTime().ToString("dd MMM yyyy HH:mm")</p>
-                            }
-                            else
-                            {
-                                <p class="muted override-note">No manual override set.</p>
-                            }
-
-                            @if (!item.CanForceAllow)
-                            {
-                                <p class="muted override-note">Allow is unavailable until safety checks pass and a suitability file exists.</p>
-                            }
+                            <p class="muted override-note" data-override-note>@QcQueueModel.GetOverrideNote(item)</p>
+                            <p class="muted override-note" data-allow-note hidden="@item.CanForceAllow">Allow is unavailable until safety checks pass and a suitability file exists.</p>
                         </div>
                     </article>
-                }
-            </div>
-        }
+            }
+        </div>
     </section>
 </main>
+
+@section Scripts {
+    <script>
+        (() => {
+            const page = document.querySelector("[data-qc-page]");
+            if (!page) {
+                return;
+            }
+
+            const flashBanner = document.getElementById("qc-flash-banner");
+            const visibleCount = document.getElementById("qc-visible-count");
+            const list = document.getElementById("qc-list");
+            const emptyState = document.getElementById("qc-empty-state");
+
+            const setFlash = (message, isError) => {
+                if (!flashBanner) {
+                    return;
+                }
+
+                flashBanner.textContent = message || "";
+                flashBanner.hidden = !message;
+                flashBanner.classList.toggle("flash-banner-error", Boolean(isError));
+            };
+
+            const updateListState = (count) => {
+                if (visibleCount) {
+                    visibleCount.textContent = String(count);
+                }
+
+                const hasRows = Boolean(list?.querySelector("[data-qc-row]"));
+                if (list) {
+                    list.hidden = !hasRows;
+                }
+
+                if (emptyState) {
+                    emptyState.hidden = hasRows;
+                }
+            };
+
+            const setBusy = (form, isBusy) => {
+                form.querySelectorAll("button").forEach((button) => {
+                    if (isBusy) {
+                        button.dataset.wasDisabled = button.disabled ? "true" : "false";
+                        button.disabled = true;
+                        return;
+                    }
+
+                    button.disabled = button.dataset.wasDisabled === "true";
+                    delete button.dataset.wasDisabled;
+                });
+            };
+
+            const updateRow = (row, item) => {
+                const statusPill = row.querySelector("[data-status-pill]");
+                const qcPill = row.querySelector("[data-qc-pill]");
+                const eligibilityReason = row.querySelector("[data-eligibility-reason]");
+                const overrideLabel = row.querySelector("[data-override-label]");
+                const overrideNote = row.querySelector("[data-override-note]");
+                const allowNote = row.querySelector("[data-allow-note]");
+
+                if (statusPill) {
+                    statusPill.textContent = item.statusLabel;
+                    statusPill.className = `state-pill ${item.statusCssClass}`;
+                }
+
+                if (qcPill) {
+                    qcPill.textContent = item.qcLabel;
+                    qcPill.className = `qc-pill ${item.qcCssClass}`;
+                }
+
+                if (eligibilityReason) {
+                    eligibilityReason.textContent = item.eligibilityReason;
+                }
+
+                if (overrideLabel) {
+                    overrideLabel.textContent = item.publishOverrideLabel;
+                }
+
+                if (overrideNote) {
+                    overrideNote.textContent = item.overrideNote;
+                }
+
+                if (allowNote) {
+                    allowNote.hidden = item.canForceAllow;
+                }
+
+                row.querySelectorAll("button[name='mode']").forEach((button) => {
+                    button.classList.toggle("button-selected", button.value === item.publishOverrideMode);
+                    if (button.value === "force-allow") {
+                        button.disabled = !item.canForceAllow;
+                    }
+                });
+            };
+
+            document.querySelectorAll("[data-override-form]").forEach((form) => {
+                form.addEventListener("submit", async (event) => {
+                    event.preventDefault();
+
+                    const submitter = event.submitter;
+                    if (!(submitter instanceof HTMLButtonElement)) {
+                        return;
+                    }
+
+                    const row = form.closest("[data-qc-row]");
+                    const formData = new FormData(form);
+                    let payload = null;
+                    formData.set(submitter.name, submitter.value);
+
+                    setBusy(form, true);
+
+                    try {
+                        const response = await fetch(form.action, {
+                            method: "POST",
+                            headers: {
+                                "Accept": "application/json",
+                                "X-Requested-With": "fetch"
+                            },
+                            body: formData
+                        });
+
+                        const payload = await response.json();
+                        setFlash(payload.flashMessage, !payload.success);
+
+                        if (!payload.success) {
+                            return;
+                        }
+
+                        if (!payload.item || payload.item.matchesCurrentFilter === false) {
+                            row?.remove();
+                            updateListState(payload.visibleCount ?? 0);
+                            return;
+                        }
+
+                        if (row) {
+                            updateRow(row, payload.item);
+                        }
+
+                        updateListState(payload.visibleCount ?? 0);
+                    } catch (error) {
+                        console.error("Failed to save QC override.", error);
+                        setFlash("Failed to save QC override. Refresh the page and try again.", true);
+                    } finally {
+                        setBusy(form, false);
+                    }
+                });
+            });
+        })();
+    </script>
+}
