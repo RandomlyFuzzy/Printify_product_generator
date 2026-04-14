@@ -59,6 +59,24 @@ public static class PrintifyBlueprintDatabase
     {
         return Default.GetShippingQuotes(blueprintId, providerId);
     }
+
+    public static Task<IReadOnlyList<PrintifyBlueprintSubvariant>> GetSubvariantsWithLivePricingAsync(
+        PrintifyClient client,
+        int blueprintId,
+        int? providerId = null,
+        bool showOutOfStock = true)
+    {
+        return Default.GetSubvariantsWithLivePricingAsync(client, blueprintId, providerId, showOutOfStock);
+    }
+
+    public static Task<IReadOnlyList<PrintifyBlueprintShippingQuote>> GetShippingQuotesWithLivePricingAsync(
+        PrintifyClient client,
+        int blueprintId,
+        int? providerId = null,
+        bool showOutOfStock = true)
+    {
+        return Default.GetShippingQuotesWithLivePricingAsync(client, blueprintId, providerId, showOutOfStock);
+    }
 }
 
 public sealed class PrintifyBlueprintQueryApi
@@ -202,6 +220,64 @@ public sealed class PrintifyBlueprintQueryApi
         }
     }
 
+    public async Task<IReadOnlyList<PrintifyBlueprintSubvariant>> GetSubvariantsWithLivePricingAsync(
+        PrintifyClient client,
+        int blueprintId,
+        int? providerId = null,
+        bool showOutOfStock = true)
+    {
+        ArgumentNullException.ThrowIfNull(client);
+
+        var subvariants = GetSubvariants(blueprintId, providerId).ToList();
+        if (subvariants.Count == 0)
+        {
+            return subvariants;
+        }
+
+        var liveVariantsByProvider = await LoadLiveVariantsByProviderAsync(client, blueprintId, providerId, showOutOfStock);
+
+        return subvariants
+            .Select(subvariant =>
+            {
+                if (TryGetLiveVariant(liveVariantsByProvider, subvariant.ProviderId, subvariant.VariantId, out var liveVariant))
+                {
+                    return subvariant with { Variant = MergeVariant(subvariant.Variant, liveVariant) };
+                }
+
+                return subvariant;
+            })
+            .ToList();
+    }
+
+    public async Task<IReadOnlyList<PrintifyBlueprintShippingQuote>> GetShippingQuotesWithLivePricingAsync(
+        PrintifyClient client,
+        int blueprintId,
+        int? providerId = null,
+        bool showOutOfStock = true)
+    {
+        ArgumentNullException.ThrowIfNull(client);
+
+        var quotes = GetShippingQuotes(blueprintId, providerId).ToList();
+        if (quotes.Count == 0)
+        {
+            return quotes;
+        }
+
+        var liveVariantsByProvider = await LoadLiveVariantsByProviderAsync(client, blueprintId, providerId, showOutOfStock);
+
+        return quotes
+            .Select(quote =>
+            {
+                if (TryGetLiveVariant(liveVariantsByProvider, quote.ProviderId, quote.VariantId, out var liveVariant))
+                {
+                    return quote with { Variant = MergeVariant(quote.Variant, liveVariant) };
+                }
+
+                return quote;
+            })
+            .ToList();
+    }
+
     private PrintifyCachedBlueprintDetail LoadBlueprintDetail(int blueprintId)
     {
         var filePath = _blueprintFiles[blueprintId];
@@ -250,6 +326,58 @@ public sealed class PrintifyBlueprintQueryApi
         }
 
         return lookup;
+    }
+
+    private async Task<Dictionary<int, Dictionary<int, Variant>>> LoadLiveVariantsByProviderAsync(
+        PrintifyClient client,
+        int blueprintId,
+        int? providerId,
+        bool showOutOfStock)
+    {
+        var providers = GetProviders(blueprintId)
+            .Where(provider => !providerId.HasValue || provider.Provider.Id == providerId.Value)
+            .Select(provider => provider.Provider.Id)
+            .Distinct()
+            .ToList();
+
+        var liveVariantsByProvider = new Dictionary<int, Dictionary<int, Variant>>();
+
+        foreach (var currentProviderId in providers)
+        {
+            var variantResponse = await client.GetBlueprintVariantsAsync(blueprintId, currentProviderId, showOutOfStock);
+            liveVariantsByProvider[currentProviderId] = variantResponse.Variants.ToDictionary(variant => variant.Id);
+        }
+
+        return liveVariantsByProvider;
+    }
+
+    private static bool TryGetLiveVariant(
+        IReadOnlyDictionary<int, Dictionary<int, Variant>> liveVariantsByProvider,
+        int providerId,
+        int variantId,
+        out Variant variant)
+    {
+        if (liveVariantsByProvider.TryGetValue(providerId, out var variantsById) &&
+            variantsById.TryGetValue(variantId, out variant!))
+        {
+            return true;
+        }
+
+        variant = default!;
+        return false;
+    }
+
+    private static Variant MergeVariant(Variant cachedVariant, Variant liveVariant)
+    {
+        return cachedVariant with
+        {
+            Title = string.IsNullOrWhiteSpace(liveVariant.Title) ? cachedVariant.Title : liveVariant.Title,
+            Cost = liveVariant.Cost ?? cachedVariant.Cost,
+            Price = liveVariant.Price ?? cachedVariant.Price,
+            Prices = liveVariant.Prices.Count > 0 ? liveVariant.Prices : cachedVariant.Prices,
+            Options = liveVariant.Options ?? cachedVariant.Options,
+            Placeholders = liveVariant.Placeholders ?? cachedVariant.Placeholders
+        };
     }
 
     private static IReadOnlyList<string> GetRegions(IEnumerable<ShippingProfile> shippingProfiles)

@@ -11,35 +11,1262 @@
 /home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/modules/GeneratingModules/comfyui/ComfyUiClient.cs(104,23): warning CS8604: Possible null reference argument for parameter 'id' in 'void ComfyUiClient.UpdateJob(string id, Action<JobStatus> update)'. [/home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/PrintifyGenerator.Library.csproj]
 /home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/modules/GeneratingModules/comfyui/ComfyUiClient.cs(111,23): warning CS8604: Possible null reference argument for parameter 'id' in 'void ComfyUiClient.UpdateJob(string id, Action<JobStatus> update)'. [/home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/PrintifyGenerator.Library.csproj]
 /home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/modules/GeneratingModules/comfyui/ComfyUiClient.cs(125,23): warning CS8604: Possible null reference argument for parameter 'id' in 'void ComfyUiClient.UpdateJob(string id, Action<JobStatus> update)'. [/home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/PrintifyGenerator.Library.csproj]
+/home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/modules/GeneratingModules/ollama/OllamaClient.cs(182,30): warning CS8603: Possible null reference return. [/home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/PrintifyGenerator.Library.csproj]
 /home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/modules/GeneratingModules/comfyui/ComfyUiClient.cs(158,74): warning CS8604: Possible null reference argument for parameter 'stringToEscape' in 'string Uri.EscapeDataString(string stringToEscape)'. [/home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/PrintifyGenerator.Library.csproj]
 /home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/modules/GeneratingModules/comfyui/ComfyUiClient.cs(159,60): warning CS8604: Possible null reference argument for parameter 'stringToEscape' in 'string Uri.EscapeDataString(string stringToEscape)'. [/home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/PrintifyGenerator.Library.csproj]
 /home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/modules/GeneratingModules/comfyui/ComfyUiClient.cs(160,55): warning CS8604: Possible null reference argument for parameter 'stringToEscape' in 'string Uri.EscapeDataString(string stringToEscape)'. [/home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/PrintifyGenerator.Library.csproj]
-/home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/modules/GeneratingModules/ollama/OllamaClient.cs(182,30): warning CS8603: Possible null reference return. [/home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/PrintifyGenerator.Library.csproj]
 /home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/modules/GeneratingModules/comfyui/ComfyUiClient.cs(179,39): warning SYSLIB0014: 'WebRequest.Create(string)' is obsolete: 'WebRequest, HttpWebRequest, ServicePoint, and WebClient are obsolete. Use HttpClient instead.' (https://aka.ms/dotnet-warnings/SYSLIB0014) [/home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/PrintifyGenerator.Library.csproj]
 /home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/modules/GeneratingModules/comfyui/ComfyUiClient.cs(200,15): warning CS8604: Possible null reference argument for parameter 'key' in 'JobStatus ConcurrentDictionary<string, JobStatus>.this[string key]'. [/home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/PrintifyGenerator.Library.csproj]
-/home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/modules/GeneratingModules/comfyui/ComfyUiClient.cs(215,16): warning CS8603: Possible null reference return. [/home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/PrintifyGenerator.Library.csproj]
 /home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/modules/GeneratingModules/comfyui/ComfyUiClient.cs(349,46): warning SYSLIB0014: 'WebRequest.Create(string)' is obsolete: 'WebRequest, HttpWebRequest, ServicePoint, and WebClient are obsolete. Use HttpClient instead.' (https://aka.ms/dotnet-warnings/SYSLIB0014) [/home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/PrintifyGenerator.Library.csproj]
 /home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/modules/GeneratingModules/comfyui/ComfyUiClient.cs(376,69): warning CS8604: Possible null reference argument for parameter 'stringToEscape' in 'string Uri.EscapeDataString(string stringToEscape)'. [/home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/PrintifyGenerator.Library.csproj]
 /home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/modules/GeneratingModules/comfyui/ComfyUiClient.cs(377,56): warning CS8604: Possible null reference argument for parameter 'stringToEscape' in 'string Uri.EscapeDataString(string stringToEscape)'. [/home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/PrintifyGenerator.Library.csproj]
 /home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/modules/GeneratingModules/comfyui/ComfyUiClient.cs(378,51): warning CS8604: Possible null reference argument for parameter 'stringToEscape' in 'string Uri.EscapeDataString(string stringToEscape)'. [/home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/PrintifyGenerator.Library.csproj]
+/home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/modules/GeneratingModules/comfyui/ComfyUiClient.cs(215,16): warning CS8603: Possible null reference return. [/home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/PrintifyGenerator.Library.csproj]
+/home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/modules/GeneratingModules/ollama/OllamaClient.cs(239,26): warning CS8603: Possible null reference return. [/home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/PrintifyGenerator.Library.csproj]
 /home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/modules/GeneratingModules/comfyui/ComfyUiClient.cs(228,39): warning SYSLIB0014: 'WebRequest.Create(string)' is obsolete: 'WebRequest, HttpWebRequest, ServicePoint, and WebClient are obsolete. Use HttpClient instead.' (https://aka.ms/dotnet-warnings/SYSLIB0014) [/home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/PrintifyGenerator.Library.csproj]
 /home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/modules/GeneratingModules/comfyui/ComfyUiClient.cs(403,39): warning SYSLIB0014: 'WebRequest.Create(string)' is obsolete: 'WebRequest, HttpWebRequest, ServicePoint, and WebClient are obsolete. Use HttpClient instead.' (https://aka.ms/dotnet-warnings/SYSLIB0014) [/home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/PrintifyGenerator.Library.csproj]
 /home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/modules/GeneratingModules/comfyui/ComfyUiClient.cs(333,19): warning CS8618: Non-nullable property 'PromptId' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/PrintifyGenerator.Library.csproj]
 /home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/modules/GeneratingModules/comfyui/ComfyUiClient.cs(334,19): warning CS8618: Non-nullable property 'Status' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/PrintifyGenerator.Library.csproj]
 /home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/modules/GeneratingModules/comfyui/ComfyUiClient.cs(335,19): warning CS8618: Non-nullable property 'CurrentNode' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/PrintifyGenerator.Library.csproj]
-/home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/modules/GeneratingModules/ollama/OllamaClient.cs(239,26): warning CS8603: Possible null reference return. [/home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/PrintifyGenerator.Library.csproj]
+/home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/modules/GeneratingModules/ollama/OllamaClient.cs(288,30): warning CS8603: Possible null reference return. [/home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/PrintifyGenerator.Library.csproj]
 /home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/modules/GeneratingModules/comfyui/ComfyUiClient.cs(308,27): warning CS8600: Converting null literal or possible null value to non-nullable type. [/home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/PrintifyGenerator.Library.csproj]
 /home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/modules/GeneratingModules/comfyui/ComfyUiClient.cs(311,27): warning CS8604: Possible null reference argument for parameter 'type' in 'void WebSocketEventEmitter.Emit(string type, JsonElement data)'. [/home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/PrintifyGenerator.Library.csproj]
 /home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/modules/GeneratingModules/comfyui/ComfyUiClient.cs(13,26): warning CS8618: Non-nullable property 'BaseUrl' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. [/home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/PrintifyGenerator.Library.csproj]
-/home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/modules/GeneratingModules/ollama/OllamaClient.cs(288,30): warning CS8603: Possible null reference return. [/home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/PrintifyGenerator.Library.csproj]
 /home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/modules/GeneratingModules/ollama/OllamaClient.cs(342,30): warning CS8603: Possible null reference return. [/home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/PrintifyGenerator.Library.csproj]
-/home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/modules/MiddleWareModules/printify/MockupGenerator.cs(331,16): warning CS8604: Possible null reference argument for parameter 'source' in 'bool Enumerable.All<BlueprintSuggestion>(IEnumerable<BlueprintSuggestion> source, Func<BlueprintSuggestion, bool> predicate)'. [/home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/PrintifyGenerator.Library.csproj]
 /home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/modules/utility/WebSocketEventEmitter.cs(71,35): warning CS8600: Converting null literal or possible null value to non-nullable type. [/home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/PrintifyGenerator.Library.csproj]
 /home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/modules/utility/WebSocketEventEmitter.cs(74,35): warning CS8604: Possible null reference argument for parameter 'type' in 'void WebSocketEventEmitter.Emit(string type, JsonElement data)'. [/home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/PrintifyGenerator.Library.csproj]
 /home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/modules/GeneratingModules/ollama/OllamaClient.cs(173,17): warning CA2024: Do not use 'reader.EndOfStream' in an async method (https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca2024) [/home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/PrintifyGenerator.Library.csproj]
 /home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/modules/GeneratingModules/ollama/OllamaClient.cs(228,13): warning CA2024: Do not use 'reader.EndOfStream' in an async method (https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca2024) [/home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/PrintifyGenerator.Library.csproj]
 /home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/modules/GeneratingModules/ollama/OllamaClient.cs(277,17): warning CA2024: Do not use 'reader.EndOfStream' in an async method (https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca2024) [/home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/PrintifyGenerator.Library.csproj]
 /home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/modules/GeneratingModules/ollama/OllamaClient.cs(332,17): warning CA2024: Do not use 'reader.EndOfStream' in an async method (https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca2024) [/home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator.Library/PrintifyGenerator.Library.csproj]
-CSC : error CS5001: Program does not contain a static 'Main' method suitable for an entry point [/home/rf/Desktop/Printify_prodcuct_generator/src/PrintifyGenerator/PrintifyGenerator.csproj]
+Fetching shop list from Printify...
+Using shop: "My new store" (ID: 27067580)
+Found 107 phase-3 suitability records.
 
-The build failed. Fix the build errors and run again.
+32 suitable image(s) queued for mockup generation.
+Drafts will be created on Printify but NOT published.
+
+[1/32] /home/rf/Desktop/Printify_prodcuct_generator/src/data/Checking/2026-04/12/0692efed-a2f7-468d-8cc0-6a71798ead27/0692efed-a2f7-468d-8cc0-6a71798ead27.png
+[MockupGenerator] Image already on Printify (ID: 69dc14b484fbd1b5f6ee2699), skipping upload.
+[MockupGenerator] Loading blueprints from cache.
+[MockupGenerator] Sending 100 candidate blueprints to LLM (from 1359 total).
+[MockupGenerator] Querying LLM (gemma4:e4b) for blueprint recommendation with image /home/rf/Desktop/Printify_prodcuct_generator/src/data/Checking/2026-04/12/0692efed-a2f7-468d-8cc0-6a71798ead27/0692efed-a2f7-468d-8cc0-6a71798ead27.png...
+[
+{
+    "id": 1191,
+    "title": "Photo Art Paper Posters",
+    "reason": "The detailed and atmospheric nature of the wolf's portrait makes it an ideal piece for high-quality, large-format wall decor."
+},
+{
+    "id": 2789,
+    "title": "Adult Crewneck Sweatshirt",
+    "reason": "The strong visual impact of the full-body illustration is best displayed on a substantial garment like a sweatshirt."
+},
+{
+    "id": 1500,
+    "title": "Sherpa Blankets",
+    "reason": "The wilderness theme and moody aesthetic of the image make it a perfect, visually stunning print for a cozy, oversized textile like a sherpa blanket."
+}
+][MockupGenerator] Raw LLM response: [
+{
+    "id": 1191,
+    "title": "Photo Art Paper Posters",
+    "reason": "The detailed and atmospheric nature of the wolf's portrait makes it an ideal piece for high-quality, large-format wall decor."
+},
+{
+    "id": 2789,
+    "title": "Adult Crewneck Sweatshirt",
+    "reason": "The strong visual impact of the full-body illustration is best displayed on a substantial garment like a sweatshirt."
+},
+{
+    "id": 1500,
+    "title": "Sherpa Blankets",
+    "reason": "The wilderness theme and moody aesthetic of the image make it a perfect, visually stunning print for a cozy, oversized textile like a sherpa blanket."
+}
+]
+[MockupGenerator] Parsed LLM suggestions: [
+  {
+    "id": 1191,
+    "title": "Photo Art Paper Posters",
+    "reason": "The detailed and atmospheric nature of the wolf\u0027s portrait makes it an ideal piece for high-quality, large-format wall decor."
+  },
+  {
+    "id": 2789,
+    "title": "Adult Crewneck Sweatshirt",
+    "reason": "The strong visual impact of the full-body illustration is best displayed on a substantial garment like a sweatshirt."
+  },
+  {
+    "id": 1500,
+    "title": "Sherpa Blankets",
+    "reason": "The wilderness theme and moody aesthetic of the image make it a perfect, visually stunning print for a cozy, oversized textile like a sherpa blanket."
+  }
+]
+[MockupGenerator] LLM suggestion: blueprint 1191 – Photo Art Paper Posters (reason: The detailed and atmospheric nature of the wolf's portrait makes it an ideal piece for high-quality, large-format wall decor.)
+[MockupGenerator] Creating draft product (blueprint 1191, provider 27, 47 variants)...
+[MockupGenerator] Draft record saved → ./src/data/staging/drafts/69dda48ff5462073b20a4cba.json
+[MockupGenerator] Done. Draft product ID: 69dda48ff5462073b20a4cba
+[MockupGenerator] LLM suggestion: blueprint 2789 – Adult Crewneck Sweatshirt (reason: The strong visual impact of the full-body illustration is best displayed on a substantial garment like a sweatshirt.)
+[MockupGenerator] Creating draft product (blueprint 2789, provider 29, 9 variants)...
+[MockupGenerator] Draft record saved → ./src/data/staging/drafts/69dda492756fc8a8b708b7c4.json
+[MockupGenerator] Done. Draft product ID: 69dda492756fc8a8b708b7c4
+[MockupGenerator] LLM suggestion: blueprint 1500 – Sherpa Blankets (reason: The wilderness theme and moody aesthetic of the image make it a perfect, visually stunning print for a cozy, oversized textile like a sherpa blanket.)
+[MockupGenerator] Creating draft product (blueprint 1500, provider 94, 2 variants)...
+[MockupGenerator] Draft record saved → ./src/data/staging/drafts/69dda495d11b503dc8093f95.json
+[MockupGenerator] Done. Draft product ID: 69dda495d11b503dc8093f95
+  ✓ Draft created – product ID: 69dda48ff5462073b20a4cba
+  Blueprint: Photo Art Paper Posters
+  Reason:    The detailed and atmospheric nature of the wolf's portrait makes it an ideal piece for high-quality, large-format wall decor.
+  ✓ Draft created – product ID: 69dda492756fc8a8b708b7c4
+  Blueprint: Adult Crewneck Sweatshirt
+  Reason:    The strong visual impact of the full-body illustration is best displayed on a substantial garment like a sweatshirt.
+  ✓ Draft created – product ID: 69dda495d11b503dc8093f95
+  Blueprint: Sherpa Blankets
+  Reason:    The wilderness theme and moody aesthetic of the image make it a perfect, visually stunning print for a cozy, oversized textile like a sherpa blanket.
+
+[2/32] /home/rf/Desktop/Printify_prodcuct_generator/src/data/Checking/2026-04/12/8eb41e20-6b21-4c7e-b200-b1d22e7ae836/8eb41e20-6b21-4c7e-b200-b1d22e7ae836.png
+[MockupGenerator] Image already on Printify (ID: 69dc13c32796f09a52e55bca), skipping upload.
+[MockupGenerator] Loading blueprints from cache.
+[MockupGenerator] Sending 100 candidate blueprints to LLM (from 1359 total).
+[MockupGenerator] Querying LLM (gemma4:e4b) for blueprint recommendation with image /home/rf/Desktop/Printify_prodcuct_generator/src/data/Checking/2026-04/12/8eb41e20-6b21-4c7e-b200-b1d22e7ae836/8eb41e20-6b21-4c7e-b200-b1d22e7ae836.png...
+[
+{
+    "id": 763,
+    "title": "Indoor and Outdoor Silk Posters",
+    "reason": "The highly detailed, vibrant, and graphic nature of the image makes it perfectly suited for a poster to maximize its artistic impact."
+},
+{
+    "id": 1238,
+    "title": "Classic Stretched Canvas",
+    "reason": "A canvas provides a premium and impactful display surface that allows the complex, retro-futuristic design to be showcased prominently."
+},
+{
+    "id": 1317,
+    "title": "Unisex CVC Jersey T-shirt",
+    "reason": "The strong, stylized graphic elements translate well onto a unisex t-shirt, making it wearable and eye-catching art."
+}
+][MockupGenerator] Raw LLM response: [
+{
+    "id": 763,
+    "title": "Indoor and Outdoor Silk Posters",
+    "reason": "The highly detailed, vibrant, and graphic nature of the image makes it perfectly suited for a poster to maximize its artistic impact."
+},
+{
+    "id": 1238,
+    "title": "Classic Stretched Canvas",
+    "reason": "A canvas provides a premium and impactful display surface that allows the complex, retro-futuristic design to be showcased prominently."
+},
+{
+    "id": 1317,
+    "title": "Unisex CVC Jersey T-shirt",
+    "reason": "The strong, stylized graphic elements translate well onto a unisex t-shirt, making it wearable and eye-catching art."
+}
+]
+[MockupGenerator] Parsed LLM suggestions: [
+  {
+    "id": 763,
+    "title": "Indoor and Outdoor Silk Posters",
+    "reason": "The highly detailed, vibrant, and graphic nature of the image makes it perfectly suited for a poster to maximize its artistic impact."
+  },
+  {
+    "id": 1238,
+    "title": "Classic Stretched Canvas",
+    "reason": "A canvas provides a premium and impactful display surface that allows the complex, retro-futuristic design to be showcased prominently."
+  },
+  {
+    "id": 1317,
+    "title": "Unisex CVC Jersey T-shirt",
+    "reason": "The strong, stylized graphic elements translate well onto a unisex t-shirt, making it wearable and eye-catching art."
+  }
+]
+[MockupGenerator] LLM suggestion: blueprint 763 – Indoor and Outdoor Silk Posters (reason: The highly detailed, vibrant, and graphic nature of the image makes it perfectly suited for a poster to maximize its artistic impact.)
+[MockupGenerator] Creating draft product (blueprint 763, provider 72, 35 variants)...
+[MockupGenerator] Draft record saved → ./src/data/staging/drafts/69dda4bca46a420a100b3777.json
+[MockupGenerator] Done. Draft product ID: 69dda4bca46a420a100b3777
+[MockupGenerator] LLM suggestion: blueprint 1238 – Classic Stretched Canvas (reason: A canvas provides a premium and impactful display surface that allows the complex, retro-futuristic design to be showcased prominently.)
+[MockupGenerator] Creating draft product (blueprint 1238, provider 48, 45 variants)...
+[MockupGenerator] Draft record saved → ./src/data/staging/drafts/69dda4c496616affb1044774.json
+[MockupGenerator] Done. Draft product ID: 69dda4c496616affb1044774
+[MockupGenerator] LLM suggestion: blueprint 1317 – Unisex CVC Jersey T-shirt (reason: The strong, stylized graphic elements translate well onto a unisex t-shirt, making it wearable and eye-catching art.)
+[MockupGenerator] Warning: blueprint 1317 has 271 variants; only processing the first 100.
+[MockupGenerator] Creating draft product (blueprint 1317, provider 99, 100 variants)...
+[MockupGenerator] Draft record saved → ./src/data/staging/drafts/69dda4cb60953a3231060902.json
+[MockupGenerator] Done. Draft product ID: 69dda4cb60953a3231060902
+  ✓ Draft created – product ID: 69dda4bca46a420a100b3777
+  Blueprint: Indoor and Outdoor Silk Posters
+  Reason:    The highly detailed, vibrant, and graphic nature of the image makes it perfectly suited for a poster to maximize its artistic impact.
+  ✓ Draft created – product ID: 69dda4c496616affb1044774
+  Blueprint: Classic Stretched Canvas
+  Reason:    A canvas provides a premium and impactful display surface that allows the complex, retro-futuristic design to be showcased prominently.
+  ✓ Draft created – product ID: 69dda4cb60953a3231060902
+  Blueprint: Unisex CVC Jersey T-shirt
+  Reason:    The strong, stylized graphic elements translate well onto a unisex t-shirt, making it wearable and eye-catching art.
+
+[3/32] /home/rf/Desktop/Printify_prodcuct_generator/src/data/Checking/2026-04/12/884a8428-3048-422e-b406-85ef3f1316ab/884a8428-3048-422e-b406-85ef3f1316ab.png
+[MockupGenerator] Image already on Printify (ID: 69dc125cee6540fccea89e7a), skipping upload.
+[MockupGenerator] Loading blueprints from cache.
+[MockupGenerator] Sending 100 candidate blueprints to LLM (from 1359 total).
+[MockupGenerator] Querying LLM (gemma4:e4b) for blueprint recommendation with image /home/rf/Desktop/Printify_prodcuct_generator/src/data/Checking/2026-04/12/884a8428-3048-422e-b406-85ef3f1316ab/884a8428-3048-422e-b406-85ef3f1316ab.png...
+[
+{
+    "id": 540,
+    "title": "Framed Vertical Poster",
+    "reason": "The delicate, watercolor wash quality of the design makes it an ideal piece of vertical wall art."
+},
+{
+    "id": 1120,
+    "title": "Sherpa Blanket",
+    "reason": "The soft, pastel abstract composition creates a cozy, calming aesthetic perfect for home textiles and decor."
+},
+{
+    "id": 68,
+    "title": "Mug 11oz",
+    "reason": "The airy, whimsical color palette translates beautifully to functional kitchenware, adding a serene touch to daily routine."
+}
+][MockupGenerator] Raw LLM response: [
+{
+    "id": 540,
+    "title": "Framed Vertical Poster",
+    "reason": "The delicate, watercolor wash quality of the design makes it an ideal piece of vertical wall art."
+},
+{
+    "id": 1120,
+    "title": "Sherpa Blanket",
+    "reason": "The soft, pastel abstract composition creates a cozy, calming aesthetic perfect for home textiles and decor."
+},
+{
+    "id": 68,
+    "title": "Mug 11oz",
+    "reason": "The airy, whimsical color palette translates beautifully to functional kitchenware, adding a serene touch to daily routine."
+}
+]
+[MockupGenerator] Parsed LLM suggestions: [
+  {
+    "id": 540,
+    "title": "Framed Vertical Poster",
+    "reason": "The delicate, watercolor wash quality of the design makes it an ideal piece of vertical wall art."
+  },
+  {
+    "id": 1120,
+    "title": "Sherpa Blanket",
+    "reason": "The soft, pastel abstract composition creates a cozy, calming aesthetic perfect for home textiles and decor."
+  },
+  {
+    "id": 68,
+    "title": "Mug 11oz",
+    "reason": "The airy, whimsical color palette translates beautifully to functional kitchenware, adding a serene touch to daily routine."
+  }
+]
+[MockupGenerator] LLM suggestion: blueprint 540 – Framed Vertical Poster (reason: The delicate, watercolor wash quality of the design makes it an ideal piece of vertical wall art.)
+[MockupGenerator] Creating draft product (blueprint 540, provider 99, 10 variants)...
+[MockupGenerator] Draft record saved → ./src/data/staging/drafts/69dda4efc57485debe0e2a78.json
+[MockupGenerator] Done. Draft product ID: 69dda4efc57485debe0e2a78
+[MockupGenerator] LLM suggestion: blueprint 1120 – Sherpa Blanket (reason: The soft, pastel abstract composition creates a cozy, calming aesthetic perfect for home textiles and decor.)
+[MockupGenerator] Creating draft product (blueprint 1120, provider 92, 9 variants)...
+[MockupGenerator] Draft record saved → ./src/data/staging/drafts/69dda4f593413ec365036190.json
+[MockupGenerator] Done. Draft product ID: 69dda4f593413ec365036190
+[MockupGenerator] LLM suggestion: blueprint 68 – Mug 11oz (reason: The airy, whimsical color palette translates beautifully to functional kitchenware, adding a serene touch to daily routine.)
+[MockupGenerator] Creating draft product (blueprint 68, provider 1, 1 variants)...
+[MockupGenerator] Draft record saved → ./src/data/staging/drafts/69dda4f8ed7498cc1006aed9.json
+[MockupGenerator] Done. Draft product ID: 69dda4f8ed7498cc1006aed9
+  ✓ Draft created – product ID: 69dda4efc57485debe0e2a78
+  Blueprint: Framed Vertical Poster
+  Reason:    The delicate, watercolor wash quality of the design makes it an ideal piece of vertical wall art.
+  ✓ Draft created – product ID: 69dda4f593413ec365036190
+  Blueprint: Sherpa Blanket
+  Reason:    The soft, pastel abstract composition creates a cozy, calming aesthetic perfect for home textiles and decor.
+  ✓ Draft created – product ID: 69dda4f8ed7498cc1006aed9
+  Blueprint: Mug 11oz
+  Reason:    The airy, whimsical color palette translates beautifully to functional kitchenware, adding a serene touch to daily routine.
+
+[4/32] /home/rf/Desktop/Printify_prodcuct_generator/src/data/Checking/2026-04/12/925d4da3-4d93-4891-89ae-55373fb47cec/925d4da3-4d93-4891-89ae-55373fb47cec.png
+[MockupGenerator] Image already on Printify (ID: 69dbf27e946c71084de7f728), skipping upload.
+[MockupGenerator] Loading blueprints from cache.
+[MockupGenerator] Sending 100 candidate blueprints to LLM (from 1359 total).
+[MockupGenerator] Querying LLM (gemma4:e4b) for blueprint recommendation with image /home/rf/Desktop/Printify_prodcuct_generator/src/data/Checking/2026-04/12/925d4da3-4d93-4891-89ae-55373fb47cec/925d4da3-4d93-4891-89ae-55373fb47cec.png...
+[
+  {
+    "id": 535,
+    "title": "11oz White Mug",
+    "reason": "The elegant, continuous line of the infinity symbol translates perfectly as a subtle and sophisticated design for everyday use."
+  },
+  {
+    "id": 1653,
+    "title": "Unisex DryBlend® T-Shirt",
+    "reason": "The minimalist and abstract nature of the symbol makes it an ideal, subtle graphic print for modern apparel."
+  },
+  {
+    "id": 937,
+    "title": "Matte Canvas, Stretched, 0.75'' (Multi-Size)",
+    "reason": "The composition is inherently abstract and graphic, making it a striking centerpiece for modern interior wall art."
+  }
+][MockupGenerator] Raw LLM response: [
+  {
+    "id": 535,
+    "title": "11oz White Mug",
+    "reason": "The elegant, continuous line of the infinity symbol translates perfectly as a subtle and sophisticated design for everyday use."
+  },
+  {
+    "id": 1653,
+    "title": "Unisex DryBlend® T-Shirt",
+    "reason": "The minimalist and abstract nature of the symbol makes it an ideal, subtle graphic print for modern apparel."
+  },
+  {
+    "id": 937,
+    "title": "Matte Canvas, Stretched, 0.75'' (Multi-Size)",
+    "reason": "The composition is inherently abstract and graphic, making it a striking centerpiece for modern interior wall art."
+  }
+]
+[MockupGenerator] Parsed LLM suggestions: [
+  {
+    "id": 535,
+    "title": "11oz White Mug",
+    "reason": "The elegant, continuous line of the infinity symbol translates perfectly as a subtle and sophisticated design for everyday use."
+  },
+  {
+    "id": 1653,
+    "title": "Unisex DryBlend\u00AE T-Shirt",
+    "reason": "The minimalist and abstract nature of the symbol makes it an ideal, subtle graphic print for modern apparel."
+  },
+  {
+    "id": 937,
+    "title": "Matte Canvas, Stretched, 0.75\u0027\u0027 (Multi-Size)",
+    "reason": "The composition is inherently abstract and graphic, making it a striking centerpiece for modern interior wall art."
+  }
+]
+[MockupGenerator] LLM suggestion: blueprint 535 – 11oz White Mug (reason: The elegant, continuous line of the infinity symbol translates perfectly as a subtle and sophisticated design for everyday use.)
+[MockupGenerator] Creating draft product (blueprint 535, provider 6, 1 variants)...
+[MockupGenerator] Draft record saved → ./src/data/staging/drafts/69dda517aabf04ffa6098728.json
+[MockupGenerator] Done. Draft product ID: 69dda517aabf04ffa6098728
+[MockupGenerator] LLM suggestion: blueprint 1653 – Unisex DryBlend® T-Shirt (reason: The minimalist and abstract nature of the symbol makes it an ideal, subtle graphic print for modern apparel.)
+[MockupGenerator] Warning: blueprint 1653 has 113 variants; only processing the first 100.
+[MockupGenerator] Creating draft product (blueprint 1653, provider 39, 100 variants)...
+[MockupGenerator] Draft record saved → ./src/data/staging/drafts/69dda51b756fc8a8b708b7ef.json
+[MockupGenerator] Done. Draft product ID: 69dda51b756fc8a8b708b7ef
+[MockupGenerator] LLM suggestion: blueprint 937 – Matte Canvas, Stretched, 0.75'' (Multi-Size) (reason: The composition is inherently abstract and graphic, making it a striking centerpiece for modern interior wall art.)
+[MockupGenerator] Creating draft product (blueprint 937, provider 105, 58 variants)...
+[MockupGenerator] Draft record saved → ./src/data/staging/drafts/69dda51e60953a323106090e.json
+[MockupGenerator] Done. Draft product ID: 69dda51e60953a323106090e
+  ✓ Draft created – product ID: 69dda517aabf04ffa6098728
+  Blueprint: 11oz White Mug
+  Reason:    The elegant, continuous line of the infinity symbol translates perfectly as a subtle and sophisticated design for everyday use.
+  ✓ Draft created – product ID: 69dda51b756fc8a8b708b7ef
+  Blueprint: Unisex DryBlend® T-Shirt
+  Reason:    The minimalist and abstract nature of the symbol makes it an ideal, subtle graphic print for modern apparel.
+  ✓ Draft created – product ID: 69dda51e60953a323106090e
+  Blueprint: Matte Canvas, Stretched, 0.75'' (Multi-Size)
+  Reason:    The composition is inherently abstract and graphic, making it a striking centerpiece for modern interior wall art.
+
+[5/32] /home/rf/Desktop/Printify_prodcuct_generator/src/data/Checking/2026-04/12/d6e48703-9861-47d8-b02a-60402d0eafb4/d6e48703-9861-47d8-b02a-60402d0eafb4.png
+[MockupGenerator] Image already on Printify (ID: 69dbf280519b7222312f6c1c), skipping upload.
+[MockupGenerator] Loading blueprints from cache.
+[MockupGenerator] Sending 100 candidate blueprints to LLM (from 1359 total).
+[MockupGenerator] Querying LLM (gemma4:e4b) for blueprint recommendation with image /home/rf/Desktop/Printify_prodcuct_generator/src/data/Checking/2026-04/12/d6e48703-9861-47d8-b02a-60402d0eafb4/d6e48703-9861-47d8-b02a-60402d0eafb4.png...
+```json
+[
+  {
+    "id": 1502,
+    "title": "Framed Poster, Multi-Color",
+    "reason": "The image is highly artistic with a beautiful color gradient and composition, making it ideal as a centerpiece wall print."
+  },
+  {
+    "id": 791,
+    "title": "Latte Mug, 12oz",
+    "reason": "The vibrant sunrise/sunset theme perfectly complements the ritual of enjoying a warm beverage."
+  },
+  {
+    "id": 800,
+    "title": "Unisex Color Blast T-Shirt",
+    "reason": "The aesthetic design translates well into wearable art, making it a unique and expressive graphic tee."
+  }
+]
+```[MockupGenerator] Raw LLM response: [
+  {
+    "id": 1502,
+    "title": "Framed Poster, Multi-Color",
+    "reason": "The image is highly artistic with a beautiful color gradient and composition, making it ideal as a centerpiece wall print."
+  },
+  {
+    "id": 791,
+    "title": "Latte Mug, 12oz",
+    "reason": "The vibrant sunrise/sunset theme perfectly complements the ritual of enjoying a warm beverage."
+  },
+  {
+    "id": 800,
+    "title": "Unisex Color Blast T-Shirt",
+    "reason": "The aesthetic design translates well into wearable art, making it a unique and expressive graphic tee."
+  }
+]
+[MockupGenerator] Parsed LLM suggestions: [
+  {
+    "id": 1502,
+    "title": "Framed Poster, Multi-Color",
+    "reason": "The image is highly artistic with a beautiful color gradient and composition, making it ideal as a centerpiece wall print."
+  },
+  {
+    "id": 791,
+    "title": "Latte Mug, 12oz",
+    "reason": "The vibrant sunrise/sunset theme perfectly complements the ritual of enjoying a warm beverage."
+  },
+  {
+    "id": 800,
+    "title": "Unisex Color Blast T-Shirt",
+    "reason": "The aesthetic design translates well into wearable art, making it a unique and expressive graphic tee."
+  }
+]
+[MockupGenerator] LLM suggestion: blueprint 1502 – Framed Poster, Multi-Color (reason: The image is highly artistic with a beautiful color gradient and composition, making it ideal as a centerpiece wall print.)
+[MockupGenerator] Creating draft product (blueprint 1502, provider 72, 13 variants)...
+[MockupGenerator] Draft record saved → ./src/data/staging/drafts/69dda53e96616affb1044793.json
+[MockupGenerator] Done. Draft product ID: 69dda53e96616affb1044793
+[MockupGenerator] LLM suggestion: blueprint 791 – Latte Mug, 12oz (reason: The vibrant sunrise/sunset theme perfectly complements the ritual of enjoying a warm beverage.)
+[MockupGenerator] Creating draft product (blueprint 791, provider 41, 1 variants)...
+[MockupGenerator] Draft record saved → ./src/data/staging/drafts/69dda543f37f49f9dd0be826.json
+[MockupGenerator] Done. Draft product ID: 69dda543f37f49f9dd0be826
+[MockupGenerator] LLM suggestion: blueprint 800 – Unisex Color Blast T-Shirt (reason: The aesthetic design translates well into wearable art, making it a unique and expressive graphic tee.)
+[MockupGenerator] Creating draft product (blueprint 800, provider 39, 36 variants)...
+[MockupGenerator] Draft record saved → ./src/data/staging/drafts/69dda54696616affb1044795.json
+[MockupGenerator] Done. Draft product ID: 69dda54696616affb1044795
+  ✓ Draft created – product ID: 69dda53e96616affb1044793
+  Blueprint: Framed Poster, Multi-Color
+  Reason:    The image is highly artistic with a beautiful color gradient and composition, making it ideal as a centerpiece wall print.
+  ✓ Draft created – product ID: 69dda543f37f49f9dd0be826
+  Blueprint: Latte Mug, 12oz
+  Reason:    The vibrant sunrise/sunset theme perfectly complements the ritual of enjoying a warm beverage.
+  ✓ Draft created – product ID: 69dda54696616affb1044795
+  Blueprint: Unisex Color Blast T-Shirt
+  Reason:    The aesthetic design translates well into wearable art, making it a unique and expressive graphic tee.
+
+[6/32] /home/rf/Desktop/Printify_prodcuct_generator/src/data/Checking/2026-04/12/a57ad13d-aaf5-4c16-89b8-44aac4b7ce12/a57ad13d-aaf5-4c16-89b8-44aac4b7ce12.png
+[MockupGenerator] Image already on Printify (ID: 69dc13426558f941dbe9e3b1), skipping upload.
+[MockupGenerator] Loading blueprints from cache.
+[MockupGenerator] Sending 100 candidate blueprints to LLM (from 1359 total).
+[MockupGenerator] Querying LLM (gemma4:e4b) for blueprint recommendation with image /home/rf/Desktop/Printify_prodcuct_generator/src/data/Checking/2026-04/12/a57ad13d-aaf5-4c16-89b8-44aac4b7ce12/a57ad13d-aaf5-4c16-89b8-44aac4b7ce12.png...
+[
+{
+    "id": 725,
+    "title": "Unisex Classic Tee",
+    "reason": "The clean composition and soft aesthetic of the portrait make it perfect for a wearable piece of art like a classic unisex t-shirt."
+},
+{
+    "id": 1297,
+    "title": "Canvas Stretched, 0.75\"",
+    "reason": "As a detailed portrait, stretching the image onto canvas provides the most premium and gallery-quality presentation for wall decor."
+},
+{
+    "id": 1140,
+    "title": "Framed Posters, Black",
+    "reason": "Framed posters offer a highly marketable, aesthetically neutral way to sell the portrait as stylish and accessible home wall art."
+}
+][MockupGenerator] Raw LLM response: [
+{
+    "id": 725,
+    "title": "Unisex Classic Tee",
+    "reason": "The clean composition and soft aesthetic of the portrait make it perfect for a wearable piece of art like a classic unisex t-shirt."
+},
+{
+    "id": 1297,
+    "title": "Canvas Stretched, 0.75\"",
+    "reason": "As a detailed portrait, stretching the image onto canvas provides the most premium and gallery-quality presentation for wall decor."
+},
+{
+    "id": 1140,
+    "title": "Framed Posters, Black",
+    "reason": "Framed posters offer a highly marketable, aesthetically neutral way to sell the portrait as stylish and accessible home wall art."
+}
+]
+[MockupGenerator] Parsed LLM suggestions: [
+  {
+    "id": 725,
+    "title": "Unisex Classic Tee",
+    "reason": "The clean composition and soft aesthetic of the portrait make it perfect for a wearable piece of art like a classic unisex t-shirt."
+  },
+  {
+    "id": 1297,
+    "title": "Canvas Stretched, 0.75\u0022",
+    "reason": "As a detailed portrait, stretching the image onto canvas provides the most premium and gallery-quality presentation for wall decor."
+  },
+  {
+    "id": 1140,
+    "title": "Framed Posters, Black",
+    "reason": "Framed posters offer a highly marketable, aesthetically neutral way to sell the portrait as stylish and accessible home wall art."
+  }
+]
+[MockupGenerator] LLM suggestion: blueprint 725 – Unisex Classic Tee (reason: The clean composition and soft aesthetic of the portrait make it perfect for a wearable piece of art like a classic unisex t-shirt.)
+[MockupGenerator] Creating draft product (blueprint 725, provider 29, 20 variants)...
+[MockupGenerator] Draft record saved → ./src/data/staging/drafts/69dda567c57485debe0e2a93.json
+[MockupGenerator] Done. Draft product ID: 69dda567c57485debe0e2a93
+[MockupGenerator] LLM suggestion: blueprint 1297 – Canvas Stretched, 0.75" (reason: As a detailed portrait, stretching the image onto canvas provides the most premium and gallery-quality presentation for wall decor.)
+[MockupGenerator] Creating draft product (blueprint 1297, provider 259, 34 variants)...
+[MockupGenerator] Draft record saved → ./src/data/staging/drafts/69dda56aa46a420a100b3798.json
+[MockupGenerator] Done. Draft product ID: 69dda56aa46a420a100b3798
+[MockupGenerator] LLM suggestion: blueprint 1140 – Framed Posters, Black (reason: Framed posters offer a highly marketable, aesthetically neutral way to sell the portrait as stylish and accessible home wall art.)
+[MockupGenerator] Creating draft product (blueprint 1140, provider 66, 8 variants)...
+[MockupGenerator] Draft record saved → ./src/data/staging/drafts/69dda56e64a3dd1cda0f736e.json
+[MockupGenerator] Done. Draft product ID: 69dda56e64a3dd1cda0f736e
+  ✓ Draft created – product ID: 69dda567c57485debe0e2a93
+  Blueprint: Unisex Classic Tee
+  Reason:    The clean composition and soft aesthetic of the portrait make it perfect for a wearable piece of art like a classic unisex t-shirt.
+  ✓ Draft created – product ID: 69dda56aa46a420a100b3798
+  Blueprint: Canvas Stretched, 0.75"
+  Reason:    As a detailed portrait, stretching the image onto canvas provides the most premium and gallery-quality presentation for wall decor.
+  ✓ Draft created – product ID: 69dda56e64a3dd1cda0f736e
+  Blueprint: Framed Posters, Black
+  Reason:    Framed posters offer a highly marketable, aesthetically neutral way to sell the portrait as stylish and accessible home wall art.
+
+[7/32] /home/rf/Desktop/Printify_prodcuct_generator/src/data/Checking/2026-04/12/625be73f-a019-4a12-acfe-e3e92bc94620/625be73f-a019-4a12-acfe-e3e92bc94620.png
+[MockupGenerator] Image already on Printify (ID: 69dc12d0eb4b3e5cdaee0b9b), skipping upload.
+[MockupGenerator] Loading blueprints from cache.
+[MockupGenerator] Sending 100 candidate blueprints to LLM (from 1359 total).
+[MockupGenerator] Querying LLM (gemma4:e4b) for blueprint recommendation with image /home/rf/Desktop/Printify_prodcuct_generator/src/data/Checking/2026-04/12/625be73f-a019-4a12-acfe-e3e92bc94620/625be73f-a019-4a12-acfe-e3e92bc94620.png...
+[
+{
+    "id": 1238,
+    "title": "Classic Stretched Canvas",
+    "reason": "The wide, serene landscape composition of the sunset makes this an ideal piece for high-impact wall decor."
+},
+{
+    "id": 763,
+    "title": "Indoor and Outdoor Silk Posters",
+    "reason": "The aesthetic, vibrant colors and horizontal nature of the scene translate beautifully onto large-format, gallery-style posters."
+},
+{
+    "id": 1530,
+    "title": "Wood Signs",
+    "reason": "The natural elements of the beach scene lend themselves well to a rustic aesthetic, making it perfect for a wooden sign print."
+}
+][MockupGenerator] Raw LLM response: [
+{
+    "id": 1238,
+    "title": "Classic Stretched Canvas",
+    "reason": "The wide, serene landscape composition of the sunset makes this an ideal piece for high-impact wall decor."
+},
+{
+    "id": 763,
+    "title": "Indoor and Outdoor Silk Posters",
+    "reason": "The aesthetic, vibrant colors and horizontal nature of the scene translate beautifully onto large-format, gallery-style posters."
+},
+{
+    "id": 1530,
+    "title": "Wood Signs",
+    "reason": "The natural elements of the beach scene lend themselves well to a rustic aesthetic, making it perfect for a wooden sign print."
+}
+]
+[MockupGenerator] Parsed LLM suggestions: [
+  {
+    "id": 1238,
+    "title": "Classic Stretched Canvas",
+    "reason": "The wide, serene landscape composition of the sunset makes this an ideal piece for high-impact wall decor."
+  },
+  {
+    "id": 763,
+    "title": "Indoor and Outdoor Silk Posters",
+    "reason": "The aesthetic, vibrant colors and horizontal nature of the scene translate beautifully onto large-format, gallery-style posters."
+  },
+  {
+    "id": 1530,
+    "title": "Wood Signs",
+    "reason": "The natural elements of the beach scene lend themselves well to a rustic aesthetic, making it perfect for a wooden sign print."
+  }
+]
+[MockupGenerator] LLM suggestion: blueprint 1238 – Classic Stretched Canvas (reason: The wide, serene landscape composition of the sunset makes this an ideal piece for high-impact wall decor.)
+[MockupGenerator] Creating draft product (blueprint 1238, provider 48, 45 variants)...
+[MockupGenerator] Draft record saved → ./src/data/staging/drafts/69dda58fa46a420a100b379d.json
+[MockupGenerator] Done. Draft product ID: 69dda58fa46a420a100b379d
+[MockupGenerator] LLM suggestion: blueprint 763 – Indoor and Outdoor Silk Posters (reason: The aesthetic, vibrant colors and horizontal nature of the scene translate beautifully onto large-format, gallery-style posters.)
+[MockupGenerator] Creating draft product (blueprint 763, provider 72, 35 variants)...
+[MockupGenerator] Draft record saved → ./src/data/staging/drafts/69dda5939c9e6f6d5406d8e9.json
+[MockupGenerator] Done. Draft product ID: 69dda5939c9e6f6d5406d8e9
+[MockupGenerator] LLM suggestion: blueprint 1530 – Wood Signs (reason: The natural elements of the beach scene lend themselves well to a rustic aesthetic, making it perfect for a wooden sign print.)
+[MockupGenerator] Creating draft product (blueprint 1530, provider 70, 4 variants)...
+[MockupGenerator] Draft record saved → ./src/data/staging/drafts/69dda596f5462073b20a4ce8.json
+[MockupGenerator] Done. Draft product ID: 69dda596f5462073b20a4ce8
+  ✓ Draft created – product ID: 69dda58fa46a420a100b379d
+  Blueprint: Classic Stretched Canvas
+  Reason:    The wide, serene landscape composition of the sunset makes this an ideal piece for high-impact wall decor.
+  ✓ Draft created – product ID: 69dda5939c9e6f6d5406d8e9
+  Blueprint: Indoor and Outdoor Silk Posters
+  Reason:    The aesthetic, vibrant colors and horizontal nature of the scene translate beautifully onto large-format, gallery-style posters.
+  ✓ Draft created – product ID: 69dda596f5462073b20a4ce8
+  Blueprint: Wood Signs
+  Reason:    The natural elements of the beach scene lend themselves well to a rustic aesthetic, making it perfect for a wooden sign print.
+
+[8/32] /home/rf/Desktop/Printify_prodcuct_generator/src/data/Checking/2026-04/12/49792621-27f7-4737-9295-76498aa4beef/49792621-27f7-4737-9295-76498aa4beef.png
+[MockupGenerator] Image already on Printify (ID: 69dc11dcd4ce655cf849e07f), skipping upload.
+[MockupGenerator] Loading blueprints from cache.
+[MockupGenerator] Sending 100 candidate blueprints to LLM (from 1359 total).
+[MockupGenerator] Querying LLM (gemma4:e4b) for blueprint recommendation with image /home/rf/Desktop/Printify_prodcuct_generator/src/data/Checking/2026-04/12/49792621-27f7-4737-9295-76498aa4beef/49792621-27f7-4737-9295-76498aa4beef.png...
+[
+  {
+    "id": 1331,
+    "title": "Textured Watercolor Matte Posters",
+    "reason": "The vibrant, stylized architecture makes it a perfect graphic print for home decor, showcasing its artistic composition."
+  },
+  {
+    "id": 1930,
+    "title": "Large Eco Tote",
+    "reason": "The wide, striking nature of the building allows the entire piece to be displayed effectively on a large, canvas-like tote bag."
+  },
+  {
+    "id": 706,
+    "title": "Unisex Garment-Dyed T-shirt",
+    "reason": "The bold, futuristic graphic translates excellently as a wearable piece of street art on a casual t-shirt."
+  }
+][MockupGenerator] Raw LLM response: [
+  {
+    "id": 1331,
+    "title": "Textured Watercolor Matte Posters",
+    "reason": "The vibrant, stylized architecture makes it a perfect graphic print for home decor, showcasing its artistic composition."
+  },
+  {
+    "id": 1930,
+    "title": "Large Eco Tote",
+    "reason": "The wide, striking nature of the building allows the entire piece to be displayed effectively on a large, canvas-like tote bag."
+  },
+  {
+    "id": 706,
+    "title": "Unisex Garment-Dyed T-shirt",
+    "reason": "The bold, futuristic graphic translates excellently as a wearable piece of street art on a casual t-shirt."
+  }
+]
+[MockupGenerator] Parsed LLM suggestions: [
+  {
+    "id": 1331,
+    "title": "Textured Watercolor Matte Posters",
+    "reason": "The vibrant, stylized architecture makes it a perfect graphic print for home decor, showcasing its artistic composition."
+  },
+  {
+    "id": 1930,
+    "title": "Large Eco Tote",
+    "reason": "The wide, striking nature of the building allows the entire piece to be displayed effectively on a large, canvas-like tote bag."
+  },
+  {
+    "id": 706,
+    "title": "Unisex Garment-Dyed T-shirt",
+    "reason": "The bold, futuristic graphic translates excellently as a wearable piece of street art on a casual t-shirt."
+  }
+]
+[MockupGenerator] LLM suggestion: blueprint 1331 – Textured Watercolor Matte Posters (reason: The vibrant, stylized architecture makes it a perfect graphic print for home decor, showcasing its artistic composition.)
+[MockupGenerator] Creating draft product (blueprint 1331, provider 2, 74 variants)...
+[MockupGenerator] Draft record saved → ./src/data/staging/drafts/69dda5b66d5edb6e5d01a49d.json
+[MockupGenerator] Done. Draft product ID: 69dda5b66d5edb6e5d01a49d
+[MockupGenerator] LLM suggestion: blueprint 1930 – Large Eco Tote (reason: The wide, striking nature of the building allows the entire piece to be displayed effectively on a large, canvas-like tote bag.)
+[MockupGenerator] Creating draft product (blueprint 1930, provider 99, 2 variants)...
+[MockupGenerator] Draft record saved → ./src/data/staging/drafts/69dda5b9c57485debe0e2a9e.json
+[MockupGenerator] Done. Draft product ID: 69dda5b9c57485debe0e2a9e
+[MockupGenerator] LLM suggestion: blueprint 706 – Unisex Garment-Dyed T-shirt (reason: The bold, futuristic graphic translates excellently as a wearable piece of street art on a casual t-shirt.)
+[MockupGenerator] Creating draft product (blueprint 706, provider 3, 44 variants)...
+[MockupGenerator] Draft record saved → ./src/data/staging/drafts/69dda5be6d5edb6e5d01a4a0.json
+[MockupGenerator] Done. Draft product ID: 69dda5be6d5edb6e5d01a4a0
+  ✓ Draft created – product ID: 69dda5b66d5edb6e5d01a49d
+  Blueprint: Textured Watercolor Matte Posters
+  Reason:    The vibrant, stylized architecture makes it a perfect graphic print for home decor, showcasing its artistic composition.
+  ✓ Draft created – product ID: 69dda5b9c57485debe0e2a9e
+  Blueprint: Large Eco Tote
+  Reason:    The wide, striking nature of the building allows the entire piece to be displayed effectively on a large, canvas-like tote bag.
+  ✓ Draft created – product ID: 69dda5be6d5edb6e5d01a4a0
+  Blueprint: Unisex Garment-Dyed T-shirt
+  Reason:    The bold, futuristic graphic translates excellently as a wearable piece of street art on a casual t-shirt.
+
+[9/32] /home/rf/Desktop/Printify_prodcuct_generator/src/data/Checking/2026-04/12/3f6ba7e1-2f7d-4653-b27a-73aa08644d99/3f6ba7e1-2f7d-4653-b27a-73aa08644d99.png
+[MockupGenerator] Image already on Printify (ID: 69dd1bab6137ff5a251a1af5), skipping upload.
+[MockupGenerator] Loading blueprints from cache.
+[MockupGenerator] Sending 100 candidate blueprints to LLM (from 1359 total).
+[MockupGenerator] Querying LLM (gemma4:e4b) for blueprint recommendation with image /home/rf/Desktop/Printify_prodcuct_generator/src/data/Checking/2026-04/12/3f6ba7e1-2f7d-4653-b27a-73aa08644d99/3f6ba7e1-2f7d-4653-b27a-73aa08644d99.png...
+[
+  {
+    "id": 1159,
+    "title": "Matte Canvas, Stretched, 1.25\"",
+    "reason": "The detailed, vertical, and high-contrast aesthetic of the image is perfectly suited for display as striking, gallery-style wall art."
+  },
+  {
+    "id": 1457,
+    "title": "Unisex Heavy Faded Tee",
+    "reason": "The vivid, pop-art, synthwave graphic translates excellently onto fabric, making it a highly marketable and visually appealing piece of streetwear."
+  },
+  {
+    "id": 1152,
+    "title": "Black Mug, 15oz",
+    "reason": "The bright neon colors and contrasting gradients pop dramatically when printed on a solid, dark surface like black ceramic mug."
+  }
+][MockupGenerator] Raw LLM response: [
+  {
+    "id": 1159,
+    "title": "Matte Canvas, Stretched, 1.25\"",
+    "reason": "The detailed, vertical, and high-contrast aesthetic of the image is perfectly suited for display as striking, gallery-style wall art."
+  },
+  {
+    "id": 1457,
+    "title": "Unisex Heavy Faded Tee",
+    "reason": "The vivid, pop-art, synthwave graphic translates excellently onto fabric, making it a highly marketable and visually appealing piece of streetwear."
+  },
+  {
+    "id": 1152,
+    "title": "Black Mug, 15oz",
+    "reason": "The bright neon colors and contrasting gradients pop dramatically when printed on a solid, dark surface like black ceramic mug."
+  }
+]
+[MockupGenerator] Parsed LLM suggestions: [
+  {
+    "id": 1159,
+    "title": "Matte Canvas, Stretched, 1.25\u0022",
+    "reason": "The detailed, vertical, and high-contrast aesthetic of the image is perfectly suited for display as striking, gallery-style wall art."
+  },
+  {
+    "id": 1457,
+    "title": "Unisex Heavy Faded Tee",
+    "reason": "The vivid, pop-art, synthwave graphic translates excellently onto fabric, making it a highly marketable and visually appealing piece of streetwear."
+  },
+  {
+    "id": 1152,
+    "title": "Black Mug, 15oz",
+    "reason": "The bright neon colors and contrasting gradients pop dramatically when printed on a solid, dark surface like black ceramic mug."
+  }
+]
+[MockupGenerator] LLM suggestion: blueprint 1159 – Matte Canvas, Stretched, 1.25" (reason: The detailed, vertical, and high-contrast aesthetic of the image is perfectly suited for display as striking, gallery-style wall art.)
+[MockupGenerator] Creating draft product (blueprint 1159, provider 105, 60 variants)...
+[MockupGenerator] Draft record saved → ./src/data/staging/drafts/69dda5de60953a3231060932.json
+[MockupGenerator] Done. Draft product ID: 69dda5de60953a3231060932
+[MockupGenerator] LLM suggestion: blueprint 1457 – Unisex Heavy Faded Tee (reason: The vivid, pop-art, synthwave graphic translates excellently onto fabric, making it a highly marketable and visually appealing piece of streetwear.)
+[MockupGenerator] Creating draft product (blueprint 1457, provider 34, 42 variants)...
+[MockupGenerator] Draft record saved → ./src/data/staging/drafts/69dda5e2f37f49f9dd0be83d.json
+[MockupGenerator] Done. Draft product ID: 69dda5e2f37f49f9dd0be83d
+[MockupGenerator] LLM suggestion: blueprint 1152 – Black Mug, 15oz (reason: The bright neon colors and contrasting gradients pop dramatically when printed on a solid, dark surface like black ceramic mug.)
+[MockupGenerator] Creating draft product (blueprint 1152, provider 28, 1 variants)...
+[MockupGenerator] Draft record saved → ./src/data/staging/drafts/69dda5e5553f4e77710ffa3c.json
+[MockupGenerator] Done. Draft product ID: 69dda5e5553f4e77710ffa3c
+  ✓ Draft created – product ID: 69dda5de60953a3231060932
+  Blueprint: Matte Canvas, Stretched, 1.25"
+  Reason:    The detailed, vertical, and high-contrast aesthetic of the image is perfectly suited for display as striking, gallery-style wall art.
+  ✓ Draft created – product ID: 69dda5e2f37f49f9dd0be83d
+  Blueprint: Unisex Heavy Faded Tee
+  Reason:    The vivid, pop-art, synthwave graphic translates excellently onto fabric, making it a highly marketable and visually appealing piece of streetwear.
+  ✓ Draft created – product ID: 69dda5e5553f4e77710ffa3c
+  Blueprint: Black Mug, 15oz
+  Reason:    The bright neon colors and contrasting gradients pop dramatically when printed on a solid, dark surface like black ceramic mug.
+
+[10/32] /home/rf/Desktop/Printify_prodcuct_generator/src/data/Checking/2026-04/12/c31a30a1-ca21-4465-ae09-4509f2a9b10b/c31a30a1-ca21-4465-ae09-4509f2a9b10b.png
+[MockupGenerator] Image already on Printify (ID: 69dcf309d1f372e4220c970f), skipping upload.
+[MockupGenerator] Loading blueprints from cache.
+[MockupGenerator] Sending 100 candidate blueprints to LLM (from 1359 total).
+[MockupGenerator] Querying LLM (gemma4:e4b) for blueprint recommendation with image /home/rf/Desktop/Printify_prodcuct_generator/src/data/Checking/2026-04/12/c31a30a1-ca21-4465-ae09-4509f2a9b10b/c31a30a1-ca21-4465-ae09-4509f2a9b10b.png...
+[
+{
+    "id": 1267,
+    "title": "Gloss Posters",
+    "reason": "The dramatic, high-contrast nature and intense color saturation of the image make it perfect for a glossy poster print to maximize visual impact."
+},
+{
+    "id": 1575,
+    "title": "Unisex Urban Heavy Tee",
+    "reason": "The energetic, musical theme and bold silhouette of the subject make this design an ideal fit for an artistic and statement-making t-shirt."
+},
+{
+    "id": 1191,
+    "title": "Photo Art Paper Posters",
+    "reason": "This premium poster format is suitable for preserving the dynamic composition and fine details captured in the artistic photograph."
+}
+][MockupGenerator] Raw LLM response: [
+{
+    "id": 1267,
+    "title": "Gloss Posters",
+    "reason": "The dramatic, high-contrast nature and intense color saturation of the image make it perfect for a glossy poster print to maximize visual impact."
+},
+{
+    "id": 1575,
+    "title": "Unisex Urban Heavy Tee",
+    "reason": "The energetic, musical theme and bold silhouette of the subject make this design an ideal fit for an artistic and statement-making t-shirt."
+},
+{
+    "id": 1191,
+    "title": "Photo Art Paper Posters",
+    "reason": "This premium poster format is suitable for preserving the dynamic composition and fine details captured in the artistic photograph."
+}
+]
+[MockupGenerator] Parsed LLM suggestions: [
+  {
+    "id": 1267,
+    "title": "Gloss Posters",
+    "reason": "The dramatic, high-contrast nature and intense color saturation of the image make it perfect for a glossy poster print to maximize visual impact."
+  },
+  {
+    "id": 1575,
+    "title": "Unisex Urban Heavy Tee",
+    "reason": "The energetic, musical theme and bold silhouette of the subject make this design an ideal fit for an artistic and statement-making t-shirt."
+  },
+  {
+    "id": 1191,
+    "title": "Photo Art Paper Posters",
+    "reason": "This premium poster format is suitable for preserving the dynamic composition and fine details captured in the artistic photograph."
+  }
+]
+[MockupGenerator] LLM suggestion: blueprint 1267 – Gloss Posters (reason: The dramatic, high-contrast nature and intense color saturation of the image make it perfect for a glossy poster print to maximize visual impact.)
+[MockupGenerator] Creating draft product (blueprint 1267, provider 215, 8 variants)...
+[MockupGenerator] Draft record saved → ./src/data/staging/drafts/69dda60685dbc155f60fde81.json
+[MockupGenerator] Done. Draft product ID: 69dda60685dbc155f60fde81
+[MockupGenerator] LLM suggestion: blueprint 1575 – Unisex Urban Heavy Tee (reason: The energetic, musical theme and bold silhouette of the subject make this design an ideal fit for an artistic and statement-making t-shirt.)
+[MockupGenerator] Creating draft product (blueprint 1575, provider 217, 57 variants)...
+[MockupGenerator] Draft record saved → ./src/data/staging/drafts/69dda608a46a420a100b37b0.json
+[MockupGenerator] Done. Draft product ID: 69dda608a46a420a100b37b0
+[MockupGenerator] LLM suggestion: blueprint 1191 – Photo Art Paper Posters (reason: This premium poster format is suitable for preserving the dynamic composition and fine details captured in the artistic photograph.)
+[MockupGenerator] Creating draft product (blueprint 1191, provider 27, 47 variants)...
+[MockupGenerator] Draft record saved → ./src/data/staging/drafts/69dda60af5462073b20a4cfb.json
+[MockupGenerator] Done. Draft product ID: 69dda60af5462073b20a4cfb
+  ✓ Draft created – product ID: 69dda60685dbc155f60fde81
+  Blueprint: Gloss Posters
+  Reason:    The dramatic, high-contrast nature and intense color saturation of the image make it perfect for a glossy poster print to maximize visual impact.
+  ✓ Draft created – product ID: 69dda608a46a420a100b37b0
+  Blueprint: Unisex Urban Heavy Tee
+  Reason:    The energetic, musical theme and bold silhouette of the subject make this design an ideal fit for an artistic and statement-making t-shirt.
+  ✓ Draft created – product ID: 69dda60af5462073b20a4cfb
+  Blueprint: Photo Art Paper Posters
+  Reason:    This premium poster format is suitable for preserving the dynamic composition and fine details captured in the artistic photograph.
+
+[11/32] /home/rf/Desktop/Printify_prodcuct_generator/src/data/Checking/2026-04/12/672915da-181b-4ad3-9cfe-3ff4ca0fc9e9/672915da-181b-4ad3-9cfe-3ff4ca0fc9e9.png
+[MockupGenerator] Image already on Printify (ID: 69dd1bbf122e06af2853685a), skipping upload.
+[MockupGenerator] Loading blueprints from cache.
+[MockupGenerator] Sending 100 candidate blueprints to LLM (from 1359 total).
+[MockupGenerator] Querying LLM (gemma4:e4b) for blueprint recommendation with image /home/rf/Desktop/Printify_prodcuct_generator/src/data/Checking/2026-04/12/672915da-181b-4ad3-9cfe-3ff4ca0fc9e9/672915da-181b-4ad3-9cfe-3ff4ca0fc9e9.png...
+```json
+[
+  {
+    "id": 983,
+    "title": "Matte Posters",
+    "reason": "The dramatic, highly detailed aesthetic of the cityscape is perfectly suited for a large-scale poster print, allowing the full graphic impact to be displayed."
+  },
+  {
+    "id": 1568,
+    "title": "Unisex ComfortWash® Garment-Dyed T-Shirt",
+    "reason": "The vibrant, synthwave-inspired colors and bold graphics translate excellently onto a t-shirt, making it a visually striking piece of apparel."
+  },
+  {
+    "id": 731,
+    "title": "Organic Cotton Tote Bag",
+    "reason": "The overall composition and vivid style make this image ideal for a tote bag, providing a large, canvas surface for the futuristic artwork."
+  }
+]
+```[MockupGenerator] Raw LLM response: [
+  {
+    "id": 983,
+    "title": "Matte Posters",
+    "reason": "The dramatic, highly detailed aesthetic of the cityscape is perfectly suited for a large-scale poster print, allowing the full graphic impact to be displayed."
+  },
+  {
+    "id": 1568,
+    "title": "Unisex ComfortWash® Garment-Dyed T-Shirt",
+    "reason": "The vibrant, synthwave-inspired colors and bold graphics translate excellently onto a t-shirt, making it a visually striking piece of apparel."
+  },
+  {
+    "id": 731,
+    "title": "Organic Cotton Tote Bag",
+    "reason": "The overall composition and vivid style make this image ideal for a tote bag, providing a large, canvas surface for the futuristic artwork."
+  }
+]
+[MockupGenerator] Parsed LLM suggestions: [
+  {
+    "id": 983,
+    "title": "Matte Posters",
+    "reason": "The dramatic, highly detailed aesthetic of the cityscape is perfectly suited for a large-scale poster print, allowing the full graphic impact to be displayed."
+  },
+  {
+    "id": 1568,
+    "title": "Unisex ComfortWash\u00AE Garment-Dyed T-Shirt",
+    "reason": "The vibrant, synthwave-inspired colors and bold graphics translate excellently onto a t-shirt, making it a visually striking piece of apparel."
+  },
+  {
+    "id": 731,
+    "title": "Organic Cotton Tote Bag",
+    "reason": "The overall composition and vivid style make this image ideal for a tote bag, providing a large, canvas surface for the futuristic artwork."
+  }
+]
+[MockupGenerator] LLM suggestion: blueprint 983 – Matte Posters (reason: The dramatic, highly detailed aesthetic of the cityscape is perfectly suited for a large-scale poster print, allowing the full graphic impact to be displayed.)
+[MockupGenerator] Creating draft product (blueprint 983, provider 95, 14 variants)...
+[MockupGenerator] Draft record saved → ./src/data/staging/drafts/69dda62a93413ec3650361c0.json
+[MockupGenerator] Done. Draft product ID: 69dda62a93413ec3650361c0
+[MockupGenerator] LLM suggestion: blueprint 1568 – Unisex ComfortWash® Garment-Dyed T-Shirt (reason: The vibrant, synthwave-inspired colors and bold graphics translate excellently onto a t-shirt, making it a visually striking piece of apparel.)
+[MockupGenerator] Creating draft product (blueprint 1568, provider 99, 94 variants)...
+[MockupGenerator] Draft record saved → ./src/data/staging/drafts/69dda62c6d5edb6e5d01a4ab.json
+[MockupGenerator] Done. Draft product ID: 69dda62c6d5edb6e5d01a4ab
+[MockupGenerator] LLM suggestion: blueprint 731 – Organic Cotton Tote Bag (reason: The overall composition and vivid style make this image ideal for a tote bag, providing a large, canvas surface for the futuristic artwork.)
+[MockupGenerator] Creating draft product (blueprint 731, provider 26, 3 variants)...
+[MockupGenerator] Draft record saved → ./src/data/staging/drafts/69dda632d11b503dc8093fed.json
+[MockupGenerator] Done. Draft product ID: 69dda632d11b503dc8093fed
+  ✓ Draft created – product ID: 69dda62a93413ec3650361c0
+  Blueprint: Matte Posters
+  Reason:    The dramatic, highly detailed aesthetic of the cityscape is perfectly suited for a large-scale poster print, allowing the full graphic impact to be displayed.
+  ✓ Draft created – product ID: 69dda62c6d5edb6e5d01a4ab
+  Blueprint: Unisex ComfortWash® Garment-Dyed T-Shirt
+  Reason:    The vibrant, synthwave-inspired colors and bold graphics translate excellently onto a t-shirt, making it a visually striking piece of apparel.
+  ✓ Draft created – product ID: 69dda632d11b503dc8093fed
+  Blueprint: Organic Cotton Tote Bag
+  Reason:    The overall composition and vivid style make this image ideal for a tote bag, providing a large, canvas surface for the futuristic artwork.
+
+[12/32] /home/rf/Desktop/Printify_prodcuct_generator/src/data/Checking/2026-04/13/db4e91ca-e61d-453a-a28e-aa33ce15f659/db4e91ca-e61d-453a-a28e-aa33ce15f659.png
+[MockupGenerator] Image already on Printify (ID: 69dc54397dad23bc1fdd0bf0), skipping upload.
+[MockupGenerator] Loading blueprints from cache.
+[MockupGenerator] Sending 100 candidate blueprints to LLM (from 1359 total).
+[MockupGenerator] Querying LLM (gemma4:e4b) for blueprint recommendation with image /home/rf/Desktop/Printify_prodcuct_generator/src/data/Checking/2026-04/13/db4e91ca-e61d-453a-a28e-aa33ce15f659/db4e91ca-e61d-453a-a28e-aa33ce15f659.png...
+[
+{
+    "id": 1130,
+    "title": "Framed Posters, Matte",
+    "reason": "The illustrated, narrative quality and depth of the scene make it ideal for framed wall art, preserving the full visual story."
+},
+{
+    "id": 809,
+    "title": "Square Pillow",
+    "reason": "The soft, whimsical, and comforting mood of the image is perfectly suited for a decorative, cozy accent piece for home decor."
+},
+{
+    "id": 1920,
+    "title": "Eco Tote Bag",
+    "reason": "This large canvas product provides a wearable surface area that can showcase the entire storybook composition beautifully."
+}
+][MockupGenerator] Raw LLM response: [
+{
+    "id": 1130,
+    "title": "Framed Posters, Matte",
+    "reason": "The illustrated, narrative quality and depth of the scene make it ideal for framed wall art, preserving the full visual story."
+},
+{
+    "id": 809,
+    "title": "Square Pillow",
+    "reason": "The soft, whimsical, and comforting mood of the image is perfectly suited for a decorative, cozy accent piece for home decor."
+},
+{
+    "id": 1920,
+    "title": "Eco Tote Bag",
+    "reason": "This large canvas product provides a wearable surface area that can showcase the entire storybook composition beautifully."
+}
+]
+[MockupGenerator] Parsed LLM suggestions: [
+  {
+    "id": 1130,
+    "title": "Framed Posters, Matte",
+    "reason": "The illustrated, narrative quality and depth of the scene make it ideal for framed wall art, preserving the full visual story."
+  },
+  {
+    "id": 809,
+    "title": "Square Pillow",
+    "reason": "The soft, whimsical, and comforting mood of the image is perfectly suited for a decorative, cozy accent piece for home decor."
+  },
+  {
+    "id": 1920,
+    "title": "Eco Tote Bag",
+    "reason": "This large canvas product provides a wearable surface area that can showcase the entire storybook composition beautifully."
+  }
+]
+[MockupGenerator] LLM suggestion: blueprint 1130 – Framed Posters, Matte (reason: The illustrated, narrative quality and depth of the scene make it ideal for framed wall art, preserving the full visual story.)
+[MockupGenerator] Creating draft product (blueprint 1130, provider 66, 6 variants)...
+[MockupGenerator] Draft record saved → ./src/data/staging/drafts/69dda6509c9e6f6d5406d905.json
+[MockupGenerator] Done. Draft product ID: 69dda6509c9e6f6d5406d905
+[MockupGenerator] LLM suggestion: blueprint 809 – Square Pillow (reason: The soft, whimsical, and comforting mood of the image is perfectly suited for a decorative, cozy accent piece for home decor.)
+[MockupGenerator] Creating draft product (blueprint 809, provider 72, 3 variants)...
+[MockupGenerator] Draft record saved → ./src/data/staging/drafts/69dda6546d5edb6e5d01a4b1.json
+[MockupGenerator] Done. Draft product ID: 69dda6546d5edb6e5d01a4b1
+[MockupGenerator] LLM suggestion: blueprint 1920 – Eco Tote Bag (reason: This large canvas product provides a wearable surface area that can showcase the entire storybook composition beautifully.)
+[MockupGenerator] Creating draft product (blueprint 1920, provider 99, 1 variants)...
+[MockupGenerator] Draft record saved → ./src/data/staging/drafts/69dda657f7c91c5ba40e1ea9.json
+[MockupGenerator] Done. Draft product ID: 69dda657f7c91c5ba40e1ea9
+  ✓ Draft created – product ID: 69dda6509c9e6f6d5406d905
+  Blueprint: Framed Posters, Matte
+  Reason:    The illustrated, narrative quality and depth of the scene make it ideal for framed wall art, preserving the full visual story.
+  ✓ Draft created – product ID: 69dda6546d5edb6e5d01a4b1
+  Blueprint: Square Pillow
+  Reason:    The soft, whimsical, and comforting mood of the image is perfectly suited for a decorative, cozy accent piece for home decor.
+  ✓ Draft created – product ID: 69dda657f7c91c5ba40e1ea9
+  Blueprint: Eco Tote Bag
+  Reason:    This large canvas product provides a wearable surface area that can showcase the entire storybook composition beautifully.
+
+[13/32] /home/rf/Desktop/Printify_prodcuct_generator/src/data/Checking/2026-04/13/fd16037f-bfc0-4116-96ee-4f51a92c7c4c/fd16037f-bfc0-4116-96ee-4f51a92c7c4c.png
+[MockupGenerator] Image already on Printify (ID: 69dd954899d5ce0476a2d476), skipping upload.
+[MockupGenerator] Loading blueprints from cache.
+[MockupGenerator] Sending 100 candidate blueprints to LLM (from 1359 total).
+[MockupGenerator] Querying LLM (gemma4:e4b) for blueprint recommendation with image /home/rf/Desktop/Printify_prodcuct_generator/src/data/Checking/2026-04/13/fd16037f-bfc0-4116-96ee-4f51a92c7c4c/fd16037f-bfc0-4116-96ee-4f51a92c7c4c.png...
+[
+{
+    "id": 540,
+    "title": "Framed Vertical Poster",
+    "reason": "The dramatic, vertical composition of the skyline makes this format the most natural and impactful choice for display."
+},
+{
+    "id": 1033,
+    "title": "Photopaper Posters",
+    "reason": "This product is ideal for reproducing the image's vivid, retro-futuristic aesthetic and detailed graphic art style as high-quality wall decor."
+},
+{
+    "id": 706,
+    "title": "Unisex Garment-Dyed T-shirt",
+    "reason": "The vibrant colors and strong graphic lines translate well onto apparel, making it a marketable piece of urban streetwear."
+}
+][MockupGenerator] Raw LLM response: [
+{
+    "id": 540,
+    "title": "Framed Vertical Poster",
+    "reason": "The dramatic, vertical composition of the skyline makes this format the most natural and impactful choice for display."
+},
+{
+    "id": 1033,
+    "title": "Photopaper Posters",
+    "reason": "This product is ideal for reproducing the image's vivid, retro-futuristic aesthetic and detailed graphic art style as high-quality wall decor."
+},
+{
+    "id": 706,
+    "title": "Unisex Garment-Dyed T-shirt",
+    "reason": "The vibrant colors and strong graphic lines translate well onto apparel, making it a marketable piece of urban streetwear."
+}
+]
+[MockupGenerator] Parsed LLM suggestions: [
+  {
+    "id": 540,
+    "title": "Framed Vertical Poster",
+    "reason": "The dramatic, vertical composition of the skyline makes this format the most natural and impactful choice for display."
+  },
+  {
+    "id": 1033,
+    "title": "Photopaper Posters",
+    "reason": "This product is ideal for reproducing the image\u0027s vivid, retro-futuristic aesthetic and detailed graphic art style as high-quality wall decor."
+  },
+  {
+    "id": 706,
+    "title": "Unisex Garment-Dyed T-shirt",
+    "reason": "The vibrant colors and strong graphic lines translate well onto apparel, making it a marketable piece of urban streetwear."
+  }
+]
+[MockupGenerator] LLM suggestion: blueprint 540 – Framed Vertical Poster (reason: The dramatic, vertical composition of the skyline makes this format the most natural and impactful choice for display.)
+[MockupGenerator] Creating draft product (blueprint 540, provider 99, 10 variants)...
+[MockupGenerator] Draft record saved → ./src/data/staging/drafts/69dda6776d5edb6e5d01a4b7.json
+[MockupGenerator] Done. Draft product ID: 69dda6776d5edb6e5d01a4b7
+[MockupGenerator] LLM suggestion: blueprint 1033 – Photopaper Posters (reason: This product is ideal for reproducing the image's vivid, retro-futuristic aesthetic and detailed graphic art style as high-quality wall decor.)
+[MockupGenerator] Creating draft product (blueprint 1033, provider 220, 40 variants)...
+[MockupGenerator] Draft record saved → ./src/data/staging/drafts/69dda679d70b2580a00c958f.json
+[MockupGenerator] Done. Draft product ID: 69dda679d70b2580a00c958f
+[MockupGenerator] LLM suggestion: blueprint 706 – Unisex Garment-Dyed T-shirt (reason: The vibrant colors and strong graphic lines translate well onto apparel, making it a marketable piece of urban streetwear.)
+[MockupGenerator] Creating draft product (blueprint 706, provider 3, 44 variants)...
+[MockupGenerator] Draft record saved → ./src/data/staging/drafts/69dda67c64a3dd1cda0f739f.json
+[MockupGenerator] Done. Draft product ID: 69dda67c64a3dd1cda0f739f
+  ✓ Draft created – product ID: 69dda6776d5edb6e5d01a4b7
+  Blueprint: Framed Vertical Poster
+  Reason:    The dramatic, vertical composition of the skyline makes this format the most natural and impactful choice for display.
+  ✓ Draft created – product ID: 69dda679d70b2580a00c958f
+  Blueprint: Photopaper Posters
+  Reason:    This product is ideal for reproducing the image's vivid, retro-futuristic aesthetic and detailed graphic art style as high-quality wall decor.
+  ✓ Draft created – product ID: 69dda67c64a3dd1cda0f739f
+  Blueprint: Unisex Garment-Dyed T-shirt
+  Reason:    The vibrant colors and strong graphic lines translate well onto apparel, making it a marketable piece of urban streetwear.
+
+[14/32] /home/rf/Desktop/Printify_prodcuct_generator/src/data/Checking/2026-04/13/a79eab2b-14a0-47f6-a81f-a2dac6ff9288/a79eab2b-14a0-47f6-a81f-a2dac6ff9288.png
+[MockupGenerator] Image already on Printify (ID: 69dd0f98c2b455a7f87b6c95), skipping upload.
+[MockupGenerator] Loading blueprints from cache.
+[MockupGenerator] Sending 100 candidate blueprints to LLM (from 1359 total).
+[MockupGenerator] Querying LLM (gemma4:e4b) for blueprint recommendation with image /home/rf/Desktop/Printify_prodcuct_generator/src/data/Checking/2026-04/13/a79eab2b-14a0-47f6-a81f-a2dac6ff9288/a79eab2b-14a0-47f6-a81f-a2dac6ff9288.png...
+[
+{
+    "id": 554,
+    "title": "Paper Poster",
+    "reason": "The highly stylized and graphic nature of the portrait makes it an ideal subject for showcasing as striking, gallery-worthy wall art."
+},
+{
+    "id": 279,
+    "title": "Women's Cut & Sew Tee (AOP)",
+    "reason": "The modern, pop-art aesthetic and strong illustration style translate perfectly onto contemporary, fashion-forward apparel."
+},
+{
+    "id": 478,
+    "title": "Ceramic Mug, (11oz, 15oz)",
+    "reason": "The bold colors and striking portrait make for a highly visible and fun graphic design that would look fantastic on a kitchen accessory."
+}
+][MockupGenerator] Raw LLM response: [
+{
+    "id": 554,
+    "title": "Paper Poster",
+    "reason": "The highly stylized and graphic nature of the portrait makes it an ideal subject for showcasing as striking, gallery-worthy wall art."
+},
+{
+    "id": 279,
+    "title": "Women's Cut & Sew Tee (AOP)",
+    "reason": "The modern, pop-art aesthetic and strong illustration style translate perfectly onto contemporary, fashion-forward apparel."
+},
+{
+    "id": 478,
+    "title": "Ceramic Mug, (11oz, 15oz)",
+    "reason": "The bold colors and striking portrait make for a highly visible and fun graphic design that would look fantastic on a kitchen accessory."
+}
+]
+[MockupGenerator] Parsed LLM suggestions: [
+  {
+    "id": 554,
+    "title": "Paper Poster",
+    "reason": "The highly stylized and graphic nature of the portrait makes it an ideal subject for showcasing as striking, gallery-worthy wall art."
+  },
+  {
+    "id": 279,
+    "title": "Women\u0027s Cut \u0026 Sew Tee (AOP)",
+    "reason": "The modern, pop-art aesthetic and strong illustration style translate perfectly onto contemporary, fashion-forward apparel."
+  },
+  {
+    "id": 478,
+    "title": "Ceramic Mug, (11oz, 15oz)",
+    "reason": "The bold colors and striking portrait make for a highly visible and fun graphic design that would look fantastic on a kitchen accessory."
+  }
+]
+[MockupGenerator] LLM suggestion: blueprint 554 – Paper Poster (reason: The highly stylized and graphic nature of the portrait makes it an ideal subject for showcasing as striking, gallery-worthy wall art.)
+[MockupGenerator] Creating draft product (blueprint 554, provider 69, 12 variants)...
+[MockupGenerator] Draft record saved → ./src/data/staging/drafts/69dda69e553f4e77710ffa57.json
+[MockupGenerator] Done. Draft product ID: 69dda69e553f4e77710ffa57
+[MockupGenerator] LLM suggestion: blueprint 279 – Women's Cut & Sew Tee (AOP) (reason: The modern, pop-art aesthetic and strong illustration style translate perfectly onto contemporary, fashion-forward apparel.)
+[MockupGenerator] Creating draft product (blueprint 279, provider 10, 24 variants)...
+[MockupGenerator] Draft record saved → ./src/data/staging/drafts/69dda6a2a46a420a100b37bf.json
+[MockupGenerator] Done. Draft product ID: 69dda6a2a46a420a100b37bf
+[MockupGenerator] LLM suggestion: blueprint 478 – Ceramic Mug, (11oz, 15oz) (reason: The bold colors and striking portrait make for a highly visible and fun graphic design that would look fantastic on a kitchen accessory.)
+[MockupGenerator] Creating draft product (blueprint 478, provider 99, 2 variants)...
+[MockupGenerator] Draft record saved → ./src/data/staging/drafts/69dda6a560953a3231060952.json
+[MockupGenerator] Done. Draft product ID: 69dda6a560953a3231060952
+  ✓ Draft created – product ID: 69dda69e553f4e77710ffa57
+  Blueprint: Paper Poster
+  Reason:    The highly stylized and graphic nature of the portrait makes it an ideal subject for showcasing as striking, gallery-worthy wall art.
+  ✓ Draft created – product ID: 69dda6a2a46a420a100b37bf
+  Blueprint: Women's Cut & Sew Tee (AOP)
+  Reason:    The modern, pop-art aesthetic and strong illustration style translate perfectly onto contemporary, fashion-forward apparel.
+  ✓ Draft created – product ID: 69dda6a560953a3231060952
+  Blueprint: Ceramic Mug, (11oz, 15oz)
+  Reason:    The bold colors and striking portrait make for a highly visible and fun graphic design that would look fantastic on a kitchen accessory.
+
+[15/32] /home/rf/Desktop/Printify_prodcuct_generator/src/data/Checking/2026-04/13/41778682-6712-4561-8afa-ec468f0faa2e/41778682-6712-4561-8afa-ec468f0faa2e.png
+[MockupGenerator] Image already on Printify (ID: 69dc521996d4f5e1bcc23eae), skipping upload.
+[MockupGenerator] Loading blueprints from cache.
+[MockupGenerator] Sending 100 candidate blueprints to LLM (from 1359 total).
+[MockupGenerator] Querying LLM (gemma4:e4b) for blueprint recommendation with image /home/rf/Desktop/Printify_prodcuct_generator/src/data/Checking/2026-04/13/41778682-6712-4561-8afa-ec468f0faa2e/41778682-6712-4561-8afa-ec468f0faa2e.png...
+```json
+[
+  {
+    "id": 829,
+    "title": "Satin Posters (300gsm)",
+    "reason": "The highly detailed and atmospheric nature of the cityscape makes a poster the ideal medium to showcase the full composition and artistic scope."
+  },
+  {
+    "id": 827,
+    "title": "White Ceramic Mug, 11oz and 15oz",
+    "reason": "The intricate, stacked elements and vertical composition of the steampunk architecture translate beautifully and dramatically onto the curved surface of a mug."
+  },
+  {
+    "id": 1133,
+    "title": "Velveteen Microfiber Blanket (Two-sided print)",
+    "reason": "The rich, antique, and atmospheric quality of the watercolor illustration lends itself perfectly to a cozy and decorative throw blanket."
+  }
+]
+```[MockupGenerator] Raw LLM response: [
+  {
+    "id": 829,
+    "title": "Satin Posters (300gsm)",
+    "reason": "The highly detailed and atmospheric nature of the cityscape makes a poster the ideal medium to showcase the full composition and artistic scope."
+  },
+  {
+    "id": 827,
+    "title": "White Ceramic Mug, 11oz and 15oz",
+    "reason": "The intricate, stacked elements and vertical composition of the steampunk architecture translate beautifully and dramatically onto the curved surface of a mug."
+  },
+  {
+    "id": 1133,
+    "title": "Velveteen Microfiber Blanket (Two-sided print)",
+    "reason": "The rich, antique, and atmospheric quality of the watercolor illustration lends itself perfectly to a cozy and decorative throw blanket."
+  }
+]
+[MockupGenerator] Parsed LLM suggestions: [
+  {
+    "id": 829,
+    "title": "Satin Posters (300gsm)",
+    "reason": "The highly detailed and atmospheric nature of the cityscape makes a poster the ideal medium to showcase the full composition and artistic scope."
+  },
+  {
+    "id": 827,
+    "title": "White Ceramic Mug, 11oz and 15oz",
+    "reason": "The intricate, stacked elements and vertical composition of the steampunk architecture translate beautifully and dramatically onto the curved surface of a mug."
+  },
+  {
+    "id": 1133,
+    "title": "Velveteen Microfiber Blanket (Two-sided print)",
+    "reason": "The rich, antique, and atmospheric quality of the watercolor illustration lends itself perfectly to a cozy and decorative throw blanket."
+  }
+]
+[MockupGenerator] LLM suggestion: blueprint 829 – Satin Posters (300gsm) (reason: The highly detailed and atmospheric nature of the cityscape makes a poster the ideal medium to showcase the full composition and artistic scope.)
+[MockupGenerator] Creating draft product (blueprint 829, provider 2, 26 variants)...
+[MockupGenerator] Draft record saved → ./src/data/staging/drafts/69dda6c59c9e6f6d5406d91a.json
+[MockupGenerator] Done. Draft product ID: 69dda6c59c9e6f6d5406d91a
+[MockupGenerator] LLM suggestion: blueprint 827 – White Ceramic Mug, 11oz and 15oz (reason: The intricate, stacked elements and vertical composition of the steampunk architecture translate beautifully and dramatically onto the curved surface of a mug.)
+[MockupGenerator] Creating draft product (blueprint 827, provider 95, 2 variants)...
+[MockupGenerator] Draft record saved → ./src/data/staging/drafts/69dda6ced11b503dc8094006.json
+[MockupGenerator] Done. Draft product ID: 69dda6ced11b503dc8094006
+[MockupGenerator] LLM suggestion: blueprint 1133 – Velveteen Microfiber Blanket (Two-sided print) (reason: The rich, antique, and atmospheric quality of the watercolor illustration lends itself perfectly to a cozy and decorative throw blanket.)
+[MockupGenerator] Creating draft product (blueprint 1133, provider 92, 3 variants)...
+[MockupGenerator] Draft record saved → ./src/data/staging/drafts/69dda6d5756fc8a8b708b82d.json
+[MockupGenerator] Done. Draft product ID: 69dda6d5756fc8a8b708b82d
+  ✓ Draft created – product ID: 69dda6c59c9e6f6d5406d91a
+  Blueprint: Satin Posters (300gsm)
+  Reason:    The highly detailed and atmospheric nature of the cityscape makes a poster the ideal medium to showcase the full composition and artistic scope.
+  ✓ Draft created – product ID: 69dda6ced11b503dc8094006
+  Blueprint: White Ceramic Mug, 11oz and 15oz
+  Reason:    The intricate, stacked elements and vertical composition of the steampunk architecture translate beautifully and dramatically onto the curved surface of a mug.
+  ✓ Draft created – product ID: 69dda6d5756fc8a8b708b82d
+  Blueprint: Velveteen Microfiber Blanket (Two-sided print)
+  Reason:    The rich, antique, and atmospheric quality of the watercolor illustration lends itself perfectly to a cozy and decorative throw blanket.
+
+[16/32] /home/rf/Desktop/Printify_prodcuct_generator/src/data/Checking/2026-04/13/cbe7df63-6761-4968-8bbe-a932a2e0e690/cbe7df63-6761-4968-8bbe-a932a2e0e690.png
+[MockupGenerator] Image already on Printify (ID: 69dc5985e3f4f962b17dbc67), skipping upload.
+[MockupGenerator] Loading blueprints from cache.
+[MockupGenerator] Sending 100 candidate blueprints to LLM (from 1359 total).
+[MockupGenerator] Querying LLM (gemma4:e4b) for blueprint recommendation with image /home/rf/Desktop/Printify_prodcuct_generator/src/data/Checking/2026-04/13/cbe7df63-6761-4968-8bbe-a932a2e0e690/cbe7df63-6761-4968-8bbe-a932a2e0e690.png...
+[
+{
+    "id": 493,
+    "title": "Horizontal Framed Poster",
+    "reason": "The wide, panoramic composition of the vibrant skyline is perfectly suited for a horizontal poster format, maximizing the visual impact of the art."
+},
+{
+    "id": 804,
+    "title": "Fine Art Posters",
+    "reason": "This high-quality print format allows the image's strong colors and stylized architectural elements to be showcased as striking wall art."
+},
+{
+    "id": 1612,
+    "title": "Unisex Ultra Heavy Cotton Box Tee",
+    "reason": "The bold, geometric, and retro-synthwave aesthetic of the image makes it an excellent, wearable graphic piece for a streetwear box tee."
+}
+][MockupGenerator] Raw LLM response: [
+{
+    "id": 493,
+    "title": "Horizontal Framed Poster",
+    "reason": "The wide, panoramic composition of the vibrant skyline is perfectly suited for a horizontal poster format, maximizing the visual impact of the art."
+},
+{
+    "id": 804,
+    "title": "Fine Art Posters",
+    "reason": "This high-quality print format allows the image's strong colors and stylized architectural elements to be showcased as striking wall art."
+},
+{
+    "id": 1612,
+    "title": "Unisex Ultra Heavy Cotton Box Tee",
+    "reason": "The bold, geometric, and retro-synthwave aesthetic of the image makes it an excellent, wearable graphic piece for a streetwear box tee."
+}
+]
+[MockupGenerator] Parsed LLM suggestions: [
+  {
+    "id": 493,
+    "title": "Horizontal Framed Poster",
+    "reason": "The wide, panoramic composition of the vibrant skyline is perfectly suited for a horizontal poster format, maximizing the visual impact of the art."
+  },
+  {
+    "id": 804,
+    "title": "Fine Art Posters",
+    "reason": "This high-quality print format allows the image\u0027s strong colors and stylized architectural elements to be showcased as striking wall art."
+  },
+  {
+    "id": 1612,
+    "title": "Unisex Ultra Heavy Cotton Box Tee",
+    "reason": "The bold, geometric, and retro-synthwave aesthetic of the image makes it an excellent, wearable graphic piece for a streetwear box tee."
+  }
+]
+[MockupGenerator] LLM suggestion: blueprint 493 – Horizontal Framed Poster (reason: The wide, panoramic composition of the vibrant skyline is perfectly suited for a horizontal poster format, maximizing the visual impact of the art.)
+[MockupGenerator] Creating draft product (blueprint 493, provider 36, 14 variants)...
+[MockupGenerator] Draft record saved → ./src/data/staging/drafts/69dda6f5f37f49f9dd0be858.json
+[MockupGenerator] Done. Draft product ID: 69dda6f5f37f49f9dd0be858
+[MockupGenerator] LLM suggestion: blueprint 804 – Fine Art Posters (reason: This high-quality print format allows the image's strong colors and stylized architectural elements to be showcased as striking wall art.)
+[MockupGenerator] Creating draft product (blueprint 804, provider 72, 42 variants)...

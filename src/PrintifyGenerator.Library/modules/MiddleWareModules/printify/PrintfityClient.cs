@@ -99,6 +99,88 @@ public class PrintifyClient
         return await GetAsync<Product>($"/shops/{shopId}/products/{productId}.json");
     }
 
+    public Task<ProductVariantPriceBreakdown> GetProductVariantPriceBreakdownAsync(
+        int shopId,
+        string productId,
+        int variantId,
+        Address addressTo,
+        int quantity = 1)
+    {
+        return GetProductVariantPriceBreakdownAsync(shopId, new ProductVariantPriceBreakdownRequest
+        {
+            ProductId = productId,
+            VariantId = variantId,
+            Quantity = quantity,
+            AddressTo = addressTo
+        });
+    }
+
+    public async Task<ProductVariantPriceBreakdown> GetProductVariantPriceBreakdownAsync(
+        int shopId,
+        ProductVariantPriceBreakdownRequest request)
+    {
+        if (request is null)
+            throw new ArgumentNullException(nameof(request));
+        if (request.AddressTo is null)
+            throw new ArgumentNullException(nameof(request.AddressTo));
+        if (shopId <= 0)
+            throw new ArgumentOutOfRangeException(nameof(shopId), "Shop ID must be greater than zero.");
+        if (string.IsNullOrWhiteSpace(request.ProductId))
+            throw new ArgumentException("Product ID is required.", nameof(request));
+        if (request.VariantId <= 0)
+            throw new ArgumentOutOfRangeException(nameof(request), "Variant ID must be greater than zero.");
+        if (request.Quantity <= 0)
+            throw new ArgumentOutOfRangeException(nameof(request), "Quantity must be greater than zero.");
+        if (string.IsNullOrWhiteSpace(request.AddressTo.Country))
+            throw new ArgumentException("Destination country is required.", nameof(request));
+
+        var product = await GetProductAsync(shopId, request.ProductId);
+        var variant = product.Variants.Find(candidate => candidate.Id == request.VariantId);
+
+        if (variant is null)
+            throw new InvalidOperationException($"Variant {request.VariantId} was not found on product {request.ProductId}.");
+
+        var shipping = await CalculateShippingAsync(shopId, new ShippingCostRequest
+        {
+            LineItems = new List<SubmitOrderLineItem>
+            {
+                new()
+                {
+                    ProductId = request.ProductId,
+                    VariantId = request.VariantId,
+                    Quantity = request.Quantity
+                }
+            },
+            AddressTo = request.AddressTo
+        });
+
+        var totalRetailPrice = checked(variant.Price * request.Quantity);
+        var totalProductionCost = checked(variant.Cost * request.Quantity);
+
+        return new ProductVariantPriceBreakdown
+        {
+            ShopId = shopId,
+            ProductId = product.Id,
+            ProductTitle = product.Title,
+            BlueprintId = product.BlueprintId,
+            PrintProviderId = product.PrintProviderId,
+            VariantId = variant.Id,
+            VariantTitle = variant.Title,
+            Sku = variant.Sku,
+            Quantity = request.Quantity,
+            IsEnabled = variant.IsEnabled,
+            IsAvailable = variant.IsAvailable,
+            DestinationCountry = request.AddressTo.Country,
+            DestinationRegion = request.AddressTo.Region,
+            DestinationZip = request.AddressTo.Zip,
+            UnitRetailPrice = variant.Price,
+            UnitProductionCost = variant.Cost,
+            TotalRetailPrice = totalRetailPrice,
+            TotalProductionCost = totalProductionCost,
+            ShippingOptions = BuildShippingOptions(shipping, totalProductionCost)
+        };
+    }
+
     public async Task<Product> CreateProductAsync(int shopId, CreateProductRequest request)
     {
         return await PostAsync<Product>($"/shops/{shopId}/products.json", request);
@@ -337,6 +419,33 @@ public class PrintifyClient
             var body = await response.Content.ReadAsStringAsync();
             throw new PrintifyApiException((int)response.StatusCode, body);
         }
+    }
+
+    private static List<ProductVariantShippingOptionBreakdown> BuildShippingOptions(
+        ShippingCostResponse shipping,
+        int totalProductionCost)
+    {
+        return new List<ProductVariantShippingOptionBreakdown>
+        {
+            CreateShippingOption("standard", shipping.Standard, totalProductionCost),
+            CreateShippingOption("express", shipping.Express, totalProductionCost),
+            CreateShippingOption("priority", shipping.Priority, totalProductionCost),
+            CreateShippingOption("printify_express", shipping.PrintifyExpress, totalProductionCost),
+            CreateShippingOption("economy", shipping.Economy, totalProductionCost)
+        };
+    }
+
+    private static ProductVariantShippingOptionBreakdown CreateShippingOption(
+        string method,
+        int shippingCost,
+        int totalProductionCost)
+    {
+        return new ProductVariantShippingOptionBreakdown
+        {
+            Method = method,
+            ShippingCost = shippingCost,
+            TotalCost = checked(totalProductionCost + shippingCost)
+        };
     }
 }
 
