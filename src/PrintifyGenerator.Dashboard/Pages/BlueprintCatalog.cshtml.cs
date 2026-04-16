@@ -1,12 +1,19 @@
 using System.Globalization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using PrintifyGenerator.Dashboard.Models;
 using PrintifyGenerator.Dashboard.Services;
 
 namespace PrintifyGenerator.Dashboard.Pages;
 
 public sealed class BlueprintCatalogModel : PageModel
 {
+    private const int BlueprintPageSize = 12;
+    public const string SortByName = "name";
+    public const string SortByBlueprintId = "blueprint-id";
+    public const string SortByMinimumProductionCost = "minimum-production-cost";
+    public const string SortByMinimumTotalPrice = "minimum-total-price";
+
     private readonly BlueprintCatalogService _blueprintCatalogService;
 
     public BlueprintCatalogModel(BlueprintCatalogService blueprintCatalogService)
@@ -23,6 +30,12 @@ public sealed class BlueprintCatalogModel : PageModel
     [BindProperty(SupportsGet = true)]
     public bool EnabledOnly { get; set; }
 
+    [BindProperty(SupportsGet = true, Name = "sortBy")]
+    public string SortBy { get; set; } = SortByName;
+
+    [BindProperty(SupportsGet = true, Name = "pageNumber")]
+    public int PageNumber { get; set; } = 1;
+
     [TempData]
     public string? FlashMessage { get; set; }
 
@@ -30,6 +43,10 @@ public sealed class BlueprintCatalogModel : PageModel
     public string? FlashErrorMessage { get; set; }
 
     public BlueprintCatalogSnapshot Snapshot { get; private set; } = null!;
+
+    public PrintifyGenerator.Dashboard.Models.PaginationState Pagination { get; private set; } = PrintifyGenerator.Dashboard.Models.PaginationState.Empty;
+
+    public IReadOnlyList<BlueprintCatalogBlueprintNode> VisibleBlueprints { get; private set; } = Array.Empty<BlueprintCatalogBlueprintNode>();
 
     public void OnGet()
     {
@@ -40,6 +57,8 @@ public sealed class BlueprintCatalogModel : PageModel
         string countryCode,
         string? searchTerm,
         bool enabledOnly,
+        string? sortBy,
+        int pageNumber,
         int blueprintId,
         bool isEnabled)
     {
@@ -55,13 +74,15 @@ public sealed class BlueprintCatalogModel : PageModel
             FlashErrorMessage = ex.Message;
         }
 
-        return RedirectToPage(new { countryCode, searchTerm, enabledOnly });
+        return RedirectToPage(new { countryCode, searchTerm, enabledOnly, sortBy = NormalizeSortBy(sortBy), pageNumber = NormalizePageNumber(pageNumber) });
     }
 
     public IActionResult OnPostSetVariantMode(
         string countryCode,
         string? searchTerm,
         bool enabledOnly,
+        string? sortBy,
+        int pageNumber,
         int blueprintId,
         int providerId,
         int variantId,
@@ -77,13 +98,15 @@ public sealed class BlueprintCatalogModel : PageModel
             FlashErrorMessage = ex.Message;
         }
 
-        return RedirectToPage(new { countryCode, searchTerm, enabledOnly });
+        return RedirectToPage(new { countryCode, searchTerm, enabledOnly, sortBy = NormalizeSortBy(sortBy), pageNumber = NormalizePageNumber(pageNumber) });
     }
 
     public IActionResult OnPostSetProviderEnabled(
         string countryCode,
         string? searchTerm,
         bool enabledOnly,
+        string? sortBy,
+        int pageNumber,
         int blueprintId,
         int providerId,
         bool isEnabled)
@@ -100,13 +123,15 @@ public sealed class BlueprintCatalogModel : PageModel
             FlashErrorMessage = ex.Message;
         }
 
-        return RedirectToPage(new { countryCode, searchTerm, enabledOnly });
+        return RedirectToPage(new { countryCode, searchTerm, enabledOnly, sortBy = NormalizeSortBy(sortBy), pageNumber = NormalizePageNumber(pageNumber) });
     }
 
     public async Task<IActionResult> OnPostRefreshBlueprintPricingAsync(
         string countryCode,
         string? searchTerm,
         bool enabledOnly,
+        string? sortBy,
+        int pageNumber,
         int blueprintId)
     {
         try
@@ -123,13 +148,14 @@ public sealed class BlueprintCatalogModel : PageModel
             FlashErrorMessage = ex.Message;
         }
 
-        return RedirectToPage(new { countryCode, searchTerm, enabledOnly });
+        return RedirectToPage(new { countryCode, searchTerm, enabledOnly, sortBy = NormalizeSortBy(sortBy), pageNumber = NormalizePageNumber(pageNumber) });
     }
 
     public async Task<IActionResult> OnPostRefreshEnabledPricingAsync(
         string countryCode,
         string? searchTerm,
-        bool enabledOnly)
+        bool enabledOnly,
+        string? sortBy)
     {
         try
         {
@@ -145,7 +171,7 @@ public sealed class BlueprintCatalogModel : PageModel
             FlashErrorMessage = ex.Message;
         }
 
-        return RedirectToPage(new { countryCode, searchTerm, enabledOnly });
+        return RedirectToPage(new { countryCode, searchTerm, enabledOnly, sortBy = NormalizeSortBy(sortBy), pageNumber = PageNumber });
     }
 
     public static string FormatMoney(int? minorUnits, string? currency)
@@ -187,6 +213,36 @@ public sealed class BlueprintCatalogModel : PageModel
             : currency.Trim().ToUpperInvariant();
 
         return $"{normalizedCurrency} {(values[0] / 100m).ToString("0.00", CultureInfo.InvariantCulture)}-{(values[^1] / 100m).ToString("0.00", CultureInfo.InvariantCulture)}";
+    }
+
+    public static string FormatBlueprintProductionRange(BlueprintCatalogBlueprintNode blueprint)
+    {
+        var variants = blueprint.Providers
+            .SelectMany(provider => provider.Variants)
+            .ToList();
+        var currency = variants
+            .Select(variant => variant.ProductionCurrency)
+            .FirstOrDefault(value => !string.IsNullOrWhiteSpace(value))
+            ?? blueprint.Providers
+                .Select(provider => provider.ShippingCurrency)
+                .FirstOrDefault(value => !string.IsNullOrWhiteSpace(value));
+
+        return FormatMoneyRange(variants.Select(variant => variant.ProductionCost), currency);
+    }
+
+    public static string FormatBlueprintDeliveryRange(BlueprintCatalogBlueprintNode blueprint)
+    {
+        var variants = blueprint.Providers
+            .SelectMany(provider => provider.Variants)
+            .ToList();
+        var currency = variants
+            .Select(ResolveDisplayedDeliveryCurrency)
+            .FirstOrDefault(value => !string.IsNullOrWhiteSpace(value))
+            ?? blueprint.Providers
+                .Select(provider => provider.ShippingCurrency)
+                .FirstOrDefault(value => !string.IsNullOrWhiteSpace(value));
+
+        return FormatMoneyRange(variants.Select(ResolveDisplayedDeliveryCost), currency);
     }
 
     public static int? ResolveDisplayedDeliveryCost(BlueprintCatalogVariantNode variant)
@@ -236,13 +292,91 @@ public sealed class BlueprintCatalogModel : PageModel
     private void LoadSnapshot()
     {
         Snapshot = _blueprintCatalogService.LoadSnapshot(CountryCode, SearchTerm, EnabledOnly);
+        SortBy = NormalizeSortBy(SortBy);
+        var orderedBlueprints = SortBlueprints(Snapshot.Blueprints, SortBy).ToList();
+        Pagination = PrintifyGenerator.Dashboard.Models.PaginationState.Create(PageNumber, BlueprintPageSize, orderedBlueprints.Count);
+        VisibleBlueprints = orderedBlueprints
+            .Skip(Pagination.SkipCount)
+            .Take(Pagination.PageSize)
+            .ToList();
         CountryCode = Snapshot.CountryCode;
         SearchTerm = Snapshot.SearchTerm;
         EnabledOnly = Snapshot.EnabledOnly;
+        PageNumber = Pagination.CurrentPage;
     }
 
     private static string NormalizeCountryCode(string? countryCode)
     {
         return BlueprintCountrySettingsStore.NormalizeCountryCode(countryCode);
+    }
+
+    private static int NormalizePageNumber(int page)
+    {
+        return page <= 0 ? 1 : page;
+    }
+
+    private static string NormalizeSortBy(string? sortBy)
+    {
+        return sortBy?.Trim().ToLowerInvariant() switch
+        {
+            SortByBlueprintId => SortByBlueprintId,
+            SortByMinimumProductionCost => SortByMinimumProductionCost,
+            SortByMinimumTotalPrice => SortByMinimumTotalPrice,
+            _ => SortByName
+        };
+    }
+
+    private static IEnumerable<BlueprintCatalogBlueprintNode> SortBlueprints(
+        IEnumerable<BlueprintCatalogBlueprintNode> blueprints,
+        string sortBy)
+    {
+        return NormalizeSortBy(sortBy) switch
+        {
+            SortByBlueprintId => blueprints
+                .OrderBy(blueprint => blueprint.BlueprintId)
+                .ThenBy(blueprint => blueprint.Title, StringComparer.OrdinalIgnoreCase),
+            SortByMinimumProductionCost => blueprints
+                .OrderBy(blueprint => ResolveMinimumProductionCost(blueprint) ?? int.MaxValue)
+                .ThenBy(blueprint => blueprint.Title, StringComparer.OrdinalIgnoreCase)
+                .ThenBy(blueprint => blueprint.BlueprintId),
+            SortByMinimumTotalPrice => blueprints
+                .OrderBy(blueprint => ResolveMinimumTotalPrice(blueprint) ?? int.MaxValue)
+                .ThenBy(blueprint => blueprint.Title, StringComparer.OrdinalIgnoreCase)
+                .ThenBy(blueprint => blueprint.BlueprintId),
+            _ => blueprints
+                .OrderBy(blueprint => blueprint.Title, StringComparer.OrdinalIgnoreCase)
+                .ThenBy(blueprint => blueprint.BlueprintId)
+        };
+    }
+
+    private static int? ResolveMinimumProductionCost(BlueprintCatalogBlueprintNode blueprint)
+    {
+        return blueprint.Providers
+            .SelectMany(provider => provider.Variants)
+            .Where(variant => variant.ProductionCost.HasValue)
+            .Select(variant => variant.ProductionCost!.Value)
+            .DefaultIfEmpty()
+            .Min() is var minimum && minimum > 0
+                ? minimum
+                : null;
+    }
+
+    private static int? ResolveMinimumTotalPrice(BlueprintCatalogBlueprintNode blueprint)
+    {
+        return blueprint.Providers
+            .SelectMany(provider => provider.Variants)
+            .Select(variant =>
+            {
+                var deliveryCost = ResolveDisplayedDeliveryCost(variant);
+                return variant.ProductionCost.HasValue && deliveryCost.HasValue
+                    ? variant.ProductionCost.Value + deliveryCost.Value
+                    : (int?)null;
+            })
+            .Where(totalCost => totalCost.HasValue)
+            .Select(totalCost => totalCost!.Value)
+            .DefaultIfEmpty()
+            .Min() is var minimum && minimum > 0
+                ? minimum
+                : null;
     }
 }

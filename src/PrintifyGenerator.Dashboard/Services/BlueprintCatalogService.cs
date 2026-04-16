@@ -8,9 +8,12 @@ namespace PrintifyGenerator.Dashboard.Services;
 public sealed class BlueprintCatalogService
 {
     private const string DefaultCountryCode = "GB";
+    private const string RestOfWorldCountryCode = "REST_OF_THE_WORLD";
     private const string ProbeImageUrl = "https://dummyimage.com/1200x1200/f6efe3/122029.png&text=Printify+Cost+Probe";
     private const int MaxProbeVariantBatchSize = 100;
     private const int PricingLookupRequestLimitPerMinute = 180;
+    private const int MaxDefaultEnabledVariantsPerBlueprint = 5;
+    private const int MaxDefaultEnabledShippingCostMinorUnits = 750;
 
     private readonly IWebHostEnvironment _environment;
     private readonly IOptionsMonitor<DashboardOptions> _options;
@@ -27,11 +30,26 @@ public sealed class BlueprintCatalogService
         var dataRoot = ResolveDataRoot();
         var settings = BlueprintCountrySettingsStore.Load(dataRoot);
         var normalizedCountryCode = NormalizeCountryCode(countryCode, settings);
-        var countrySelection = FindCountrySelection(settings, normalizedCountryCode);
+        var sharedLivePricingByBlueprintId = BuildSharedLivePricingLookup(settings);
         var blueprintApi = CreateQueryApi(dataRoot);
+        var countrySelection = FindCountrySelection(settings, normalizedCountryCode);
+        if (countrySelection is null)
+        {
+            countrySelection = CreateDefaultCountrySelection(
+                settings,
+                normalizedCountryCode,
+                blueprintApi,
+                sharedLivePricingByBlueprintId);
+            BlueprintCountrySettingsStore.Save(dataRoot, settings);
+        }
 
         var blueprints = blueprintApi.GetAllBlueprintDetails()
-            .Select(detail => BuildBlueprintNode(blueprintApi, detail, countrySelection, normalizedCountryCode))
+            .Select(detail => BuildBlueprintNode(
+                blueprintApi,
+                detail,
+                countrySelection,
+                sharedLivePricingByBlueprintId,
+                normalizedCountryCode))
             .Where(node => node is not null)
             .Select(node => node!)
             .Where(node => MatchesSearch(node, normalizedSearchTerm))
@@ -74,7 +92,13 @@ public sealed class BlueprintCatalogService
         var dataRoot = ResolveDataRoot();
         var settings = BlueprintCountrySettingsStore.Load(dataRoot);
         var normalizedCountryCode = NormalizeCountryCode(countryCode, settings);
-        var countrySelection = GetOrCreateCountrySelection(settings, normalizedCountryCode);
+        var blueprintApi = CreateQueryApi(dataRoot);
+        var sharedLivePricingByBlueprintId = BuildSharedLivePricingLookup(settings);
+        var countrySelection = GetOrCreateCountrySelection(
+            settings,
+            normalizedCountryCode,
+            blueprintApi,
+            sharedLivePricingByBlueprintId);
         var blueprintSelection = GetOrCreateBlueprintSelection(countrySelection, blueprintId);
 
         blueprintSelection.Enabled = isEnabled;
@@ -92,7 +116,13 @@ public sealed class BlueprintCatalogService
         var dataRoot = ResolveDataRoot();
         var settings = BlueprintCountrySettingsStore.Load(dataRoot);
         var normalizedCountryCode = NormalizeCountryCode(countryCode, settings);
-        var countrySelection = GetOrCreateCountrySelection(settings, normalizedCountryCode);
+        var blueprintApi = CreateQueryApi(dataRoot);
+        var sharedLivePricingByBlueprintId = BuildSharedLivePricingLookup(settings);
+        var countrySelection = GetOrCreateCountrySelection(
+            settings,
+            normalizedCountryCode,
+            blueprintApi,
+            sharedLivePricingByBlueprintId);
         var blueprintSelection = GetOrCreateBlueprintSelection(countrySelection, blueprintId);
 
         blueprintSelection.VariantOverrides.RemoveAll(entry =>
@@ -124,9 +154,14 @@ public sealed class BlueprintCatalogService
         var dataRoot = ResolveDataRoot();
         var settings = BlueprintCountrySettingsStore.Load(dataRoot);
         var normalizedCountryCode = NormalizeCountryCode(countryCode, settings);
-        var countrySelection = GetOrCreateCountrySelection(settings, normalizedCountryCode);
-        var blueprintSelection = GetOrCreateBlueprintSelection(countrySelection, blueprintId);
         var blueprintApi = CreateQueryApi(dataRoot);
+        var sharedLivePricingByBlueprintId = BuildSharedLivePricingLookup(settings);
+        var countrySelection = GetOrCreateCountrySelection(
+            settings,
+            normalizedCountryCode,
+            blueprintApi,
+            sharedLivePricingByBlueprintId);
+        var blueprintSelection = GetOrCreateBlueprintSelection(countrySelection, blueprintId);
         var detail = blueprintApi.GetBlueprintDetail(blueprintId);
         var providerDetail = detail.PrintProviders.FirstOrDefault(provider => provider.Provider.Id == providerId)
             ?? throw new InvalidOperationException($"Provider {providerId} was not found on blueprint {blueprintId}.");
@@ -165,7 +200,13 @@ public sealed class BlueprintCatalogService
         var dataRoot = ResolveDataRoot();
         var settings = BlueprintCountrySettingsStore.Load(dataRoot);
         var normalizedCountryCode = NormalizeCountryCode(countryCode, settings);
-        var countrySelection = GetOrCreateCountrySelection(settings, normalizedCountryCode);
+        var blueprintApi = CreateQueryApi(dataRoot);
+        var sharedLivePricingByBlueprintId = BuildSharedLivePricingLookup(settings);
+        var countrySelection = GetOrCreateCountrySelection(
+            settings,
+            normalizedCountryCode,
+            blueprintApi,
+            sharedLivePricingByBlueprintId);
         var targetBlueprintIds = ResolveTargetBlueprintIds(countrySelection, blueprintId);
 
         if (targetBlueprintIds.Count == 0)
@@ -178,7 +219,6 @@ public sealed class BlueprintCatalogService
         var envFilePath = Path.Combine(repositoryRoot, "main.env");
         var token = ReadRequiredEnvValue(envFilePath, "TOKEN");
         var printify = new PrintifyClient(token);
-        var blueprintApi = CreateQueryApi(dataRoot);
         var shops = await printify.GetShopsAsync();
         var shop = ResolveProbeShop(envFilePath, shops)
             ?? throw new InvalidOperationException("No Printify shop is available for published pricing-product lookups.");
@@ -302,16 +342,35 @@ public sealed class BlueprintCatalogService
             string.Equals(country.CountryCode, countryCode, StringComparison.OrdinalIgnoreCase));
     }
 
-    private static BlueprintCountrySelection GetOrCreateCountrySelection(BlueprintCountrySettingsDocument settings, string countryCode)
+    private static BlueprintCountrySelection GetOrCreateCountrySelection(
+        BlueprintCountrySettingsDocument settings,
+        string countryCode,
+        PrintifyBlueprintQueryApi blueprintApi,
+        IReadOnlyDictionary<int, BlueprintLivePricingSnapshot> sharedLivePricingByBlueprintId)
     {
         var existing = FindCountrySelection(settings, countryCode);
         if (existing is not null)
             return existing;
 
+        return CreateDefaultCountrySelection(settings, countryCode, blueprintApi, sharedLivePricingByBlueprintId);
+    }
+
+    private static BlueprintCountrySelection CreateDefaultCountrySelection(
+        BlueprintCountrySettingsDocument settings,
+        string countryCode,
+        PrintifyBlueprintQueryApi blueprintApi,
+        IReadOnlyDictionary<int, BlueprintLivePricingSnapshot> sharedLivePricingByBlueprintId)
+    {
+        var createdAtUtc = DateTime.UtcNow;
         var created = new BlueprintCountrySelection
         {
             CountryCode = countryCode,
-            UpdatedAtUtc = DateTime.UtcNow
+            UpdatedAtUtc = createdAtUtc,
+            Blueprints = BuildDefaultBlueprintSelections(
+                blueprintApi,
+                sharedLivePricingByBlueprintId,
+                countryCode,
+                createdAtUtc)
         };
 
         settings.Countries.Add(created);
@@ -347,13 +406,254 @@ public sealed class BlueprintCatalogService
             .ToList();
     }
 
+    private static List<BlueprintCountrySelectionEntry> BuildDefaultBlueprintSelections(
+        PrintifyBlueprintQueryApi blueprintApi,
+        IReadOnlyDictionary<int, BlueprintLivePricingSnapshot> sharedLivePricingByBlueprintId,
+        string countryCode,
+        DateTime updatedAtUtc)
+    {
+        var selections = new List<BlueprintCountrySelectionEntry>();
+
+        foreach (var detail in blueprintApi.GetAllBlueprintDetails())
+        {
+            var defaultVariants = FindDefaultVariantSelections(detail, sharedLivePricingByBlueprintId, countryCode);
+            if (defaultVariants.Count == 0)
+            {
+                continue;
+            }
+
+            selections.Add(new BlueprintCountrySelectionEntry
+            {
+                BlueprintId = detail.Blueprint.Id,
+                Enabled = false,
+                UpdatedAtUtc = updatedAtUtc,
+                VariantOverrides = defaultVariants
+                    .Select(selection => new BlueprintVariantOverrideEntry
+                    {
+                        ProviderId = selection.ProviderId,
+                        VariantId = selection.VariantId,
+                        Mode = BlueprintVariantSelectionModes.Enabled,
+                        UpdatedAtUtc = updatedAtUtc
+                    })
+                    .ToList()
+            });
+        }
+
+        return selections;
+    }
+
+    private static List<DefaultBlueprintVariantSelection> FindDefaultVariantSelections(
+        PrintifyCachedBlueprintDetail detail,
+        IReadOnlyDictionary<int, BlueprintLivePricingSnapshot> sharedLivePricingByBlueprintId,
+        string countryCode)
+    {
+        sharedLivePricingByBlueprintId.TryGetValue(detail.Blueprint.Id, out var sharedLivePricing);
+        var candidates = new List<DefaultBlueprintVariantSelectionCandidate>();
+
+        foreach (var providerDetail in detail.PrintProviders)
+        {
+            var shippingLookup = BuildCountryShippingLookup(providerDetail.Shipping, countryCode);
+            if (shippingLookup.Count == 0)
+            {
+                continue;
+            }
+
+            var sharedProviderPricing = sharedLivePricing?.Providers.FirstOrDefault(provider =>
+                provider.ProviderId == providerDetail.Provider.Id);
+            var sharedVariantsById = (sharedProviderPricing?.Variants ?? new List<BlueprintVariantLivePricingSnapshot>())
+                .ToDictionary(variant => variant.VariantId);
+
+            foreach (var variant in providerDetail.Variants.Variants)
+            {
+                if (!shippingLookup.TryGetValue(variant.Id, out var shipping) ||
+                    !shipping.FirstItemCost.HasValue ||
+                    shipping.FirstItemCost.Value > MaxDefaultEnabledShippingCostMinorUnits)
+                {
+                    continue;
+                }
+
+                sharedVariantsById.TryGetValue(variant.Id, out var sharedVariantPricing);
+                if (sharedVariantPricing is not null && !sharedVariantPricing.IsAvailable)
+                {
+                    continue;
+                }
+
+                var productionCost = sharedVariantPricing?.ProductionCost ?? variant.Cost;
+                if (!productionCost.HasValue)
+                {
+                    continue;
+                }
+
+                var normalizedOptions = NormalizeVariantOptions(variant.Options);
+                var colorKey = GetColorOptionValue(normalizedOptions);
+                var typeOptions = GetVariantTypeOptions(normalizedOptions);
+
+                candidates.Add(new DefaultBlueprintVariantSelectionCandidate(
+                    ProviderId: providerDetail.Provider.Id,
+                    VariantId: variant.Id,
+                    ColorKey: colorKey,
+                    VariantTypeKey: BuildVariantTypeKey(typeOptions),
+                    VariantTypeOptions: typeOptions,
+                    TotalCost: productionCost.Value + shipping.FirstItemCost.Value,
+                    ProductionCost: productionCost.Value,
+                    ShippingCost: shipping.FirstItemCost.Value));
+            }
+        }
+
+        if (candidates.Count == 0)
+        {
+            return new List<DefaultBlueprintVariantSelection>();
+        }
+
+        var cheapestPerColorAndType = candidates
+            .GroupBy(candidate => (candidate.ColorKey, candidate.VariantTypeKey))
+            .Select(group => group
+                .OrderBy(candidate => candidate.TotalCost)
+                .ThenBy(candidate => candidate.ProductionCost)
+                .ThenBy(candidate => candidate.ShippingCost)
+                .ThenBy(candidate => candidate.ProviderId)
+                .ThenBy(candidate => candidate.VariantId)
+                .First())
+            .ToList();
+
+        var colorSelections = cheapestPerColorAndType
+            .GroupBy(candidate => candidate.ColorKey, StringComparer.OrdinalIgnoreCase)
+            .Select(group => new DefaultBlueprintColorSelection(
+                ColorKey: group.Key,
+                AverageTotalCost: group.Average(candidate => candidate.TotalCost),
+                VariantCount: group.Count(),
+                Variants: group.ToList()))
+            .ToList();
+
+        if (colorSelections.Count == 0)
+        {
+            return new List<DefaultBlueprintVariantSelection>();
+        }
+
+        var chosenColor = colorSelections
+            .OrderBy(selection => selection.AverageTotalCost)
+            .ThenByDescending(selection => selection.VariantCount)
+            .ThenBy(selection => selection.ColorKey, StringComparer.OrdinalIgnoreCase)
+            .First();
+
+        return chosenColor.Variants
+            .OrderBy(candidate => candidate, DefaultBlueprintVariantTypeComparer.Instance)
+            .ThenBy(candidate => candidate.TotalCost)
+            .ThenBy(candidate => candidate.ProviderId)
+            .ThenBy(candidate => candidate.VariantId)
+            .Take(MaxDefaultEnabledVariantsPerBlueprint)
+            .Select(candidate => new DefaultBlueprintVariantSelection(
+                candidate.ProviderId,
+                candidate.VariantId,
+                candidate.TotalCost,
+                candidate.ProductionCost,
+                candidate.ShippingCost))
+            .ToList();
+    }
+
+    private static IReadOnlyList<DefaultBlueprintVariantOption> NormalizeVariantOptions(Dictionary<string, object>? options)
+    {
+        if (options is null || options.Count == 0)
+        {
+            return Array.Empty<DefaultBlueprintVariantOption>();
+        }
+
+        return options
+            .Select(option => new DefaultBlueprintVariantOption(
+                option.Key.Trim(),
+                FormatOptionValue(option.Value).Trim()))
+            .OrderBy(option => option.Key, StringComparer.OrdinalIgnoreCase)
+            .ThenBy(option => option.Value, StringComparer.OrdinalIgnoreCase)
+            .ToList();
+    }
+
+    private static string GetColorOptionValue(IReadOnlyList<DefaultBlueprintVariantOption> options)
+    {
+        return options
+            .FirstOrDefault(option => IsColorOptionKey(option.Key))
+            .Value ?? string.Empty;
+    }
+
+    private static IReadOnlyList<DefaultBlueprintVariantOption> GetVariantTypeOptions(
+        IReadOnlyList<DefaultBlueprintVariantOption> options)
+    {
+        return options
+            .Where(option => !IsColorOptionKey(option.Key))
+            .ToList();
+    }
+
+    private static string BuildVariantTypeKey(IReadOnlyList<DefaultBlueprintVariantOption> options)
+    {
+        if (options.Count == 0)
+        {
+            return "default";
+        }
+
+        return string.Join(
+            "|",
+            options.Select(option => $"{option.Key.ToLowerInvariant()}={option.Value.ToLowerInvariant()}"));
+    }
+
+    private static bool IsColorOptionKey(string key)
+    {
+        return key.Contains("color", StringComparison.OrdinalIgnoreCase) ||
+               key.Contains("colour", StringComparison.OrdinalIgnoreCase);
+    }
+
+    private static bool IsSizeOptionKey(string key)
+    {
+        return key.Contains("size", StringComparison.OrdinalIgnoreCase);
+    }
+
+    private static int CompareVariantOptionValues(string key, string leftValue, string rightValue)
+    {
+        if (IsSizeOptionKey(key) &&
+            TryGetSizeSortRank(leftValue, out var leftRank) &&
+            TryGetSizeSortRank(rightValue, out var rightRank) &&
+            leftRank != rightRank)
+        {
+            return leftRank.CompareTo(rightRank);
+        }
+
+        return string.Compare(leftValue, rightValue, StringComparison.OrdinalIgnoreCase);
+    }
+
+    private static bool TryGetSizeSortRank(string value, out int rank)
+    {
+        var normalized = value.Trim().ToUpperInvariant();
+        rank = normalized switch
+        {
+            "XXXS" => 0,
+            "3XS" => 0,
+            "XXS" => 1,
+            "2XS" => 1,
+            "XS" => 2,
+            "S" => 3,
+            "M" => 4,
+            "L" => 5,
+            "XL" => 6,
+            "XXL" => 7,
+            "2XL" => 7,
+            "XXXL" => 8,
+            "3XL" => 8,
+            "4XL" => 9,
+            "5XL" => 10,
+            "6XL" => 11,
+            _ => int.MaxValue
+        };
+
+        return rank != int.MaxValue;
+    }
+
     private BlueprintCatalogBlueprintNode? BuildBlueprintNode(
         PrintifyBlueprintQueryApi blueprintApi,
         PrintifyCachedBlueprintDetail detail,
         BlueprintCountrySelection? countrySelection,
+        IReadOnlyDictionary<int, BlueprintLivePricingSnapshot> sharedLivePricingByBlueprintId,
         string countryCode)
     {
         var blueprintSelection = countrySelection?.Blueprints.FirstOrDefault(entry => entry.BlueprintId == detail.Blueprint.Id);
+        sharedLivePricingByBlueprintId.TryGetValue(detail.Blueprint.Id, out var sharedLivePricing);
         var providerNodes = new List<BlueprintCatalogProviderNode>();
 
         foreach (var providerDetail in detail.PrintProviders.OrderBy(provider => provider.Provider.Title, StringComparer.OrdinalIgnoreCase))
@@ -363,6 +663,8 @@ public sealed class BlueprintCatalogService
                 continue;
 
             var liveProviderPricing = blueprintSelection?.LivePricing?.Providers.FirstOrDefault(provider =>
+                provider.ProviderId == providerDetail.Provider.Id);
+            var sharedProviderPricing = sharedLivePricing?.Providers.FirstOrDefault(provider =>
                 provider.ProviderId == providerDetail.Provider.Id);
 
             var variants = providerDetail.Variants.Variants
@@ -374,6 +676,7 @@ public sealed class BlueprintCatalogService
                     providerDetail.Provider.Id,
                     blueprintSelection,
                     liveProviderPricing,
+                    sharedProviderPricing,
                     shippingLookup[variant.Id],
                     blueprintApi.GetVariantImageUrl(detail.Blueprint.Id, providerDetail.Provider.Id, variant.Id)))
                 .ToList();
@@ -395,21 +698,27 @@ public sealed class BlueprintCatalogService
         if (providerNodes.Count == 0)
             return null;
 
-        var imageUrl = detail.Blueprint.Images.FirstOrDefault();
+        var cachedExampleImageUrl = providerNodes
+            .Select(provider => blueprintApi.GetProviderExampleImageUrl(detail.Blueprint.Id, provider.ProviderId))
+            .FirstOrDefault(url => !string.IsNullOrWhiteSpace(url));
+        var imageUrl = !string.IsNullOrWhiteSpace(cachedExampleImageUrl)
+            ? cachedExampleImageUrl
+            : detail.Blueprint.Images.FirstOrDefault();
         var livePricing = blueprintSelection?.LivePricing;
+        var displayLivePricing = sharedLivePricing ?? livePricing;
 
         return new BlueprintCatalogBlueprintNode(
             BlueprintId: detail.Blueprint.Id,
             Title: detail.Blueprint.Title,
             Brand: detail.Blueprint.Brand,
             Model: detail.Blueprint.Model,
-            ImageUrl: string.IsNullOrWhiteSpace(imageUrl) ? livePricing?.SampleImagePreviewUrl : imageUrl,
+            ImageUrl: string.IsNullOrWhiteSpace(imageUrl) ? displayLivePricing?.SampleImagePreviewUrl : imageUrl,
             IsEnabled: blueprintSelection?.Enabled ?? false,
             ProviderCount: providerNodes.Count,
             VariantCount: providerNodes.Sum(provider => provider.VariantCount),
             EnabledVariantCount: providerNodes.Sum(provider => provider.EnabledVariantCount),
-            LivePricingUpdatedAtUtc: livePricing?.UpdatedAtUtc,
-            ProbeShopLabel: FormatProbeShopLabel(livePricing),
+            LivePricingUpdatedAtUtc: displayLivePricing?.UpdatedAtUtc,
+            ProbeShopLabel: FormatProbeShopLabel(displayLivePricing),
             Providers: providerNodes);
     }
 
@@ -418,12 +727,15 @@ public sealed class BlueprintCatalogService
         int providerId,
         BlueprintCountrySelectionEntry? blueprintSelection,
         BlueprintProviderLivePricingSnapshot? liveProviderPricing,
+        BlueprintProviderLivePricingSnapshot? sharedProviderPricing,
         ShippingQuoteSummary shipping,
         string? cachedImageUrl)
     {
         var variantOverride = blueprintSelection?.VariantOverrides.FirstOrDefault(entry =>
             entry.ProviderId == providerId && entry.VariantId == variant.Id);
         var liveVariantPricing = liveProviderPricing?.Variants.FirstOrDefault(entry => entry.VariantId == variant.Id);
+        var sharedVariantPricing = sharedProviderPricing?.Variants.FirstOrDefault(entry => entry.VariantId == variant.Id);
+        var productionVariantPricing = sharedVariantPricing ?? liveVariantPricing;
         var isEffectivelyEnabled = BlueprintVariantSelectionModes.ResolveEffectiveState(blueprintSelection?.Enabled ?? false, variantOverride);
 
         return new BlueprintCatalogVariantNode(
@@ -431,23 +743,27 @@ public sealed class BlueprintCatalogService
             Title: variant.Title,
             ImageUrl: !string.IsNullOrWhiteSpace(liveVariantPricing?.ImageUrl)
                 ? liveVariantPricing.ImageUrl
+                : !string.IsNullOrWhiteSpace(productionVariantPricing?.ImageUrl)
+                    ? productionVariantPricing.ImageUrl
                 : cachedImageUrl,
             OptionSummary: FormatVariantOptions(variant.Options),
-            IsAvailable: liveVariantPricing?.IsAvailable ?? true,
+            IsAvailable: liveVariantPricing?.IsAvailable ?? productionVariantPricing?.IsAvailable ?? true,
             SelectionMode: BlueprintVariantSelectionModes.Normalize(variantOverride?.Mode),
             IsEffectivelyEnabled: isEffectivelyEnabled,
-            ProductionCost: liveVariantPricing?.ProductionCost,
-            ProductionCurrency: string.IsNullOrWhiteSpace(liveVariantPricing?.Currency) ? shipping.Currency : liveVariantPricing!.Currency,
-            ProductionCostUpdatedAtUtc: liveVariantPricing?.UpdatedAtUtc,
+            ProductionCost: productionVariantPricing?.ProductionCost ?? variant.Cost,
+            ProductionCurrency: !string.IsNullOrWhiteSpace(productionVariantPricing?.Currency)
+                ? productionVariantPricing!.Currency
+                : shipping.Currency,
+            ProductionCostUpdatedAtUtc: productionVariantPricing?.UpdatedAtUtc,
             ShippingFirstItemCost: shipping.FirstItemCost,
             ShippingAdditionalItemCost: shipping.AdditionalItemCost,
                 ShippingCurrency: shipping.Currency,
                 LiveShippingCost: liveVariantPricing?.DeliveryCost,
                 LiveShippingCurrency: liveVariantPricing?.DeliveryCurrency ?? string.Empty,
                 LiveShippingMethod: liveVariantPricing?.DeliveryMethod,
-                PricingProductId: liveVariantPricing?.PricingProductId,
-                PricingProductTitle: liveVariantPricing?.PricingProductTitle,
-                PricingProductPageNumber: liveVariantPricing?.PricingProductPageNumber);
+                PricingProductId: productionVariantPricing?.PricingProductId,
+                PricingProductTitle: productionVariantPricing?.PricingProductTitle,
+                PricingProductPageNumber: productionVariantPricing?.PricingProductPageNumber);
     }
 
     private static bool MatchesSearch(BlueprintCatalogBlueprintNode node, string searchTerm)
@@ -493,28 +809,74 @@ public sealed class BlueprintCatalogService
 
     private static Dictionary<int, ShippingQuoteSummary> BuildCountryShippingLookup(ShippingInfo shipping, string countryCode)
     {
-        var lookup = new Dictionary<int, ShippingQuoteSummary>();
+        var exactLookup = new Dictionary<int, ShippingQuoteSummary>();
+        var restOfWorldLookup = new Dictionary<int, ShippingQuoteSummary>();
 
         foreach (var profile in shipping.Profiles)
         {
-            if (!profile.Countries.Contains(countryCode, StringComparer.OrdinalIgnoreCase))
-                continue;
-
-            var candidate = new ShippingQuoteSummary(
-                profile.FirstItem?.Cost,
-                profile.AdditionalItems?.Cost,
-                profile.FirstItem?.Currency ?? profile.AdditionalItems?.Currency ?? string.Empty);
-
-            foreach (var variantId in profile.VariantIds)
+            if (ProfileContainsCountry(profile, countryCode))
             {
-                if (!lookup.TryGetValue(variantId, out var existing) || CompareShipping(candidate, existing) < 0)
-                {
-                    lookup[variantId] = candidate;
-                }
+                AddShippingProfile(exactLookup, profile);
+                continue;
+            }
+
+            if (ProfileContainsRestOfWorld(profile))
+            {
+                AddShippingProfile(restOfWorldLookup, profile);
             }
         }
 
-        return lookup;
+        foreach (var entry in restOfWorldLookup)
+        {
+            if (!exactLookup.ContainsKey(entry.Key))
+            {
+                exactLookup[entry.Key] = entry.Value;
+            }
+        }
+
+        return exactLookup;
+    }
+
+    private static void AddShippingProfile(Dictionary<int, ShippingQuoteSummary> lookup, ShippingProfile profile)
+    {
+        var candidate = new ShippingQuoteSummary(
+            profile.FirstItem?.Cost,
+            profile.AdditionalItems?.Cost,
+            profile.FirstItem?.Currency ?? profile.AdditionalItems?.Currency ?? string.Empty);
+
+        foreach (var variantId in profile.VariantIds)
+        {
+            if (!lookup.TryGetValue(variantId, out var existing) || CompareShipping(candidate, existing) < 0)
+            {
+                lookup[variantId] = candidate;
+            }
+        }
+    }
+
+    private static bool ProfileContainsCountry(ShippingProfile profile, string countryCode)
+    {
+        return profile.Countries.Contains(countryCode, StringComparer.OrdinalIgnoreCase);
+    }
+
+    private static bool ProfileContainsRestOfWorld(ShippingProfile profile)
+    {
+        return profile.Countries.Any(IsRestOfWorldCountryCode);
+    }
+
+    private static bool IsRestOfWorldCountryCode(string? countryCode)
+    {
+        return string.Equals(NormalizeShippingCountryCode(countryCode), RestOfWorldCountryCode, StringComparison.Ordinal);
+    }
+
+    private static string NormalizeShippingCountryCode(string? countryCode)
+    {
+        if (string.IsNullOrWhiteSpace(countryCode))
+            return string.Empty;
+
+        return string.Join('_', countryCode
+            .Trim()
+            .Split(new[] { '-', '_', ' ' }, StringSplitOptions.RemoveEmptyEntries))
+            .ToUpperInvariant();
     }
 
     private static int CompareShipping(ShippingQuoteSummary left, ShippingQuoteSummary right)
@@ -703,7 +1065,11 @@ public sealed class BlueprintCatalogService
         {
             cancellationToken.ThrowIfCancellationRequested();
 
-            if (!providerDetail.Shipping.Profiles.Any(profile => profile.Countries.Contains(countryCode, StringComparer.OrdinalIgnoreCase)))
+            var allowedVariantIds = BuildCountryShippingLookup(providerDetail.Shipping, countryCode)
+                .Keys
+                .ToHashSet();
+
+            if (allowedVariantIds.Count == 0)
                 continue;
 
             try
@@ -730,7 +1096,7 @@ public sealed class BlueprintCatalogService
                     blueprintId,
                     providerDetail.Provider.Id,
                     providerDetail.Variants.Variants,
-                    BuildCountryShippingLookup(providerDetail.Shipping, countryCode).Keys.ToHashSet(),
+                    allowedVariantIds,
                     providerEntries,
                     currency,
                     variantId => blueprintApi.GetVariantImageUrl(blueprintId, providerDetail.Provider.Id, variantId),
@@ -1274,14 +1640,134 @@ public sealed class BlueprintCatalogService
     private static string DetermineProviderCurrency(ShippingInfo shipping, string countryCode)
     {
         return shipping.Profiles
-            .Where(profile => profile.Countries.Contains(countryCode, StringComparer.OrdinalIgnoreCase))
+            .Where(profile => ProfileContainsCountry(profile, countryCode))
+            .Select(profile => profile.FirstItem?.Currency ?? profile.AdditionalItems?.Currency ?? string.Empty)
+            .FirstOrDefault(currency => !string.IsNullOrWhiteSpace(currency))
+            ?? shipping.Profiles
+                .Where(ProfileContainsRestOfWorld)
             .Select(profile => profile.FirstItem?.Currency ?? profile.AdditionalItems?.Currency ?? string.Empty)
             .FirstOrDefault(currency => !string.IsNullOrWhiteSpace(currency))
             ?? string.Empty;
     }
 
+    private static IReadOnlyDictionary<int, BlueprintLivePricingSnapshot> BuildSharedLivePricingLookup(
+        BlueprintCountrySettingsDocument settings)
+    {
+        var lookup = new Dictionary<int, BlueprintLivePricingSnapshot>();
+
+        foreach (var blueprintSelection in settings.Countries
+            .SelectMany(country => country.Blueprints)
+            .Where(entry => entry.BlueprintId > 0 && entry.LivePricing is not null)
+            .OrderBy(entry => entry.LivePricing!.UpdatedAtUtc))
+        {
+            var livePricing = blueprintSelection.LivePricing!;
+
+            if (lookup.TryGetValue(blueprintSelection.BlueprintId, out var existing))
+            {
+                lookup[blueprintSelection.BlueprintId] = MergeLivePricingSnapshot(existing, livePricing);
+                continue;
+            }
+
+            lookup[blueprintSelection.BlueprintId] = CloneLivePricingSnapshot(livePricing);
+        }
+
+        return lookup;
+    }
+
+    private static BlueprintLivePricingSnapshot CloneLivePricingSnapshot(BlueprintLivePricingSnapshot livePricing)
+    {
+        return new BlueprintLivePricingSnapshot
+        {
+            UpdatedAtUtc = livePricing.UpdatedAtUtc,
+            ShopId = livePricing.ShopId,
+            ShopTitle = livePricing.ShopTitle,
+            SampleImagePreviewUrl = livePricing.SampleImagePreviewUrl,
+            Providers = livePricing.Providers
+                .Select(CloneProviderSnapshot)
+                .ToList()
+        };
+    }
+
+    private static BlueprintLivePricingSnapshot MergeLivePricingSnapshot(
+        BlueprintLivePricingSnapshot existing,
+        BlueprintLivePricingSnapshot refreshed)
+    {
+        return new BlueprintLivePricingSnapshot
+        {
+            UpdatedAtUtc = refreshed.UpdatedAtUtc > existing.UpdatedAtUtc
+                ? refreshed.UpdatedAtUtc
+                : existing.UpdatedAtUtc,
+            ShopId = refreshed.ShopId ?? existing.ShopId,
+            ShopTitle = string.IsNullOrWhiteSpace(refreshed.ShopTitle)
+                ? existing.ShopTitle
+                : refreshed.ShopTitle,
+            SampleImagePreviewUrl = string.IsNullOrWhiteSpace(refreshed.SampleImagePreviewUrl)
+                ? existing.SampleImagePreviewUrl
+                : refreshed.SampleImagePreviewUrl,
+            Providers = MergeProviderSnapshots(existing, refreshed.Providers)
+        };
+    }
+
     private readonly record struct ShippingQuoteSummary(int? FirstItemCost, int? AdditionalItemCost, string Currency);
     private readonly record struct ShippingOptionSummary(string? Method, int? Cost);
+    private readonly record struct DefaultBlueprintVariantSelection(
+        int ProviderId,
+        int VariantId,
+        int TotalCost,
+        int ProductionCost,
+        int ShippingCost);
+
+    private readonly record struct DefaultBlueprintVariantSelectionCandidate(
+        int ProviderId,
+        int VariantId,
+        string ColorKey,
+        string VariantTypeKey,
+        IReadOnlyList<DefaultBlueprintVariantOption> VariantTypeOptions,
+        int TotalCost,
+        int ProductionCost,
+        int ShippingCost);
+
+    private readonly record struct DefaultBlueprintVariantOption(string Key, string Value);
+
+    private readonly record struct DefaultBlueprintColorSelection(
+        string ColorKey,
+        double AverageTotalCost,
+        int VariantCount,
+        IReadOnlyList<DefaultBlueprintVariantSelectionCandidate> Variants);
+
+    private sealed class DefaultBlueprintVariantTypeComparer : IComparer<DefaultBlueprintVariantSelectionCandidate>
+    {
+        public static DefaultBlueprintVariantTypeComparer Instance { get; } = new();
+
+        public int Compare(DefaultBlueprintVariantSelectionCandidate left, DefaultBlueprintVariantSelectionCandidate right)
+        {
+            var optionCountComparison = left.VariantTypeOptions.Count.CompareTo(right.VariantTypeOptions.Count);
+            if (optionCountComparison != 0)
+            {
+                return optionCountComparison;
+            }
+
+            for (var index = 0; index < left.VariantTypeOptions.Count; index++)
+            {
+                var leftOption = left.VariantTypeOptions[index];
+                var rightOption = right.VariantTypeOptions[index];
+
+                var keyComparison = string.Compare(leftOption.Key, rightOption.Key, StringComparison.OrdinalIgnoreCase);
+                if (keyComparison != 0)
+                {
+                    return keyComparison;
+                }
+
+                var valueComparison = CompareVariantOptionValues(leftOption.Key, leftOption.Value, rightOption.Value);
+                if (valueComparison != 0)
+                {
+                    return valueComparison;
+                }
+            }
+
+            return string.Compare(left.VariantTypeKey, right.VariantTypeKey, StringComparison.OrdinalIgnoreCase);
+        }
+    }
 
     private static ShippingOptionSummary ResolveLowestShippingOption(ShippingCostResponse shipping)
     {

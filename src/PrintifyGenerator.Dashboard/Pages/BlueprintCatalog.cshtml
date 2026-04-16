@@ -3,6 +3,9 @@
 @{
     ViewData["Title"] = "Blueprint Catalog";
     var snapshot = Model.Snapshot;
+    var pagination = Model.Pagination;
+    var visibleBlueprints = Model.VisibleBlueprints;
+    var blueprintPages = pagination.GetVisiblePageNumbers();
 }
 
 <main class="dashboard-shell page-shell blueprint-page-shell">
@@ -25,6 +28,15 @@
                     <span>Search</span>
                     <input type="search" name="searchTerm" value="@snapshot.SearchTerm" placeholder="Blueprint, provider, variant, option" />
                 </label>
+                <label>
+                    <span>Order by</span>
+                    <select name="sortBy">
+                        <option value="@BlueprintCatalogModel.SortByName" selected="@(Model.SortBy == BlueprintCatalogModel.SortByName ? "selected" : null)">Name</option>
+                        <option value="@BlueprintCatalogModel.SortByBlueprintId" selected="@(Model.SortBy == BlueprintCatalogModel.SortByBlueprintId ? "selected" : null)">Blueprint ID</option>
+                        <option value="@BlueprintCatalogModel.SortByMinimumProductionCost" selected="@(Model.SortBy == BlueprintCatalogModel.SortByMinimumProductionCost ? "selected" : null)">Minimum production cost</option>
+                        <option value="@BlueprintCatalogModel.SortByMinimumTotalPrice" selected="@(Model.SortBy == BlueprintCatalogModel.SortByMinimumTotalPrice ? "selected" : null)">Minimum total price</option>
+                    </select>
+                </label>
                 <label class="toggle-row catalog-toggle-row">
                     <input type="hidden" name="enabledOnly" value="false" />
                     <input type="checkbox" name="enabledOnly" value="true" @(snapshot.EnabledOnly ? "checked" : null) />
@@ -32,7 +44,11 @@
                 </label>
                 <div class="button-row">
                     <button type="submit" class="primary-button">Apply filters</button>
-                    <a class="ghost-button catalog-link-button" asp-page="/BlueprintCatalog" asp-route-countryCode="@snapshot.CountryCode">Reset search</a>
+                    <a class="ghost-button catalog-link-button"
+                       asp-page="/BlueprintCatalog"
+                       asp-route-countryCode="@snapshot.CountryCode"
+                       asp-route-enabledOnly="@snapshot.EnabledOnly"
+                       asp-route-sortBy="@Model.SortBy">Reset search</a>
                 </div>
             </form>
 
@@ -47,7 +63,8 @@
                                asp-page="/BlueprintCatalog"
                                asp-route-countryCode="@countryCode"
                                asp-route-searchTerm="@snapshot.SearchTerm"
-                               asp-route-enabledOnly="@snapshot.EnabledOnly">@countryCode</a>
+                               asp-route-enabledOnly="@snapshot.EnabledOnly"
+                               asp-route-sortBy="@Model.SortBy">@countryCode</a>
                         }
                     </div>
                 </div>
@@ -89,6 +106,8 @@
                 <input type="hidden" name="countryCode" value="@snapshot.CountryCode" />
                 <input type="hidden" name="searchTerm" value="@snapshot.SearchTerm" />
                 <input type="hidden" name="enabledOnly" value="@(snapshot.EnabledOnly ? "true" : "false")" />
+                <input type="hidden" name="sortBy" value="@Model.SortBy" />
+                <input type="hidden" name="pageNumber" value="@pagination.CurrentPage" />
                 <button type="submit" class="secondary-button">Refresh pricing for enabled blueprints</button>
             </form>
         </div>
@@ -150,6 +169,63 @@
             <span class="muted">Production and live delivery values come from the last published-product lookup. Delivery falls back to cached country shipping until a lookup runs.</span>
         </div>
 
+        @if (snapshot.BlueprintCount > 0)
+        {
+            <div class="pager-toolbar">
+                <div class="pager-summary">
+                    <span class="subtle-label">Results</span>
+                    <strong>Showing @pagination.StartItemIndex-@pagination.EndItemIndex of @snapshot.BlueprintCount blueprints</strong>
+                    <span class="muted">Page @pagination.CurrentPage of @pagination.TotalPageCount</span>
+                </div>
+
+                @if (pagination.TotalPageCount > 1)
+                {
+                    <nav class="pager-nav" aria-label="Blueprint catalog pages">
+                        @if (pagination.HasPreviousPage)
+                        {
+                            <a class="filter-pill pagination-link"
+                               asp-page="/BlueprintCatalog"
+                               asp-route-countryCode="@snapshot.CountryCode"
+                               asp-route-searchTerm="@snapshot.SearchTerm"
+                               asp-route-enabledOnly="@snapshot.EnabledOnly"
+                               asp-route-sortBy="@Model.SortBy"
+                               asp-route-pageNumber="@(pagination.CurrentPage - 1)">Previous</a>
+                        }
+                        else
+                        {
+                            <span class="filter-pill pagination-link is-disabled">Previous</span>
+                        }
+
+                        @foreach (var pageNumber in blueprintPages)
+                        {
+                            <a class="filter-pill pagination-link @(pageNumber == pagination.CurrentPage ? "is-active" : null)"
+                               asp-page="/BlueprintCatalog"
+                               asp-route-countryCode="@snapshot.CountryCode"
+                               asp-route-searchTerm="@snapshot.SearchTerm"
+                               asp-route-enabledOnly="@snapshot.EnabledOnly"
+                               asp-route-sortBy="@Model.SortBy"
+                                         asp-route-pageNumber="@pageNumber">@pageNumber</a>
+                        }
+
+                        @if (pagination.HasNextPage)
+                        {
+                            <a class="filter-pill pagination-link"
+                               asp-page="/BlueprintCatalog"
+                               asp-route-countryCode="@snapshot.CountryCode"
+                               asp-route-searchTerm="@snapshot.SearchTerm"
+                               asp-route-enabledOnly="@snapshot.EnabledOnly"
+                               asp-route-sortBy="@Model.SortBy"
+                                         asp-route-pageNumber="@(pagination.CurrentPage + 1)">Next</a>
+                        }
+                        else
+                        {
+                            <span class="filter-pill pagination-link is-disabled">Next</span>
+                        }
+                    </nav>
+                }
+            </div>
+        }
+
         @if (snapshot.Blueprints.Count == 0)
         {
             <p class="muted">No cached blueprints match the selected country and filters.</p>
@@ -157,9 +233,11 @@
         else
         {
             <div class="catalog-tree">
-                @foreach (var blueprint in snapshot.Blueprints)
+                @foreach (var blueprint in visibleBlueprints)
                 {
                     var hasBlueprintImage = !string.IsNullOrWhiteSpace(blueprint.ImageUrl);
+                    var blueprintProductionRange = BlueprintCatalogModel.FormatBlueprintProductionRange(blueprint);
+                    var blueprintDeliveryRange = BlueprintCatalogModel.FormatBlueprintDeliveryRange(blueprint);
 
                     <section class="catalog-blueprint-section">
                         <div class="catalog-blueprint-strip">
@@ -192,6 +270,14 @@
                                     <span class="meta-label">Last pricing lookup</span>
                                     <strong>@BlueprintCatalogModel.FormatTimestamp(blueprint.LivePricingUpdatedAtUtc)</strong>
                                 </div>
+                                <div>
+                                    <span class="meta-label">All production range</span>
+                                    <strong>@blueprintProductionRange</strong>
+                                </div>
+                                <div>
+                                    <span class="meta-label">All delivery range</span>
+                                    <strong>@blueprintDeliveryRange</strong>
+                                </div>
                             </div>
 
                             <div class="catalog-blueprint-controls">
@@ -199,6 +285,8 @@
                                     <input type="hidden" name="countryCode" value="@snapshot.CountryCode" />
                                     <input type="hidden" name="searchTerm" value="@snapshot.SearchTerm" />
                                     <input type="hidden" name="enabledOnly" value="@(snapshot.EnabledOnly ? "true" : "false")" />
+                                    <input type="hidden" name="sortBy" value="@Model.SortBy" />
+                                    <input type="hidden" name="pageNumber" value="@pagination.CurrentPage" />
                                     <input type="hidden" name="blueprintId" value="@blueprint.BlueprintId" />
                                     <input type="hidden" name="isEnabled" value="@(blueprint.IsEnabled ? "false" : "true")" />
 
@@ -212,6 +300,8 @@
                                     <input type="hidden" name="countryCode" value="@snapshot.CountryCode" />
                                     <input type="hidden" name="searchTerm" value="@snapshot.SearchTerm" />
                                     <input type="hidden" name="enabledOnly" value="@(snapshot.EnabledOnly ? "true" : "false")" />
+                                    <input type="hidden" name="sortBy" value="@Model.SortBy" />
+                                    <input type="hidden" name="pageNumber" value="@pagination.CurrentPage" />
                                     <input type="hidden" name="blueprintId" value="@blueprint.BlueprintId" />
 
                                     <button type="submit" class="catalog-mini-button">Refresh pricing</button>
@@ -240,7 +330,7 @@
                                     ?? provider.ShippingCurrency;
                                 var deliveryRange = BlueprintCatalogModel.FormatMoneyRange(provider.Variants.Select(BlueprintCatalogModel.ResolveDisplayedDeliveryCost), providerDeliveryCurrency);
 
-                                <details class="catalog-provider-tree-item" open="@(provider.EnabledVariantCount > 0 || !string.IsNullOrWhiteSpace(snapshot.SearchTerm) ? "open" : null)">
+                                <details class="catalog-provider-tree-item">
                                     <summary class="catalog-provider-row">
                                         <div class="catalog-row-media @(hasBlueprintImage ? null : "is-empty")">
                                             @if (hasBlueprintImage)
@@ -277,6 +367,8 @@
                                             <input type="hidden" name="countryCode" value="@snapshot.CountryCode" />
                                             <input type="hidden" name="searchTerm" value="@snapshot.SearchTerm" />
                                             <input type="hidden" name="enabledOnly" value="@(snapshot.EnabledOnly ? "true" : "false")" />
+                                            <input type="hidden" name="sortBy" value="@Model.SortBy" />
+                                            <input type="hidden" name="pageNumber" value="@pagination.CurrentPage" />
                                             <input type="hidden" name="blueprintId" value="@blueprint.BlueprintId" />
                                             <input type="hidden" name="providerId" value="@provider.ProviderId" />
                                             <input type="hidden" name="isEnabled" value="@(providerAllEnabled ? "false" : "true")" />
@@ -308,6 +400,8 @@
                                                 <input type="hidden" name="countryCode" value="@snapshot.CountryCode" />
                                                 <input type="hidden" name="searchTerm" value="@snapshot.SearchTerm" />
                                                 <input type="hidden" name="enabledOnly" value="@(snapshot.EnabledOnly ? "true" : "false")" />
+                                                <input type="hidden" name="sortBy" value="@Model.SortBy" />
+                                                <input type="hidden" name="pageNumber" value="@pagination.CurrentPage" />
                                                 <input type="hidden" name="blueprintId" value="@blueprint.BlueprintId" />
                                                 <input type="hidden" name="providerId" value="@provider.ProviderId" />
                                                 <input type="hidden" name="variantId" value="@variant.VariantId" />
@@ -374,6 +468,60 @@
                     </section>
                 }
             </div>
+
+            @if (pagination.TotalPageCount > 1)
+            {
+                <div class="pager-toolbar">
+                    <div class="pager-summary">
+                        <span class="subtle-label">Results</span>
+                        <strong>Showing @pagination.StartItemIndex-@pagination.EndItemIndex of @snapshot.BlueprintCount blueprints</strong>
+                        <span class="muted">Page @pagination.CurrentPage of @pagination.TotalPageCount</span>
+                    </div>
+
+                    <nav class="pager-nav" aria-label="Blueprint catalog pages bottom">
+                        @if (pagination.HasPreviousPage)
+                        {
+                            <a class="filter-pill pagination-link"
+                               asp-page="/BlueprintCatalog"
+                               asp-route-countryCode="@snapshot.CountryCode"
+                               asp-route-searchTerm="@snapshot.SearchTerm"
+                               asp-route-enabledOnly="@snapshot.EnabledOnly"
+                               asp-route-sortBy="@Model.SortBy"
+                               asp-route-pageNumber="@(pagination.CurrentPage - 1)">Previous</a>
+                        }
+                        else
+                        {
+                            <span class="filter-pill pagination-link is-disabled">Previous</span>
+                        }
+
+                        @foreach (var pageNumber in blueprintPages)
+                        {
+                            <a class="filter-pill pagination-link @(pageNumber == pagination.CurrentPage ? "is-active" : null)"
+                               asp-page="/BlueprintCatalog"
+                               asp-route-countryCode="@snapshot.CountryCode"
+                               asp-route-searchTerm="@snapshot.SearchTerm"
+                               asp-route-enabledOnly="@snapshot.EnabledOnly"
+                               asp-route-sortBy="@Model.SortBy"
+                                         asp-route-pageNumber="@pageNumber">@pageNumber</a>
+                        }
+
+                        @if (pagination.HasNextPage)
+                        {
+                            <a class="filter-pill pagination-link"
+                               asp-page="/BlueprintCatalog"
+                               asp-route-countryCode="@snapshot.CountryCode"
+                               asp-route-searchTerm="@snapshot.SearchTerm"
+                               asp-route-enabledOnly="@snapshot.EnabledOnly"
+                               asp-route-sortBy="@Model.SortBy"
+                                         asp-route-pageNumber="@(pagination.CurrentPage + 1)">Next</a>
+                        }
+                        else
+                        {
+                            <span class="filter-pill pagination-link is-disabled">Next</span>
+                        }
+                    </nav>
+                </div>
+            }
         }
     </section>
 </main>

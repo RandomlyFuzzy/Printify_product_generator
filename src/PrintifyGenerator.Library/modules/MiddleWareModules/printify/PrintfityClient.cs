@@ -392,18 +392,43 @@ public class PrintifyClient
         int limit = 50;
         List<T>? pageData = new List<T>();
 
-        do
+        string pageurl = url + (url.Contains("?") ? $"&page={pagenum}&limit={limit}" : $"?page={pagenum}&limit={limit}");
+        Console.WriteLine($"Fetching page {pagenum} from {pageurl}...");
+        var response = await _http.GetAsync(pageurl);
+        await EnsureSuccessAsync(response);
+        var json = await response.Content.ReadAsStringAsync();
+        var page = JsonSerializer.Deserialize<PaginatedResponse<T>>(json, JsonOpts)!;
+        int pages = (int)Math.Floor((double)page.Total / limit);
+        Task<HttpResponseMessage>[] tasks = new Task<HttpResponseMessage>[pages];
+
+        Console.WriteLine($"Page 1: Fetched {page.Data.Count} items. Total items: {page.Total}. Total pages: {pages}.");
+        all.AddRange(page.Data);
+
+        Enumerable.Range(2, pages-1).ToList().ForEach(i =>
         {
-            string pageurl = url + (url.Contains("?") ? $"&page={pagenum}&limit={limit}" : $"?page={pagenum}&limit={limit}");
-            var response = await _http.GetAsync(pageurl);
-            await EnsureSuccessAsync(response);
-            var json = await response.Content.ReadAsStringAsync();
-            var page = JsonSerializer.Deserialize<PaginatedResponse<T>>(json, JsonOpts)!;
-            pageData = page.Data;
-            all.AddRange(pageData);
-            pagenum++;
+            string pageurl = url + (url.Contains("?") ? $"&page={i}&limit={limit}" : $"?page={i}&limit={limit}");
+            int indx = i; // capture loop variable
+            // Console.WriteLine($"Queueing page {indx} from {pageurl}...");
+            tasks[i - 1] = _http.GetAsync(pageurl);
+        });
+        tasks = tasks.Where(t => t != null).ToArray()!; // remove nulls for pages that don't exist
+
+        int completed = 0;
+        while(completed < pages - 1)
+        {
+            var completedTaskIndex = Task.WaitAny(tasks);
+            var completedTask = tasks[completedTaskIndex];
+            completed++;
+
+            var pageResponse = await completedTask;
+            await EnsureSuccessAsync(pageResponse);
+            var pageJson = await pageResponse.Content.ReadAsStringAsync();
+            var pageDataObj = JsonSerializer.Deserialize<PaginatedResponse<T>>(pageJson, JsonOpts)!;
+            all.AddRange(pageDataObj.Data);
+            tasks[completedTaskIndex] = null; // mark this task as completed
+            tasks = tasks.Where(t => t != null).ToArray()!; // remove nulls for pages that don't exist
         }
-        while (url != null&&pageData.Count == limit);
+
 
         return all;
     }

@@ -5,6 +5,7 @@ using System.Text.Json;
 // get shop
 var ProbeImageUrl = "https://dummyimage.com/1200x1200/f6efe3/122029.png&text=Printify+Variant+Image+Probe";
 var PricingProductProbeImageFileName = "pricing-product-probe.png";
+var runStartedAt = DateTime.UtcNow;
 
 
 var repositoryRoot = ResolveRepositoryRoot();
@@ -23,6 +24,9 @@ if (string.IsNullOrWhiteSpace(token))
 }
 
 string cacheDir = Path.Combine(repositoryRoot, "src", "data", "Cached");
+LogPhase("Startup");
+LogStatus($"Repository root: {repositoryRoot}");
+LogStatus($"Cache directory: {cacheDir}");
 
 var client = new PrintifyClient(token);
 var api = PrintifyBlueprintDatabase.CreateQueryApi(Path.Combine(cacheDir, "blueprint_details"));
@@ -31,15 +35,19 @@ var api = PrintifyBlueprintDatabase.CreateQueryApi(Path.Combine(cacheDir, "bluep
 
 
 //find the shop with the name "Cache"
+LogPhase("Shop Discovery");
 var shops = await client.GetShopsAsync();
+LogStatus($"Loaded {shops.Count} shop(s) from Printify.");
 var shop = shops.FirstOrDefault(s => string.Equals(s.Title, "Cache", StringComparison.OrdinalIgnoreCase));
 if (shop is null){
     Console.Error.WriteLine("No shop with the name 'Cache' was found. Please create a shop named 'Cache' and run this program again.");
     return 1;
 }
+LogStatus($"Using cache shop {shop.Id} ({shop.Title}).");
 
 //get a list of all products in the shop
 var products = await client.GetAllProductsAsync(shop.Id);
+LogStatus($"Loaded {products.Count} existing product(s) from the cache shop.");
 
 // int idx = 0;
 // foreach (var product in products){
@@ -60,28 +68,28 @@ var products = await client.GetAllProductsAsync(shop.Id);
 
 
 
-//title should be "PAGEID-BPID-PID" and description should be "VARIANTID-OPTION1=VALUE1,OPTION2=VALUE2..." 
-//needs to be in the form of "BPID-PID-VariantID-OPTIONS" where options are "OPTION1=VALUE1,OPTION2=VALUE2" or "no_options" if there are no options. This way I can easily check if a combination of blueprint, provider, variant and options is already in the cache or not by checking if the string "BPID-PID-VariantID-OPTIONS" is in the set. I can also easily find all variants for a blueprint and provider by checking for strings that start with "BPID-PID-". The product tags should include "BPID-PID" for the provider, and "BPID-PID-VariantID" for each variant in that product. This way I can easily find the products later and check if they have the correct variants and options.
-var productsSet = products.SelectMany(p =>p.Description.Split("\n").Select(d => p.Title.Substring(p.Title.IndexOf("-")+1)+"-"+d)).ToHashSet();//should be VID-OPTION1=VALUE1,OPTION2=VALUE2...\n
-
-
 //get all blueprints ids from the cache
-var blueprintIds = api.BlueprintIds;
+LogPhase("Blueprint Sync");
+var blueprintIds = api.BlueprintIds.ToHashSet();
 //get all blueprint ids from the client
 var clientBlueprints = await client.GetBlueprintsAsync();
 var clientBlueprintIds = clientBlueprints.Select(b => b.Id).ToHashSet();
+LogStatus($"Cached blueprint count: {blueprintIds.Count()}. Client blueprint count: {clientBlueprintIds.Count}.");
 //find blueprint ids that are in the client but not in the cache
 var missingBlueprintIds = clientBlueprintIds.Where(id => !blueprintIds.Contains(id)).ToList();
 if (missingBlueprintIds.Count != 0){
     //update the cache with the missing blueprints
-    Console.WriteLine($"Found {missingBlueprintIds.Count} missing blueprints. Updating cache...");
+    LogStatus($"Found {missingBlueprintIds.Count} missing blueprint(s). Refreshing cached blueprint details.");
     foreach (var blueprintId in missingBlueprintIds){
         try{
+            LogStatus($"Fetching blueprint {blueprintId} metadata.");
             var blueprint = await client.GetBlueprintAsync(blueprintId);
             var providers = await client.GetBlueprintPrintProvidersAsync(blueprintId);
+            LogStatus($"Blueprint {blueprint.Id} has {providers.Count} provider(s) to cache.");
             var providerDetails = new List<object>();
             foreach (var provider in providers)
             {
+                LogStatus($"Fetching provider {provider.Id} for blueprint {blueprint.Id}.");
                 VariantResponse? variants = null;
                 try
                 {
@@ -137,166 +145,247 @@ if (missingBlueprintIds.Count != 0){
             await File.WriteAllTextAsync(
                 Path.Combine(cacheDir, "blueprints.json"),
                 JsonSerializer.Serialize(blueprints, new JsonSerializerOptions { WriteIndented = true }));
+            LogStatus($"Updated blueprints.json after caching blueprint {blueprintId}.");
 
         }catch (PrintifyApiException ex)
         {
             Console.Error.WriteLine($"\n  WARNING: Failed to fetch blueprint {blueprintId}: {ex.Message}");
         }
     }
-    Console.WriteLine("No missing blueprints found. Cache is up to date.");
-    return 0;
+}
+else
+{
+    LogStatus("No missing blueprints detected.");
 }
 
 api = PrintifyBlueprintDatabase.CreateQueryApi(Path.Combine(cacheDir, "blueprint_details"));
-// compile all the BPID-PID-VariantID-OPTIONS combinations from the cache and check if they all exist in the client. If any are missing, print them out.
-Dictionary<int,Dictionary<int,int>> totalPerBlueprint = new Dictionary<int,Dictionary<int,int>>();
-Dictionary<int, Dictionary<int,List<int>>> missingCombinationsPerProvider = new Dictionary<int, Dictionary<int, List<int>>>();
-foreach (var blueprintId in api.BlueprintIds)
+LogPhase("Probe Product Index");
+var existingProbeProductsByProvider = new Dictionary<(int BlueprintId, int ProviderId), List<(Product Product, int PageNumber, HashSet<string> CombinationKeys, bool HasMalformedDescription)>>();
+foreach (var product in products)
 {
-    if(!totalPerBlueprint.ContainsKey(blueprintId)){
-        totalPerBlueprint[blueprintId] = new Dictionary<int,int>();
-    }
-    if(!missingCombinationsPerProvider.ContainsKey(blueprintId)){
-        missingCombinationsPerProvider[blueprintId] = new Dictionary<int,List<int>>();
-    }
-    var detail = api.GetBlueprintDetail(blueprintId);
-    foreach (var providerDetail in detail.PrintProviders)
+    if (!TryParseProbeProduct(product, out var parsedProduct))
     {
-        if(!totalPerBlueprint[blueprintId].ContainsKey(providerDetail.Provider.Id)){
-            totalPerBlueprint[blueprintId][providerDetail.Provider.Id] = 0;
-        }
-        if(!missingCombinationsPerProvider[blueprintId].ContainsKey(providerDetail.Provider.Id)){
-            missingCombinationsPerProvider[blueprintId][providerDetail.Provider.Id] = new List<int>();
-        }
-        var variants = providerDetail.Variants.Variants;
-        foreach (var variant in variants)
-        {
-            string optins = variant.Options != null ? string.Join(",", variant.Options.Select(o => $"{o.Key}={o.Value}")) : "no_options";
-            string combinationKey = $"{blueprintId}-{providerDetail.Provider.Id}-{variant.Id}-{optins}";
-            //check against the set to see what needs to be added
-            if (!productsSet.Contains(combinationKey))
-            {
-                missingCombinationsPerProvider[blueprintId][providerDetail.Provider.Id].Add(variant.Id);
-            }
-            totalPerBlueprint[blueprintId][providerDetail.Provider.Id]++;
-        }
+        continue;
     }
+
+    var providerKey = (parsedProduct.BlueprintId, parsedProduct.ProviderId);
+    if (!existingProbeProductsByProvider.TryGetValue(providerKey, out var providerProducts))
+    {
+        providerProducts = new List<(Product Product, int PageNumber, HashSet<string> CombinationKeys, bool HasMalformedDescription)>();
+        existingProbeProductsByProvider[providerKey] = providerProducts;
+    }
+
+    providerProducts.Add((product, parsedProduct.PageNumber, parsedProduct.CombinationKeys, parsedProduct.HasMalformedDescription));
 }
 
-//now group the blueprints by provider and create a product for each provider with all the variants of that provider
-//now i need to group them together into 100 varients per product, and create a product for each group. The product title should be "Pageid-BPID-PID" where X is the page number for that provider's variants. The product description should be the list of variants in that product, with their options and variant ids. The product tags should include "BPID-PID" for the provider, and "BPID-PID-VariantID" for each variant in that product. This way I can easily find the products later and check if they have the correct variants and options.
+foreach (var providerProducts in existingProbeProductsByProvider.Values)
+{
+    providerProducts.Sort((left, right) => left.PageNumber.CompareTo(right.PageNumber));
+}
+LogStatus($"Indexed {existingProbeProductsByProvider.Count} blueprint/provider probe product group(s).");
 
 int MaxProbeVariantBatchSize = 100;
-List<(int PID, int BlueprintId, List<int>)> providersToPublish = new List<(int PID, int BlueprintId, List<int>)>();
-List<string> submatches = new();
-foreach (var blueprintId in missingCombinationsPerProvider.Keys)
+LogPhase("Provider Diff");
+List<(int PID, int BlueprintId, List<int> VariantIds)> providersToRebuild = new List<(int PID, int BlueprintId, List<int> VariantIds)>();
+var totalProviderCount = api.BlueprintIds.Sum(id => api.GetBlueprintDetail(id).PrintProviders.Count);
+var scannedProviderCount = 0;
+foreach (var blueprintId in api.BlueprintIds.OrderBy(id => id))
 {
-    foreach (var providerId in missingCombinationsPerProvider[blueprintId].Keys)
+    var detail = api.GetBlueprintDetail(blueprintId);
+    foreach (var providerDetail in detail.PrintProviders.OrderBy(provider => provider.Provider.Id))
     {
-        submatches.Add($"-{blueprintId}-{providerId}-");
-        var variantIds = missingCombinationsPerProvider[blueprintId][providerId];
-        while(variantIds.Count > 0)
+        scannedProviderCount++;
+        if (scannedProviderCount == 1 || scannedProviderCount % 25 == 0 || scannedProviderCount == totalProviderCount)
         {
-            var item1 = (PID: providerId, BlueprintId: blueprintId);
-            var batch = variantIds.Take(MaxProbeVariantBatchSize).ToList();
-            variantIds = variantIds.Skip(MaxProbeVariantBatchSize).ToList();
-            providersToPublish.Add((item1.PID, item1.BlueprintId, batch.ToList()));
+            LogStatus($"Checked {scannedProviderCount}/{totalProviderCount} blueprint/provider pair(s). Rebuilds queued: {providersToRebuild.Count}.");
         }
+
+        if (providerDetail.Variants is null)
+        {
+            Console.WriteLine($"Skipping blueprint {blueprintId}, provider {providerDetail.Provider.Id} because variant data is missing from the cache.");
+            continue;
+        }
+
+        var providerKey = (BlueprintId: blueprintId, ProviderId: providerDetail.Provider.Id);
+        var desiredVariants = providerDetail.Variants.Variants;
+        var desiredCombinationKeys = desiredVariants
+            .Select(variant => BuildCombinationKey(blueprintId, providerDetail.Provider.Id, variant.Id, variant.Options))
+            .ToHashSet(StringComparer.Ordinal);
+
+        existingProbeProductsByProvider.TryGetValue(providerKey, out var existingProviderProducts);
+        var existingCombinationCounts = new Dictionary<string, int>(StringComparer.Ordinal);
+        var hasMalformedDescription = false;
+
+        foreach (var existingProviderProduct in existingProviderProducts ?? Enumerable.Empty<(Product Product, int PageNumber, HashSet<string> CombinationKeys, bool HasMalformedDescription)>())
+        {
+            hasMalformedDescription |= existingProviderProduct.HasMalformedDescription;
+
+            foreach (var combinationKey in existingProviderProduct.CombinationKeys)
+            {
+                existingCombinationCounts[combinationKey] = existingCombinationCounts.TryGetValue(combinationKey, out var count)
+                    ? count + 1
+                    : 1;
+            }
+        }
+
+        var existingCombinationKeys = existingCombinationCounts.Keys.ToHashSet(StringComparer.Ordinal);
+        var missingCount = desiredCombinationKeys.Except(existingCombinationKeys, StringComparer.Ordinal).Count();
+        var staleCount = existingCombinationKeys.Except(desiredCombinationKeys, StringComparer.Ordinal).Count();
+        var duplicateCount = existingCombinationCounts.Count(entry => entry.Value > 1);
+        if (missingCount == 0 && staleCount == 0 && duplicateCount == 0 && !hasMalformedDescription)
+        {
+            continue;
+        }
+
+        Console.WriteLine(
+            $"Rebuilding blueprint {blueprintId}, provider {providerDetail.Provider.Id}: " +
+            $"{missingCount} missing, {staleCount} stale, {duplicateCount} duplicate, malformed description: {hasMalformedDescription}.");
+
+        var providerVariantIds = desiredVariants
+            .Select(variant => variant.Id)
+            .Distinct()
+            .ToList();
+        if (providerVariantIds.Count == 0)
+        {
+            continue;
+        }
+
+        providersToRebuild.Add((providerDetail.Provider.Id, blueprintId, providerVariantIds));
     }
 }
+LogStatus($"Queued {providersToRebuild.Count} provider rebuild(s).");
 
-
-//find all submatches for 1-BPID-PID and delete all "pages" of them
-foreach (var submatch in submatches)
+LogPhase("Cleanup");
+var totalProductsToDelete = providersToRebuild
+    .Select(providerToRebuild => existingProbeProductsByProvider.TryGetValue((providerToRebuild.BlueprintId, providerToRebuild.PID), out var existingProviderProducts)
+        ? existingProviderProducts.Count
+        : 0)
+    .Sum();
+LogStatus($"Deleting {totalProductsToDelete} stale probe product page(s).");
+var deletedProducts = 0;
+foreach (var providerToRebuild in providersToRebuild)
 {
-    var matchingProducts = products.Where(p => p.Title.Contains(submatch)).ToList();
-    foreach (var product in matchingProducts)
+    if (!existingProbeProductsByProvider.TryGetValue((providerToRebuild.BlueprintId, providerToRebuild.PID), out var existingProviderProducts))
     {
+        continue;
+    }
+
+    foreach (var existingProviderProduct in existingProviderProducts)
+    {
+        var product = existingProviderProduct.Product;
+
         try
         {
             await client.DeleteProductAsync(shop.Id, product.Id);
-            products.Remove(product);
-            Console.WriteLine($"Deleted product {product.Id} with title {product.Title} for provider {submatch}.");
+            products.RemoveAll(existing => string.Equals(existing.Id, product.Id, StringComparison.OrdinalIgnoreCase));
+            deletedProducts++;
+            Console.WriteLine($"Deleted product {product.Id} with title {product.Title} for blueprint {providerToRebuild.BlueprintId} and provider {providerToRebuild.PID}.");
         }
         catch (PrintifyApiException ex)
         {
-            Console.Error.WriteLine($"Failed to delete product {product.Id} with title {product.Title} for provider {submatch}: {ex.Message}");
+            Console.Error.WriteLine($"Failed to delete product {product.Id} with title {product.Title} for blueprint {providerToRebuild.BlueprintId} and provider {providerToRebuild.PID}: {ex.Message}");
         }
     }
 }
 
-//make sure a template image is uploaded to the shop for the product variants to use, and get its id
+List<(int PID, int BlueprintId, List<int>)> providersToPublish = new List<(int PID, int BlueprintId, List<int>)>();
+foreach (var providerToRebuild in providersToRebuild)
+{
+    foreach (var batch in providerToRebuild.VariantIds.Chunk(MaxProbeVariantBatchSize))
+    {
+        providersToPublish.Add((providerToRebuild.PID, providerToRebuild.BlueprintId, batch.ToList()));
+    }
+}
+LogStatus($"Prepared {providersToPublish.Count} probe product page(s) to create.");
 
-//download the image
-var probeImage = await client.UploadImageByUrlAsync(PricingProductProbeImageFileName, ProbeImageUrl);
+//make sure a template image is uploaded to the shop for the product variants to use, and get its id
 
 //create the full list of products to publish with the title, description and tags as described above, and publish them as drafts only, then i can start to harvest the images of the variants and the production cost of each product and variant
 Dictionary<string,int> bpidandpidPageNumberTracker = new Dictionary<string,int>();
 var newProducts = new List<Product>();
 int index = 0;
-foreach(var item in providersToPublish)
-{
-    var blueprintId = item.BlueprintId;
-    var providerId = item.PID;
-    var variantIds = item.Item3;
-    var detail = api.GetBlueprintDetail(blueprintId);
-    var providerDetail = detail.PrintProviders.First(p => p.Provider.Id == providerId);
-    var subvariants = api.GetSubvariants(blueprintId, providerId)
-        .Where(s => variantIds.Contains(s.VariantId))
-        .ToList();
-    //create the product title, description and tags
-    var pageNumberKey = $"{blueprintId}-{providerId}";
-    if (!bpidandpidPageNumberTracker.ContainsKey(pageNumberKey))
-    {
-        bpidandpidPageNumberTracker[pageNumberKey] = 1;
-    }
-    var Pnum = bpidandpidPageNumberTracker[pageNumberKey]++;
-    var productTitle = $"{Pnum}-{blueprintId}-{providerId}";
-    var productDescription = string.Join("\n\r", subvariants.Select(s => {
-        string options = s.Options != null ? string.Join(",", s.Options.Select(p => $"{p.Key}={p.Value}")) : "no_options";
-        return $"{s.VariantId}-{options}";
-    }));
-    var productTags = new List<string> { $"1-{blueprintId}-{providerId}" };
-    productTags = new List<string> { $"1-{blueprintId}-{providerId}" };
-    //publish the product as a draft    
+UploadedImage? probeImage = null;
 
+if (providersToPublish.Count == 0)
+{
+    Console.WriteLine("All cache probe products already match the current blueprint/provider variant combinations.");
+}
+else
+{
+    LogPhase("Rebuild");
     try
     {
-        var createdProduct = await client.CreateProductAsync(shop.Id, new CreateProductRequest
+        LogStatus($"Uploading probe image {PricingProductProbeImageFileName}.");
+        probeImage = await client.UploadImageByUrlAsync(PricingProductProbeImageFileName, ProbeImageUrl);
+        LogStatus($"Uploaded probe image {probeImage.Id}. Starting product creation.");
+
+        foreach(var item in providersToPublish)
         {
-            Title = productTitle,
-            Description = productDescription,
-            BlueprintId = blueprintId,
-            PrintProviderId = providerId,
-            Tags = productTags,
-            Variants = subvariants.Select(s => new CreateProductVariant
+            var blueprintId = item.BlueprintId;
+            var providerId = item.PID;
+            var variantIds = item.Item3;
+            var detail = api.GetBlueprintDetail(blueprintId);
+            var providerDetail = detail.PrintProviders.First(p => p.Provider.Id == providerId);
+            var subvariants = api.GetSubvariants(blueprintId, providerId)
+                .Where(s => variantIds.Contains(s.VariantId))
+                .ToList();
+            //create the product title, description and tags
+            var pageNumberKey = $"{blueprintId}-{providerId}";
+            if (!bpidandpidPageNumberTracker.ContainsKey(pageNumberKey))
             {
-                Id = s.VariantId,
-                Price = 20000,
-                IsEnabled = true
-            }).ToList(),
-            PrintAreas = BuildProbePrintAreas(subvariants, probeImage.Id),
-        });
-        newProducts.Add(createdProduct);
-        //save to file 
+                bpidandpidPageNumberTracker[pageNumberKey] = 1;
+            }
+            var Pnum = bpidandpidPageNumberTracker[pageNumberKey]++;
+            var productTitle = $"{Pnum}-{blueprintId}-{providerId}";
+            var productDescription = string.Join(Environment.NewLine, subvariants.Select(s => $"{s.VariantId}-{FormatSubvariantOptions(s.Options)}"));
+            var productTags = new List<string> { $"1-{blueprintId}-{providerId}" };
+            LogStatus($"Creating probe page {index + 1}/{providersToPublish.Count} for blueprint {blueprintId}, provider {providerId}, page {Pnum} with {subvariants.Count} variant(s).");
 
+            try
+            {
+                var createdProduct = await client.CreateProductAsync(shop.Id, new CreateProductRequest
+                {
+                    Title = productTitle,
+                    Description = productDescription,
+                    BlueprintId = blueprintId,
+                    PrintProviderId = providerId,
+                    Tags = productTags,
+                    Variants = subvariants.Select(s => new CreateProductVariant
+                    {
+                        Id = s.VariantId,
+                        Price = 20000,
+                        IsEnabled = true
+                    }).ToList(),
+                    PrintAreas = BuildProbePrintAreas(subvariants, probeImage.Id),
+                });
+                createdProduct = await WaitForProbeProductImagesAsync(client, shop.Id, createdProduct);
+                newProducts.Add(createdProduct);
 
-        PrintLoadingBar(++index, providersToPublish.Count);
-        Console.WriteLine($"Created draft product {createdProduct.Id} with title {createdProduct.Title} for provider {providerId} with blueprint {blueprintId}.");
-        Console.CursorTop -=2;
+                PrintLoadingBar(++index, providersToPublish.Count);
+                Console.WriteLine($"Created draft product {createdProduct.Id} with title {createdProduct.Title} for provider {providerId} with blueprint {blueprintId}.");
+                Console.CursorTop -=2;
+            }
+            catch (PrintifyApiException ex)
+            {
+                Console.Error.WriteLine($"Failed to create draft product for provider {providerId} with blueprint {blueprintId}: {ex.Message}");
+                Console.WriteLine();
+            }
+        }
     }
-    catch (PrintifyApiException ex)
+    finally
     {
-        Console.Error.WriteLine($"Failed to create draft product for provider {providerId} with blueprint {blueprintId}: {ex.Message}");
-        Console.WriteLine();
+        if (probeImage is not null)
+        {
+            LogStatus($"Archiving probe image {probeImage.Id}.");
+            await ArchiveProbeUploadSafeAsync(client, probeImage.Id);
+        }
     }
 }
 
-//this 
-products.AddRange(newProducts);
-
 //group back together all the variant ids by provider and blueprint so it can be checked together
+LogPhase("Cache Write");
 Dictionary<(int BlueprintId, int ProviderId), List<ProductVariant>> cachedVariantsPerProvider = new ();
+Dictionary<(int BlueprintId, int ProviderId,int variationid),List<string>> imagesUrlsCached = new ();
 foreach (var product in newProducts)
 {
     var key = (product.BlueprintId, product.PrintProviderId);
@@ -305,57 +394,121 @@ foreach (var product in newProducts)
         cachedVariantsPerProvider[key] = new List<ProductVariant>();
     }
     cachedVariantsPerProvider[key].AddRange(product.Variants);
+
+    AddProductImagesToCache(product, imagesUrlsCached);
 }
 //check if the files exists for existing products and if not, add them to the cache as well
 foreach (var product in products)
 {
     var key = (product.BlueprintId, product.PrintProviderId);
-    if (!cachedVariantsPerProvider.ContainsKey(key))
-    {
-        cachedVariantsPerProvider[key] = new List<ProductVariant>();
-    }
     var blueprintId = product.BlueprintId;
     var providerId = product.PrintProviderId;
-    var variants = cachedVariantsPerProvider[key];
-    var cachePath = Path.Combine(cacheDir, "variants", $"{blueprintId}-{providerId}.json");
-    if (!File.Exists(cachePath))
-        cachedVariantsPerProvider[key].AddRange(product.Variants);
+    var priceCachePath = Path.Combine(cacheDir, "variants","prices", $"{blueprintId}-{providerId}.json");
+    Product? fullProduct = null;
+
+    if (!HasUsableVariantPriceCache(priceCachePath))
+    {
+        var productWithPricing = product;
+        if (!HasAnyVariantCosts(productWithPricing))
+        {
+            fullProduct ??= await LoadFullProductSafeAsync(client, shop.Id, productWithPricing);
+            productWithPricing = fullProduct;
+        }
+
+        if (!cachedVariantsPerProvider.ContainsKey(key))
+        {
+            cachedVariantsPerProvider[key] = new List<ProductVariant>();
+        }
+
+        cachedVariantsPerProvider[key].AddRange(productWithPricing.Variants);
+    }
+
+    var imageCachePath = Path.Combine(cacheDir, "variants","images", $"{blueprintId}-{providerId}.json");
+    if (!File.Exists(imageCachePath))
+    {
+        var productWithImages = product;
+        if ((productWithImages.Images?.Count ?? 0) == 0)
+        {
+            fullProduct ??= await LoadFullProductSafeAsync(client, shop.Id, productWithImages);
+            productWithImages = fullProduct;
+        }
+
+        AddProductImagesToCache(productWithImages, imagesUrlsCached);
+    }
+
 }
-// same them to a cahe file in Cached/vaiants/BPID-PID.json with the variant id, options and image url for each variant, so it can be used later to check if the variants have the correct images and options in the cache
+LogStatus($"Collected variant cache data for {cachedVariantsPerProvider.Count} provider pair(s).");
+//i want the same structure as the prices cache 
+//Cached/variants/images/BPID-PID.json with the image url for each variant in a json array object like this: { "id": 123, "ImageUrls": ["url1", "url2"] }
+var grouped = imagesUrlsCached.GroupBy(kv => (kv.Key.BlueprintId, kv.Key.ProviderId)).ToList();
+var variantsImgesToCachePerProvider = new Dictionary<(int BlueprintId, int ProviderId), List<(int vid, List<string> imageUrls)>>();
+
+foreach(var group in grouped)
+{
+        var blueprintId = group.Key.BlueprintId;
+        var providerId = group.Key.ProviderId;
+        var variantId = group.ToArray()[0].Key.variationid;
+        var cachePath = Path.Combine(cacheDir, "variants","images", $"{blueprintId}-{providerId}.json");
+        if (!File.Exists(cachePath))
+        {
+            if(!variantsImgesToCachePerProvider.ContainsKey((blueprintId, providerId)))
+            {
+                variantsImgesToCachePerProvider[(blueprintId, providerId)] = new List<(int vid, List<string> imageUrls)>();
+            }
+            variantsImgesToCachePerProvider[(blueprintId, providerId)].AddRange(group.Select(g => (g.Key.variationid, g.Value)).ToList());
+        }
+}
+    LogStatus($"Prepared {variantsImgesToCachePerProvider.Count} image cache file(s) to write.");
+
+// same them to a cahe file in Cached/vaiants/prices/BPID-PID.json with the variant id, options and image url for each variant, so it can be used later to check if the variants have the correct images and options in the cache
 foreach (var key in cachedVariantsPerProvider.Keys)
 {
     var blueprintId = key.BlueprintId;
     var providerId = key.ProviderId;
-    var variants = cachedVariantsPerProvider[key];
-    var cachePath = Path.Combine(cacheDir, "variants", $"{blueprintId}-{providerId}.json");
-    Directory.CreateDirectory(Path.GetDirectoryName(cachePath));
+    var variants = cachedVariantsPerProvider[key]
+        .GroupBy(variant => variant.Id)
+        .Select(group => group.First())
+        .ToList();
+    if (variants.Count == 0)
+    {
+        continue;
+    }
+
+    var cachePath = Path.Combine(cacheDir, "variants","prices", $"{blueprintId}-{providerId}.json");
+    var cacheDirectory = Path.GetDirectoryName(cachePath);
+    if (!string.IsNullOrWhiteSpace(cacheDirectory))
+    {
+        Directory.CreateDirectory(cacheDirectory);
+    }
     await File.WriteAllTextAsync(cachePath, JsonSerializer.Serialize(variants, new JsonSerializerOptions { WriteIndented = true }));
     Console.WriteLine($"Saved {variants.Count} variants for blueprint {blueprintId} and provider {providerId} to cache.");
 }
 
+//save the list of images to a cache file in Cached/variant/images/BPID-PID.json with the image url for each variant, so it can be used later to check if the variants have the correct images in the cache   
+foreach (var key in variantsImgesToCachePerProvider.Keys)
+{
+    var blueprintId = key.BlueprintId;
+    var providerId = key.ProviderId;
+    var cachePath = Path.Combine(cacheDir, "variants","images", $"{blueprintId}-{providerId}.json");
+    var cacheDirectory = Path.GetDirectoryName(cachePath);
+    var variantImageEntries = variantsImgesToCachePerProvider[key]
+        .Select(entry => new
+        {
+            id = entry.vid,
+            urls = entry.imageUrls
+        })
+        .ToList();
 
+    if (!string.IsNullOrWhiteSpace(cacheDirectory))
+    {
+        Directory.CreateDirectory(cacheDirectory);
+    }
+    await File.WriteAllTextAsync(cachePath, JsonSerializer.Serialize(variantImageEntries, new JsonSerializerOptions { WriteIndented = true }));
+    Console.WriteLine($"Saved {variantImageEntries.Count} image urls for blueprint {blueprintId}, provider {providerId} to cache.");
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+LogPhase("Complete");
+LogStatus($"Run complete. Deleted {deletedProducts} product(s), created {newProducts.Count} product(s), wrote {cachedVariantsPerProvider.Count} variant cache file(s), wrote {variantsImgesToCachePerProvider.Count} image cache file(s).");
 
 
 
@@ -369,13 +522,291 @@ void PrintLoadingBar(int current, int total)
     Console.WriteLine($"\r{bar}");
 }
 
-
-
-async Task<UploadedImage> UploadProbeImageAsync(PrintifyClient client)
+void LogPhase(string phase)
 {
-    return await client.UploadImageByUrlAsync(
-        $"variant-image-probe-{DateTime.UtcNow:yyyyMMdd-HHmmss}.png",
-        ProbeImageUrl);
+    Console.WriteLine();
+    Console.WriteLine($"[{DateTime.UtcNow:O}] {phase}");
+}
+
+void LogStatus(string message)
+{
+    var elapsed = DateTime.UtcNow - runStartedAt;
+    Console.WriteLine($"  [{elapsed:mm\\:ss}] {message}");
+}
+
+static bool TryParseProbeProduct(
+    Product product,
+    out (int BlueprintId, int ProviderId, int PageNumber, HashSet<string> CombinationKeys, bool HasMalformedDescription) parsedProduct)
+{
+    parsedProduct = default;
+
+    if (!TryParseProbeProductIdentity(product, out var blueprintId, out var providerId, out var pageNumber))
+    {
+        return false;
+    }
+
+    var combinationKeys = new HashSet<string>(StringComparer.Ordinal);
+    var hasMalformedDescription = false;
+    foreach (var line in SplitDescriptionLines(product.Description))
+    {
+        if (TryBuildCombinationKeyFromDescriptionLine(blueprintId, providerId, line, out var combinationKey))
+        {
+            combinationKeys.Add(combinationKey);
+            continue;
+        }
+
+        hasMalformedDescription = true;
+    }
+
+    parsedProduct = (blueprintId, providerId, pageNumber, combinationKeys, hasMalformedDescription);
+    return true;
+}
+
+static bool TryParseProbeProductIdentity(Product product, out int blueprintId, out int providerId, out int pageNumber)
+{
+    blueprintId = 0;
+    providerId = 0;
+    pageNumber = 0;
+
+    var titleParts = (product.Title ?? string.Empty).Split('-', StringSplitOptions.TrimEntries);
+    if (titleParts.Length == 3 &&
+        int.TryParse(titleParts[0], out pageNumber) &&
+        int.TryParse(titleParts[1], out blueprintId) &&
+        int.TryParse(titleParts[2], out providerId))
+    {
+        return true;
+    }
+
+    foreach (var tag in product.Tags ?? Enumerable.Empty<string>())
+    {
+        var tagParts = tag.Split('-', StringSplitOptions.TrimEntries);
+        if (tagParts.Length == 3 &&
+            int.TryParse(tagParts[0], out var tagPrefix) &&
+            tagPrefix == 1 &&
+            int.TryParse(tagParts[1], out blueprintId) &&
+            int.TryParse(tagParts[2], out providerId))
+        {
+            pageNumber = 0;
+            return true;
+        }
+    }
+
+    return false;
+}
+
+static IEnumerable<string> SplitDescriptionLines(string? description)
+{
+    return (description ?? string.Empty)
+        .Split(new[] { "\r\n", "\n\r", "\n", "\r" }, StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)
+        .Where(line => !string.IsNullOrWhiteSpace(line));
+}
+
+static bool TryBuildCombinationKeyFromDescriptionLine(int blueprintId, int providerId, string line, out string combinationKey)
+{
+    combinationKey = string.Empty;
+
+    var separatorIndex = line.IndexOf('-');
+    if (separatorIndex <= 0)
+    {
+        return false;
+    }
+
+    if (!int.TryParse(line[..separatorIndex], out var variantId))
+    {
+        return false;
+    }
+
+    var optionsText = line[(separatorIndex + 1)..].Trim();
+    combinationKey = $"{blueprintId}-{providerId}-{variantId}-{NormalizeOptionsText(optionsText)}";
+    return true;
+}
+
+static string BuildCombinationKey(int blueprintId, int providerId, int variantId, Dictionary<string, object>? options)
+{
+    return $"{blueprintId}-{providerId}-{variantId}-{FormatVariantOptions(options)}";
+}
+
+static string FormatSubvariantOptions(IReadOnlyDictionary<string, string>? options)
+{
+    if (options is null || options.Count == 0)
+    {
+        return "no_options";
+    }
+
+    return string.Join(
+        ",",
+        options
+            .OrderBy(option => option.Key, StringComparer.OrdinalIgnoreCase)
+            .ThenBy(option => option.Value, StringComparer.Ordinal)
+            .Select(option => $"{option.Key}={option.Value}"));
+}
+
+static string FormatVariantOptions(Dictionary<string, object>? options)
+{
+    if (options is null || options.Count == 0)
+    {
+        return "no_options";
+    }
+
+    return string.Join(
+        ",",
+        options
+            .OrderBy(option => option.Key, StringComparer.OrdinalIgnoreCase)
+            .ThenBy(option => NormalizeOptionValue(option.Value), StringComparer.Ordinal)
+            .Select(option => $"{option.Key}={NormalizeOptionValue(option.Value)}"));
+}
+
+static string NormalizeOptionsText(string? optionsText)
+{
+    if (string.IsNullOrWhiteSpace(optionsText) || string.Equals(optionsText, "no_options", StringComparison.OrdinalIgnoreCase))
+    {
+        return "no_options";
+    }
+
+    var normalizedOptions = optionsText
+        .Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)
+        .Select(option =>
+        {
+            var separatorIndex = option.IndexOf('=');
+            return separatorIndex >= 0
+                ? (Key: option[..separatorIndex].Trim(), Value: option[(separatorIndex + 1)..].Trim())
+                : (Key: option.Trim(), Value: string.Empty);
+        })
+        .OrderBy(option => option.Key, StringComparer.OrdinalIgnoreCase)
+        .ThenBy(option => option.Value, StringComparer.Ordinal)
+        .ToList();
+
+    return normalizedOptions.Count == 0
+        ? "no_options"
+        : string.Join(
+            ",",
+            normalizedOptions.Select(option => $"{option.Key}={option.Value}"));
+}
+
+static string NormalizeOptionValue(object? value)
+{
+    return value switch
+    {
+        null => string.Empty,
+        JsonElement element when element.ValueKind == JsonValueKind.Null || element.ValueKind == JsonValueKind.Undefined => string.Empty,
+        JsonElement element when element.ValueKind == JsonValueKind.String => element.GetString() ?? string.Empty,
+        JsonElement element => element.ToString(),
+        _ => value.ToString() ?? string.Empty
+    };
+}
+
+async Task<Product> WaitForProbeProductImagesAsync(PrintifyClient printifyClient, int shopId, Product product)
+{
+    var current = product;
+    if ((current.Images?.Count ?? 0) > 0)
+    {
+        LogStatus($"Product {current.Id} already has mockup images.");
+        return current;
+    }
+
+    LogStatus($"Waiting for mockup images for product {current.Id} ({current.Title}).");
+
+    for (var attempt = 0; attempt < 5; attempt++)
+    {
+        await Task.Delay(TimeSpan.FromSeconds(1.5));
+        LogStatus($"Polling images for product {current.Id}: attempt {attempt + 1}/5.");
+        current = await printifyClient.GetProductAsync(shopId, current.Id);
+
+        if ((current.Images?.Count ?? 0) > 0)
+        {
+            LogStatus($"Mockup images ready for product {current.Id}.");
+            return current;
+        }
+    }
+
+    LogStatus($"Mockup images were still unavailable after polling product {current.Id}.");
+
+    return current;
+}
+
+async Task<Product> LoadFullProductSafeAsync(PrintifyClient printifyClient, int shopId, Product product)
+{
+    try
+    {
+        return await printifyClient.GetProductAsync(shopId, product.Id);
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Failed to load full details for existing product {product.Id}: {ex.Message}");
+        return product;
+    }
+}
+
+static bool HasAnyVariantCosts(Product product)
+{
+    return product.Variants.Any(variant => variant.Cost > 0);
+}
+
+static bool HasUsableVariantPriceCache(string cachePath)
+{
+    if (!File.Exists(cachePath))
+    {
+        return false;
+    }
+
+    try
+    {
+        using var stream = File.OpenRead(cachePath);
+        var cachedVariants = JsonSerializer.Deserialize<List<ProductVariant>>(stream, new JsonSerializerOptions
+        {
+            PropertyNameCaseInsensitive = true,
+            ReadCommentHandling = JsonCommentHandling.Skip,
+            AllowTrailingCommas = true
+        });
+
+        return cachedVariants?.Any(variant => variant.Id > 0 && variant.Cost > 0) == true;
+    }
+    catch
+    {
+        return false;
+    }
+}
+
+static void AddProductImagesToCache(
+    Product product,
+    Dictionary<(int BlueprintId, int ProviderId, int variationid), List<string>> imagesUrlsCached)
+{
+    foreach (var image in product.Images?.OfType<ProductMockupImage>() ?? Enumerable.Empty<ProductMockupImage>())
+    {
+        var imageUrl = image.Src?.Trim();
+        if (string.IsNullOrWhiteSpace(imageUrl))
+        {
+            continue;
+        }
+
+        foreach (var variantId in image.VariantIds.Distinct())
+        {
+            var key = (product.BlueprintId, product.PrintProviderId, variantId);
+            if (!imagesUrlsCached.TryGetValue(key, out var imageUrls))
+            {
+                imageUrls = new List<string>();
+                imagesUrlsCached[key] = imageUrls;
+            }
+
+            if (!imageUrls.Contains(imageUrl))
+            {
+                imageUrls.Add(imageUrl);
+            }
+        }
+    }
+}
+
+async Task ArchiveProbeUploadSafeAsync(PrintifyClient printifyClient, string imageId)
+{
+    try
+    {
+        await printifyClient.ArchiveUploadAsync(imageId);
+        Console.WriteLine($"Archived probe image {imageId}.");
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Failed to archive probe image {imageId}: {ex.Message}");
+    }
 }
 
 static string BuildPlaceholderSignature(IReadOnlyList<VariantPlaceholder> placeholders)

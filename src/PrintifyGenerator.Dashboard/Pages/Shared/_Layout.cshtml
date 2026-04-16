@@ -3,7 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
     <title>@ViewData["Title"] - Printify Generator Dashboard</title>
+    <script>
+        (() => {
+            try {
+                const storedTheme = localStorage.getItem("dashboard-theme");
+                document.documentElement.dataset.theme = storedTheme === "light" ? "light" : "dark";
+            } catch {
+                document.documentElement.dataset.theme = "dark";
+            }
+        })();
+    </script>
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/PrintifyGenerator.Dashboard.styles.css" asp-append-version="true" />
 </head>
@@ -19,17 +30,54 @@
     <div class="app-shell">
         <header class="app-header">
             <a class="brand-mark" asp-page="/Stats">Printify Generator Dashboard</a>
-            <nav class="nav-strip">
-                <a class="nav-link @(isStatsPage ? "is-active" : null)" asp-page="/Stats">Stats</a>
-                <a class="nav-link @(isBlueprintCatalogPage ? "is-active" : null)" asp-page="/BlueprintCatalog">Catalog</a>
-                <a class="nav-link @(isQcQueuePage ? "is-active" : null)" asp-page="/QcQueue">QC Queue</a>
-                <a class="nav-link @(isGeneratedImagesPage ? "is-active" : null)" asp-page="/GeneratedImages">Generated Images</a>
-            </nav>
+            <div class="app-header-actions">
+                <nav class="nav-strip">
+                    <a class="nav-link @(isStatsPage ? "is-active" : null)" asp-page="/Stats">Stats</a>
+                    <a class="nav-link @(isBlueprintCatalogPage ? "is-active" : null)" asp-page="/BlueprintCatalog">Catalog</a>
+                    <a class="nav-link @(isQcQueuePage ? "is-active" : null)" asp-page="/QcQueue">QC Queue</a>
+                    <a class="nav-link @(isGeneratedImagesPage ? "is-active" : null)" asp-page="/GeneratedImages">Generated Images</a>
+                </nav>
+                <button type="button" class="theme-toggle" data-theme-toggle aria-live="polite">Light mode</button>
+            </div>
         </header>
         <main role="main">
             @RenderBody()
         </main>
     </div>
+
+    <script>
+        (() => {
+            const root = document.documentElement;
+            const toggle = document.querySelector("[data-theme-toggle]");
+            if (!toggle) {
+                return;
+            }
+
+            const getTheme = () => root.dataset.theme === "light" ? "light" : "dark";
+
+            const syncThemeToggle = () => {
+                const isDark = getTheme() === "dark";
+                toggle.textContent = isDark ? "Light mode" : "Dark mode";
+                toggle.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
+                toggle.setAttribute("aria-pressed", isDark ? "true" : "false");
+            };
+
+            syncThemeToggle();
+
+            toggle.addEventListener("click", () => {
+                const nextTheme = getTheme() === "dark" ? "light" : "dark";
+                root.dataset.theme = nextTheme;
+
+                try {
+                    localStorage.setItem("dashboard-theme", nextTheme);
+                } catch {
+                    // Ignore storage failures and still swap the live theme.
+                }
+
+                syncThemeToggle();
+            });
+        })();
+    </script>
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>

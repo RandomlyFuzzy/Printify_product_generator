@@ -4,6 +4,9 @@
     ViewData["Title"] = "QC Queue";
     var snapshot = Model.Snapshot;
     var summary = snapshot.Summary;
+    var pagination = Model.Pagination;
+    var visibleImages = Model.VisibleImages;
+    var qcPages = pagination.GetVisiblePageNumbers();
 }
 
 <main class="dashboard-shell page-shell" data-qc-page>
@@ -22,11 +25,15 @@
             </div>
             <div>
                 <span class="meta-label">Images shown</span>
-                <strong id="qc-visible-count">@snapshot.Images.Count</strong>
+                <strong id="qc-visible-count">@pagination.CurrentPageItemCount</strong>
             </div>
             <div>
                 <span class="meta-label">Minimum publish score</span>
                 <strong>@snapshot.Settings.MinimumPublishScore.ToString("0.0")</strong>
+            </div>
+            <div>
+                <span class="meta-label">Page</span>
+                <strong>@pagination.CurrentPage / @pagination.TotalPageCount</strong>
             </div>
         </div>
     </section>
@@ -59,10 +66,58 @@
             <span class="muted">Allow only overrides the score threshold. Safety flags still block continuation.</span>
         </div>
 
-        <p id="qc-empty-state" class="muted" hidden="@(snapshot.Images.Count != 0)">No images matched the current filter.</p>
+        @if (snapshot.Images.Count > 0)
+        {
+            <div class="pager-toolbar">
+                <div class="pager-summary">
+                    <span class="subtle-label">Results</span>
+                    <strong>Showing @pagination.StartItemIndex-@pagination.EndItemIndex of @pagination.TotalItemCount images</strong>
+                    <span class="muted">Page @pagination.CurrentPage of @pagination.TotalPageCount</span>
+                </div>
 
-        <div id="qc-list" class="qc-list" hidden="@(snapshot.Images.Count == 0)">
-            @foreach (var item in snapshot.Images)
+                @if (pagination.TotalPageCount > 1)
+                {
+                    <nav class="pager-nav" aria-label="QC queue pages">
+                        @if (pagination.HasPreviousPage)
+                        {
+                            <a asp-page="/QcQueue"
+                               asp-route-status="@Model.Status"
+                                         asp-route-pageNumber="@(pagination.CurrentPage - 1)"
+                               class="filter-pill pagination-link">Previous</a>
+                        }
+                        else
+                        {
+                            <span class="filter-pill pagination-link is-disabled">Previous</span>
+                        }
+
+                        @foreach (var pageNumber in qcPages)
+                        {
+                            <a asp-page="/QcQueue"
+                               asp-route-status="@Model.Status"
+                                         asp-route-pageNumber="@pageNumber"
+                               class="filter-pill pagination-link @(pageNumber == pagination.CurrentPage ? "is-active" : null)">@pageNumber</a>
+                        }
+
+                        @if (pagination.HasNextPage)
+                        {
+                            <a asp-page="/QcQueue"
+                               asp-route-status="@Model.Status"
+                                         asp-route-pageNumber="@(pagination.CurrentPage + 1)"
+                               class="filter-pill pagination-link">Next</a>
+                        }
+                        else
+                        {
+                            <span class="filter-pill pagination-link is-disabled">Next</span>
+                        }
+                    </nav>
+                }
+            </div>
+        }
+
+        <p id="qc-empty-state" class="muted" hidden="@(visibleImages.Count != 0)">No images matched the current filter.</p>
+
+        <div id="qc-list" class="qc-list" hidden="@(visibleImages.Count == 0)">
+            @foreach (var item in visibleImages)
             {
                 var qcLabel = QcQueueModel.GetQcLabel(item);
                 var qcCssClass = QcQueueModel.GetQcCssClass(item);
@@ -111,6 +166,7 @@
                             <form method="post" asp-page-handler="SetOverride" class="qc-action-form" data-override-form>
                                 <input type="hidden" name="imagePath" value="@item.ImagePath" />
                                 <input type="hidden" name="status" value="@Model.Status" />
+                                <input type="hidden" name="pageNumber" value="@pagination.CurrentPage" />
 
                                 <div class="qc-button-stack">
                                     <button type="submit" name="mode" value="force-allow" class="primary-button @(item.PublishOverrideMode == PublishingOverrideModes.ForceAllow ? "button-selected" : null)" disabled="@(!item.CanForceAllow)">Allow to Continue</button>
@@ -125,6 +181,51 @@
                     </article>
             }
         </div>
+
+        @if (pagination.TotalPageCount > 1)
+        {
+            <div class="pager-toolbar">
+                <div class="pager-summary">
+                    <span class="subtle-label">Results</span>
+                    <strong>Showing @pagination.StartItemIndex-@pagination.EndItemIndex of @pagination.TotalItemCount images</strong>
+                    <span class="muted">Page @pagination.CurrentPage of @pagination.TotalPageCount</span>
+                </div>
+
+                <nav class="pager-nav" aria-label="QC queue pages bottom">
+                    @if (pagination.HasPreviousPage)
+                    {
+                        <a asp-page="/QcQueue"
+                           asp-route-status="@Model.Status"
+                                    asp-route-pageNumber="@(pagination.CurrentPage - 1)"
+                           class="filter-pill pagination-link">Previous</a>
+                    }
+                    else
+                    {
+                        <span class="filter-pill pagination-link is-disabled">Previous</span>
+                    }
+
+                    @foreach (var pageNumber in qcPages)
+                    {
+                        <a asp-page="/QcQueue"
+                           asp-route-status="@Model.Status"
+                                    asp-route-pageNumber="@pageNumber"
+                           class="filter-pill pagination-link @(pageNumber == pagination.CurrentPage ? "is-active" : null)">@pageNumber</a>
+                    }
+
+                    @if (pagination.HasNextPage)
+                    {
+                        <a asp-page="/QcQueue"
+                           asp-route-status="@Model.Status"
+                                    asp-route-pageNumber="@(pagination.CurrentPage + 1)"
+                           class="filter-pill pagination-link">Next</a>
+                    }
+                    else
+                    {
+                        <span class="filter-pill pagination-link is-disabled">Next</span>
+                    }
+                </nav>
+            </div>
+        }
     </section>
 </main>
 
@@ -248,6 +349,12 @@
                         });
 
                         const payload = await response.json();
+
+                        if (payload.redirectUrl) {
+                            window.location.assign(payload.redirectUrl);
+                            return;
+                        }
+
                         setFlash(payload.flashMessage, !payload.success);
 
                         if (!payload.success) {

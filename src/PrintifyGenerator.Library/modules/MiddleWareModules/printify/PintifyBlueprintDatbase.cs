@@ -87,6 +87,16 @@ public static class PrintifyBlueprintDatabase
     {
         return Default.TryGetVariantImageUrl(blueprintId, providerId, variantId, out imageUrl);
     }
+
+    public static string? GetProviderExampleImageUrl(int blueprintId, int providerId)
+    {
+        return Default.GetProviderExampleImageUrl(blueprintId, providerId);
+    }
+
+    public static bool TryGetProviderExampleImageUrl(int blueprintId, int providerId, out string imageUrl)
+    {
+        return Default.TryGetProviderExampleImageUrl(blueprintId, providerId, out imageUrl);
+    }
 }
 
 public sealed class PrintifyBlueprintQueryApi
@@ -105,17 +115,23 @@ public sealed class PrintifyBlueprintQueryApi
 
     private readonly ConcurrentDictionary<int, PrintifyCachedBlueprintDetail> _cache = new();
     private readonly IReadOnlyDictionary<int, string> _blueprintFiles;
+    private readonly ConcurrentDictionary<VariantPricingCacheKey, IReadOnlyDictionary<int, ProductVariant>> _variantPricingLookupByProvider = new();
+    private readonly ConcurrentDictionary<ProviderImageCacheKey, ProviderImageCache> _providerImageCacheByProvider = new();
     private readonly Lazy<IReadOnlyDictionary<VariantImageCacheKey, PrintifyVariantImageCacheEntry>> _variantImageLookup;
 
     public PrintifyBlueprintQueryApi(string? blueprintDetailsDirectory = null)
     {
         BlueprintDetailsDirectory = ResolveBlueprintDetailsDirectory(blueprintDetailsDirectory);
+        VariantPricingCacheDirectory = Path.Combine(Path.GetDirectoryName(BlueprintDetailsDirectory) ?? BlueprintDetailsDirectory, "variants", "prices");
+        VariantImageCacheDirectory = Path.Combine(Path.GetDirectoryName(BlueprintDetailsDirectory) ?? BlueprintDetailsDirectory, "variants", "images");
         VariantImageLookupPath = Path.Combine(Path.GetDirectoryName(BlueprintDetailsDirectory) ?? BlueprintDetailsDirectory, "variant_images.json");
         _blueprintFiles = LoadFileIndex(BlueprintDetailsDirectory);
         _variantImageLookup = new Lazy<IReadOnlyDictionary<VariantImageCacheKey, PrintifyVariantImageCacheEntry>>(LoadVariantImageLookup);
     }
 
     public string BlueprintDetailsDirectory { get; }
+    public string VariantPricingCacheDirectory { get; }
+    public string VariantImageCacheDirectory { get; }
     public string VariantImageLookupPath { get; }
 
     public IEnumerable<int> BlueprintIds => _blueprintFiles.Keys.OrderBy(id => id);
@@ -159,12 +175,45 @@ public sealed class PrintifyBlueprintQueryApi
             : null;
     }
 
+    public string? GetProviderExampleImageUrl(int blueprintId, int providerId)
+    {
+        return TryGetProviderExampleImageUrl(blueprintId, providerId, out var imageUrl)
+            ? imageUrl
+            : null;
+    }
+
     public bool TryGetVariantImageUrl(int blueprintId, int providerId, int variantId, out string imageUrl)
     {
         if (_variantImageLookup.Value.TryGetValue(new VariantImageCacheKey(blueprintId, providerId, variantId), out var entry) &&
             !string.IsNullOrWhiteSpace(entry.ImageUrl))
         {
             imageUrl = entry.ImageUrl;
+            return true;
+        }
+
+        var providerImageCache = _providerImageCacheByProvider.GetOrAdd(
+            new ProviderImageCacheKey(blueprintId, providerId),
+            LoadProviderImageCache);
+        if (providerImageCache.VariantImageUrls.TryGetValue(variantId, out var providerImageUrl) &&
+            !string.IsNullOrWhiteSpace(providerImageUrl))
+        {
+            imageUrl = providerImageUrl;
+            return true;
+        }
+
+        imageUrl = string.Empty;
+        return false;
+    }
+
+    public bool TryGetProviderExampleImageUrl(int blueprintId, int providerId, out string imageUrl)
+    {
+        var providerImageCache = _providerImageCacheByProvider.GetOrAdd(
+            new ProviderImageCacheKey(blueprintId, providerId),
+            LoadProviderImageCache);
+
+        if (!string.IsNullOrWhiteSpace(providerImageCache.FirstImageUrl))
+        {
+            imageUrl = providerImageCache.FirstImageUrl;
             return true;
         }
 
@@ -326,7 +375,59 @@ public sealed class PrintifyBlueprintQueryApi
                 $"Blueprint detail file '{filePath}' contains blueprint ID {detail.Blueprint.Id}, expected {blueprintId}.");
         }
 
-        return detail;
+        return MergeCachedVariantPricing(detail);
+    }
+
+    private PrintifyCachedBlueprintDetail MergeCachedVariantPricing(PrintifyCachedBlueprintDetail detail)
+    {
+        if (detail.Blueprint.Id <= 0 || detail.PrintProviders.Count == 0)
+        {
+            return detail;
+        }
+
+        var mergedProviders = new List<PrintifyCachedBlueprintProviderDetail>(detail.PrintProviders.Count);
+        var hasChanges = false;
+
+        foreach (var providerDetail in detail.PrintProviders)
+        {
+            var cachedVariantsById = _variantPricingLookupByProvider.GetOrAdd(
+                new VariantPricingCacheKey(detail.Blueprint.Id, providerDetail.Provider.Id),
+                LoadVariantPricingLookup);
+
+            if (cachedVariantsById.Count == 0)
+            {
+                mergedProviders.Add(providerDetail);
+                continue;
+            }
+
+            var mergedVariants = providerDetail.Variants.Variants
+                .Select(variant => MergeVariantFromPricingCache(variant, cachedVariantsById))
+                .ToList();
+
+            var providerChanged = false;
+            for (var index = 0; index < mergedVariants.Count; index++)
+            {
+                if (!ReferenceEquals(mergedVariants[index], providerDetail.Variants.Variants[index]))
+                {
+                    providerChanged = true;
+                    hasChanges = true;
+                    break;
+                }
+            }
+
+            if (!providerChanged)
+            {
+                mergedProviders.Add(providerDetail);
+                continue;
+            }
+
+            mergedProviders.Add(providerDetail with
+            {
+                Variants = providerDetail.Variants with { Variants = mergedVariants }
+            });
+        }
+
+        return hasChanges ? detail with { PrintProviders = mergedProviders } : detail;
     }
 
     private static IEnumerable<PrintifyCachedBlueprintProviderDetail> GetProviderEntries(
@@ -431,6 +532,56 @@ public sealed class PrintifyBlueprintQueryApi
         }
 
         return regions;
+    }
+
+    private IReadOnlyDictionary<int, ProductVariant> LoadVariantPricingLookup(VariantPricingCacheKey key)
+    {
+        var lookup = new Dictionary<int, ProductVariant>();
+        var filePath = Path.Combine(VariantPricingCacheDirectory, $"{key.BlueprintId}-{key.ProviderId}.json");
+
+        if (!File.Exists(filePath))
+        {
+            return new ReadOnlyDictionary<int, ProductVariant>(lookup);
+        }
+
+        try
+        {
+            using var stream = File.OpenRead(filePath);
+            var variants = JsonSerializer.Deserialize<List<ProductVariant>>(stream, JsonOptions);
+
+            foreach (var variant in variants ?? new List<ProductVariant>())
+            {
+                if (variant.Id <= 0 || variant.Cost <= 0)
+                {
+                    continue;
+                }
+
+                lookup[variant.Id] = variant;
+            }
+        }
+        catch
+        {
+            return new ReadOnlyDictionary<int, ProductVariant>(new Dictionary<int, ProductVariant>());
+        }
+
+        return new ReadOnlyDictionary<int, ProductVariant>(lookup);
+    }
+
+    private static Variant MergeVariantFromPricingCache(
+        Variant variant,
+        IReadOnlyDictionary<int, ProductVariant> cachedVariantsById)
+    {
+        if (variant.Cost.HasValue ||
+            !cachedVariantsById.TryGetValue(variant.Id, out var cachedVariant) ||
+            cachedVariant.Cost <= 0)
+        {
+            return variant;
+        }
+
+        return variant with
+        {
+            Cost = cachedVariant.Cost
+        };
     }
 
     private static IReadOnlyDictionary<string, string> CreateOptionMap(Dictionary<string, object>? options)
@@ -576,9 +727,61 @@ public sealed class PrintifyBlueprintQueryApi
 
         return new ReadOnlyDictionary<VariantImageCacheKey, PrintifyVariantImageCacheEntry>(index);
     }
+
+    private ProviderImageCache LoadProviderImageCache(ProviderImageCacheKey key)
+    {
+        var filePath = Path.Combine(VariantImageCacheDirectory, $"{key.BlueprintId}-{key.ProviderId}.json");
+        if (!File.Exists(filePath))
+        {
+            return ProviderImageCache.Empty;
+        }
+
+        try
+        {
+            using var stream = File.OpenRead(filePath);
+            var entries = JsonSerializer.Deserialize<List<PrintifyVariantImageUrlsEntry>>(stream, JsonOptions);
+            var variantImageUrls = new Dictionary<int, string>();
+            string? firstImageUrl = null;
+
+            foreach (var entry in entries ?? new List<PrintifyVariantImageUrlsEntry>())
+            {
+                if (entry.Id <= 0)
+                {
+                    continue;
+                }
+
+                var imageUrl = entry.Urls
+                    .Select(url => (url ?? string.Empty).Trim())
+                    .FirstOrDefault(url => !string.IsNullOrWhiteSpace(url));
+                if (string.IsNullOrWhiteSpace(imageUrl))
+                {
+                    continue;
+                }
+
+                variantImageUrls[entry.Id] = imageUrl;
+                firstImageUrl ??= imageUrl;
+            }
+
+            return new ProviderImageCache(
+                new ReadOnlyDictionary<int, string>(variantImageUrls),
+                firstImageUrl ?? string.Empty);
+        }
+        catch
+        {
+            return ProviderImageCache.Empty;
+        }
+    }
 }
 
+internal readonly record struct VariantPricingCacheKey(int BlueprintId, int ProviderId);
+internal readonly record struct ProviderImageCacheKey(int BlueprintId, int ProviderId);
 internal readonly record struct VariantImageCacheKey(int BlueprintId, int ProviderId, int VariantId);
+internal sealed record ProviderImageCache(IReadOnlyDictionary<int, string> VariantImageUrls, string FirstImageUrl)
+{
+    public static ProviderImageCache Empty { get; } = new(
+        new ReadOnlyDictionary<int, string>(new Dictionary<int, string>()),
+        string.Empty);
+}
 
 public sealed record PrintifyCachedBlueprintDetail
 {
@@ -677,4 +880,13 @@ public sealed class PrintifyVariantImageCacheEntry
     public string Position { get; set; } = string.Empty;
     public bool IsDefault { get; set; }
     public DateTime UpdatedAtUtc { get; set; }
+}
+
+public sealed class PrintifyVariantImageUrlsEntry
+{
+    [JsonPropertyName("id")]
+    public int Id { get; set; }
+
+    [JsonPropertyName("urls")]
+    public List<string> Urls { get; set; } = new();
 }
