@@ -24,6 +24,9 @@
           {
             "id": 74056,
             "title": "One size / Red and Black/Natural",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Red and Black/Natural"
@@ -40,6 +43,9 @@
           {
             "id": 74057,
             "title": "One size / White and Black/Natural",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "White and Black/Natural"
@@ -113,7 +119,51 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1089
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 399
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1109
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 459
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 839
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 399
+          },
+          "variant_count": 2
+        }
+      ]
     }
   ]
 }

@@ -26,6 +26,9 @@
           {
             "id": 79911,
             "title": "Black / NB (0-3M)",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "NB (0-3M)"
@@ -48,6 +51,9 @@
           {
             "id": 79912,
             "title": "Black / 3-6M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "3-6M"
@@ -70,6 +76,9 @@
           {
             "id": 79913,
             "title": "Black / 6-12M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "6-12M"
@@ -92,6 +101,9 @@
           {
             "id": 79914,
             "title": "Black / 12-18M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "12-18M"
@@ -114,6 +126,9 @@
           {
             "id": 79915,
             "title": "White / NB (0-3M)",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White",
               "size": "NB (0-3M)"
@@ -136,6 +151,9 @@
           {
             "id": 79916,
             "title": "White / 3-6M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White",
               "size": "3-6M"
@@ -158,6 +176,9 @@
           {
             "id": 79917,
             "title": "White / 6-12M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White",
               "size": "6-12M"
@@ -180,6 +201,9 @@
           {
             "id": 79918,
             "title": "White / 12-18M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White",
               "size": "12-18M"
@@ -424,7 +448,162 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "IE",
+            "GB"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 749
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 119
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "AX",
+            "AM",
+            "BV",
+            "FO",
+            "CZ",
+            "IM",
+            "CY",
+            "JE",
+            "ME",
+            "AD",
+            "AT",
+            "BG",
+            "BY",
+            "GG",
+            "GL",
+            "GI",
+            "MD",
+            "AL",
+            "RO",
+            "GE",
+            "BA",
+            "PL",
+            "RE",
+            "SM",
+            "HR",
+            "TR",
+            "BE",
+            "ES",
+            "GR",
+            "RS",
+            "SK",
+            "MT",
+            "PT",
+            "GP",
+            "HU",
+            "UA",
+            "FR",
+            "VA",
+            "LU",
+            "NL",
+            "SI",
+            "XK",
+            "IT",
+            "MK",
+            "MC"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 479
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 119
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2549
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 659
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "EE",
+            "LI",
+            "NO",
+            "DK",
+            "LV",
+            "FI",
+            "SE",
+            "CH",
+            "IS",
+            "LT"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 699
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 199
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "DE"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 379
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 119
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "CA",
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1249
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 659
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 859
+          },
+          "variant_count": 8
+        }
+      ]
     },
     {
       "provider": {
@@ -438,6 +617,9 @@
           {
             "id": 79911,
             "title": "Black / NB (0-3M)",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "NB (0-3M)"
@@ -460,6 +642,9 @@
           {
             "id": 79912,
             "title": "Black / 3-6M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "3-6M"
@@ -482,6 +667,9 @@
           {
             "id": 79913,
             "title": "Black / 6-12M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "6-12M"
@@ -504,6 +692,9 @@
           {
             "id": 79914,
             "title": "Black / 12-18M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "12-18M"
@@ -526,6 +717,9 @@
           {
             "id": 79915,
             "title": "White / NB (0-3M)",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White",
               "size": "NB (0-3M)"
@@ -548,6 +742,9 @@
           {
             "id": 79916,
             "title": "White / 3-6M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White",
               "size": "3-6M"
@@ -570,6 +767,9 @@
           {
             "id": 79917,
             "title": "White / 6-12M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White",
               "size": "6-12M"
@@ -592,6 +792,9 @@
           {
             "id": 79918,
             "title": "White / 12-18M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White",
               "size": "12-18M"
@@ -614,6 +817,9 @@
           {
             "id": 96045,
             "title": "Dusty Blue / NB (0-3M)",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Dusty Blue",
               "size": "NB (0-3M)"
@@ -636,6 +842,9 @@
           {
             "id": 96046,
             "title": "Dusty Blue / 3-6M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Dusty Blue",
               "size": "3-6M"
@@ -658,6 +867,9 @@
           {
             "id": 96047,
             "title": "Dusty Blue / 6-12M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Dusty Blue",
               "size": "6-12M"
@@ -680,6 +892,9 @@
           {
             "id": 96048,
             "title": "Dusty Blue / 12-18M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Dusty Blue",
               "size": "12-18M"
@@ -702,6 +917,9 @@
           {
             "id": 96049,
             "title": "Fuchsia / NB (0-3M)",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Fuchsia",
               "size": "NB (0-3M)"
@@ -724,6 +942,9 @@
           {
             "id": 96050,
             "title": "Fuchsia / 3-6M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Fuchsia",
               "size": "3-6M"
@@ -746,6 +967,9 @@
           {
             "id": 96051,
             "title": "Fuchsia / 6-12M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Fuchsia",
               "size": "6-12M"
@@ -768,6 +992,9 @@
           {
             "id": 96052,
             "title": "Fuchsia / 12-18M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Fuchsia",
               "size": "12-18M"
@@ -790,6 +1017,9 @@
           {
             "id": 96053,
             "title": "Heather Grey Melange / NB (0-3M)",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Heather Grey Melange",
               "size": "NB (0-3M)"
@@ -812,6 +1042,9 @@
           {
             "id": 96054,
             "title": "Heather Grey Melange / 3-6M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Heather Grey Melange",
               "size": "3-6M"
@@ -834,6 +1067,9 @@
           {
             "id": 96055,
             "title": "Heather Grey Melange / 6-12M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Heather Grey Melange",
               "size": "6-12M"
@@ -856,6 +1092,9 @@
           {
             "id": 96056,
             "title": "Heather Grey Melange / 12-18M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Heather Grey Melange",
               "size": "12-18M"
@@ -878,6 +1117,9 @@
           {
             "id": 96057,
             "title": "Nautical Navy / NB (0-3M)",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Nautical Navy",
               "size": "NB (0-3M)"
@@ -900,6 +1142,9 @@
           {
             "id": 96058,
             "title": "Nautical Navy / 3-6M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Nautical Navy",
               "size": "3-6M"
@@ -922,6 +1167,9 @@
           {
             "id": 96059,
             "title": "Nautical Navy / 6-12M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Nautical Navy",
               "size": "6-12M"
@@ -944,6 +1192,9 @@
           {
             "id": 96060,
             "title": "Nautical Navy / 12-18M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Nautical Navy",
               "size": "12-18M"
@@ -966,6 +1217,9 @@
           {
             "id": 96061,
             "title": "Organic Natural / NB (0-3M)",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Organic Natural",
               "size": "NB (0-3M)"
@@ -988,6 +1242,9 @@
           {
             "id": 96062,
             "title": "Organic Natural / 3-6M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Organic Natural",
               "size": "3-6M"
@@ -1010,6 +1267,9 @@
           {
             "id": 96063,
             "title": "Organic Natural / 6-12M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Organic Natural",
               "size": "6-12M"
@@ -1032,6 +1292,9 @@
           {
             "id": 96064,
             "title": "Organic Natural / 12-18M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Organic Natural",
               "size": "12-18M"
@@ -1054,6 +1317,9 @@
           {
             "id": 96065,
             "title": "Powder Pink / NB (0-3M)",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Powder Pink",
               "size": "NB (0-3M)"
@@ -1076,6 +1342,9 @@
           {
             "id": 96066,
             "title": "Powder Pink / 3-6M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Powder Pink",
               "size": "3-6M"
@@ -1098,6 +1367,9 @@
           {
             "id": 96067,
             "title": "Powder Pink / 6-12M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Powder Pink",
               "size": "6-12M"
@@ -1120,6 +1392,9 @@
           {
             "id": 96068,
             "title": "Powder Pink / 12-18M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Powder Pink",
               "size": "12-18M"
@@ -1531,7 +1806,161 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "RO",
+            "BE",
+            "AX",
+            "CZ",
+            "AL",
+            "MC",
+            "GE",
+            "FR",
+            "FO",
+            "GI",
+            "IT",
+            "GR",
+            "JE",
+            "RS",
+            "SK",
+            "TR",
+            "DE",
+            "SM",
+            "GL",
+            "MK",
+            "BY",
+            "AD",
+            "ME",
+            "CY",
+            "IM",
+            "PT",
+            "MD",
+            "MT",
+            "AM",
+            "UA",
+            "BA",
+            "HR",
+            "GP",
+            "XK",
+            "HU",
+            "ES",
+            "VA",
+            "BV",
+            "AT",
+            "RE",
+            "LU",
+            "GG",
+            "NL",
+            "SI",
+            "BG"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 599
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 119
+          },
+          "variant_count": 32
+        },
+        {
+          "countries": [
+            "CH",
+            "EE",
+            "SE",
+            "LV",
+            "LI",
+            "IS",
+            "LT",
+            "DK",
+            "NO",
+            "FI"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 949
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 119
+          },
+          "variant_count": 32
+        },
+        {
+          "countries": [
+            "IE",
+            "GB"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 749
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 119
+          },
+          "variant_count": 32
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1319
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 659
+          },
+          "variant_count": 32
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1319
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 859
+          },
+          "variant_count": 32
+        },
+        {
+          "countries": [
+            "PL"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 119
+          },
+          "variant_count": 32
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2549
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 659
+          },
+          "variant_count": 32
+        }
+      ]
     }
   ]
 }

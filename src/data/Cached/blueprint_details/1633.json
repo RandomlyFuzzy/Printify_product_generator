@@ -22,6 +22,9 @@
           {
             "id": 112992,
             "title": "10\u0027\u0027 \u00D7 10\u0027\u0027",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "10\u0027\u0027 \u00D7 10\u0027\u0027"
             },
@@ -37,6 +40,9 @@
           {
             "id": 112993,
             "title": "22\u0027\u0027 \u00D7 22\u0027\u0027",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "22\u0027\u0027 \u00D7 22\u0027\u0027"
             },
@@ -110,7 +116,52 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 479
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 169
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD",
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 139
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 509
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 209
+          },
+          "variant_count": 2
+        }
+      ]
     }
   ]
 }

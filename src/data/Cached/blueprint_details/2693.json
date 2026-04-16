@@ -32,6 +32,9 @@
           {
             "id": 148140,
             "title": "15oz / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "15oz",
               "color": "Black"
@@ -48,6 +51,9 @@
           {
             "id": 148141,
             "title": "15oz / Blue",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "15oz",
               "color": "Blue"
@@ -64,6 +70,9 @@
           {
             "id": 148142,
             "title": "15oz / Maroon",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "15oz",
               "color": "Maroon"
@@ -80,6 +89,9 @@
           {
             "id": 148143,
             "title": "15oz / Green",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "15oz",
               "color": "Green"
@@ -96,6 +108,9 @@
           {
             "id": 148144,
             "title": "15oz / Yellow",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "15oz",
               "color": "Yellow"
@@ -112,6 +127,9 @@
           {
             "id": 148145,
             "title": "15oz / Pink",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "15oz",
               "color": "Pink"
@@ -128,6 +146,9 @@
           {
             "id": 148146,
             "title": "15oz / Light Blue",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "15oz",
               "color": "Light Blue"
@@ -144,6 +165,9 @@
           {
             "id": 148147,
             "title": "11oz / Light Blue",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "11oz",
               "color": "Light Blue"
@@ -160,6 +184,9 @@
           {
             "id": 148148,
             "title": "11oz / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "11oz",
               "color": "Black"
@@ -176,6 +203,9 @@
           {
             "id": 148149,
             "title": "11oz / Blue",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "11oz",
               "color": "Blue"
@@ -192,6 +222,9 @@
           {
             "id": 148150,
             "title": "11oz / Maroon",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "11oz",
               "color": "Maroon"
@@ -208,6 +241,9 @@
           {
             "id": 148151,
             "title": "11oz / Green",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "11oz",
               "color": "Green"
@@ -224,6 +260,9 @@
           {
             "id": 148152,
             "title": "11oz / Yellow",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "11oz",
               "color": "Yellow"
@@ -240,6 +279,9 @@
           {
             "id": 148153,
             "title": "11oz / Pink",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "11oz",
               "color": "Pink"
@@ -256,6 +298,9 @@
           {
             "id": 148154,
             "title": "11oz / Orange",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "11oz",
               "color": "Orange"
@@ -272,6 +317,9 @@
           {
             "id": 148155,
             "title": "11oz / Cambridge Blue",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "11oz",
               "color": "Cambridge Blue"
@@ -288,6 +336,9 @@
           {
             "id": 148156,
             "title": "11oz / Light Green",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "11oz",
               "color": "Light Green"
@@ -304,6 +355,9 @@
           {
             "id": 148157,
             "title": "11oz / Red",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "11oz",
               "color": "Red"
@@ -632,7 +686,235 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 899
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 399
+          },
+          "variant_count": 7
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1859
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 919
+          },
+          "variant_count": 7
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2299
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1299
+          },
+          "variant_count": 7
+        },
+        {
+          "countries": [
+            "AX",
+            "AL",
+            "AD",
+            "AM",
+            "AT",
+            "BY",
+            "BE",
+            "BA",
+            "BV",
+            "BG",
+            "HR",
+            "CY",
+            "CZ",
+            "DK",
+            "EE",
+            "FO",
+            "FI",
+            "FR",
+            "GE",
+            "DE",
+            "GI",
+            "GR",
+            "GL",
+            "GP",
+            "GG",
+            "VA",
+            "HU",
+            "IS",
+            "IE",
+            "IM",
+            "IT",
+            "JE",
+            "LV",
+            "LI",
+            "LT",
+            "LU",
+            "MK",
+            "MT",
+            "MD",
+            "MC",
+            "ME",
+            "NL",
+            "NO",
+            "PL",
+            "PT",
+            "RE",
+            "RO",
+            "SM",
+            "RS",
+            "SK",
+            "SI",
+            "ES",
+            "SE",
+            "CH",
+            "TR",
+            "UA",
+            "GB",
+            "XK"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1949
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 919
+          },
+          "variant_count": 7
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 699
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 309
+          },
+          "variant_count": 11
+        },
+        {
+          "countries": [
+            "AX",
+            "AL",
+            "AD",
+            "AM",
+            "AT",
+            "BY",
+            "BE",
+            "BA",
+            "BV",
+            "BG",
+            "HR",
+            "CY",
+            "CZ",
+            "DK",
+            "EE",
+            "FO",
+            "FI",
+            "FR",
+            "GE",
+            "DE",
+            "GI",
+            "GR",
+            "GL",
+            "GP",
+            "GG",
+            "VA",
+            "HU",
+            "IS",
+            "IE",
+            "IM",
+            "IT",
+            "JE",
+            "LV",
+            "LI",
+            "LT",
+            "LU",
+            "MK",
+            "MT",
+            "MD",
+            "MC",
+            "ME",
+            "NL",
+            "NO",
+            "PL",
+            "PT",
+            "RE",
+            "RO",
+            "SM",
+            "RS",
+            "SK",
+            "SI",
+            "ES",
+            "SE",
+            "CH",
+            "TR",
+            "UA",
+            "GB",
+            "XK"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1299
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 409
+          },
+          "variant_count": 11
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1419
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 489
+          },
+          "variant_count": 11
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1599
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 449
+          },
+          "variant_count": 11
+        }
+      ]
     }
   ]
 }

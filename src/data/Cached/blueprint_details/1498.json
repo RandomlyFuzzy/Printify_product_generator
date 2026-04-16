@@ -31,6 +31,9 @@
           {
             "id": 107781,
             "title": "40oz / Dark Gray",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "40oz",
               "color": "Dark Gray"
@@ -53,6 +56,9 @@
           {
             "id": 107782,
             "title": "40oz / Navy Blue",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "40oz",
               "color": "Navy Blue"
@@ -75,6 +81,9 @@
           {
             "id": 107783,
             "title": "40oz / Olive Green",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "40oz",
               "color": "Olive Green"
@@ -97,6 +106,9 @@
           {
             "id": 107784,
             "title": "40oz / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "40oz",
               "color": "Black"
@@ -119,6 +131,9 @@
           {
             "id": 107785,
             "title": "40oz / Red",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "40oz",
               "color": "Red"
@@ -141,6 +156,9 @@
           {
             "id": 107786,
             "title": "40oz / Royal Blue",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "40oz",
               "color": "Royal Blue"
@@ -163,6 +181,9 @@
           {
             "id": 107787,
             "title": "40oz / Teal",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "40oz",
               "color": "Teal"
@@ -185,6 +206,9 @@
           {
             "id": 107788,
             "title": "40oz / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "40oz",
               "color": "White"
@@ -328,7 +352,79 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 759
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 299
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1469
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 659
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 979
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2199
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 699
+          },
+          "variant_count": 8
+        }
+      ]
     }
   ]
 }

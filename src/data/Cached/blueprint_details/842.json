@@ -23,6 +23,9 @@
           {
             "id": 76317,
             "title": "6\u0022 x 4\u0022 / 1 pc / Glossy",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "6\u0022 x 4\u0022",
               "quantity": "1 pc",
@@ -40,6 +43,9 @@
           {
             "id": 76318,
             "title": "7\u0022 x 5\u0022 (Horizontal) / 1 pc / Glossy",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "7\u0022 x 5\u0022 (Horizontal)",
               "quantity": "1 pc",
@@ -204,7 +210,135 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2899
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 339
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1769
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 339
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "GB"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 669
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 79
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1899
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 339
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "AX",
+            "AL",
+            "AD",
+            "AM",
+            "AT",
+            "BY",
+            "BE",
+            "BA",
+            "BV",
+            "BG",
+            "HR",
+            "CY",
+            "CZ",
+            "DK",
+            "EE",
+            "FO",
+            "FI",
+            "FR",
+            "GE",
+            "DE",
+            "GI",
+            "GR",
+            "GL",
+            "GP",
+            "GG",
+            "VA",
+            "HU",
+            "IS",
+            "IE",
+            "IM",
+            "IT",
+            "JE",
+            "LV",
+            "LI",
+            "LT",
+            "LU",
+            "MK",
+            "MT",
+            "MD",
+            "MC",
+            "ME",
+            "NL",
+            "NO",
+            "PL",
+            "PT",
+            "RE",
+            "RO",
+            "SM",
+            "RS",
+            "SK",
+            "SI",
+            "ES",
+            "SE",
+            "CH",
+            "TR",
+            "UA",
+            "XK"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 979
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 99
+          },
+          "variant_count": 2
+        }
+      ]
     }
   ]
 }

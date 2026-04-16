@@ -24,6 +24,9 @@
           {
             "id": 111452,
             "title": "XS / Apricot fabric",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XS",
               "material": "Apricot fabric"
@@ -46,6 +49,9 @@
           {
             "id": 111453,
             "title": "XS / Kiwi fabric",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XS",
               "material": "Kiwi fabric"
@@ -68,6 +74,9 @@
           {
             "id": 111455,
             "title": "S / Apricot fabric",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "S",
               "material": "Apricot fabric"
@@ -90,6 +99,9 @@
           {
             "id": 111456,
             "title": "S / Kiwi fabric",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "S",
               "material": "Kiwi fabric"
@@ -112,6 +124,9 @@
           {
             "id": 111458,
             "title": "M / Apricot fabric",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "M",
               "material": "Apricot fabric"
@@ -134,6 +149,9 @@
           {
             "id": 111459,
             "title": "M / Kiwi fabric",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "M",
               "material": "Kiwi fabric"
@@ -156,6 +174,9 @@
           {
             "id": 111461,
             "title": "L / Apricot fabric",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "L",
               "material": "Apricot fabric"
@@ -178,6 +199,9 @@
           {
             "id": 111462,
             "title": "L / Kiwi fabric",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "L",
               "material": "Kiwi fabric"
@@ -200,6 +224,9 @@
           {
             "id": 111464,
             "title": "XL / Apricot fabric",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XL",
               "material": "Apricot fabric"
@@ -222,6 +249,9 @@
           {
             "id": 111465,
             "title": "XL / Kiwi fabric",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XL",
               "material": "Kiwi fabric"
@@ -244,6 +274,9 @@
           {
             "id": 111467,
             "title": "2XL / Apricot fabric",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2XL",
               "material": "Apricot fabric"
@@ -266,6 +299,9 @@
           {
             "id": 111468,
             "title": "2XL / Kiwi fabric",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2XL",
               "material": "Kiwi fabric"
@@ -402,7 +438,65 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 569
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 259
+          },
+          "variant_count": 12
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 919
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 359
+          },
+          "variant_count": 12
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1199
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 379
+          },
+          "variant_count": 12
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 589
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 299
+          },
+          "variant_count": 12
+        }
+      ]
     }
   ]
 }

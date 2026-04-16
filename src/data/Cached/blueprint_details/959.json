@@ -28,6 +28,9 @@
           {
             "id": 78492,
             "title": "L",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "L"
             },
@@ -49,6 +52,9 @@
           {
             "id": 78493,
             "title": "M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "M"
             },
@@ -70,6 +76,9 @@
           {
             "id": 78494,
             "title": "S",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "S"
             },
@@ -91,6 +100,9 @@
           {
             "id": 78495,
             "title": "XS",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XS"
             },
@@ -175,7 +187,51 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 479
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 99
+          },
+          "variant_count": 4
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 959
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 139
+          },
+          "variant_count": 4
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 949
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 370
+          },
+          "variant_count": 4
+        }
+      ]
     }
   ]
 }

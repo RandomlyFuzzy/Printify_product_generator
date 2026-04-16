@@ -26,6 +26,9 @@
           {
             "id": 148763,
             "title": "5.5\u0027\u0027 x 8.375\u0022 / Kraft / Paper",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "5.5\u0027\u0027 x 8.375\u0022",
               "color": "Kraft",
@@ -43,6 +46,9 @@
           {
             "id": 148764,
             "title": "5.5\u0027\u0027 x 8.375\u0022 / White / Paper",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "5.5\u0027\u0027 x 8.375\u0022",
               "color": "White",
@@ -60,6 +66,9 @@
           {
             "id": 148765,
             "title": "8\u0027\u0027 x 10.25\u0022 / Kraft / Paper",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "8\u0027\u0027 x 10.25\u0022",
               "color": "Kraft",
@@ -77,6 +86,9 @@
           {
             "id": 148766,
             "title": "8\u0027\u0027 x 10.25\u0022 / White / Paper",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "8\u0027\u0027 x 10.25\u0022",
               "color": "White",
@@ -94,6 +106,9 @@
           {
             "id": 148767,
             "title": "10\u0027\u0027 x 13\u0022 / Kraft / Paper",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "10\u0027\u0027 x 13\u0022",
               "color": "Kraft",
@@ -111,6 +126,9 @@
           {
             "id": 148768,
             "title": "10\u0027\u0027 x 13\u0022 / White / Paper",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "10\u0027\u0027 x 13\u0022",
               "color": "White",
@@ -128,6 +146,9 @@
           {
             "id": 148769,
             "title": "6.25\u0027\u0027 x 12.5\u0022 / Kraft / Paper",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "6.25\u0027\u0027 x 12.5\u0022",
               "color": "Kraft",
@@ -145,6 +166,9 @@
           {
             "id": 148770,
             "title": "6.25\u0027\u0027 x 12.5\u0022 / White / Paper",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "6.25\u0027\u0027 x 12.5\u0022",
               "color": "White",
@@ -215,7 +239,38 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 579
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 99
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD",
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1249
+          },
+          "variant_count": 8
+        }
+      ]
     }
   ]
 }

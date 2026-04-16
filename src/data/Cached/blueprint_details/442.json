@@ -24,6 +24,9 @@
           {
             "id": 62329,
             "title": "9\u0022 \u00D7 7.5\u0022",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "9\u0022 \u00D7 7.5\u0022"
             },
@@ -211,7 +214,161 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "CZ"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 139
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "DE"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 419
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 139
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1249
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "AX",
+            "AL",
+            "AD",
+            "AM",
+            "AT",
+            "BY",
+            "BE",
+            "BA",
+            "BV",
+            "BG",
+            "HR",
+            "CY",
+            "FO",
+            "FR",
+            "GE",
+            "GI",
+            "GR",
+            "GL",
+            "GP",
+            "GG",
+            "VA",
+            "HU",
+            "IM",
+            "IT",
+            "JE",
+            "LU",
+            "MK",
+            "MT",
+            "MD",
+            "MC",
+            "ME",
+            "NL",
+            "PL",
+            "PT",
+            "RE",
+            "RO",
+            "SM",
+            "RS",
+            "SK",
+            "SI",
+            "ES",
+            "TR",
+            "UA",
+            "XK",
+            "IE",
+            "GB"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 599
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 139
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "LV",
+            "FI",
+            "NO",
+            "IS",
+            "CH",
+            "SE",
+            "DK",
+            "EE",
+            "LT",
+            "LI"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 839
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 229
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2249
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 529
+          },
+          "variant_count": 1
+        }
+      ]
     }
   ]
 }

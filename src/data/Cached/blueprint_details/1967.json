@@ -26,6 +26,9 @@
           {
             "id": 121546,
             "title": "Black / 2XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "2XL"
@@ -66,6 +69,9 @@
           {
             "id": 121547,
             "title": "Black / 3XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "3XL"
@@ -106,6 +112,9 @@
           {
             "id": 121548,
             "title": "Black / 4XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "4XL"
@@ -146,6 +155,9 @@
           {
             "id": 121549,
             "title": "Black / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "L"
@@ -186,6 +198,9 @@
           {
             "id": 121550,
             "title": "Black / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "M"
@@ -226,6 +241,9 @@
           {
             "id": 121551,
             "title": "Black / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "S"
@@ -266,6 +284,9 @@
           {
             "id": 121552,
             "title": "Black / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "XL"
@@ -306,6 +327,9 @@
           {
             "id": 121553,
             "title": "Black / XS",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "XS"
@@ -346,6 +370,9 @@
           {
             "id": 121554,
             "title": "Dark Heather Grey / 2XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Dark Heather Grey",
               "size": "2XL"
@@ -386,6 +413,9 @@
           {
             "id": 121555,
             "title": "Dark Heather Grey / 3XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Dark Heather Grey",
               "size": "3XL"
@@ -426,6 +456,9 @@
           {
             "id": 121556,
             "title": "Dark Heather Grey / 4XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Dark Heather Grey",
               "size": "4XL"
@@ -466,6 +499,9 @@
           {
             "id": 121557,
             "title": "Dark Heather Grey / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Dark Heather Grey",
               "size": "L"
@@ -506,6 +542,9 @@
           {
             "id": 121558,
             "title": "Dark Heather Grey / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Dark Heather Grey",
               "size": "M"
@@ -546,6 +585,9 @@
           {
             "id": 121559,
             "title": "Dark Heather Grey / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Dark Heather Grey",
               "size": "S"
@@ -586,6 +628,9 @@
           {
             "id": 121560,
             "title": "Dark Heather Grey / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Dark Heather Grey",
               "size": "XL"
@@ -626,6 +671,9 @@
           {
             "id": 121561,
             "title": "Dark Heather Grey / XS",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Dark Heather Grey",
               "size": "XS"
@@ -723,68 +771,6 @@
             ],
             "first_item": {
               "currency": "USD",
-              "cost": 1269
-            },
-            "additional_items": {
-              "currency": "USD",
-              "cost": 659
-            },
-            "countries": [
-              "CA"
-            ]
-          },
-          {
-            "variant_ids": [
-              121546,
-              121547,
-              121548,
-              121549,
-              121550,
-              121551,
-              121552,
-              121553,
-              121554,
-              121555,
-              121556,
-              121557,
-              121558,
-              121559,
-              121560,
-              121561
-            ],
-            "first_item": {
-              "currency": "USD",
-              "cost": 1500
-            },
-            "additional_items": {
-              "currency": "USD",
-              "cost": 1000
-            },
-            "countries": [
-              "REST_OF_THE_WORLD"
-            ]
-          },
-          {
-            "variant_ids": [
-              121546,
-              121547,
-              121548,
-              121549,
-              121550,
-              121551,
-              121552,
-              121553,
-              121554,
-              121555,
-              121556,
-              121557,
-              121558,
-              121559,
-              121560,
-              121561
-            ],
-            "first_item": {
-              "currency": "USD",
               "cost": 2199
             },
             "additional_items": {
@@ -793,6 +779,37 @@
             },
             "countries": [
               "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              121546,
+              121547,
+              121548,
+              121549,
+              121550,
+              121551,
+              121552,
+              121553,
+              121554,
+              121555,
+              121556,
+              121557,
+              121558,
+              121559,
+              121560,
+              121561
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1269
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 659
+            },
+            "countries": [
+              "CA"
             ]
           },
           {
@@ -825,9 +842,112 @@
             "countries": [
               "US"
             ]
+          },
+          {
+            "variant_ids": [
+              121546,
+              121547,
+              121548,
+              121549,
+              121550,
+              121551,
+              121552,
+              121553,
+              121554,
+              121555,
+              121556,
+              121557,
+              121558,
+              121559,
+              121560,
+              121561
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1500
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1000
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 769
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 209
+          },
+          "variant_count": 16
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2199
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "variant_count": 16
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1269
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 659
+          },
+          "variant_count": 16
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 249
+          },
+          "variant_count": 16
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1500
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1000
+          },
+          "variant_count": 16
+        }
+      ]
     }
   ]
 }

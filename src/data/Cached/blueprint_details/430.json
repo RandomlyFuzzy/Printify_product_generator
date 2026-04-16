@@ -23,6 +23,9 @@
           {
             "id": 62070,
             "title": "1.25\u0022",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "1.25\u0022"
             },
@@ -38,6 +41,9 @@
           {
             "id": 62071,
             "title": "2.25\u0022",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2.25\u0022"
             },
@@ -53,6 +59,9 @@
           {
             "id": 67977,
             "title": "3\u0022",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "3\u0022"
             },
@@ -146,7 +155,65 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 429
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 19
+          },
+          "variant_count": 3
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 459
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 19
+          },
+          "variant_count": 3
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 769
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 29
+          },
+          "variant_count": 3
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1249
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 49
+          },
+          "variant_count": 3
+        }
+      ]
     }
   ]
 }

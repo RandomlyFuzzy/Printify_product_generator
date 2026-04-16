@@ -26,6 +26,9 @@
           {
             "id": 79980,
             "title": "Mineral Black / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Mineral Black",
               "size": "S"
@@ -48,6 +51,9 @@
           {
             "id": 79981,
             "title": "Mineral Black / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Mineral Black",
               "size": "M"
@@ -70,6 +76,9 @@
           {
             "id": 79982,
             "title": "Mineral Black / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Mineral Black",
               "size": "L"
@@ -92,6 +101,9 @@
           {
             "id": 79983,
             "title": "Mineral Black / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Mineral Black",
               "size": "XL"
@@ -114,6 +126,9 @@
           {
             "id": 79984,
             "title": "Mineral Black / 2XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Mineral Black",
               "size": "2XL"
@@ -136,6 +151,9 @@
           {
             "id": 79985,
             "title": "Mineral Grey / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Mineral Grey",
               "size": "S"
@@ -158,6 +176,9 @@
           {
             "id": 79988,
             "title": "Mineral Grey / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Mineral Grey",
               "size": "XL"
@@ -180,6 +201,9 @@
           {
             "id": 79989,
             "title": "Mineral Grey / 2XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Mineral Grey",
               "size": "2XL"
@@ -202,6 +226,9 @@
           {
             "id": 79992,
             "title": "Mineral Navy / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Mineral Navy",
               "size": "L"
@@ -224,6 +251,9 @@
           {
             "id": 79996,
             "title": "Mineral Purple / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Mineral Purple",
               "size": "M"
@@ -246,6 +276,9 @@
           {
             "id": 79997,
             "title": "Mineral Purple / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Mineral Purple",
               "size": "L"
@@ -268,6 +301,9 @@
           {
             "id": 79998,
             "title": "Mineral Purple / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Mineral Purple",
               "size": "XL"
@@ -290,6 +326,9 @@
           {
             "id": 79999,
             "title": "Mineral Purple / 2XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Mineral Purple",
               "size": "2XL"
@@ -458,7 +497,65 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 519
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 219
+          },
+          "variant_count": 20
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1000
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 400
+          },
+          "variant_count": 20
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1249
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "variant_count": 20
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 939
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 20
+        }
+      ]
     }
   ]
 }

@@ -24,6 +24,9 @@
           {
             "id": 244081,
             "title": "14\u0022 x 21\u0022",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "14\u0022 x 21\u0022"
             },
@@ -93,7 +96,51 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 979
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 599
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 199
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1099
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 399
+          },
+          "variant_count": 1
+        }
+      ]
     }
   ]
 }

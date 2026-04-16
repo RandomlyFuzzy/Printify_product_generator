@@ -24,6 +24,9 @@
           {
             "id": 71115,
             "title": "M / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "M",
               "color": "Black"
@@ -40,6 +43,9 @@
           {
             "id": 71116,
             "title": "M / Heather",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "M",
               "color": "Heather"
@@ -56,6 +62,9 @@
           {
             "id": 71117,
             "title": "M / Pink",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "M",
               "color": "Pink"
@@ -72,6 +81,9 @@
           {
             "id": 71118,
             "title": "M / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "M",
               "color": "White"
@@ -88,6 +100,9 @@
           {
             "id": 71119,
             "title": "L / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "L",
               "color": "Black"
@@ -104,6 +119,9 @@
           {
             "id": 71120,
             "title": "L / Heather",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "L",
               "color": "Heather"
@@ -120,6 +138,9 @@
           {
             "id": 71121,
             "title": "L / Pink",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "L",
               "color": "Pink"
@@ -136,6 +157,9 @@
           {
             "id": 71122,
             "title": "L / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "L",
               "color": "White"
@@ -152,6 +176,9 @@
           {
             "id": 71123,
             "title": "XL / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XL",
               "color": "Black"
@@ -168,6 +195,9 @@
           {
             "id": 71124,
             "title": "XL / Heather",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XL",
               "color": "Heather"
@@ -184,6 +214,9 @@
           {
             "id": 71125,
             "title": "XL / Pink",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XL",
               "color": "Pink"
@@ -200,6 +233,9 @@
           {
             "id": 71126,
             "title": "XL / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XL",
               "color": "White"
@@ -303,7 +339,51 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 579
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 99
+          },
+          "variant_count": 12
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 949
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 199
+          },
+          "variant_count": 12
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 959
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 219
+          },
+          "variant_count": 12
+        }
+      ]
     }
   ]
 }

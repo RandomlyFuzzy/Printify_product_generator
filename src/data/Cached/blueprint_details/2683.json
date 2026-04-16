@@ -34,6 +34,9 @@
           {
             "id": 148035,
             "title": "S / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "S",
               "color": "Black"
@@ -80,6 +83,9 @@
           {
             "id": 148036,
             "title": "M / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "M",
               "color": "Black"
@@ -126,6 +132,9 @@
           {
             "id": 148037,
             "title": "L / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "L",
               "color": "Black"
@@ -172,6 +181,9 @@
           {
             "id": 148038,
             "title": "XL / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XL",
               "color": "Black"
@@ -218,6 +230,9 @@
           {
             "id": 148039,
             "title": "2XL / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2XL",
               "color": "Black"
@@ -264,6 +279,9 @@
           {
             "id": 148040,
             "title": "S / French Navy",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "S",
               "color": "French Navy"
@@ -310,6 +328,9 @@
           {
             "id": 148041,
             "title": "M / French Navy",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "French Navy",
               "size": "M"
@@ -356,6 +377,9 @@
           {
             "id": 148042,
             "title": "L / French Navy",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "French Navy",
               "size": "L"
@@ -402,6 +426,9 @@
           {
             "id": 148043,
             "title": "XL / French Navy",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "French Navy",
               "size": "XL"
@@ -448,6 +475,9 @@
           {
             "id": 148044,
             "title": "2XL / French Navy",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2XL",
               "color": "French Navy"
@@ -494,6 +524,9 @@
           {
             "id": 148045,
             "title": "S / Heather Grey",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Heather Grey",
               "size": "S"
@@ -540,6 +573,9 @@
           {
             "id": 148046,
             "title": "M / Heather Grey",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Heather Grey",
               "size": "M"
@@ -586,6 +622,9 @@
           {
             "id": 148047,
             "title": "L / Heather Grey",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Heather Grey",
               "size": "L"
@@ -632,6 +671,9 @@
           {
             "id": 148048,
             "title": "XL / Heather Grey",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Heather Grey",
               "size": "XL"
@@ -678,6 +720,9 @@
           {
             "id": 148049,
             "title": "2XL / Heather Grey",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2XL",
               "color": "Heather Grey"
@@ -724,6 +769,9 @@
           {
             "id": 148050,
             "title": "S / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White",
               "size": "S"
@@ -770,6 +818,9 @@
           {
             "id": 148051,
             "title": "M / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White",
               "size": "M"
@@ -816,6 +867,9 @@
           {
             "id": 148052,
             "title": "L / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White",
               "size": "L"
@@ -862,6 +916,9 @@
           {
             "id": 148053,
             "title": "XL / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White",
               "size": "XL"
@@ -908,6 +965,9 @@
           {
             "id": 148054,
             "title": "2XL / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2XL",
               "color": "White"
@@ -1019,14 +1079,14 @@
             ],
             "first_item": {
               "currency": "USD",
-              "cost": 1500
+              "cost": 1269
             },
             "additional_items": {
               "currency": "USD",
-              "cost": 1000
+              "cost": 659
             },
             "countries": [
-              "REST_OF_THE_WORLD"
+              "CA"
             ]
           },
           {
@@ -1124,18 +1184,90 @@
             ],
             "first_item": {
               "currency": "USD",
-              "cost": 1269
+              "cost": 1500
             },
             "additional_items": {
               "currency": "USD",
-              "cost": 659
+              "cost": 1000
             },
             "countries": [
-              "CA"
+              "REST_OF_THE_WORLD"
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 739
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 209
+          },
+          "variant_count": 20
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1269
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 659
+          },
+          "variant_count": 20
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2199
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "variant_count": 20
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 849
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 209
+          },
+          "variant_count": 20
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1500
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1000
+          },
+          "variant_count": 20
+        }
+      ]
     }
   ]
 }

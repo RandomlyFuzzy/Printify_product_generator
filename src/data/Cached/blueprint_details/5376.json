@@ -32,6 +32,9 @@
           {
             "id": 244823,
             "title": "Black / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "One size"
@@ -48,6 +51,9 @@
           {
             "id": 244824,
             "title": "White / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White",
               "size": "One size"
@@ -64,6 +70,9 @@
           {
             "id": 244825,
             "title": "Columbia Blue / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Columbia Blue",
               "size": "One size"
@@ -80,6 +89,9 @@
           {
             "id": 244826,
             "title": "Navy / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Navy",
               "size": "One size"
@@ -96,6 +108,9 @@
           {
             "id": 244827,
             "title": "Royal / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Royal",
               "size": "One size"
@@ -112,6 +127,9 @@
           {
             "id": 244828,
             "title": "Khaki / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Khaki",
               "size": "One size"
@@ -128,6 +146,9 @@
           {
             "id": 244829,
             "title": "Red / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Red",
               "size": "One size"
@@ -144,6 +165,9 @@
           {
             "id": 244830,
             "title": "Dark Green / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Dark Green",
               "size": "One size"
@@ -235,7 +259,51 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 929
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 199
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1199
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 599
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 749
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 99
+          },
+          "variant_count": 8
+        }
+      ]
     }
   ]
 }

@@ -23,6 +23,9 @@
           {
             "id": 116645,
             "title": "8\u0022 x 12\u0022 / Satin",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "8\u0022 x 12\u0022",
               "paper": "Satin"
@@ -39,6 +42,9 @@
           {
             "id": 116646,
             "title": "12\u2033 x 18\u2033 / Satin",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "12\u2033 x 18\u2033",
               "paper": "Satin"
@@ -55,6 +61,9 @@
           {
             "id": 116647,
             "title": "16\u2033 x 24\u2033 / Satin",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "16\u2033 x 24\u2033",
               "paper": "Satin"
@@ -71,6 +80,9 @@
           {
             "id": 116648,
             "title": "24\u0022 x 36\u0022 / Satin",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "24\u0022 x 36\u0022",
               "paper": "Satin"
@@ -87,6 +99,9 @@
           {
             "id": 116650,
             "title": "16\u2033 x 16\u2033 / Satin",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "16\u2033 x 16\u2033",
               "paper": "Satin"
@@ -103,6 +118,9 @@
           {
             "id": 116651,
             "title": "24\u2033 x 24\u2033 / Satin",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "24\u2033 x 24\u2033",
               "paper": "Satin"
@@ -253,7 +271,108 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 629
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 39
+          },
+          "variant_count": 4
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1229
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 39
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1219
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 299
+          },
+          "variant_count": 4
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 699
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 99
+          },
+          "variant_count": 4
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1209
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 299
+          },
+          "variant_count": 4
+        },
+        {
+          "countries": [
+            "CA",
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1319
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1319
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 99
+          },
+          "variant_count": 2
+        }
+      ]
     }
   ]
 }

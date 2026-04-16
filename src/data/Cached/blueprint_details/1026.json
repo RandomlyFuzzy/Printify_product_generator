@@ -25,6 +25,9 @@
           {
             "id": 79854,
             "title": "6.9\u0022 x 4.9\u0022 / Matte / 1 pc",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "6.9\u0022 x 4.9\u0022",
               "paper": "Matte",
@@ -87,7 +90,38 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "AU",
+            "NZ"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 99
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1599
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1599
+          },
+          "variant_count": 1
+        }
+      ]
     }
   ]
 }

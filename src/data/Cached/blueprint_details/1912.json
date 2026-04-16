@@ -32,6 +32,9 @@
           {
             "id": 119320,
             "title": "2XL / Faded Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2XL",
               "color": "Faded Black"
@@ -60,6 +63,9 @@
           {
             "id": 119321,
             "title": "2XL / Faded Bone",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2XL",
               "color": "Faded Bone"
@@ -88,6 +94,9 @@
           {
             "id": 119322,
             "title": "2XL / Faded Grey",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2XL",
               "color": "Faded Grey"
@@ -116,6 +125,9 @@
           {
             "id": 119323,
             "title": "L / Faded Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "L",
               "color": "Faded Black"
@@ -144,6 +156,9 @@
           {
             "id": 119324,
             "title": "L / Faded Bone",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "L",
               "color": "Faded Bone"
@@ -172,6 +187,9 @@
           {
             "id": 119325,
             "title": "L / Faded Grey",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "L",
               "color": "Faded Grey"
@@ -200,6 +218,9 @@
           {
             "id": 119326,
             "title": "M / Faded Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "M",
               "color": "Faded Black"
@@ -228,6 +249,9 @@
           {
             "id": 119327,
             "title": "M / Faded Bone",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "M",
               "color": "Faded Bone"
@@ -256,6 +280,9 @@
           {
             "id": 119328,
             "title": "M / Faded Grey",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "M",
               "color": "Faded Grey"
@@ -284,6 +311,9 @@
           {
             "id": 119329,
             "title": "S / Faded Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "S",
               "color": "Faded Black"
@@ -312,6 +342,9 @@
           {
             "id": 119330,
             "title": "S / Faded Bone",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "S",
               "color": "Faded Bone"
@@ -340,6 +373,9 @@
           {
             "id": 119331,
             "title": "S / Faded Grey",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "S",
               "color": "Faded Grey"
@@ -368,6 +404,9 @@
           {
             "id": 119332,
             "title": "XL / Faded Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XL",
               "color": "Faded Black"
@@ -396,6 +435,9 @@
           {
             "id": 119333,
             "title": "XL / Faded Bone",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XL",
               "color": "Faded Bone"
@@ -424,6 +466,9 @@
           {
             "id": 119334,
             "title": "XL / Faded Grey",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XL",
               "color": "Faded Grey"
@@ -452,6 +497,9 @@
           {
             "id": 119335,
             "title": "XS / Faded Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XS",
               "color": "Faded Black"
@@ -480,6 +528,9 @@
           {
             "id": 119336,
             "title": "XS / Faded Bone",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XS",
               "color": "Faded Bone"
@@ -508,6 +559,9 @@
           {
             "id": 119337,
             "title": "XS / Faded Grey",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XS",
               "color": "Faded Grey"
@@ -597,39 +651,6 @@
             ],
             "first_item": {
               "currency": "USD",
-              "cost": 519
-            },
-            "additional_items": {
-              "currency": "USD",
-              "cost": 219
-            },
-            "countries": [
-              "US"
-            ]
-          },
-          {
-            "variant_ids": [
-              119320,
-              119321,
-              119322,
-              119323,
-              119324,
-              119325,
-              119326,
-              119327,
-              119328,
-              119329,
-              119330,
-              119331,
-              119332,
-              119333,
-              119334,
-              119335,
-              119336,
-              119337
-            ],
-            "first_item": {
-              "currency": "USD",
               "cost": 939
             },
             "additional_items": {
@@ -663,14 +684,14 @@
             ],
             "first_item": {
               "currency": "USD",
-              "cost": 1000
+              "cost": 519
             },
             "additional_items": {
               "currency": "USD",
-              "cost": 400
+              "cost": 219
             },
             "countries": [
-              "REST_OF_THE_WORLD"
+              "US"
             ]
           },
           {
@@ -705,9 +726,114 @@
             "countries": [
               "AU"
             ]
+          },
+          {
+            "variant_ids": [
+              119320,
+              119321,
+              119322,
+              119323,
+              119324,
+              119325,
+              119326,
+              119327,
+              119328,
+              119329,
+              119330,
+              119331,
+              119332,
+              119333,
+              119334,
+              119335,
+              119336,
+              119337
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1000
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 400
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 429
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 209
+          },
+          "variant_count": 18
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 939
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 18
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 519
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 219
+          },
+          "variant_count": 18
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1249
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "variant_count": 18
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1000
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 400
+          },
+          "variant_count": 18
+        }
+      ]
     }
   ]
 }

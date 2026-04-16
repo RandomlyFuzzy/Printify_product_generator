@@ -26,6 +26,9 @@
           {
             "id": 87868,
             "title": "Black / US 6",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "US 6"
@@ -48,6 +51,9 @@
           {
             "id": 87869,
             "title": "Black / US 7",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "US 7"
@@ -70,6 +76,9 @@
           {
             "id": 87870,
             "title": "White / US 6",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White",
               "size": "US 6"
@@ -92,6 +101,9 @@
           {
             "id": 87871,
             "title": "White / US 7",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White",
               "size": "US 7"
@@ -114,6 +126,9 @@
           {
             "id": 87872,
             "title": "Black / US 8",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "US 8"
@@ -136,6 +151,9 @@
           {
             "id": 87873,
             "title": "Black / US 9",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "US 9"
@@ -158,6 +176,9 @@
           {
             "id": 87874,
             "title": "White / US 8",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White",
               "size": "US 8"
@@ -180,6 +201,9 @@
           {
             "id": 87875,
             "title": "White / US 9",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White",
               "size": "US 9"
@@ -202,6 +226,9 @@
           {
             "id": 87876,
             "title": "Black / US 10",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "US 10"
@@ -224,6 +251,9 @@
           {
             "id": 87877,
             "title": "Black / US 11",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "US 11"
@@ -246,6 +276,9 @@
           {
             "id": 87878,
             "title": "Black / US 12",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "US 12"
@@ -268,6 +301,9 @@
           {
             "id": 87879,
             "title": "White / US 10",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White",
               "size": "US 10"
@@ -290,6 +326,9 @@
           {
             "id": 87880,
             "title": "White / US 11",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White",
               "size": "US 11"
@@ -312,6 +351,9 @@
           {
             "id": 87881,
             "title": "White / US 12",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White",
               "size": "US 12"
@@ -334,6 +376,9 @@
           {
             "id": 87882,
             "title": "Black / US 13",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "US 13"
@@ -356,6 +401,9 @@
           {
             "id": 87883,
             "title": "White / US 13",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White",
               "size": "US 13"
@@ -378,6 +426,9 @@
           {
             "id": 98553,
             "title": "Black / US 14",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "US 14"
@@ -400,6 +451,9 @@
           {
             "id": 98554,
             "title": "White / US 14",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White",
               "size": "US 14"
@@ -527,7 +581,51 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 879
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 509
+          },
+          "variant_count": 18
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1399
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 569
+          },
+          "variant_count": 18
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1589
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 809
+          },
+          "variant_count": 18
+        }
+      ]
     }
   ]
 }

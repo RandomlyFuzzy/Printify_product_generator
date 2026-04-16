@@ -24,6 +24,9 @@
           {
             "id": 112676,
             "title": "3\u0027\u0027 \u00D7 3\u0027\u0027",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "3\u0027\u0027 \u00D7 3\u0027\u0027"
             },
@@ -94,7 +97,52 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 459
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 49
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD",
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 949
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 199
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 569
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 69
+          },
+          "variant_count": 1
+        }
+      ]
     }
   ]
 }

@@ -24,6 +24,9 @@
           {
             "id": 109724,
             "title": "Clear bottle \u002B black cap / Unflavored / 60 Gummies",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Clear bottle \u002B black cap",
               "flavor": "Unflavored",
@@ -63,7 +66,23 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 549
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 199
+          },
+          "variant_count": 1
+        }
+      ]
     }
   ]
 }

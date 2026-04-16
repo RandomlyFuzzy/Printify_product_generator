@@ -24,6 +24,9 @@
           {
             "id": 77337,
             "title": "7.5\u0027\u0027 \u00D7 0.75\u0027\u0027 / 42 - 44 mm / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "7.5\u0027\u0027 \u00D7 0.75\u0027\u0027 / 42 - 44 mm",
               "color": "Black"
@@ -40,6 +43,9 @@
           {
             "id": 77338,
             "title": "7.5\u0027\u0027 \u00D7 0.75\u0027\u0027 / 42 - 44 mm / Rose Gold",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "7.5\u0027\u0027 \u00D7 0.75\u0027\u0027 / 42 - 44 mm",
               "color": "Rose Gold"
@@ -56,6 +62,9 @@
           {
             "id": 77339,
             "title": "8\u0027\u0027 \u00D7 0.75\u0027\u0027 / 42 - 44 mm / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "8\u0027\u0027 \u00D7 0.75\u0027\u0027 / 42 - 44 mm",
               "color": "Black"
@@ -72,6 +81,9 @@
           {
             "id": 77340,
             "title": "8\u0027\u0027 \u00D7 0.75\u0027\u0027 / 42 - 44 mm / Rose Gold",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "8\u0027\u0027 \u00D7 0.75\u0027\u0027 / 42 - 44 mm",
               "color": "Rose Gold"
@@ -88,6 +100,9 @@
           {
             "id": 77926,
             "title": "7.5\u0027\u0027 \u00D7 0.75\u0027\u0027 / 38 - 40 mm / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "7.5\u0027\u0027 \u00D7 0.75\u0027\u0027 / 38 - 40 mm",
               "color": "Black"
@@ -104,6 +119,9 @@
           {
             "id": 77927,
             "title": "7.5\u0027\u0027 \u00D7 0.75\u0027\u0027 / 38 - 40 mm / Rose Gold",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "7.5\u0027\u0027 \u00D7 0.75\u0027\u0027 / 38 - 40 mm",
               "color": "Rose Gold"
@@ -120,6 +138,9 @@
           {
             "id": 77928,
             "title": "8\u0027\u0027 \u00D7 0.75\u0027\u0027 / 38 - 40 mm / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "8\u0027\u0027 \u00D7 0.75\u0027\u0027 / 38 - 40 mm",
               "color": "Black"
@@ -136,6 +157,9 @@
           {
             "id": 77929,
             "title": "8\u0027\u0027 \u00D7 0.75\u0027\u0027 / 38 - 40 mm / Rose Gold",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "8\u0027\u0027 \u00D7 0.75\u0027\u0027 / 38 - 40 mm",
               "color": "Rose Gold"
@@ -152,6 +176,9 @@
           {
             "id": 91417,
             "title": "7.5\u0027\u0027 \u00D7 0.75\u0027\u0027 / 38 - 40 mm / Silver",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "7.5\u0027\u0027 \u00D7 0.75\u0027\u0027 / 38 - 40 mm",
               "color": "Silver"
@@ -168,6 +195,9 @@
           {
             "id": 91418,
             "title": "7.5\u0027\u0027 \u00D7 0.75\u0027\u0027 / 42 - 44 mm / Silver",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "7.5\u0027\u0027 \u00D7 0.75\u0027\u0027 / 42 - 44 mm",
               "color": "Silver"
@@ -184,6 +214,9 @@
           {
             "id": 91419,
             "title": "8\u0027\u0027 \u00D7 0.75\u0027\u0027 / 38 - 40 mm / Silver",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "8\u0027\u0027 \u00D7 0.75\u0027\u0027 / 38 - 40 mm",
               "color": "Silver"
@@ -200,6 +233,9 @@
           {
             "id": 91420,
             "title": "8\u0027\u0027 \u00D7 0.75\u0027\u0027 / 42 - 44 mm / Silver",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "8\u0027\u0027 \u00D7 0.75\u0027\u0027 / 42 - 44 mm",
               "color": "Silver"
@@ -303,7 +339,51 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 539
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 99
+          },
+          "variant_count": 12
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 929
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 219
+          },
+          "variant_count": 12
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 919
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 199
+          },
+          "variant_count": 12
+        }
+      ]
     }
   ]
 }

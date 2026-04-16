@@ -31,6 +31,9 @@
           {
             "id": 94957,
             "title": "Amethyst / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Amethyst",
               "size": "S"
@@ -53,6 +56,9 @@
           {
             "id": 94958,
             "title": "Amethyst / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Amethyst",
               "size": "M"
@@ -75,6 +81,9 @@
           {
             "id": 94959,
             "title": "Amethyst / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Amethyst",
               "size": "L"
@@ -97,6 +106,9 @@
           {
             "id": 94960,
             "title": "Amethyst / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Amethyst",
               "size": "XL"
@@ -119,6 +131,9 @@
           {
             "id": 94961,
             "title": "Amethyst / 2XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Amethyst",
               "size": "2XL"
@@ -141,6 +156,9 @@
           {
             "id": 94962,
             "title": "Clay / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Clay",
               "size": "S"
@@ -163,6 +181,9 @@
           {
             "id": 94963,
             "title": "Clay / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Clay",
               "size": "M"
@@ -185,6 +206,9 @@
           {
             "id": 94964,
             "title": "Clay / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Clay",
               "size": "L"
@@ -207,6 +231,9 @@
           {
             "id": 94965,
             "title": "Clay / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Clay",
               "size": "XL"
@@ -229,6 +256,9 @@
           {
             "id": 94966,
             "title": "Clay / 2XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Clay",
               "size": "2XL"
@@ -251,6 +281,9 @@
           {
             "id": 94967,
             "title": "Ocean / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Ocean",
               "size": "S"
@@ -273,6 +306,9 @@
           {
             "id": 94968,
             "title": "Ocean / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Ocean",
               "size": "M"
@@ -295,6 +331,9 @@
           {
             "id": 94969,
             "title": "Ocean / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Ocean",
               "size": "L"
@@ -317,6 +356,9 @@
           {
             "id": 94970,
             "title": "Ocean / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Ocean",
               "size": "XL"
@@ -339,6 +381,9 @@
           {
             "id": 94971,
             "title": "Ocean / 2XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Ocean",
               "size": "2XL"
@@ -361,6 +406,9 @@
           {
             "id": 94972,
             "title": "Smoke / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Smoke",
               "size": "S"
@@ -383,6 +431,9 @@
           {
             "id": 94973,
             "title": "Smoke / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Smoke",
               "size": "M"
@@ -405,6 +456,9 @@
           {
             "id": 94974,
             "title": "Smoke / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Smoke",
               "size": "L"
@@ -427,6 +481,9 @@
           {
             "id": 94975,
             "title": "Smoke / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Smoke",
               "size": "XL"
@@ -449,6 +506,9 @@
           {
             "id": 94976,
             "title": "Smoke / 2XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Smoke",
               "size": "2XL"
@@ -617,7 +677,65 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 249
+          },
+          "variant_count": 20
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1269
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 659
+          },
+          "variant_count": 20
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1500
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1000
+          },
+          "variant_count": 20
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2199
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "variant_count": 20
+        }
+      ]
     },
     {
       "provider": {
@@ -631,6 +749,9 @@
           {
             "id": 94957,
             "title": "Amethyst / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Amethyst",
               "size": "S"
@@ -665,6 +786,9 @@
           {
             "id": 94958,
             "title": "Amethyst / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Amethyst",
               "size": "M"
@@ -699,6 +823,9 @@
           {
             "id": 94959,
             "title": "Amethyst / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Amethyst",
               "size": "L"
@@ -733,6 +860,9 @@
           {
             "id": 94960,
             "title": "Amethyst / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Amethyst",
               "size": "XL"
@@ -767,6 +897,9 @@
           {
             "id": 94961,
             "title": "Amethyst / 2XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Amethyst",
               "size": "2XL"
@@ -801,6 +934,9 @@
           {
             "id": 94962,
             "title": "Clay / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Clay",
               "size": "S"
@@ -835,6 +971,9 @@
           {
             "id": 94963,
             "title": "Clay / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Clay",
               "size": "M"
@@ -869,6 +1008,9 @@
           {
             "id": 94964,
             "title": "Clay / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Clay",
               "size": "L"
@@ -903,6 +1045,9 @@
           {
             "id": 94965,
             "title": "Clay / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Clay",
               "size": "XL"
@@ -937,6 +1082,9 @@
           {
             "id": 94966,
             "title": "Clay / 2XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Clay",
               "size": "2XL"
@@ -971,6 +1119,9 @@
           {
             "id": 94967,
             "title": "Ocean / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Ocean",
               "size": "S"
@@ -1005,6 +1156,9 @@
           {
             "id": 94968,
             "title": "Ocean / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Ocean",
               "size": "M"
@@ -1039,6 +1193,9 @@
           {
             "id": 94969,
             "title": "Ocean / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Ocean",
               "size": "L"
@@ -1073,6 +1230,9 @@
           {
             "id": 94970,
             "title": "Ocean / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Ocean",
               "size": "XL"
@@ -1107,6 +1267,9 @@
           {
             "id": 94971,
             "title": "Ocean / 2XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Ocean",
               "size": "2XL"
@@ -1141,6 +1304,9 @@
           {
             "id": 94972,
             "title": "Smoke / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Smoke",
               "size": "S"
@@ -1175,6 +1341,9 @@
           {
             "id": 94973,
             "title": "Smoke / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Smoke",
               "size": "M"
@@ -1209,6 +1378,9 @@
           {
             "id": 94974,
             "title": "Smoke / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Smoke",
               "size": "L"
@@ -1243,6 +1415,9 @@
           {
             "id": 94975,
             "title": "Smoke / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Smoke",
               "size": "XL"
@@ -1277,6 +1452,9 @@
           {
             "id": 94976,
             "title": "Smoke / 2XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Smoke",
               "size": "2XL"
@@ -1311,6 +1489,9 @@
           {
             "id": 114859,
             "title": "Amethyst / 3XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Amethyst",
               "size": "3XL"
@@ -1345,6 +1526,9 @@
           {
             "id": 114860,
             "title": "Clay / 3XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Clay",
               "size": "3XL"
@@ -1379,6 +1563,9 @@
           {
             "id": 114861,
             "title": "Ocean / 3XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Ocean",
               "size": "3XL"
@@ -1413,6 +1600,9 @@
           {
             "id": 114862,
             "title": "Smoke / 3XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Smoke",
               "size": "3XL"
@@ -1447,6 +1637,9 @@
           {
             "id": 114863,
             "title": "Citrine / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Citrine",
               "size": "S"
@@ -1481,6 +1674,9 @@
           {
             "id": 114864,
             "title": "Citrine / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Citrine",
               "size": "M"
@@ -1515,6 +1711,9 @@
           {
             "id": 114865,
             "title": "Citrine / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Citrine",
               "size": "L"
@@ -1549,6 +1748,9 @@
           {
             "id": 114866,
             "title": "Citrine / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Citrine",
               "size": "XL"
@@ -1583,6 +1785,9 @@
           {
             "id": 114867,
             "title": "Citrine / 2XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Citrine",
               "size": "2XL"
@@ -1617,6 +1822,9 @@
           {
             "id": 114868,
             "title": "Citrine / 3XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Citrine",
               "size": "3XL"
@@ -1651,6 +1859,9 @@
           {
             "id": 114869,
             "title": "Fern / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Fern",
               "size": "S"
@@ -1685,6 +1896,9 @@
           {
             "id": 114870,
             "title": "Fern / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Fern",
               "size": "M"
@@ -1719,6 +1933,9 @@
           {
             "id": 114871,
             "title": "Fern / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Fern",
               "size": "L"
@@ -1753,6 +1970,9 @@
           {
             "id": 114872,
             "title": "Fern / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Fern",
               "size": "XL"
@@ -1787,6 +2007,9 @@
           {
             "id": 114873,
             "title": "Fern / 2XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Fern",
               "size": "2XL"
@@ -1821,6 +2044,9 @@
           {
             "id": 114874,
             "title": "Fern / 3XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Fern",
               "size": "3XL"
@@ -2116,7 +2342,79 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 769
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 209
+          },
+          "variant_count": 36
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2199
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "variant_count": 36
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1500
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1000
+          },
+          "variant_count": 36
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 849
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 209
+          },
+          "variant_count": 36
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1269
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 659
+          },
+          "variant_count": 36
+        }
+      ]
     }
   ]
 }

@@ -8,6 +8,7 @@
       "https://images.printify.com/69aae67024e526d0c10d5002",
       "https://images.printify.com/69aadc8da62a5b04300f5e73",
       "https://images.printify.com/66d9593826d6fa016100b653",
+      "https://images.printify.com/69d4dbf8d813d647df03e201",
       "https://images.printify.com/69aadc8e6c175d857d0465f2",
       "https://images.printify.com/66669d857b9d8723ef0030e2",
       "https://images.printify.com/69aadd1718ed163b5f032533",
@@ -27,6 +28,9 @@
           {
             "id": 80301,
             "title": "Clean Cotton / 9oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "scent": "Clean Cotton",
               "size": "9oz"
@@ -43,6 +47,9 @@
           {
             "id": 80302,
             "title": "Sea Salt \u002B Orchid / 9oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "scent": "Sea Salt \u002B Orchid",
               "size": "9oz"
@@ -59,6 +66,9 @@
           {
             "id": 80303,
             "title": "White Sage and Lavender / 9oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "scent": "White Sage and Lavender",
               "size": "9oz"
@@ -75,6 +85,9 @@
           {
             "id": 93541,
             "title": "Apple Harvest / 9oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "scent": "Apple Harvest",
               "size": "9oz"
@@ -91,6 +104,9 @@
           {
             "id": 93542,
             "title": "Cinnamon Vanilla / 9oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "scent": "Cinnamon Vanilla",
               "size": "9oz"
@@ -107,6 +123,9 @@
           {
             "id": 104680,
             "title": "Christmas Warmth / 9oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "scent": "Christmas Warmth",
               "size": "9oz"
@@ -123,6 +142,9 @@
           {
             "id": 104681,
             "title": "Coconut Cream \u002B Cardamom / 9oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "scent": "Coconut Cream \u002B Cardamom",
               "size": "9oz"
@@ -139,6 +161,9 @@
           {
             "id": 104682,
             "title": "Peppered Passionfruit / 9oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "scent": "Peppered Passionfruit",
               "size": "9oz"
@@ -155,6 +180,9 @@
           {
             "id": 104683,
             "title": "Unscented / 9oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "scent": "Unscented",
               "size": "9oz"
@@ -289,7 +317,65 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 799
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 349
+          },
+          "variant_count": 13
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 3399
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 929
+          },
+          "variant_count": 13
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2759
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 639
+          },
+          "variant_count": 13
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2829
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 929
+          },
+          "variant_count": 13
+        }
+      ]
     }
   ]
 }

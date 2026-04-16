@@ -25,6 +25,9 @@
           {
             "id": 68983,
             "title": "Star / One Size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "shape": "Star",
               "size": "One Size"
@@ -41,6 +44,9 @@
           {
             "id": 69370,
             "title": "Circle / One Size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "shape": "Circle",
               "size": "One Size"
@@ -57,6 +63,9 @@
           {
             "id": 74403,
             "title": "Heart / One Size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "shape": "Heart",
               "size": "One Size"
@@ -73,6 +82,9 @@
           {
             "id": 74404,
             "title": "Snowflake / One Size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "shape": "Snowflake",
               "size": "One Size"
@@ -192,7 +204,96 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "CA",
+            "REST_OF_THE_WORLD",
+            "AX",
+            "AL",
+            "AD",
+            "AM",
+            "AT",
+            "BY",
+            "BE",
+            "BA",
+            "BV",
+            "BG",
+            "HR",
+            "CY",
+            "CZ",
+            "DK",
+            "EE",
+            "FO",
+            "FI",
+            "FR",
+            "GE",
+            "DE",
+            "GI",
+            "GR",
+            "GL",
+            "GP",
+            "GG",
+            "VA",
+            "HU",
+            "IS",
+            "IE",
+            "IM",
+            "IT",
+            "JE",
+            "LV",
+            "LI",
+            "LT",
+            "LU",
+            "MK",
+            "MT",
+            "MD",
+            "MC",
+            "ME",
+            "NL",
+            "NO",
+            "PL",
+            "PT",
+            "RE",
+            "RO",
+            "SM",
+            "RS",
+            "SK",
+            "SI",
+            "ES",
+            "SE",
+            "CH",
+            "TR",
+            "UA",
+            "GB",
+            "XK"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 949
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 199
+          },
+          "variant_count": 4
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 569
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 69
+          },
+          "variant_count": 4
+        }
+      ]
     }
   ]
 }

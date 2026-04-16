@@ -24,6 +24,9 @@
           {
             "id": 82965,
             "title": "6\u0022 x 3\u0022",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "6\u0022 x 3\u0022"
             },
@@ -93,7 +96,51 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 549
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 49
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 889
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 79
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 859
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 99
+          },
+          "variant_count": 1
+        }
+      ]
     }
   ]
 }

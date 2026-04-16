@@ -24,6 +24,9 @@
           {
             "id": 158521,
             "title": "XS / Realtree Edge",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XS",
               "color": "Realtree Edge"
@@ -52,6 +55,9 @@
           {
             "id": 158522,
             "title": "S / Realtree Edge",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "S",
               "color": "Realtree Edge"
@@ -80,6 +86,9 @@
           {
             "id": 158523,
             "title": "M / Realtree Edge",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "M",
               "color": "Realtree Edge"
@@ -108,6 +117,9 @@
           {
             "id": 158525,
             "title": "L / Realtree Edge",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "L",
               "color": "Realtree Edge"
@@ -136,6 +148,9 @@
           {
             "id": 158528,
             "title": "XL / Realtree Edge",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XL",
               "color": "Realtree Edge"
@@ -164,6 +179,9 @@
           {
             "id": 158530,
             "title": "2XL / Realtree Edge",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2XL",
               "color": "Realtree Edge"
@@ -192,6 +210,9 @@
           {
             "id": 158532,
             "title": "3XL / Realtree Edge",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "3XL",
               "color": "Realtree Edge"
@@ -220,6 +241,9 @@
           {
             "id": 158534,
             "title": "4XL / Realtree Edge",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "4XL",
               "color": "Realtree Edge"
@@ -346,7 +370,65 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 519
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 219
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1000
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 400
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 939
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1249
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "variant_count": 8
+        }
+      ]
     }
   ]
 }

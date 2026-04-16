@@ -24,6 +24,9 @@
           {
             "id": 94267,
             "title": "Apple / 16oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Apple",
               "size": "16oz"
@@ -40,6 +43,9 @@
           {
             "id": 94268,
             "title": "Clear / 16oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Clear",
               "size": "16oz"
@@ -56,6 +62,9 @@
           {
             "id": 94269,
             "title": "Dark Blue / 16oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Dark Blue",
               "size": "16oz"
@@ -72,6 +81,9 @@
           {
             "id": 94270,
             "title": "Dark Green / 16oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Dark Green",
               "size": "16oz"
@@ -88,6 +100,9 @@
           {
             "id": 94271,
             "title": "Fuchsia / 16oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Fuchsia",
               "size": "16oz"
@@ -104,6 +119,9 @@
           {
             "id": 94272,
             "title": "Graphite Gray / 16oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Graphite Gray",
               "size": "16oz"
@@ -120,6 +138,9 @@
           {
             "id": 94273,
             "title": "Light Blue / 16oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Light Blue",
               "size": "16oz"
@@ -136,6 +157,9 @@
           {
             "id": 94274,
             "title": "Pineapple / 16oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Pineapple",
               "size": "16oz"
@@ -152,6 +176,9 @@
           {
             "id": 94277,
             "title": "Tangerine / 16oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Tangerine",
               "size": "16oz"
@@ -252,7 +279,51 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 829
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 349
+          },
+          "variant_count": 11
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2459
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1529
+          },
+          "variant_count": 11
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1579
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1099
+          },
+          "variant_count": 11
+        }
+      ]
     }
   ]
 }

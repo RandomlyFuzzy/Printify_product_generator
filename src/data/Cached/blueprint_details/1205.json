@@ -24,6 +24,9 @@
           {
             "id": 92131,
             "title": "18\u2033 x 12\u2033 (Horizontal)",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "18\u2033 x 12\u2033 (Horizontal)"
             },
@@ -39,6 +42,9 @@
           {
             "id": 92132,
             "title": "24\u2033 x 18\u2033 (Horizontal)",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "24\u2033 x 18\u2033 (Horizontal)"
             },
@@ -54,6 +60,9 @@
           {
             "id": 92133,
             "title": "36\u2033 x 24\u2033 (Horizontal)",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "36\u2033 x 24\u2033 (Horizontal)"
             },
@@ -69,6 +78,9 @@
           {
             "id": 92134,
             "title": "12\u2033 x 18\u2033 (Vertical)",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "12\u2033 x 18\u2033 (Vertical)"
             },
@@ -84,6 +96,9 @@
           {
             "id": 92135,
             "title": "18\u2033 x 24\u2033 (Vertical)",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "18\u2033 x 24\u2033 (Vertical)"
             },
@@ -99,6 +114,9 @@
           {
             "id": 92136,
             "title": "24\u0022 x 36\u0022 (Vertical)",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "24\u0022 x 36\u0022 (Vertical)"
             },
@@ -273,7 +291,135 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1769
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 529
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 4599
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 4599
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 2999
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2059
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 629
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1849
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 629
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 9099
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 9099
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 6599
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 6599
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 6099
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 6099
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 5099
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 5099
+          },
+          "variant_count": 2
+        }
+      ]
     }
   ]
 }

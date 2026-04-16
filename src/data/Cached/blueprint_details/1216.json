@@ -24,6 +24,9 @@
           {
             "id": 92313,
             "title": "2\u0022 \u00D7 2\u0022 / 1 pc / Matte",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2\u0022 \u00D7 2\u0022",
               "quantity": "1 pc",
@@ -41,6 +44,9 @@
           {
             "id": 92314,
             "title": "3\u0022 \u00D7 3\u0022 / 1 pc / Matte",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "3\u0022 \u00D7 3\u0022",
               "quantity": "1 pc",
@@ -58,6 +64,9 @@
           {
             "id": 92315,
             "title": "4\u0022 \u00D7 4\u0022 / 1 pc / Matte",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "4\u0022 \u00D7 4\u0022",
               "quantity": "1 pc",
@@ -75,6 +84,9 @@
           {
             "id": 92316,
             "title": "5\u0022 \u00D7 5\u0022 / 1 pc / Matte",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "5\u0022 \u00D7 5\u0022",
               "quantity": "1 pc",
@@ -92,6 +104,9 @@
           {
             "id": 92317,
             "title": "6\u0022 \u00D7 6\u0022 / 1 pc / Matte",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "6\u0022 \u00D7 6\u0022",
               "quantity": "1 pc",
@@ -109,6 +124,9 @@
           {
             "id": 92318,
             "title": "9\u0027\u0027 x 9\u0027\u0027 / 1 pc / Matte",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "9\u0027\u0027 x 9\u0027\u0027",
               "quantity": "1 pc",
@@ -272,7 +290,121 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "AX",
+            "AL",
+            "AD",
+            "AM",
+            "AT",
+            "BY",
+            "BE",
+            "BA",
+            "BV",
+            "BG",
+            "HR",
+            "CY",
+            "CZ",
+            "DK",
+            "EE",
+            "FO",
+            "FI",
+            "FR",
+            "GE",
+            "DE",
+            "GI",
+            "GR",
+            "GL",
+            "GP",
+            "GG",
+            "VA",
+            "HU",
+            "IS",
+            "IE",
+            "IM",
+            "IT",
+            "JE",
+            "LV",
+            "LI",
+            "LT",
+            "LU",
+            "MK",
+            "MT",
+            "MD",
+            "MC",
+            "ME",
+            "NL",
+            "NO",
+            "PL",
+            "PT",
+            "RE",
+            "RO",
+            "SM",
+            "RS",
+            "SK",
+            "SI",
+            "ES",
+            "SE",
+            "CH",
+            "TR",
+            "UA",
+            "XK"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 739
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 5
+          },
+          "variant_count": 6
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2299
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 5
+          },
+          "variant_count": 6
+        },
+        {
+          "countries": [
+            "GB"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 649
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 5
+          },
+          "variant_count": 6
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1969
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 5
+          },
+          "variant_count": 6
+        }
+      ]
     }
   ]
 }

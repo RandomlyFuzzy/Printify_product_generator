@@ -25,6 +25,9 @@
           {
             "id": 78542,
             "title": "12.2\u0022 x 6.3\u0022 / Matte",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "12.2\u0022 x 6.3\u0022",
               "finish": "Matte"
@@ -154,7 +157,110 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "REST_OF_THE_WORLD",
+            "CA",
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1109
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 869
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "AX",
+            "AL",
+            "AD",
+            "AM",
+            "AT",
+            "BY",
+            "BE",
+            "BA",
+            "BV",
+            "BG",
+            "HR",
+            "CY",
+            "CZ",
+            "DK",
+            "EE",
+            "FO",
+            "FI",
+            "FR",
+            "GE",
+            "DE",
+            "GI",
+            "GR",
+            "GL",
+            "GP",
+            "GG",
+            "VA",
+            "HU",
+            "IS",
+            "IE",
+            "IM",
+            "IT",
+            "JE",
+            "LV",
+            "LI",
+            "LT",
+            "LU",
+            "MK",
+            "MT",
+            "MD",
+            "MC",
+            "ME",
+            "NL",
+            "NO",
+            "PL",
+            "PT",
+            "RE",
+            "RO",
+            "SM",
+            "RS",
+            "SK",
+            "SI",
+            "ES",
+            "SE",
+            "CH",
+            "TR",
+            "UA",
+            "GB",
+            "XK"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 739
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 619
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 759
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 629
+          },
+          "variant_count": 1
+        }
+      ]
     }
   ]
 }

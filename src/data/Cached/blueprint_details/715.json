@@ -25,6 +25,9 @@
           {
             "id": 75616,
             "title": "One size / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "White"
@@ -185,7 +188,137 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "CA",
+            "MX",
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2279
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1139
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "GB"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 859
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 509
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "NL",
+            "DE",
+            "AX",
+            "AL",
+            "AD",
+            "AM",
+            "AT",
+            "BY",
+            "BE",
+            "BA",
+            "BV",
+            "BG",
+            "HR",
+            "CY",
+            "CZ",
+            "DK",
+            "EE",
+            "FO",
+            "FI",
+            "FR",
+            "GE",
+            "GI",
+            "GR",
+            "GL",
+            "GP",
+            "GG",
+            "VA",
+            "HU",
+            "IS",
+            "IE",
+            "IM",
+            "IT",
+            "JE",
+            "LV",
+            "LI",
+            "LT",
+            "LU",
+            "MK",
+            "MT",
+            "MD",
+            "MC",
+            "ME",
+            "NO",
+            "PL",
+            "PT",
+            "RE",
+            "RO",
+            "SM",
+            "RS",
+            "SK",
+            "SI",
+            "ES",
+            "SE",
+            "CH",
+            "TR",
+            "UA",
+            "XK"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2149
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 899
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 919
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 259
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1099
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 309
+          },
+          "variant_count": 1
+        }
+      ]
     }
   ]
 }

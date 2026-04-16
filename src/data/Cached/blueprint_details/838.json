@@ -25,6 +25,9 @@
           {
             "id": 78439,
             "title": "10\u0022 x 10\u0022 (Square) / Oak",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "10\u0022 x 10\u0022 (Square)",
               "color": "Oak"
@@ -41,6 +44,9 @@
           {
             "id": 78440,
             "title": "10\u0022 x 12\u0022 (Vertical) / Oak",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "10\u0022 x 12\u0022 (Vertical)",
               "color": "Oak"
@@ -57,6 +63,9 @@
           {
             "id": 78441,
             "title": "10\u0022 x 8\u0022 (Horizontal) / Oak",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "10\u0022 x 8\u0022 (Horizontal)",
               "color": "Oak"
@@ -73,6 +82,9 @@
           {
             "id": 78442,
             "title": "11\u0022 x 14\u0022 (Vertical) / Oak",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "11\u0022 x 14\u0022 (Vertical)",
               "color": "Oak"
@@ -89,6 +101,9 @@
           {
             "id": 78443,
             "title": "12\u0022 x 10\u0022 (Horizontal) / Oak",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "12\u0022 x 10\u0022 (Horizontal)",
               "color": "Oak"
@@ -105,6 +120,9 @@
           {
             "id": 78444,
             "title": "14\u0022 x 11\u0022 (Horizontal) / Oak",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "14\u0022 x 11\u0022 (Horizontal)",
               "color": "Oak"
@@ -121,6 +139,9 @@
           {
             "id": 78445,
             "title": "4\u0022 x 6\u0022 (Vertical) / Oak",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "4\u0022 x 6\u0022 (Vertical)",
               "color": "Oak"
@@ -137,6 +158,9 @@
           {
             "id": 78446,
             "title": "5\u0022 x 7\u0022 (Vertical) / Oak",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "5\u0022 x 7\u0022 (Vertical)",
               "color": "Oak"
@@ -153,6 +177,9 @@
           {
             "id": 78447,
             "title": "6\u0022 x 4\u0022 (Horizontal) / Oak",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "6\u0022 x 4\u0022 (Horizontal)",
               "color": "Oak"
@@ -169,6 +196,9 @@
           {
             "id": 78448,
             "title": "6\u0022 x 6\u0022 (Square) / Oak",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "6\u0022 x 6\u0022 (Square)",
               "color": "Oak"
@@ -185,6 +215,9 @@
           {
             "id": 78449,
             "title": "7\u0022 x 5\u0022 (Horizontal) / Oak",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "7\u0022 x 5\u0022 (Horizontal)",
               "color": "Oak"
@@ -201,6 +234,9 @@
           {
             "id": 78450,
             "title": "8\u0022 x 10\u0022 (Vertical) / Oak",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "8\u0022 x 10\u0022 (Vertical)",
               "color": "Oak"
@@ -217,6 +253,9 @@
           {
             "id": 78451,
             "title": "8\u0022 x 8\u0022 (Square) / Oak",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "8\u0022 x 8\u0022 (Square)",
               "color": "Oak"
@@ -435,7 +474,135 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "AX",
+            "AL",
+            "AD",
+            "AM",
+            "AT",
+            "BY",
+            "BE",
+            "BA",
+            "BV",
+            "BG",
+            "HR",
+            "CY",
+            "CZ",
+            "DK",
+            "EE",
+            "FO",
+            "FI",
+            "FR",
+            "GE",
+            "DE",
+            "GI",
+            "GR",
+            "GL",
+            "GP",
+            "GG",
+            "VA",
+            "HU",
+            "IS",
+            "IE",
+            "IM",
+            "IT",
+            "JE",
+            "LV",
+            "LI",
+            "LT",
+            "LU",
+            "MK",
+            "MT",
+            "MD",
+            "MC",
+            "ME",
+            "NL",
+            "NO",
+            "PL",
+            "PT",
+            "RE",
+            "RO",
+            "SM",
+            "RS",
+            "SK",
+            "SI",
+            "ES",
+            "SE",
+            "CH",
+            "TR",
+            "UA",
+            "XK"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1319
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1299
+          },
+          "variant_count": 13
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 799
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 369
+          },
+          "variant_count": 13
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 3999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1199
+          },
+          "variant_count": 13
+        },
+        {
+          "countries": [
+            "GB"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1119
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1119
+          },
+          "variant_count": 13
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 4169
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 4169
+          },
+          "variant_count": 13
+        }
+      ]
     }
   ]
 }

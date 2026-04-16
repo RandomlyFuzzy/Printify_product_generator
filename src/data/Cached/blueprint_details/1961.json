@@ -26,6 +26,9 @@
           {
             "id": 121259,
             "title": "2XL / Deep Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2XL",
               "color": "Deep Black"
@@ -48,6 +51,9 @@
           {
             "id": 121260,
             "title": "2XL / Townsend Green",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2XL",
               "color": "Townsend Green"
@@ -70,6 +76,9 @@
           {
             "id": 121261,
             "title": "4XL / Deep Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "4XL",
               "color": "Deep Black"
@@ -92,6 +101,9 @@
           {
             "id": 121262,
             "title": "4XL / Townsend Green",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "4XL",
               "color": "Townsend Green"
@@ -114,6 +126,9 @@
           {
             "id": 121263,
             "title": "L / Deep Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "L",
               "color": "Deep Black"
@@ -136,6 +151,9 @@
           {
             "id": 121264,
             "title": "L / Townsend Green",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "L",
               "color": "Townsend Green"
@@ -158,6 +176,9 @@
           {
             "id": 121265,
             "title": "M / Deep Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "M",
               "color": "Deep Black"
@@ -180,6 +201,9 @@
           {
             "id": 121266,
             "title": "M / Townsend Green",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "M",
               "color": "Townsend Green"
@@ -202,6 +226,9 @@
           {
             "id": 121267,
             "title": "S / Deep Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "S",
               "color": "Deep Black"
@@ -224,6 +251,9 @@
           {
             "id": 121268,
             "title": "S / Townsend Green",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "S",
               "color": "Townsend Green"
@@ -246,6 +276,9 @@
           {
             "id": 121269,
             "title": "XL / Deep Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XL",
               "color": "Deep Black"
@@ -268,6 +301,9 @@
           {
             "id": 121270,
             "title": "XL / Townsend Green",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XL",
               "color": "Townsend Green"
@@ -290,6 +326,9 @@
           {
             "id": 121271,
             "title": "XS / Deep Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XS",
               "color": "Deep Black"
@@ -312,6 +351,9 @@
           {
             "id": 121272,
             "title": "XS / Townsend Green",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XS",
               "color": "Townsend Green"
@@ -334,6 +376,9 @@
           {
             "id": 121273,
             "title": "3XL / Deep Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "3XL",
               "color": "Deep Black"
@@ -356,6 +401,9 @@
           {
             "id": 121274,
             "title": "3XL / Townsend Green",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "3XL",
               "color": "Townsend Green"
@@ -508,7 +556,65 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 799
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 249
+          },
+          "variant_count": 16
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1499
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 749
+          },
+          "variant_count": 16
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 249
+          },
+          "variant_count": 16
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1199
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 729
+          },
+          "variant_count": 16
+        }
+      ]
     }
   ]
 }

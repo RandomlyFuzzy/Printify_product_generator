@@ -25,6 +25,9 @@
           {
             "id": 68327,
             "title": "12.6\u0022 x 17.7\u0022",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "12.6\u0022 x 17.7\u0022"
             },
@@ -239,7 +242,122 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "DK",
+            "LT",
+            "LV",
+            "FI",
+            "EE",
+            "CH",
+            "IS",
+            "LI",
+            "SE",
+            "NO",
+            "NL",
+            "PL",
+            "PT",
+            "RE",
+            "RO",
+            "SM",
+            "RS",
+            "SK",
+            "SI",
+            "ES",
+            "TR",
+            "UA",
+            "XK",
+            "AX",
+            "AL",
+            "AD",
+            "AM",
+            "AT",
+            "BY",
+            "BE",
+            "BA",
+            "BV",
+            "BG",
+            "HR",
+            "CY",
+            "CZ",
+            "FO",
+            "FR",
+            "GE",
+            "DE",
+            "GI",
+            "GR",
+            "GL",
+            "GP",
+            "GG",
+            "VA",
+            "HU",
+            "IE",
+            "IM",
+            "IT",
+            "JE",
+            "LU",
+            "MK",
+            "MT",
+            "MD",
+            "MC",
+            "ME"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2649
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 799
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "CA",
+            "GB"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 3499
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 799
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 5199
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 799
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 4499
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 799
+          },
+          "variant_count": 1
+        }
+      ]
     }
   ]
 }

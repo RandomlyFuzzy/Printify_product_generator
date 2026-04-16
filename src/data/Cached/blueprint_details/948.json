@@ -29,6 +29,9 @@
           {
             "id": 78572,
             "title": "Seam thread color automatically matched to design / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Seam thread color automatically matched to design",
               "size": "S"
@@ -51,6 +54,9 @@
           {
             "id": 78573,
             "title": "Seam thread color automatically matched to design / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Seam thread color automatically matched to design",
               "size": "M"
@@ -73,6 +79,9 @@
           {
             "id": 78574,
             "title": "Seam thread color automatically matched to design / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Seam thread color automatically matched to design",
               "size": "L"
@@ -95,6 +104,9 @@
           {
             "id": 78575,
             "title": "Seam thread color automatically matched to design / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Seam thread color automatically matched to design",
               "size": "XL"
@@ -117,6 +129,9 @@
           {
             "id": 78576,
             "title": "Seam thread color automatically matched to design / 2XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Seam thread color automatically matched to design",
               "size": "2XL"
@@ -139,6 +154,9 @@
           {
             "id": 79955,
             "title": "Seam thread color automatically matched to design / XS",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Seam thread color automatically matched to design",
               "size": "XS"
@@ -232,7 +250,53 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 609
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 249
+          },
+          "variant_count": 6
+        },
+        {
+          "countries": [
+            "NZ",
+            "AU",
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 599
+          },
+          "variant_count": 6
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1699
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 6
+        }
+      ]
     }
   ]
 }

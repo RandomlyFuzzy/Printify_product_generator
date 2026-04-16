@@ -24,6 +24,9 @@
           {
             "id": 87235,
             "title": "12\u0022 \u00D7 6\u0022",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "12\u0022 \u00D7 6\u0022"
             },
@@ -93,7 +96,51 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1229
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 429
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1139
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 279
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 729
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 119
+          },
+          "variant_count": 1
+        }
+      ]
     }
   ]
 }

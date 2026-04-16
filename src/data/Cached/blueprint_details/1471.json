@@ -23,6 +23,9 @@
           {
             "id": 106189,
             "title": "7\u0027\u0027 \u00D7 5\u0027\u0027 (Horizontal)",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "7\u0027\u0027 \u00D7 5\u0027\u0027 (Horizontal)"
             },
@@ -38,6 +41,9 @@
           {
             "id": 106190,
             "title": "5\u0027\u0027 \u00D7 7\u0027\u0027 (Vertical)",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "5\u0027\u0027 \u00D7 7\u0027\u0027 (Vertical)"
             },
@@ -110,7 +116,51 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1599
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 399
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 3139
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1689
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 3209
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1689
+          },
+          "variant_count": 2
+        }
+      ]
     }
   ]
 }

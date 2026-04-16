@@ -24,6 +24,9 @@
           {
             "id": 117425,
             "title": "40oz / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "40oz",
               "color": "White"
@@ -40,6 +43,9 @@
           {
             "id": 117426,
             "title": "40oz / Navy Blue",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "40oz",
               "color": "Navy Blue"
@@ -56,6 +62,9 @@
           {
             "id": 117427,
             "title": "40oz / Pink",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "40oz",
               "color": "Pink"
@@ -72,6 +81,9 @@
           {
             "id": 117428,
             "title": "40oz / Rose Red",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "40oz",
               "color": "Rose Red"
@@ -88,6 +100,9 @@
           {
             "id": 117429,
             "title": "40oz / Grey Green",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "40oz",
               "color": "Grey Green"
@@ -104,6 +119,9 @@
           {
             "id": 117430,
             "title": "40oz / Cyan",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "40oz",
               "color": "Cyan"
@@ -120,6 +138,9 @@
           {
             "id": 117431,
             "title": "40oz / Light Green",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "40oz",
               "color": "Light Green"
@@ -136,6 +157,9 @@
           {
             "id": 117432,
             "title": "40oz / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "40oz",
               "color": "Black"
@@ -152,6 +176,9 @@
           {
             "id": 117433,
             "title": "40oz / Light Purple",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "40oz",
               "color": "Light Purple"
@@ -168,6 +195,9 @@
           {
             "id": 117434,
             "title": "40oz / Red",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "40oz",
               "color": "Red"
@@ -184,6 +214,9 @@
           {
             "id": 117435,
             "title": "40oz / Creamy White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "40oz",
               "color": "Creamy White"
@@ -200,6 +233,9 @@
           {
             "id": 117436,
             "title": "40oz / Light Blue",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "40oz",
               "color": "Light Blue"
@@ -442,7 +478,151 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2719
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 2219
+          },
+          "variant_count": 12
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2719
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1979
+          },
+          "variant_count": 12
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1939
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1799
+          },
+          "variant_count": 12
+        },
+        {
+          "countries": [
+            "AX",
+            "AL",
+            "AD",
+            "AM",
+            "AT",
+            "BY",
+            "BE",
+            "BA",
+            "BV",
+            "BG",
+            "HR",
+            "CY",
+            "CZ",
+            "DK",
+            "EE",
+            "FO",
+            "FI",
+            "FR",
+            "GE",
+            "DE",
+            "GI",
+            "GR",
+            "GL",
+            "GP",
+            "GG",
+            "VA",
+            "HU",
+            "IS",
+            "IE",
+            "IM",
+            "IT",
+            "JE",
+            "LV",
+            "LI",
+            "LT",
+            "LU",
+            "MK",
+            "MT",
+            "MD",
+            "MC",
+            "ME",
+            "NL",
+            "NO",
+            "PL",
+            "PT",
+            "RE",
+            "RO",
+            "SM",
+            "RS",
+            "SK",
+            "SI",
+            "ES",
+            "SE",
+            "CH",
+            "TR",
+            "UA",
+            "GB",
+            "XK"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1849
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1609
+          },
+          "variant_count": 12
+        },
+        {
+          "countries": [
+            "GB"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1729
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1479
+          },
+          "variant_count": 12
+        },
+        {
+          "countries": [
+            "AU",
+            "NZ"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2099
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1479
+          },
+          "variant_count": 12
+        }
+      ]
     }
   ]
 }

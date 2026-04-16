@@ -26,6 +26,9 @@
           {
             "id": 87613,
             "title": "7\u0022 x 5\u0022 (Horizontal) / Black Frame",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "7\u0022 x 5\u0022 (Horizontal)",
               "color": "Black Frame"
@@ -42,6 +45,9 @@
           {
             "id": 87615,
             "title": "8\u0022 x 6\u0022 (Horizontal) / Black Frame",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "8\u0022 x 6\u0022 (Horizontal)",
               "color": "Black Frame"
@@ -58,6 +64,9 @@
           {
             "id": 87617,
             "title": "10\u0022 x 8\u0022 (Horizontal) / Black Frame",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "10\u0022 x 8\u0022 (Horizontal)",
               "color": "Black Frame"
@@ -74,6 +83,9 @@
           {
             "id": 87618,
             "title": "12\u0022 x 8\u0022 (Horizontal) / Black Frame",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "12\u0022 x 8\u0022 (Horizontal)",
               "color": "Black Frame"
@@ -90,6 +102,9 @@
           {
             "id": 87620,
             "title": "5\u0022 x 7\u0022 (Vertical) / Black Frame",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "5\u0022 x 7\u0022 (Vertical)",
               "color": "Black Frame"
@@ -106,6 +121,9 @@
           {
             "id": 87622,
             "title": "6\u0022 x 8\u0022 (Vertical) / Black Frame",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "6\u0022 x 8\u0022 (Vertical)",
               "color": "Black Frame"
@@ -122,6 +140,9 @@
           {
             "id": 87624,
             "title": "8\u0022 x 10\u0022 (Vertical) / Black Frame",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "8\u0022 x 10\u0022 (Vertical)",
               "color": "Black Frame"
@@ -138,6 +159,9 @@
           {
             "id": 87625,
             "title": "8\u0022 x 12\u0022 (Vertical) / Black Frame",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "8\u0022 x 12\u0022 (Vertical)",
               "color": "Black Frame"
@@ -244,7 +268,65 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 879
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 349
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "NZ"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 899
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 719
+          },
+          "variant_count": 4
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 4919
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 4919
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "NZ"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1009
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 819
+          },
+          "variant_count": 4
+        }
+      ]
     }
   ]
 }

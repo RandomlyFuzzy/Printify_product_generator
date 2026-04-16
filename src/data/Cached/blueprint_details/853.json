@@ -27,6 +27,9 @@
           {
             "id": 78176,
             "title": "27\u0022 \u00D7 30\u0022 \u00D7 25\u0022 / Without insert",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "27\u0022 \u00D7 30\u0022 \u00D7 25\u0022",
               "material": "Without insert"
@@ -49,6 +52,9 @@
           {
             "id": 78177,
             "title": "38\u0022 \u00D7 42\u0022 \u00D7 29\u0022 / Without insert",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "38\u0022 \u00D7 42\u0022 \u00D7 29\u0022",
               "material": "Without insert"
@@ -173,7 +179,93 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2599
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 2599
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1829
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 729
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1259
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 389
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1259
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 469
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1409
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 729
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1439
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 749
+          },
+          "variant_count": 1
+        }
+      ]
     }
   ]
 }

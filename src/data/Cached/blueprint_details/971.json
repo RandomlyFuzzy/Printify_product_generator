@@ -28,6 +28,9 @@
           {
             "id": 78499,
             "title": "17.5\u0022 \u00D7 9.5\u0022",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "17.5\u0022 \u00D7 9.5\u0022"
             },
@@ -103,7 +106,51 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 479
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 99
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 959
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 139
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 949
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 370
+          },
+          "variant_count": 1
+        }
+      ]
     }
   ]
 }

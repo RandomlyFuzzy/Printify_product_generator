@@ -24,6 +24,9 @@
           {
             "id": 147685,
             "title": "29\u0027\u0027 x 20\u0022 / Matte",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "29\u0027\u0027 x 20\u0022",
               "paper": "Matte"
@@ -40,6 +43,9 @@
           {
             "id": 147686,
             "title": "29\u0027\u0027 x 144\u0022 / Matte",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "29\u0027\u0027 x 144\u0022",
               "paper": "Matte"
@@ -56,6 +62,9 @@
           {
             "id": 147687,
             "title": "29\u0027\u0027 x 72\u0022 / Matte",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "29\u0027\u0027 x 72\u0022",
               "paper": "Matte"
@@ -72,6 +81,9 @@
           {
             "id": 147688,
             "title": "29\u0027\u0027 x 20\u0022 / Satin",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "29\u0027\u0027 x 20\u0022",
               "paper": "Satin"
@@ -88,6 +100,9 @@
           {
             "id": 147689,
             "title": "29\u0027\u0027 x 144\u0022 / Satin",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "29\u0027\u0027 x 144\u0022",
               "paper": "Satin"
@@ -104,6 +119,9 @@
           {
             "id": 147690,
             "title": "29\u0027\u0027 x 72\u0022 / Satin",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "29\u0027\u0027 x 72\u0022",
               "paper": "Satin"
@@ -234,7 +252,65 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 849
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 139
+          },
+          "variant_count": 12
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1499
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "variant_count": 12
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1349
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 149
+          },
+          "variant_count": 12
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1629
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 659
+          },
+          "variant_count": 12
+        }
+      ]
     }
   ]
 }

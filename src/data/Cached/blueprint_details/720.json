@@ -27,6 +27,9 @@
           {
             "id": 73419,
             "title": "One size / Grey",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Grey"
@@ -49,6 +52,9 @@
           {
             "id": 73420,
             "title": "One size / Lavender",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Lavender"
@@ -71,6 +77,9 @@
           {
             "id": 73421,
             "title": "One size / Lime",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Lime"
@@ -93,6 +102,9 @@
           {
             "id": 73422,
             "title": "One size / Navy Blue",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Navy Blue"
@@ -115,6 +127,9 @@
           {
             "id": 73423,
             "title": "One size / Orange",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Orange"
@@ -137,6 +152,9 @@
           {
             "id": 73424,
             "title": "One size / Red",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Red"
@@ -159,6 +177,9 @@
           {
             "id": 73425,
             "title": "One size / Royal Blue",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Royal Blue"
@@ -181,6 +202,9 @@
           {
             "id": 73426,
             "title": "One size / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "White"
@@ -203,6 +227,9 @@
           {
             "id": 73428,
             "title": "One size / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Black"
@@ -359,7 +386,97 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "SE",
+            "DK",
+            "FI",
+            "EE",
+            "IS",
+            "LT",
+            "LV",
+            "NO",
+            "LI",
+            "CH",
+            "IE",
+            "NL",
+            "PL",
+            "GI",
+            "AT",
+            "BE",
+            "BG",
+            "HR",
+            "CY",
+            "CZ",
+            "FR",
+            "GR",
+            "HU",
+            "IT",
+            "LU",
+            "MT",
+            "PT",
+            "RO",
+            "SK",
+            "SI",
+            "ES",
+            "TR",
+            "DE"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 599
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 149
+          },
+          "variant_count": 9
+        },
+        {
+          "countries": [
+            "GB"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 349
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 199
+          },
+          "variant_count": 9
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2279
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 619
+          },
+          "variant_count": 9
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 3279
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 619
+          },
+          "variant_count": 9
+        }
+      ]
     }
   ]
 }

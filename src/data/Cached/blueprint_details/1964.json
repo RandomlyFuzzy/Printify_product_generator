@@ -25,6 +25,9 @@
           {
             "id": 121311,
             "title": "8oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "8oz"
             },
@@ -101,7 +104,52 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 699
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 309
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1179
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 479
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD",
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1679
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 489
+          },
+          "variant_count": 1
+        }
+      ]
     }
   ]
 }

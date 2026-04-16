@@ -25,6 +25,9 @@
           {
             "id": 110793,
             "title": "S / White/Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "S",
               "color": "White/Black"
@@ -47,6 +50,9 @@
           {
             "id": 110794,
             "title": "S / White/Navy",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "S",
               "color": "White/Navy"
@@ -69,6 +75,9 @@
           {
             "id": 110795,
             "title": "S / White/Red",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "S",
               "color": "White/Red"
@@ -91,6 +100,9 @@
           {
             "id": 110796,
             "title": "M / White/Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "M",
               "color": "White/Black"
@@ -113,6 +125,9 @@
           {
             "id": 110797,
             "title": "M / White/Navy",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "M",
               "color": "White/Navy"
@@ -135,6 +150,9 @@
           {
             "id": 110798,
             "title": "M / White/Red",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "M",
               "color": "White/Red"
@@ -157,6 +175,9 @@
           {
             "id": 110799,
             "title": "L / White/Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "L",
               "color": "White/Black"
@@ -179,6 +200,9 @@
           {
             "id": 110800,
             "title": "L / White/Navy",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "L",
               "color": "White/Navy"
@@ -201,6 +225,9 @@
           {
             "id": 110801,
             "title": "L / White/Red",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "L",
               "color": "White/Red"
@@ -223,6 +250,9 @@
           {
             "id": 110802,
             "title": "XL / White/Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XL",
               "color": "White/Black"
@@ -245,6 +275,9 @@
           {
             "id": 110803,
             "title": "XL / White/Navy",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XL",
               "color": "White/Navy"
@@ -267,6 +300,9 @@
           {
             "id": 110804,
             "title": "XL / White/Red",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XL",
               "color": "White/Red"
@@ -289,6 +325,9 @@
           {
             "id": 110805,
             "title": "2XL / White/Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2XL",
               "color": "White/Black"
@@ -311,6 +350,9 @@
           {
             "id": 110806,
             "title": "2XL / White/Navy",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2XL",
               "color": "White/Navy"
@@ -333,6 +375,9 @@
           {
             "id": 110807,
             "title": "2XL / White/Red",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2XL",
               "color": "White/Red"
@@ -355,6 +400,9 @@
           {
             "id": 110808,
             "title": "3XL / White/Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "3XL",
               "color": "White/Black"
@@ -377,6 +425,9 @@
           {
             "id": 110809,
             "title": "3XL / White/Navy",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "3XL",
               "color": "White/Navy"
@@ -399,6 +450,9 @@
           {
             "id": 110810,
             "title": "3XL / White/Red",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "3XL",
               "color": "White/Red"
@@ -482,39 +536,6 @@
             ],
             "first_item": {
               "currency": "USD",
-              "cost": 519
-            },
-            "additional_items": {
-              "currency": "USD",
-              "cost": 219
-            },
-            "countries": [
-              "US"
-            ]
-          },
-          {
-            "variant_ids": [
-              110793,
-              110794,
-              110795,
-              110796,
-              110797,
-              110798,
-              110799,
-              110800,
-              110801,
-              110802,
-              110803,
-              110804,
-              110805,
-              110806,
-              110807,
-              110808,
-              110809,
-              110810
-            ],
-            "first_item": {
-              "currency": "USD",
               "cost": 939
             },
             "additional_items": {
@@ -548,14 +569,14 @@
             ],
             "first_item": {
               "currency": "USD",
-              "cost": 1000
+              "cost": 519
             },
             "additional_items": {
               "currency": "USD",
-              "cost": 400
+              "cost": 219
             },
             "countries": [
-              "REST_OF_THE_WORLD"
+              "US"
             ]
           },
           {
@@ -590,9 +611,114 @@
             "countries": [
               "AU"
             ]
+          },
+          {
+            "variant_ids": [
+              110793,
+              110794,
+              110795,
+              110796,
+              110797,
+              110798,
+              110799,
+              110800,
+              110801,
+              110802,
+              110803,
+              110804,
+              110805,
+              110806,
+              110807,
+              110808,
+              110809,
+              110810
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1000
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 400
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 429
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 209
+          },
+          "variant_count": 18
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 939
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 18
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 519
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 219
+          },
+          "variant_count": 18
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1249
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "variant_count": 18
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1000
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 400
+          },
+          "variant_count": 18
+        }
+      ]
     }
   ]
 }

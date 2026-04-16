@@ -23,6 +23,9 @@
           {
             "id": 88141,
             "title": "11oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "11oz"
             },
@@ -111,7 +114,68 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 639
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 299
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "NZ",
+            "AU",
+            "NO",
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1599
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 839
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1469
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 699
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 699
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 309
+          },
+          "variant_count": 1
+        }
+      ]
     }
   ]
 }

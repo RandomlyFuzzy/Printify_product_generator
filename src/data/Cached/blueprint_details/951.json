@@ -27,6 +27,9 @@
           {
             "id": 78460,
             "title": "Regular Can",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "Regular Can"
             },
@@ -42,6 +45,9 @@
           {
             "id": 78461,
             "title": "Slim Can",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "Slim Can"
             },
@@ -114,7 +120,51 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 609
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 89
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 989
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 159
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 939
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 239
+          },
+          "variant_count": 2
+        }
+      ]
     }
   ]
 }

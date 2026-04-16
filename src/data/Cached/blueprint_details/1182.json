@@ -26,6 +26,9 @@
           {
             "id": 91407,
             "title": "Bell / One Size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "shape": "Bell",
               "size": "One Size"
@@ -48,6 +51,9 @@
           {
             "id": 91408,
             "title": "Oval / One Size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "shape": "Oval",
               "size": "One Size"
@@ -70,6 +76,9 @@
           {
             "id": 91409,
             "title": "Round / One Size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "shape": "Round",
               "size": "One Size"
@@ -92,6 +101,9 @@
           {
             "id": 91410,
             "title": "Tree / One Size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "shape": "Tree",
               "size": "One Size"
@@ -179,7 +191,53 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 569
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 69
+          },
+          "variant_count": 4
+        },
+        {
+          "countries": [
+            "GB",
+            "AU",
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 859
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 99
+          },
+          "variant_count": 4
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 889
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 79
+          },
+          "variant_count": 4
+        }
+      ]
     }
   ]
 }

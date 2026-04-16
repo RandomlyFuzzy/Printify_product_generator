@@ -29,6 +29,9 @@
           {
             "id": 122886,
             "title": "9.75\u0022 x 10.5\u0022 x 7\u0022 / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "9.75\u0022 x 10.5\u0022 x 7\u0022",
               "color": "Black"
@@ -51,6 +54,9 @@
           {
             "id": 122887,
             "title": "9.75\u0022 x 10.5\u0022 x 7\u0022 / River Blue Navy",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "9.75\u0022 x 10.5\u0022 x 7\u0022",
               "color": "River Blue Navy"
@@ -73,6 +79,9 @@
           {
             "id": 122888,
             "title": "9.75\u0022 x 10.5\u0022 x 7\u0022 / Storm Grey",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "9.75\u0022 x 10.5\u0022 x 7\u0022",
               "color": "Storm Grey"
@@ -95,6 +104,9 @@
           {
             "id": 122889,
             "title": "9.75\u0022 x 10.5\u0022 x 7\u0022 / True Royal",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "9.75\u0022 x 10.5\u0022 x 7\u0022",
               "color": "True Royal"
@@ -199,7 +211,65 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2199
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "variant_count": 4
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2019
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 709
+          },
+          "variant_count": 4
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 929
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 4
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2039
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 739
+          },
+          "variant_count": 4
+        }
+      ]
     }
   ]
 }

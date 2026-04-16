@@ -23,6 +23,9 @@
           {
             "id": 76262,
             "title": "Comfort Spice / 13.75oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "scent": "Comfort Spice",
               "size": "13.75oz"
@@ -39,6 +42,9 @@
           {
             "id": 76263,
             "title": "Sea Breeze / 13.75oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "scent": "Sea Breeze",
               "size": "13.75oz"
@@ -55,6 +61,9 @@
           {
             "id": 76264,
             "title": "Vanilla Bean / 13.75oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "scent": "Vanilla Bean",
               "size": "13.75oz"
@@ -132,7 +141,52 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "REST_OF_THE_WORLD",
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2669
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1439
+          },
+          "variant_count": 3
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1859
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1029
+          },
+          "variant_count": 3
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 339
+          },
+          "variant_count": 3
+        }
+      ]
     }
   ]
 }

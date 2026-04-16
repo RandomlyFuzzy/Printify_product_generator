@@ -24,6 +24,9 @@
           {
             "id": 72880,
             "title": "Ebony Black / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Ebony Black",
               "size": "One size"
@@ -40,6 +43,9 @@
           {
             "id": 72881,
             "title": "Golden Oak / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Golden Oak",
               "size": "One size"
@@ -56,6 +62,9 @@
           {
             "id": 72882,
             "title": "Red Mahogany / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Red Mahogany",
               "size": "One size"
@@ -225,7 +234,136 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1949
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 709
+          },
+          "variant_count": 3
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1689
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 459
+          },
+          "variant_count": 3
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 3199
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 739
+          },
+          "variant_count": 3
+        },
+        {
+          "countries": [
+            "AX",
+            "AL",
+            "AD",
+            "AM",
+            "AT",
+            "BY",
+            "BE",
+            "BA",
+            "BV",
+            "BG",
+            "HR",
+            "CY",
+            "CZ",
+            "DK",
+            "EE",
+            "FO",
+            "FI",
+            "FR",
+            "GE",
+            "DE",
+            "GI",
+            "GR",
+            "GL",
+            "GP",
+            "GG",
+            "VA",
+            "HU",
+            "IS",
+            "IE",
+            "IM",
+            "IT",
+            "JE",
+            "LV",
+            "LI",
+            "LT",
+            "LU",
+            "MK",
+            "MT",
+            "MD",
+            "MC",
+            "ME",
+            "NL",
+            "NO",
+            "PL",
+            "PT",
+            "RE",
+            "RO",
+            "SM",
+            "RS",
+            "SK",
+            "SI",
+            "ES",
+            "SE",
+            "CH",
+            "TR",
+            "UA",
+            "GB",
+            "XK"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1849
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 739
+          },
+          "variant_count": 3
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2899
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 739
+          },
+          "variant_count": 3
+        }
+      ]
     }
   ]
 }

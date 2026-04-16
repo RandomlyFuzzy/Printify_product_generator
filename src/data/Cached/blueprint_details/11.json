@@ -13,6 +13,413 @@
   "print_providers": [
     {
       "provider": {
+        "id": 6,
+        "title": "T Shirt and Sons"
+      },
+      "variants": {
+        "id": 6,
+        "title": "T Shirt and Sons",
+        "variants": [
+          {
+            "id": 18572,
+            "title": "S / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "size": "S",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 4091,
+                "width": 3069
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 4091,
+                "width": 3069
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              18560,
+              18561,
+              18562,
+              18563,
+              18564,
+              18570,
+              18571,
+              18572,
+              18573,
+              18574,
+              18590,
+              18591,
+              18592,
+              18593,
+              18594,
+              18615,
+              18616,
+              18617,
+              18618,
+              18619,
+              18645,
+              18646,
+              18647,
+              18648,
+              18649,
+              18655,
+              18656,
+              18657,
+              18658,
+              18659,
+              18660,
+              18661,
+              18662,
+              18663,
+              18664,
+              18674,
+              18676,
+              18677,
+              18678,
+              18679,
+              18683,
+              18685,
+              18687,
+              18688,
+              18689
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 129
+            },
+            "countries": [
+              "AT",
+              "BG",
+              "DE",
+              "PL",
+              "LT",
+              "PT",
+              "TR",
+              "IT",
+              "BE",
+              "GI",
+              "HR",
+              "SI",
+              "MT",
+              "HU",
+              "ES",
+              "SE",
+              "CY",
+              "SK",
+              "NO",
+              "LU",
+              "IE",
+              "LI",
+              "NL",
+              "EE",
+              "CH",
+              "FI",
+              "CZ",
+              "IS",
+              "GR",
+              "FR",
+              "RO",
+              "DK",
+              "LV"
+            ]
+          },
+          {
+            "variant_ids": [
+              18560,
+              18561,
+              18562,
+              18563,
+              18564,
+              18570,
+              18571,
+              18572,
+              18573,
+              18574,
+              18590,
+              18591,
+              18592,
+              18593,
+              18594,
+              18615,
+              18616,
+              18617,
+              18618,
+              18619,
+              18645,
+              18646,
+              18647,
+              18648,
+              18649,
+              18655,
+              18656,
+              18657,
+              18658,
+              18659,
+              18660,
+              18661,
+              18662,
+              18663,
+              18664,
+              18674,
+              18676,
+              18677,
+              18678,
+              18679,
+              18683,
+              18685,
+              18687,
+              18688,
+              18689
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2279
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 619
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              18560,
+              18561,
+              18562,
+              18563,
+              18564,
+              18570,
+              18571,
+              18572,
+              18573,
+              18574,
+              18590,
+              18591,
+              18592,
+              18593,
+              18594,
+              18615,
+              18616,
+              18617,
+              18618,
+              18619,
+              18645,
+              18646,
+              18647,
+              18648,
+              18649,
+              18655,
+              18656,
+              18657,
+              18658,
+              18659,
+              18660,
+              18661,
+              18662,
+              18663,
+              18664,
+              18674,
+              18676,
+              18677,
+              18678,
+              18679,
+              18683,
+              18685,
+              18687,
+              18688,
+              18689
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 349
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "GB"
+            ]
+          },
+          {
+            "variant_ids": [
+              18560,
+              18561,
+              18562,
+              18563,
+              18564,
+              18570,
+              18571,
+              18572,
+              18573,
+              18574,
+              18590,
+              18591,
+              18592,
+              18593,
+              18594,
+              18615,
+              18616,
+              18617,
+              18618,
+              18619,
+              18645,
+              18646,
+              18647,
+              18648,
+              18649,
+              18655,
+              18656,
+              18657,
+              18658,
+              18659,
+              18660,
+              18661,
+              18662,
+              18663,
+              18664,
+              18674,
+              18676,
+              18677,
+              18678,
+              18679,
+              18683,
+              18685,
+              18687,
+              18688,
+              18689
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 3579
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 619
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "AT",
+            "BG",
+            "DE",
+            "PL",
+            "LT",
+            "PT",
+            "TR",
+            "IT",
+            "BE",
+            "GI",
+            "HR",
+            "SI",
+            "MT",
+            "HU",
+            "ES",
+            "SE",
+            "CY",
+            "SK",
+            "NO",
+            "LU",
+            "IE",
+            "LI",
+            "NL",
+            "EE",
+            "CH",
+            "FI",
+            "CZ",
+            "IS",
+            "GR",
+            "FR",
+            "RO",
+            "DK",
+            "LV"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 129
+          },
+          "variant_count": 45
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2279
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 619
+          },
+          "variant_count": 45
+        },
+        {
+          "countries": [
+            "GB"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 349
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 199
+          },
+          "variant_count": 45
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 3579
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 619
+          },
+          "variant_count": 45
+        }
+      ]
+    },
+    {
+      "provider": {
         "id": 39,
         "title": "SwiftPOD"
       },
@@ -23,6 +430,9 @@
           {
             "id": 18570,
             "title": "L / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "L",
               "color": "Black"
@@ -45,6 +455,9 @@
           {
             "id": 18571,
             "title": "M / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "M",
               "color": "Black"
@@ -67,6 +480,9 @@
           {
             "id": 18573,
             "title": "XL / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XL",
               "color": "Black"
@@ -89,6 +505,9 @@
           {
             "id": 18574,
             "title": "2XL / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2XL",
               "color": "Black"
@@ -111,6 +530,9 @@
           {
             "id": 18595,
             "title": "L / Dark Grey Heather",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "L",
               "color": "Dark Grey Heather"
@@ -133,6 +555,9 @@
           {
             "id": 18596,
             "title": "M / Dark Grey Heather",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "M",
               "color": "Dark Grey Heather"
@@ -155,6 +580,9 @@
           {
             "id": 18597,
             "title": "S / Dark Grey Heather",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "S",
               "color": "Dark Grey Heather"
@@ -177,6 +605,9 @@
           {
             "id": 18599,
             "title": "2XL / Dark Grey Heather",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2XL",
               "color": "Dark Grey Heather"
@@ -199,6 +630,9 @@
           {
             "id": 18615,
             "title": "L / Navy",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "L",
               "color": "Navy"
@@ -221,6 +655,9 @@
           {
             "id": 18616,
             "title": "M / Navy",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "M",
               "color": "Navy"
@@ -243,6 +680,9 @@
           {
             "id": 18619,
             "title": "2XL / Navy",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2XL",
               "color": "Navy"
@@ -265,6 +705,9 @@
           {
             "id": 18645,
             "title": "L / Red",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "L",
               "color": "Red"
@@ -287,6 +730,9 @@
           {
             "id": 18648,
             "title": "XL / Red",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XL",
               "color": "Red"
@@ -309,6 +755,9 @@
           {
             "id": 18687,
             "title": "S / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "S",
               "color": "White"
@@ -331,6 +780,9 @@
           {
             "id": 18688,
             "title": "XL / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XL",
               "color": "White"
@@ -353,6 +805,9 @@
           {
             "id": 18689,
             "title": "2XL / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2XL",
               "color": "White"
@@ -656,321 +1111,79 @@
             ]
           }
         ]
-      }
-    },
-    {
-      "provider": {
-        "id": 6,
-        "title": "T Shirt and Sons"
       },
-      "variants": {
-        "id": 6,
-        "title": "T Shirt and Sons",
-        "variants": [
-          {
-            "id": 18572,
-            "title": "S / Black",
-            "options": {
-              "size": "S",
-              "color": "Black"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 4091,
-                "width": 3069
-              },
-              {
-                "position": "back",
-                "decoration_method": "dtg",
-                "height": 4091,
-                "width": 3069
-              }
-            ]
-          }
-        ]
-      },
-      "shipping": {
-        "handling_time": {
-          "value": 10,
-          "unit": "day"
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 429
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 209
+          },
+          "variant_count": 40
         },
-        "profiles": [
-          {
-            "variant_ids": [
-              18560,
-              18561,
-              18562,
-              18563,
-              18564,
-              18570,
-              18571,
-              18572,
-              18573,
-              18574,
-              18590,
-              18591,
-              18592,
-              18593,
-              18594,
-              18615,
-              18616,
-              18617,
-              18618,
-              18619,
-              18645,
-              18646,
-              18647,
-              18648,
-              18649,
-              18655,
-              18656,
-              18657,
-              18658,
-              18659,
-              18660,
-              18661,
-              18662,
-              18663,
-              18664,
-              18674,
-              18676,
-              18677,
-              18678,
-              18679,
-              18683,
-              18685,
-              18687,
-              18688,
-              18689
-            ],
-            "first_item": {
-              "currency": "USD",
-              "cost": 999
-            },
-            "additional_items": {
-              "currency": "USD",
-              "cost": 129
-            },
-            "countries": [
-              "AT",
-              "BG",
-              "DE",
-              "PL",
-              "LT",
-              "PT",
-              "TR",
-              "IT",
-              "BE",
-              "GI",
-              "HR",
-              "SI",
-              "MT",
-              "HU",
-              "ES",
-              "SE",
-              "CY",
-              "SK",
-              "NO",
-              "LU",
-              "IE",
-              "LI",
-              "NL",
-              "EE",
-              "CH",
-              "FI",
-              "CZ",
-              "IS",
-              "GR",
-              "FR",
-              "RO",
-              "DK",
-              "LV"
-            ]
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 475
           },
-          {
-            "variant_ids": [
-              18560,
-              18561,
-              18562,
-              18563,
-              18564,
-              18570,
-              18571,
-              18572,
-              18573,
-              18574,
-              18590,
-              18591,
-              18592,
-              18593,
-              18594,
-              18615,
-              18616,
-              18617,
-              18618,
-              18619,
-              18645,
-              18646,
-              18647,
-              18648,
-              18649,
-              18655,
-              18656,
-              18657,
-              18658,
-              18659,
-              18660,
-              18661,
-              18662,
-              18663,
-              18664,
-              18674,
-              18676,
-              18677,
-              18678,
-              18679,
-              18683,
-              18685,
-              18687,
-              18688,
-              18689
-            ],
-            "first_item": {
-              "currency": "USD",
-              "cost": 2279
-            },
-            "additional_items": {
-              "currency": "USD",
-              "cost": 619
-            },
-            "countries": [
-              "REST_OF_THE_WORLD"
-            ]
+          "additional_items": {
+            "currency": "USD",
+            "cost": 240
           },
-          {
-            "variant_ids": [
-              18560,
-              18561,
-              18562,
-              18563,
-              18564,
-              18570,
-              18571,
-              18572,
-              18573,
-              18574,
-              18590,
-              18591,
-              18592,
-              18593,
-              18594,
-              18615,
-              18616,
-              18617,
-              18618,
-              18619,
-              18645,
-              18646,
-              18647,
-              18648,
-              18649,
-              18655,
-              18656,
-              18657,
-              18658,
-              18659,
-              18660,
-              18661,
-              18662,
-              18663,
-              18664,
-              18674,
-              18676,
-              18677,
-              18678,
-              18679,
-              18683,
-              18685,
-              18687,
-              18688,
-              18689
-            ],
-            "first_item": {
-              "currency": "USD",
-              "cost": 349
-            },
-            "additional_items": {
-              "currency": "USD",
-              "cost": 199
-            },
-            "countries": [
-              "GB"
-            ]
+          "variant_count": 40
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1249
           },
-          {
-            "variant_ids": [
-              18560,
-              18561,
-              18562,
-              18563,
-              18564,
-              18570,
-              18571,
-              18572,
-              18573,
-              18574,
-              18590,
-              18591,
-              18592,
-              18593,
-              18594,
-              18615,
-              18616,
-              18617,
-              18618,
-              18619,
-              18645,
-              18646,
-              18647,
-              18648,
-              18649,
-              18655,
-              18656,
-              18657,
-              18658,
-              18659,
-              18660,
-              18661,
-              18662,
-              18663,
-              18664,
-              18674,
-              18676,
-              18677,
-              18678,
-              18679,
-              18683,
-              18685,
-              18687,
-              18688,
-              18689
-            ],
-            "first_item": {
-              "currency": "USD",
-              "cost": 3579
-            },
-            "additional_items": {
-              "currency": "USD",
-              "cost": 619
-            },
-            "countries": [
-              "US"
-            ]
-          }
-        ]
-      }
+          "additional_items": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "variant_count": 40
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 939
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 40
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1000
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 400
+          },
+          "variant_count": 40
+        }
+      ]
     }
   ]
 }

@@ -25,6 +25,9 @@
           {
             "id": 112678,
             "title": "Circle / 1 pc / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "shape": "Circle",
               "quantity": "1 pc",
@@ -48,6 +51,9 @@
           {
             "id": 112679,
             "title": "Circle / 3 pcs / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "shape": "Circle",
               "quantity": "3 pcs",
@@ -71,6 +77,9 @@
           {
             "id": 112680,
             "title": "Circle / 5 pcs / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "shape": "Circle",
               "quantity": "5 pcs",
@@ -94,6 +103,9 @@
           {
             "id": 112681,
             "title": "Circle / 10 pcs / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "shape": "Circle",
               "quantity": "10 pcs",
@@ -117,6 +129,9 @@
           {
             "id": 112682,
             "title": "Heart / 1 pc / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "shape": "Heart",
               "quantity": "1 pc",
@@ -140,6 +155,9 @@
           {
             "id": 112683,
             "title": "Heart / 3 pcs / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "shape": "Heart",
               "quantity": "3 pcs",
@@ -163,6 +181,9 @@
           {
             "id": 112684,
             "title": "Heart / 5 pcs / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "shape": "Heart",
               "quantity": "5 pcs",
@@ -186,6 +207,9 @@
           {
             "id": 112685,
             "title": "Heart / 10 pcs / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "shape": "Heart",
               "quantity": "10 pcs",
@@ -209,6 +233,9 @@
           {
             "id": 112686,
             "title": "Star / 1 pc / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "shape": "Star",
               "quantity": "1 pc",
@@ -232,6 +259,9 @@
           {
             "id": 112687,
             "title": "Star / 3 pcs / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "shape": "Star",
               "quantity": "3 pcs",
@@ -255,6 +285,9 @@
           {
             "id": 112688,
             "title": "Star / 5 pcs / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "shape": "Star",
               "quantity": "5 pcs",
@@ -278,6 +311,9 @@
           {
             "id": 112689,
             "title": "Star / 10 pcs / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "shape": "Star",
               "quantity": "10 pcs",
@@ -301,6 +337,9 @@
           {
             "id": 112690,
             "title": "Snowflake / 1 pc / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "shape": "Snowflake",
               "quantity": "1 pc",
@@ -324,6 +363,9 @@
           {
             "id": 112691,
             "title": "Snowflake / 3 pcs / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "shape": "Snowflake",
               "quantity": "3 pcs",
@@ -347,6 +389,9 @@
           {
             "id": 112692,
             "title": "Snowflake / 5 pcs / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "shape": "Snowflake",
               "quantity": "5 pcs",
@@ -370,6 +415,9 @@
           {
             "id": 112693,
             "title": "Snowflake / 10 pcs / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "shape": "Snowflake",
               "quantity": "10 pcs",
@@ -884,7 +932,421 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "AX",
+            "AL",
+            "AD",
+            "AM",
+            "AT",
+            "BY",
+            "BE",
+            "BA",
+            "BV",
+            "BG",
+            "HR",
+            "CY",
+            "CZ",
+            "DK",
+            "EE",
+            "FO",
+            "FI",
+            "FR",
+            "GE",
+            "DE",
+            "GI",
+            "GR",
+            "GL",
+            "GP",
+            "GG",
+            "VA",
+            "HU",
+            "IS",
+            "IE",
+            "IM",
+            "IT",
+            "JE",
+            "LV",
+            "LI",
+            "LT",
+            "LU",
+            "MK",
+            "MT",
+            "MD",
+            "MC",
+            "ME",
+            "NL",
+            "NO",
+            "PL",
+            "PT",
+            "RE",
+            "RO",
+            "SM",
+            "RS",
+            "SK",
+            "SI",
+            "ES",
+            "SE",
+            "CH",
+            "TR",
+            "UA",
+            "GB",
+            "XK"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 949
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 949
+          },
+          "variant_count": 4
+        },
+        {
+          "countries": [
+            "AX",
+            "AL",
+            "AD",
+            "AM",
+            "AT",
+            "BY",
+            "BE",
+            "BA",
+            "BV",
+            "BG",
+            "HR",
+            "CY",
+            "CZ",
+            "DK",
+            "EE",
+            "FO",
+            "FI",
+            "FR",
+            "GE",
+            "DE",
+            "GI",
+            "GR",
+            "GL",
+            "GP",
+            "GG",
+            "VA",
+            "HU",
+            "IS",
+            "IE",
+            "IM",
+            "IT",
+            "JE",
+            "LV",
+            "LI",
+            "LT",
+            "LU",
+            "MK",
+            "MT",
+            "MD",
+            "MC",
+            "ME",
+            "NL",
+            "NO",
+            "PL",
+            "PT",
+            "RE",
+            "RO",
+            "SM",
+            "RS",
+            "SK",
+            "SI",
+            "ES",
+            "SE",
+            "CH",
+            "TR",
+            "UA",
+            "GB",
+            "XK",
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 949
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 199
+          },
+          "variant_count": 4
+        },
+        {
+          "countries": [
+            "AX",
+            "AL",
+            "AD",
+            "AM",
+            "AT",
+            "BY",
+            "BE",
+            "BA",
+            "BV",
+            "BG",
+            "HR",
+            "CY",
+            "CZ",
+            "DK",
+            "EE",
+            "FO",
+            "FI",
+            "FR",
+            "GE",
+            "DE",
+            "GI",
+            "GR",
+            "GL",
+            "GP",
+            "GG",
+            "VA",
+            "HU",
+            "IS",
+            "IE",
+            "IM",
+            "IT",
+            "JE",
+            "LV",
+            "LI",
+            "LT",
+            "LU",
+            "MK",
+            "MT",
+            "MD",
+            "MC",
+            "ME",
+            "NL",
+            "NO",
+            "PL",
+            "PT",
+            "RE",
+            "RO",
+            "SM",
+            "RS",
+            "SK",
+            "SI",
+            "ES",
+            "SE",
+            "CH",
+            "TR",
+            "UA",
+            "GB",
+            "XK"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1199
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1199
+          },
+          "variant_count": 4
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD",
+            "AX",
+            "AL",
+            "AD",
+            "AM",
+            "AT",
+            "BY",
+            "BE",
+            "BA",
+            "BV",
+            "BG",
+            "HR",
+            "CY",
+            "CZ",
+            "DK",
+            "EE",
+            "FO",
+            "FI",
+            "FR",
+            "GE",
+            "DE",
+            "GI",
+            "GR",
+            "GL",
+            "GP",
+            "GG",
+            "VA",
+            "HU",
+            "IS",
+            "IE",
+            "IM",
+            "IT",
+            "JE",
+            "LV",
+            "LI",
+            "LT",
+            "LU",
+            "MK",
+            "MT",
+            "MD",
+            "MC",
+            "ME",
+            "NL",
+            "NO",
+            "PL",
+            "PT",
+            "RE",
+            "RO",
+            "SM",
+            "RS",
+            "SK",
+            "SI",
+            "ES",
+            "SE",
+            "CH",
+            "TR",
+            "UA",
+            "GB",
+            "XK"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 599
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 199
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1029
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1029
+          },
+          "variant_count": 4
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 699
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 699
+          },
+          "variant_count": 4
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1369
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1369
+          },
+          "variant_count": 4
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1569
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1569
+          },
+          "variant_count": 4
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 569
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 69
+          },
+          "variant_count": 4
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 959
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 219
+          },
+          "variant_count": 4
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1109
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1109
+          },
+          "variant_count": 4
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1099
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1099
+          },
+          "variant_count": 4
+        }
+      ]
     }
   ]
 }

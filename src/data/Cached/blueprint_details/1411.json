@@ -25,6 +25,9 @@
           {
             "id": 104142,
             "title": "28\u0027\u0027 \u00D7 28\u0027\u0027 (2pcs)",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "28\u0027\u0027 \u00D7 28\u0027\u0027 (2pcs)"
             },
@@ -40,6 +43,9 @@
           {
             "id": 104143,
             "title": "30\u0027\u0027 \u00D7 55\u0027\u0027 (1pc)",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "30\u0027\u0027 \u00D7 55\u0027\u0027 (1pc)"
             },
@@ -116,7 +122,55 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "AU",
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1029
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1029
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "US",
+            "DK",
+            "REST_OF_THE_WORLD",
+            "NL"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 360
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 360
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "CN"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "variant_count": 2
+        }
+      ]
     }
   ]
 }

@@ -15,90 +15,6 @@
   "print_providers": [
     {
       "provider": {
-        "id": 99,
-        "title": "Printify Choice"
-      },
-      "variants": {
-        "id": 99,
-        "title": "Printify Choice",
-        "variants": [
-          {
-            "id": 71665,
-            "title": "One size / Round",
-            "options": {
-              "shape": "Round",
-              "size": "One size"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dye-sublimation",
-                "height": 2625,
-                "width": 2625
-              }
-            ]
-          }
-        ]
-      },
-      "shipping": {
-        "handling_time": {
-          "value": 10,
-          "unit": "day"
-        },
-        "profiles": [
-          {
-            "variant_ids": [
-              71665
-            ],
-            "first_item": {
-              "currency": "USD",
-              "cost": 599
-            },
-            "additional_items": {
-              "currency": "USD",
-              "cost": 99
-            },
-            "countries": [
-              "US"
-            ]
-          },
-          {
-            "variant_ids": [
-              71665
-            ],
-            "first_item": {
-              "currency": "USD",
-              "cost": 1279
-            },
-            "additional_items": {
-              "currency": "USD",
-              "cost": 369
-            },
-            "countries": [
-              "REST_OF_THE_WORLD"
-            ]
-          },
-          {
-            "variant_ids": [
-              71665
-            ],
-            "first_item": {
-              "currency": "USD",
-              "cost": 1139
-            },
-            "additional_items": {
-              "currency": "USD",
-              "cost": 219
-            },
-            "countries": [
-              "CA"
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "provider": {
         "id": 70,
         "title": "Printed Mint"
       },
@@ -109,6 +25,9 @@
           {
             "id": 71664,
             "title": "One size / Rectangle",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "shape": "Rectangle"
@@ -125,6 +44,9 @@
           {
             "id": 71665,
             "title": "One size / Round",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "shape": "Round"
@@ -198,7 +120,182 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 599
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 99
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1139
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 219
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1279
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 369
+          },
+          "variant_count": 2
+        }
+      ]
+    },
+    {
+      "provider": {
+        "id": 99,
+        "title": "Printify Choice"
+      },
+      "variants": {
+        "id": 99,
+        "title": "Printify Choice",
+        "variants": [
+          {
+            "id": 71665,
+            "title": "One size / Round",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "shape": "Round",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 2625,
+                "width": 2625
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              71665
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 599
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 99
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              71665
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1279
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 369
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              71665
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1139
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 219
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 599
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 99
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1279
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 369
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1139
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 219
+          },
+          "variant_count": 1
+        }
+      ]
     }
   ]
 }

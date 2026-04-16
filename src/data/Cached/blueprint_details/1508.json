@@ -54,6 +54,9 @@
           {
             "id": 108585,
             "title": "30oz / Dark Gray",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "30oz",
               "color": "Dark Gray"
@@ -76,6 +79,9 @@
           {
             "id": 108586,
             "title": "30oz / Dark Purple",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "30oz",
               "color": "Dark Purple"
@@ -98,6 +104,9 @@
           {
             "id": 108587,
             "title": "30oz / Olive Green",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "30oz",
               "color": "Olive Green"
@@ -120,6 +129,9 @@
           {
             "id": 108588,
             "title": "30oz / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "30oz",
               "color": "Black"
@@ -142,6 +154,9 @@
           {
             "id": 108589,
             "title": "30oz / Coral",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "30oz",
               "color": "Coral"
@@ -164,6 +179,9 @@
           {
             "id": 108590,
             "title": "30oz / Green",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "30oz",
               "color": "Green"
@@ -186,6 +204,9 @@
           {
             "id": 108591,
             "title": "30oz / Light Blue",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "30oz",
               "color": "Light Blue"
@@ -208,6 +229,9 @@
           {
             "id": 108592,
             "title": "30oz / Light Purple",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "30oz",
               "color": "Light Purple"
@@ -230,6 +254,9 @@
           {
             "id": 108593,
             "title": "30oz / Maroon",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "30oz",
               "color": "Maroon"
@@ -252,6 +279,9 @@
           {
             "id": 108594,
             "title": "30oz / Navy",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "30oz",
               "color": "Navy"
@@ -274,6 +304,9 @@
           {
             "id": 108595,
             "title": "30oz / Orange",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "30oz",
               "color": "Orange"
@@ -296,6 +329,9 @@
           {
             "id": 108596,
             "title": "30oz / Pink",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "30oz",
               "color": "Pink"
@@ -318,6 +354,9 @@
           {
             "id": 108597,
             "title": "30oz / Red",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "30oz",
               "color": "Red"
@@ -340,6 +379,9 @@
           {
             "id": 108598,
             "title": "30oz / Royal",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "30oz",
               "color": "Royal"
@@ -362,6 +404,9 @@
           {
             "id": 108599,
             "title": "30oz / Teal",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "30oz",
               "color": "Teal"
@@ -384,6 +429,9 @@
           {
             "id": 108600,
             "title": "30oz / Yellow",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "30oz",
               "color": "Yellow"
@@ -567,7 +615,79 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 759
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 299
+          },
+          "variant_count": 16
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1469
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 659
+          },
+          "variant_count": 16
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 979
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 16
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2199
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "variant_count": 16
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 699
+          },
+          "variant_count": 16
+        }
+      ]
     }
   ]
 }

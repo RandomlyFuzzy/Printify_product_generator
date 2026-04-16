@@ -23,6 +23,9 @@
           {
             "id": 76854,
             "title": "3.5\u201D x 2.3\u201D / Coated / With Laminate",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "3.5\u201D x 2.3\u201D",
               "paper": "Coated",
@@ -46,6 +49,9 @@
           {
             "id": 76855,
             "title": "3.5\u201D x 2.3\u201D / Coated / Without Laminate",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "3.5\u201D x 2.3\u201D",
               "paper": "Coated",
@@ -184,7 +190,109 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "NL",
+            "PL",
+            "PT",
+            "RE",
+            "RO",
+            "SM",
+            "RS",
+            "SK",
+            "SI",
+            "ES",
+            "TR",
+            "UA",
+            "XK",
+            "AX",
+            "AL",
+            "AD",
+            "AM",
+            "AT",
+            "BY",
+            "BE",
+            "BA",
+            "BV",
+            "BG",
+            "HR",
+            "CY",
+            "CZ",
+            "FO",
+            "FR",
+            "GE",
+            "DE",
+            "GI",
+            "GR",
+            "GL",
+            "GP",
+            "GG",
+            "VA",
+            "HU",
+            "IE",
+            "IM",
+            "IT",
+            "JE",
+            "LU",
+            "MK",
+            "MT",
+            "MD",
+            "MC",
+            "ME",
+            "GB",
+            "DK",
+            "LT",
+            "LV",
+            "FI",
+            "EE",
+            "CH",
+            "IS",
+            "LI",
+            "SE",
+            "NO",
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1179
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 249
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1749
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 249
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2179
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 249
+          },
+          "variant_count": 2
+        }
+      ]
     }
   ]
 }

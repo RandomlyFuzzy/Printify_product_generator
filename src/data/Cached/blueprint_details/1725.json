@@ -24,6 +24,9 @@
           {
             "id": 118121,
             "title": "S",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "S"
             },
@@ -45,6 +48,9 @@
           {
             "id": 118122,
             "title": "M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "M"
             },
@@ -66,6 +72,9 @@
           {
             "id": 118123,
             "title": "L",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "L"
             },
@@ -87,6 +96,9 @@
           {
             "id": 118124,
             "title": "XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XL"
             },
@@ -108,6 +120,9 @@
           {
             "id": 118125,
             "title": "2XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2XL"
             },
@@ -257,7 +272,95 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1129
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "variant_count": 5
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 989
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 729
+          },
+          "variant_count": 5
+        },
+        {
+          "countries": [
+            "DE",
+            "FR",
+            "GB"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 809
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 689
+          },
+          "variant_count": 5
+        },
+        {
+          "countries": [
+            "CN"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 379
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 249
+          },
+          "variant_count": 5
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1719
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1549
+          },
+          "variant_count": 5
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1149
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 459
+          },
+          "variant_count": 5
+        }
+      ]
     }
   ]
 }

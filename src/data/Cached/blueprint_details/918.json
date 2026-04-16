@@ -27,6 +27,9 @@
           {
             "id": 78428,
             "title": "60\u0022 \u00D7 50\u0022",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "60\u0022 \u00D7 50\u0022"
             },
@@ -42,6 +45,9 @@
           {
             "id": 80034,
             "title": "60\u0022 \u00D7 80\u0022",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "60\u0022 \u00D7 80\u0022"
             },
@@ -193,7 +199,123 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2799
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "NZ",
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 3499
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1639
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1479
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1599
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1379
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "NZ",
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2499
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1129
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 699
+          },
+          "variant_count": 1
+        }
+      ]
     }
   ]
 }

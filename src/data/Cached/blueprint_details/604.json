@@ -24,6 +24,9 @@
           {
             "id": 71802,
             "title": "Grey / 11oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Grey",
               "size": "11oz"
@@ -40,6 +43,9 @@
           {
             "id": 71803,
             "title": "Turquoise / 11oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Turquoise",
               "size": "11oz"
@@ -56,6 +62,9 @@
           {
             "id": 71804,
             "title": "White / 11oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White",
               "size": "11oz"
@@ -150,7 +159,65 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 559
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 299
+          },
+          "variant_count": 3
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1139
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 279
+          },
+          "variant_count": 3
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 589
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 369
+          },
+          "variant_count": 3
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 969
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 289
+          },
+          "variant_count": 3
+        }
+      ]
     }
   ]
 }

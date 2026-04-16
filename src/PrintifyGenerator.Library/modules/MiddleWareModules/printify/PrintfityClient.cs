@@ -402,12 +402,8 @@ public class PrintifyClient
             pageData = page.Data;
             all.AddRange(pageData);
             pagenum++;
-
-            url = page.NextPageUrl;
-            if (url != null && !url.StartsWith("http"))
-                url = $"{BaseUrl}{url}";
         }
-        while (url != null&&pageData.Count != limit);
+        while (url != null&&pageData.Count == limit);
 
         return all;
     }

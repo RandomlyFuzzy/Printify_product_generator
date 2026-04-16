@@ -25,6 +25,9 @@
           {
             "id": 147952,
             "title": "1.18\u0027\u0027 x 2.36\u0027\u0027 / Transparent",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "1.18\u0027\u0027 x 2.36\u0027\u0027",
               "color": "Transparent"
@@ -41,6 +44,9 @@
           {
             "id": 147953,
             "title": "1.58\u0027\u0027 x 3.15\u0027\u0027 / Transparent",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "1.58\u0027\u0027 x 3.15\u0027\u0027",
               "color": "Transparent"
@@ -57,6 +63,9 @@
           {
             "id": 147954,
             "title": "1.77\u0027\u0027 x 3.54\u0027\u0027 / Transparent",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "1.77\u0027\u0027 x 3.54\u0027\u0027",
               "color": "Transparent"
@@ -189,7 +198,95 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "CN"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 379
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 249
+          },
+          "variant_count": 3
+        },
+        {
+          "countries": [
+            "DE",
+            "FR",
+            "GB"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 539
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 419
+          },
+          "variant_count": 3
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 729
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 599
+          },
+          "variant_count": 3
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 689
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 3
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1039
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 329
+          },
+          "variant_count": 3
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 929
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 759
+          },
+          "variant_count": 3
+        }
+      ]
     }
   ]
 }

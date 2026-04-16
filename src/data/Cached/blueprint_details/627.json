@@ -25,6 +25,9 @@
           {
             "id": 73371,
             "title": "Black stitching / XS",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black stitching",
               "size": "XS"
@@ -59,6 +62,9 @@
           {
             "id": 73372,
             "title": "Black stitching / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black stitching",
               "size": "S"
@@ -93,6 +99,9 @@
           {
             "id": 73373,
             "title": "Black stitching / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black stitching",
               "size": "M"
@@ -127,6 +136,9 @@
           {
             "id": 73374,
             "title": "Black stitching / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black stitching",
               "size": "L"
@@ -161,6 +173,9 @@
           {
             "id": 73375,
             "title": "Black stitching / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black stitching",
               "size": "XL"
@@ -195,6 +210,9 @@
           {
             "id": 73376,
             "title": "Black stitching / 2XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black stitching",
               "size": "2XL"
@@ -229,6 +247,9 @@
           {
             "id": 73377,
             "title": "White stitching / XS",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White stitching",
               "size": "XS"
@@ -263,6 +284,9 @@
           {
             "id": 73378,
             "title": "White stitching / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White stitching",
               "size": "S"
@@ -297,6 +321,9 @@
           {
             "id": 73379,
             "title": "White stitching / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White stitching",
               "size": "M"
@@ -331,6 +358,9 @@
           {
             "id": 73380,
             "title": "White stitching / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White stitching",
               "size": "L"
@@ -365,6 +395,9 @@
           {
             "id": 73381,
             "title": "White stitching / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White stitching",
               "size": "XL"
@@ -399,6 +432,9 @@
           {
             "id": 73382,
             "title": "White stitching / 2XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White stitching",
               "size": "2XL"
@@ -547,7 +583,65 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 569
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 259
+          },
+          "variant_count": 12
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 919
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 359
+          },
+          "variant_count": 12
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1199
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 379
+          },
+          "variant_count": 12
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 589
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 299
+          },
+          "variant_count": 12
+        }
+      ]
     }
   ]
 }

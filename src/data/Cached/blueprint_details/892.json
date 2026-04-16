@@ -25,6 +25,9 @@
           {
             "id": 77102,
             "title": "20oz / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "20oz",
               "color": "White"
@@ -153,7 +156,109 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "AX",
+            "BA",
+            "FR",
+            "AM",
+            "CY",
+            "CZ",
+            "GR",
+            "RO",
+            "SE",
+            "AT",
+            "BG",
+            "IM",
+            "PL",
+            "GP",
+            "IS",
+            "EE",
+            "GE",
+            "LT",
+            "GI",
+            "LV",
+            "SI",
+            "AL",
+            "HU",
+            "BE",
+            "UA",
+            "JE",
+            "DK",
+            "GL",
+            "FO",
+            "AD",
+            "MT",
+            "MD",
+            "ME",
+            "BY",
+            "CH",
+            "LU",
+            "HR",
+            "MK",
+            "PT",
+            "REST_OF_THE_WORLD",
+            "VA",
+            "FI",
+            "DE",
+            "GG",
+            "LI",
+            "RE",
+            "TR",
+            "XK",
+            "BV",
+            "IT",
+            "SM",
+            "RS",
+            "NL",
+            "ES",
+            "MC",
+            "NO",
+            "IE",
+            "SK",
+            "GB"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1429
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 599
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 399
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1099
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 239
+          },
+          "variant_count": 1
+        }
+      ]
     }
   ]
 }

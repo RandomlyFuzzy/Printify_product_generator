@@ -26,6 +26,9 @@
           {
             "id": 82422,
             "title": "S / Black drawstring",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "S",
               "color": "Black drawstring"
@@ -66,6 +69,9 @@
           {
             "id": 82423,
             "title": "S / White drawstring",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "S",
               "color": "White drawstring"
@@ -106,6 +112,9 @@
           {
             "id": 82424,
             "title": "M / Black drawstring",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "M",
               "color": "Black drawstring"
@@ -146,6 +155,9 @@
           {
             "id": 82425,
             "title": "M / White drawstring",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "M",
               "color": "White drawstring"
@@ -186,6 +198,9 @@
           {
             "id": 82426,
             "title": "L / Black drawstring",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "L",
               "color": "Black drawstring"
@@ -226,6 +241,9 @@
           {
             "id": 82427,
             "title": "L / White drawstring",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "L",
               "color": "White drawstring"
@@ -266,6 +284,9 @@
           {
             "id": 82428,
             "title": "XL / Black drawstring",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XL",
               "color": "Black drawstring"
@@ -306,6 +327,9 @@
           {
             "id": 82429,
             "title": "XL / White drawstring",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XL",
               "color": "White drawstring"
@@ -346,6 +370,9 @@
           {
             "id": 82430,
             "title": "2XL / Black drawstring",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2XL",
               "color": "Black drawstring"
@@ -386,6 +413,9 @@
           {
             "id": 82431,
             "title": "2XL / White drawstring",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2XL",
               "color": "White drawstring"
@@ -538,7 +568,71 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "REST_OF_THE_WORLD",
+            "BR",
+            "NL",
+            "DK",
+            "NZ",
+            "MX"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 360
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 360
+          },
+          "variant_count": 10
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 569
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 10
+        },
+        {
+          "countries": [
+            "CA",
+            "CN"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "variant_count": 10
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 649
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 649
+          },
+          "variant_count": 10
+        }
+      ]
     }
   ]
 }

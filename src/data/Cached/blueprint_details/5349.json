@@ -24,6 +24,9 @@
           {
             "id": 244112,
             "title": "Black / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "One size"
@@ -70,6 +73,9 @@
           {
             "id": 244113,
             "title": "Brown / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Brown",
               "size": "One size"
@@ -180,7 +186,58 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "DK",
+            "NL",
+            "US",
+            "CA",
+            "BR",
+            "MX",
+            "NZ",
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 840
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 840
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1079
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1079
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "CN"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "variant_count": 2
+        }
+      ]
     }
   ]
 }

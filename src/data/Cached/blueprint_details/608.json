@@ -24,6 +24,9 @@
           {
             "id": 71923,
             "title": "9\u0022 \u00D7 8\u0022 / Rectangle",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "9\u0022 \u00D7 8\u0022",
               "shape": "Rectangle"
@@ -98,7 +101,55 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 479
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 149
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "CA",
+            "NZ",
+            "NO",
+            "REST_OF_THE_WORLD",
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1399
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 399
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 599
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 199
+          },
+          "variant_count": 1
+        }
+      ]
     }
   ]
 }

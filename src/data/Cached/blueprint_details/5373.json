@@ -23,6 +23,9 @@
           {
             "id": 244807,
             "title": "XS / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XS",
               "color": "Black"
@@ -57,6 +60,9 @@
           {
             "id": 244808,
             "title": "S / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "S",
               "color": "Black"
@@ -91,6 +97,9 @@
           {
             "id": 244809,
             "title": "M / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "M",
               "color": "Black"
@@ -125,6 +134,9 @@
           {
             "id": 244810,
             "title": "L / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "L",
               "color": "Black"
@@ -159,6 +171,9 @@
           {
             "id": 244811,
             "title": "XL / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XL",
               "color": "Black"
@@ -193,6 +208,9 @@
           {
             "id": 244812,
             "title": "2XL / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2XL",
               "color": "Black"
@@ -227,6 +245,9 @@
           {
             "id": 244813,
             "title": "XS / Charcoal",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XS",
               "color": "Charcoal"
@@ -261,6 +282,9 @@
           {
             "id": 244814,
             "title": "S / Charcoal",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "S",
               "color": "Charcoal"
@@ -295,6 +319,9 @@
           {
             "id": 244815,
             "title": "M / Charcoal",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "M",
               "color": "Charcoal"
@@ -329,6 +356,9 @@
           {
             "id": 244816,
             "title": "L / Charcoal",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "L",
               "color": "Charcoal"
@@ -363,6 +393,9 @@
           {
             "id": 244817,
             "title": "XL / Charcoal",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XL",
               "color": "Charcoal"
@@ -397,6 +430,9 @@
           {
             "id": 244818,
             "title": "2XL / Charcoal",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2XL",
               "color": "Charcoal"
@@ -480,60 +516,6 @@
             ],
             "first_item": {
               "currency": "USD",
-              "cost": 1269
-            },
-            "additional_items": {
-              "currency": "USD",
-              "cost": 659
-            },
-            "countries": [
-              "CA"
-            ]
-          },
-          {
-            "variant_ids": [
-              244807,
-              244808,
-              244809,
-              244810,
-              244811,
-              244812,
-              244813,
-              244814,
-              244815,
-              244816,
-              244817,
-              244818
-            ],
-            "first_item": {
-              "currency": "USD",
-              "cost": 1500
-            },
-            "additional_items": {
-              "currency": "USD",
-              "cost": 1000
-            },
-            "countries": [
-              "REST_OF_THE_WORLD"
-            ]
-          },
-          {
-            "variant_ids": [
-              244807,
-              244808,
-              244809,
-              244810,
-              244811,
-              244812,
-              244813,
-              244814,
-              244815,
-              244816,
-              244817,
-              244818
-            ],
-            "first_item": {
-              "currency": "USD",
               "cost": 2199
             },
             "additional_items": {
@@ -542,6 +524,33 @@
             },
             "countries": [
               "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              244807,
+              244808,
+              244809,
+              244810,
+              244811,
+              244812,
+              244813,
+              244814,
+              244815,
+              244816,
+              244817,
+              244818
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1269
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 659
+            },
+            "countries": [
+              "CA"
             ]
           },
           {
@@ -570,9 +579,108 @@
             "countries": [
               "US"
             ]
+          },
+          {
+            "variant_ids": [
+              244807,
+              244808,
+              244809,
+              244810,
+              244811,
+              244812,
+              244813,
+              244814,
+              244815,
+              244816,
+              244817,
+              244818
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1500
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1000
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 769
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 209
+          },
+          "variant_count": 12
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2199
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "variant_count": 12
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1269
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 659
+          },
+          "variant_count": 12
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 249
+          },
+          "variant_count": 12
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1500
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1000
+          },
+          "variant_count": 12
+        }
+      ]
     }
   ]
 }

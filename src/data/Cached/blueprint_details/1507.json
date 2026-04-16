@@ -57,6 +57,9 @@
           {
             "id": 108283,
             "title": "20oz / Dark Purple",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "20oz",
               "color": "Dark Purple"
@@ -79,6 +82,9 @@
           {
             "id": 108284,
             "title": "20oz / Iron Gray",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "20oz",
               "color": "Iron Gray"
@@ -101,6 +107,9 @@
           {
             "id": 108285,
             "title": "20oz / Olive Green",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "20oz",
               "color": "Olive Green"
@@ -123,6 +132,9 @@
           {
             "id": 108286,
             "title": "20oz / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "20oz",
               "color": "Black"
@@ -145,6 +157,9 @@
           {
             "id": 108287,
             "title": "20oz / Coral",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "20oz",
               "color": "Coral"
@@ -167,6 +182,9 @@
           {
             "id": 108288,
             "title": "20oz / Green",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "20oz",
               "color": "Green"
@@ -189,6 +207,9 @@
           {
             "id": 108289,
             "title": "20oz / Light Purple",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "20oz",
               "color": "Light Purple"
@@ -211,6 +232,9 @@
           {
             "id": 108290,
             "title": "20oz / Maroon",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "20oz",
               "color": "Maroon"
@@ -233,6 +257,9 @@
           {
             "id": 108291,
             "title": "20oz / Navy",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "20oz",
               "color": "Navy"
@@ -255,6 +282,9 @@
           {
             "id": 108292,
             "title": "20oz / Orange",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "20oz",
               "color": "Orange"
@@ -277,6 +307,9 @@
           {
             "id": 108293,
             "title": "20oz / Pink",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "20oz",
               "color": "Pink"
@@ -299,6 +332,9 @@
           {
             "id": 108294,
             "title": "20oz / Red",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "20oz",
               "color": "Red"
@@ -321,6 +357,9 @@
           {
             "id": 108295,
             "title": "20oz / Royal",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "20oz",
               "color": "Royal"
@@ -343,6 +382,9 @@
           {
             "id": 108296,
             "title": "20oz / Teal",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "20oz",
               "color": "Teal"
@@ -365,6 +407,9 @@
           {
             "id": 108297,
             "title": "20oz / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "20oz",
               "color": "White"
@@ -387,6 +432,9 @@
           {
             "id": 108298,
             "title": "20oz / Yellow",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "20oz",
               "color": "Yellow"
@@ -570,7 +618,79 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 689
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 299
+          },
+          "variant_count": 16
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 699
+          },
+          "variant_count": 16
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 799
+          },
+          "variant_count": 16
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 929
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 299
+          },
+          "variant_count": 16
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1349
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 579
+          },
+          "variant_count": 16
+        }
+      ]
     }
   ]
 }

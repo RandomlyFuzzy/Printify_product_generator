@@ -27,6 +27,9 @@
           {
             "id": 79919,
             "title": "18\u0022 \u00D7 21\u0022",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "18\u0022 \u00D7 21\u0022"
             },
@@ -96,7 +99,51 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1259
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 639
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1279
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 699
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 689
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 239
+          },
+          "variant_count": 1
+        }
+      ]
     }
   ]
 }

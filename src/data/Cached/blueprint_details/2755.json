@@ -6,8 +6,6 @@
     "model": "",
     "images": [
       "https://images.printify.com/697383d0bf6bf0e6760794b2",
-      "https://images.printify.com/692067242df3db2b550465a2",
-      "https://images.printify.com/69206726750a2ead700c4e32",
       "https://images.printify.com/697380c86225d957770fbfe2"
     ]
   },
@@ -24,6 +22,9 @@
           {
             "id": 149433,
             "title": "10oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "10oz"
             },
@@ -33,12 +34,6 @@
                 "decoration_method": "engraving",
                 "height": 591,
                 "width": 2983
-              },
-              {
-                "position": "bottom",
-                "decoration_method": "engraving",
-                "height": 900,
-                "width": 900
               }
             ]
           }
@@ -187,7 +182,135 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 699
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 299
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1229
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 529
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "AX",
+            "AL",
+            "AD",
+            "AM",
+            "AT",
+            "BY",
+            "BE",
+            "BA",
+            "BV",
+            "BG",
+            "HR",
+            "CY",
+            "CZ",
+            "FO",
+            "FR",
+            "GE",
+            "GI",
+            "GR",
+            "GL",
+            "GP",
+            "GG",
+            "VA",
+            "HU",
+            "IE",
+            "IM",
+            "IT",
+            "JE",
+            "LU",
+            "MK",
+            "MT",
+            "MD",
+            "MC",
+            "ME",
+            "PL",
+            "PT",
+            "RE",
+            "RO",
+            "SM",
+            "RS",
+            "SK",
+            "SI",
+            "ES",
+            "TR",
+            "UA",
+            "GB",
+            "XK",
+            "DE",
+            "NL"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 599
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 199
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "EE",
+            "CH",
+            "LV",
+            "SE",
+            "NO",
+            "LI",
+            "FI",
+            "LT",
+            "DK",
+            "IS"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 199
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1329
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 699
+          },
+          "variant_count": 1
+        }
+      ]
     }
   ]
 }

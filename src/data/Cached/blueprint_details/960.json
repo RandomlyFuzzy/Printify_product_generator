@@ -26,6 +26,9 @@
           {
             "id": 79704,
             "title": "Seam thread color automatically matched to design / 2T",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Seam thread color automatically matched to design",
               "size": "2T"
@@ -60,6 +63,9 @@
           {
             "id": 79705,
             "title": "Seam thread color automatically matched to design / 3T",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Seam thread color automatically matched to design",
               "size": "3T"
@@ -94,6 +100,9 @@
           {
             "id": 79706,
             "title": "Seam thread color automatically matched to design / 4T",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Seam thread color automatically matched to design",
               "size": "4T"
@@ -128,6 +137,9 @@
           {
             "id": 79707,
             "title": "Seam thread color automatically matched to design / 6T",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Seam thread color automatically matched to design",
               "size": "6T"
@@ -162,6 +174,9 @@
           {
             "id": 79708,
             "title": "Seam thread color automatically matched to design / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Seam thread color automatically matched to design",
               "size": "S"
@@ -196,6 +211,9 @@
           {
             "id": 79709,
             "title": "Seam thread color automatically matched to design / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Seam thread color automatically matched to design",
               "size": "M"
@@ -230,6 +248,9 @@
           {
             "id": 79710,
             "title": "Seam thread color automatically matched to design / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Seam thread color automatically matched to design",
               "size": "L"
@@ -264,6 +285,9 @@
           {
             "id": 79711,
             "title": "Seam thread color automatically matched to design / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Seam thread color automatically matched to design",
               "size": "XL"
@@ -402,7 +426,71 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "REST_OF_THE_WORLD",
+            "BR",
+            "NL",
+            "DK",
+            "NZ",
+            "MX"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 360
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 360
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 569
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "CA",
+            "CN"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 649
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 649
+          },
+          "variant_count": 8
+        }
+      ]
     }
   ]
 }

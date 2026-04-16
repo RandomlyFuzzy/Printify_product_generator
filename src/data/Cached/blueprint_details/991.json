@@ -29,6 +29,9 @@
           {
             "id": 78839,
             "title": "49.60\u0022 \u00D7 18.50\u0022 / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "49.60\u0022 \u00D7 18.50\u0022",
               "color": "Black"
@@ -179,7 +182,123 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2019
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1959
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1899
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "CA",
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 3129
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 2999
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "AX",
+            "AL",
+            "AD",
+            "AM",
+            "AT",
+            "BY",
+            "BE",
+            "BA",
+            "BV",
+            "BG",
+            "HR",
+            "CY",
+            "CZ",
+            "DK",
+            "EE",
+            "FO",
+            "FI",
+            "FR",
+            "GE",
+            "DE",
+            "GI",
+            "GR",
+            "GL",
+            "GP",
+            "GG",
+            "VA",
+            "HU",
+            "IS",
+            "IE",
+            "IM",
+            "IT",
+            "JE",
+            "LV",
+            "LI",
+            "LT",
+            "LU",
+            "MK",
+            "MT",
+            "MD",
+            "MC",
+            "ME",
+            "NL",
+            "NO",
+            "PL",
+            "PT",
+            "RE",
+            "RO",
+            "SM",
+            "RS",
+            "SK",
+            "SI",
+            "ES",
+            "SE",
+            "CH",
+            "TR",
+            "UA",
+            "GB",
+            "XK"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1939
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1829
+          },
+          "variant_count": 1
+        }
+      ]
     }
   ]
 }

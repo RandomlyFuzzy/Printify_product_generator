@@ -25,6 +25,9 @@
           {
             "id": 80176,
             "title": "11.75\u0027\u0027 \u00D7 7.25\u0027\u0027 \u00D7 4.75\u0027\u0027",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "11.75\u0027\u0027 \u00D7 7.25\u0027\u0027 \u00D7 4.75\u0027\u0027"
             },
@@ -94,7 +97,51 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 649
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 299
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1089
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 359
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1199
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 379
+          },
+          "variant_count": 1
+        }
+      ]
     }
   ]
 }

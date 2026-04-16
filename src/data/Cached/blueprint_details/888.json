@@ -27,6 +27,9 @@
           {
             "id": 77708,
             "title": "20\u0022 x 12\u0022 / Brown",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "20\u0022 x 12\u0022",
               "color": "Brown"
@@ -122,7 +125,58 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1399
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1399
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD",
+            "NL",
+            "BR",
+            "US",
+            "MX",
+            "CA",
+            "DK",
+            "NZ"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 840
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 840
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "CN"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "variant_count": 1
+        }
+      ]
     }
   ]
 }

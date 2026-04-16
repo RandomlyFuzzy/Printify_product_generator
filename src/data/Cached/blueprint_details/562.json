@@ -25,6 +25,9 @@
           {
             "id": 101403,
             "title": "20\u0022 \u00D7 10\u0022",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "20\u0022 \u00D7 10\u0022"
             },
@@ -40,6 +43,9 @@
           {
             "id": 101404,
             "title": "27\u0022 \u00D7 13\u0022",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "27\u0022 \u00D7 13\u0022"
             },
@@ -115,7 +121,51 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 549
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 99
+          },
+          "variant_count": 3
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1089
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 129
+          },
+          "variant_count": 3
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1159
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 199
+          },
+          "variant_count": 3
+        }
+      ]
     }
   ]
 }

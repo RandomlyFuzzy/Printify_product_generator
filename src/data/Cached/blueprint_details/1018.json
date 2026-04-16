@@ -24,6 +24,9 @@
           {
             "id": 79701,
             "title": "11oz / Black / Glossy",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "11oz",
               "color": "Black",
@@ -41,6 +44,9 @@
           {
             "id": 79702,
             "title": "11oz / Pink / Glossy",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "11oz",
               "color": "Pink",
@@ -58,6 +64,9 @@
           {
             "id": 80021,
             "title": "11oz / Gold / Glossy",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "11oz",
               "color": "Gold",
@@ -75,6 +84,9 @@
           {
             "id": 80022,
             "title": "11oz / Red / Glossy",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "11oz",
               "color": "Red",
@@ -92,6 +104,9 @@
           {
             "id": 80023,
             "title": "11oz / Cambridge Blue / Glossy",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "11oz",
               "color": "Cambridge Blue",
@@ -109,6 +124,9 @@
           {
             "id": 80024,
             "title": "11oz / Dark Green / Glossy",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "11oz",
               "color": "Dark Green",
@@ -126,6 +144,9 @@
           {
             "id": 80025,
             "title": "11oz / Light Blue / Glossy",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "11oz",
               "color": "Light Blue",
@@ -143,6 +164,9 @@
           {
             "id": 80026,
             "title": "11oz / Light Green / Glossy",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "11oz",
               "color": "Light Green",
@@ -160,6 +184,9 @@
           {
             "id": 80027,
             "title": "11oz / Maroon / Glossy",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "11oz",
               "color": "Maroon",
@@ -177,6 +204,9 @@
           {
             "id": 80028,
             "title": "11oz / Orange / Glossy",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "11oz",
               "color": "Orange",
@@ -194,6 +224,9 @@
           {
             "id": 80029,
             "title": "11oz / Yellow / Glossy",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "11oz",
               "color": "Yellow",
@@ -211,6 +244,9 @@
           {
             "id": 80030,
             "title": "11oz / Dark Blue / Glossy",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "11oz",
               "color": "Dark Blue",
@@ -504,7 +540,175 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "DK",
+            "LV",
+            "FI",
+            "EE",
+            "IS",
+            "LI",
+            "CH",
+            "LT",
+            "SE",
+            "NO"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 199
+          },
+          "variant_count": 12
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1699
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1399
+          },
+          "variant_count": 12
+        },
+        {
+          "countries": [
+            "GB",
+            "IE"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 779
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 169
+          },
+          "variant_count": 12
+        },
+        {
+          "countries": [
+            "DE"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 529
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 129
+          },
+          "variant_count": 12
+        },
+        {
+          "countries": [
+            "AX",
+            "AL",
+            "AD",
+            "AM",
+            "AT",
+            "BY",
+            "BE",
+            "BA",
+            "BV",
+            "BG",
+            "HR",
+            "CY",
+            "CZ",
+            "FO",
+            "FR",
+            "GE",
+            "GI",
+            "GR",
+            "GL",
+            "GP",
+            "GG",
+            "VA",
+            "HU",
+            "IM",
+            "IT",
+            "JE",
+            "LU",
+            "MK",
+            "MT",
+            "MD",
+            "MC",
+            "ME",
+            "NL",
+            "PL",
+            "PT",
+            "RE",
+            "RO",
+            "SM",
+            "RS",
+            "SK",
+            "SI",
+            "ES",
+            "TR",
+            "UA",
+            "XK"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 659
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 199
+          },
+          "variant_count": 12
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2199
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "variant_count": 12
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2749
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1399
+          },
+          "variant_count": 12
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1749
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1399
+          },
+          "variant_count": 12
+        }
+      ]
     }
   ]
 }

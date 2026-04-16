@@ -17,6 +17,473 @@
   "print_providers": [
     {
       "provider": {
+        "id": 99,
+        "title": "Printify Choice"
+      },
+      "variants": {
+        "id": 99,
+        "title": "Printify Choice",
+        "variants": [
+          {
+            "id": 72166,
+            "title": "Festival / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "size": "S",
+              "color": "Festival"
+            },
+            "placeholders": [
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 3955,
+                "width": 3461
+              },
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3955,
+                "width": 3461
+              }
+            ]
+          },
+          {
+            "id": 72167,
+            "title": "Hazy Rainbow / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "size": "S",
+              "color": "Hazy Rainbow"
+            },
+            "placeholders": [
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 3955,
+                "width": 3461
+              },
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3955,
+                "width": 3461
+              }
+            ]
+          },
+          {
+            "id": 72168,
+            "title": "Festival / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "size": "M",
+              "color": "Festival"
+            },
+            "placeholders": [
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 4387,
+                "width": 3839
+              },
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 4387,
+                "width": 3839
+              }
+            ]
+          },
+          {
+            "id": 72169,
+            "title": "Hazy Rainbow / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "size": "M",
+              "color": "Hazy Rainbow"
+            },
+            "placeholders": [
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 4387,
+                "width": 3839
+              },
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 4387,
+                "width": 3839
+              }
+            ]
+          },
+          {
+            "id": 72170,
+            "title": "Festival / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "size": "L",
+              "color": "Festival"
+            },
+            "placeholders": [
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 4800,
+                "width": 4200
+              },
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 4800,
+                "width": 4200
+              }
+            ]
+          },
+          {
+            "id": 72171,
+            "title": "Hazy Rainbow / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "size": "L",
+              "color": "Hazy Rainbow"
+            },
+            "placeholders": [
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 4800,
+                "width": 4200
+              },
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 4800,
+                "width": 4200
+              }
+            ]
+          },
+          {
+            "id": 72172,
+            "title": "Festival / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "size": "XL",
+              "color": "Festival"
+            },
+            "placeholders": [
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 4800,
+                "width": 4200
+              },
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 4800,
+                "width": 4200
+              }
+            ]
+          },
+          {
+            "id": 72173,
+            "title": "Hazy Rainbow / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "size": "XL",
+              "color": "Hazy Rainbow"
+            },
+            "placeholders": [
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 4800,
+                "width": 4200
+              },
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 4800,
+                "width": 4200
+              }
+            ]
+          },
+          {
+            "id": 72229,
+            "title": "Festival / 2XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "size": "2XL",
+              "color": "Festival"
+            },
+            "placeholders": [
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 4800,
+                "width": 4200
+              },
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 4800,
+                "width": 4200
+              }
+            ]
+          },
+          {
+            "id": 72230,
+            "title": "Hazy Rainbow / 2XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "size": "2XL",
+              "color": "Hazy Rainbow"
+            },
+            "placeholders": [
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 4800,
+                "width": 4200
+              },
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 4800,
+                "width": 4200
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              72166,
+              72167,
+              72168,
+              72169,
+              72170,
+              72171,
+              72172,
+              72173,
+              72229,
+              72230
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 209
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              72166,
+              72167,
+              72168,
+              72169,
+              72170,
+              72171,
+              72172,
+              72173,
+              72229,
+              72230
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1249
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              72166,
+              72167,
+              72168,
+              72169,
+              72170,
+              72171,
+              72172,
+              72173,
+              72229,
+              72230
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 939
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              72166,
+              72167,
+              72168,
+              72169,
+              72170,
+              72171,
+              72172,
+              72173,
+              72229,
+              72230
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 475
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 240
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              72166,
+              72167,
+              72168,
+              72169,
+              72170,
+              72171,
+              72172,
+              72173,
+              72229,
+              72230
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1000
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 400
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 399
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 209
+          },
+          "variant_count": 10
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1249
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "variant_count": 10
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 939
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 10
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 475
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 240
+          },
+          "variant_count": 10
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1000
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 400
+          },
+          "variant_count": 10
+        }
+      ]
+    },
+    {
+      "provider": {
         "id": 39,
         "title": "SwiftPOD"
       },
@@ -27,6 +494,9 @@
           {
             "id": 72166,
             "title": "Festival / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Festival",
               "size": "S"
@@ -49,6 +519,9 @@
           {
             "id": 72167,
             "title": "Hazy Rainbow / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Hazy Rainbow",
               "size": "S"
@@ -71,6 +544,9 @@
           {
             "id": 72168,
             "title": "Festival / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Festival",
               "size": "M"
@@ -93,6 +569,9 @@
           {
             "id": 72169,
             "title": "Hazy Rainbow / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Hazy Rainbow",
               "size": "M"
@@ -115,6 +594,9 @@
           {
             "id": 72170,
             "title": "Festival / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Festival",
               "size": "L"
@@ -137,6 +619,9 @@
           {
             "id": 72171,
             "title": "Hazy Rainbow / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Hazy Rainbow",
               "size": "L"
@@ -159,6 +644,9 @@
           {
             "id": 72172,
             "title": "Festival / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Festival",
               "size": "XL"
@@ -181,6 +669,9 @@
           {
             "id": 72173,
             "title": "Hazy Rainbow / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Hazy Rainbow",
               "size": "XL"
@@ -203,6 +694,9 @@
           {
             "id": 72229,
             "title": "Festival / 2XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Festival",
               "size": "2XL"
@@ -225,6 +719,9 @@
           {
             "id": 72230,
             "title": "Hazy Rainbow / 2XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Hazy Rainbow",
               "size": "2XL"
@@ -378,372 +875,79 @@
             ]
           }
         ]
-      }
-    },
-    {
-      "provider": {
-        "id": 99,
-        "title": "Printify Choice"
       },
-      "variants": {
-        "id": 99,
-        "title": "Printify Choice",
-        "variants": [
-          {
-            "id": 72166,
-            "title": "Festival / S",
-            "options": {
-              "size": "S",
-              "color": "Festival"
-            },
-            "placeholders": [
-              {
-                "position": "back",
-                "decoration_method": "dtg",
-                "height": 3955,
-                "width": 3461
-              },
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 3955,
-                "width": 3461
-              }
-            ]
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 429
           },
-          {
-            "id": 72167,
-            "title": "Hazy Rainbow / S",
-            "options": {
-              "size": "S",
-              "color": "Hazy Rainbow"
-            },
-            "placeholders": [
-              {
-                "position": "back",
-                "decoration_method": "dtg",
-                "height": 3955,
-                "width": 3461
-              },
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 3955,
-                "width": 3461
-              }
-            ]
+          "additional_items": {
+            "currency": "USD",
+            "cost": 209
           },
-          {
-            "id": 72168,
-            "title": "Festival / M",
-            "options": {
-              "size": "M",
-              "color": "Festival"
-            },
-            "placeholders": [
-              {
-                "position": "back",
-                "decoration_method": "dtg",
-                "height": 4387,
-                "width": 3839
-              },
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 4387,
-                "width": 3839
-              }
-            ]
-          },
-          {
-            "id": 72169,
-            "title": "Hazy Rainbow / M",
-            "options": {
-              "size": "M",
-              "color": "Hazy Rainbow"
-            },
-            "placeholders": [
-              {
-                "position": "back",
-                "decoration_method": "dtg",
-                "height": 4387,
-                "width": 3839
-              },
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 4387,
-                "width": 3839
-              }
-            ]
-          },
-          {
-            "id": 72170,
-            "title": "Festival / L",
-            "options": {
-              "size": "L",
-              "color": "Festival"
-            },
-            "placeholders": [
-              {
-                "position": "back",
-                "decoration_method": "dtg",
-                "height": 4800,
-                "width": 4200
-              },
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 4800,
-                "width": 4200
-              }
-            ]
-          },
-          {
-            "id": 72171,
-            "title": "Hazy Rainbow / L",
-            "options": {
-              "size": "L",
-              "color": "Hazy Rainbow"
-            },
-            "placeholders": [
-              {
-                "position": "back",
-                "decoration_method": "dtg",
-                "height": 4800,
-                "width": 4200
-              },
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 4800,
-                "width": 4200
-              }
-            ]
-          },
-          {
-            "id": 72172,
-            "title": "Festival / XL",
-            "options": {
-              "size": "XL",
-              "color": "Festival"
-            },
-            "placeholders": [
-              {
-                "position": "back",
-                "decoration_method": "dtg",
-                "height": 4800,
-                "width": 4200
-              },
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 4800,
-                "width": 4200
-              }
-            ]
-          },
-          {
-            "id": 72173,
-            "title": "Hazy Rainbow / XL",
-            "options": {
-              "size": "XL",
-              "color": "Hazy Rainbow"
-            },
-            "placeholders": [
-              {
-                "position": "back",
-                "decoration_method": "dtg",
-                "height": 4800,
-                "width": 4200
-              },
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 4800,
-                "width": 4200
-              }
-            ]
-          },
-          {
-            "id": 72229,
-            "title": "Festival / 2XL",
-            "options": {
-              "size": "2XL",
-              "color": "Festival"
-            },
-            "placeholders": [
-              {
-                "position": "back",
-                "decoration_method": "dtg",
-                "height": 4800,
-                "width": 4200
-              },
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 4800,
-                "width": 4200
-              }
-            ]
-          },
-          {
-            "id": 72230,
-            "title": "Hazy Rainbow / 2XL",
-            "options": {
-              "size": "2XL",
-              "color": "Hazy Rainbow"
-            },
-            "placeholders": [
-              {
-                "position": "back",
-                "decoration_method": "dtg",
-                "height": 4800,
-                "width": 4200
-              },
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 4800,
-                "width": 4200
-              }
-            ]
-          }
-        ]
-      },
-      "shipping": {
-        "handling_time": {
-          "value": 10,
-          "unit": "day"
+          "variant_count": 10
         },
-        "profiles": [
-          {
-            "variant_ids": [
-              72166,
-              72167,
-              72168,
-              72169,
-              72170,
-              72171,
-              72172,
-              72173,
-              72229,
-              72230
-            ],
-            "first_item": {
-              "currency": "USD",
-              "cost": 399
-            },
-            "additional_items": {
-              "currency": "USD",
-              "cost": 209
-            },
-            "countries": [
-              "US"
-            ]
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 475
           },
-          {
-            "variant_ids": [
-              72166,
-              72167,
-              72168,
-              72169,
-              72170,
-              72171,
-              72172,
-              72173,
-              72229,
-              72230
-            ],
-            "first_item": {
-              "currency": "USD",
-              "cost": 939
-            },
-            "additional_items": {
-              "currency": "USD",
-              "cost": 439
-            },
-            "countries": [
-              "CA"
-            ]
+          "additional_items": {
+            "currency": "USD",
+            "cost": 240
           },
-          {
-            "variant_ids": [
-              72166,
-              72167,
-              72168,
-              72169,
-              72170,
-              72171,
-              72172,
-              72173,
-              72229,
-              72230
-            ],
-            "first_item": {
-              "currency": "USD",
-              "cost": 1000
-            },
-            "additional_items": {
-              "currency": "USD",
-              "cost": 400
-            },
-            "countries": [
-              "REST_OF_THE_WORLD"
-            ]
+          "variant_count": 10
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1249
           },
-          {
-            "variant_ids": [
-              72166,
-              72167,
-              72168,
-              72169,
-              72170,
-              72171,
-              72172,
-              72173,
-              72229,
-              72230
-            ],
-            "first_item": {
-              "currency": "USD",
-              "cost": 475
-            },
-            "additional_items": {
-              "currency": "USD",
-              "cost": 240
-            },
-            "countries": [
-              "US"
-            ]
+          "additional_items": {
+            "currency": "USD",
+            "cost": 499
           },
-          {
-            "variant_ids": [
-              72166,
-              72167,
-              72168,
-              72169,
-              72170,
-              72171,
-              72172,
-              72173,
-              72229,
-              72230
-            ],
-            "first_item": {
-              "currency": "USD",
-              "cost": 1249
-            },
-            "additional_items": {
-              "currency": "USD",
-              "cost": 499
-            },
-            "countries": [
-              "AU"
-            ]
-          }
-        ]
-      }
+          "variant_count": 10
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 939
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 10
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1000
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 400
+          },
+          "variant_count": 10
+        }
+      ]
     }
   ]
 }

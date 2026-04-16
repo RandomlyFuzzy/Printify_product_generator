@@ -26,6 +26,9 @@
           {
             "id": 101552,
             "title": "Matte / Blush / 20oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "finish": "Matte",
               "color": "Blush",
@@ -43,6 +46,9 @@
           {
             "id": 101554,
             "title": "Glossy / Carnation Pink / 20oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "finish": "Glossy",
               "color": "Carnation Pink",
@@ -60,6 +66,9 @@
           {
             "id": 101558,
             "title": "Glossy / Glitter Black / 20oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "finish": "Glossy",
               "color": "Glitter Black",
@@ -77,6 +86,9 @@
           {
             "id": 101562,
             "title": "Glossy / Glitter Blush / 20oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "finish": "Glossy",
               "color": "Glitter Blush",
@@ -94,6 +106,9 @@
           {
             "id": 101570,
             "title": "Glossy / Glitter Dusty Rose / 20oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "finish": "Glossy",
               "color": "Glitter Dusty Rose",
@@ -111,6 +126,9 @@
           {
             "id": 101574,
             "title": "Glossy / Glitter Iceberg / 20oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "finish": "Glossy",
               "color": "Glitter Iceberg",
@@ -128,6 +146,9 @@
           {
             "id": 101578,
             "title": "Glossy / Glitter Lilac / 20oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "finish": "Glossy",
               "color": "Glitter Lilac",
@@ -145,6 +166,9 @@
           {
             "id": 101582,
             "title": "Glossy / Glitter Magic Pink / 20oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "finish": "Glossy",
               "color": "Glitter Magic Pink",
@@ -162,6 +186,9 @@
           {
             "id": 101586,
             "title": "Glossy / Glitter Moonrock / 20oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "finish": "Glossy",
               "color": "Glitter Moonrock",
@@ -179,6 +206,9 @@
           {
             "id": 101590,
             "title": "Glossy / Glitter Rosegold / 20oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "finish": "Glossy",
               "color": "Glitter Rosegold",
@@ -196,6 +226,9 @@
           {
             "id": 101594,
             "title": "Glossy / Glitter Rosewood / 20oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "finish": "Glossy",
               "color": "Glitter Rosewood",
@@ -213,6 +246,9 @@
           {
             "id": 101598,
             "title": "Glossy / Glitter Seascape / 20oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "finish": "Glossy",
               "color": "Glitter Seascape",
@@ -230,6 +266,9 @@
           {
             "id": 101606,
             "title": "Glossy / Midnight / 20oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "finish": "Glossy",
               "color": "Midnight",
@@ -247,6 +286,9 @@
           {
             "id": 101610,
             "title": "Glossy / Mint / 20oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "finish": "Glossy",
               "color": "Mint",
@@ -264,6 +306,9 @@
           {
             "id": 101616,
             "title": "Matte / Nautical Blue / 20oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "finish": "Matte",
               "color": "Nautical Blue",
@@ -281,6 +326,9 @@
           {
             "id": 101622,
             "title": "Glossy / Seafoam / 20oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "finish": "Glossy",
               "color": "Seafoam",
@@ -298,6 +346,9 @@
           {
             "id": 101626,
             "title": "Glossy / White / 20oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "finish": "Glossy",
               "color": "White",
@@ -315,6 +366,9 @@
           {
             "id": 101630,
             "title": "Matte / Black / 20oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "finish": "Matte",
               "color": "Black",
@@ -452,7 +506,51 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2779
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 459
+          },
+          "variant_count": 23
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 3499
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 459
+          },
+          "variant_count": 23
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 779
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 459
+          },
+          "variant_count": 23
+        }
+      ]
     }
   ]
 }

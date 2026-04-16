@@ -24,6 +24,9 @@
           {
             "id": 77092,
             "title": "Black sole / US 6",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black sole",
               "size": "US 6"
@@ -46,6 +49,9 @@
           {
             "id": 77093,
             "title": "Black sole / US 7",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black sole",
               "size": "US 7"
@@ -68,6 +74,9 @@
           {
             "id": 77094,
             "title": "Black sole / US 8",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black sole",
               "size": "US 8"
@@ -90,6 +99,9 @@
           {
             "id": 77095,
             "title": "Black sole / US 9",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black sole",
               "size": "US 9"
@@ -112,6 +124,9 @@
           {
             "id": 77096,
             "title": "Black sole / US 10",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black sole",
               "size": "US 10"
@@ -134,6 +149,9 @@
           {
             "id": 77097,
             "title": "Black sole / US 11",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black sole",
               "size": "US 11"
@@ -156,6 +174,9 @@
           {
             "id": 77098,
             "title": "Black sole / US 12",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black sole",
               "size": "US 12"
@@ -260,7 +281,58 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "NL",
+            "DK",
+            "NZ",
+            "US",
+            "BR",
+            "MX",
+            "CA",
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 840
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 840
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "CN"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 949
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 949
+          },
+          "variant_count": 8
+        }
+      ]
     }
   ]
 }

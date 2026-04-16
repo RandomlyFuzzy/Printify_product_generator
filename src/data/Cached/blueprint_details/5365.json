@@ -34,6 +34,9 @@
           {
             "id": 244693,
             "title": "61\u0027\u0027 x 8\u0027\u0027 / Black/ Gold",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "61\u0027\u0027 x 8\u0027\u0027",
               "color": "Black/ Gold"
@@ -50,6 +53,9 @@
           {
             "id": 244694,
             "title": "61\u0027\u0027 x 8\u0027\u0027 / Black/ Iron Grey",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "61\u0027\u0027 x 8\u0027\u0027",
               "color": "Black/ Iron Grey"
@@ -66,6 +72,9 @@
           {
             "id": 244695,
             "title": "61\u0027\u0027 x 8\u0027\u0027 / Carolina Blue/ White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "61\u0027\u0027 x 8\u0027\u0027",
               "color": "Carolina Blue/ White"
@@ -82,6 +91,9 @@
           {
             "id": 244696,
             "title": "61\u0027\u0027 x 8\u0027\u0027 / Forest Green/ White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "61\u0027\u0027 x 8\u0027\u0027",
               "color": "Forest Green/ White"
@@ -98,6 +110,9 @@
           {
             "id": 244697,
             "title": "61\u0027\u0027 x 8\u0027\u0027 / Purple/ White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "61\u0027\u0027 x 8\u0027\u0027",
               "color": "Purple/ White"
@@ -114,6 +129,9 @@
           {
             "id": 244698,
             "title": "61\u0027\u0027 x 8\u0027\u0027 / True Navy/ Gold/ White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "61\u0027\u0027 x 8\u0027\u0027",
               "color": "True Navy/ Gold/ White"
@@ -130,6 +148,9 @@
           {
             "id": 244699,
             "title": "61\u0027\u0027 x 8\u0027\u0027 / True Navy/ White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "61\u0027\u0027 x 8\u0027\u0027",
               "color": "True Navy/ White"
@@ -146,6 +167,9 @@
           {
             "id": 244700,
             "title": "61\u0027\u0027 x 8\u0027\u0027 / True Red/ White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "61\u0027\u0027 x 8\u0027\u0027",
               "color": "True Red/ White"
@@ -162,6 +186,9 @@
           {
             "id": 244701,
             "title": "61\u0027\u0027 x 8\u0027\u0027 / True Red/ White/ Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "61\u0027\u0027 x 8\u0027\u0027",
               "color": "True Red/ White/ Black"
@@ -178,6 +205,9 @@
           {
             "id": 244702,
             "title": "61\u0027\u0027 x 8\u0027\u0027 / True Royal/ Gold/ White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "61\u0027\u0027 x 8\u0027\u0027",
               "color": "True Royal/ Gold/ White"
@@ -194,6 +224,9 @@
           {
             "id": 244703,
             "title": "61\u0027\u0027 x 8\u0027\u0027 / True Royal/ White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "61\u0027\u0027 x 8\u0027\u0027",
               "color": "True Royal/ White"
@@ -257,6 +290,32 @@
             ],
             "first_item": {
               "currency": "USD",
+              "cost": 939
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              244693,
+              244694,
+              244695,
+              244696,
+              244697,
+              244698,
+              244699,
+              244700,
+              244701,
+              244702,
+              244703
+            ],
+            "first_item": {
+              "currency": "USD",
               "cost": 569
             },
             "additional_items": {
@@ -292,35 +351,67 @@
             "countries": [
               "REST_OF_THE_WORLD"
             ]
-          },
-          {
-            "variant_ids": [
-              244693,
-              244694,
-              244695,
-              244696,
-              244697,
-              244698,
-              244699,
-              244700,
-              244701,
-              244702,
-              244703
-            ],
-            "first_item": {
-              "currency": "USD",
-              "cost": 939
-            },
-            "additional_items": {
-              "currency": "USD",
-              "cost": 439
-            },
-            "countries": [
-              "CA"
-            ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 449
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 209
+          },
+          "variant_count": 11
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 939
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 11
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 569
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 249
+          },
+          "variant_count": 11
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 399
+          },
+          "variant_count": 11
+        }
+      ]
     }
   ]
 }

@@ -25,6 +25,9 @@
           {
             "id": 74897,
             "title": "S / Black Onyx / TPU",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "S",
               "finish": "Black Onyx",
@@ -42,6 +45,9 @@
           {
             "id": 74898,
             "title": "S / Gun Metal / TPU",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "S",
               "finish": "Gun Metal",
@@ -59,6 +65,9 @@
           {
             "id": 74899,
             "title": "S / Rose Gold / TPU",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "S",
               "finish": "Rose Gold",
@@ -76,6 +85,9 @@
           {
             "id": 74900,
             "title": "S / Vintage Brass / TPU",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "S",
               "finish": "Vintage Brass",
@@ -93,6 +105,9 @@
           {
             "id": 74901,
             "title": "M / Black Onyx / TPU",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "M",
               "finish": "Black Onyx",
@@ -110,6 +125,9 @@
           {
             "id": 74902,
             "title": "M / Gun Metal / TPU",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "M",
               "finish": "Gun Metal",
@@ -127,6 +145,9 @@
           {
             "id": 74903,
             "title": "M / Rose Gold / TPU",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "M",
               "finish": "Rose Gold",
@@ -144,6 +165,9 @@
           {
             "id": 74904,
             "title": "M / Vintage Brass / TPU",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "M",
               "finish": "Vintage Brass",
@@ -161,6 +185,9 @@
           {
             "id": 74905,
             "title": "L / Black Onyx / TPU",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "L",
               "finish": "Black Onyx",
@@ -178,6 +205,9 @@
           {
             "id": 74906,
             "title": "L / Gun Metal / TPU",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "L",
               "finish": "Gun Metal",
@@ -195,6 +225,9 @@
           {
             "id": 74907,
             "title": "L / Rose Gold / TPU",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "L",
               "finish": "Rose Gold",
@@ -212,6 +245,9 @@
           {
             "id": 74908,
             "title": "L / Vintage Brass / TPU",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "L",
               "finish": "Vintage Brass",
@@ -229,6 +265,9 @@
           {
             "id": 74909,
             "title": "XL / Black Onyx / TPU",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XL",
               "finish": "Black Onyx",
@@ -246,6 +285,9 @@
           {
             "id": 74910,
             "title": "XL / Gun Metal / TPU",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XL",
               "finish": "Gun Metal",
@@ -263,6 +305,9 @@
           {
             "id": 74911,
             "title": "XL / Rose Gold / TPU",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XL",
               "finish": "Rose Gold",
@@ -280,6 +325,9 @@
           {
             "id": 74912,
             "title": "XL / Vintage Brass / TPU",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XL",
               "finish": "Vintage Brass",
@@ -396,7 +444,51 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1169
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 419
+          },
+          "variant_count": 16
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1099
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 16
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 559
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 209
+          },
+          "variant_count": 16
+        }
+      ]
     }
   ]
 }

@@ -24,6 +24,9 @@
           {
             "id": 112665,
             "title": "Heart / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "shape": "Heart",
               "size": "One size"
@@ -40,6 +43,9 @@
           {
             "id": 112666,
             "title": "Round / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "shape": "Round",
               "size": "One size"
@@ -166,7 +172,95 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 909
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 779
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "DE",
+            "FR",
+            "GB"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 599
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 469
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "CN"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 379
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 259
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1039
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 869
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 759
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1049
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 349
+          },
+          "variant_count": 2
+        }
+      ]
     }
   ]
 }

@@ -31,6 +31,9 @@
           {
             "id": 78487,
             "title": "48.03\u0022 \u00D7 18.50\u0022 / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "48.03\u0022 \u00D7 18.50\u0022",
               "color": "Black"
@@ -108,7 +111,58 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "NL",
+            "DK",
+            "US",
+            "MX",
+            "NZ",
+            "REST_OF_THE_WORLD",
+            "BR"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 360
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 360
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "CN",
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1329
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1329
+          },
+          "variant_count": 1
+        }
+      ]
     }
   ]
 }

@@ -25,6 +25,9 @@
           {
             "id": 109064,
             "title": "15oz / Dark Gray",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "15oz",
               "color": "Dark Gray"
@@ -47,6 +50,9 @@
           {
             "id": 109065,
             "title": "15oz / Dark Purple",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "15oz",
               "color": "Dark Purple"
@@ -69,6 +75,9 @@
           {
             "id": 109066,
             "title": "15oz / Olive Green",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "15oz",
               "color": "Olive Green"
@@ -91,6 +100,9 @@
           {
             "id": 109067,
             "title": "15oz / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "15oz",
               "color": "Black"
@@ -113,6 +125,9 @@
           {
             "id": 109068,
             "title": "15oz / Coral",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "15oz",
               "color": "Coral"
@@ -135,6 +150,9 @@
           {
             "id": 109069,
             "title": "15oz / Green",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "15oz",
               "color": "Green"
@@ -157,6 +175,9 @@
           {
             "id": 109070,
             "title": "15oz / Light Blue",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "15oz",
               "color": "Light Blue"
@@ -179,6 +200,9 @@
           {
             "id": 109071,
             "title": "15oz / Light Purple",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "15oz",
               "color": "Light Purple"
@@ -201,6 +225,9 @@
           {
             "id": 109072,
             "title": "15oz / Maroon",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "15oz",
               "color": "Maroon"
@@ -223,6 +250,9 @@
           {
             "id": 109073,
             "title": "15oz / Navy",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "15oz",
               "color": "Navy"
@@ -245,6 +275,9 @@
           {
             "id": 109074,
             "title": "15oz / Orange",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "15oz",
               "color": "Orange"
@@ -267,6 +300,9 @@
           {
             "id": 109075,
             "title": "15oz / Pink",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "15oz",
               "color": "Pink"
@@ -289,6 +325,9 @@
           {
             "id": 109076,
             "title": "15oz / Red",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "15oz",
               "color": "Red"
@@ -311,6 +350,9 @@
           {
             "id": 109077,
             "title": "15oz / Royal",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "15oz",
               "color": "Royal"
@@ -333,6 +375,9 @@
           {
             "id": 109078,
             "title": "15oz / Teal",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "15oz",
               "color": "Teal"
@@ -355,6 +400,9 @@
           {
             "id": 109079,
             "title": "15oz / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "15oz",
               "color": "White"
@@ -377,6 +425,9 @@
           {
             "id": 109080,
             "title": "15oz / Yellow",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "15oz",
               "color": "Yellow"
@@ -565,7 +616,79 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 689
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 299
+          },
+          "variant_count": 17
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1249
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 489
+          },
+          "variant_count": 17
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1619
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 579
+          },
+          "variant_count": 17
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 899
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 599
+          },
+          "variant_count": 17
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2199
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "variant_count": 17
+        }
+      ]
     }
   ]
 }

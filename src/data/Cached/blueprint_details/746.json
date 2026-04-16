@@ -24,6 +24,9 @@
           {
             "id": 74070,
             "title": "20oz / Transparent",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "20oz",
               "color": "Transparent"
@@ -152,7 +155,109 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "REST_OF_THE_WORLD",
+            "IS",
+            "DK",
+            "AD",
+            "EE",
+            "AL",
+            "FR",
+            "BV",
+            "BE",
+            "GL",
+            "HU",
+            "CH",
+            "AT",
+            "AX",
+            "CZ",
+            "BY",
+            "PT",
+            "JE",
+            "RS",
+            "RE",
+            "SM",
+            "BA",
+            "LU",
+            "MC",
+            "GB",
+            "BG",
+            "MT",
+            "ME",
+            "GR",
+            "LI",
+            "ES",
+            "AM",
+            "FI",
+            "IT",
+            "LV",
+            "NL",
+            "SI",
+            "SE",
+            "GI",
+            "GP",
+            "IM",
+            "MK",
+            "HR",
+            "CY",
+            "FO",
+            "GG",
+            "PL",
+            "UA",
+            "GE",
+            "DE",
+            "IE",
+            "NO",
+            "XK",
+            "VA",
+            "SK",
+            "RO",
+            "LT",
+            "MD",
+            "TR"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1349
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1099
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 239
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 299
+          },
+          "variant_count": 1
+        }
+      ]
     }
   ]
 }

@@ -29,6 +29,9 @@
           {
             "id": 109205,
             "title": "18oz / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "18oz",
               "color": "Black"
@@ -51,6 +54,9 @@
           {
             "id": 109206,
             "title": "18oz / Navy",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "18oz",
               "color": "Navy"
@@ -73,6 +79,9 @@
           {
             "id": 109207,
             "title": "18oz / Pink",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "18oz",
               "color": "Pink"
@@ -95,6 +104,9 @@
           {
             "id": 109208,
             "title": "18oz / Red",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "18oz",
               "color": "Red"
@@ -117,6 +129,9 @@
           {
             "id": 109209,
             "title": "18oz / Teal",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "18oz",
               "color": "Teal"
@@ -139,6 +154,9 @@
           {
             "id": 109210,
             "title": "18oz / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "18oz",
               "color": "White"
@@ -251,7 +269,65 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2199
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "variant_count": 6
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2019
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 709
+          },
+          "variant_count": 6
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 929
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 6
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2039
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 739
+          },
+          "variant_count": 6
+        }
+      ]
     },
     {
       "provider": {
@@ -265,6 +341,9 @@
           {
             "id": 109205,
             "title": "18oz / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "18oz",
               "color": "Black"
@@ -287,6 +366,9 @@
           {
             "id": 109206,
             "title": "18oz / Navy",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "18oz",
               "color": "Navy"
@@ -309,6 +391,9 @@
           {
             "id": 109207,
             "title": "18oz / Pink",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "18oz",
               "color": "Pink"
@@ -331,6 +416,9 @@
           {
             "id": 109208,
             "title": "18oz / Red",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "18oz",
               "color": "Red"
@@ -353,6 +441,9 @@
           {
             "id": 109209,
             "title": "18oz / Teal",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "18oz",
               "color": "Teal"
@@ -375,6 +466,9 @@
           {
             "id": 109210,
             "title": "18oz / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "18oz",
               "color": "White"
@@ -487,7 +581,65 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 929
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 299
+          },
+          "variant_count": 6
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1229
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 579
+          },
+          "variant_count": 6
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 799
+          },
+          "variant_count": 6
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1049
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 799
+          },
+          "variant_count": 6
+        }
+      ]
     }
   ]
 }

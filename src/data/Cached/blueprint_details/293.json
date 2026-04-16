@@ -27,6 +27,9 @@
           {
             "id": 44234,
             "title": "US 10 / Black sole",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "US 10",
               "color": "Black sole"
@@ -61,6 +64,9 @@
           {
             "id": 44236,
             "title": "US 11 / Black sole",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "US 11",
               "color": "Black sole"
@@ -95,6 +101,9 @@
           {
             "id": 44238,
             "title": "US 12 / Black sole",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "US 12",
               "color": "Black sole"
@@ -129,6 +138,9 @@
           {
             "id": 44240,
             "title": "US 13 / Black sole",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "US 13",
               "color": "Black sole"
@@ -163,6 +175,9 @@
           {
             "id": 44242,
             "title": "US 14 / Black sole",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "US 14",
               "color": "Black sole"
@@ -197,6 +212,9 @@
           {
             "id": 44248,
             "title": "US 8 / Black sole",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "US 8",
               "color": "Black sole"
@@ -231,6 +249,9 @@
           {
             "id": 44250,
             "title": "US 9 / Black sole",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "US 9",
               "color": "Black sole"
@@ -265,6 +286,9 @@
           {
             "id": 100184,
             "title": "US 4.5 / Black sole",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "US 4.5",
               "color": "Black sole"
@@ -299,6 +323,9 @@
           {
             "id": 100185,
             "title": "US 5.5 / Black sole",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "US 5.5",
               "color": "Black sole"
@@ -333,6 +360,9 @@
           {
             "id": 100186,
             "title": "US 6.5 / Black sole",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "US 6.5",
               "color": "Black sole"
@@ -367,6 +397,9 @@
           {
             "id": 100187,
             "title": "US 7.5 / Black sole",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "US 7.5",
               "color": "Black sole"
@@ -401,6 +434,9 @@
           {
             "id": 100188,
             "title": "US 8.5 / Black sole",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "US 8.5",
               "color": "Black sole"
@@ -435,6 +471,9 @@
           {
             "id": 100189,
             "title": "US 9.5 / Black sole",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "US 9.5",
               "color": "Black sole"
@@ -469,6 +508,9 @@
           {
             "id": 100190,
             "title": "US 10.5 / Black sole",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "US 10.5",
               "color": "Black sole"
@@ -609,7 +651,58 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "NZ",
+            "DK",
+            "US",
+            "CA",
+            "REST_OF_THE_WORLD",
+            "NL",
+            "MX",
+            "BR"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 840
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 840
+          },
+          "variant_count": 16
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1269
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1269
+          },
+          "variant_count": 16
+        },
+        {
+          "countries": [
+            "CN"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "variant_count": 16
+        }
+      ]
     }
   ]
 }

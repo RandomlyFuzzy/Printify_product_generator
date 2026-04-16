@@ -29,6 +29,9 @@
           {
             "id": 102073,
             "title": "Navy / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Navy",
               "size": "XL"
@@ -51,6 +54,9 @@
           {
             "id": 102074,
             "title": "Navy / 2XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Navy",
               "size": "2XL"
@@ -73,6 +79,9 @@
           {
             "id": 102075,
             "title": "Navy / 3XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Navy",
               "size": "3XL"
@@ -95,6 +104,9 @@
           {
             "id": 102076,
             "title": "Red / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Red",
               "size": "XL"
@@ -117,6 +129,9 @@
           {
             "id": 102077,
             "title": "Red / 2XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Red",
               "size": "2XL"
@@ -139,6 +154,9 @@
           {
             "id": 102078,
             "title": "Red / 3XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Red",
               "size": "3XL"
@@ -161,6 +179,9 @@
           {
             "id": 102079,
             "title": "Royal / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Royal",
               "size": "XL"
@@ -183,6 +204,9 @@
           {
             "id": 102080,
             "title": "Royal / 2XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Royal",
               "size": "2XL"
@@ -205,6 +229,9 @@
           {
             "id": 102081,
             "title": "Royal / 3XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Royal",
               "size": "3XL"
@@ -227,6 +254,9 @@
           {
             "id": 102082,
             "title": "White / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White",
               "size": "XL"
@@ -249,6 +279,9 @@
           {
             "id": 102083,
             "title": "White / 2XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White",
               "size": "2XL"
@@ -271,6 +304,9 @@
           {
             "id": 102084,
             "title": "White / 3XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White",
               "size": "3XL"
@@ -293,6 +329,9 @@
           {
             "id": 102085,
             "title": "Black / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "XL"
@@ -315,6 +354,9 @@
           {
             "id": 102086,
             "title": "Black / 2XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "2XL"
@@ -337,6 +379,9 @@
           {
             "id": 102087,
             "title": "Black / 3XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "3XL"
@@ -513,7 +558,109 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "LI",
+            "MC",
+            "ME",
+            "PL",
+            "TR",
+            "IT",
+            "SK",
+            "IE",
+            "CH",
+            "NO",
+            "LV",
+            "UA",
+            "NL",
+            "IM",
+            "FI",
+            "CZ",
+            "XK",
+            "RS",
+            "GB",
+            "SE",
+            "RO",
+            "IS",
+            "FR",
+            "VA",
+            "HR",
+            "PT",
+            "FO",
+            "LU",
+            "RE",
+            "CY",
+            "BV",
+            "EE",
+            "MD",
+            "BA",
+            "SI",
+            "SM",
+            "ES",
+            "LT",
+            "AL",
+            "BY",
+            "BG",
+            "BE",
+            "GI",
+            "REST_OF_THE_WORLD",
+            "GG",
+            "HU",
+            "AM",
+            "AD",
+            "GR",
+            "DE",
+            "GP",
+            "AX",
+            "MT",
+            "JE",
+            "GE",
+            "MK",
+            "GL",
+            "AT",
+            "DK"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1099
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 399
+          },
+          "variant_count": 15
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1959
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 289
+          },
+          "variant_count": 15
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 829
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 199
+          },
+          "variant_count": 15
+        }
+      ]
     }
   ]
 }

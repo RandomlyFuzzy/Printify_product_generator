@@ -29,6 +29,9 @@
           {
             "id": 101926,
             "title": "White/Olive Oil / XS",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White/Olive Oil",
               "size": "XS"
@@ -51,6 +54,9 @@
           {
             "id": 101927,
             "title": "White/Olive Oil / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White/Olive Oil",
               "size": "S"
@@ -73,6 +79,9 @@
           {
             "id": 101928,
             "title": "White/Olive Oil / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White/Olive Oil",
               "size": "M"
@@ -95,6 +104,9 @@
           {
             "id": 101929,
             "title": "White/Olive Oil / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White/Olive Oil",
               "size": "L"
@@ -117,6 +129,9 @@
           {
             "id": 101930,
             "title": "White/Olive Oil / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White/Olive Oil",
               "size": "XL"
@@ -139,6 +154,9 @@
           {
             "id": 101932,
             "title": "White/Sky Blue / XS",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White/Sky Blue",
               "size": "XS"
@@ -161,6 +179,9 @@
           {
             "id": 101933,
             "title": "White/Sky Blue / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White/Sky Blue",
               "size": "S"
@@ -183,6 +204,9 @@
           {
             "id": 101934,
             "title": "White/Sky Blue / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White/Sky Blue",
               "size": "M"
@@ -205,6 +229,9 @@
           {
             "id": 101935,
             "title": "White/Sky Blue / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White/Sky Blue",
               "size": "L"
@@ -227,6 +254,9 @@
           {
             "id": 101936,
             "title": "White/Sky Blue / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White/Sky Blue",
               "size": "XL"
@@ -294,14 +324,14 @@
             ],
             "first_item": {
               "currency": "USD",
-              "cost": 939
+              "cost": 1249
             },
             "additional_items": {
               "currency": "USD",
-              "cost": 439
+              "cost": 499
             },
             "countries": [
-              "CA"
+              "AU"
             ]
           },
           {
@@ -319,14 +349,14 @@
             ],
             "first_item": {
               "currency": "USD",
-              "cost": 1000
+              "cost": 939
             },
             "additional_items": {
               "currency": "USD",
-              "cost": 400
+              "cost": 439
             },
             "countries": [
-              "REST_OF_THE_WORLD"
+              "CA"
             ]
           },
           {
@@ -369,18 +399,90 @@
             ],
             "first_item": {
               "currency": "USD",
-              "cost": 1249
+              "cost": 1000
             },
             "additional_items": {
               "currency": "USD",
-              "cost": 499
+              "cost": 400
             },
             "countries": [
-              "AU"
+              "REST_OF_THE_WORLD"
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 399
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 209
+          },
+          "variant_count": 10
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1249
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "variant_count": 10
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 939
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 10
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 475
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 240
+          },
+          "variant_count": 10
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1000
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 400
+          },
+          "variant_count": 10
+        }
+      ]
     },
     {
       "provider": {
@@ -394,6 +496,9 @@
           {
             "id": 101926,
             "title": "White/Olive Oil / XS",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White/Olive Oil",
               "size": "XS"
@@ -416,6 +521,9 @@
           {
             "id": 101927,
             "title": "White/Olive Oil / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White/Olive Oil",
               "size": "S"
@@ -438,6 +546,9 @@
           {
             "id": 101928,
             "title": "White/Olive Oil / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White/Olive Oil",
               "size": "M"
@@ -460,6 +571,9 @@
           {
             "id": 101929,
             "title": "White/Olive Oil / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White/Olive Oil",
               "size": "L"
@@ -482,6 +596,9 @@
           {
             "id": 101930,
             "title": "White/Olive Oil / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White/Olive Oil",
               "size": "XL"
@@ -504,6 +621,9 @@
           {
             "id": 101931,
             "title": "White/Olive Oil / 2XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White/Olive Oil",
               "size": "2XL"
@@ -526,6 +646,9 @@
           {
             "id": 101932,
             "title": "White/Sky Blue / XS",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White/Sky Blue",
               "size": "XS"
@@ -548,6 +671,9 @@
           {
             "id": 101933,
             "title": "White/Sky Blue / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White/Sky Blue",
               "size": "S"
@@ -570,6 +696,9 @@
           {
             "id": 101934,
             "title": "White/Sky Blue / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White/Sky Blue",
               "size": "M"
@@ -592,6 +721,9 @@
           {
             "id": 101935,
             "title": "White/Sky Blue / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White/Sky Blue",
               "size": "L"
@@ -614,6 +746,9 @@
           {
             "id": 101936,
             "title": "White/Sky Blue / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White/Sky Blue",
               "size": "XL"
@@ -636,6 +771,9 @@
           {
             "id": 101937,
             "title": "White/Sky Blue / 2XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White/Sky Blue",
               "size": "2XL"
@@ -658,6 +796,9 @@
           {
             "id": 114875,
             "title": "White/Grey/Black / XS",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White/Grey/Black",
               "size": "XS"
@@ -680,6 +821,9 @@
           {
             "id": 114876,
             "title": "White/Grey/Black / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White/Grey/Black",
               "size": "S"
@@ -702,6 +846,9 @@
           {
             "id": 114877,
             "title": "White/Grey/Black / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White/Grey/Black",
               "size": "M"
@@ -724,6 +871,9 @@
           {
             "id": 114878,
             "title": "White/Grey/Black / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White/Grey/Black",
               "size": "L"
@@ -746,6 +896,9 @@
           {
             "id": 114879,
             "title": "White/Grey/Black / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White/Grey/Black",
               "size": "XL"
@@ -768,6 +921,9 @@
           {
             "id": 114880,
             "title": "White/Grey/Black / 2XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White/Grey/Black",
               "size": "2XL"
@@ -961,7 +1117,79 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 429
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 209
+          },
+          "variant_count": 18
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 475
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 240
+          },
+          "variant_count": 18
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1249
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "variant_count": 18
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 939
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 18
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1000
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 400
+          },
+          "variant_count": 18
+        }
+      ]
     }
   ]
 }

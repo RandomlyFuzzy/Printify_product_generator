@@ -24,6 +24,9 @@
           {
             "id": 71935,
             "title": "11oz / Gold",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "11oz",
               "color": "Gold"
@@ -40,6 +43,9 @@
           {
             "id": 71936,
             "title": "11oz / Silver",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "11oz",
               "color": "Silver"
@@ -113,7 +119,51 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2109
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 449
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1579
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 489
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 699
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 309
+          },
+          "variant_count": 2
+        }
+      ]
     }
   ]
 }

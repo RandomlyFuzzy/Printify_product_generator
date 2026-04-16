@@ -26,6 +26,9 @@
           {
             "id": 147705,
             "title": "One Size / Black PVD coating",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One Size",
               "color": "Black PVD coating"
@@ -42,6 +45,9 @@
           {
             "id": 147706,
             "title": "One Size / 18K Gold PVD coating",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One Size",
               "color": "18K Gold PVD coating"
@@ -58,6 +64,9 @@
           {
             "id": 147707,
             "title": "One Size / Rainbow PVD coating",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One Size",
               "color": "Rainbow PVD coating"
@@ -74,6 +83,9 @@
           {
             "id": 147708,
             "title": "One Size / 18K Rose Gold PVD coating",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One Size",
               "color": "18K Rose Gold PVD coating"
@@ -90,6 +102,9 @@
           {
             "id": 147709,
             "title": "One Size / Stainless Steel (No coating)",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One Size",
               "color": "Stainless Steel (No coating)"
@@ -141,6 +156,26 @@
             ],
             "first_item": {
               "currency": "USD",
+              "cost": 939
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              147705,
+              147706,
+              147707,
+              147708,
+              147709
+            ],
+            "first_item": {
+              "currency": "USD",
               "cost": 569
             },
             "additional_items": {
@@ -170,29 +205,67 @@
             "countries": [
               "REST_OF_THE_WORLD"
             ]
-          },
-          {
-            "variant_ids": [
-              147705,
-              147706,
-              147707,
-              147708,
-              147709
-            ],
-            "first_item": {
-              "currency": "USD",
-              "cost": 939
-            },
-            "additional_items": {
-              "currency": "USD",
-              "cost": 439
-            },
-            "countries": [
-              "CA"
-            ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 449
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 209
+          },
+          "variant_count": 5
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 939
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 5
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 569
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 249
+          },
+          "variant_count": 5
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 399
+          },
+          "variant_count": 5
+        }
+      ]
     }
   ]
 }

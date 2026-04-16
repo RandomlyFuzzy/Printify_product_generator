@@ -24,6 +24,9 @@
           {
             "id": 107117,
             "title": "7.5\u0027\u0027 \u00D7 15.5\u0027\u0027",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "7.5\u0027\u0027 \u00D7 15.5\u0027\u0027"
             },
@@ -94,7 +97,52 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "REST_OF_THE_WORLD",
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 5289
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 2999
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 5819
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 3299
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1139
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 419
+          },
+          "variant_count": 1
+        }
+      ]
     }
   ]
 }

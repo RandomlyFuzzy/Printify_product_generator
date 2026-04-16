@@ -24,6 +24,9 @@
           {
             "id": 71946,
             "title": "25oz / Charcoal",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "25oz",
               "color": "Charcoal"
@@ -40,6 +43,9 @@
           {
             "id": 71947,
             "title": "25oz / Oxford Blue",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "25oz",
               "color": "Oxford Blue"
@@ -56,6 +62,9 @@
           {
             "id": 71949,
             "title": "20oz / Oxford Blue",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "20oz",
               "color": "Oxford Blue"
@@ -169,7 +178,79 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 589
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 249
+          },
+          "variant_count": 4
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 969
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 289
+          },
+          "variant_count": 4
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1069
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 279
+          },
+          "variant_count": 4
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 659
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 249
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 629
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 249
+          },
+          "variant_count": 2
+        }
+      ]
     }
   ]
 }

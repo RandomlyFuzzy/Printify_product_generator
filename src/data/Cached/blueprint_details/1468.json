@@ -26,6 +26,9 @@
           {
             "id": 105837,
             "title": "4oz / Amber / Christmas Warmth",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "4oz",
               "color": "Amber",
@@ -43,6 +46,9 @@
           {
             "id": 105841,
             "title": "4oz / Amber / Peppered Passionfruit",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "4oz",
               "color": "Amber",
@@ -60,6 +66,9 @@
           {
             "id": 105843,
             "title": "4oz / Amber / Unscented",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "4oz",
               "color": "Amber",
@@ -77,6 +86,9 @@
           {
             "id": 105844,
             "title": "4oz / Amber / White Sage and Lavender",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "4oz",
               "color": "Amber",
@@ -94,6 +106,9 @@
           {
             "id": 105857,
             "title": "9oz / Amber / Christmas Warmth",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "9oz",
               "color": "Amber",
@@ -111,6 +126,9 @@
           {
             "id": 105858,
             "title": "9oz / Amber / Cinnamon Vanilla",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "9oz",
               "color": "Amber",
@@ -128,6 +146,9 @@
           {
             "id": 105859,
             "title": "9oz / Amber / Coconut Cream \u002B Cardamom",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "9oz",
               "color": "Amber",
@@ -145,6 +166,9 @@
           {
             "id": 105860,
             "title": "9oz / Amber / Clean Cotton",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "9oz",
               "color": "Amber",
@@ -162,6 +186,9 @@
           {
             "id": 105862,
             "title": "9oz / Amber / Sea Salt \u002B Orchid",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "9oz",
               "color": "Amber",
@@ -179,6 +206,9 @@
           {
             "id": 105863,
             "title": "9oz / Amber / Unscented",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "9oz",
               "color": "Amber",
@@ -196,6 +226,9 @@
           {
             "id": 105864,
             "title": "9oz / Amber / White Sage and Lavender",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "9oz",
               "color": "Amber",
@@ -213,6 +246,9 @@
           {
             "id": 244686,
             "title": "9oz / Amber / Ocean Water",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "9oz",
               "color": "Amber",
@@ -374,7 +410,93 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 649
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 269
+          },
+          "variant_count": 4
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2619
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 609
+          },
+          "variant_count": 4
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2829
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 929
+          },
+          "variant_count": 12
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 3399
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 929
+          },
+          "variant_count": 12
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 799
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 349
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2759
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 639
+          },
+          "variant_count": 8
+        }
+      ]
     }
   ]
 }

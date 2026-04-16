@@ -25,6 +25,9 @@
           {
             "id": 120853,
             "title": "2XL / Midnight",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2XL",
               "color": "Midnight"
@@ -47,6 +50,9 @@
           {
             "id": 120856,
             "title": "2XL / Summer Sky",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2XL",
               "color": "Summer Sky"
@@ -69,6 +75,9 @@
           {
             "id": 120857,
             "title": "2XL / Tropical Dream",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2XL",
               "color": "Tropical Dream"
@@ -91,6 +100,9 @@
           {
             "id": 120858,
             "title": "L / Midnight",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "L",
               "color": "Midnight"
@@ -113,6 +125,9 @@
           {
             "id": 120859,
             "title": "L / Neon Rainbow",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "L",
               "color": "Neon Rainbow"
@@ -135,6 +150,9 @@
           {
             "id": 120860,
             "title": "L / Powder Clouds",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "L",
               "color": "Powder Clouds"
@@ -157,6 +175,9 @@
           {
             "id": 120861,
             "title": "L / Summer Sky",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "L",
               "color": "Summer Sky"
@@ -179,6 +200,9 @@
           {
             "id": 120862,
             "title": "L / Tropical Dream",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "L",
               "color": "Tropical Dream"
@@ -201,6 +225,9 @@
           {
             "id": 120864,
             "title": "M / Neon Rainbow",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "M",
               "color": "Neon Rainbow"
@@ -223,6 +250,9 @@
           {
             "id": 120865,
             "title": "M / Powder Clouds",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "M",
               "color": "Powder Clouds"
@@ -245,6 +275,9 @@
           {
             "id": 120866,
             "title": "M / Summer Sky",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "M",
               "color": "Summer Sky"
@@ -267,6 +300,9 @@
           {
             "id": 120867,
             "title": "M / Tropical Dream",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "M",
               "color": "Tropical Dream"
@@ -289,6 +325,9 @@
           {
             "id": 120868,
             "title": "XL / Midnight",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XL",
               "color": "Midnight"
@@ -311,6 +350,9 @@
           {
             "id": 120869,
             "title": "XL / Neon Rainbow",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XL",
               "color": "Neon Rainbow"
@@ -333,6 +375,9 @@
           {
             "id": 120870,
             "title": "XL / Powder Clouds",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XL",
               "color": "Powder Clouds"
@@ -355,6 +400,9 @@
           {
             "id": 120871,
             "title": "XL / Summer Sky",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XL",
               "color": "Summer Sky"
@@ -377,6 +425,9 @@
           {
             "id": 120872,
             "title": "XL / Tropical Dream",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XL",
               "color": "Tropical Dream"
@@ -565,7 +616,79 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 429
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 209
+          },
+          "variant_count": 17
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 939
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 17
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1249
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "variant_count": 17
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1000
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 400
+          },
+          "variant_count": 17
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 475
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 240
+          },
+          "variant_count": 17
+        }
+      ]
     }
   ]
 }

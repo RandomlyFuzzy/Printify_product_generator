@@ -35,6 +35,9 @@
           {
             "id": 104847,
             "title": "Whole Bean / 12oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "grind": "Whole Bean",
               "size": "12oz"
@@ -51,6 +54,9 @@
           {
             "id": 104848,
             "title": "Ground / 12oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "grind": "Ground",
               "size": "12oz"
@@ -107,7 +113,37 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 759
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 399
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2099
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 189
+          },
+          "variant_count": 2
+        }
+      ]
     }
   ]
 }

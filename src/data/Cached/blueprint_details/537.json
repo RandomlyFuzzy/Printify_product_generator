@@ -24,6 +24,9 @@
           {
             "id": 69368,
             "title": "Circle / One Size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "shape": "Circle",
               "size": "One Size"
@@ -46,6 +49,9 @@
           {
             "id": 69369,
             "title": "Oval / One Size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "shape": "Oval",
               "size": "One Size"
@@ -199,7 +205,122 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "AM",
+            "ES",
+            "AT",
+            "GG",
+            "BA",
+            "GR",
+            "MC",
+            "SK",
+            "TR",
+            "XK",
+            "CY",
+            "BY",
+            "AD",
+            "BG",
+            "DK",
+            "GE",
+            "NL",
+            "CH",
+            "CZ",
+            "BE",
+            "UA",
+            "FI",
+            "MK",
+            "AL",
+            "FO",
+            "DE",
+            "GL",
+            "IE",
+            "JE",
+            "AX",
+            "GI",
+            "IT",
+            "GP",
+            "HR",
+            "LT",
+            "MT",
+            "MD",
+            "NO",
+            "RO",
+            "ME",
+            "FR",
+            "LV",
+            "PT",
+            "BV",
+            "EE",
+            "HU",
+            "RE",
+            "SM",
+            "SI",
+            "IM",
+            "LU",
+            "PL",
+            "RS",
+            "SE",
+            "GB",
+            "VA",
+            "IS",
+            "LI"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 669
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 129
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 819
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 189
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 799
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 99
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1639
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 159
+          },
+          "variant_count": 2
+        }
+      ]
     }
   ]
 }

@@ -27,6 +27,9 @@
           {
             "id": 147845,
             "title": "Violet / Floral / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Violet / Floral",
               "size": "One size"
@@ -43,6 +46,9 @@
           {
             "id": 147846,
             "title": "Sunset Yellow / Polka Dots / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Sunset Yellow / Polka Dots",
               "size": "One size"
@@ -59,6 +65,9 @@
           {
             "id": 147847,
             "title": "Sherbet / Stripes / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Sherbet / Stripes",
               "size": "One size"
@@ -75,6 +84,9 @@
           {
             "id": 147848,
             "title": "Sage / Polka Dots / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Sage / Polka Dots",
               "size": "One size"
@@ -91,6 +103,9 @@
           {
             "id": 147849,
             "title": "Royal / Floral / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Royal / Floral",
               "size": "One size"
@@ -107,6 +122,9 @@
           {
             "id": 147850,
             "title": "Rose / Polka Dots / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Rose / Polka Dots",
               "size": "One size"
@@ -123,6 +141,9 @@
           {
             "id": 147851,
             "title": "Red / Leopard / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Red / Leopard",
               "size": "One size"
@@ -139,6 +160,9 @@
           {
             "id": 147852,
             "title": "Olive / Camo / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Olive / Camo",
               "size": "One size"
@@ -155,6 +179,9 @@
           {
             "id": 147853,
             "title": "Navy / Stripes / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Navy / Stripes",
               "size": "One size"
@@ -171,6 +198,9 @@
           {
             "id": 147854,
             "title": "Light Grey / Polka Dots / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Light Grey / Polka Dots",
               "size": "One size"
@@ -187,6 +217,9 @@
           {
             "id": 147855,
             "title": "Black / Leopard / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black / Leopard",
               "size": "One size"
@@ -203,6 +236,9 @@
           {
             "id": 147856,
             "title": "White / Floral / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White / Floral",
               "size": "One size"
@@ -219,6 +255,9 @@
           {
             "id": 147857,
             "title": "Vanilla / Longhorn / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Vanilla / Longhorn",
               "size": "One size"
@@ -235,6 +274,9 @@
           {
             "id": 147858,
             "title": "Lavender / Stripes / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Lavender / Stripes",
               "size": "One size"
@@ -251,6 +293,9 @@
           {
             "id": 147859,
             "title": "Jade / Daisy / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Jade / Daisy",
               "size": "One size"
@@ -267,6 +312,9 @@
           {
             "id": 147860,
             "title": "Dusty Pink / Floral / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Dusty Pink / Floral",
               "size": "One size"
@@ -283,6 +331,9 @@
           {
             "id": 147861,
             "title": "Chocolate / Fawn / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Chocolate / Fawn",
               "size": "One size"
@@ -299,6 +350,9 @@
           {
             "id": 147862,
             "title": "Cashmere Blue / Floral / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Cashmere Blue / Floral",
               "size": "One size"
@@ -315,6 +369,9 @@
           {
             "id": 147863,
             "title": "Khaki / Camo / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Khaki / Camo",
               "size": "One size"
@@ -512,7 +569,79 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 449
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 209
+          },
+          "variant_count": 20
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 489
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 239
+          },
+          "variant_count": 20
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1249
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "variant_count": 20
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 399
+          },
+          "variant_count": 20
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 939
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 20
+        }
+      ]
     }
   ]
 }

@@ -5,8 +5,9 @@
     "brand": "Generic brand",
     "model": "",
     "images": [
-      "https://images.printify.com/69286a7df08bb55160019733",
-      "https://images.printify.com/692875d597b7a507460e9b32"
+      "https://images.printify.com/69dcaa6759320d916c0e3e60",
+      "https://images.printify.com/69dcaa6bbb43443ca70d3970",
+      "https://images.printify.com/69dcaa6ae2171967420da100"
     ]
   },
   "print_providers": [
@@ -22,6 +23,9 @@
           {
             "id": 149515,
             "title": "11.5oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "11.5oz"
             },
@@ -91,7 +95,51 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 949
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 399
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2459
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1529
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1579
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1099
+          },
+          "variant_count": 1
+        }
+      ]
     }
   ]
 }

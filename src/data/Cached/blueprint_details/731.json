@@ -27,6 +27,9 @@
           {
             "id": 79434,
             "title": "Black / 15\u0022 x 16.5\u0022",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "15\u0022 x 16.5\u0022"
@@ -49,6 +52,9 @@
           {
             "id": 79435,
             "title": "Classic Red / 15\u0022 x 16.5\u0022",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Classic Red",
               "size": "15\u0022 x 16.5\u0022"
@@ -71,6 +77,9 @@
           {
             "id": 79436,
             "title": "French Navy / 15\u0022 x 16.5\u0022",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "French Navy",
               "size": "15\u0022 x 16.5\u0022"
@@ -263,7 +272,149 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "DE"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 389
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 119
+          },
+          "variant_count": 3
+        },
+        {
+          "countries": [
+            "IE",
+            "GB",
+            "DK",
+            "LV",
+            "FI",
+            "EE",
+            "IS",
+            "LI",
+            "CH",
+            "LT",
+            "SE",
+            "NO"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 699
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 119
+          },
+          "variant_count": 3
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2249
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 659
+          },
+          "variant_count": 3
+        },
+        {
+          "countries": [
+            "AX",
+            "AL",
+            "AD",
+            "AM",
+            "AT",
+            "BY",
+            "BE",
+            "BA",
+            "BV",
+            "BG",
+            "HR",
+            "CY",
+            "CZ",
+            "FO",
+            "FR",
+            "GE",
+            "GI",
+            "GR",
+            "GL",
+            "GP",
+            "GG",
+            "VA",
+            "HU",
+            "IM",
+            "IT",
+            "JE",
+            "LU",
+            "MK",
+            "MT",
+            "MD",
+            "MC",
+            "ME",
+            "NL",
+            "PL",
+            "PT",
+            "RE",
+            "RO",
+            "SM",
+            "RS",
+            "SK",
+            "SI",
+            "ES",
+            "TR",
+            "UA",
+            "XK"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 549
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 119
+          },
+          "variant_count": 3
+        },
+        {
+          "countries": [
+            "CA",
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1249
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 659
+          },
+          "variant_count": 3
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 859
+          },
+          "variant_count": 3
+        }
+      ]
     }
   ]
 }

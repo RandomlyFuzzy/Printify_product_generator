@@ -5,13 +5,10 @@
     "brand": "Rabbit Skins",
     "model": "1013",
     "images": [
-      "https://images.printify.com/69b3d94d78073dc4fc05c6c3",
-      "https://images.printify.com/69b41f0177535a71bd0a6240",
-      "https://images.printify.com/69b41f4f353b9af787001b52",
-      "https://images.printify.com/69b41f060f5895ca16000850",
-      "https://images.printify.com/69b41f18af79fa16b804d2d2",
-      "https://images.printify.com/69b41f7197ef439eea02bbc0",
-      "https://images.printify.com/69b41f0d87ef63b6c40d25d3"
+      "https://images.printify.com/69d7754ac555a3bb4106b3c5",
+      "https://images.printify.com/69dddfdd0fd70d94ea016c42",
+      "https://images.printify.com/69d77549a6fe83042603c481",
+      "https://images.printify.com/69dde0de52fc980fa6096522"
     ]
   },
   "print_providers": [
@@ -27,6 +24,9 @@
           {
             "id": 244791,
             "title": "Ballerina / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Ballerina",
               "size": "One size"
@@ -49,6 +49,9 @@
           {
             "id": 244792,
             "title": "Black / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "One size"
@@ -71,6 +74,9 @@
           {
             "id": 244793,
             "title": "Key Lime / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Key Lime",
               "size": "One size"
@@ -93,6 +99,9 @@
           {
             "id": 244794,
             "title": "Navy / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Navy",
               "size": "One size"
@@ -115,6 +124,9 @@
           {
             "id": 244795,
             "title": "White / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White",
               "size": "One size"
@@ -172,6 +184,26 @@
             ],
             "first_item": {
               "currency": "USD",
+              "cost": 939
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              244791,
+              244792,
+              244793,
+              244794,
+              244795
+            ],
+            "first_item": {
+              "currency": "USD",
               "cost": 569
             },
             "additional_items": {
@@ -201,29 +233,67 @@
             "countries": [
               "REST_OF_THE_WORLD"
             ]
-          },
-          {
-            "variant_ids": [
-              244791,
-              244792,
-              244793,
-              244794,
-              244795
-            ],
-            "first_item": {
-              "currency": "USD",
-              "cost": 939
-            },
-            "additional_items": {
-              "currency": "USD",
-              "cost": 439
-            },
-            "countries": [
-              "CA"
-            ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 449
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 209
+          },
+          "variant_count": 5
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 939
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 5
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 569
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 249
+          },
+          "variant_count": 5
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 399
+          },
+          "variant_count": 5
+        }
+      ]
     }
   ]
 }

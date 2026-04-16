@@ -19,19 +19,22 @@
   "print_providers": [
     {
       "provider": {
-        "id": 39,
-        "title": "SwiftPOD"
+        "id": 99,
+        "title": "Printify Choice"
       },
       "variants": {
-        "id": 39,
-        "title": "SwiftPOD",
+        "id": 99,
+        "title": "Printify Choice",
         "variants": [
           {
             "id": 72142,
             "title": "Navy / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
-              "color": "Navy",
-              "size": "S"
+              "size": "S",
+              "color": "Navy"
             },
             "placeholders": [
               {
@@ -51,9 +54,12 @@
           {
             "id": 72143,
             "title": "Red / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
-              "color": "Red",
-              "size": "S"
+              "size": "S",
+              "color": "Red"
             },
             "placeholders": [
               {
@@ -73,9 +79,12 @@
           {
             "id": 72144,
             "title": "Navy / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
-              "color": "Navy",
-              "size": "M"
+              "size": "M",
+              "color": "Navy"
             },
             "placeholders": [
               {
@@ -95,9 +104,12 @@
           {
             "id": 72145,
             "title": "Red / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
-              "color": "Red",
-              "size": "M"
+              "size": "M",
+              "color": "Red"
             },
             "placeholders": [
               {
@@ -117,9 +129,12 @@
           {
             "id": 72146,
             "title": "Navy / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
-              "color": "Navy",
-              "size": "L"
+              "size": "L",
+              "color": "Navy"
             },
             "placeholders": [
               {
@@ -139,9 +154,12 @@
           {
             "id": 72147,
             "title": "Red / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
-              "color": "Red",
-              "size": "L"
+              "size": "L",
+              "color": "Red"
             },
             "placeholders": [
               {
@@ -161,9 +179,12 @@
           {
             "id": 72148,
             "title": "Navy / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
-              "color": "Navy",
-              "size": "XL"
+              "size": "XL",
+              "color": "Navy"
             },
             "placeholders": [
               {
@@ -183,9 +204,12 @@
           {
             "id": 72149,
             "title": "Red / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
-              "color": "Red",
-              "size": "XL"
+              "size": "XL",
+              "color": "Red"
             },
             "placeholders": [
               {
@@ -205,6 +229,9 @@
           {
             "id": 72223,
             "title": "Navy / 2XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Navy",
               "size": "2XL"
@@ -227,6 +254,476 @@
           {
             "id": 72224,
             "title": "Red / 2XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Red",
+              "size": "2XL"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 4800,
+                "width": 4200
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 4800,
+                "width": 4200
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              72142,
+              72143,
+              72144,
+              72145,
+              72146,
+              72147,
+              72148,
+              72149,
+              72223,
+              72224
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 209
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              72142,
+              72143,
+              72144,
+              72145,
+              72146,
+              72147,
+              72148,
+              72149,
+              72223,
+              72224
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1249
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              72142,
+              72143,
+              72144,
+              72145,
+              72146,
+              72147,
+              72148,
+              72149,
+              72223,
+              72224
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 939
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              72142,
+              72143,
+              72144,
+              72145,
+              72146,
+              72147,
+              72148,
+              72149,
+              72223,
+              72224
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 475
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 240
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              72142,
+              72143,
+              72144,
+              72145,
+              72146,
+              72147,
+              72148,
+              72149,
+              72223,
+              72224
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1000
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 400
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 399
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 209
+          },
+          "variant_count": 10
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1249
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "variant_count": 10
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 939
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 10
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 475
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 240
+          },
+          "variant_count": 10
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1000
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 400
+          },
+          "variant_count": 10
+        }
+      ]
+    },
+    {
+      "provider": {
+        "id": 39,
+        "title": "SwiftPOD"
+      },
+      "variants": {
+        "id": 39,
+        "title": "SwiftPOD",
+        "variants": [
+          {
+            "id": 72142,
+            "title": "Navy / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Navy",
+              "size": "S"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3955,
+                "width": 3461
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 3955,
+                "width": 3461
+              }
+            ]
+          },
+          {
+            "id": 72143,
+            "title": "Red / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Red",
+              "size": "S"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3955,
+                "width": 3461
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 3955,
+                "width": 3461
+              }
+            ]
+          },
+          {
+            "id": 72144,
+            "title": "Navy / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Navy",
+              "size": "M"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 4387,
+                "width": 3839
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 4387,
+                "width": 3839
+              }
+            ]
+          },
+          {
+            "id": 72145,
+            "title": "Red / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Red",
+              "size": "M"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 4387,
+                "width": 3839
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 4387,
+                "width": 3839
+              }
+            ]
+          },
+          {
+            "id": 72146,
+            "title": "Navy / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Navy",
+              "size": "L"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 4800,
+                "width": 4200
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 4800,
+                "width": 4200
+              }
+            ]
+          },
+          {
+            "id": 72147,
+            "title": "Red / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Red",
+              "size": "L"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 4800,
+                "width": 4200
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 4800,
+                "width": 4200
+              }
+            ]
+          },
+          {
+            "id": 72148,
+            "title": "Navy / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Navy",
+              "size": "XL"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 4800,
+                "width": 4200
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 4800,
+                "width": 4200
+              }
+            ]
+          },
+          {
+            "id": 72149,
+            "title": "Red / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Red",
+              "size": "XL"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 4800,
+                "width": 4200
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 4800,
+                "width": 4200
+              }
+            ]
+          },
+          {
+            "id": 72223,
+            "title": "Navy / 2XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Navy",
+              "size": "2XL"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 4800,
+                "width": 4200
+              },
+              {
+                "position": "back",
+                "decoration_method": "dtg",
+                "height": 4800,
+                "width": 4200
+              }
+            ]
+          },
+          {
+            "id": 72224,
+            "title": "Red / 2XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Red",
               "size": "2XL"
@@ -380,372 +877,79 @@
             ]
           }
         ]
-      }
-    },
-    {
-      "provider": {
-        "id": 99,
-        "title": "Printify Choice"
       },
-      "variants": {
-        "id": 99,
-        "title": "Printify Choice",
-        "variants": [
-          {
-            "id": 72142,
-            "title": "Navy / S",
-            "options": {
-              "size": "S",
-              "color": "Navy"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 3955,
-                "width": 3461
-              },
-              {
-                "position": "back",
-                "decoration_method": "dtg",
-                "height": 3955,
-                "width": 3461
-              }
-            ]
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 429
           },
-          {
-            "id": 72143,
-            "title": "Red / S",
-            "options": {
-              "size": "S",
-              "color": "Red"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 3955,
-                "width": 3461
-              },
-              {
-                "position": "back",
-                "decoration_method": "dtg",
-                "height": 3955,
-                "width": 3461
-              }
-            ]
+          "additional_items": {
+            "currency": "USD",
+            "cost": 209
           },
-          {
-            "id": 72144,
-            "title": "Navy / M",
-            "options": {
-              "size": "M",
-              "color": "Navy"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 4387,
-                "width": 3839
-              },
-              {
-                "position": "back",
-                "decoration_method": "dtg",
-                "height": 4387,
-                "width": 3839
-              }
-            ]
-          },
-          {
-            "id": 72145,
-            "title": "Red / M",
-            "options": {
-              "size": "M",
-              "color": "Red"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 4387,
-                "width": 3839
-              },
-              {
-                "position": "back",
-                "decoration_method": "dtg",
-                "height": 4387,
-                "width": 3839
-              }
-            ]
-          },
-          {
-            "id": 72146,
-            "title": "Navy / L",
-            "options": {
-              "size": "L",
-              "color": "Navy"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 4800,
-                "width": 4200
-              },
-              {
-                "position": "back",
-                "decoration_method": "dtg",
-                "height": 4800,
-                "width": 4200
-              }
-            ]
-          },
-          {
-            "id": 72147,
-            "title": "Red / L",
-            "options": {
-              "size": "L",
-              "color": "Red"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 4800,
-                "width": 4200
-              },
-              {
-                "position": "back",
-                "decoration_method": "dtg",
-                "height": 4800,
-                "width": 4200
-              }
-            ]
-          },
-          {
-            "id": 72148,
-            "title": "Navy / XL",
-            "options": {
-              "size": "XL",
-              "color": "Navy"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 4800,
-                "width": 4200
-              },
-              {
-                "position": "back",
-                "decoration_method": "dtg",
-                "height": 4800,
-                "width": 4200
-              }
-            ]
-          },
-          {
-            "id": 72149,
-            "title": "Red / XL",
-            "options": {
-              "size": "XL",
-              "color": "Red"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 4800,
-                "width": 4200
-              },
-              {
-                "position": "back",
-                "decoration_method": "dtg",
-                "height": 4800,
-                "width": 4200
-              }
-            ]
-          },
-          {
-            "id": 72223,
-            "title": "Navy / 2XL",
-            "options": {
-              "color": "Navy",
-              "size": "2XL"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 4800,
-                "width": 4200
-              },
-              {
-                "position": "back",
-                "decoration_method": "dtg",
-                "height": 4800,
-                "width": 4200
-              }
-            ]
-          },
-          {
-            "id": 72224,
-            "title": "Red / 2XL",
-            "options": {
-              "color": "Red",
-              "size": "2XL"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 4800,
-                "width": 4200
-              },
-              {
-                "position": "back",
-                "decoration_method": "dtg",
-                "height": 4800,
-                "width": 4200
-              }
-            ]
-          }
-        ]
-      },
-      "shipping": {
-        "handling_time": {
-          "value": 10,
-          "unit": "day"
+          "variant_count": 10
         },
-        "profiles": [
-          {
-            "variant_ids": [
-              72142,
-              72143,
-              72144,
-              72145,
-              72146,
-              72147,
-              72148,
-              72149,
-              72223,
-              72224
-            ],
-            "first_item": {
-              "currency": "USD",
-              "cost": 399
-            },
-            "additional_items": {
-              "currency": "USD",
-              "cost": 209
-            },
-            "countries": [
-              "US"
-            ]
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 475
           },
-          {
-            "variant_ids": [
-              72142,
-              72143,
-              72144,
-              72145,
-              72146,
-              72147,
-              72148,
-              72149,
-              72223,
-              72224
-            ],
-            "first_item": {
-              "currency": "USD",
-              "cost": 939
-            },
-            "additional_items": {
-              "currency": "USD",
-              "cost": 439
-            },
-            "countries": [
-              "CA"
-            ]
+          "additional_items": {
+            "currency": "USD",
+            "cost": 240
           },
-          {
-            "variant_ids": [
-              72142,
-              72143,
-              72144,
-              72145,
-              72146,
-              72147,
-              72148,
-              72149,
-              72223,
-              72224
-            ],
-            "first_item": {
-              "currency": "USD",
-              "cost": 1000
-            },
-            "additional_items": {
-              "currency": "USD",
-              "cost": 400
-            },
-            "countries": [
-              "REST_OF_THE_WORLD"
-            ]
+          "variant_count": 10
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1249
           },
-          {
-            "variant_ids": [
-              72142,
-              72143,
-              72144,
-              72145,
-              72146,
-              72147,
-              72148,
-              72149,
-              72223,
-              72224
-            ],
-            "first_item": {
-              "currency": "USD",
-              "cost": 475
-            },
-            "additional_items": {
-              "currency": "USD",
-              "cost": 240
-            },
-            "countries": [
-              "US"
-            ]
+          "additional_items": {
+            "currency": "USD",
+            "cost": 499
           },
-          {
-            "variant_ids": [
-              72142,
-              72143,
-              72144,
-              72145,
-              72146,
-              72147,
-              72148,
-              72149,
-              72223,
-              72224
-            ],
-            "first_item": {
-              "currency": "USD",
-              "cost": 1249
-            },
-            "additional_items": {
-              "currency": "USD",
-              "cost": 499
-            },
-            "countries": [
-              "AU"
-            ]
-          }
-        ]
-      }
+          "variant_count": 10
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 939
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 10
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1000
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 400
+          },
+          "variant_count": 10
+        }
+      ]
     }
   ]
 }

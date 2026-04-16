@@ -28,6 +28,9 @@
           {
             "id": 109764,
             "title": "White jar \u002B lid / NET WT 12.35 OZ (350g) / Unflavored",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White jar \u002B lid",
               "size": "NET WT 12.35 OZ (350g)",
@@ -67,7 +70,23 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 799
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 399
+          },
+          "variant_count": 1
+        }
+      ]
     }
   ]
 }

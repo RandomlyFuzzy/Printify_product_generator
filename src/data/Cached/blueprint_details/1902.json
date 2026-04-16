@@ -30,6 +30,9 @@
           {
             "id": 119162,
             "title": "Black / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "S"
@@ -70,6 +73,9 @@
           {
             "id": 119163,
             "title": "Charcoal Heather / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Charcoal Heather",
               "size": "S"
@@ -110,6 +116,9 @@
           {
             "id": 119164,
             "title": "Collegiate Navy / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Collegiate Navy",
               "size": "S"
@@ -150,6 +159,9 @@
           {
             "id": 119165,
             "title": "Black / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "M"
@@ -190,6 +202,9 @@
           {
             "id": 119166,
             "title": "Charcoal Heather / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Charcoal Heather",
               "size": "M"
@@ -230,6 +245,9 @@
           {
             "id": 119167,
             "title": "Collegiate Navy / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Collegiate Navy",
               "size": "M"
@@ -270,6 +288,9 @@
           {
             "id": 119168,
             "title": "Black / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "L"
@@ -310,6 +331,9 @@
           {
             "id": 119169,
             "title": "Charcoal Heather / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Charcoal Heather",
               "size": "L"
@@ -350,6 +374,9 @@
           {
             "id": 119170,
             "title": "Collegiate Navy / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Collegiate Navy",
               "size": "L"
@@ -390,6 +417,9 @@
           {
             "id": 119171,
             "title": "Black / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "XL"
@@ -430,6 +460,9 @@
           {
             "id": 119172,
             "title": "Charcoal Heather / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Charcoal Heather",
               "size": "XL"
@@ -470,6 +503,9 @@
           {
             "id": 119173,
             "title": "Collegiate Navy / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Collegiate Navy",
               "size": "XL"
@@ -510,6 +546,9 @@
           {
             "id": 119174,
             "title": "Black / 2XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "2XL"
@@ -550,6 +589,9 @@
           {
             "id": 119175,
             "title": "Charcoal Heather / 2XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Charcoal Heather",
               "size": "2XL"
@@ -590,6 +632,9 @@
           {
             "id": 119176,
             "title": "Collegiate Navy / 2XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Collegiate Navy",
               "size": "2XL"
@@ -696,7 +741,37 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 769
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 209
+          },
+          "variant_count": 15
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 849
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 209
+          },
+          "variant_count": 15
+        }
+      ]
     },
     {
       "provider": {
@@ -710,6 +785,9 @@
           {
             "id": 119162,
             "title": "Black / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "S",
               "color": "Black"
@@ -750,6 +828,9 @@
           {
             "id": 119163,
             "title": "Charcoal Heather / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "S",
               "color": "Charcoal Heather"
@@ -790,6 +871,9 @@
           {
             "id": 119164,
             "title": "Collegiate Navy / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "S",
               "color": "Collegiate Navy"
@@ -830,6 +914,9 @@
           {
             "id": 119165,
             "title": "Black / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "M",
               "color": "Black"
@@ -870,6 +957,9 @@
           {
             "id": 119166,
             "title": "Charcoal Heather / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "M",
               "color": "Charcoal Heather"
@@ -910,6 +1000,9 @@
           {
             "id": 119167,
             "title": "Collegiate Navy / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "M",
               "color": "Collegiate Navy"
@@ -950,6 +1043,9 @@
           {
             "id": 119168,
             "title": "Black / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "L",
               "color": "Black"
@@ -990,6 +1086,9 @@
           {
             "id": 119169,
             "title": "Charcoal Heather / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "L",
               "color": "Charcoal Heather"
@@ -1030,6 +1129,9 @@
           {
             "id": 119170,
             "title": "Collegiate Navy / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "L",
               "color": "Collegiate Navy"
@@ -1070,6 +1172,9 @@
           {
             "id": 119171,
             "title": "Black / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XL",
               "color": "Black"
@@ -1110,6 +1215,9 @@
           {
             "id": 119172,
             "title": "Charcoal Heather / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XL",
               "color": "Charcoal Heather"
@@ -1150,6 +1258,9 @@
           {
             "id": 119173,
             "title": "Collegiate Navy / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XL",
               "color": "Collegiate Navy"
@@ -1190,6 +1301,9 @@
           {
             "id": 119174,
             "title": "Black / 2XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2XL",
               "color": "Black"
@@ -1230,6 +1344,9 @@
           {
             "id": 119175,
             "title": "Charcoal Heather / 2XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2XL",
               "color": "Charcoal Heather"
@@ -1270,6 +1387,9 @@
           {
             "id": 119176,
             "title": "Collegiate Navy / 2XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2XL",
               "color": "Collegiate Navy"
@@ -1376,7 +1496,37 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 739
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 209
+          },
+          "variant_count": 15
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 849
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 209
+          },
+          "variant_count": 15
+        }
+      ]
     }
   ]
 }

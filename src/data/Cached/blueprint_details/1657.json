@@ -26,6 +26,9 @@
           {
             "id": 114648,
             "title": "Vanilla / 11oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "scent": "Vanilla",
               "size": "11oz"
@@ -42,6 +45,9 @@
           {
             "id": 114649,
             "title": "Mango Coconut / 11oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "scent": "Mango Coconut",
               "size": "11oz"
@@ -58,6 +64,9 @@
           {
             "id": 114650,
             "title": "Fraser Fir / 11oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "scent": "Fraser Fir",
               "size": "11oz"
@@ -74,6 +83,9 @@
           {
             "id": 114651,
             "title": "Cinnamon Chai / 11oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "scent": "Cinnamon Chai",
               "size": "11oz"
@@ -90,6 +102,9 @@
           {
             "id": 114652,
             "title": "Lavender / 11oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "scent": "Lavender",
               "size": "11oz"
@@ -106,6 +121,9 @@
           {
             "id": 114653,
             "title": "Blackberry Vanilla / 11oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "scent": "Blackberry Vanilla",
               "size": "11oz"
@@ -122,6 +140,9 @@
           {
             "id": 114654,
             "title": "Oakmoss and Amber / 11oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "scent": "Oakmoss and Amber",
               "size": "11oz"
@@ -138,6 +159,9 @@
           {
             "id": 114655,
             "title": "Sea Minerals / 11oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "scent": "Sea Minerals",
               "size": "11oz"
@@ -154,6 +178,9 @@
           {
             "id": 114656,
             "title": "Fragrance Free / 11oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "scent": "Fragrance Free",
               "size": "11oz"
@@ -248,7 +275,51 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 899
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 399
+          },
+          "variant_count": 9
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1599
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 9
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1789
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 449
+          },
+          "variant_count": 9
+        }
+      ]
     }
   ]
 }

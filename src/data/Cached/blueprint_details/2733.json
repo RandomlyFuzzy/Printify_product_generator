@@ -24,6 +24,9 @@
           {
             "id": 149010,
             "title": "8\u0027\u0027 x 8\u0027\u0027 / Glossy",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "8\u0027\u0027 x 8\u0027\u0027",
               "paper": "Glossy"
@@ -160,6 +163,9 @@
           {
             "id": 149011,
             "title": "8\u0027\u0027 x 8\u0027\u0027 / Matte",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "8\u0027\u0027 x 8\u0027\u0027",
               "paper": "Matte"
@@ -356,7 +362,54 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 529
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 199
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "AU",
+            "NZ",
+            "CA",
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1399
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 399
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 599
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 240
+          },
+          "variant_count": 2
+        }
+      ]
     }
   ]
 }

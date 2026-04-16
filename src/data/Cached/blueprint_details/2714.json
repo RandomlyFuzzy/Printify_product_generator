@@ -27,6 +27,9 @@
           {
             "id": 148378,
             "title": "30\u0022 \u00D7 40\u0022 / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "30\u0022 \u00D7 40\u0022",
               "color": "Black"
@@ -43,6 +46,9 @@
           {
             "id": 148379,
             "title": "30\u0022 \u00D7 40\u0022 / Light Blue",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "30\u0022 \u00D7 40\u0022",
               "color": "Light Blue"
@@ -59,6 +65,9 @@
           {
             "id": 148380,
             "title": "30\u0022 \u00D7 40\u0022 / Pink",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "30\u0022 \u00D7 40\u0022",
               "color": "Pink"
@@ -75,6 +84,9 @@
           {
             "id": 148381,
             "title": "30\u0022 \u00D7 40\u0022 / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "30\u0022 \u00D7 40\u0022",
               "color": "White"
@@ -154,7 +166,51 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1379
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 459
+          },
+          "variant_count": 4
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 709
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 399
+          },
+          "variant_count": 4
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1499
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 4
+        }
+      ]
     }
   ]
 }

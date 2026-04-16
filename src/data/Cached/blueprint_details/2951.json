@@ -26,6 +26,9 @@
           {
             "id": 164438,
             "title": "18K Gold PVD coating / One Size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "18K Gold PVD coating",
               "size": "One Size"
@@ -42,6 +45,9 @@
           {
             "id": 164439,
             "title": "18K Rose Gold PVD coating / One Size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "18K Rose Gold PVD coating",
               "size": "One Size"
@@ -58,6 +64,9 @@
           {
             "id": 164440,
             "title": "Stainless Steel / One Size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Stainless Steel",
               "size": "One Size"
@@ -105,6 +114,24 @@
             ],
             "first_item": {
               "currency": "USD",
+              "cost": 939
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              164438,
+              164439,
+              164440
+            ],
+            "first_item": {
+              "currency": "USD",
               "cost": 569
             },
             "additional_items": {
@@ -132,27 +159,67 @@
             "countries": [
               "REST_OF_THE_WORLD"
             ]
-          },
-          {
-            "variant_ids": [
-              164438,
-              164439,
-              164440
-            ],
-            "first_item": {
-              "currency": "USD",
-              "cost": 939
-            },
-            "additional_items": {
-              "currency": "USD",
-              "cost": 439
-            },
-            "countries": [
-              "CA"
-            ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 449
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 209
+          },
+          "variant_count": 3
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 939
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 3
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 569
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 249
+          },
+          "variant_count": 3
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 399
+          },
+          "variant_count": 3
+        }
+      ]
     }
   ]
 }

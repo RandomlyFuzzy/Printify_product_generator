@@ -25,6 +25,9 @@
           {
             "id": 63289,
             "title": "One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size"
             },
@@ -100,7 +103,51 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2279
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 399
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 509
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 75
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1869
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 219
+          },
+          "variant_count": 1
+        }
+      ]
     }
   ]
 }

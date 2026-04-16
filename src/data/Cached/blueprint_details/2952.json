@@ -27,6 +27,9 @@
           {
             "id": 164441,
             "title": "9.5\u0022 x 20.8\u0022",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "9.5\u0022 x 20.8\u0022"
             },
@@ -60,6 +63,9 @@
           {
             "id": 164442,
             "title": "8\u0022 x 19\u0022",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "8\u0022 x 19\u0022"
             },
@@ -157,7 +163,58 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "DK",
+            "NL",
+            "US",
+            "CA",
+            "BR",
+            "MX",
+            "NZ",
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 840
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 840
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1079
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1079
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "CN"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "variant_count": 2
+        }
+      ]
     }
   ]
 }

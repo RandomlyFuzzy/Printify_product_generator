@@ -28,6 +28,9 @@
           {
             "id": 149563,
             "title": "Black / EU 38",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "EU 38"
@@ -86,6 +89,9 @@
           {
             "id": 149564,
             "title": "Black / EU 39",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "EU 39"
@@ -144,6 +150,9 @@
           {
             "id": 149565,
             "title": "Black / EU 40",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "EU 40"
@@ -202,6 +211,9 @@
           {
             "id": 149566,
             "title": "Black / EU 41",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "EU 41"
@@ -260,6 +272,9 @@
           {
             "id": 149567,
             "title": "Black / EU 42",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "EU 42"
@@ -318,6 +333,9 @@
           {
             "id": 149568,
             "title": "Black / EU 43",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "EU 43"
@@ -376,6 +394,9 @@
           {
             "id": 149569,
             "title": "Black / EU 44",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "EU 44"
@@ -434,6 +455,9 @@
           {
             "id": 149570,
             "title": "Black / EU 45",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "EU 45"
@@ -492,6 +516,9 @@
           {
             "id": 149571,
             "title": "Black / EU 46",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "EU 46"
@@ -550,6 +577,9 @@
           {
             "id": 149572,
             "title": "Black / EU 47",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "EU 47"
@@ -608,6 +638,9 @@
           {
             "id": 149573,
             "title": "Black / EU 48",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "EU 48"
@@ -666,6 +699,9 @@
           {
             "id": 149606,
             "title": "White / EU 38",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White",
               "size": "EU 38"
@@ -724,6 +760,9 @@
           {
             "id": 149607,
             "title": "White / EU 39",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White",
               "size": "EU 39"
@@ -782,6 +821,9 @@
           {
             "id": 149608,
             "title": "White / EU 40",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White",
               "size": "EU 40"
@@ -840,6 +882,9 @@
           {
             "id": 149609,
             "title": "White / EU 41",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White",
               "size": "EU 41"
@@ -898,6 +943,9 @@
           {
             "id": 149610,
             "title": "White / EU 42",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White",
               "size": "EU 42"
@@ -956,6 +1004,9 @@
           {
             "id": 149611,
             "title": "White / EU 43",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White",
               "size": "EU 43"
@@ -1014,6 +1065,9 @@
           {
             "id": 149612,
             "title": "White / EU 44",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White",
               "size": "EU 44"
@@ -1072,6 +1126,9 @@
           {
             "id": 149613,
             "title": "White / EU 45",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White",
               "size": "EU 45"
@@ -1130,6 +1187,9 @@
           {
             "id": 149614,
             "title": "White / EU 46",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White",
               "size": "EU 46"
@@ -1188,6 +1248,9 @@
           {
             "id": 149615,
             "title": "White / EU 47",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White",
               "size": "EU 47"
@@ -1246,6 +1309,9 @@
           {
             "id": 149616,
             "title": "White / EU 48",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White",
               "size": "EU 48"
@@ -1480,7 +1546,110 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "REST_OF_THE_WORLD",
+            "CA",
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1729
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1729
+          },
+          "variant_count": 22
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1799
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1549
+          },
+          "variant_count": 22
+        },
+        {
+          "countries": [
+            "AX",
+            "AL",
+            "AD",
+            "AM",
+            "AT",
+            "BY",
+            "BE",
+            "BA",
+            "BV",
+            "BG",
+            "HR",
+            "CY",
+            "CZ",
+            "DK",
+            "EE",
+            "FO",
+            "FI",
+            "FR",
+            "GE",
+            "DE",
+            "GI",
+            "GR",
+            "GL",
+            "GP",
+            "GG",
+            "VA",
+            "HU",
+            "IS",
+            "IE",
+            "IM",
+            "IT",
+            "JE",
+            "LV",
+            "LI",
+            "LT",
+            "LU",
+            "MK",
+            "MT",
+            "MD",
+            "MC",
+            "ME",
+            "NL",
+            "NO",
+            "PL",
+            "PT",
+            "RE",
+            "RO",
+            "SM",
+            "RS",
+            "SK",
+            "SI",
+            "ES",
+            "SE",
+            "CH",
+            "TR",
+            "UA",
+            "GB",
+            "XK"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1359
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1359
+          },
+          "variant_count": 22
+        }
+      ]
     }
   ]
 }

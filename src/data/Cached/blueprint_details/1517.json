@@ -59,6 +59,9 @@
           {
             "id": 109155,
             "title": "32oz / Dark Purple",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "32oz",
               "color": "Dark Purple"
@@ -81,6 +84,9 @@
           {
             "id": 109156,
             "title": "32oz / Olive Green",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "32oz",
               "color": "Olive Green"
@@ -103,6 +109,9 @@
           {
             "id": 109157,
             "title": "32oz / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "32oz",
               "color": "Black"
@@ -125,6 +134,9 @@
           {
             "id": 109158,
             "title": "32oz / Coral",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "32oz",
               "color": "Coral"
@@ -147,6 +159,9 @@
           {
             "id": 109159,
             "title": "32oz / Gray",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "32oz",
               "color": "Gray"
@@ -169,6 +184,9 @@
           {
             "id": 109160,
             "title": "32oz / Green",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "32oz",
               "color": "Green"
@@ -191,6 +209,9 @@
           {
             "id": 109161,
             "title": "32oz / Light Blue",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "32oz",
               "color": "Light Blue"
@@ -213,6 +234,9 @@
           {
             "id": 109162,
             "title": "32oz / Light Purple",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "32oz",
               "color": "Light Purple"
@@ -235,6 +259,9 @@
           {
             "id": 109163,
             "title": "32oz / Maroon",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "32oz",
               "color": "Maroon"
@@ -257,6 +284,9 @@
           {
             "id": 109164,
             "title": "32oz / Navy",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "32oz",
               "color": "Navy"
@@ -279,6 +309,9 @@
           {
             "id": 109165,
             "title": "32oz / Orange",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "32oz",
               "color": "Orange"
@@ -301,6 +334,9 @@
           {
             "id": 109166,
             "title": "32oz / Pink",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "32oz",
               "color": "Pink"
@@ -323,6 +359,9 @@
           {
             "id": 109167,
             "title": "32oz / Red",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "32oz",
               "color": "Red"
@@ -345,6 +384,9 @@
           {
             "id": 109168,
             "title": "32oz / Royal",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "32oz",
               "color": "Royal"
@@ -367,6 +409,9 @@
           {
             "id": 109169,
             "title": "32oz / Teal",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "32oz",
               "color": "Teal"
@@ -389,6 +434,9 @@
           {
             "id": 109170,
             "title": "32oz / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "32oz",
               "color": "White"
@@ -411,6 +459,9 @@
           {
             "id": 109171,
             "title": "32oz / Yellow",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "32oz",
               "color": "Yellow"
@@ -567,7 +618,65 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1469
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 659
+          },
+          "variant_count": 17
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 979
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 17
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2199
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "variant_count": 17
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 699
+          },
+          "variant_count": 17
+        }
+      ]
     }
   ]
 }

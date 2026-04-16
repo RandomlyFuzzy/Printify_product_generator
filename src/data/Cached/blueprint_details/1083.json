@@ -26,6 +26,9 @@
           {
             "id": 81470,
             "title": "60\u0022 \u00D7 60\u0022",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "60\u0022 \u00D7 60\u0022"
             },
@@ -80,7 +83,38 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 4499
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 2499
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "CA",
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 3699
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1999
+          },
+          "variant_count": 1
+        }
+      ]
     }
   ]
 }

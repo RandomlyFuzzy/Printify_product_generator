@@ -26,6 +26,9 @@
           {
             "id": 244987,
             "title": "20.5\u0022 x 10.5\u0022 / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "20.5\u0022 x 10.5\u0022",
               "color": "Black"
@@ -48,6 +51,9 @@
           {
             "id": 244988,
             "title": "20.5\u0022 x 10.5\u0022 / Black Camo",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "20.5\u0022 x 10.5\u0022",
               "color": "Black Camo"
@@ -70,6 +76,9 @@
           {
             "id": 244989,
             "title": "20.5\u0022 x 10.5\u0022 / Black Cheetah",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "20.5\u0022 x 10.5\u0022",
               "color": "Black Cheetah"
@@ -92,6 +101,9 @@
           {
             "id": 244990,
             "title": "20.5\u0022 x 10.5\u0022 / Black / Checker Strap",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "20.5\u0022 x 10.5\u0022",
               "color": "Black / Checker Strap"
@@ -114,6 +126,9 @@
           {
             "id": 244991,
             "title": "20.5\u0022 x 10.5\u0022 / White Camo",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "20.5\u0022 x 10.5\u0022",
               "color": "White Camo"
@@ -222,7 +237,65 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2199
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "variant_count": 5
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2019
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 709
+          },
+          "variant_count": 5
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 929
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 5
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2039
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 739
+          },
+          "variant_count": 5
+        }
+      ]
     }
   ]
 }

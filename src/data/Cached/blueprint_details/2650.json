@@ -26,6 +26,9 @@
           {
             "id": 147682,
             "title": "50\u0022 \u00D7 60\u0022 / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "50\u0022 \u00D7 60\u0022",
               "color": "Black"
@@ -48,6 +51,9 @@
           {
             "id": 147684,
             "title": "50\u0022 \u00D7 60\u0022 / Heather Grey",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "50\u0022 \u00D7 60\u0022",
               "color": "Heather Grey"
@@ -76,7 +82,10 @@
         },
         "profiles": [
           {
-            "variant_ids": [],
+            "variant_ids": [
+              147682,
+              147684
+            ],
             "first_item": {
               "currency": "USD",
               "cost": 999
@@ -90,7 +99,10 @@
             ]
           },
           {
-            "variant_ids": [],
+            "variant_ids": [
+              147682,
+              147684
+            ],
             "first_item": {
               "currency": "USD",
               "cost": 1299
@@ -104,7 +116,10 @@
             ]
           },
           {
-            "variant_ids": [],
+            "variant_ids": [
+              147682,
+              147684
+            ],
             "first_item": {
               "currency": "USD",
               "cost": 2499
@@ -118,7 +133,51 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1299
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 759
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2499
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1129
+          },
+          "variant_count": 2
+        }
+      ]
     }
   ]
 }

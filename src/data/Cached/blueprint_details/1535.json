@@ -25,6 +25,9 @@
           {
             "id": 109722,
             "title": "Black jar \u002B lid / NET WT 10.58 OZ (300g) / Unflavored",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black jar \u002B lid",
               "size": "NET WT 10.58 OZ (300g)",
@@ -64,7 +67,23 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 649
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 399
+          },
+          "variant_count": 1
+        }
+      ]
     }
   ]
 }

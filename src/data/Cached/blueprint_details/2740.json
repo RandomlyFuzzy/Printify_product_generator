@@ -26,6 +26,9 @@
           {
             "id": 149406,
             "title": "White / 24oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White",
               "size": "24oz"
@@ -42,6 +45,9 @@
           {
             "id": 149407,
             "title": "Silver / 24oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Silver",
               "size": "24oz"
@@ -58,6 +64,9 @@
           {
             "id": 149408,
             "title": "Navy / 24oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Navy",
               "size": "24oz"
@@ -74,6 +83,9 @@
           {
             "id": 149410,
             "title": "Grey / 24oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Grey",
               "size": "24oz"
@@ -176,7 +188,65 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 759
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 299
+          },
+          "variant_count": 5
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1619
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 579
+          },
+          "variant_count": 5
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 979
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 5
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1249
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 489
+          },
+          "variant_count": 5
+        }
+      ]
     }
   ]
 }

@@ -24,6 +24,9 @@
           {
             "id": 88140,
             "title": "30 pcs (Horizontal)",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "30 pcs (Horizontal)"
             },
@@ -39,6 +42,9 @@
           {
             "id": 91357,
             "title": "30 pcs (Vertical)",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "30 pcs (Vertical)"
             },
@@ -115,7 +121,55 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 579
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 149
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "AU",
+            "CA",
+            "REST_OF_THE_WORLD",
+            "NZ",
+            "NO"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1399
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 399
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 629
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 299
+          },
+          "variant_count": 2
+        }
+      ]
     }
   ]
 }

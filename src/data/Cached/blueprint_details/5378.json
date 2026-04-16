@@ -26,6 +26,9 @@
           {
             "id": 244849,
             "title": "White / Black / Small",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White / Black",
               "size": "Small"
@@ -42,6 +45,9 @@
           {
             "id": 244850,
             "title": "White / Black / Medium",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White / Black",
               "size": "Medium"
@@ -58,6 +64,9 @@
           {
             "id": 244851,
             "title": "White / Black / Large",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White / Black",
               "size": "Large"
@@ -74,6 +83,9 @@
           {
             "id": 244852,
             "title": "White / Blue / Small",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White / Blue",
               "size": "Small"
@@ -90,6 +102,9 @@
           {
             "id": 244853,
             "title": "White / Blue / Medium",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White / Blue",
               "size": "Medium"
@@ -106,6 +121,9 @@
           {
             "id": 244854,
             "title": "White / Blue / Large",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White / Blue",
               "size": "Large"
@@ -122,6 +140,9 @@
           {
             "id": 244855,
             "title": "White / Red / Small",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White / Red",
               "size": "Small"
@@ -138,6 +159,9 @@
           {
             "id": 244856,
             "title": "White / Red / Medium",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White / Red",
               "size": "Medium"
@@ -154,6 +178,9 @@
           {
             "id": 244857,
             "title": "White / Red / Large",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White / Red",
               "size": "Large"
@@ -170,6 +197,9 @@
           {
             "id": 244858,
             "title": "White / Pink / Small",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White / Pink",
               "size": "Small"
@@ -186,6 +216,9 @@
           {
             "id": 244859,
             "title": "White / Pink / Medium",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White / Pink",
               "size": "Medium"
@@ -202,6 +235,9 @@
           {
             "id": 244860,
             "title": "White / Pink / Large",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White / Pink",
               "size": "Large"
@@ -305,7 +341,51 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 929
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 199
+          },
+          "variant_count": 12
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1199
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 599
+          },
+          "variant_count": 12
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 749
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 99
+          },
+          "variant_count": 12
+        }
+      ]
     }
   ]
 }

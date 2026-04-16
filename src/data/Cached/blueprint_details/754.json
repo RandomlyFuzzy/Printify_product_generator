@@ -25,6 +25,9 @@
           {
             "id": 74400,
             "title": "Black Metal / 50\u0027\u0027",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "material": "Black Metal",
               "size": "50\u0027\u0027"
@@ -41,6 +44,9 @@
           {
             "id": 74401,
             "title": "Bronze Metal / 50\u0027\u0027",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "material": "Bronze Metal",
               "size": "50\u0027\u0027"
@@ -57,6 +63,9 @@
           {
             "id": 74402,
             "title": "Gun Metal / 50\u0027\u0027",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "material": "Gun Metal",
               "size": "50\u0027\u0027"
@@ -133,7 +142,51 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 629
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 259
+          },
+          "variant_count": 3
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1099
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 3
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1169
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 419
+          },
+          "variant_count": 3
+        }
+      ]
     }
   ]
 }

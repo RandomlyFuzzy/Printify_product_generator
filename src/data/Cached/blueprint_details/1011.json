@@ -27,6 +27,9 @@
           {
             "id": 79789,
             "title": "Black / 0000 (0M)",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "0000 (0M)"
@@ -49,6 +52,9 @@
           {
             "id": 79790,
             "title": "Black / 000 (0-3M)",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "000 (0-3M)"
@@ -71,6 +77,9 @@
           {
             "id": 79791,
             "title": "Black / 00 (3-6M)",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "00 (3-6M)"
@@ -93,6 +102,9 @@
           {
             "id": 79792,
             "title": "Black / 0 (6-12M)",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "0 (6-12M)"
@@ -115,6 +127,9 @@
           {
             "id": 79793,
             "title": "Black / 1 (12-18M)",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "1 (12-18M)"
@@ -137,6 +152,9 @@
           {
             "id": 79794,
             "title": "Blush Pink / 0000 (0M)",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Blush Pink",
               "size": "0000 (0M)"
@@ -159,6 +177,9 @@
           {
             "id": 79795,
             "title": "Blush Pink / 000 (0-3M)",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Blush Pink",
               "size": "000 (0-3M)"
@@ -181,6 +202,9 @@
           {
             "id": 79796,
             "title": "Blush Pink / 00 (3-6M)",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Blush Pink",
               "size": "00 (3-6M)"
@@ -203,6 +227,9 @@
           {
             "id": 79797,
             "title": "Blush Pink / 0 (6-12M)",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Blush Pink",
               "size": "0 (6-12M)"
@@ -225,6 +252,9 @@
           {
             "id": 79798,
             "title": "Blush Pink / 1 (12-18M)",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Blush Pink",
               "size": "1 (12-18M)"
@@ -247,6 +277,9 @@
           {
             "id": 79799,
             "title": "White / 0000 (0M)",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White",
               "size": "0000 (0M)"
@@ -269,6 +302,9 @@
           {
             "id": 79800,
             "title": "White / 000 (0-3M)",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White",
               "size": "000 (0-3M)"
@@ -291,6 +327,9 @@
           {
             "id": 79801,
             "title": "White / 00 (3-6M)",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White",
               "size": "00 (3-6M)"
@@ -313,6 +352,9 @@
           {
             "id": 79802,
             "title": "White / 0 (6-12M)",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White",
               "size": "0 (6-12M)"
@@ -335,6 +377,9 @@
           {
             "id": 79803,
             "title": "White / 1 (12-18M)",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White",
               "size": "1 (12-18M)"
@@ -453,7 +498,51 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1449
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 159
+          },
+          "variant_count": 15
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 639
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 139
+          },
+          "variant_count": 15
+        },
+        {
+          "countries": [
+            "NZ"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1249
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 139
+          },
+          "variant_count": 15
+        }
+      ]
     }
   ]
 }

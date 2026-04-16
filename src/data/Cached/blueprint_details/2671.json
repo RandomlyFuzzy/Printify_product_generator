@@ -22,6 +22,9 @@
           {
             "id": 147874,
             "title": "Circle / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "shape": "Circle",
               "size": "One size"
@@ -38,6 +41,9 @@
           {
             "id": 147875,
             "title": "Heart / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "shape": "Heart",
               "size": "One size"
@@ -112,7 +118,52 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 459
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 49
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD",
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 949
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 199
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 569
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 69
+          },
+          "variant_count": 2
+        }
+      ]
     }
   ]
 }

@@ -26,6 +26,9 @@
           {
             "id": 109123,
             "title": "12oz / Dark Purple",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "12oz",
               "color": "Dark Purple"
@@ -48,6 +51,9 @@
           {
             "id": 109124,
             "title": "12oz / Iron Gray",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "12oz",
               "color": "Iron Gray"
@@ -70,6 +76,9 @@
           {
             "id": 109125,
             "title": "12oz / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "12oz",
               "color": "Black"
@@ -92,6 +101,9 @@
           {
             "id": 109126,
             "title": "12oz / Coral",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "12oz",
               "color": "Coral"
@@ -114,6 +126,9 @@
           {
             "id": 109127,
             "title": "12oz / Green",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "12oz",
               "color": "Green"
@@ -136,6 +151,9 @@
           {
             "id": 109128,
             "title": "12oz / Light Blue",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "12oz",
               "color": "Light Blue"
@@ -158,6 +176,9 @@
           {
             "id": 109129,
             "title": "12oz / Light Purple",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "12oz",
               "color": "Light Purple"
@@ -180,6 +201,9 @@
           {
             "id": 109130,
             "title": "12oz / Maroon",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "12oz",
               "color": "Maroon"
@@ -202,6 +226,9 @@
           {
             "id": 109131,
             "title": "12oz / Navy",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "12oz",
               "color": "Navy"
@@ -224,6 +251,9 @@
           {
             "id": 109132,
             "title": "12oz / Orange",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "12oz",
               "color": "Orange"
@@ -246,6 +276,9 @@
           {
             "id": 109133,
             "title": "12oz / Pink",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "12oz",
               "color": "Pink"
@@ -268,6 +301,9 @@
           {
             "id": 109134,
             "title": "12oz / Red",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "12oz",
               "color": "Red"
@@ -290,6 +326,9 @@
           {
             "id": 109135,
             "title": "12oz / Royal",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "12oz",
               "color": "Royal"
@@ -312,6 +351,9 @@
           {
             "id": 109136,
             "title": "12oz / Teal",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "12oz",
               "color": "Teal"
@@ -334,6 +376,9 @@
           {
             "id": 109137,
             "title": "12oz / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "12oz",
               "color": "White"
@@ -356,6 +401,9 @@
           {
             "id": 109138,
             "title": "12oz / Yellow",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "12oz",
               "color": "Yellow"
@@ -478,7 +526,52 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "REST_OF_THE_WORLD",
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1679
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 489
+          },
+          "variant_count": 16
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 769
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 349
+          },
+          "variant_count": 16
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1179
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 479
+          },
+          "variant_count": 16
+        }
+      ]
     }
   ]
 }

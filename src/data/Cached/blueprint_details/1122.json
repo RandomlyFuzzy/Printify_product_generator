@@ -26,6 +26,9 @@
           {
             "id": 91958,
             "title": "4.8\u0022 x 4.8\u0022 / White / 100 pcs",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "4.8\u0022 x 4.8\u0022",
               "color": "White",
@@ -43,6 +46,9 @@
           {
             "id": 91959,
             "title": "4.8\u0022 x 4.8\u0022 / White / 50 pcs",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "4.8\u0022 x 4.8\u0022",
               "color": "White",
@@ -60,6 +66,9 @@
           {
             "id": 91960,
             "title": "6.5\u0022 x 6.5\u0022 / White / 100 pcs",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "6.5\u0022 x 6.5\u0022",
               "color": "White",
@@ -77,6 +86,9 @@
           {
             "id": 91961,
             "title": "6.5\u0022 x 6.5\u0022 / White / 50 pcs",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "6.5\u0022 x 6.5\u0022",
               "color": "White",
@@ -154,7 +166,52 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 729
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 669
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD",
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 3239
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1149
+          },
+          "variant_count": 4
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1339
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 669
+          },
+          "variant_count": 2
+        }
+      ]
     }
   ]
 }

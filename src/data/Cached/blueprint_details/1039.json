@@ -23,6 +23,9 @@
           {
             "id": 80149,
             "title": "18\u0022 x 24\u0022 / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "18\u0022 x 24\u0022",
               "color": "White"
@@ -109,7 +112,65 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 14229
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 13679
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 5279
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 3779
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 11129
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 10699
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1529
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1049
+          },
+          "variant_count": 1
+        }
+      ]
     }
   ]
 }

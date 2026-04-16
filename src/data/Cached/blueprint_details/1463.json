@@ -26,6 +26,9 @@
           {
             "id": 105476,
             "title": "2.6\u0027\u0027 \u00D7 2.6\u0022 / 1pc",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2.6\u0027\u0027 \u00D7 2.6\u0022",
               "quantity": "1pc"
@@ -42,6 +45,9 @@
           {
             "id": 105477,
             "title": "2.6\u0027\u0027 \u00D7 2.6\u0022 / 2pcs",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2.6\u0027\u0027 \u00D7 2.6\u0022",
               "quantity": "2pcs"
@@ -157,7 +163,88 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 459
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 49
+          },
+          "variant_count": 3
+        },
+        {
+          "countries": [
+            "NZ",
+            "REST_OF_THE_WORLD",
+            "CA",
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1399
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 399
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 99
+          },
+          "variant_count": 3
+        },
+        {
+          "countries": [
+            "NZ",
+            "AU",
+            "CA",
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1159
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 199
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "AU",
+            "CA",
+            "NZ",
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1199
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 199
+          },
+          "variant_count": 1
+        }
+      ]
     }
   ]
 }

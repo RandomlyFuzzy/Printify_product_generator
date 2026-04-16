@@ -57,11 +57,13 @@ code {
 }
 
 input,
+select,
 button {
   font: inherit;
 }
 
-input {
+input,
+select {
   width: 100%;
   border: 1px solid rgba(18, 32, 41, 0.14);
   border-radius: 12px;
@@ -70,7 +72,8 @@ input {
   color: var(--ink);
 }
 
-input:focus {
+input:focus,
+select:focus {
   outline: 2px solid rgba(27, 107, 114, 0.18);
   border-color: rgba(27, 107, 114, 0.5);
 }
@@ -898,6 +901,463 @@ button {
 
 .qc-button-stack button {
   width: 100%;
+}
+
+.catalog-hero-panel h1 {
+  max-width: 11.5ch;
+}
+
+.catalog-copy {
+  max-width: 58ch;
+}
+
+.catalog-filter-form {
+  display: grid;
+  grid-template-columns: minmax(120px, 160px) minmax(220px, 1fr) auto;
+  gap: 14px;
+  align-items: end;
+  margin-top: 20px;
+}
+
+.catalog-filter-form label {
+  display: grid;
+  gap: 6px;
+}
+
+.catalog-toggle-row {
+  padding-bottom: 12px;
+}
+
+.catalog-link-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.catalog-saved-countries {
+  display: grid;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.catalog-meta-form {
+  margin-top: 6px;
+}
+
+.catalog-stats-grid {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.catalog-tree {
+  display: grid;
+  gap: 18px;
+}
+
+
+.catalog-blueprint-section {
+  display: grid;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid rgba(18, 32, 41, 0.1);
+  border-radius: 26px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(247, 243, 235, 0.82));
+  box-shadow: 0 16px 40px rgba(18, 32, 41, 0.06);
+}
+
+.catalog-blueprint-strip {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1.6fr) minmax(260px, 1fr) auto;
+  gap: 14px;
+  align-items: center;
+}
+
+.catalog-row-media {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, rgba(18, 32, 41, 0.06), rgba(27, 107, 114, 0.12));
+  border: 1px solid rgba(18, 32, 41, 0.08);
+  flex-shrink: 0;
+}
+
+.catalog-row-media-small {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+}
+
+.catalog-row-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.catalog-row-media.is-empty {
+  background: rgba(18, 32, 41, 0.03);
+  border-style: dashed;
+}
+
+.catalog-media-glyph {
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  border: 2px solid rgba(18, 32, 41, 0.28);
+  position: relative;
+}
+
+.catalog-media-glyph::after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  right: 3px;
+  bottom: 3px;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(18, 32, 41, 0.16);
+}
+
+.catalog-blueprint-primary,
+.catalog-blueprint-metrics,
+.catalog-blueprint-controls,
+.catalog-provider-tree,
+.catalog-variant-tree,
+.catalog-variant-id,
+.catalog-variant-options,
+.catalog-variant-actions,
+.catalog-row-stat {
+  display: grid;
+  gap: 4px;
+}
+
+.catalog-blueprint-primary h3,
+.catalog-provider-name strong,
+.catalog-variant-options strong,
+.catalog-variant-id strong,
+.catalog-row-stat strong,
+.catalog-blueprint-metrics strong {
+  margin: 0;
+}
+
+.catalog-blueprint-metrics {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.catalog-blueprint-metrics div,
+.catalog-row-stat,
+.catalog-provider-name,
+.catalog-variant-id,
+.catalog-variant-options {
+  min-width: 0;
+}
+
+.catalog-blueprint-metrics div {
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.64);
+  border: 1px solid rgba(18, 32, 41, 0.06);
+}
+
+.catalog-blueprint-controls {
+  justify-items: end;
+  align-content: center;
+  gap: 8px;
+}
+
+.catalog-inline-form,
+.catalog-summary-form {
+  margin: 0;
+}
+
+.catalog-toggle-button,
+.catalog-mini-button {
+  appearance: none;
+  border: 1px solid rgba(18, 32, 41, 0.12);
+  background: rgba(255, 255, 255, 0.84);
+  color: var(--ink);
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 40px;
+  padding: 0.55rem 0.85rem;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 140ms ease, box-shadow 140ms ease, border-color 140ms ease, background-color 140ms ease;
+}
+
+.catalog-toggle-button:hover,
+.catalog-mini-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(18, 32, 41, 0.08);
+}
+
+.catalog-toggle-box {
+  width: 18px;
+  height: 18px;
+  border-radius: 5px;
+  border: 1.8px solid currentColor;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.catalog-toggle-button.is-on {
+  color: var(--sage);
+  background: rgba(95, 127, 105, 0.12);
+  border-color: rgba(95, 127, 105, 0.22);
+}
+
+.catalog-toggle-button.is-on .catalog-toggle-box::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 1px;
+  width: 4px;
+  height: 9px;
+  border: solid currentColor;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.catalog-toggle-button.is-partial {
+  color: var(--teal);
+  background: rgba(27, 107, 114, 0.12);
+  border-color: rgba(27, 107, 114, 0.22);
+}
+
+.catalog-toggle-button.is-partial .catalog-toggle-box::after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  right: 3px;
+  top: 7px;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+}
+
+.catalog-toggle-button.is-off {
+  color: var(--muted);
+}
+
+.catalog-mini-button {
+  min-height: 34px;
+  padding: 0.45rem 0.78rem;
+  font-size: 0.83rem;
+  color: var(--muted);
+}
+
+.catalog-mini-button.is-active {
+  color: var(--ink);
+  background: rgba(18, 32, 41, 0.08);
+}
+
+.catalog-probe-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.45rem 0.72rem;
+  border-radius: 999px;
+  background: rgba(18, 32, 41, 0.06);
+  color: var(--muted);
+  font-family: "IBM Plex Mono", "Cascadia Code", monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.catalog-provider-tree {
+  gap: 10px;
+}
+
+.catalog-provider-tree-item {
+  border: 1px solid rgba(18, 32, 41, 0.08);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.72);
+  overflow: hidden;
+}
+
+.catalog-provider-tree-item summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+.catalog-provider-tree-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.catalog-provider-row {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1.3fr) minmax(78px, 0.45fr) minmax(150px, 0.8fr) minmax(150px, 0.8fr) auto 18px;
+  gap: 12px;
+  align-items: center;
+  padding: 12px 14px;
+}
+
+.catalog-provider-name span,
+.catalog-variant-id span,
+.catalog-variant-options span,
+.catalog-row-stat span,
+.catalog-blueprint-metrics span,
+.catalog-blueprint-primary .summary-copy {
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.catalog-row-stat strong,
+.catalog-variant-id strong {
+  font-family: "IBM Plex Mono", "Cascadia Code", monospace;
+  font-size: 0.93rem;
+}
+
+.catalog-row-stat-wide strong {
+  overflow-wrap: anywhere;
+}
+
+.catalog-summary-form {
+  justify-self: end;
+}
+
+.catalog-summary-form .catalog-toggle-button {
+  min-width: 42px;
+  min-height: 42px;
+  padding: 0.5rem;
+}
+
+.catalog-chevron {
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid rgba(18, 32, 41, 0.45);
+  border-bottom: 2px solid rgba(18, 32, 41, 0.45);
+  transform: rotate(45deg);
+  transition: transform 160ms ease;
+}
+
+.catalog-provider-tree-item[open] .catalog-chevron {
+  transform: rotate(225deg);
+}
+
+.catalog-variant-tree {
+  gap: 8px;
+  padding: 0 14px 14px 14px;
+}
+
+.catalog-variant-row {
+  display: grid;
+  grid-template-columns: 14px auto minmax(86px, 0.45fr) minmax(0, 1.35fr) minmax(120px, 0.78fr) minmax(120px, 0.78fr) auto;
+  gap: 10px;
+  align-items: center;
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: 16px;
+  background: rgba(247, 243, 235, 0.7);
+  border: 1px solid rgba(18, 32, 41, 0.06);
+}
+
+.catalog-variant-rail {
+  align-self: stretch;
+  justify-self: center;
+  width: 2px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(18, 32, 41, 0.08), rgba(18, 32, 41, 0));
+}
+
+.catalog-variant-options {
+  gap: 3px;
+}
+
+.catalog-variant-lookup {
+  font-family: "IBM Plex Mono", "Cascadia Code", monospace;
+  font-size: 0.72rem;
+  color: rgba(18, 32, 41, 0.62);
+  line-height: 1.45;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.catalog-variant-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+@media (max-width: 1160px) {
+  .catalog-stats-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .catalog-filter-form,
+  .catalog-blueprint-strip,
+  .catalog-blueprint-metrics,
+  .catalog-provider-row,
+  .catalog-variant-row {
+    grid-template-columns: 1fr;
+  }
+
+  .catalog-blueprint-controls {
+    justify-items: start;
+  }
+
+  .catalog-provider-row,
+  .catalog-variant-row {
+    align-items: start;
+  }
+
+  .catalog-summary-form {
+    justify-self: start;
+  }
+
+  .catalog-chevron {
+    display: none;
+  }
+
+  .catalog-variant-rail {
+    display: none;
+  }
+}
+
+@media (max-width: 880px) {
+  .catalog-stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .catalog-filter-form {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .catalog-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .catalog-blueprint-section,
+  .catalog-provider-tree-item summary,
+  .catalog-variant-tree {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .catalog-row-media {
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+  }
+
+  .catalog-row-media-small {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+  }
 }
 
 .full-issue-list span,

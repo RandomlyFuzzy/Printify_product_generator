@@ -25,6 +25,9 @@
           {
             "id": 240903,
             "title": "Colorsoft / Paperwhite (7\u201D) 12 Gen. (2024-2025)",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "Colorsoft / Paperwhite (7\u201D) 12 Gen. (2024-2025)"
             },
@@ -94,7 +97,51 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 519
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 150
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 800
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 100
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 820
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 115
+          },
+          "variant_count": 1
+        }
+      ]
     }
   ]
 }

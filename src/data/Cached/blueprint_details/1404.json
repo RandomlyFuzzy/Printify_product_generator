@@ -25,6 +25,9 @@
           {
             "id": 104026,
             "title": "100 pages (50 sheets) / Ruled line / 5.75\u0022 x 8\u0022",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "quantity": "100 pages (50 sheets)",
               "paper": "Ruled line",
@@ -84,6 +87,9 @@
           {
             "id": 104027,
             "title": "200 pages (100 sheets) / Ruled line / 5.75\u0022 x 8\u0022",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "quantity": "200 pages (100 sheets)",
               "paper": "Ruled line",
@@ -203,7 +209,54 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 529
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 199
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "AU",
+            "NZ",
+            "CA",
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1399
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 399
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 599
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 240
+          },
+          "variant_count": 2
+        }
+      ]
     }
   ]
 }

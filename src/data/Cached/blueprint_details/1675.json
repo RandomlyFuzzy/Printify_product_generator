@@ -32,6 +32,9 @@
           {
             "id": 115561,
             "title": "XS / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XS",
               "color": "White"
@@ -54,6 +57,9 @@
           {
             "id": 115562,
             "title": "S / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "S",
               "color": "White"
@@ -76,6 +82,9 @@
           {
             "id": 115563,
             "title": "M / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "M",
               "color": "White"
@@ -98,6 +107,9 @@
           {
             "id": 115564,
             "title": "L / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "L",
               "color": "White"
@@ -120,6 +132,9 @@
           {
             "id": 115565,
             "title": "XL / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XL",
               "color": "White"
@@ -142,6 +157,9 @@
           {
             "id": 115566,
             "title": "2XL / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2XL",
               "color": "White"
@@ -164,6 +182,9 @@
           {
             "id": 115567,
             "title": "3XL / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "3XL",
               "color": "White"
@@ -186,6 +207,9 @@
           {
             "id": 115568,
             "title": "XS / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XS",
               "color": "Black"
@@ -208,6 +232,9 @@
           {
             "id": 115569,
             "title": "S / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "S",
               "color": "Black"
@@ -230,6 +257,9 @@
           {
             "id": 115570,
             "title": "M / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "M",
               "color": "Black"
@@ -252,6 +282,9 @@
           {
             "id": 115571,
             "title": "L / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "L",
               "color": "Black"
@@ -274,6 +307,9 @@
           {
             "id": 115572,
             "title": "XL / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XL",
               "color": "Black"
@@ -296,6 +332,9 @@
           {
             "id": 115573,
             "title": "2XL / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2XL",
               "color": "Black"
@@ -318,6 +357,9 @@
           {
             "id": 115574,
             "title": "3XL / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "3XL",
               "color": "Black"
@@ -675,14 +717,14 @@
             ],
             "first_item": {
               "currency": "USD",
-              "cost": 1500
+              "cost": 999
             },
             "additional_items": {
               "currency": "USD",
-              "cost": 1000
+              "cost": 249
             },
             "countries": [
-              "REST_OF_THE_WORLD"
+              "US"
             ]
           },
           {
@@ -760,18 +802,90 @@
             ],
             "first_item": {
               "currency": "USD",
-              "cost": 999
+              "cost": 1500
             },
             "additional_items": {
               "currency": "USD",
-              "cost": 249
+              "cost": 1000
             },
             "countries": [
-              "US"
+              "REST_OF_THE_WORLD"
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 769
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 209
+          },
+          "variant_count": 70
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2199
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "variant_count": 70
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1269
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 659
+          },
+          "variant_count": 70
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 249
+          },
+          "variant_count": 70
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1500
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1000
+          },
+          "variant_count": 70
+        }
+      ]
     }
   ]
 }

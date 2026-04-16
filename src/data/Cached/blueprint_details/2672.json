@@ -6,13 +6,13 @@
     "model": "",
     "images": [
       "https://images.printify.com/68f0ff2ce2637f1341042c63",
-      "https://images.printify.com/68ee27441fa7862bad0b0b12",
-      "https://images.printify.com/68ee2741d9425490d90231e2",
-      "https://images.printify.com/68ee273ec1ce3c159f0ade32",
-      "https://images.printify.com/69d69847b6b0c0764d0727f0",
+      "https://images.printify.com/69df3f3a130a8a7012013ad2",
       "https://images.printify.com/69d6894782fd84810d090c10",
       "https://images.printify.com/69d682b40080773d5d0f6130",
-      "https://images.printify.com/69d6768a127e0d7c0b043f50"
+      "https://images.printify.com/68ee27441fa7862bad0b0b12",
+      "https://images.printify.com/68ee2741d9425490d90231e2",
+      "https://images.printify.com/69d6768a127e0d7c0b043f50",
+      "https://images.printify.com/69d69847b6b0c0764d0727f0"
     ]
   },
   "print_providers": [
@@ -28,6 +28,9 @@
           {
             "id": 147900,
             "title": "MacBook Pro 16 / Glossy",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "MacBook Pro 16",
               "finish": "Glossy"
@@ -44,6 +47,9 @@
           {
             "id": 147902,
             "title": "MacBook Pro 14 / Glossy",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "MacBook Pro 14",
               "finish": "Glossy"
@@ -60,6 +66,9 @@
           {
             "id": 147904,
             "title": "MacBook Pro 13.3 / Glossy",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "MacBook Pro 13.3",
               "finish": "Glossy"
@@ -76,6 +85,9 @@
           {
             "id": 147906,
             "title": "MacBook Air 15.3 / Glossy",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "MacBook Air 15.3",
               "finish": "Glossy"
@@ -92,6 +104,9 @@
           {
             "id": 147908,
             "title": "MacBook Air 13.6 / Glossy",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "MacBook Air 13.6",
               "finish": "Glossy"
@@ -506,7 +521,280 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 599
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 299
+          },
+          "variant_count": 10
+        },
+        {
+          "countries": [
+            "DK",
+            "EE",
+            "AL",
+            "BE",
+            "FI",
+            "IM",
+            "ME",
+            "RE",
+            "RO",
+            "NL",
+            "SI",
+            "ES",
+            "RS",
+            "NO",
+            "CH",
+            "UA",
+            "BA",
+            "BY",
+            "FO",
+            "LU",
+            "AX",
+            "BG",
+            "AT",
+            "CY",
+            "BV",
+            "SK",
+            "AM",
+            "GI",
+            "SM",
+            "FR",
+            "VA",
+            "HU",
+            "HR",
+            "LV",
+            "GP",
+            "LI",
+            "GG",
+            "LT",
+            "JE",
+            "TR",
+            "MD",
+            "AD",
+            "XK",
+            "GE",
+            "MC",
+            "CZ",
+            "GR",
+            "MT",
+            "SE",
+            "GL",
+            "IE",
+            "MK",
+            "PL",
+            "PT",
+            "IS",
+            "IT"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 859
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 319
+          },
+          "variant_count": 10
+        },
+        {
+          "countries": [
+            "CC",
+            "IO",
+            "YE",
+            "HK",
+            "IN",
+            "AF",
+            "JO",
+            "BN",
+            "IR",
+            "PH",
+            "AZ",
+            "BH",
+            "CX",
+            "JP",
+            "SA",
+            "LB",
+            "MO",
+            "BT",
+            "KH",
+            "TH",
+            "IL",
+            "TM",
+            "MN",
+            "PK",
+            "AE",
+            "CN",
+            "LK",
+            "TJ",
+            "KZ",
+            "SY",
+            "KR",
+            "TW",
+            "SG",
+            "ID",
+            "MM",
+            "NP",
+            "OM",
+            "PS",
+            "RU",
+            "VN",
+            "KW",
+            "KG",
+            "MV",
+            "QA",
+            "BD",
+            "IQ",
+            "LA",
+            "MY",
+            "UZ"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1899
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 629
+          },
+          "variant_count": 10
+        },
+        {
+          "countries": [
+            "FK",
+            "GY",
+            "AN",
+            "CO",
+            "VE",
+            "BO",
+            "GF",
+            "CL",
+            "BR",
+            "EC",
+            "PY",
+            "SR",
+            "AR",
+            "PE",
+            "UY"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1939
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 749
+          },
+          "variant_count": 10
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1939
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 449
+          },
+          "variant_count": 10
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2199
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 299
+          },
+          "variant_count": 10
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 939
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 419
+          },
+          "variant_count": 10
+        },
+        {
+          "countries": [
+            "NZ"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1709
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 519
+          },
+          "variant_count": 10
+        },
+        {
+          "countries": [
+            "DE"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 729
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 269
+          },
+          "variant_count": 10
+        },
+        {
+          "countries": [
+            "GB"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 699
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 299
+          },
+          "variant_count": 10
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 649
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 399
+          },
+          "variant_count": 10
+        }
+      ]
     }
   ]
 }

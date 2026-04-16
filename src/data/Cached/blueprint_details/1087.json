@@ -30,6 +30,9 @@
           {
             "id": 91889,
             "title": "XS / Black collar",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XS",
               "color": "Black collar"
@@ -58,6 +61,9 @@
           {
             "id": 91890,
             "title": "S / Black collar",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "S",
               "color": "Black collar"
@@ -86,6 +92,9 @@
           {
             "id": 91891,
             "title": "M / Black collar",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "M",
               "color": "Black collar"
@@ -114,6 +123,9 @@
           {
             "id": 91892,
             "title": "L / Black collar",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "L",
               "color": "Black collar"
@@ -142,6 +154,9 @@
           {
             "id": 91893,
             "title": "XL / Black collar",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XL",
               "color": "Black collar"
@@ -170,6 +185,9 @@
           {
             "id": 91894,
             "title": "2XL / Black collar",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2XL",
               "color": "Black collar"
@@ -198,6 +216,9 @@
           {
             "id": 91895,
             "title": "3XL / Black collar",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "3XL",
               "color": "Black collar"
@@ -226,6 +247,9 @@
           {
             "id": 91896,
             "title": "4XL / Black collar",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "4XL",
               "color": "Black collar"
@@ -432,7 +456,136 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1629
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1559
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1899
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2439
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 2309
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "AX",
+            "AL",
+            "AD",
+            "AM",
+            "AT",
+            "BY",
+            "BE",
+            "BA",
+            "BV",
+            "BG",
+            "HR",
+            "CY",
+            "CZ",
+            "DK",
+            "EE",
+            "FO",
+            "FI",
+            "FR",
+            "GE",
+            "DE",
+            "GI",
+            "GR",
+            "GL",
+            "GP",
+            "GG",
+            "VA",
+            "HU",
+            "IS",
+            "IE",
+            "IM",
+            "IT",
+            "JE",
+            "LV",
+            "LI",
+            "LT",
+            "LU",
+            "MK",
+            "MT",
+            "MD",
+            "MC",
+            "ME",
+            "NL",
+            "NO",
+            "PL",
+            "PT",
+            "RE",
+            "RO",
+            "SM",
+            "RS",
+            "SK",
+            "SI",
+            "ES",
+            "SE",
+            "CH",
+            "TR",
+            "UA",
+            "GB",
+            "XK"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1569
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1499
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2189
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 2059
+          },
+          "variant_count": 8
+        }
+      ]
     }
   ]
 }

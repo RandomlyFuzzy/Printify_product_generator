@@ -27,6 +27,9 @@
           {
             "id": 107561,
             "title": "iPhone 15",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "iPhone 15"
             },
@@ -42,6 +45,9 @@
           {
             "id": 107562,
             "title": "iPhone 15 Pro",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "iPhone 15 Pro"
             },
@@ -57,6 +63,9 @@
           {
             "id": 107563,
             "title": "iPhone 15 Plus",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "iPhone 15 Plus"
             },
@@ -72,6 +81,9 @@
           {
             "id": 107564,
             "title": "iPhone 15 Pro Max",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "iPhone 15 Pro Max"
             },
@@ -87,6 +99,9 @@
           {
             "id": 107565,
             "title": "iPhone 14",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "iPhone 14"
             },
@@ -102,6 +117,9 @@
           {
             "id": 107566,
             "title": "iPhone 14 Pro",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "iPhone 14 Pro"
             },
@@ -117,6 +135,9 @@
           {
             "id": 107567,
             "title": "iPhone 14 Plus",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "iPhone 14 Plus"
             },
@@ -132,6 +153,9 @@
           {
             "id": 107568,
             "title": "iPhone 14 Pro Max",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "iPhone 14 Pro Max"
             },
@@ -147,6 +171,9 @@
           {
             "id": 112617,
             "title": "iPhone 16 Pro",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "iPhone 16 Pro"
             },
@@ -162,6 +189,9 @@
           {
             "id": 112618,
             "title": "iPhone 16 Pro Max",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "iPhone 16 Pro Max"
             },
@@ -177,6 +207,9 @@
           {
             "id": 112619,
             "title": "iPhone 16",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "iPhone 16"
             },
@@ -192,6 +225,9 @@
           {
             "id": 112620,
             "title": "iPhone 16 Plus",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "iPhone 16 Plus"
             },
@@ -207,6 +243,9 @@
           {
             "id": 149507,
             "title": "iPhone 17",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "iPhone 17"
             },
@@ -222,6 +261,9 @@
           {
             "id": 149508,
             "title": "iPhone 17 Air",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "iPhone 17 Air"
             },
@@ -237,6 +279,9 @@
           {
             "id": 149509,
             "title": "iPhone 17 Pro",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "iPhone 17 Pro"
             },
@@ -252,6 +297,9 @@
           {
             "id": 149510,
             "title": "iPhone 17 Pro Max",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "iPhone 17 Pro Max"
             },
@@ -731,7 +779,280 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 99
+          },
+          "variant_count": 16
+        },
+        {
+          "countries": [
+            "AT",
+            "BE",
+            "NL",
+            "RO",
+            "GG",
+            "JE",
+            "LT",
+            "SM",
+            "BY",
+            "IE",
+            "BA",
+            "CY",
+            "MD",
+            "SI",
+            "MC",
+            "CH",
+            "XK",
+            "GI",
+            "AX",
+            "CZ",
+            "FI",
+            "BG",
+            "MK",
+            "BV",
+            "LI",
+            "GE",
+            "IT",
+            "AD",
+            "MT",
+            "PT",
+            "UA",
+            "EE",
+            "SK",
+            "TR",
+            "IM",
+            "DK",
+            "FO",
+            "GP",
+            "IS",
+            "GR",
+            "ME",
+            "PL",
+            "AL",
+            "AM",
+            "HU",
+            "LV",
+            "NO",
+            "RE",
+            "ES",
+            "SE",
+            "HR",
+            "FR",
+            "GL",
+            "VA",
+            "LU",
+            "RS"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 579
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 149
+          },
+          "variant_count": 16
+        },
+        {
+          "countries": [
+            "DE"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 549
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 199
+          },
+          "variant_count": 16
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 549
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 149
+          },
+          "variant_count": 16
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 929
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 349
+          },
+          "variant_count": 16
+        },
+        {
+          "countries": [
+            "BR",
+            "FK",
+            "AR",
+            "GY",
+            "BO",
+            "VE",
+            "PE",
+            "GF",
+            "CL",
+            "EC",
+            "PY",
+            "CO",
+            "AN",
+            "SR",
+            "UY"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1429
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 399
+          },
+          "variant_count": 16
+        },
+        {
+          "countries": [
+            "IN",
+            "ID",
+            "IQ",
+            "LA",
+            "LB",
+            "BD",
+            "JP",
+            "CX",
+            "VN",
+            "CC",
+            "KR",
+            "KG",
+            "NP",
+            "SA",
+            "BH",
+            "SG",
+            "SY",
+            "TM",
+            "AZ",
+            "BN",
+            "KH",
+            "TW",
+            "OM",
+            "AF",
+            "IO",
+            "MO",
+            "MY",
+            "MV",
+            "TJ",
+            "YE",
+            "MN",
+            "PS",
+            "PH",
+            "CN",
+            "HK",
+            "AE",
+            "RU",
+            "LK",
+            "TH",
+            "MM",
+            "KZ",
+            "QA",
+            "UZ",
+            "BT",
+            "IR",
+            "IL",
+            "JO",
+            "KW",
+            "PK"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 949
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "variant_count": 16
+        },
+        {
+          "countries": [
+            "GB"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 319
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 119
+          },
+          "variant_count": 16
+        },
+        {
+          "countries": [
+            "NZ"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1399
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 399
+          },
+          "variant_count": 16
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1689
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "variant_count": 16
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1799
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 399
+          },
+          "variant_count": 16
+        }
+      ]
     }
   ]
 }

@@ -25,6 +25,9 @@
           {
             "id": 91862,
             "title": "Black / 10.9\u0022",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "10.9\u0022"
@@ -41,6 +44,9 @@
           {
             "id": 91863,
             "title": "Blue / 10.9\u0022",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Blue",
               "size": "10.9\u0022"
@@ -57,6 +63,9 @@
           {
             "id": 91864,
             "title": "Red / 10.9\u0022",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Red",
               "size": "10.9\u0022"
@@ -73,6 +82,9 @@
           {
             "id": 91865,
             "title": "White / 10.9\u0022",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White",
               "size": "10.9\u0022"
@@ -89,6 +101,9 @@
           {
             "id": 91866,
             "title": "Green / 10.9\u0022",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Green",
               "size": "10.9\u0022"
@@ -171,7 +186,51 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1629
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 719
+          },
+          "variant_count": 5
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 759
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 599
+          },
+          "variant_count": 5
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1909
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1039
+          },
+          "variant_count": 5
+        }
+      ]
     }
   ]
 }

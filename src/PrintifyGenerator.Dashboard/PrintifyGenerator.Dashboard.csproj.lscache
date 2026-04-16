@@ -64,6 +64,7 @@ obj/Debug/net10.0/
  PrintifyGenerator.Dashboard.GlobalUsings.g.cs
  PrintifyGenerator.Dashboard.RazorAssemblyInfo.cs
 Pages/
+ BlueprintCatalog.cshtml.cs
  Error.cshtml.cs
  GeneratedImages.cshtml.cs
  Index.cshtml.cs
@@ -72,6 +73,7 @@ Pages/
  Stats.cshtml.cs
 Program.cs
 Services/
+ BlueprintCatalogService.cs
  DashboardDataService.cs
  GenerationRuntimeService.cs
  NodeHealthService.cs
@@ -422,6 +424,7 @@ obj/Debug/net10.0/PrintifyGenerator.Dashboard.GeneratedMSBuildEditorConfig.edito
 
 [additionalFiles]
 Pages/
+ BlueprintCatalog.cshtml
  Error.cshtml
  GeneratedImages.cshtml
  Index.cshtml
@@ -436,6 +439,7 @@ Pages/
 
 [dynamicFiles]
 Pages/
+ BlueprintCatalog.cshtml
  Error.cshtml
  GeneratedImages.cshtml
  Index.cshtml

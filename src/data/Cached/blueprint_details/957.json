@@ -26,6 +26,9 @@
           {
             "id": 78327,
             "title": "Front mat / Polyester loop",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "Front mat",
               "material": "Polyester loop"
@@ -42,6 +45,9 @@
           {
             "id": 78328,
             "title": "Rear mat / Polyester loop",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "Rear mat",
               "material": "Polyester loop"
@@ -147,7 +153,81 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1519
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 399
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "AU",
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1959
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 549
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1369
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2149
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 599
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD",
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2499
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 599
+          },
+          "variant_count": 1
+        }
+      ]
     }
   ]
 }

@@ -23,6 +23,9 @@
           {
             "id": 91951,
             "title": "3\u0022",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "3\u0022"
             },
@@ -92,7 +95,51 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2369
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 759
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 699
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2399
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1039
+          },
+          "variant_count": 1
+        }
+      ]
     }
   ]
 }

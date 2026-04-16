@@ -27,6 +27,9 @@
           {
             "id": 79428,
             "title": "Cotton Twill / 18\u0022 \u00D7 30\u0022",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "material": "Cotton Twill",
               "size": "18\u0022 \u00D7 30\u0022"
@@ -43,6 +46,9 @@
           {
             "id": 79429,
             "title": "Polyester / 18\u0022 \u00D7 30\u0022",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "material": "Polyester",
               "size": "18\u0022 \u00D7 30\u0022"
@@ -100,7 +106,38 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "CA",
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1119
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 359
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 539
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 259
+          },
+          "variant_count": 2
+        }
+      ]
     }
   ]
 }

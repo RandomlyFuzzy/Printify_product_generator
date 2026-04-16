@@ -26,6 +26,9 @@
           {
             "id": 75378,
             "title": "Square / 2\u0022 \u00D7 2\u0022 / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "shape": "Square",
               "size": "2\u0022 \u00D7 2\u0022",
@@ -43,6 +46,9 @@
           {
             "id": 75379,
             "title": "Square / 3\u0022 \u00D7 3\u0022 / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "shape": "Square",
               "size": "3\u0022 \u00D7 3\u0022",
@@ -60,6 +66,9 @@
           {
             "id": 75380,
             "title": "Square / 4\u0022 \u00D7 4\u0022 / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "shape": "Square",
               "size": "4\u0022 \u00D7 4\u0022",
@@ -77,6 +86,9 @@
           {
             "id": 75381,
             "title": "Square / 5\u0022 \u00D7 5\u0022 / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "shape": "Square",
               "size": "5\u0022 \u00D7 5\u0022",
@@ -94,6 +106,9 @@
           {
             "id": 75382,
             "title": "Square / 6\u0022 \u00D7 6\u0022 / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "shape": "Square",
               "size": "6\u0022 \u00D7 6\u0022",
@@ -197,7 +212,65 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 459
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 9
+          },
+          "variant_count": 5
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 479
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 19
+          },
+          "variant_count": 5
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 919
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 49
+          },
+          "variant_count": 5
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1159
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 59
+          },
+          "variant_count": 5
+        }
+      ]
     }
   ]
 }

@@ -13,6 +13,7 @@
         || requestPath.StartsWith("/Stats", StringComparison.OrdinalIgnoreCase);
     var isQcQueuePage = requestPath.StartsWith("/QcQueue", StringComparison.OrdinalIgnoreCase);
     var isGeneratedImagesPage = requestPath.StartsWith("/GeneratedImages", StringComparison.OrdinalIgnoreCase);
+    var isBlueprintCatalogPage = requestPath.StartsWith("/BlueprintCatalog", StringComparison.OrdinalIgnoreCase);
 }
 <body>
     <div class="app-shell">
@@ -20,6 +21,7 @@
             <a class="brand-mark" asp-page="/Stats">Printify Generator Dashboard</a>
             <nav class="nav-strip">
                 <a class="nav-link @(isStatsPage ? "is-active" : null)" asp-page="/Stats">Stats</a>
+                <a class="nav-link @(isBlueprintCatalogPage ? "is-active" : null)" asp-page="/BlueprintCatalog">Catalog</a>
                 <a class="nav-link @(isQcQueuePage ? "is-active" : null)" asp-page="/QcQueue">QC Queue</a>
                 <a class="nav-link @(isGeneratedImagesPage ? "is-active" : null)" asp-page="/GeneratedImages">Generated Images</a>
             </nav>

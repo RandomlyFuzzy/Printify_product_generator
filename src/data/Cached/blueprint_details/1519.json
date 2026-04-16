@@ -59,6 +59,9 @@
           {
             "id": 109188,
             "title": "22oz / Blue",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "22oz",
               "color": "Blue"
@@ -81,6 +84,9 @@
           {
             "id": 109189,
             "title": "22oz / Dark Gray",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "22oz",
               "color": "Dark Gray"
@@ -103,6 +109,9 @@
           {
             "id": 109190,
             "title": "22oz / Dark Purple",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "22oz",
               "color": "Dark Purple"
@@ -125,6 +134,9 @@
           {
             "id": 109191,
             "title": "22oz / Olive Green",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "22oz",
               "color": "Olive Green"
@@ -147,6 +159,9 @@
           {
             "id": 109192,
             "title": "22oz / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "22oz",
               "color": "Black"
@@ -169,6 +184,9 @@
           {
             "id": 109193,
             "title": "22oz / Coral",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "22oz",
               "color": "Coral"
@@ -191,6 +209,9 @@
           {
             "id": 109194,
             "title": "22oz / Green",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "22oz",
               "color": "Green"
@@ -213,6 +234,9 @@
           {
             "id": 109195,
             "title": "22oz / Light Blue",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "22oz",
               "color": "Light Blue"
@@ -235,6 +259,9 @@
           {
             "id": 109196,
             "title": "22oz / Light Purple",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "22oz",
               "color": "Light Purple"
@@ -257,6 +284,9 @@
           {
             "id": 109197,
             "title": "22oz / Maroon",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "22oz",
               "color": "Maroon"
@@ -279,6 +309,9 @@
           {
             "id": 109198,
             "title": "22oz / Navy",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "22oz",
               "color": "Navy"
@@ -301,6 +334,9 @@
           {
             "id": 109199,
             "title": "22oz / Orange",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "22oz",
               "color": "Orange"
@@ -323,6 +359,9 @@
           {
             "id": 109200,
             "title": "22oz / Pink",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "22oz",
               "color": "Pink"
@@ -345,6 +384,9 @@
           {
             "id": 109201,
             "title": "22oz / Red",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "22oz",
               "color": "Red"
@@ -367,6 +409,9 @@
           {
             "id": 109202,
             "title": "22oz / Teal",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "22oz",
               "color": "Teal"
@@ -389,6 +434,9 @@
           {
             "id": 109203,
             "title": "22oz / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "22oz",
               "color": "White"
@@ -411,6 +459,9 @@
           {
             "id": 109204,
             "title": "22oz / Yellow",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "22oz",
               "color": "Yellow"
@@ -567,7 +618,65 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 699
+          },
+          "variant_count": 17
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 799
+          },
+          "variant_count": 17
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 929
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 299
+          },
+          "variant_count": 17
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1349
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 579
+          },
+          "variant_count": 17
+        }
+      ]
     }
   ]
 }

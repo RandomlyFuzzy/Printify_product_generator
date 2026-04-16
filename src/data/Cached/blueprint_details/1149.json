@@ -25,6 +25,9 @@
           {
             "id": 87917,
             "title": "1014 pcs (Vertical)",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "1014 pcs (Vertical)"
             },
@@ -40,6 +43,9 @@
           {
             "id": 87919,
             "title": "110 pcs (Horizontal)",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "110 pcs (Horizontal)"
             },
@@ -55,6 +61,9 @@
           {
             "id": 87920,
             "title": "252 pcs (Horizontal)",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "252 pcs (Horizontal)"
             },
@@ -70,6 +79,9 @@
           {
             "id": 87921,
             "title": "520 pcs (Horizontal)",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "520 pcs (Horizontal)"
             },
@@ -85,6 +97,9 @@
           {
             "id": 87922,
             "title": "1014 pcs (Horizontal)",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "1014 pcs (Horizontal)"
             },
@@ -100,6 +115,9 @@
           {
             "id": 87923,
             "title": "110 pcs (Vertical)",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "110 pcs (Vertical)"
             },
@@ -115,6 +133,9 @@
           {
             "id": 87924,
             "title": "252 pcs (Vertical)",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "252 pcs (Vertical)"
             },
@@ -130,6 +151,9 @@
           {
             "id": 87925,
             "title": "520 pcs (Vertical)",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "520 pcs (Vertical)"
             },
@@ -368,7 +392,188 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 799
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 269
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 919
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 269
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 629
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 209
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 629
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 299
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 579
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 149
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "NO",
+            "AU",
+            "NZ",
+            "CA",
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1629
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 699
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 839
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 309
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "NZ",
+            "AU",
+            "NO",
+            "REST_OF_THE_WORLD",
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1399
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 399
+          },
+          "variant_count": 4
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 739
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 399
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "NZ",
+            "NO",
+            "AU",
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2369
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1249
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1089
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 309
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 799
+          },
+          "variant_count": 2
+        }
+      ]
     }
   ]
 }

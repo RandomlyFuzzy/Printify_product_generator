@@ -26,6 +26,9 @@
           {
             "id": 72213,
             "title": "Black / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "S"
@@ -48,6 +51,9 @@
           {
             "id": 72214,
             "title": "Black / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "M"
@@ -70,6 +76,9 @@
           {
             "id": 72215,
             "title": "Black / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "L"
@@ -92,6 +101,9 @@
           {
             "id": 72216,
             "title": "Black / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "XL"
@@ -114,6 +126,9 @@
           {
             "id": 72217,
             "title": "Black / 2XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "2XL"
@@ -136,6 +151,9 @@
           {
             "id": 72242,
             "title": "Mauve / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Mauve",
               "size": "S"
@@ -158,6 +176,9 @@
           {
             "id": 72244,
             "title": "Mauve / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Mauve",
               "size": "M"
@@ -180,6 +201,9 @@
           {
             "id": 72246,
             "title": "Mauve / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Mauve",
               "size": "L"
@@ -202,6 +226,9 @@
           {
             "id": 72248,
             "title": "Mauve / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Mauve",
               "size": "XL"
@@ -224,6 +251,9 @@
           {
             "id": 111407,
             "title": "Deep Heather / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Deep Heather",
               "size": "S"
@@ -246,6 +276,9 @@
           {
             "id": 111408,
             "title": "Dusty Blue / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Dusty Blue",
               "size": "S"
@@ -268,6 +301,9 @@
           {
             "id": 111410,
             "title": "Deep Heather / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Deep Heather",
               "size": "M"
@@ -290,6 +326,9 @@
           {
             "id": 111411,
             "title": "Dusty Blue / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Dusty Blue",
               "size": "M"
@@ -312,6 +351,9 @@
           {
             "id": 111413,
             "title": "Deep Heather / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Deep Heather",
               "size": "L"
@@ -334,6 +376,9 @@
           {
             "id": 111414,
             "title": "Dusty Blue / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Dusty Blue",
               "size": "L"
@@ -356,6 +401,9 @@
           {
             "id": 111416,
             "title": "Deep Heather / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Deep Heather",
               "size": "XL"
@@ -378,6 +426,9 @@
           {
             "id": 111417,
             "title": "Dusty Blue / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Dusty Blue",
               "size": "XL"
@@ -400,6 +451,9 @@
           {
             "id": 111424,
             "title": "Deep Heather / 2XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Deep Heather",
               "size": "2XL"
@@ -422,6 +476,9 @@
           {
             "id": 111425,
             "title": "Dusty Blue / 2XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Dusty Blue",
               "size": "2XL"
@@ -444,6 +501,9 @@
           {
             "id": 111426,
             "title": "Mauve / 2XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Mauve",
               "size": "2XL"
@@ -647,7 +707,79 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 769
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 209
+          },
+          "variant_count": 20
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2199
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "variant_count": 20
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1500
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1000
+          },
+          "variant_count": 20
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 849
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 209
+          },
+          "variant_count": 20
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1269
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 659
+          },
+          "variant_count": 20
+        }
+      ]
     }
   ]
 }

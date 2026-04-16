@@ -27,6 +27,9 @@
           {
             "id": 115596,
             "title": "Bone / One size / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "shape": "Bone",
               "size": "One size",
@@ -44,6 +47,9 @@
           {
             "id": 115597,
             "title": "Circle / One size / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "shape": "Circle",
               "size": "One size",
@@ -118,7 +124,51 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 549
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 99
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1159
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 199
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1089
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 129
+          },
+          "variant_count": 2
+        }
+      ]
     }
   ]
 }

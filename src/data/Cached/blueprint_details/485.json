@@ -8,6 +8,7 @@
       "https://images.printify.com/66d5c2ee13268a5e030e0cd4",
       "https://images.printify.com/66d5c2ed13268a5e030e0cd3",
       "https://images.printify.com/5f0462d687afb603d07e91f0",
+      "https://images.printify.com/69d4e4c6b5e2ccc5c40d2bd2",
       "https://images.printify.com/5f0462d787213c4fb01e91b3",
       "https://images.printify.com/6904923fb52f3a93d5084712"
     ]
@@ -25,6 +26,9 @@
           {
             "id": 65223,
             "title": "Journal",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "Journal"
             },
@@ -97,7 +101,54 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 529
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 199
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "AU",
+            "NZ",
+            "CA",
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1399
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 399
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 599
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 240
+          },
+          "variant_count": 1
+        }
+      ]
     }
   ]
 }

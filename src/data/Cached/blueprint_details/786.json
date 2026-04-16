@@ -23,6 +23,9 @@
           {
             "id": 76610,
             "title": "10 pcs / 3.9\u0022 x 5.9\u0022 / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "quantity": "10 pcs",
               "size": "3.9\u0022 x 5.9\u0022",
@@ -167,7 +170,122 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 869
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 159
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "AL",
+            "VA",
+            "MC",
+            "UA",
+            "BE",
+            "FI",
+            "LT",
+            "PL",
+            "CH",
+            "AM",
+            "BY",
+            "AD",
+            "IT",
+            "JE",
+            "MD",
+            "ES",
+            "HR",
+            "AX",
+            "GR",
+            "BG",
+            "EE",
+            "CY",
+            "LI",
+            "GI",
+            "FR",
+            "DE",
+            "BA",
+            "BV",
+            "LU",
+            "XK",
+            "DK",
+            "GE",
+            "SE",
+            "SI",
+            "GL",
+            "ME",
+            "LV",
+            "RO",
+            "TR",
+            "HU",
+            "NL",
+            "SK",
+            "IE",
+            "MT",
+            "NO",
+            "IM",
+            "MK",
+            "SM",
+            "RS",
+            "FO",
+            "IS",
+            "GB",
+            "GG",
+            "AT",
+            "CZ",
+            "GP",
+            "PT",
+            "RE"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 829
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 129
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 239
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1609
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 199
+          },
+          "variant_count": 1
+        }
+      ]
     }
   ]
 }

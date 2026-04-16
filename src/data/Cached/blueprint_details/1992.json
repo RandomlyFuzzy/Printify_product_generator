@@ -29,6 +29,9 @@
           {
             "id": 122910,
             "title": "Rectangle / 9\u0022 x 6\u0022 / Maple",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "Rectangle / 9\u0022 x 6\u0022",
               "color": "Maple"
@@ -45,6 +48,9 @@
           {
             "id": 122911,
             "title": "Paddle / 13.5\u0022 x 7\u0022 / Maple",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "Paddle / 13.5\u0022 x 7\u0022",
               "color": "Maple"
@@ -61,6 +67,9 @@
           {
             "id": 122912,
             "title": "Rectangle / 9\u0022 x 6\u0022 / Walnut",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "Rectangle / 9\u0022 x 6\u0022",
               "color": "Walnut"
@@ -77,6 +86,9 @@
           {
             "id": 122913,
             "title": "Paddle / 13.5\u0022 x 7\u0022 / Walnut",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "Paddle / 13.5\u0022 x 7\u0022",
               "color": "Walnut"
@@ -93,6 +105,9 @@
           {
             "id": 122914,
             "title": "Rectangle with drip ring / 9\u0022 x 6\u0022 / Maple",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "Rectangle with drip ring / 9\u0022 x 6\u0022",
               "color": "Maple"
@@ -109,6 +124,9 @@
           {
             "id": 122915,
             "title": "Paddle with drip ring / 13.5\u0022 x 7\u0022 / Maple",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "Paddle with drip ring / 13.5\u0022 x 7\u0022",
               "color": "Maple"
@@ -125,6 +143,9 @@
           {
             "id": 122916,
             "title": "Rectangle with drip ring / 9\u0022 x 6\u0022 / Walnut",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "Rectangle with drip ring / 9\u0022 x 6\u0022",
               "color": "Walnut"
@@ -141,6 +162,9 @@
           {
             "id": 122917,
             "title": "Paddle with drip ring / 13.5\u0022 x 7\u0022 / Walnut",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "Paddle with drip ring / 13.5\u0022 x 7\u0022",
               "color": "Walnut"
@@ -277,7 +301,93 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1719
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 599
+          },
+          "variant_count": 4
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1459
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 219
+          },
+          "variant_count": 4
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1929
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 599
+          },
+          "variant_count": 4
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2969
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 2809
+          },
+          "variant_count": 4
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2599
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 2459
+          },
+          "variant_count": 4
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1769
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 329
+          },
+          "variant_count": 4
+        }
+      ]
     }
   ]
 }

@@ -24,6 +24,9 @@
           {
             "id": 78406,
             "title": "12\u0022 x 36\u0022 (Vertical) / 0.25\u0027\u0027",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "12\u0022 x 36\u0022 (Vertical)",
               "depth": "0.25\u0027\u0027"
@@ -52,6 +55,9 @@
           {
             "id": 78407,
             "title": "36\u0022 x 12\u0022 (Horizontal) / 0.25\u0027\u0027",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "36\u0022 x 12\u0022 (Horizontal)",
               "depth": "0.25\u0027\u0027"
@@ -137,7 +143,51 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 3519
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 3519
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 5799
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 5799
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 11019
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 11019
+          },
+          "variant_count": 2
+        }
+      ]
     }
   ]
 }

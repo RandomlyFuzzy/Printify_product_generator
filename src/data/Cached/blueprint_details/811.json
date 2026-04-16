@@ -25,6 +25,9 @@
           {
             "id": 76266,
             "title": "2\u0022 \u00D7 2\u0022 / Die-Cut / Holographic",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2\u0022 \u00D7 2\u0022",
               "shape": "Die-Cut",
@@ -42,6 +45,9 @@
           {
             "id": 76267,
             "title": "3\u0022 \u00D7 3\u0022 / Die-Cut / Holographic",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "3\u0022 \u00D7 3\u0022",
               "shape": "Die-Cut",
@@ -59,6 +65,9 @@
           {
             "id": 76268,
             "title": "4\u0022 \u00D7 4\u0022 / Die-Cut / Holographic",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "4\u0022 \u00D7 4\u0022",
               "shape": "Die-Cut",
@@ -76,6 +85,9 @@
           {
             "id": 76269,
             "title": "5\u0022 \u00D7 5\u0022 / Die-Cut / Holographic",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "5\u0022 \u00D7 5\u0022",
               "shape": "Die-Cut",
@@ -93,6 +105,9 @@
           {
             "id": 76270,
             "title": "6\u0022 \u00D7 6\u0022 / Die-Cut / Holographic",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "6\u0022 \u00D7 6\u0022",
               "shape": "Die-Cut",
@@ -176,7 +191,51 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 929
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 49
+          },
+          "variant_count": 5
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 509
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 7
+          },
+          "variant_count": 5
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1049
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 55
+          },
+          "variant_count": 5
+        }
+      ]
     }
   ]
 }

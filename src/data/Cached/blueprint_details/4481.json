@@ -27,6 +27,9 @@
           {
             "id": 232081,
             "title": "LT / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "LT",
               "color": "Black"
@@ -55,6 +58,9 @@
           {
             "id": 232086,
             "title": "2XLT / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2XLT",
               "color": "Black"
@@ -83,6 +89,9 @@
           {
             "id": 232090,
             "title": "LT / Navy",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "LT",
               "color": "Navy"
@@ -111,6 +120,9 @@
           {
             "id": 232092,
             "title": "2XLT / Navy",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2XLT",
               "color": "Navy"
@@ -139,6 +151,9 @@
           {
             "id": 232099,
             "title": "LT / Royal",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "LT",
               "color": "Royal"
@@ -167,6 +182,9 @@
           {
             "id": 232101,
             "title": "2XLT / Royal",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2XLT",
               "color": "Royal"
@@ -195,6 +213,9 @@
           {
             "id": 232110,
             "title": "LT / Steel Grey",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "LT",
               "color": "Steel Grey"
@@ -223,6 +244,9 @@
           {
             "id": 232111,
             "title": "2XLT / Steel Grey",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2XLT",
               "color": "Steel Grey"
@@ -251,6 +275,9 @@
           {
             "id": 232116,
             "title": "XLT / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XLT",
               "color": "Black"
@@ -279,6 +306,9 @@
           {
             "id": 232120,
             "title": "3XLT / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "3XLT",
               "color": "Black"
@@ -307,6 +337,9 @@
           {
             "id": 232121,
             "title": "XLT / Navy",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XLT",
               "color": "Navy"
@@ -335,6 +368,9 @@
           {
             "id": 232122,
             "title": "3XLT / Navy",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "3XLT",
               "color": "Navy"
@@ -363,6 +399,9 @@
           {
             "id": 232123,
             "title": "XLT / Royal",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XLT",
               "color": "Royal"
@@ -391,6 +430,9 @@
           {
             "id": 232124,
             "title": "3XLT / Royal",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "3XLT",
               "color": "Royal"
@@ -419,6 +461,9 @@
           {
             "id": 232125,
             "title": "XLT / Steel Grey",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XLT",
               "color": "Steel Grey"
@@ -447,6 +492,9 @@
           {
             "id": 232126,
             "title": "3XLT / Steel Grey",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "3XLT",
               "color": "Steel Grey"
@@ -475,6 +523,9 @@
           {
             "id": 232127,
             "title": "4XLT / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "4XLT",
               "color": "Black"
@@ -503,6 +554,9 @@
           {
             "id": 232128,
             "title": "4XLT / Navy",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "4XLT",
               "color": "Navy"
@@ -531,6 +585,9 @@
           {
             "id": 232129,
             "title": "4XLT / Royal",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "4XLT",
               "color": "Royal"
@@ -559,6 +616,9 @@
           {
             "id": 232130,
             "title": "4XLT / Steel Grey",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "4XLT",
               "color": "Steel Grey"
@@ -733,7 +793,65 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 519
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 219
+          },
+          "variant_count": 20
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1000
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 400
+          },
+          "variant_count": 20
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 939
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 20
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1249
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "variant_count": 20
+        }
+      ]
     }
   ]
 }

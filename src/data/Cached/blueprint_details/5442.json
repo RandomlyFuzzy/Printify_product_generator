@@ -5,8 +5,9 @@
     "brand": "TravisMathew",
     "model": "TMA41481",
     "images": [
-      "https://images.printify.com/69c515adfbdb88e2df0394c0",
-      "https://images.printify.com/69c515af437c7c6268019282",
+      "https://images.printify.com/69de120a9c145113d804b352",
+      "https://images.printify.com/69de05ef4487c477e7039255",
+      "https://images.printify.com/69de120cc3d86ac88a0a68e2",
       "https://images.printify.com/69c515b1824a14616306bf72"
     ]
   },
@@ -23,6 +24,9 @@
           {
             "id": 246811,
             "title": "Dark Grey Heather / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Dark Grey Heather",
               "size": "One size"
@@ -115,7 +119,65 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 829
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 269
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "variant_count": 0
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1599
+          },
+          "variant_count": 0
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1369
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 819
+          },
+          "variant_count": 0
+        }
+      ]
     }
   ]
 }

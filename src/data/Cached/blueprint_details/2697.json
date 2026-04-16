@@ -24,6 +24,9 @@
           {
             "id": 148196,
             "title": "16\u0027\u0027 \u00D7 16\u0027\u0027 / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "16\u0027\u0027 \u00D7 16\u0027\u0027",
               "color": "White"
@@ -40,6 +43,9 @@
           {
             "id": 148197,
             "title": "18\u0027\u0027 \u00D7 18\u0027\u0027 / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "18\u0027\u0027 \u00D7 18\u0027\u0027",
               "color": "White"
@@ -56,6 +62,9 @@
           {
             "id": 148198,
             "title": "20\u0027\u0027 \u00D7 20\u0027\u0027 / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "20\u0027\u0027 \u00D7 20\u0027\u0027",
               "color": "White"
@@ -72,6 +81,9 @@
           {
             "id": 148199,
             "title": "26\u0027\u0027 \u00D7 26\u0027\u0027 / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "26\u0027\u0027 \u00D7 26\u0027\u0027",
               "color": "White"
@@ -260,7 +272,149 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1499
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1499
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1059
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1029
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 959
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 929
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1159
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1159
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1669
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 919
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1419
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 799
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1699
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1699
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2599
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 2499
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2499
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 2499
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1039
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1039
+          },
+          "variant_count": 1
+        }
+      ]
     }
   ]
 }

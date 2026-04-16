@@ -33,6 +33,9 @@
           {
             "id": 118723,
             "title": "One size / Black / Charcoal",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Black / Charcoal"
@@ -49,6 +52,9 @@
           {
             "id": 118726,
             "title": "One size / Charcoal / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Charcoal / Black"
@@ -65,6 +71,9 @@
           {
             "id": 244821,
             "title": "One size / White / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "White / White"
@@ -81,6 +90,9 @@
           {
             "id": 244822,
             "title": "One size / Black / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Black / Black"
@@ -160,7 +172,51 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 929
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 199
+          },
+          "variant_count": 4
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1199
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 599
+          },
+          "variant_count": 4
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 749
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 99
+          },
+          "variant_count": 4
+        }
+      ]
     },
     {
       "provider": {
@@ -174,6 +230,9 @@
           {
             "id": 118722,
             "title": "One size / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Black"
@@ -190,6 +249,9 @@
           {
             "id": 118723,
             "title": "One size / Black / Charcoal",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Black / Charcoal"
@@ -206,6 +268,9 @@
           {
             "id": 118724,
             "title": "One size / Black / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Black / White"
@@ -222,6 +287,9 @@
           {
             "id": 118726,
             "title": "One size / Charcoal / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Charcoal / Black"
@@ -238,6 +306,9 @@
           {
             "id": 118727,
             "title": "One size / Heather Grey / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Heather Grey / Black"
@@ -254,6 +325,9 @@
           {
             "id": 118728,
             "title": "One size / Heather Grey / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Heather Grey / White"
@@ -270,6 +344,9 @@
           {
             "id": 118729,
             "title": "One size / Loden",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Loden"
@@ -350,132 +427,6 @@
             ],
             "first_item": {
               "currency": "USD",
-              "cost": 459
-            },
-            "additional_items": {
-              "currency": "USD",
-              "cost": 145
-            },
-            "countries": [
-              "JE",
-              "MT",
-              "LU",
-              "MD",
-              "SK",
-              "LT",
-              "HU",
-              "MK",
-              "BE",
-              "AT",
-              "RO",
-              "IE",
-              "AX",
-              "FO",
-              "DE",
-              "MC",
-              "SE",
-              "ES",
-              "CY",
-              "DK",
-              "VA",
-              "LV",
-              "HR",
-              "GI",
-              "AL",
-              "SM",
-              "BG",
-              "AD",
-              "UA",
-              "GR",
-              "CZ",
-              "EE",
-              "GP",
-              "BY",
-              "GG",
-              "NL",
-              "GE",
-              "FR",
-              "BA",
-              "IM",
-              "RE",
-              "PT",
-              "ME",
-              "TR",
-              "PL",
-              "RS",
-              "XK",
-              "BV",
-              "GL",
-              "AM",
-              "FI",
-              "IT",
-              "SI"
-            ]
-          },
-          {
-            "variant_ids": [
-              118722,
-              118723,
-              118724,
-              118725,
-              118726,
-              118727,
-              118728,
-              118729
-            ],
-            "first_item": {
-              "currency": "USD",
-              "cost": 999
-            },
-            "additional_items": {
-              "currency": "USD",
-              "cost": 110
-            },
-            "countries": [
-              "LI",
-              "NO",
-              "IS",
-              "CH"
-            ]
-          },
-          {
-            "variant_ids": [
-              118722,
-              118723,
-              118724,
-              118725,
-              118726,
-              118727,
-              118728,
-              118729
-            ],
-            "first_item": {
-              "currency": "USD",
-              "cost": 999
-            },
-            "additional_items": {
-              "currency": "USD",
-              "cost": 399
-            },
-            "countries": [
-              "JP",
-              "REST_OF_THE_WORLD",
-              "BR"
-            ]
-          },
-          {
-            "variant_ids": [
-              118722,
-              118723,
-              118724,
-              118725,
-              118726,
-              118727,
-              118728,
-              118729
-            ],
-            "first_item": {
-              "currency": "USD",
               "cost": 939
             },
             "additional_items": {
@@ -499,14 +450,117 @@
             ],
             "first_item": {
               "currency": "USD",
-              "cost": 439
+              "cost": 999
             },
             "additional_items": {
               "currency": "USD",
-              "cost": 159
+              "cost": 110
             },
             "countries": [
-              "GB"
+              "LI",
+              "IS",
+              "CH",
+              "NO"
+            ]
+          },
+          {
+            "variant_ids": [
+              118722,
+              118723,
+              118724,
+              118725,
+              118726,
+              118727,
+              118728,
+              118729
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "REST_OF_THE_WORLD",
+              "BR",
+              "JP"
+            ]
+          },
+          {
+            "variant_ids": [
+              118722,
+              118723,
+              118724,
+              118725,
+              118726,
+              118727,
+              118728,
+              118729
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 459
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 145
+            },
+            "countries": [
+              "AL",
+              "AT",
+              "GR",
+              "HR",
+              "CY",
+              "FO",
+              "FR",
+              "GI",
+              "GG",
+              "GP",
+              "HU",
+              "IM",
+              "IT",
+              "LV",
+              "MT",
+              "MD",
+              "MK",
+              "PL",
+              "NL",
+              "RE",
+              "SE",
+              "SI",
+              "TR",
+              "ES",
+              "XK",
+              "AX",
+              "AD",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "CZ",
+              "EE",
+              "DK",
+              "FI",
+              "GE",
+              "DE",
+              "GL",
+              "VA",
+              "IE",
+              "JE",
+              "LT",
+              "LU",
+              "MC",
+              "ME",
+              "RO",
+              "PT",
+              "AM",
+              "BY",
+              "SM",
+              "RS",
+              "UA",
+              "SK"
             ]
           },
           {
@@ -531,9 +585,203 @@
             "countries": [
               "AU"
             ]
+          },
+          {
+            "variant_ids": [
+              118722,
+              118723,
+              118724,
+              118725,
+              118726,
+              118727,
+              118728,
+              118729
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 159
+            },
+            "countries": [
+              "GB"
+            ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 449
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 209
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 489
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 219
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 939
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "LI",
+            "IS",
+            "CH",
+            "NO"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 110
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD",
+            "BR",
+            "JP"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 399
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "AL",
+            "AT",
+            "GR",
+            "HR",
+            "CY",
+            "FO",
+            "FR",
+            "GI",
+            "GG",
+            "GP",
+            "HU",
+            "IM",
+            "IT",
+            "LV",
+            "MT",
+            "MD",
+            "MK",
+            "PL",
+            "NL",
+            "RE",
+            "SE",
+            "SI",
+            "TR",
+            "ES",
+            "XK",
+            "AX",
+            "AD",
+            "BE",
+            "BA",
+            "BV",
+            "BG",
+            "CZ",
+            "EE",
+            "DK",
+            "FI",
+            "GE",
+            "DE",
+            "GL",
+            "VA",
+            "IE",
+            "JE",
+            "LT",
+            "LU",
+            "MC",
+            "ME",
+            "RO",
+            "PT",
+            "AM",
+            "BY",
+            "SM",
+            "RS",
+            "UA",
+            "SK"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 459
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 145
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1249
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 239
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "GB"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 159
+          },
+          "variant_count": 8
+        }
+      ]
     },
     {
       "provider": {
@@ -547,6 +795,9 @@
           {
             "id": 118722,
             "title": "One size / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Black"
@@ -563,6 +814,9 @@
           {
             "id": 118723,
             "title": "One size / Black/Charcoal",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Black / Charcoal"
@@ -579,6 +833,9 @@
           {
             "id": 118724,
             "title": "One size / Black/White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Black / White"
@@ -595,6 +852,9 @@
           {
             "id": 118726,
             "title": "One size / Charcoal/Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Charcoal / Black"
@@ -611,6 +871,9 @@
           {
             "id": 118727,
             "title": "One size / Heather Grey/Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Heather Grey / Black"
@@ -627,6 +890,9 @@
           {
             "id": 118728,
             "title": "One size / Heather Grey/White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Heather Grey / White"
@@ -643,6 +909,9 @@
           {
             "id": 118729,
             "title": "One size / Loden",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Loden"
@@ -682,6 +951,29 @@
             "additional_items": {
               "currency": "USD",
               "cost": 209
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              118722,
+              118723,
+              118724,
+              118725,
+              118726,
+              118727,
+              118728,
+              118729
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 489
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 219
             },
             "countries": [
               "US"
@@ -755,32 +1047,81 @@
             "countries": [
               "CA"
             ]
-          },
-          {
-            "variant_ids": [
-              118722,
-              118723,
-              118724,
-              118725,
-              118726,
-              118727,
-              118728,
-              118729
-            ],
-            "first_item": {
-              "currency": "USD",
-              "cost": 489
-            },
-            "additional_items": {
-              "currency": "USD",
-              "cost": 219
-            },
-            "countries": [
-              "US"
-            ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 449
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 209
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 489
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 219
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 399
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1249
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 239
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 939
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 8
+        }
+      ]
     }
   ]
 }

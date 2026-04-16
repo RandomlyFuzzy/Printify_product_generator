@@ -24,6 +24,9 @@
           {
             "id": 94860,
             "title": "10.8\u0022 x 8.4\u0022 / Semi Glossy",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "10.8\u0022 x 8.4\u0022",
               "paper": "Semi Glossy"
@@ -166,7 +169,51 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2219
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 799
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2799
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 799
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 679
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 129
+          },
+          "variant_count": 1
+        }
+      ]
     }
   ]
 }

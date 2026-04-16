@@ -29,6 +29,9 @@
           {
             "id": 102170,
             "title": "Athletic Heather / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Athletic Heather",
               "size": "S"
@@ -51,6 +54,9 @@
           {
             "id": 102171,
             "title": "Athletic Heather / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Athletic Heather",
               "size": "M"
@@ -73,6 +79,9 @@
           {
             "id": 102172,
             "title": "Athletic Heather / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Athletic Heather",
               "size": "L"
@@ -95,6 +104,9 @@
           {
             "id": 102173,
             "title": "Athletic Heather / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Athletic Heather",
               "size": "XL"
@@ -117,6 +129,9 @@
           {
             "id": 102174,
             "title": "Athletic Heather / 2XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Athletic Heather",
               "size": "2XL"
@@ -139,6 +154,9 @@
           {
             "id": 102175,
             "title": "Deep Heather / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Deep Heather",
               "size": "S"
@@ -161,6 +179,9 @@
           {
             "id": 102176,
             "title": "Deep Heather / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Deep Heather",
               "size": "M"
@@ -183,6 +204,9 @@
           {
             "id": 102177,
             "title": "Deep Heather / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Deep Heather",
               "size": "L"
@@ -205,6 +229,9 @@
           {
             "id": 102178,
             "title": "Deep Heather / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Deep Heather",
               "size": "XL"
@@ -227,6 +254,9 @@
           {
             "id": 102179,
             "title": "Deep Heather / 2XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Deep Heather",
               "size": "2XL"
@@ -249,6 +279,9 @@
           {
             "id": 102180,
             "title": "Solid Black Blend / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Solid Black Blend",
               "size": "S"
@@ -271,6 +304,9 @@
           {
             "id": 102181,
             "title": "Solid Black Blend / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Solid Black Blend",
               "size": "M"
@@ -293,6 +329,9 @@
           {
             "id": 102182,
             "title": "Solid Black Blend / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Solid Black Blend",
               "size": "L"
@@ -315,6 +354,9 @@
           {
             "id": 102183,
             "title": "Solid Black Blend / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Solid Black Blend",
               "size": "XL"
@@ -337,6 +379,9 @@
           {
             "id": 102184,
             "title": "Solid Black Blend / 2XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Solid Black Blend",
               "size": "2XL"
@@ -359,6 +404,9 @@
           {
             "id": 102185,
             "title": "Solid White Blend / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Solid White Blend",
               "size": "S"
@@ -381,6 +429,9 @@
           {
             "id": 102186,
             "title": "Solid White Blend / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Solid White Blend",
               "size": "M"
@@ -403,6 +454,9 @@
           {
             "id": 102187,
             "title": "Solid White Blend / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Solid White Blend",
               "size": "L"
@@ -425,6 +479,9 @@
           {
             "id": 102188,
             "title": "Solid White Blend / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Solid White Blend",
               "size": "XL"
@@ -447,6 +504,9 @@
           {
             "id": 102189,
             "title": "Solid White Blend / 2XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Solid White Blend",
               "size": "2XL"
@@ -580,7 +640,51 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 519
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 219
+          },
+          "variant_count": 20
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1519
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 619
+          },
+          "variant_count": 20
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1380
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 560
+          },
+          "variant_count": 20
+        }
+      ]
     }
   ]
 }

@@ -30,6 +30,9 @@
           {
             "id": 92334,
             "title": "Black sole / US 5.5",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black sole",
               "size": "US 5.5"
@@ -52,6 +55,9 @@
           {
             "id": 92335,
             "title": "Black sole / US 6",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black sole",
               "size": "US 6"
@@ -74,6 +80,9 @@
           {
             "id": 92336,
             "title": "Black sole / US 7",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black sole",
               "size": "US 7"
@@ -96,6 +105,9 @@
           {
             "id": 92337,
             "title": "Black sole / US 8",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black sole",
               "size": "US 8"
@@ -118,6 +130,9 @@
           {
             "id": 92338,
             "title": "Black sole / US 9",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black sole",
               "size": "US 9"
@@ -140,6 +155,9 @@
           {
             "id": 92339,
             "title": "Black sole / US 10",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black sole",
               "size": "US 10"
@@ -162,6 +180,9 @@
           {
             "id": 92340,
             "title": "Black sole / US 11",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black sole",
               "size": "US 11"
@@ -184,6 +205,9 @@
           {
             "id": 92341,
             "title": "Black sole / US 11.5",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black sole",
               "size": "US 11.5"
@@ -206,6 +230,9 @@
           {
             "id": 92342,
             "title": "Black sole / US 12",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black sole",
               "size": "US 12"
@@ -228,6 +255,9 @@
           {
             "id": 92343,
             "title": "White sole / US 5.5",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White sole",
               "size": "US 5.5"
@@ -250,6 +280,9 @@
           {
             "id": 92344,
             "title": "White sole / US 6",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White sole",
               "size": "US 6"
@@ -272,6 +305,9 @@
           {
             "id": 92345,
             "title": "White sole / US 7",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White sole",
               "size": "US 7"
@@ -294,6 +330,9 @@
           {
             "id": 92346,
             "title": "White sole / US 8",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White sole",
               "size": "US 8"
@@ -316,6 +355,9 @@
           {
             "id": 92347,
             "title": "White sole / US 9",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White sole",
               "size": "US 9"
@@ -338,6 +380,9 @@
           {
             "id": 92348,
             "title": "White sole / US 10",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White sole",
               "size": "US 10"
@@ -360,6 +405,9 @@
           {
             "id": 92349,
             "title": "White sole / US 11",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White sole",
               "size": "US 11"
@@ -382,6 +430,9 @@
           {
             "id": 92350,
             "title": "White sole / US 11.5",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White sole",
               "size": "US 11.5"
@@ -404,6 +455,9 @@
           {
             "id": 92351,
             "title": "White sole / US 12",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White sole",
               "size": "US 12"
@@ -593,7 +647,113 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "REST_OF_THE_WORLD",
+            "CA",
+            "MX",
+            "BR",
+            "NZ",
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2469
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 2469
+          },
+          "variant_count": 18
+        },
+        {
+          "countries": [
+            "GB",
+            "AX",
+            "AL",
+            "AD",
+            "AM",
+            "AT",
+            "BY",
+            "BE",
+            "BA",
+            "BV",
+            "BG",
+            "HR",
+            "CY",
+            "CZ",
+            "DK",
+            "EE",
+            "FO",
+            "FI",
+            "FR",
+            "GE",
+            "DE",
+            "GI",
+            "GR",
+            "GL",
+            "GP",
+            "GG",
+            "VA",
+            "HU",
+            "IS",
+            "IE",
+            "IM",
+            "IT",
+            "JE",
+            "LV",
+            "LI",
+            "LT",
+            "LU",
+            "MK",
+            "MT",
+            "MD",
+            "MC",
+            "ME",
+            "NL",
+            "NO",
+            "PL",
+            "PT",
+            "RE",
+            "RO",
+            "SM",
+            "RS",
+            "SK",
+            "SI",
+            "ES",
+            "SE",
+            "CH",
+            "TR",
+            "UA",
+            "XK"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1979
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1979
+          },
+          "variant_count": 18
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1799
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1799
+          },
+          "variant_count": 18
+        }
+      ]
     }
   ]
 }

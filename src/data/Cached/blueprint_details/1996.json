@@ -27,6 +27,9 @@
           {
             "id": 122880,
             "title": "Natural Bamboo / 19\u0022 x 13.75\u0022",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "material": "Natural Bamboo",
               "size": "19\u0022 x 13.75\u0022"
@@ -43,6 +46,9 @@
           {
             "id": 122881,
             "title": "Espresso Black / 19\u0022 x 13.75\u0022",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "material": "Espresso Black",
               "size": "19\u0022 x 13.75\u0022"
@@ -117,7 +123,52 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "REST_OF_THE_WORLD",
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 3659
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 2539
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2299
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 879
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2679
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 879
+          },
+          "variant_count": 2
+        }
+      ]
     }
   ]
 }

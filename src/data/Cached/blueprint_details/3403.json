@@ -52,6 +52,9 @@
           {
             "id": 192910,
             "title": "XS / Black/ Deep Red",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XS",
               "color": "Black/ Deep Red"
@@ -68,6 +71,9 @@
           {
             "id": 192971,
             "title": "S / Black/ Deep Red",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "S",
               "color": "Black/ Deep Red"
@@ -84,6 +90,9 @@
           {
             "id": 192973,
             "title": "M / Black/ Deep Red",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "M",
               "color": "Black/ Deep Red"
@@ -100,6 +109,9 @@
           {
             "id": 192998,
             "title": "L / Black/ Deep Red",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "L",
               "color": "Black/ Deep Red"
@@ -116,6 +128,9 @@
           {
             "id": 193000,
             "title": "XL / Black/ Deep Red",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XL",
               "color": "Black/ Deep Red"
@@ -132,6 +147,9 @@
           {
             "id": 193024,
             "title": "2XL / Black/ Deep Red",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2XL",
               "color": "Black/ Deep Red"
@@ -148,6 +166,9 @@
           {
             "id": 193025,
             "title": "3XL / Black/ Deep Red",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "3XL",
               "color": "Black/ Deep Red"
@@ -164,6 +185,9 @@
           {
             "id": 193056,
             "title": "4XL / Black/ Deep Red",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "4XL",
               "color": "Black/ Deep Red"
@@ -278,7 +302,65 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 519
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 219
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1000
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 400
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 939
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1249
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "variant_count": 8
+        }
+      ]
     }
   ]
 }

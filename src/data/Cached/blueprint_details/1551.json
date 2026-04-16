@@ -28,6 +28,9 @@
           {
             "id": 109739,
             "title": "Black jar \u002B lid / Fruit Punch / NET WT 7.2 OZ (204g)",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black jar \u002B lid",
               "flavor": "Fruit Punch",
@@ -67,7 +70,23 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 649
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 399
+          },
+          "variant_count": 1
+        }
+      ]
     }
   ]
 }

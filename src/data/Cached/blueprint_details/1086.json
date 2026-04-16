@@ -24,6 +24,9 @@
           {
             "id": 81495,
             "title": "1\u0022 / Round / 1 pc",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "1\u0022",
               "shape": "Round",
@@ -41,6 +44,9 @@
           {
             "id": 81496,
             "title": "1\u0022 / Round / 10 pcs",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "1\u0022",
               "shape": "Round",
@@ -58,6 +64,9 @@
           {
             "id": 81497,
             "title": "1.25\u0022 / Round / 1 pc",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "1.25\u0022",
               "shape": "Round",
@@ -75,6 +84,9 @@
           {
             "id": 81498,
             "title": "1.25\u0022 / Round / 10 pcs",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "1.25\u0022",
               "shape": "Round",
@@ -92,6 +104,9 @@
           {
             "id": 81499,
             "title": "2.25\u0022 / Round / 1 pc",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2.25\u0022",
               "shape": "Round",
@@ -109,6 +124,9 @@
           {
             "id": 81500,
             "title": "2.25\u0022 / Round / 10 pcs",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2.25\u0022",
               "shape": "Round",
@@ -126,6 +144,9 @@
           {
             "id": 81501,
             "title": "3.5\u0022 / Round / 1 pc",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "3.5\u0022",
               "shape": "Round",
@@ -143,6 +164,9 @@
           {
             "id": 81502,
             "title": "3.5\u0022 / Round / 10 pcs",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "3.5\u0022",
               "shape": "Round",
@@ -432,7 +456,235 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 799
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 99
+          },
+          "variant_count": 4
+        },
+        {
+          "countries": [
+            "AM",
+            "BG",
+            "DE",
+            "GP",
+            "SM",
+            "NL",
+            "UA",
+            "GB",
+            "BE",
+            "EE",
+            "AD",
+            "GL",
+            "SK",
+            "BV",
+            "HU",
+            "BY",
+            "ME",
+            "AT",
+            "VA",
+            "IT",
+            "PT",
+            "GE",
+            "GI",
+            "GG",
+            "IE",
+            "JE",
+            "LV",
+            "MC",
+            "CY",
+            "AX",
+            "HR",
+            "FR",
+            "LU",
+            "FO",
+            "DK",
+            "NO",
+            "RS",
+            "GR",
+            "PL",
+            "SI",
+            "MK",
+            "ES",
+            "CH",
+            "TR",
+            "SE",
+            "IM",
+            "XK",
+            "MD",
+            "FI",
+            "LI",
+            "RO",
+            "AL",
+            "BA",
+            "CZ",
+            "IS",
+            "LT",
+            "MT",
+            "RE"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 829
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 129
+          },
+          "variant_count": 4
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 869
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 159
+          },
+          "variant_count": 4
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1589
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 199
+          },
+          "variant_count": 4
+        },
+        {
+          "countries": [
+            "BE",
+            "AL",
+            "BV",
+            "GI",
+            "GR",
+            "EE",
+            "BG",
+            "JE",
+            "MK",
+            "ES",
+            "TR",
+            "IE",
+            "IT",
+            "LV",
+            "CH",
+            "GB",
+            "CZ",
+            "GL",
+            "GP",
+            "HU",
+            "MT",
+            "HR",
+            "AX",
+            "PL",
+            "UA",
+            "FR",
+            "LT",
+            "SM",
+            "AD",
+            "AM",
+            "CY",
+            "DE",
+            "GG",
+            "LI",
+            "LU",
+            "FO",
+            "IS",
+            "IM",
+            "BA",
+            "AT",
+            "BY",
+            "NL",
+            "NO",
+            "MD",
+            "RS",
+            "XK",
+            "FI",
+            "RO",
+            "SE",
+            "GE",
+            "ME",
+            "RE",
+            "VA",
+            "MC",
+            "PT",
+            "DK",
+            "SK",
+            "SI"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 949
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 199
+          },
+          "variant_count": 4
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 199
+          },
+          "variant_count": 4
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 239
+          },
+          "variant_count": 4
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1869
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 299
+          },
+          "variant_count": 4
+        }
+      ]
     }
   ]
 }

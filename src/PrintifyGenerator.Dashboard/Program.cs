@@ -7,6 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.Configure<DashboardOptions>(builder.Configuration.GetSection(DashboardOptions.SectionName));
 builder.Services.AddSingleton<DashboardDataService>();
+builder.Services.AddSingleton<BlueprintCatalogService>();
 builder.Services.AddSingleton<GenerationRuntimeService>();
 builder.Services.AddSingleton<IHostedService>(static serviceProvider => serviceProvider.GetRequiredService<GenerationRuntimeService>());
 builder.Services.AddHttpClient<NodeHealthService>(client =>

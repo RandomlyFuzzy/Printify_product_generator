@@ -23,6 +23,9 @@
           {
             "id": 33755,
             "title": "18\u2033 x 12\u2033",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "18\u2033 x 12\u2033"
             },
@@ -38,6 +41,9 @@
           {
             "id": 33756,
             "title": "24\u2033 x 18\u2033",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "24\u2033 x 18\u2033"
             },
@@ -53,6 +59,9 @@
           {
             "id": 33757,
             "title": "36\u2033 x 24\u2033",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "36\u2033 x 24\u2033"
             },
@@ -68,6 +77,9 @@
           {
             "id": 33758,
             "title": "12\u2033 x 18\u2033",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "12\u2033 x 18\u2033"
             },
@@ -83,6 +95,9 @@
           {
             "id": 33759,
             "title": "18\u2033 x 24\u2033",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "18\u2033 x 24\u2033"
             },
@@ -98,6 +113,9 @@
           {
             "id": 33760,
             "title": "24\u2033 x 36\u2033",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "24\u2033 x 36\u2033"
             },
@@ -120,7 +138,8 @@
         "profiles": [
           {
             "variant_ids": [
-              33757
+              33757,
+              33760
             ],
             "first_item": {
               "currency": "USD",
@@ -241,7 +260,107 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1479
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 539
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1449
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 529
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1159
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 619
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 759
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 109
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1309
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 209
+          },
+          "variant_count": 4
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1339
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 319
+          },
+          "variant_count": 4
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 749
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 109
+          },
+          "variant_count": 2
+        }
+      ]
     }
   ]
 }

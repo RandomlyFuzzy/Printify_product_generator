@@ -28,6 +28,9 @@
           {
             "id": 109736,
             "title": "Black bottle \u002B cap / Unflavored / 60 Vegetable capsules",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black bottle \u002B cap",
               "flavor": "Unflavored",
@@ -67,7 +70,23 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 449
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 199
+          },
+          "variant_count": 1
+        }
+      ]
     }
   ]
 }

@@ -27,6 +27,9 @@
           {
             "id": 77474,
             "title": "10\u0022 \u00D7 8\u0022 / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "10\u0022 \u00D7 8\u0022",
               "color": "Black"
@@ -110,7 +113,58 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "CN"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "NZ",
+            "REST_OF_THE_WORLD",
+            "US",
+            "BR",
+            "MX",
+            "CA",
+            "DK",
+            "NL"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 360
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 360
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1079
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1079
+          },
+          "variant_count": 1
+        }
+      ]
     }
   ]
 }

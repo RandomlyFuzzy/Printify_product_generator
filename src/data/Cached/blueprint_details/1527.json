@@ -26,6 +26,9 @@
           {
             "id": 109614,
             "title": "6oz / Green",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "6oz",
               "color": "Green"
@@ -42,6 +45,9 @@
           {
             "id": 109616,
             "title": "6oz / Navy",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "6oz",
               "color": "Navy"
@@ -58,6 +64,9 @@
           {
             "id": 109617,
             "title": "6oz / Orange",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "6oz",
               "color": "Orange"
@@ -74,6 +83,9 @@
           {
             "id": 109618,
             "title": "6oz / Pink",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "6oz",
               "color": "Pink"
@@ -90,6 +102,9 @@
           {
             "id": 109619,
             "title": "6oz / Purple",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "6oz",
               "color": "Purple"
@@ -106,6 +121,9 @@
           {
             "id": 109620,
             "title": "6oz / Red",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "6oz",
               "color": "Red"
@@ -122,6 +140,9 @@
           {
             "id": 109621,
             "title": "6oz / Royal",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "6oz",
               "color": "Royal"
@@ -138,6 +159,9 @@
           {
             "id": 109622,
             "title": "6oz / Teal",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "6oz",
               "color": "Teal"
@@ -154,6 +178,9 @@
           {
             "id": 109623,
             "title": "6oz / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "6oz",
               "color": "White"
@@ -252,7 +279,52 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "REST_OF_THE_WORLD",
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1679
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 489
+          },
+          "variant_count": 10
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 769
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 349
+          },
+          "variant_count": 10
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1179
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 479
+          },
+          "variant_count": 10
+        }
+      ]
     }
   ]
 }

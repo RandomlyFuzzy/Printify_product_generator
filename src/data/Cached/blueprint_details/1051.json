@@ -28,6 +28,9 @@
           {
             "id": 91883,
             "title": "80\u0022 \u00D7 55\u0022 / Microfiber Fleece",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "80\u0022 \u00D7 55\u0022",
               "material": "Microfiber Fleece"
@@ -44,6 +47,9 @@
           {
             "id": 92068,
             "title": "80\u0022 \u00D7 55\u0022 / Sherpa",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "80\u0022 \u00D7 55\u0022",
               "material": "Sherpa"
@@ -209,7 +215,137 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 4999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 4879
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "AU",
+            "NZ"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2689
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 2559
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 2699
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 5629
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 5499
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "AX",
+            "AL",
+            "AD",
+            "AM",
+            "AT",
+            "BY",
+            "BE",
+            "BA",
+            "BV",
+            "BG",
+            "HR",
+            "CY",
+            "CZ",
+            "DK",
+            "EE",
+            "FO",
+            "FI",
+            "FR",
+            "GE",
+            "DE",
+            "GI",
+            "GR",
+            "GL",
+            "GP",
+            "GG",
+            "VA",
+            "HU",
+            "IS",
+            "IE",
+            "IM",
+            "IT",
+            "JE",
+            "LV",
+            "LI",
+            "LT",
+            "LU",
+            "MK",
+            "MT",
+            "MD",
+            "MC",
+            "ME",
+            "NL",
+            "NO",
+            "PL",
+            "PT",
+            "RE",
+            "RO",
+            "SM",
+            "RS",
+            "SK",
+            "SI",
+            "ES",
+            "SE",
+            "CH",
+            "TR",
+            "UA",
+            "GB",
+            "XK"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2629
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 2499
+          },
+          "variant_count": 2
+        }
+      ]
     }
   ]
 }

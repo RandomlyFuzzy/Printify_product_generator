@@ -23,6 +23,9 @@
           {
             "id": 94265,
             "title": "4\u0022 \u00D7 4\u0022 / 50 piece",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "4\u0022 \u00D7 4\u0022",
               "quantity": "50 piece"
@@ -39,6 +42,9 @@
           {
             "id": 94266,
             "title": "4\u0022 \u00D7 4\u0022 / 100 piece",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "4\u0022 \u00D7 4\u0022",
               "quantity": "100 piece"
@@ -111,7 +117,52 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1139
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 529
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD",
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 5599
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 2199
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1269
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 829
+          },
+          "variant_count": 1
+        }
+      ]
     }
   ]
 }

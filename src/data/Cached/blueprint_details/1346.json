@@ -24,6 +24,9 @@
           {
             "id": 103043,
             "title": "24\u0022 x 16\u0022",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "24\u0022 x 16\u0022"
             },
@@ -93,7 +96,51 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2049
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 2049
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 7049
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 5999
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 5579
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 2969
+          },
+          "variant_count": 1
+        }
+      ]
     }
   ]
 }

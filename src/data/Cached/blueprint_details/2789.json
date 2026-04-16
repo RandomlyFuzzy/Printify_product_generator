@@ -25,6 +25,9 @@
           {
             "id": 150393,
             "title": "White / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White",
               "size": "S"
@@ -53,6 +56,9 @@
           {
             "id": 150394,
             "title": "White / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White",
               "size": "M"
@@ -81,6 +87,9 @@
           {
             "id": 150396,
             "title": "White / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White",
               "size": "XL"
@@ -109,6 +118,9 @@
           {
             "id": 150398,
             "title": "Black / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "S"
@@ -137,6 +149,9 @@
           {
             "id": 150399,
             "title": "Black / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "M"
@@ -165,6 +180,9 @@
           {
             "id": 150402,
             "title": "Black / 2XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "2XL"
@@ -193,6 +211,9 @@
           {
             "id": 150403,
             "title": "Sand / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Sand",
               "size": "S"
@@ -221,6 +242,9 @@
           {
             "id": 150405,
             "title": "Sand / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Sand",
               "size": "L"
@@ -249,6 +273,9 @@
           {
             "id": 150406,
             "title": "Sand / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Sand",
               "size": "XL"
@@ -277,6 +304,9 @@
           {
             "id": 150407,
             "title": "Sand / 2XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Sand",
               "size": "2XL"
@@ -461,7 +491,79 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 769
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 209
+          },
+          "variant_count": 15
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1500
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1000
+          },
+          "variant_count": 15
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2199
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "variant_count": 15
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 849
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 209
+          },
+          "variant_count": 15
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1269
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 659
+          },
+          "variant_count": 15
+        }
+      ]
     }
   ]
 }

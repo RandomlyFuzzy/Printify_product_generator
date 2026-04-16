@@ -27,6 +27,9 @@
           {
             "id": 86209,
             "title": "XS / Brushed Faux Suede",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XS",
               "material": "Brushed Faux Suede"
@@ -49,6 +52,9 @@
           {
             "id": 86210,
             "title": "S / Brushed Faux Suede",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "S",
               "material": "Brushed Faux Suede"
@@ -71,6 +77,9 @@
           {
             "id": 86211,
             "title": "M / Brushed Faux Suede",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "M",
               "material": "Brushed Faux Suede"
@@ -93,6 +102,9 @@
           {
             "id": 86212,
             "title": "L / Brushed Faux Suede",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "L",
               "material": "Brushed Faux Suede"
@@ -115,6 +127,9 @@
           {
             "id": 86213,
             "title": "XL / Brushed Faux Suede",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XL",
               "material": "Brushed Faux Suede"
@@ -137,6 +152,9 @@
           {
             "id": 86214,
             "title": "2XL / Brushed Faux Suede",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2XL",
               "material": "Brushed Faux Suede"
@@ -249,7 +267,65 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 569
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 259
+          },
+          "variant_count": 6
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 919
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 359
+          },
+          "variant_count": 6
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1199
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 379
+          },
+          "variant_count": 6
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 589
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 299
+          },
+          "variant_count": 6
+        }
+      ]
     }
   ]
 }

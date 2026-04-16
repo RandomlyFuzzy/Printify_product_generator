@@ -27,6 +27,9 @@
           {
             "id": 244687,
             "title": "Ellipse / 17\u0022 x 10\u0022",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "shape": "Ellipse",
               "size": "17\u0022 x 10\u0022"
@@ -43,6 +46,9 @@
           {
             "id": 244688,
             "title": "Inverted Rounded Rectangle / 17\u0022 x 10\u0022",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "shape": "Inverted Rounded Rectangle",
               "size": "17\u0022 x 10\u0022"
@@ -59,6 +65,9 @@
           {
             "id": 244689,
             "title": "Rounded Rectangle / 17\u0022 x 10\u0022",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "shape": "Rounded Rectangle",
               "size": "17\u0022 x 10\u0022"
@@ -246,7 +255,150 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2249
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1999
+          },
+          "variant_count": 3
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1929
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1749
+          },
+          "variant_count": 3
+        },
+        {
+          "countries": [
+            "GB"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1679
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1379
+          },
+          "variant_count": 3
+        },
+        {
+          "countries": [
+            "AX",
+            "AL",
+            "AD",
+            "AM",
+            "AT",
+            "BY",
+            "BE",
+            "BA",
+            "BV",
+            "BG",
+            "HR",
+            "CY",
+            "CZ",
+            "DK",
+            "EE",
+            "FO",
+            "FI",
+            "FR",
+            "GE",
+            "DE",
+            "GI",
+            "GR",
+            "GL",
+            "GP",
+            "GG",
+            "VA",
+            "HU",
+            "IS",
+            "IE",
+            "IM",
+            "IT",
+            "JE",
+            "LV",
+            "LI",
+            "LT",
+            "LU",
+            "MK",
+            "MT",
+            "MD",
+            "MC",
+            "ME",
+            "NL",
+            "NO",
+            "PL",
+            "PT",
+            "RE",
+            "RO",
+            "SM",
+            "RS",
+            "SK",
+            "SI",
+            "ES",
+            "SE",
+            "CH",
+            "TR",
+            "UA",
+            "GB",
+            "XK"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1729
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1499
+          },
+          "variant_count": 3
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1849
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1629
+          },
+          "variant_count": 3
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2949
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 2629
+          },
+          "variant_count": 3
+        }
+      ]
     }
   ]
 }

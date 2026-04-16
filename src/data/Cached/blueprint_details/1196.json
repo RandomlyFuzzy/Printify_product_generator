@@ -24,6 +24,9 @@
           {
             "id": 91860,
             "title": "1.7\u0022 / 6 pcs",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "1.7\u0022",
               "quantity": "6 pcs"
@@ -110,7 +113,65 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 929
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 569
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1659
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2639
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1039
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 3279
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1039
+          },
+          "variant_count": 1
+        }
+      ]
     }
   ]
 }

@@ -28,6 +28,9 @@
           {
             "id": 119914,
             "title": "Clear / Cinnamon Vanilla / 11oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Clear",
               "scent": "Cinnamon Vanilla",
@@ -45,6 +48,9 @@
           {
             "id": 119915,
             "title": "Clear / Fizz and Glitz / 11oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Clear",
               "scent": "Fizz and Glitz",
@@ -62,6 +68,9 @@
           {
             "id": 119916,
             "title": "Clear / Ocean Water / 11oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Clear",
               "scent": "Ocean Water",
@@ -79,6 +88,9 @@
           {
             "id": 119917,
             "title": "Clear / Unscented / 11oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Clear",
               "scent": "Unscented",
@@ -96,6 +108,9 @@
           {
             "id": 119918,
             "title": "Clear / White Sage and Lavender / 11oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Clear",
               "scent": "White Sage and Lavender",
@@ -113,6 +128,9 @@
           {
             "id": 119919,
             "title": "Clear / Beach Rose / 11oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Clear",
               "scent": "Beach Rose",
@@ -130,6 +148,9 @@
           {
             "id": 119920,
             "title": "Frosted / Beach Rose / 11oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Frosted",
               "scent": "Beach Rose",
@@ -147,6 +168,9 @@
           {
             "id": 119921,
             "title": "Frosted / Cinnamon Vanilla / 11oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Frosted",
               "scent": "Cinnamon Vanilla",
@@ -164,6 +188,9 @@
           {
             "id": 119922,
             "title": "Frosted / Fizz and Glitz / 11oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Frosted",
               "scent": "Fizz and Glitz",
@@ -181,6 +208,9 @@
           {
             "id": 119923,
             "title": "Frosted / Ocean Water / 11oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Frosted",
               "scent": "Ocean Water",
@@ -198,6 +228,9 @@
           {
             "id": 119924,
             "title": "Frosted / Unscented / 11oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Frosted",
               "scent": "Unscented",
@@ -215,6 +248,9 @@
           {
             "id": 119925,
             "title": "Frosted / White Sage and Lavender / 11oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Frosted",
               "scent": "White Sage and Lavender",
@@ -346,7 +382,65 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 4179
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 929
+          },
+          "variant_count": 12
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2759
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 639
+          },
+          "variant_count": 12
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 3439
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 929
+          },
+          "variant_count": 12
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 949
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 349
+          },
+          "variant_count": 12
+        }
+      ]
     }
   ]
 }

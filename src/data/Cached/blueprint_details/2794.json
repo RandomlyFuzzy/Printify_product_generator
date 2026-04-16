@@ -25,6 +25,9 @@
           {
             "id": 155625,
             "title": "White / 6.5\u0022 x 6.5\u0022 / 50 pcs",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White",
               "size": "6.5\u0022 x 6.5\u0022",
@@ -42,6 +45,9 @@
           {
             "id": 155626,
             "title": "Ecru / 6.5\u0022 x 6.5\u0022 / 50 pcs",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Ecru",
               "size": "6.5\u0022 x 6.5\u0022",
@@ -59,6 +65,9 @@
           {
             "id": 155627,
             "title": "White / 4.75\u0022 x 4.75\u0022 / 50 pcs",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White",
               "size": "4.75\u0022 x 4.75\u0022",
@@ -76,6 +85,9 @@
           {
             "id": 155628,
             "title": "Ecru / 4.75\u0022 x 4.75\u0022 / 50 pcs",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Ecru",
               "size": "4.75\u0022 x 4.75\u0022",
@@ -138,7 +150,38 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 729
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 669
+          },
+          "variant_count": 4
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD",
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 3239
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1149
+          },
+          "variant_count": 4
+        }
+      ]
     }
   ]
 }

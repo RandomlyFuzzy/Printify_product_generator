@@ -26,6 +26,9 @@
           {
             "id": 109740,
             "title": "Clear bottle \u002B black cap / Multiple Fruits / 60 Gummies (vegan)",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Clear bottle \u002B black cap",
               "flavor": "Multiple Fruits",
@@ -65,7 +68,23 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 549
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 199
+          },
+          "variant_count": 1
+        }
+      ]
     }
   ]
 }

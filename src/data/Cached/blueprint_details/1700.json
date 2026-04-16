@@ -25,6 +25,9 @@
           {
             "id": 116667,
             "title": "S",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "S"
             },
@@ -82,6 +85,9 @@
           {
             "id": 116668,
             "title": "M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "M"
             },
@@ -139,6 +145,9 @@
           {
             "id": 116669,
             "title": "L",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "L"
             },
@@ -196,6 +205,9 @@
           {
             "id": 116670,
             "title": "XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XL"
             },
@@ -253,6 +265,9 @@
           {
             "id": 116671,
             "title": "2XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2XL"
             },
@@ -310,6 +325,9 @@
           {
             "id": 116672,
             "title": "3XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "3XL"
             },
@@ -367,6 +385,9 @@
           {
             "id": 116673,
             "title": "4XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "4XL"
             },
@@ -424,6 +445,9 @@
           {
             "id": 116674,
             "title": "6XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "6XL"
             },
@@ -481,6 +505,9 @@
           {
             "id": 116675,
             "title": "5XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "5XL"
             },
@@ -690,7 +717,95 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "GB",
+            "DE",
+            "FR"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1269
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1139
+          },
+          "variant_count": 9
+        },
+        {
+          "countries": [
+            "CN"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 379
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 249
+          },
+          "variant_count": 9
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1349
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 639
+          },
+          "variant_count": 9
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1589
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1459
+          },
+          "variant_count": 9
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1419
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1169
+          },
+          "variant_count": 9
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2579
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 2409
+          },
+          "variant_count": 9
+        }
+      ]
     }
   ]
 }

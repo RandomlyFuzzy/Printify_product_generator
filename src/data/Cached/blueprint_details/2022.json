@@ -27,6 +27,9 @@
           {
             "id": 122939,
             "title": "Ivory / 4\u0022 x 4\u0022 x 2\u0022",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Ivory",
               "size": "4\u0022 x 4\u0022 x 2\u0022"
@@ -43,6 +46,9 @@
           {
             "id": 122940,
             "title": "Pink / 4\u0022 x 4\u0022 x 2\u0022",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Pink",
               "size": "4\u0022 x 4\u0022 x 2\u0022"
@@ -59,6 +65,9 @@
           {
             "id": 122941,
             "title": "Soft Gold / 4\u0022 x 4\u0022 x 2\u0022",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Soft Gold",
               "size": "4\u0022 x 4\u0022 x 2\u0022"
@@ -75,6 +84,9 @@
           {
             "id": 122942,
             "title": "Tiffany Blue / 4\u0022 x 4\u0022 x 2\u0022",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Tiffany Blue",
               "size": "4\u0022 x 4\u0022 x 2\u0022"
@@ -91,6 +103,9 @@
           {
             "id": 122943,
             "title": "Brown / 4\u0022 x 4\u0022 x 2\u0022",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Brown",
               "size": "4\u0022 x 4\u0022 x 2\u0022"
@@ -174,7 +189,52 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 649
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 269
+          },
+          "variant_count": 5
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2619
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 609
+          },
+          "variant_count": 5
+        },
+        {
+          "countries": [
+            "AU",
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2919
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 879
+          },
+          "variant_count": 5
+        }
+      ]
     }
   ]
 }

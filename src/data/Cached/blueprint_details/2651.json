@@ -29,6 +29,9 @@
           {
             "id": 147691,
             "title": "18K Gold PVD coating / Amazonite / One Size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "18K Gold PVD coating",
               "finish": "Amazonite",
@@ -46,6 +49,9 @@
           {
             "id": 147692,
             "title": "18K Gold PVD coating / Howlite / One Size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "18K Gold PVD coating",
               "finish": "Howlite",
@@ -63,6 +69,9 @@
           {
             "id": 147693,
             "title": "18K Gold PVD coating / Onyx / One Size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "18K Gold PVD coating",
               "finish": "Onyx",
@@ -80,6 +89,9 @@
           {
             "id": 147694,
             "title": "18K Gold PVD coating / Picture Jasper / One Size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "18K Gold PVD coating",
               "finish": "Picture Jasper",
@@ -97,6 +109,9 @@
           {
             "id": 147695,
             "title": "18K Gold PVD coating / Rose Quartz / One Size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "18K Gold PVD coating",
               "finish": "Rose Quartz",
@@ -114,6 +129,9 @@
           {
             "id": 147696,
             "title": "18K Gold PVD coating / Sodalite / One Size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "18K Gold PVD coating",
               "finish": "Sodalite",
@@ -131,6 +149,9 @@
           {
             "id": 147697,
             "title": "18K Gold PVD coating / Turquoise / One Size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "18K Gold PVD coating",
               "finish": "Turquoise",
@@ -148,6 +169,9 @@
           {
             "id": 147698,
             "title": "Stainless Steel (No coating) / Amazonite / One Size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Stainless Steel (No coating)",
               "finish": "Amazonite",
@@ -165,6 +189,9 @@
           {
             "id": 147699,
             "title": "Stainless Steel (No coating) / Howlite / One Size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Stainless Steel (No coating)",
               "finish": "Howlite",
@@ -182,6 +209,9 @@
           {
             "id": 147700,
             "title": "Stainless Steel (No coating) / Onyx / One Size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Stainless Steel (No coating)",
               "finish": "Onyx",
@@ -199,6 +229,9 @@
           {
             "id": 147701,
             "title": "Stainless Steel (No coating) / Picture Jasper / One Size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Stainless Steel (No coating)",
               "finish": "Picture Jasper",
@@ -216,6 +249,9 @@
           {
             "id": 147702,
             "title": "Stainless Steel (No coating) / Rose Quartz / One Size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Stainless Steel (No coating)",
               "finish": "Rose Quartz",
@@ -233,6 +269,9 @@
           {
             "id": 147703,
             "title": "Stainless Steel (No coating) / Sodalite / One Size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Stainless Steel (No coating)",
               "finish": "Sodalite",
@@ -250,6 +289,9 @@
           {
             "id": 147704,
             "title": "Stainless Steel (No coating) / Turquoise / One Size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Stainless Steel (No coating)",
               "finish": "Turquoise",
@@ -320,6 +362,35 @@
             ],
             "first_item": {
               "currency": "USD",
+              "cost": 939
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              147691,
+              147692,
+              147693,
+              147694,
+              147695,
+              147696,
+              147697,
+              147698,
+              147699,
+              147700,
+              147701,
+              147702,
+              147703,
+              147704
+            ],
+            "first_item": {
+              "currency": "USD",
               "cost": 569
             },
             "additional_items": {
@@ -358,38 +429,67 @@
             "countries": [
               "REST_OF_THE_WORLD"
             ]
-          },
-          {
-            "variant_ids": [
-              147691,
-              147692,
-              147693,
-              147694,
-              147695,
-              147696,
-              147697,
-              147698,
-              147699,
-              147700,
-              147701,
-              147702,
-              147703,
-              147704
-            ],
-            "first_item": {
-              "currency": "USD",
-              "cost": 939
-            },
-            "additional_items": {
-              "currency": "USD",
-              "cost": 439
-            },
-            "countries": [
-              "CA"
-            ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 449
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 209
+          },
+          "variant_count": 14
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 939
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 14
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 569
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 249
+          },
+          "variant_count": 14
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 399
+          },
+          "variant_count": 14
+        }
+      ]
     }
   ]
 }

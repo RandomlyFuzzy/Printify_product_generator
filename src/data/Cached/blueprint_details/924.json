@@ -26,6 +26,9 @@
           {
             "id": 77587,
             "title": "S / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "S",
               "color": "Black"
@@ -78,6 +81,9 @@
           {
             "id": 77588,
             "title": "S / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "S",
               "color": "White"
@@ -130,6 +136,9 @@
           {
             "id": 77589,
             "title": "M / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "M",
               "color": "Black"
@@ -182,6 +191,9 @@
           {
             "id": 77590,
             "title": "M / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "M",
               "color": "White"
@@ -234,6 +246,9 @@
           {
             "id": 77591,
             "title": "L / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "L",
               "color": "Black"
@@ -286,6 +301,9 @@
           {
             "id": 77592,
             "title": "L / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "L",
               "color": "White"
@@ -338,6 +356,9 @@
           {
             "id": 77593,
             "title": "XL / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XL",
               "color": "Black"
@@ -390,6 +411,9 @@
           {
             "id": 77594,
             "title": "XL / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XL",
               "color": "White"
@@ -442,6 +466,9 @@
           {
             "id": 77595,
             "title": "2XL / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2XL",
               "color": "Black"
@@ -494,6 +521,9 @@
           {
             "id": 77596,
             "title": "2XL / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2XL",
               "color": "White"
@@ -546,6 +576,9 @@
           {
             "id": 77597,
             "title": "3XL / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "3XL",
               "color": "Black"
@@ -598,6 +631,9 @@
           {
             "id": 77598,
             "title": "3XL / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "3XL",
               "color": "White"
@@ -650,6 +686,9 @@
           {
             "id": 77599,
             "title": "4XL / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "4XL",
               "color": "Black"
@@ -702,6 +741,9 @@
           {
             "id": 77600,
             "title": "4XL / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "4XL",
               "color": "White"
@@ -754,6 +796,9 @@
           {
             "id": 77601,
             "title": "5XL / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "5XL",
               "color": "Black"
@@ -806,6 +851,9 @@
           {
             "id": 77602,
             "title": "5XL / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "5XL",
               "color": "White"
@@ -994,7 +1042,71 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "REST_OF_THE_WORLD",
+            "BR",
+            "NL",
+            "DK",
+            "NZ",
+            "MX"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 360
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 360
+          },
+          "variant_count": 16
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 569
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 16
+        },
+        {
+          "countries": [
+            "CA",
+            "CN"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "variant_count": 16
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 649
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 649
+          },
+          "variant_count": 16
+        }
+      ]
     }
   ]
 }

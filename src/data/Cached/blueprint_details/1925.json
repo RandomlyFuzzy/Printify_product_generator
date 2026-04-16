@@ -23,6 +23,9 @@
           {
             "id": 119542,
             "title": "Black / 2XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2XL",
               "color": "Black"
@@ -63,6 +66,9 @@
           {
             "id": 119544,
             "title": "Classic Navy / 2XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2XL",
               "color": "Classic Navy"
@@ -103,6 +109,9 @@
           {
             "id": 119548,
             "title": "Black / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "L",
               "color": "Black"
@@ -143,6 +152,9 @@
           {
             "id": 119550,
             "title": "Classic Navy / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "L",
               "color": "Classic Navy"
@@ -183,6 +195,9 @@
           {
             "id": 119554,
             "title": "Black / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "M",
               "color": "Black"
@@ -223,6 +238,9 @@
           {
             "id": 119556,
             "title": "Classic Navy / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "M",
               "color": "Classic Navy"
@@ -263,6 +281,9 @@
           {
             "id": 119560,
             "title": "Black / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "S",
               "color": "Black"
@@ -303,6 +324,9 @@
           {
             "id": 119562,
             "title": "Classic Navy / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "S",
               "color": "Classic Navy"
@@ -343,6 +367,9 @@
           {
             "id": 119566,
             "title": "Black / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XL",
               "color": "Black"
@@ -383,6 +410,9 @@
           {
             "id": 119568,
             "title": "Classic Navy / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XL",
               "color": "Classic Navy"
@@ -423,6 +453,9 @@
           {
             "id": 119572,
             "title": "Alpine Green / 2XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2XL",
               "color": "Alpine Green"
@@ -463,6 +496,9 @@
           {
             "id": 119573,
             "title": "Alpine Green / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "L",
               "color": "Alpine Green"
@@ -503,6 +539,9 @@
           {
             "id": 119574,
             "title": "Alpine Green / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "M",
               "color": "Alpine Green"
@@ -543,6 +582,9 @@
           {
             "id": 119575,
             "title": "Alpine Green / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "S",
               "color": "Alpine Green"
@@ -583,6 +625,9 @@
           {
             "id": 119576,
             "title": "Alpine Green / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XL",
               "color": "Alpine Green"
@@ -623,6 +668,9 @@
           {
             "id": 119870,
             "title": "Charcoal Heather / 2XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2XL",
               "color": "Charcoal Heather"
@@ -663,6 +711,9 @@
           {
             "id": 119871,
             "title": "Charcoal Heather / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "L",
               "color": "Charcoal Heather"
@@ -703,6 +754,9 @@
           {
             "id": 119872,
             "title": "Charcoal Heather / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "M",
               "color": "Charcoal Heather"
@@ -743,6 +797,9 @@
           {
             "id": 119873,
             "title": "Charcoal Heather / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "S",
               "color": "Charcoal Heather"
@@ -783,6 +840,9 @@
           {
             "id": 119874,
             "title": "Charcoal Heather / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XL",
               "color": "Charcoal Heather"
@@ -888,14 +948,14 @@
             ],
             "first_item": {
               "currency": "USD",
-              "cost": 1500
+              "cost": 1269
             },
             "additional_items": {
               "currency": "USD",
-              "cost": 1000
+              "cost": 659
             },
             "countries": [
-              "REST_OF_THE_WORLD"
+              "CA"
             ]
           },
           {
@@ -993,18 +1053,90 @@
             ],
             "first_item": {
               "currency": "USD",
-              "cost": 1269
+              "cost": 1500
             },
             "additional_items": {
               "currency": "USD",
-              "cost": 659
+              "cost": 1000
             },
             "countries": [
-              "CA"
+              "REST_OF_THE_WORLD"
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 739
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 209
+          },
+          "variant_count": 20
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1269
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 659
+          },
+          "variant_count": 20
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2199
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "variant_count": 20
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 849
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 209
+          },
+          "variant_count": 20
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1500
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1000
+          },
+          "variant_count": 20
+        }
+      ]
     }
   ]
 }

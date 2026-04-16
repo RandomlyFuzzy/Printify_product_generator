@@ -27,6 +27,9 @@
           {
             "id": 113927,
             "title": "Artwork / 26\u0027\u0027 \u00D7 36\u0027\u0027",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "finish": "Artwork",
               "size": "26\u0027\u0027 \u00D7 36\u0027\u0027"
@@ -43,6 +46,9 @@
           {
             "id": 113928,
             "title": "Photo / 26\u0027\u0027 \u00D7 36\u0027\u0027",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "finish": "Photo",
               "size": "26\u0027\u0027 \u00D7 36\u0027\u0027"
@@ -59,6 +65,9 @@
           {
             "id": 113929,
             "title": "Artwork / 36\u0027\u0027 \u00D7 26\u0027\u0027",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "finish": "Artwork",
               "size": "36\u0027\u0027 \u00D7 26\u0027\u0027"
@@ -75,6 +84,9 @@
           {
             "id": 113930,
             "title": "Photo / 36\u0027\u0027 \u00D7 26\u0027\u0027",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "finish": "Photo",
               "size": "36\u0027\u0027 \u00D7 26\u0027\u0027"
@@ -154,7 +166,51 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 819
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 359
+          },
+          "variant_count": 4
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1867
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1079
+          },
+          "variant_count": 4
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1259
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 399
+          },
+          "variant_count": 4
+        }
+      ]
     }
   ]
 }

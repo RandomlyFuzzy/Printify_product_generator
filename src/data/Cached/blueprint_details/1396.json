@@ -29,6 +29,9 @@
           {
             "id": 103910,
             "title": "Medium Denim Wash / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Medium Denim Wash",
               "size": "S"
@@ -45,6 +48,9 @@
           {
             "id": 103911,
             "title": "Medium Denim Wash / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Medium Denim Wash",
               "size": "M"
@@ -61,6 +67,9 @@
           {
             "id": 103912,
             "title": "Medium Denim Wash / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Medium Denim Wash",
               "size": "L"
@@ -77,6 +86,9 @@
           {
             "id": 103913,
             "title": "Medium Denim Wash / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Medium Denim Wash",
               "size": "XL"
@@ -93,6 +105,9 @@
           {
             "id": 103914,
             "title": "Medium Denim Wash / 2XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Medium Denim Wash",
               "size": "2XL"
@@ -253,7 +268,123 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1279
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 379
+          },
+          "variant_count": 5
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1579
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1579
+          },
+          "variant_count": 5
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1439
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 419
+          },
+          "variant_count": 5
+        },
+        {
+          "countries": [
+            "EE",
+            "LI",
+            "LT",
+            "LV",
+            "IS",
+            "CH",
+            "FI",
+            "SE",
+            "NO",
+            "DK",
+            "REST_OF_THE_WORLD",
+            "DE",
+            "AX",
+            "AL",
+            "AD",
+            "AM",
+            "AT",
+            "BY",
+            "BE",
+            "BA",
+            "BV",
+            "BG",
+            "HR",
+            "CY",
+            "CZ",
+            "FO",
+            "FR",
+            "GE",
+            "GI",
+            "GR",
+            "GL",
+            "GP",
+            "GG",
+            "VA",
+            "HU",
+            "IE",
+            "IM",
+            "IT",
+            "JE",
+            "MK",
+            "MT",
+            "MD",
+            "MC",
+            "ME",
+            "NL",
+            "PL",
+            "PT",
+            "RE",
+            "RO",
+            "SM",
+            "RS",
+            "SK",
+            "SI",
+            "ES",
+            "TR",
+            "UA",
+            "GB",
+            "XK",
+            "LU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1849
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1849
+          },
+          "variant_count": 5
+        }
+      ]
     }
   ]
 }

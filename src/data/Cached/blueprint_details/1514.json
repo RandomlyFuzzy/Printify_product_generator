@@ -40,6 +40,9 @@
           {
             "id": 109115,
             "title": "10oz / Dark Purple",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "10oz",
               "color": "Dark Purple"
@@ -62,6 +65,9 @@
           {
             "id": 109116,
             "title": "10oz / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "10oz",
               "color": "Black"
@@ -84,6 +90,9 @@
           {
             "id": 109117,
             "title": "10oz / Maroon",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "10oz",
               "color": "Maroon"
@@ -106,6 +115,9 @@
           {
             "id": 109118,
             "title": "10oz / Navy",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "10oz",
               "color": "Navy"
@@ -128,6 +140,9 @@
           {
             "id": 109119,
             "title": "10oz / Pink",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "10oz",
               "color": "Pink"
@@ -150,6 +165,9 @@
           {
             "id": 109120,
             "title": "10oz / Red",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "10oz",
               "color": "Red"
@@ -172,6 +190,9 @@
           {
             "id": 109121,
             "title": "10oz / Royal Blue",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "10oz",
               "color": "Royal Blue"
@@ -194,6 +215,9 @@
           {
             "id": 109122,
             "title": "10oz / Teal",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "10oz",
               "color": "Teal"
@@ -315,7 +339,66 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 689
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 299
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD",
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1679
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 489
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 769
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 349
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1179
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 479
+          },
+          "variant_count": 8
+        }
+      ]
     }
   ]
 }

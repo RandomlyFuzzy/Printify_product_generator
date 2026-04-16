@@ -34,6 +34,9 @@
           {
             "id": 147959,
             "title": "17\u0027\u0027 x 13\u0027\u0027 x 5\u0027\u0027 / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "17\u0027\u0027 x 13\u0027\u0027 x 5\u0027\u0027",
               "color": "Black"
@@ -50,6 +53,9 @@
           {
             "id": 147960,
             "title": "17\u0027\u0027 x 13\u0027\u0027 x 5\u0027\u0027 / Navy",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "17\u0027\u0027 x 13\u0027\u0027 x 5\u0027\u0027",
               "color": "Navy"
@@ -66,6 +72,9 @@
           {
             "id": 147961,
             "title": "17\u0027\u0027 x 13\u0027\u0027 x 5\u0027\u0027 / Grey",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "17\u0027\u0027 x 13\u0027\u0027 x 5\u0027\u0027",
               "color": "Grey"
@@ -82,6 +91,9 @@
           {
             "id": 147962,
             "title": "17\u0027\u0027 x 13\u0027\u0027 x 5\u0027\u0027 / Olive",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "17\u0027\u0027 x 13\u0027\u0027 x 5\u0027\u0027",
               "color": "Olive"
@@ -98,6 +110,9 @@
           {
             "id": 147963,
             "title": "17\u0027\u0027 x 13\u0027\u0027 x 5\u0027\u0027 / Royal Blue",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "17\u0027\u0027 x 13\u0027\u0027 x 5\u0027\u0027",
               "color": "Royal Blue"
@@ -114,6 +129,9 @@
           {
             "id": 147964,
             "title": "17\u0027\u0027 x 13\u0027\u0027 x 5\u0027\u0027 / Brown",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "17\u0027\u0027 x 13\u0027\u0027 x 5\u0027\u0027",
               "color": "Brown"
@@ -130,6 +148,9 @@
           {
             "id": 147965,
             "title": "17\u0027\u0027 x 13\u0027\u0027 x 5\u0027\u0027 / Red",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "17\u0027\u0027 x 13\u0027\u0027 x 5\u0027\u0027",
               "color": "Red"
@@ -146,6 +167,9 @@
           {
             "id": 147966,
             "title": "17\u0027\u0027 x 13\u0027\u0027 x 5\u0027\u0027 / Teal",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "17\u0027\u0027 x 13\u0027\u0027 x 5\u0027\u0027",
               "color": "Teal"
@@ -237,7 +261,51 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 3499
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1359
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 879
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 579
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2599
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 959
+          },
+          "variant_count": 8
+        }
+      ]
     }
   ]
 }

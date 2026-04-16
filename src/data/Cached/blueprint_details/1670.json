@@ -25,6 +25,9 @@
           {
             "id": 115208,
             "title": "40oz / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "40oz",
               "color": "Black"
@@ -47,6 +50,9 @@
           {
             "id": 115209,
             "title": "40oz / Gray",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "40oz",
               "color": "Gray"
@@ -69,6 +75,9 @@
           {
             "id": 115210,
             "title": "40oz / Mint",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "40oz",
               "color": "Mint"
@@ -91,6 +100,9 @@
           {
             "id": 115211,
             "title": "40oz / Royal",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "40oz",
               "color": "Royal"
@@ -113,6 +125,9 @@
           {
             "id": 115212,
             "title": "40oz / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "40oz",
               "color": "White"
@@ -241,7 +256,79 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 759
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 299
+          },
+          "variant_count": 5
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1469
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 659
+          },
+          "variant_count": 5
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 979
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 5
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2199
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "variant_count": 5
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 699
+          },
+          "variant_count": 5
+        }
+      ]
     }
   ]
 }

@@ -25,6 +25,9 @@
           {
             "id": 244715,
             "title": "Ellipse / 14.6\u0022 \u00D7 11.8\u0022 / Sand / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "shape": "Ellipse",
               "size": "14.6\u0022 \u00D7 11.8\u0022",
@@ -42,6 +45,9 @@
           {
             "id": 244716,
             "title": "Inverted Rounded Rectangle / 14.6\u0022 \u00D7 11.8\u0022 / Sand / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "shape": "Inverted Rounded Rectangle",
               "size": "14.6\u0022 \u00D7 11.8\u0022",
@@ -59,6 +65,9 @@
           {
             "id": 244717,
             "title": "Rectangle / 14.6\u0022 \u00D7 11.8\u0022 / Sand / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "shape": "Rectangle",
               "size": "14.6\u0022 \u00D7 11.8\u0022",
@@ -247,7 +256,150 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2759
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 2499
+          },
+          "variant_count": 3
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2319
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1999
+          },
+          "variant_count": 3
+        },
+        {
+          "countries": [
+            "GB"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1929
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1629
+          },
+          "variant_count": 3
+        },
+        {
+          "countries": [
+            "AX",
+            "AL",
+            "AD",
+            "AM",
+            "AT",
+            "BY",
+            "BE",
+            "BA",
+            "BV",
+            "BG",
+            "HR",
+            "CY",
+            "CZ",
+            "DK",
+            "EE",
+            "FO",
+            "FI",
+            "FR",
+            "GE",
+            "DE",
+            "GI",
+            "GR",
+            "GL",
+            "GP",
+            "GG",
+            "VA",
+            "HU",
+            "IS",
+            "IE",
+            "IM",
+            "IT",
+            "JE",
+            "LV",
+            "LI",
+            "LT",
+            "LU",
+            "MK",
+            "MT",
+            "MD",
+            "MC",
+            "ME",
+            "NL",
+            "NO",
+            "PL",
+            "PT",
+            "RE",
+            "RO",
+            "SM",
+            "RS",
+            "SK",
+            "SI",
+            "ES",
+            "SE",
+            "CH",
+            "TR",
+            "UA",
+            "GB",
+            "XK"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2049
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1879
+          },
+          "variant_count": 3
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2119
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1879
+          },
+          "variant_count": 3
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 3599
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 3249
+          },
+          "variant_count": 3
+        }
+      ]
     }
   ]
 }

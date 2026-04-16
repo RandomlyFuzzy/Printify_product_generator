@@ -9,7 +9,7 @@
       "https://images.printify.com/68dfa71ef843ea35ed099092",
       "https://images.printify.com/68dfa73e8d73016cd20f6d12",
       "https://images.printify.com/68dfa74700a51decee079fa2",
-      "https://images.printify.com/69ba6851d0fbaa6c6c0456b2",
+      "https://images.printify.com/69df701f0a7e3cc81d08eb00",
       "https://images.printify.com/68dfa74d09f266ccf30f3a72",
       "https://images.printify.com/68dfa75471e2ff6a330d3632",
       "https://images.printify.com/69048f05ff71378de0048e02"
@@ -28,6 +28,9 @@
           {
             "id": 147651,
             "title": "One Size / Black PVD coating",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One Size",
               "color": "Black PVD coating"
@@ -44,6 +47,9 @@
           {
             "id": 147652,
             "title": "One Size / 18K Gold PVD coating",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One Size",
               "color": "18K Gold PVD coating"
@@ -60,6 +66,9 @@
           {
             "id": 147653,
             "title": "One Size / Rainbow PVD coating",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One Size",
               "color": "Rainbow PVD coating"
@@ -76,6 +85,9 @@
           {
             "id": 147654,
             "title": "One Size / 18K Rose Gold PVD coating",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One Size",
               "color": "18K Rose Gold PVD coating"
@@ -92,6 +104,9 @@
           {
             "id": 147655,
             "title": "One Size / Stainless Steel (No coating)",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One Size",
               "color": "Stainless Steel (No coating)"
@@ -143,6 +158,26 @@
             ],
             "first_item": {
               "currency": "USD",
+              "cost": 939
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              147651,
+              147652,
+              147653,
+              147654,
+              147655
+            ],
+            "first_item": {
+              "currency": "USD",
               "cost": 569
             },
             "additional_items": {
@@ -172,29 +207,67 @@
             "countries": [
               "REST_OF_THE_WORLD"
             ]
-          },
-          {
-            "variant_ids": [
-              147651,
-              147652,
-              147653,
-              147654,
-              147655
-            ],
-            "first_item": {
-              "currency": "USD",
-              "cost": 939
-            },
-            "additional_items": {
-              "currency": "USD",
-              "cost": 439
-            },
-            "countries": [
-              "CA"
-            ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 449
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 209
+          },
+          "variant_count": 5
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 939
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 5
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 569
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 249
+          },
+          "variant_count": 5
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 399
+          },
+          "variant_count": 5
+        }
+      ]
     }
   ]
 }

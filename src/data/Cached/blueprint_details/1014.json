@@ -28,6 +28,9 @@
           {
             "id": 79920,
             "title": "Cotton Candy / XS",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Cotton Candy",
               "size": "XS"
@@ -50,6 +53,9 @@
           {
             "id": 79921,
             "title": "Cotton Candy / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Cotton Candy",
               "size": "S"
@@ -72,6 +78,9 @@
           {
             "id": 79922,
             "title": "Cotton Candy / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Cotton Candy",
               "size": "M"
@@ -94,6 +103,9 @@
           {
             "id": 79923,
             "title": "Cotton Candy / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Cotton Candy",
               "size": "L"
@@ -116,6 +128,9 @@
           {
             "id": 79924,
             "title": "Cotton Candy / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Cotton Candy",
               "size": "XL"
@@ -138,6 +153,9 @@
           {
             "id": 79925,
             "title": "Desert Rose / XS",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Desert Rose",
               "size": "XS"
@@ -160,6 +178,9 @@
           {
             "id": 79926,
             "title": "Desert Rose / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Desert Rose",
               "size": "S"
@@ -182,6 +203,9 @@
           {
             "id": 79927,
             "title": "Desert Rose / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Desert Rose",
               "size": "M"
@@ -204,6 +228,9 @@
           {
             "id": 79928,
             "title": "Desert Rose / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Desert Rose",
               "size": "L"
@@ -226,6 +253,9 @@
           {
             "id": 79929,
             "title": "Desert Rose / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Desert Rose",
               "size": "XL"
@@ -248,6 +278,9 @@
           {
             "id": 79930,
             "title": "Lagoon / XS",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Lagoon",
               "size": "XS"
@@ -270,6 +303,9 @@
           {
             "id": 79931,
             "title": "Lagoon / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Lagoon",
               "size": "S"
@@ -292,6 +328,9 @@
           {
             "id": 79932,
             "title": "Lagoon / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Lagoon",
               "size": "M"
@@ -314,6 +353,9 @@
           {
             "id": 79933,
             "title": "Lagoon / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Lagoon",
               "size": "L"
@@ -336,6 +378,9 @@
           {
             "id": 79934,
             "title": "Lagoon / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Lagoon",
               "size": "XL"
@@ -484,7 +529,65 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 519
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 219
+          },
+          "variant_count": 15
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1000
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 400
+          },
+          "variant_count": 15
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1249
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "variant_count": 15
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 939
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 15
+        }
+      ]
     }
   ]
 }

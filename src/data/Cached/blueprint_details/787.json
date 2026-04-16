@@ -23,6 +23,9 @@
           {
             "id": 74930,
             "title": "1.9oz / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "1.9oz",
               "color": "Black"
@@ -39,6 +42,9 @@
           {
             "id": 74931,
             "title": "1.9oz / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "1.9oz",
               "color": "White"
@@ -170,7 +176,109 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "AX",
+            "AM",
+            "BY",
+            "FO",
+            "BA",
+            "FR",
+            "AL",
+            "GE",
+            "LI",
+            "BG",
+            "MT",
+            "RS",
+            "DK",
+            "SE",
+            "FI",
+            "IM",
+            "LU",
+            "GL",
+            "VA",
+            "LV",
+            "AD",
+            "GP",
+            "MK",
+            "RE",
+            "ME",
+            "JE",
+            "HR",
+            "CZ",
+            "MC",
+            "NL",
+            "XK",
+            "GR",
+            "IS",
+            "AT",
+            "EE",
+            "DE",
+            "GG",
+            "PT",
+            "BE",
+            "GI",
+            "RO",
+            "SK",
+            "TR",
+            "UA",
+            "ES",
+            "CH",
+            "REST_OF_THE_WORLD",
+            "BV",
+            "IE",
+            "PL",
+            "CY",
+            "MD",
+            "NO",
+            "SM",
+            "SI",
+            "GB",
+            "HU",
+            "IT",
+            "LT"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1349
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1899
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 299
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 829
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 199
+          },
+          "variant_count": 2
+        }
+      ]
     }
   ]
 }

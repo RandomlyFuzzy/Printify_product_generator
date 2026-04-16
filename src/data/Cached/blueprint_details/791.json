@@ -22,6 +22,9 @@
           {
             "id": 74945,
             "title": "12oz / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "12oz",
               "color": "White"
@@ -150,7 +153,109 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "IM",
+            "ME",
+            "SK",
+            "HR",
+            "FR",
+            "LT",
+            "LU",
+            "SM",
+            "AD",
+            "HU",
+            "IE",
+            "CH",
+            "XK",
+            "VA",
+            "NO",
+            "DK",
+            "GR",
+            "NL",
+            "RO",
+            "RS",
+            "AT",
+            "GB",
+            "AL",
+            "BY",
+            "CZ",
+            "SE",
+            "DE",
+            "RE",
+            "SI",
+            "BV",
+            "REST_OF_THE_WORLD",
+            "GG",
+            "MK",
+            "FI",
+            "MC",
+            "GI",
+            "LI",
+            "PT",
+            "AX",
+            "EE",
+            "IT",
+            "MT",
+            "ES",
+            "AM",
+            "BA",
+            "CY",
+            "IS",
+            "PL",
+            "BG",
+            "GL",
+            "BE",
+            "GE",
+            "GP",
+            "JE",
+            "LV",
+            "MD",
+            "TR",
+            "UA",
+            "FO"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1350
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 490
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 799
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 399
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2230
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 290
+          },
+          "variant_count": 1
+        }
+      ]
     }
   ]
 }

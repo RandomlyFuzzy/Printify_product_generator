@@ -25,6 +25,9 @@
           {
             "id": 71689,
             "title": "Square / 3.75\u0022 \u00D7 3.75\u0022 / Cork",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "shape": "Square",
               "size": "3.75\u0022 \u00D7 3.75\u0022",
@@ -42,6 +45,9 @@
           {
             "id": 74633,
             "title": "Round / 4\u0022 x 4\u0022 / Cork",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "shape": "Round",
               "size": "4\u0022 x 4\u0022",
@@ -116,7 +122,51 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 559
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 99
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1029
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 129
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1079
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 199
+          },
+          "variant_count": 2
+        }
+      ]
     }
   ]
 }

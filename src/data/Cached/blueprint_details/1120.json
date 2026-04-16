@@ -29,6 +29,9 @@
           {
             "id": 82966,
             "title": "30\u0027\u0027 \u00D7 40\u0027\u0027 / Beige",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "30\u0027\u0027 \u00D7 40\u0027\u0027",
               "color": "Beige"
@@ -45,6 +48,9 @@
           {
             "id": 82967,
             "title": "30\u0027\u0027 \u00D7 40\u0027\u0027 / Grey",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "30\u0027\u0027 \u00D7 40\u0027\u0027",
               "color": "Grey"
@@ -61,6 +67,9 @@
           {
             "id": 82968,
             "title": "50\u0022 \u00D7 60\u0022 / Beige",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "50\u0022 \u00D7 60\u0022",
               "color": "Beige"
@@ -77,6 +86,9 @@
           {
             "id": 82969,
             "title": "50\u0022 \u00D7 60\u0022 / Grey",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "50\u0022 \u00D7 60\u0022",
               "color": "Grey"
@@ -93,6 +105,9 @@
           {
             "id": 82970,
             "title": "60\u0022 \u00D7 80\u0022 / Beige",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "60\u0022 \u00D7 80\u0022",
               "color": "Beige"
@@ -109,6 +124,9 @@
           {
             "id": 82971,
             "title": "60\u0022 \u00D7 80\u0022 / Grey",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "60\u0022 \u00D7 80\u0022",
               "color": "Grey"
@@ -125,6 +143,9 @@
           {
             "id": 148534,
             "title": "30\u0027\u0027 \u00D7 40\u0027\u0027 / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "30\u0027\u0027 \u00D7 40\u0027\u0027",
               "color": "White"
@@ -141,6 +162,9 @@
           {
             "id": 148535,
             "title": "50\u0022 \u00D7 60\u0022 / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "50\u0022 \u00D7 60\u0022",
               "color": "White"
@@ -157,6 +181,9 @@
           {
             "id": 148536,
             "title": "60\u0022 \u00D7 80\u0022 / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "60\u0022 \u00D7 80\u0022",
               "color": "White"
@@ -324,7 +351,122 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 3499
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 3499
+          },
+          "variant_count": 3
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2779
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 2019
+          },
+          "variant_count": 3
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2779
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 899
+          },
+          "variant_count": 3
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1199
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 629
+          },
+          "variant_count": 3
+        },
+        {
+          "countries": [
+            "CA",
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1649
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 679
+          },
+          "variant_count": 3
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1319
+          },
+          "variant_count": 3
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 789
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 559
+          },
+          "variant_count": 3
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "variant_count": 3
+        }
+      ]
     }
   ]
 }

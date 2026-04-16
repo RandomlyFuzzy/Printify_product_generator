@@ -29,6 +29,9 @@
           {
             "id": 148240,
             "title": "EU 35 / Black sole",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "EU 35",
               "color": "Black sole"
@@ -87,6 +90,9 @@
           {
             "id": 148241,
             "title": "EU 36 / Black sole",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "EU 36",
               "color": "Black sole"
@@ -145,6 +151,9 @@
           {
             "id": 148242,
             "title": "EU 37 / Black sole",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "EU 37",
               "color": "Black sole"
@@ -203,6 +212,9 @@
           {
             "id": 148243,
             "title": "EU 38 / Black sole",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "EU 38",
               "color": "Black sole"
@@ -261,6 +273,9 @@
           {
             "id": 148244,
             "title": "EU 39 / Black sole",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "EU 39",
               "color": "Black sole"
@@ -319,6 +334,9 @@
           {
             "id": 148245,
             "title": "EU 40 / Black sole",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "EU 40",
               "color": "Black sole"
@@ -377,6 +395,9 @@
           {
             "id": 148246,
             "title": "EU 41 / Black sole",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "EU 41",
               "color": "Black sole"
@@ -435,6 +456,9 @@
           {
             "id": 148247,
             "title": "EU 42 / Black sole",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "EU 42",
               "color": "Black sole"
@@ -493,6 +517,9 @@
           {
             "id": 148248,
             "title": "EU 43 / Black sole",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "EU 43",
               "color": "Black sole"
@@ -551,6 +578,9 @@
           {
             "id": 148249,
             "title": "EU 44 / Black sole",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "EU 44",
               "color": "Black sole"
@@ -822,7 +852,150 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "GB"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 3069
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 2749
+          },
+          "variant_count": 10
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2809
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 2089
+          },
+          "variant_count": 10
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 4579
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 4439
+          },
+          "variant_count": 10
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 5489
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 4839
+          },
+          "variant_count": 10
+        },
+        {
+          "countries": [
+            "AX",
+            "AL",
+            "AD",
+            "AM",
+            "AT",
+            "BY",
+            "BE",
+            "BA",
+            "BV",
+            "BG",
+            "HR",
+            "CY",
+            "CZ",
+            "DK",
+            "EE",
+            "FO",
+            "FI",
+            "FR",
+            "GE",
+            "DE",
+            "GI",
+            "GR",
+            "GL",
+            "GP",
+            "GG",
+            "VA",
+            "HU",
+            "IS",
+            "IE",
+            "IM",
+            "IT",
+            "JE",
+            "LV",
+            "LI",
+            "LT",
+            "LU",
+            "MK",
+            "MT",
+            "MD",
+            "MC",
+            "ME",
+            "NL",
+            "NO",
+            "PL",
+            "PT",
+            "RE",
+            "RO",
+            "SM",
+            "RS",
+            "SK",
+            "SI",
+            "ES",
+            "SE",
+            "CH",
+            "TR",
+            "UA",
+            "GB",
+            "XK"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 3199
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 2749
+          },
+          "variant_count": 10
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 3469
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 3009
+          },
+          "variant_count": 10
+        }
+      ]
     }
   ]
 }

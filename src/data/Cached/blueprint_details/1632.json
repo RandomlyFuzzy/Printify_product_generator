@@ -29,6 +29,9 @@
           {
             "id": 112959,
             "title": "Round / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "shape": "Round",
               "size": "One size"
@@ -51,6 +54,9 @@
           {
             "id": 148368,
             "title": "Heart / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "shape": "Heart",
               "size": "One size"
@@ -73,6 +79,9 @@
           {
             "id": 244845,
             "title": "Heart \u002B White Gift Packaging / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "shape": "Heart \u002B White Gift Packaging",
               "size": "One size"
@@ -95,6 +104,9 @@
           {
             "id": 244846,
             "title": "Round \u002B White Gift Packaging / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "shape": "Round \u002B White Gift Packaging",
               "size": "One size"
@@ -117,6 +129,9 @@
           {
             "id": 244847,
             "title": "Heart \u002B Gold Gift Packaging / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "shape": "Heart \u002B Gold Gift Packaging",
               "size": "One size"
@@ -139,6 +154,9 @@
           {
             "id": 244848,
             "title": "Round \u002B Gold Gift Packaging / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "shape": "Round \u002B Gold Gift Packaging",
               "size": "One size"
@@ -231,7 +249,52 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 459
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 49
+          },
+          "variant_count": 6
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 569
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 69
+          },
+          "variant_count": 6
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD",
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 949
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 199
+          },
+          "variant_count": 6
+        }
+      ]
     }
   ]
 }

@@ -19,6 +19,25 @@ Run the dashboard locally:
 dotnet run --project src/PrintifyGenerator.Dashboard
 ```
 
+## Cache generator
+
+`src/PrintifyGenerator.CacheGenerator` can build cached catalog data, variant-image caches, and published pricing products for later production-cost lookups.
+
+The pricing-product mode publishes one product per `100` printable variants using the title format `BlueprintName-ProviderName-PageNumber`, keeps those products published for later production/shipping price lookups, and stores its local resume state in `src/data/Cached/pricing_products_shop_<shopId>.json`.
+
+Run it with:
+
+```bash
+dotnet run --project src/PrintifyGenerator.CacheGenerator -- pricing-products --shop-id 27152940
+```
+
+Behavior:
+
+- Existing matching products in the target shop are reused automatically.
+- Published pricing products stay in the shop for later lookups; they are only deleted when you run with `--reset-cache`.
+- Use `--reset-cache` to delete matching pricing products and rebuild them from scratch.
+- `--shop-id` overrides `SHOP_ID` and `PRICE_UPDATER_SHOP_ID` for the publish target.
+
 ## Price updater
 
 `src/PrintifyGenerator.PriceUpdater` periodically recalculates Printify product variant prices for a shop and can push the updated prices back to Printify.

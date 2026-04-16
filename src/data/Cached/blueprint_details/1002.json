@@ -27,6 +27,9 @@
           {
             "id": 79530,
             "title": "16\u0022 \u00D7 72\u0022 / Cotton Twill",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "16\u0022 \u00D7 72\u0022",
               "material": "Cotton Twill"
@@ -43,6 +46,9 @@
           {
             "id": 79531,
             "title": "16\u0022 \u00D7 72\u0022 / Polyester",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "16\u0022 \u00D7 72\u0022",
               "material": "Polyester"
@@ -59,6 +65,9 @@
           {
             "id": 79532,
             "title": "16\u0022 \u00D7 90\u0022 / Cotton Twill",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "16\u0022 \u00D7 90\u0022",
               "material": "Cotton Twill"
@@ -75,6 +84,9 @@
           {
             "id": 79533,
             "title": "16\u0022 \u00D7 90\u0022 / Polyester",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "16\u0022 \u00D7 90\u0022",
               "material": "Polyester"
@@ -173,7 +185,65 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 789
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 299
+          },
+          "variant_count": 4
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 819
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 359
+          },
+          "variant_count": 4
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1867
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1079
+          },
+          "variant_count": 4
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1259
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 399
+          },
+          "variant_count": 4
+        }
+      ]
     }
   ]
 }

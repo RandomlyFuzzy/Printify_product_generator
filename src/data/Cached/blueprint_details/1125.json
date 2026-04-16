@@ -15,106 +15,6 @@
   "print_providers": [
     {
       "provider": {
-        "id": 66,
-        "title": "Prima Printing"
-      },
-      "variants": {
-        "id": 66,
-        "title": "Prima Printing",
-        "variants": [
-          {
-            "id": 84108,
-            "title": "11oz",
-            "options": {
-              "size": "11oz"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dye-sublimation",
-                "height": 1155,
-                "width": 2475
-              }
-            ]
-          }
-        ]
-      },
-      "shipping": {
-        "handling_time": {
-          "value": 10,
-          "unit": "day"
-        },
-        "profiles": [
-          {
-            "variant_ids": [
-              84108
-            ],
-            "first_item": {
-              "currency": "USD",
-              "cost": 1389
-            },
-            "additional_items": {
-              "currency": "USD",
-              "cost": 1389
-            },
-            "countries": [
-              "US"
-            ]
-          },
-          {
-            "variant_ids": [
-              84108
-            ],
-            "first_item": {
-              "currency": "USD",
-              "cost": 4019
-            },
-            "additional_items": {
-              "currency": "USD",
-              "cost": 4019
-            },
-            "countries": [
-              "REST_OF_THE_WORLD"
-            ]
-          },
-          {
-            "variant_ids": [
-              84108
-            ],
-            "first_item": {
-              "currency": "USD",
-              "cost": 719
-            },
-            "additional_items": {
-              "currency": "USD",
-              "cost": 269
-            },
-            "countries": [
-              "AU",
-              "NZ"
-            ]
-          },
-          {
-            "variant_ids": [
-              84108
-            ],
-            "first_item": {
-              "currency": "USD",
-              "cost": 999
-            },
-            "additional_items": {
-              "currency": "USD",
-              "cost": 999
-            },
-            "countries": [
-              "GB"
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "provider": {
         "id": 94,
         "title": "Harrier"
       },
@@ -125,6 +25,9 @@
           {
             "id": 84108,
             "title": "11oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "11oz"
             },
@@ -140,6 +43,9 @@
           {
             "id": 91086,
             "title": "15oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "15oz"
             },
@@ -317,7 +223,309 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 3999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 359
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "BE",
+            "NL",
+            "IT",
+            "AX",
+            "AL",
+            "AD",
+            "AM",
+            "AT",
+            "BY",
+            "BA",
+            "BV",
+            "BG",
+            "HR",
+            "CY",
+            "FO",
+            "GE",
+            "GI",
+            "GR",
+            "GL",
+            "GP",
+            "GG",
+            "VA",
+            "HU",
+            "IE",
+            "IM",
+            "JE",
+            "MK",
+            "MT",
+            "MD",
+            "MC",
+            "ME",
+            "PL",
+            "PT",
+            "RE",
+            "RO",
+            "SM",
+            "RS",
+            "SK",
+            "SI",
+            "ES",
+            "TR",
+            "UA",
+            "XK",
+            "FR"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 659
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 239
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "GB"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 379
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 129
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "EE",
+            "LV",
+            "NO",
+            "LU",
+            "FI",
+            "LI",
+            "DK",
+            "CH",
+            "IS",
+            "LT",
+            "SE"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 239
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "DE",
+            "CZ"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 599
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 239
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 359
+          },
+          "variant_count": 2
+        }
+      ]
+    },
+    {
+      "provider": {
+        "id": 66,
+        "title": "Prima Printing"
+      },
+      "variants": {
+        "id": 66,
+        "title": "Prima Printing",
+        "variants": [
+          {
+            "id": 84108,
+            "title": "11oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "size": "11oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 1155,
+                "width": 2475
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              84108
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1389
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1389
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              84108
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 4019
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 4019
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              84108
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 719
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 269
+            },
+            "countries": [
+              "AU",
+              "NZ"
+            ]
+          },
+          {
+            "variant_ids": [
+              84108
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "countries": [
+              "GB"
+            ]
+          }
+        ]
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1389
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1389
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 4019
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 4019
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "AU",
+            "NZ"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 719
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 269
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "GB"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "variant_count": 1
+        }
+      ]
     }
   ]
 }

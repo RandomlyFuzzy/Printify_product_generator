@@ -23,6 +23,9 @@
           {
             "id": 81758,
             "title": "18\u0022 x 15\u0022",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "18\u0022 x 15\u0022"
             },
@@ -156,7 +159,109 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "AD",
+            "GL",
+            "IS",
+            "BY",
+            "AT",
+            "GE",
+            "DE",
+            "LU",
+            "NL",
+            "PL",
+            "GP",
+            "MK",
+            "RE",
+            "TR",
+            "BV",
+            "VA",
+            "SM",
+            "BA",
+            "FO",
+            "HU",
+            "ES",
+            "UA",
+            "AX",
+            "EE",
+            "IM",
+            "LV",
+            "LI",
+            "LT",
+            "SK",
+            "CH",
+            "GB",
+            "XK",
+            "MC",
+            "RO",
+            "SE",
+            "AL",
+            "MT",
+            "HR",
+            "DK",
+            "GI",
+            "PT",
+            "RS",
+            "CZ",
+            "REST_OF_THE_WORLD",
+            "AM",
+            "BE",
+            "CY",
+            "GR",
+            "ME",
+            "NO",
+            "IE",
+            "FR",
+            "JE",
+            "MD",
+            "BG",
+            "FI",
+            "GG",
+            "IT",
+            "SI"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1099
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 399
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 829
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 199
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1659
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 289
+          },
+          "variant_count": 1
+        }
+      ]
     }
   ]
 }

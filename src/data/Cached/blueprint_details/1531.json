@@ -25,6 +25,9 @@
           {
             "id": 109699,
             "title": "Black tub \u002B lid / NET WT 32 OZ (907g) / Chocolate",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black tub \u002B lid",
               "size": "NET WT 32 OZ (907g)",
@@ -64,7 +67,23 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 399
+          },
+          "variant_count": 1
+        }
+      ]
     }
   ]
 }

@@ -27,6 +27,9 @@
           {
             "id": 116665,
             "title": "16oz / With lid and straw",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "16oz",
               "type": "With lid and straw"
@@ -43,6 +46,9 @@
           {
             "id": 116666,
             "title": "16oz / Without lid or straw",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "16oz",
               "type": "Without lid or straw"
@@ -116,7 +122,51 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 929
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 399
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1629
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 809
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 739
+          },
+          "variant_count": 2
+        }
+      ]
     }
   ]
 }

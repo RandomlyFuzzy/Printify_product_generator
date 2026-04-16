@@ -29,6 +29,9 @@
           {
             "id": 85197,
             "title": "XS / White drawstring",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XS",
               "color": "White drawstring"
@@ -69,6 +72,9 @@
           {
             "id": 85198,
             "title": "S / White drawstring",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "S",
               "color": "White drawstring"
@@ -109,6 +115,9 @@
           {
             "id": 85199,
             "title": "M / White drawstring",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "M",
               "color": "White drawstring"
@@ -149,6 +158,9 @@
           {
             "id": 85200,
             "title": "L / White drawstring",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "L",
               "color": "White drawstring"
@@ -189,6 +201,9 @@
           {
             "id": 85201,
             "title": "XL / White drawstring",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XL",
               "color": "White drawstring"
@@ -229,6 +244,9 @@
           {
             "id": 85202,
             "title": "2XL / White drawstring",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2XL",
               "color": "White drawstring"
@@ -269,6 +287,9 @@
           {
             "id": 85203,
             "title": "3XL / White drawstring",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "3XL",
               "color": "White drawstring"
@@ -309,6 +330,9 @@
           {
             "id": 85204,
             "title": "4XL / White drawstring",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "4XL",
               "color": "White drawstring"
@@ -527,7 +551,136 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1899
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1819
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1699
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2629
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 2599
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 3129
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 3099
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "AX",
+            "AL",
+            "AD",
+            "AM",
+            "AT",
+            "BY",
+            "BE",
+            "BA",
+            "BV",
+            "BG",
+            "HR",
+            "CY",
+            "CZ",
+            "DK",
+            "EE",
+            "FO",
+            "FI",
+            "FR",
+            "GE",
+            "DE",
+            "GI",
+            "GR",
+            "GL",
+            "GP",
+            "GG",
+            "VA",
+            "HU",
+            "IS",
+            "IE",
+            "IM",
+            "IT",
+            "JE",
+            "LV",
+            "LI",
+            "LT",
+            "LU",
+            "MK",
+            "MT",
+            "MD",
+            "MC",
+            "ME",
+            "NL",
+            "NO",
+            "PL",
+            "PT",
+            "RE",
+            "RO",
+            "SM",
+            "RS",
+            "SK",
+            "SI",
+            "ES",
+            "SE",
+            "CH",
+            "TR",
+            "UA",
+            "GB",
+            "XK"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1759
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1629
+          },
+          "variant_count": 8
+        }
+      ]
     }
   ]
 }

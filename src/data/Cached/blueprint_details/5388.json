@@ -30,6 +30,9 @@
           {
             "id": 244995,
             "title": "Natural / Black / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Natural / Black",
               "size": "One size"
@@ -52,6 +55,9 @@
           {
             "id": 244996,
             "title": "Natural / Cardinal / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Natural / Cardinal",
               "size": "One size"
@@ -74,6 +80,9 @@
           {
             "id": 244997,
             "title": "Natural / Coal / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Natural / Coal",
               "size": "One size"
@@ -96,6 +105,9 @@
           {
             "id": 244998,
             "title": "Natural / Forest / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Natural / Forest",
               "size": "One size"
@@ -118,6 +130,9 @@
           {
             "id": 244999,
             "title": "Natural / Liberty / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Natural / Liberty",
               "size": "One size"
@@ -140,6 +155,9 @@
           {
             "id": 245000,
             "title": "Natural / Midnight / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Natural / Midnight",
               "size": "One size"
@@ -162,6 +180,9 @@
           {
             "id": 245001,
             "title": "Natural / Walnut / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Natural / Walnut",
               "size": "One size"
@@ -245,14 +266,14 @@
             ],
             "first_item": {
               "currency": "USD",
-              "cost": 489
+              "cost": 1000
             },
             "additional_items": {
               "currency": "USD",
-              "cost": 219
+              "cost": 400
             },
             "countries": [
-              "US"
+              "REST_OF_THE_WORLD"
             ]
           },
           {
@@ -267,18 +288,76 @@
             ],
             "first_item": {
               "currency": "USD",
-              "cost": 1000
+              "cost": 489
             },
             "additional_items": {
               "currency": "USD",
-              "cost": 400
+              "cost": 219
             },
             "countries": [
-              "REST_OF_THE_WORLD"
+              "US"
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 449
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 209
+          },
+          "variant_count": 7
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 939
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 7
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1000
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 400
+          },
+          "variant_count": 7
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 489
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 219
+          },
+          "variant_count": 7
+        }
+      ]
     }
   ]
 }

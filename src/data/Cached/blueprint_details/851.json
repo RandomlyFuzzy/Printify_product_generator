@@ -25,6 +25,9 @@
           {
             "id": 76774,
             "title": "2\u0022 x 2\u0022 / Die-Cut / 1 pc",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2\u0022 x 2\u0022",
               "shape": "Die-Cut",
@@ -42,6 +45,9 @@
           {
             "id": 76775,
             "title": "3\u0022 x 3\u0022 / Die-Cut / 1 pc",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "3\u0022 x 3\u0022",
               "shape": "Die-Cut",
@@ -59,6 +65,9 @@
           {
             "id": 76776,
             "title": "4\u0022 x 4\u0022 / Die-Cut / 1 pc",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "4\u0022 x 4\u0022",
               "shape": "Die-Cut",
@@ -76,6 +85,9 @@
           {
             "id": 76777,
             "title": "5\u0022 x 5\u0022 / Die-Cut / 1 pc",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "5\u0022 x 5\u0022",
               "shape": "Die-Cut",
@@ -93,6 +105,9 @@
           {
             "id": 76778,
             "title": "6\u0022 \u00D7 6\u0022 / Die-Cut / 1 pc",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "6\u0022 \u00D7 6\u0022",
               "shape": "Die-Cut",
@@ -176,7 +191,51 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 479
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 70
+          },
+          "variant_count": 5
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 70
+          },
+          "variant_count": 5
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1099
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 59
+          },
+          "variant_count": 5
+        }
+      ]
     }
   ]
 }

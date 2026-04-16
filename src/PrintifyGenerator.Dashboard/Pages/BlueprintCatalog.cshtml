@@ -1,0 +1,401 @@
+@page
+@model BlueprintCatalogModel
+@{
+    ViewData["Title"] = "Blueprint Catalog";
+    var snapshot = Model.Snapshot;
+}
+
+<main class="dashboard-shell page-shell blueprint-page-shell">
+    <section class="hero-panel catalog-hero-panel">
+        <div>
+            <p class="eyebrow">Catalog Controls</p>
+            <h1>Country-specific blueprint and variant enablement.</h1>
+            <p class="hero-copy">
+                This page filters the cached Printify catalog to a single destination country, lets you turn
+                blueprints and variant overrides on or off, and stores the last production and delivery lookup from
+                published pricing products kept in your Printify shop for later cost checks.
+            </p>
+
+            <form method="get" class="catalog-filter-form">
+                <label>
+                    <span>Country code</span>
+                    <input type="text" name="countryCode" maxlength="2" value="@snapshot.CountryCode" placeholder="GB" />
+                </label>
+                <label>
+                    <span>Search</span>
+                    <input type="search" name="searchTerm" value="@snapshot.SearchTerm" placeholder="Blueprint, provider, variant, option" />
+                </label>
+                <label class="toggle-row catalog-toggle-row">
+                    <input type="hidden" name="enabledOnly" value="false" />
+                    <input type="checkbox" name="enabledOnly" value="true" @(snapshot.EnabledOnly ? "checked" : null) />
+                    <span>Enabled only</span>
+                </label>
+                <div class="button-row">
+                    <button type="submit" class="primary-button">Apply filters</button>
+                    <a class="ghost-button catalog-link-button" asp-page="/BlueprintCatalog" asp-route-countryCode="@snapshot.CountryCode">Reset search</a>
+                </div>
+            </form>
+
+            @if (snapshot.SavedCountryCodes.Count > 0)
+            {
+                <div class="catalog-saved-countries">
+                    <p class="subtle-label">Saved countries</p>
+                    <div class="filter-pills">
+                        @foreach (var countryCode in snapshot.SavedCountryCodes)
+                        {
+                            <a class="filter-pill @(string.Equals(countryCode, snapshot.CountryCode, StringComparison.OrdinalIgnoreCase) ? "is-active" : null)"
+                               asp-page="/BlueprintCatalog"
+                               asp-route-countryCode="@countryCode"
+                               asp-route-searchTerm="@snapshot.SearchTerm"
+                               asp-route-enabledOnly="@snapshot.EnabledOnly">@countryCode</a>
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+
+        <div class="hero-meta">
+            <div>
+                <span class="meta-label">Settings file</span>
+                <strong>@snapshot.SettingsPath</strong>
+            </div>
+            <div>
+                <span class="meta-label">Visible tree</span>
+                <strong>@snapshot.BlueprintCount blueprints · @snapshot.ProviderCount providers · @snapshot.VariantCount variants</strong>
+            </div>
+            <div>
+                <span class="meta-label">Enabled now</span>
+                <strong>@snapshot.EnabledBlueprintCount blueprints · @snapshot.EnabledVariantCount variants</strong>
+            </div>
+            <div>
+                <span class="meta-label">Pricing lookups</span>
+                <strong>
+                    @if (snapshot.LastLiveProbeAtUtc.HasValue)
+                    {
+                        @BlueprintCatalogModel.FormatTimestamp(snapshot.LastLiveProbeAtUtc)
+                    }
+                    else
+                    {
+                        @:Not refreshed yet
+                    }
+                </strong>
+                @if (!string.IsNullOrWhiteSpace(snapshot.LastProbeShopLabel))
+                {
+                    <span>@snapshot.LastProbeShopLabel</span>
+                }
+            </div>
+
+            <form method="post" asp-page-handler="RefreshEnabledPricing" class="catalog-meta-form">
+                <input type="hidden" name="countryCode" value="@snapshot.CountryCode" />
+                <input type="hidden" name="searchTerm" value="@snapshot.SearchTerm" />
+                <input type="hidden" name="enabledOnly" value="@(snapshot.EnabledOnly ? "true" : "false")" />
+                <button type="submit" class="secondary-button">Refresh pricing for enabled blueprints</button>
+            </form>
+        </div>
+    </section>
+
+    @if (!string.IsNullOrWhiteSpace(Model.FlashMessage))
+    {
+        <section class="flash-banner">@Model.FlashMessage</section>
+    }
+
+    @if (!string.IsNullOrWhiteSpace(Model.FlashErrorMessage))
+    {
+        <section class="flash-banner flash-banner-error">@Model.FlashErrorMessage</section>
+    }
+
+    <section class="stats-grid catalog-stats-grid">
+        <article class="stat-card">
+            <span class="stat-label">Country</span>
+            <strong>@snapshot.CountryCode</strong>
+            <p>All shipping rows are filtered to this destination code.</p>
+        </article>
+        <article class="stat-card">
+            <span class="stat-label">Visible blueprints</span>
+            <strong>@snapshot.BlueprintCount</strong>
+            <p>Only blueprints with at least one provider that ships to the selected country.</p>
+        </article>
+        <article class="stat-card">
+            <span class="stat-label">Visible variants</span>
+            <strong>@snapshot.VariantCount</strong>
+            <p>Variants that have a shipping profile for the selected country.</p>
+        </article>
+        <article class="stat-card">
+            <span class="stat-label">Enabled blueprints</span>
+            <strong>@snapshot.EnabledBlueprintCount</strong>
+            <p>Blueprint-level defaults currently turned on for this country.</p>
+        </article>
+        <article class="stat-card">
+            <span class="stat-label">Enabled variants</span>
+            <strong>@snapshot.EnabledVariantCount</strong>
+            <p>Effective enabled variants after blueprint defaults and row overrides.</p>
+        </article>
+        <article class="stat-card">
+            <span class="stat-label">Priced blueprints</span>
+            <strong>@snapshot.LivePricedBlueprintCount</strong>
+            <p>Blueprints with cached production and delivery data from published pricing products.</p>
+        </article>
+    </section>
+
+    <section class="panel catalog-tree-panel">
+        <div class="panel-heading split-heading">
+            <div>
+                <p class="eyebrow">Catalog Tree</p>
+                <h2>Compact selection tree</h2>
+                <p class="hero-copy catalog-copy">
+                    Provider rows summarize production and delivery ranges. Variant rows keep the actual selection control inline,
+                    so you can scan published lookup results and enablement together instead of jumping between cards.
+                </p>
+            </div>
+            <span class="muted">Production and live delivery values come from the last published-product lookup. Delivery falls back to cached country shipping until a lookup runs.</span>
+        </div>
+
+        @if (snapshot.Blueprints.Count == 0)
+        {
+            <p class="muted">No cached blueprints match the selected country and filters.</p>
+        }
+        else
+        {
+            <div class="catalog-tree">
+                @foreach (var blueprint in snapshot.Blueprints)
+                {
+                    var hasBlueprintImage = !string.IsNullOrWhiteSpace(blueprint.ImageUrl);
+
+                    <section class="catalog-blueprint-section">
+                        <div class="catalog-blueprint-strip">
+                            <div class="catalog-row-media @(hasBlueprintImage ? null : "is-empty")">
+                                @if (hasBlueprintImage)
+                                {
+                                    <img src="@blueprint.ImageUrl" alt="@blueprint.Title" loading="lazy" />
+                                }
+                                else
+                                {
+                                    <span class="catalog-media-glyph" aria-hidden="true"></span>
+                                }
+                            </div>
+
+                            <div class="catalog-blueprint-primary">
+                                <h3>@blueprint.Title</h3>
+                                <p class="summary-copy">Blueprint @blueprint.BlueprintId · @blueprint.Brand · model @blueprint.Model</p>
+                            </div>
+
+                            <div class="catalog-blueprint-metrics">
+                                <div>
+                                    <span class="meta-label">Providers</span>
+                                    <strong>@blueprint.ProviderCount</strong>
+                                </div>
+                                <div>
+                                    <span class="meta-label">Enabled variants</span>
+                                    <strong>@blueprint.EnabledVariantCount / @blueprint.VariantCount</strong>
+                                </div>
+                                <div>
+                                    <span class="meta-label">Last pricing lookup</span>
+                                    <strong>@BlueprintCatalogModel.FormatTimestamp(blueprint.LivePricingUpdatedAtUtc)</strong>
+                                </div>
+                            </div>
+
+                            <div class="catalog-blueprint-controls">
+                                <form method="post" asp-page-handler="SetBlueprintEnabled" class="catalog-inline-form">
+                                    <input type="hidden" name="countryCode" value="@snapshot.CountryCode" />
+                                    <input type="hidden" name="searchTerm" value="@snapshot.SearchTerm" />
+                                    <input type="hidden" name="enabledOnly" value="@(snapshot.EnabledOnly ? "true" : "false")" />
+                                    <input type="hidden" name="blueprintId" value="@blueprint.BlueprintId" />
+                                    <input type="hidden" name="isEnabled" value="@(blueprint.IsEnabled ? "false" : "true")" />
+
+                                    <button type="submit" class="catalog-toggle-button @(blueprint.IsEnabled ? "is-on" : "is-off")" title="@(blueprint.IsEnabled ? "Disable blueprint default" : "Enable blueprint default")">
+                                        <span class="catalog-toggle-box" aria-hidden="true"></span>
+                                        <span>@(blueprint.IsEnabled ? "Default on" : "Default off")</span>
+                                    </button>
+                                </form>
+
+                                <form method="post" asp-page-handler="RefreshBlueprintPricing" class="catalog-inline-form">
+                                    <input type="hidden" name="countryCode" value="@snapshot.CountryCode" />
+                                    <input type="hidden" name="searchTerm" value="@snapshot.SearchTerm" />
+                                    <input type="hidden" name="enabledOnly" value="@(snapshot.EnabledOnly ? "true" : "false")" />
+                                    <input type="hidden" name="blueprintId" value="@blueprint.BlueprintId" />
+
+                                    <button type="submit" class="catalog-mini-button">Refresh pricing</button>
+                                </form>
+
+                                @if (!string.IsNullOrWhiteSpace(blueprint.ProbeShopLabel))
+                                {
+                                    <span class="catalog-probe-label">@blueprint.ProbeShopLabel</span>
+                                }
+                            </div>
+                        </div>
+
+                        <div class="catalog-provider-tree">
+                            @foreach (var provider in blueprint.Providers)
+                            {
+                                var providerAllEnabled = provider.EnabledVariantCount == provider.VariantCount && provider.VariantCount > 0;
+                                var providerPartiallyEnabled = provider.EnabledVariantCount > 0 && provider.EnabledVariantCount < provider.VariantCount;
+                                var productionCurrency = provider.Variants
+                                    .Select(variant => variant.ProductionCurrency)
+                                    .FirstOrDefault(currency => !string.IsNullOrWhiteSpace(currency))
+                                    ?? provider.ShippingCurrency;
+                                var productionRange = BlueprintCatalogModel.FormatMoneyRange(provider.Variants.Select(variant => variant.ProductionCost), productionCurrency);
+                                var providerDeliveryCurrency = provider.Variants
+                                    .Select(BlueprintCatalogModel.ResolveDisplayedDeliveryCurrency)
+                                    .FirstOrDefault(currency => !string.IsNullOrWhiteSpace(currency))
+                                    ?? provider.ShippingCurrency;
+                                var deliveryRange = BlueprintCatalogModel.FormatMoneyRange(provider.Variants.Select(BlueprintCatalogModel.ResolveDisplayedDeliveryCost), providerDeliveryCurrency);
+
+                                <details class="catalog-provider-tree-item" open="@(provider.EnabledVariantCount > 0 || !string.IsNullOrWhiteSpace(snapshot.SearchTerm) ? "open" : null)">
+                                    <summary class="catalog-provider-row">
+                                        <div class="catalog-row-media @(hasBlueprintImage ? null : "is-empty")">
+                                            @if (hasBlueprintImage)
+                                            {
+                                                <img src="@blueprint.ImageUrl" alt="@provider.Title" loading="lazy" />
+                                            }
+                                            else
+                                            {
+                                                <span class="catalog-media-glyph" aria-hidden="true"></span>
+                                            }
+                                        </div>
+
+                                        <div class="catalog-provider-name">
+                                            <strong>@provider.Title</strong>
+                                            <span>Provider @provider.ProviderId</span>
+                                        </div>
+
+                                        <div class="catalog-row-stat">
+                                            <strong>@provider.VariantCount</strong>
+                                            <span>variants</span>
+                                        </div>
+
+                                        <div class="catalog-row-stat catalog-row-stat-wide">
+                                            <strong>@productionRange</strong>
+                                            <span>production cost range</span>
+                                        </div>
+
+                                        <div class="catalog-row-stat catalog-row-stat-wide">
+                                            <strong>@deliveryRange</strong>
+                                            <span>delivery range</span>
+                                        </div>
+
+                                        <form method="post" asp-page-handler="SetProviderEnabled" class="catalog-summary-form" data-summary-action-container>
+                                            <input type="hidden" name="countryCode" value="@snapshot.CountryCode" />
+                                            <input type="hidden" name="searchTerm" value="@snapshot.SearchTerm" />
+                                            <input type="hidden" name="enabledOnly" value="@(snapshot.EnabledOnly ? "true" : "false")" />
+                                            <input type="hidden" name="blueprintId" value="@blueprint.BlueprintId" />
+                                            <input type="hidden" name="providerId" value="@provider.ProviderId" />
+                                            <input type="hidden" name="isEnabled" value="@(providerAllEnabled ? "false" : "true")" />
+
+                                            <button type="submit"
+                                                    class="catalog-toggle-button @(providerAllEnabled ? "is-on" : providerPartiallyEnabled ? "is-partial" : "is-off")"
+                                                    data-summary-action
+                                                    title="@(providerAllEnabled ? "Disable all provider variants" : "Enable all provider variants")">
+                                                <span class="catalog-toggle-box" aria-hidden="true"></span>
+                                            </button>
+                                        </form>
+
+                                        <span class="catalog-chevron" aria-hidden="true"></span>
+                                    </summary>
+
+                                    <div class="catalog-variant-tree">
+                                        @foreach (var variant in provider.Variants)
+                                        {
+                                            var variantImageUrl = string.IsNullOrWhiteSpace(variant.ImageUrl) ? blueprint.ImageUrl : variant.ImageUrl;
+                                            var hasVariantImage = !string.IsNullOrWhiteSpace(variantImageUrl);
+                                            var variantDeliveryCost = BlueprintCatalogModel.ResolveDisplayedDeliveryCost(variant);
+                                            var variantDeliveryCurrency = BlueprintCatalogModel.ResolveDisplayedDeliveryCurrency(variant);
+                                            var variantDeliverySource = BlueprintCatalogModel.DescribeDeliverySource(variant);
+                                            var pricingProductLabel = !string.IsNullOrWhiteSpace(variant.PricingProductTitle)
+                                                ? variant.PricingProductTitle
+                                                : variant.PricingProductId;
+
+                                            <form method="post" asp-page-handler="SetVariantMode" class="catalog-variant-row">
+                                                <input type="hidden" name="countryCode" value="@snapshot.CountryCode" />
+                                                <input type="hidden" name="searchTerm" value="@snapshot.SearchTerm" />
+                                                <input type="hidden" name="enabledOnly" value="@(snapshot.EnabledOnly ? "true" : "false")" />
+                                                <input type="hidden" name="blueprintId" value="@blueprint.BlueprintId" />
+                                                <input type="hidden" name="providerId" value="@provider.ProviderId" />
+                                                <input type="hidden" name="variantId" value="@variant.VariantId" />
+
+                                                <div class="catalog-variant-rail" aria-hidden="true"></div>
+
+                                                <div class="catalog-row-media catalog-row-media-small @(hasVariantImage ? null : "is-empty")">
+                                                    @if (hasVariantImage)
+                                                    {
+                                                        <img src="@variantImageUrl" alt="@variant.Title" loading="lazy" />
+                                                    }
+                                                    else
+                                                    {
+                                                        <span class="catalog-media-glyph" aria-hidden="true"></span>
+                                                    }
+                                                </div>
+
+                                                <div class="catalog-variant-id">
+                                                    <strong>@variant.VariantId</strong>
+                                                    <span>@(variant.IsAvailable ? "available" : "unavailable")</span>
+                                                </div>
+
+                                                <div class="catalog-variant-options">
+                                                    <strong>@variant.Title</strong>
+                                                    <span>@variant.OptionSummary</span>
+                                                    @if (!string.IsNullOrWhiteSpace(pricingProductLabel))
+                                                    {
+                                                        <span class="catalog-variant-lookup" title="@variant.PricingProductId">Pricing product: @pricingProductLabel</span>
+                                                    }
+                                                </div>
+
+                                                <div class="catalog-row-stat catalog-row-stat-wide">
+                                                    <strong>@BlueprintCatalogModel.FormatMoney(variant.ProductionCost, variant.ProductionCurrency)</strong>
+                                                    <span>production</span>
+                                                </div>
+
+                                                <div class="catalog-row-stat catalog-row-stat-wide">
+                                                    <strong>@BlueprintCatalogModel.FormatMoney(variantDeliveryCost, variantDeliveryCurrency)</strong>
+                                                    <span>@variantDeliverySource</span>
+                                                </div>
+
+                                                <div class="catalog-variant-actions">
+                                                    <button type="submit"
+                                                            name="mode"
+                                                            value="@(variant.IsEffectivelyEnabled ? BlueprintVariantSelectionModes.Disabled : BlueprintVariantSelectionModes.Enabled)"
+                                                            class="catalog-toggle-button @(variant.IsEffectivelyEnabled ? "is-on" : "is-off")"
+                                                            title="@(variant.IsEffectivelyEnabled ? "Disable variant" : "Enable variant")">
+                                                        <span class="catalog-toggle-box" aria-hidden="true"></span>
+                                                    </button>
+
+                                                    <button type="submit"
+                                                            name="mode"
+                                                            value="@BlueprintVariantSelectionModes.Inherit"
+                                                            class="catalog-mini-button @(variant.SelectionMode == BlueprintVariantSelectionModes.Inherit ? "is-active" : null)">
+                                                        Reset
+                                                    </button>
+                                                </div>
+                                            </form>
+                                        }
+                                    </div>
+                                </details>
+                            }
+                        </div>
+                    </section>
+                }
+            </div>
+        }
+    </section>
+</main>
+
+@section Scripts {
+    <script>
+        document.addEventListener("click", function (event) {
+            if (event.target.closest("[data-summary-action]")) {
+                event.stopPropagation();
+            }
+        });
+
+        document.addEventListener("mousedown", function (event) {
+            if (event.target.closest("[data-summary-action]")) {
+                event.stopPropagation();
+            }
+        });
+
+        document.addEventListener("keydown", function (event) {
+            if (event.target.closest("[data-summary-action]")) {
+                event.stopPropagation();
+            }
+        });
+    </script>
+}

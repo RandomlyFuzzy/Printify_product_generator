@@ -32,6 +32,9 @@
           {
             "id": 244931,
             "title": "White / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White",
               "size": "One size"
@@ -48,6 +51,9 @@
           {
             "id": 244947,
             "title": "Black / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "One size"
@@ -64,6 +70,9 @@
           {
             "id": 244948,
             "title": "Charcoal / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Charcoal",
               "size": "One size"
@@ -80,6 +89,9 @@
           {
             "id": 244949,
             "title": "Forest Green / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Forest Green",
               "size": "One size"
@@ -96,6 +108,9 @@
           {
             "id": 244950,
             "title": "Maroon / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Maroon",
               "size": "One size"
@@ -112,6 +127,9 @@
           {
             "id": 244951,
             "title": "Navy / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Navy",
               "size": "One size"
@@ -128,6 +146,9 @@
           {
             "id": 244952,
             "title": "Olive / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Olive",
               "size": "One size"
@@ -144,6 +165,9 @@
           {
             "id": 244953,
             "title": "Red / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Red",
               "size": "One size"
@@ -160,6 +184,9 @@
           {
             "id": 244954,
             "title": "Stone / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Stone",
               "size": "One size"
@@ -254,7 +281,51 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 929
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 199
+          },
+          "variant_count": 9
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1199
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 599
+          },
+          "variant_count": 9
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 749
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 99
+          },
+          "variant_count": 9
+        }
+      ]
     }
   ]
 }

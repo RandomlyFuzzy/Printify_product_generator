@@ -28,6 +28,9 @@
           {
             "id": 109733,
             "title": "White bottle \u002B cap / Unflavored / 60 Vegetable capsules",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White bottle \u002B cap",
               "flavor": "Unflavored",
@@ -67,7 +70,23 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 449
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 199
+          },
+          "variant_count": 1
+        }
+      ]
     }
   ]
 }

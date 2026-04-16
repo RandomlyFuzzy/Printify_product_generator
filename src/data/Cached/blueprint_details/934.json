@@ -27,6 +27,9 @@
           {
             "id": 77828,
             "title": "S / Black zipper",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "S",
               "color": "Black zipper"
@@ -79,6 +82,9 @@
           {
             "id": 77829,
             "title": "M / Black zipper",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "M",
               "color": "Black zipper"
@@ -131,6 +137,9 @@
           {
             "id": 77830,
             "title": "L / Black zipper",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "L",
               "color": "Black zipper"
@@ -183,6 +192,9 @@
           {
             "id": 77831,
             "title": "XL / Black zipper",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XL",
               "color": "Black zipper"
@@ -235,6 +247,9 @@
           {
             "id": 77832,
             "title": "2XL / Black zipper",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2XL",
               "color": "Black zipper"
@@ -287,6 +302,9 @@
           {
             "id": 77833,
             "title": "S / Dark blue zipper",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "S",
               "color": "Dark blue zipper"
@@ -339,6 +357,9 @@
           {
             "id": 77834,
             "title": "M / Dark blue zipper",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "M",
               "color": "Dark blue zipper"
@@ -391,6 +412,9 @@
           {
             "id": 77835,
             "title": "L / Dark blue zipper",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "L",
               "color": "Dark blue zipper"
@@ -443,6 +467,9 @@
           {
             "id": 77836,
             "title": "XL / Dark blue zipper",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XL",
               "color": "Dark blue zipper"
@@ -495,6 +522,9 @@
           {
             "id": 77837,
             "title": "2XL / Dark blue zipper",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2XL",
               "color": "Dark blue zipper"
@@ -635,7 +665,58 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "MX",
+            "NL",
+            "NZ",
+            "DK",
+            "CA",
+            "BR",
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 840
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 840
+          },
+          "variant_count": 10
+        },
+        {
+          "countries": [
+            "US",
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "variant_count": 10
+        },
+        {
+          "countries": [
+            "CN"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "variant_count": 10
+        }
+      ]
     }
   ]
 }

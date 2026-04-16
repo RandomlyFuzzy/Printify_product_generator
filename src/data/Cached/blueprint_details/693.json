@@ -25,6 +25,9 @@
           {
             "id": 72912,
             "title": "22oz / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "22oz",
               "color": "Black"
@@ -41,6 +44,9 @@
           {
             "id": 72916,
             "title": "22oz / Gray",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "22oz",
               "color": "Gray"
@@ -139,7 +145,65 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 799
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 299
+          },
+          "variant_count": 4
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1139
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 4
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 839
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 459
+          },
+          "variant_count": 4
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1310
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 660
+          },
+          "variant_count": 4
+        }
+      ]
     }
   ]
 }

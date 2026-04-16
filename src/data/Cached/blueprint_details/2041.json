@@ -18,6 +18,509 @@
   "print_providers": [
     {
       "provider": {
+        "id": 99,
+        "title": "Printify Choice"
+      },
+      "variants": {
+        "id": 99,
+        "title": "Printify Choice",
+        "variants": [
+          {
+            "id": 125365,
+            "title": "One size / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "size": "One size",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front_dtf",
+                "decoration_method": "dtf",
+                "height": 600,
+                "width": 1500
+              },
+              {
+                "position": "right_hat_embroidery",
+                "decoration_method": "embroidery",
+                "height": 300,
+                "width": 600
+              },
+              {
+                "position": "left_hat_embroidery",
+                "decoration_method": "embroidery",
+                "height": 300,
+                "width": 600
+              },
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 744,
+                "width": 1417
+              },
+              {
+                "position": "back_hat_embroidery",
+                "decoration_method": "embroidery",
+                "height": 300,
+                "width": 600
+              }
+            ]
+          },
+          {
+            "id": 125366,
+            "title": "One size / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "White",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front_dtf",
+                "decoration_method": "dtf",
+                "height": 600,
+                "width": 1500
+              },
+              {
+                "position": "right_hat_embroidery",
+                "decoration_method": "embroidery",
+                "height": 300,
+                "width": 600
+              },
+              {
+                "position": "left_hat_embroidery",
+                "decoration_method": "embroidery",
+                "height": 300,
+                "width": 600
+              },
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 744,
+                "width": 1417
+              },
+              {
+                "position": "back_hat_embroidery",
+                "decoration_method": "embroidery",
+                "height": 300,
+                "width": 600
+              }
+            ]
+          },
+          {
+            "id": 125367,
+            "title": "One size / Royal / Natural",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "size": "One size",
+              "color": "Royal / Natural"
+            },
+            "placeholders": [
+              {
+                "position": "front_dtf",
+                "decoration_method": "dtf",
+                "height": 600,
+                "width": 1500
+              },
+              {
+                "position": "right_hat_embroidery",
+                "decoration_method": "embroidery",
+                "height": 300,
+                "width": 600
+              },
+              {
+                "position": "left_hat_embroidery",
+                "decoration_method": "embroidery",
+                "height": 300,
+                "width": 600
+              },
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 744,
+                "width": 1417
+              },
+              {
+                "position": "back_hat_embroidery",
+                "decoration_method": "embroidery",
+                "height": 300,
+                "width": 600
+              }
+            ]
+          },
+          {
+            "id": 125368,
+            "title": "One size / Red / Natural",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Red / Natural",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front_dtf",
+                "decoration_method": "dtf",
+                "height": 600,
+                "width": 1500
+              },
+              {
+                "position": "right_hat_embroidery",
+                "decoration_method": "embroidery",
+                "height": 300,
+                "width": 600
+              },
+              {
+                "position": "left_hat_embroidery",
+                "decoration_method": "embroidery",
+                "height": 300,
+                "width": 600
+              },
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 744,
+                "width": 1417
+              },
+              {
+                "position": "back_hat_embroidery",
+                "decoration_method": "embroidery",
+                "height": 300,
+                "width": 600
+              }
+            ]
+          },
+          {
+            "id": 125369,
+            "title": "One size / Dark Green / Natural",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "size": "One size",
+              "color": "Dark Green / Natural"
+            },
+            "placeholders": [
+              {
+                "position": "front_dtf",
+                "decoration_method": "dtf",
+                "height": 600,
+                "width": 1500
+              },
+              {
+                "position": "right_hat_embroidery",
+                "decoration_method": "embroidery",
+                "height": 300,
+                "width": 600
+              },
+              {
+                "position": "left_hat_embroidery",
+                "decoration_method": "embroidery",
+                "height": 300,
+                "width": 600
+              },
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 744,
+                "width": 1417
+              },
+              {
+                "position": "back_hat_embroidery",
+                "decoration_method": "embroidery",
+                "height": 300,
+                "width": 600
+              }
+            ]
+          },
+          {
+            "id": 125370,
+            "title": "One size / Navy / Natural",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Navy / Natural",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front_dtf",
+                "decoration_method": "dtf",
+                "height": 600,
+                "width": 1500
+              },
+              {
+                "position": "right_hat_embroidery",
+                "decoration_method": "embroidery",
+                "height": 300,
+                "width": 600
+              },
+              {
+                "position": "left_hat_embroidery",
+                "decoration_method": "embroidery",
+                "height": 300,
+                "width": 600
+              },
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 744,
+                "width": 1417
+              },
+              {
+                "position": "back_hat_embroidery",
+                "decoration_method": "embroidery",
+                "height": 300,
+                "width": 600
+              }
+            ]
+          },
+          {
+            "id": 125371,
+            "title": "One size / Black / Natural",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "size": "One size",
+              "color": "Black / Natural"
+            },
+            "placeholders": [
+              {
+                "position": "front_dtf",
+                "decoration_method": "dtf",
+                "height": 600,
+                "width": 1500
+              },
+              {
+                "position": "right_hat_embroidery",
+                "decoration_method": "embroidery",
+                "height": 300,
+                "width": 600
+              },
+              {
+                "position": "left_hat_embroidery",
+                "decoration_method": "embroidery",
+                "height": 300,
+                "width": 600
+              },
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 744,
+                "width": 1417
+              },
+              {
+                "position": "back_hat_embroidery",
+                "decoration_method": "embroidery",
+                "height": 300,
+                "width": 600
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              125365,
+              125366,
+              125367,
+              125368,
+              125369,
+              125370,
+              125371
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 449
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 209
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              125365,
+              125366,
+              125367,
+              125368,
+              125369,
+              125370,
+              125371
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 489
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 219
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              125365,
+              125366,
+              125367,
+              125368,
+              125369,
+              125370,
+              125371
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              125365,
+              125366,
+              125367,
+              125368,
+              125369,
+              125370,
+              125371
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1249
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 239
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              125365,
+              125366,
+              125367,
+              125368,
+              125369,
+              125370,
+              125371
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 939
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 449
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 209
+          },
+          "variant_count": 7
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 489
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 219
+          },
+          "variant_count": 7
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 399
+          },
+          "variant_count": 7
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1249
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 239
+          },
+          "variant_count": 7
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 939
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 7
+        }
+      ]
+    },
+    {
+      "provider": {
         "id": 261,
         "title": "Fancy Fanny "
       },
@@ -28,6 +531,9 @@
           {
             "id": 125365,
             "title": "One size / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Black"
@@ -44,6 +550,9 @@
           {
             "id": 125366,
             "title": "One size / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "White"
@@ -60,6 +569,9 @@
           {
             "id": 125367,
             "title": "One size / Royal / Natural",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Royal / Natural"
@@ -76,6 +588,9 @@
           {
             "id": 125368,
             "title": "One size / Red / Natural",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Red / Natural"
@@ -92,6 +607,9 @@
           {
             "id": 125369,
             "title": "One size / Dark Green / Natural",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Dark Green / Natural"
@@ -108,6 +626,9 @@
           {
             "id": 125370,
             "title": "One size / Navy / Natural",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Navy / Natural"
@@ -124,6 +645,9 @@
           {
             "id": 125371,
             "title": "One size / Black / Natural",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Black / Natural"
@@ -140,6 +664,9 @@
           {
             "id": 147911,
             "title": "One size / Royal Blue",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Royal Blue"
@@ -156,6 +683,9 @@
           {
             "id": 147912,
             "title": "One size / Red",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Red"
@@ -172,6 +702,9 @@
           {
             "id": 147913,
             "title": "One size / Navy",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Navy"
@@ -188,6 +721,9 @@
           {
             "id": 147914,
             "title": "One size / Neon Orange",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Neon Orange"
@@ -204,6 +740,9 @@
           {
             "id": 147915,
             "title": "One size / Maroon",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Maroon"
@@ -220,6 +759,9 @@
           {
             "id": 147916,
             "title": "One size / Grey",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Grey"
@@ -236,6 +778,9 @@
           {
             "id": 147917,
             "title": "One size / Dark Green",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Dark Green"
@@ -252,6 +797,9 @@
           {
             "id": 147918,
             "title": "One size / Yellow",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Yellow"
@@ -268,6 +816,9 @@
           {
             "id": 147919,
             "title": "One size / Charcoal Grey",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Charcoal Grey"
@@ -284,6 +835,9 @@
           {
             "id": 147920,
             "title": "One size / Khaki",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Khaki"
@@ -300,6 +854,9 @@
           {
             "id": 147921,
             "title": "One size / Neon Yellow",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Neon Yellow"
@@ -316,6 +873,9 @@
           {
             "id": 147922,
             "title": "One size / Pink",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Pink"
@@ -332,6 +892,9 @@
           {
             "id": 147923,
             "title": "One size / Royal / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Royal / Black"
@@ -348,6 +911,9 @@
           {
             "id": 147924,
             "title": "One size / Royal / Grey",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Royal / Grey"
@@ -364,6 +930,9 @@
           {
             "id": 147925,
             "title": "One size / Royal / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Royal / White"
@@ -380,6 +949,9 @@
           {
             "id": 147926,
             "title": "One size / Red / Royal",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Red / Royal"
@@ -396,6 +968,9 @@
           {
             "id": 147927,
             "title": "One size / Red / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Red / Black"
@@ -412,6 +987,9 @@
           {
             "id": 147928,
             "title": "One size / Red / Navy",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Red / Navy"
@@ -428,6 +1006,9 @@
           {
             "id": 147929,
             "title": "One size / Red / Grey",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Red / Grey"
@@ -444,6 +1025,9 @@
           {
             "id": 147930,
             "title": "One size / Red / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Red / White"
@@ -460,6 +1044,9 @@
           {
             "id": 147931,
             "title": "One size / Red / Khaki",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Red / Khaki"
@@ -476,6 +1063,9 @@
           {
             "id": 147932,
             "title": "One size / Black / Red",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Black / Red"
@@ -492,6 +1082,9 @@
           {
             "id": 147933,
             "title": "One size / Black / Grey",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Black / Grey"
@@ -508,6 +1101,9 @@
           {
             "id": 147934,
             "title": "One size / Black / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Black / White"
@@ -524,6 +1120,9 @@
           {
             "id": 147935,
             "title": "One size / Black / Charcoal Grey",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Black / Charcoal Grey"
@@ -540,6 +1139,9 @@
           {
             "id": 147936,
             "title": "One size / Black / Khaki",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Black / Khaki"
@@ -556,6 +1158,9 @@
           {
             "id": 147937,
             "title": "One size / Navy / Grey",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Navy / Grey"
@@ -572,6 +1177,9 @@
           {
             "id": 147938,
             "title": "One size / Navy / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Navy / White"
@@ -588,6 +1196,9 @@
           {
             "id": 147939,
             "title": "One size / Navy / Khaki",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Navy / Khaki"
@@ -604,6 +1215,9 @@
           {
             "id": 147940,
             "title": "One size / Maroon / Grey",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Maroon / Grey"
@@ -620,6 +1234,9 @@
           {
             "id": 147941,
             "title": "One size / Maroon / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Maroon / White"
@@ -636,6 +1253,9 @@
           {
             "id": 147942,
             "title": "One size / Maroon / Khaki",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Maroon / Khaki"
@@ -652,6 +1272,9 @@
           {
             "id": 147943,
             "title": "One size / Grey / Royal",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Grey / Royal"
@@ -668,6 +1291,9 @@
           {
             "id": 147944,
             "title": "One size / Grey / Navy",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Grey / Navy"
@@ -684,6 +1310,9 @@
           {
             "id": 147945,
             "title": "One size / Dark Green / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Dark Green / White"
@@ -700,6 +1329,9 @@
           {
             "id": 147946,
             "title": "One size / Dark Green / Khaki",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Dark Green / Khaki"
@@ -716,6 +1348,9 @@
           {
             "id": 147947,
             "title": "One size / Khaki / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Khaki / Black"
@@ -732,6 +1367,9 @@
           {
             "id": 147948,
             "title": "One size / Khaki / Navy",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Khaki / Navy"
@@ -748,6 +1386,9 @@
           {
             "id": 147949,
             "title": "One size / Khaki / Dark Green",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Khaki / Dark Green"
@@ -764,6 +1405,9 @@
           {
             "id": 147950,
             "title": "One size / Pink / White / Pink",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Pink / White / Pink"
@@ -972,417 +1616,51 @@
             ]
           }
         ]
-      }
-    },
-    {
-      "provider": {
-        "id": 99,
-        "title": "Printify Choice"
       },
-      "variants": {
-        "id": 99,
-        "title": "Printify Choice",
-        "variants": [
-          {
-            "id": 125365,
-            "title": "One size / Black",
-            "options": {
-              "size": "One size",
-              "color": "Black"
-            },
-            "placeholders": [
-              {
-                "position": "front_dtf",
-                "decoration_method": "dtf",
-                "height": 600,
-                "width": 1500
-              },
-              {
-                "position": "right_hat_embroidery",
-                "decoration_method": "embroidery",
-                "height": 300,
-                "width": 600
-              },
-              {
-                "position": "left_hat_embroidery",
-                "decoration_method": "embroidery",
-                "height": 300,
-                "width": 600
-              },
-              {
-                "position": "front",
-                "decoration_method": "embroidery",
-                "height": 744,
-                "width": 1417
-              },
-              {
-                "position": "back_hat_embroidery",
-                "decoration_method": "embroidery",
-                "height": 300,
-                "width": 600
-              }
-            ]
+      "cost_per_region": [
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1979
           },
-          {
-            "id": 125366,
-            "title": "One size / White",
-            "options": {
-              "color": "White",
-              "size": "One size"
-            },
-            "placeholders": [
-              {
-                "position": "front_dtf",
-                "decoration_method": "dtf",
-                "height": 600,
-                "width": 1500
-              },
-              {
-                "position": "right_hat_embroidery",
-                "decoration_method": "embroidery",
-                "height": 300,
-                "width": 600
-              },
-              {
-                "position": "left_hat_embroidery",
-                "decoration_method": "embroidery",
-                "height": 300,
-                "width": 600
-              },
-              {
-                "position": "front",
-                "decoration_method": "embroidery",
-                "height": 744,
-                "width": 1417
-              },
-              {
-                "position": "back_hat_embroidery",
-                "decoration_method": "embroidery",
-                "height": 300,
-                "width": 600
-              }
-            ]
+          "additional_items": {
+            "currency": "USD",
+            "cost": 959
           },
-          {
-            "id": 125367,
-            "title": "One size / Royal / Natural",
-            "options": {
-              "size": "One size",
-              "color": "Royal / Natural"
-            },
-            "placeholders": [
-              {
-                "position": "front_dtf",
-                "decoration_method": "dtf",
-                "height": 600,
-                "width": 1500
-              },
-              {
-                "position": "right_hat_embroidery",
-                "decoration_method": "embroidery",
-                "height": 300,
-                "width": 600
-              },
-              {
-                "position": "left_hat_embroidery",
-                "decoration_method": "embroidery",
-                "height": 300,
-                "width": 600
-              },
-              {
-                "position": "front",
-                "decoration_method": "embroidery",
-                "height": 744,
-                "width": 1417
-              },
-              {
-                "position": "back_hat_embroidery",
-                "decoration_method": "embroidery",
-                "height": 300,
-                "width": 600
-              }
-            ]
-          },
-          {
-            "id": 125368,
-            "title": "One size / Red / Natural",
-            "options": {
-              "color": "Red / Natural",
-              "size": "One size"
-            },
-            "placeholders": [
-              {
-                "position": "front_dtf",
-                "decoration_method": "dtf",
-                "height": 600,
-                "width": 1500
-              },
-              {
-                "position": "right_hat_embroidery",
-                "decoration_method": "embroidery",
-                "height": 300,
-                "width": 600
-              },
-              {
-                "position": "left_hat_embroidery",
-                "decoration_method": "embroidery",
-                "height": 300,
-                "width": 600
-              },
-              {
-                "position": "front",
-                "decoration_method": "embroidery",
-                "height": 744,
-                "width": 1417
-              },
-              {
-                "position": "back_hat_embroidery",
-                "decoration_method": "embroidery",
-                "height": 300,
-                "width": 600
-              }
-            ]
-          },
-          {
-            "id": 125369,
-            "title": "One size / Dark Green / Natural",
-            "options": {
-              "size": "One size",
-              "color": "Dark Green / Natural"
-            },
-            "placeholders": [
-              {
-                "position": "front_dtf",
-                "decoration_method": "dtf",
-                "height": 600,
-                "width": 1500
-              },
-              {
-                "position": "right_hat_embroidery",
-                "decoration_method": "embroidery",
-                "height": 300,
-                "width": 600
-              },
-              {
-                "position": "left_hat_embroidery",
-                "decoration_method": "embroidery",
-                "height": 300,
-                "width": 600
-              },
-              {
-                "position": "front",
-                "decoration_method": "embroidery",
-                "height": 744,
-                "width": 1417
-              },
-              {
-                "position": "back_hat_embroidery",
-                "decoration_method": "embroidery",
-                "height": 300,
-                "width": 600
-              }
-            ]
-          },
-          {
-            "id": 125370,
-            "title": "One size / Navy / Natural",
-            "options": {
-              "color": "Navy / Natural",
-              "size": "One size"
-            },
-            "placeholders": [
-              {
-                "position": "front_dtf",
-                "decoration_method": "dtf",
-                "height": 600,
-                "width": 1500
-              },
-              {
-                "position": "right_hat_embroidery",
-                "decoration_method": "embroidery",
-                "height": 300,
-                "width": 600
-              },
-              {
-                "position": "left_hat_embroidery",
-                "decoration_method": "embroidery",
-                "height": 300,
-                "width": 600
-              },
-              {
-                "position": "front",
-                "decoration_method": "embroidery",
-                "height": 744,
-                "width": 1417
-              },
-              {
-                "position": "back_hat_embroidery",
-                "decoration_method": "embroidery",
-                "height": 300,
-                "width": 600
-              }
-            ]
-          },
-          {
-            "id": 125371,
-            "title": "One size / Black / Natural",
-            "options": {
-              "size": "One size",
-              "color": "Black / Natural"
-            },
-            "placeholders": [
-              {
-                "position": "front_dtf",
-                "decoration_method": "dtf",
-                "height": 600,
-                "width": 1500
-              },
-              {
-                "position": "right_hat_embroidery",
-                "decoration_method": "embroidery",
-                "height": 300,
-                "width": 600
-              },
-              {
-                "position": "left_hat_embroidery",
-                "decoration_method": "embroidery",
-                "height": 300,
-                "width": 600
-              },
-              {
-                "position": "front",
-                "decoration_method": "embroidery",
-                "height": 744,
-                "width": 1417
-              },
-              {
-                "position": "back_hat_embroidery",
-                "decoration_method": "embroidery",
-                "height": 300,
-                "width": 600
-              }
-            ]
-          }
-        ]
-      },
-      "shipping": {
-        "handling_time": {
-          "value": 10,
-          "unit": "day"
+          "variant_count": 47
         },
-        "profiles": [
-          {
-            "variant_ids": [
-              125365,
-              125366,
-              125367,
-              125368,
-              125369,
-              125370,
-              125371
-            ],
-            "first_item": {
-              "currency": "USD",
-              "cost": 449
-            },
-            "additional_items": {
-              "currency": "USD",
-              "cost": 209
-            },
-            "countries": [
-              "US"
-            ]
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2629
           },
-          {
-            "variant_ids": [
-              125365,
-              125366,
-              125367,
-              125368,
-              125369,
-              125370,
-              125371
-            ],
-            "first_item": {
-              "currency": "USD",
-              "cost": 999
-            },
-            "additional_items": {
-              "currency": "USD",
-              "cost": 399
-            },
-            "countries": [
-              "REST_OF_THE_WORLD"
-            ]
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1359
           },
-          {
-            "variant_ids": [
-              125365,
-              125366,
-              125367,
-              125368,
-              125369,
-              125370,
-              125371
-            ],
-            "first_item": {
-              "currency": "USD",
-              "cost": 1249
-            },
-            "additional_items": {
-              "currency": "USD",
-              "cost": 239
-            },
-            "countries": [
-              "AU"
-            ]
+          "variant_count": 47
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 529
           },
-          {
-            "variant_ids": [
-              125365,
-              125366,
-              125367,
-              125368,
-              125369,
-              125370,
-              125371
-            ],
-            "first_item": {
-              "currency": "USD",
-              "cost": 939
-            },
-            "additional_items": {
-              "currency": "USD",
-              "cost": 439
-            },
-            "countries": [
-              "CA"
-            ]
+          "additional_items": {
+            "currency": "USD",
+            "cost": 199
           },
-          {
-            "variant_ids": [
-              125365,
-              125366,
-              125367,
-              125368,
-              125369,
-              125370,
-              125371
-            ],
-            "first_item": {
-              "currency": "USD",
-              "cost": 489
-            },
-            "additional_items": {
-              "currency": "USD",
-              "cost": 219
-            },
-            "countries": [
-              "US"
-            ]
-          }
-        ]
-      }
+          "variant_count": 47
+        }
+      ]
     },
     {
       "provider": {
@@ -1396,6 +1674,9 @@
           {
             "id": 125365,
             "title": "One size / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Black"
@@ -1412,6 +1693,9 @@
           {
             "id": 125366,
             "title": "One size / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "White"
@@ -1428,6 +1712,9 @@
           {
             "id": 125367,
             "title": "One size / Royal / Natural",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Royal / Natural"
@@ -1444,6 +1731,9 @@
           {
             "id": 125368,
             "title": "One size / Red / Natural",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Red / Natural"
@@ -1460,6 +1750,9 @@
           {
             "id": 125369,
             "title": "One size / Dark Green / Natural",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Dark Green / Natural"
@@ -1476,6 +1769,9 @@
           {
             "id": 125370,
             "title": "One size / Navy / Natural",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Navy / Natural"
@@ -1492,6 +1788,9 @@
           {
             "id": 125371,
             "title": "One size / Black / Natural",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "One size",
               "color": "Black / Natural"
@@ -1624,7 +1923,79 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 449
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 209
+          },
+          "variant_count": 7
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 489
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 239
+          },
+          "variant_count": 7
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1249
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "variant_count": 7
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 399
+          },
+          "variant_count": 7
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 939
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 7
+        }
+      ]
     }
   ]
 }

@@ -5,8 +5,9 @@
     "brand": "Generic brand",
     "model": "",
     "images": [
-      "https://images.printify.com/69300e054033ec199700b982",
-      "https://images.printify.com/69300e035042c0e83f06e164"
+      "https://images.printify.com/69de08d4ec76d0d26203a6a3",
+      "https://images.printify.com/69df619f0892c086520c17e1",
+      "https://images.printify.com/69de107556090f9c770c18c2"
     ]
   },
   "print_providers": [
@@ -22,6 +23,9 @@
           {
             "id": 149618,
             "title": "8.25oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "8.25oz"
             },
@@ -91,7 +95,51 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 949
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 399
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2459
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1529
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1579
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1099
+          },
+          "variant_count": 1
+        }
+      ]
     }
   ]
 }

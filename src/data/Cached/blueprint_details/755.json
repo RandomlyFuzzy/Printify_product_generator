@@ -8,6 +8,7 @@
       "https://images.printify.com/66cc7556bf610a458c085a5b",
       "https://images.printify.com/66cc7557b38813cead0d17eb",
       "https://images.printify.com/61545049255dc63d4a7ead6b",
+      "https://images.printify.com/69d4dfb6bc2bf20b0c0584f0",
       "https://images.printify.com/676ad3e0b4c38b4940038fc2",
       "https://images.printify.com/676ad3e17b520917ce091f72",
       "https://images.printify.com/676ad3e24d46c4e1d00ba454",
@@ -27,6 +28,9 @@
           {
             "id": 74407,
             "title": "Comfort Spice / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "scent": "Comfort Spice",
               "size": "One size"
@@ -43,6 +47,9 @@
           {
             "id": 74408,
             "title": "Sea Breeze / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "scent": "Sea Breeze",
               "size": "One size"
@@ -59,6 +66,9 @@
           {
             "id": 74409,
             "title": "Vanilla Bean / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "scent": "Vanilla Bean",
               "size": "One size"
@@ -75,6 +85,9 @@
           {
             "id": 104023,
             "title": "Fresh Balsam / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "scent": "Fresh Balsam",
               "size": "One size"
@@ -91,6 +104,9 @@
           {
             "id": 104024,
             "title": "Spiced Pumpkin Ginger / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "scent": "Spiced Pumpkin Ginger",
               "size": "One size"
@@ -107,6 +123,9 @@
           {
             "id": 104025,
             "title": "Unscented / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "scent": "Unscented",
               "size": "One size"
@@ -123,6 +142,9 @@
           {
             "id": 104467,
             "title": "Eucalyptus Lavender Herb / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "scent": "Eucalyptus Lavender Herb",
               "size": "One size"
@@ -139,6 +161,9 @@
           {
             "id": 104468,
             "title": "Pink Grapefruit / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "scent": "Pink Grapefruit",
               "size": "One size"
@@ -253,7 +278,65 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 799
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 349
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1429
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1699
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 449
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1799
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 449
+          },
+          "variant_count": 8
+        }
+      ]
     }
   ]
 }

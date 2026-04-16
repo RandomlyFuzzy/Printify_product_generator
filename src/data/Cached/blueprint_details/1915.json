@@ -24,6 +24,9 @@
           {
             "id": 119353,
             "title": "S / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "S"
@@ -46,6 +49,9 @@
           {
             "id": 119354,
             "title": "S / Military Green",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "S",
               "color": "Military Green"
@@ -68,6 +74,9 @@
           {
             "id": 119356,
             "title": "S / Storm",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "S",
               "color": "Storm"
@@ -90,6 +99,9 @@
           {
             "id": 119357,
             "title": "M / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "M"
@@ -112,6 +124,9 @@
           {
             "id": 119358,
             "title": "M / Military Green",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "M",
               "color": "Military Green"
@@ -134,6 +149,9 @@
           {
             "id": 119360,
             "title": "M / Storm",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "M",
               "color": "Storm"
@@ -156,6 +174,9 @@
           {
             "id": 119361,
             "title": "L / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "L"
@@ -178,6 +199,9 @@
           {
             "id": 119362,
             "title": "L / Military Green",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "L",
               "color": "Military Green"
@@ -200,6 +224,9 @@
           {
             "id": 119364,
             "title": "L / Storm",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "L",
               "color": "Storm"
@@ -222,6 +249,9 @@
           {
             "id": 119365,
             "title": "XL / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "XL"
@@ -244,6 +274,9 @@
           {
             "id": 119366,
             "title": "XL / Military Green",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XL",
               "color": "Military Green"
@@ -266,6 +299,9 @@
           {
             "id": 119368,
             "title": "XL / Storm",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XL",
               "color": "Storm"
@@ -288,6 +324,9 @@
           {
             "id": 119369,
             "title": "2XL / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2XL",
               "color": "Black"
@@ -310,6 +349,9 @@
           {
             "id": 119370,
             "title": "2XL / Military Green",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2XL",
               "color": "Military Green"
@@ -332,6 +374,9 @@
           {
             "id": 119372,
             "title": "2XL / Storm",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2XL",
               "color": "Storm"
@@ -419,14 +464,14 @@
             ],
             "first_item": {
               "currency": "USD",
-              "cost": 1500
+              "cost": 1269
             },
             "additional_items": {
               "currency": "USD",
-              "cost": 1000
+              "cost": 659
             },
             "countries": [
-              "REST_OF_THE_WORLD"
+              "CA"
             ]
           },
           {
@@ -524,18 +569,90 @@
             ],
             "first_item": {
               "currency": "USD",
-              "cost": 1269
+              "cost": 1500
             },
             "additional_items": {
               "currency": "USD",
-              "cost": 659
+              "cost": 1000
             },
             "countries": [
-              "CA"
+              "REST_OF_THE_WORLD"
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 739
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 209
+          },
+          "variant_count": 20
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1269
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 659
+          },
+          "variant_count": 20
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2199
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "variant_count": 20
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 849
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 209
+          },
+          "variant_count": 20
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1500
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1000
+          },
+          "variant_count": 20
+        }
+      ]
     }
   ]
 }

@@ -25,6 +25,9 @@
           {
             "id": 73397,
             "title": "White / 30\u0022 \u00D7 40\u0022",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White",
               "size": "30\u0022 \u00D7 40\u0022"
@@ -168,7 +171,122 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "VA",
+            "BV",
+            "CY",
+            "AT",
+            "MD",
+            "AD",
+            "FO",
+            "HU",
+            "LV",
+            "TR",
+            "AL",
+            "BY",
+            "HR",
+            "RS",
+            "SI",
+            "CZ",
+            "IM",
+            "MC",
+            "ES",
+            "DK",
+            "DE",
+            "GP",
+            "IS",
+            "ME",
+            "PT",
+            "AM",
+            "CH",
+            "IE",
+            "NO",
+            "UA",
+            "BG",
+            "EE",
+            "FR",
+            "AX",
+            "GI",
+            "IT",
+            "GL",
+            "LU",
+            "NL",
+            "RE",
+            "GB",
+            "LI",
+            "SK",
+            "XK",
+            "GE",
+            "PL",
+            "BA",
+            "FI",
+            "JE",
+            "LT",
+            "MT",
+            "SE",
+            "MK",
+            "SM",
+            "BE",
+            "GR",
+            "GG",
+            "RO"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1499
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1599
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2139
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 289
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 929
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 199
+          },
+          "variant_count": 1
+        }
+      ]
     }
   ]
 }

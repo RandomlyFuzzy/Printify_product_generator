@@ -25,6 +25,9 @@
           {
             "id": 122673,
             "title": "18\u0022 x 14\u0022 x 4.5\u0022 / Natural/Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "18\u0022 x 14\u0022 x 4.5\u0022",
               "color": "Natural/Black"
@@ -47,6 +50,9 @@
           {
             "id": 122674,
             "title": "18\u0022 x 14\u0022 x 4.5\u0022 / Natural/Light Pink",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "18\u0022 x 14\u0022 x 4.5\u0022",
               "color": "Natural/Light Pink"
@@ -69,6 +75,9 @@
           {
             "id": 122675,
             "title": "18\u0022 x 14\u0022 x 4.5\u0022 / Natural/Maroon",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "18\u0022 x 14\u0022 x 4.5\u0022",
               "color": "Natural/Maroon"
@@ -91,6 +100,9 @@
           {
             "id": 122676,
             "title": "18\u0022 x 14\u0022 x 4.5\u0022 / Natural",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "18\u0022 x 14\u0022 x 4.5\u0022",
               "color": "Natural"
@@ -113,6 +125,9 @@
           {
             "id": 122677,
             "title": "18\u0022 x 14\u0022 x 4.5\u0022 / Natural/Navy",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "18\u0022 x 14\u0022 x 4.5\u0022",
               "color": "Natural/Navy"
@@ -135,6 +150,9 @@
           {
             "id": 122678,
             "title": "18\u0022 x 14\u0022 x 4.5\u0022 / Natural/Purple",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "18\u0022 x 14\u0022 x 4.5\u0022",
               "color": "Natural/Purple"
@@ -157,6 +175,9 @@
           {
             "id": 122679,
             "title": "18\u0022 x 14\u0022 x 4.5\u0022 / Natural/Red",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "18\u0022 x 14\u0022 x 4.5\u0022",
               "color": "Natural/Red"
@@ -179,6 +200,9 @@
           {
             "id": 122680,
             "title": "18\u0022 x 14\u0022 x 4.5\u0022 / Natural/Royal",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "18\u0022 x 14\u0022 x 4.5\u0022",
               "color": "Natural/Royal"
@@ -276,7 +300,51 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2629
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1359
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 769
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 299
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2009
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 959
+          },
+          "variant_count": 8
+        }
+      ]
     }
   ]
 }

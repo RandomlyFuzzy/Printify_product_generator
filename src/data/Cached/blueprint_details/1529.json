@@ -24,6 +24,9 @@
           {
             "id": 109684,
             "title": "2\u0022 \u00D7 3.5\u0022 / 1 pc",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2\u0022 \u00D7 3.5\u0022",
               "quantity": "1 pc"
@@ -40,6 +43,9 @@
           {
             "id": 109685,
             "title": "2.7\u0022 \u00D7 6\u0022 / 1 pc",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2.7\u0022 \u00D7 6\u0022",
               "quantity": "1 pc"
@@ -56,6 +62,9 @@
           {
             "id": 109686,
             "title": "3\u0022 \u00D7 4\u0022 / 1 pc",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "3\u0022 \u00D7 4\u0022",
               "quantity": "1 pc"
@@ -72,6 +81,9 @@
           {
             "id": 109687,
             "title": "4\u0022 \u00D7 6\u0022 / 1 pc",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "4\u0022 \u00D7 6\u0022",
               "quantity": "1 pc"
@@ -88,6 +100,9 @@
           {
             "id": 109688,
             "title": "5.5\u0022 \u00D7 3.5\u0022 / 1 pc",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "5.5\u0022 \u00D7 3.5\u0022",
               "quantity": "1 pc"
@@ -104,6 +119,9 @@
           {
             "id": 109689,
             "title": "4\u0022 \u00D7 8\u0022 / 1 pc",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "4\u0022 \u00D7 8\u0022",
               "quantity": "1 pc"
@@ -120,6 +138,9 @@
           {
             "id": 109690,
             "title": "8\u0022 \u00D7 8\u0022 / 1 pc",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "8\u0022 \u00D7 8\u0022",
               "quantity": "1 pc"
@@ -136,6 +157,9 @@
           {
             "id": 109691,
             "title": "8.5\u0022 \u00D7 11\u0022 / 1 pc",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "8.5\u0022 \u00D7 11\u0022",
               "quantity": "1 pc"
@@ -152,6 +176,9 @@
           {
             "id": 109692,
             "title": "10\u0022 \u00D7 20\u0022 / 1 pc",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "10\u0022 \u00D7 20\u0022",
               "quantity": "1 pc"
@@ -168,6 +195,9 @@
           {
             "id": 109693,
             "title": "12\u0022 \u00D7 24\u0022 / 1 pc",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "12\u0022 \u00D7 24\u0022",
               "quantity": "1 pc"
@@ -184,6 +214,9 @@
           {
             "id": 109694,
             "title": "18\u0022 \u00D7 24\u0022 / 1 pc",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "18\u0022 \u00D7 24\u0022",
               "quantity": "1 pc"
@@ -358,7 +391,122 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "CA",
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1099
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 219
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1099
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 59
+          },
+          "variant_count": 6
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 539
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 99
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 479
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 70
+          },
+          "variant_count": 6
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 70
+          },
+          "variant_count": 6
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1569
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 599
+          },
+          "variant_count": 3
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1299
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 399
+          },
+          "variant_count": 3
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1199
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 349
+          },
+          "variant_count": 3
+        }
+      ]
     }
   ]
 }

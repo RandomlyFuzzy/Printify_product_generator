@@ -24,6 +24,9 @@
           {
             "id": 95743,
             "title": "3\u0022 x 4\u0022 / Kiss-Cut / Satin",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "3\u0022 x 4\u0022",
               "shape": "Kiss-Cut",
@@ -41,6 +44,9 @@
           {
             "id": 95744,
             "title": "4\u0022 x 6\u0022 / Kiss-Cut / Satin",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "4\u0022 x 6\u0022",
               "shape": "Kiss-Cut",
@@ -58,6 +64,9 @@
           {
             "id": 95745,
             "title": "6\u0022 x 8\u0022 / Kiss-Cut / Satin",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "6\u0022 x 8\u0022",
               "shape": "Kiss-Cut",
@@ -75,6 +84,9 @@
           {
             "id": 95746,
             "title": "8\u0022 x 10\u0022 / Kiss-Cut / Satin",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "8\u0022 x 10\u0022",
               "shape": "Kiss-Cut",
@@ -155,7 +167,51 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 839
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 49
+          },
+          "variant_count": 4
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1049
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 59
+          },
+          "variant_count": 4
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 469
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 9
+          },
+          "variant_count": 4
+        }
+      ]
     }
   ]
 }

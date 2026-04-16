@@ -31,6 +31,9 @@
           {
             "id": 244837,
             "title": "White / White / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White / White",
               "size": "One size"
@@ -47,6 +50,9 @@
           {
             "id": 244838,
             "title": "Black / Black / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black / Black",
               "size": "One size"
@@ -63,6 +69,9 @@
           {
             "id": 244839,
             "title": "Navy / Navy / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Navy / Navy",
               "size": "One size"
@@ -79,6 +88,9 @@
           {
             "id": 244840,
             "title": "White / Black / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White / Black",
               "size": "One size"
@@ -95,6 +107,9 @@
           {
             "id": 244841,
             "title": "White / Kelly / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White / Kelly",
               "size": "One size"
@@ -111,6 +126,9 @@
           {
             "id": 244842,
             "title": "White / Navy / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White / Navy",
               "size": "One size"
@@ -127,6 +145,9 @@
           {
             "id": 244843,
             "title": "White / Red / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White / Red",
               "size": "One size"
@@ -143,6 +164,9 @@
           {
             "id": 244844,
             "title": "White / Royal / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "White / Royal",
               "size": "One size"
@@ -234,7 +258,51 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 929
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 199
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1199
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 599
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 749
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 99
+          },
+          "variant_count": 8
+        }
+      ]
     }
   ]
 }

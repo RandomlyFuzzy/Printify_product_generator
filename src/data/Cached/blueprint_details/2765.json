@@ -30,6 +30,9 @@
           {
             "id": 149520,
             "title": "Black / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Black",
               "size": "One size"
@@ -52,6 +55,9 @@
           {
             "id": 149521,
             "title": "Gold / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Gold",
               "size": "One size"
@@ -74,6 +80,9 @@
           {
             "id": 149522,
             "title": "Hunter / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Hunter",
               "size": "One size"
@@ -96,6 +105,9 @@
           {
             "id": 149523,
             "title": "Maroon / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Maroon",
               "size": "One size"
@@ -118,6 +130,9 @@
           {
             "id": 149524,
             "title": "Navy / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Navy",
               "size": "One size"
@@ -140,6 +155,9 @@
           {
             "id": 149525,
             "title": "Red / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Red",
               "size": "One size"
@@ -162,6 +180,9 @@
           {
             "id": 149526,
             "title": "Royal / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Royal",
               "size": "One size"
@@ -184,6 +205,9 @@
           {
             "id": 149527,
             "title": "Tropical Pink / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Tropical Pink",
               "size": "One size"
@@ -304,7 +328,65 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 929
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2199
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1179
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 579
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2059
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 759
+          },
+          "variant_count": 8
+        }
+      ]
     }
   ]
 }

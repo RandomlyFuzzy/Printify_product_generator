@@ -23,6 +23,9 @@
           {
             "id": 43199,
             "title": "XS / 4 oz.",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XS",
               "weight": "4 oz."
@@ -51,6 +54,9 @@
           {
             "id": 43201,
             "title": "S / 4 oz.",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "S",
               "weight": "4 oz."
@@ -79,6 +85,9 @@
           {
             "id": 43203,
             "title": "M / 4 oz.",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "M",
               "weight": "4 oz."
@@ -107,6 +116,9 @@
           {
             "id": 43205,
             "title": "L / 4 oz.",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "L",
               "weight": "4 oz."
@@ -135,6 +147,9 @@
           {
             "id": 43207,
             "title": "XL / 4 oz.",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XL",
               "weight": "4 oz."
@@ -163,6 +178,9 @@
           {
             "id": 43209,
             "title": "2XL / 4 oz.",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2XL",
               "weight": "4 oz."
@@ -281,7 +299,65 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 569
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 259
+          },
+          "variant_count": 6
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 919
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 359
+          },
+          "variant_count": 6
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1199
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 379
+          },
+          "variant_count": 6
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 589
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 299
+          },
+          "variant_count": 6
+        }
+      ]
     }
   ]
 }

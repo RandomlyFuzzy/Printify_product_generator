@@ -22,6 +22,9 @@
           {
             "id": 44904,
             "title": "3/4 Crew",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "3/4 Crew"
             },
@@ -55,6 +58,9 @@
           {
             "id": 44905,
             "title": "Ankle",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "Ankle"
             },
@@ -88,6 +94,9 @@
           {
             "id": 44906,
             "title": "Crew",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "Crew"
             },
@@ -205,7 +214,71 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "REST_OF_THE_WORLD",
+            "BR",
+            "NL",
+            "DK",
+            "NZ",
+            "MX"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 360
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 360
+          },
+          "variant_count": 3
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 569
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 3
+        },
+        {
+          "countries": [
+            "CA",
+            "CN"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "variant_count": 3
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 649
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 649
+          },
+          "variant_count": 3
+        }
+      ]
     }
   ]
 }

@@ -27,6 +27,9 @@
           {
             "id": 62176,
             "title": "XS",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XS"
             },
@@ -60,6 +63,9 @@
           {
             "id": 62177,
             "title": "S",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "S"
             },
@@ -93,6 +99,9 @@
           {
             "id": 62178,
             "title": "M",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "M"
             },
@@ -126,6 +135,9 @@
           {
             "id": 62179,
             "title": "L",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "L"
             },
@@ -159,6 +171,9 @@
           {
             "id": 62180,
             "title": "XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "XL"
             },
@@ -192,6 +207,9 @@
           {
             "id": 62181,
             "title": "2XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "2XL"
             },
@@ -225,6 +243,9 @@
           {
             "id": 62182,
             "title": "3XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "3XL"
             },
@@ -258,6 +279,9 @@
           {
             "id": 62183,
             "title": "4XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "4XL"
             },
@@ -291,6 +315,9 @@
           {
             "id": 98594,
             "title": "5XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "size": "5XL"
             },
@@ -409,7 +436,58 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "MX",
+            "NL",
+            "NZ",
+            "DK",
+            "CA",
+            "BR",
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 840
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 840
+          },
+          "variant_count": 9
+        },
+        {
+          "countries": [
+            "US",
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "variant_count": 9
+        },
+        {
+          "countries": [
+            "CN"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "variant_count": 9
+        }
+      ]
     }
   ]
 }

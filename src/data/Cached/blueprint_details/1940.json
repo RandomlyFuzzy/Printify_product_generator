@@ -26,6 +26,9 @@
           {
             "id": 120461,
             "title": "Charcoal / 25oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Charcoal",
               "size": "25oz"
@@ -42,6 +45,9 @@
           {
             "id": 120462,
             "title": "Oxford / 25oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Oxford",
               "size": "25oz"
@@ -58,6 +64,9 @@
           {
             "id": 120464,
             "title": "Clear / 25oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Clear",
               "size": "25oz"
@@ -143,7 +152,51 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 969
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 289
+          },
+          "variant_count": 6
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1069
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 279
+          },
+          "variant_count": 6
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 659
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 249
+          },
+          "variant_count": 6
+        }
+      ]
     }
   ]
 }

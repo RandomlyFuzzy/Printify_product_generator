@@ -24,6 +24,9 @@
           {
             "id": 119926,
             "title": "Clear / 24oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Clear",
               "size": "24oz"
@@ -40,6 +43,9 @@
           {
             "id": 119928,
             "title": "Pink / 24oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
             "options": {
               "color": "Pink",
               "size": "24oz"
@@ -113,7 +119,51 @@
             ]
           }
         ]
-      }
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 769
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 399
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1909
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1039
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1629
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 719
+          },
+          "variant_count": 2
+        }
+      ]
     }
   ]
 }
