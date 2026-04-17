@@ -91,6 +91,23 @@
         "profiles": [
           {
             "variant_ids": [
+              73844,
+              73846
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 539
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
               73845
             ],
             "first_item": {
@@ -117,23 +134,6 @@
             "additional_items": {
               "currency": "USD",
               "cost": 389
-            },
-            "countries": [
-              "US"
-            ]
-          },
-          {
-            "variant_ids": [
-              73844,
-              73846
-            ],
-            "first_item": {
-              "currency": "USD",
-              "cost": 539
-            },
-            "additional_items": {
-              "currency": "USD",
-              "cost": 249
             },
             "countries": [
               "US"
@@ -292,6 +292,20 @@
           ],
           "first_item": {
             "currency": "USD",
+            "cost": 539
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 249
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
             "cost": 589
           },
           "additional_items": {
@@ -311,20 +325,6 @@
           "additional_items": {
             "currency": "USD",
             "cost": 389
-          },
-          "variant_count": 2
-        },
-        {
-          "countries": [
-            "US"
-          ],
-          "first_item": {
-            "currency": "USD",
-            "cost": 539
-          },
-          "additional_items": {
-            "currency": "USD",
-            "cost": 249
           },
           "variant_count": 2
         },

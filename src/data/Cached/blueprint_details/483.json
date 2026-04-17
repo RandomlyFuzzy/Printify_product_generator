@@ -13,6 +13,168 @@
   "print_providers": [
     {
       "provider": {
+        "id": 28,
+        "title": "District Photo"
+      },
+      "variants": {
+        "id": 28,
+        "title": "District Photo",
+        "variants": [
+          {
+            "id": 70768,
+            "title": "12oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "size": "12oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 750,
+                "width": 2400
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              70768
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 619
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 199
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              70768
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 699
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 309
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              70768
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1599
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 839
+            },
+            "countries": [
+              "AU",
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              70768
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1469
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 699
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 619
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 199
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 699
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 309
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "AU",
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1599
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 839
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1469
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 699
+          },
+          "variant_count": 1
+        }
+      ]
+    },
+    {
+      "provider": {
         "id": 48,
         "title": "Colorway"
       },
@@ -338,168 +500,6 @@
           "additional_items": {
             "currency": "USD",
             "cost": 359
-          },
-          "variant_count": 1
-        }
-      ]
-    },
-    {
-      "provider": {
-        "id": 28,
-        "title": "District Photo"
-      },
-      "variants": {
-        "id": 28,
-        "title": "District Photo",
-        "variants": [
-          {
-            "id": 70768,
-            "title": "12oz",
-            "cost": null,
-            "price": null,
-            "prices": [],
-            "options": {
-              "size": "12oz"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dye-sublimation",
-                "height": 750,
-                "width": 2400
-              }
-            ]
-          }
-        ]
-      },
-      "shipping": {
-        "handling_time": {
-          "value": 10,
-          "unit": "day"
-        },
-        "profiles": [
-          {
-            "variant_ids": [
-              70768
-            ],
-            "first_item": {
-              "currency": "USD",
-              "cost": 619
-            },
-            "additional_items": {
-              "currency": "USD",
-              "cost": 199
-            },
-            "countries": [
-              "US"
-            ]
-          },
-          {
-            "variant_ids": [
-              70768
-            ],
-            "first_item": {
-              "currency": "USD",
-              "cost": 699
-            },
-            "additional_items": {
-              "currency": "USD",
-              "cost": 309
-            },
-            "countries": [
-              "US"
-            ]
-          },
-          {
-            "variant_ids": [
-              70768
-            ],
-            "first_item": {
-              "currency": "USD",
-              "cost": 1599
-            },
-            "additional_items": {
-              "currency": "USD",
-              "cost": 839
-            },
-            "countries": [
-              "AU",
-              "REST_OF_THE_WORLD"
-            ]
-          },
-          {
-            "variant_ids": [
-              70768
-            ],
-            "first_item": {
-              "currency": "USD",
-              "cost": 1469
-            },
-            "additional_items": {
-              "currency": "USD",
-              "cost": 699
-            },
-            "countries": [
-              "CA"
-            ]
-          }
-        ]
-      },
-      "cost_per_region": [
-        {
-          "countries": [
-            "US"
-          ],
-          "first_item": {
-            "currency": "USD",
-            "cost": 619
-          },
-          "additional_items": {
-            "currency": "USD",
-            "cost": 199
-          },
-          "variant_count": 1
-        },
-        {
-          "countries": [
-            "US"
-          ],
-          "first_item": {
-            "currency": "USD",
-            "cost": 699
-          },
-          "additional_items": {
-            "currency": "USD",
-            "cost": 309
-          },
-          "variant_count": 1
-        },
-        {
-          "countries": [
-            "AU",
-            "REST_OF_THE_WORLD"
-          ],
-          "first_item": {
-            "currency": "USD",
-            "cost": 1599
-          },
-          "additional_items": {
-            "currency": "USD",
-            "cost": 839
-          },
-          "variant_count": 1
-        },
-        {
-          "countries": [
-            "CA"
-          ],
-          "first_item": {
-            "currency": "USD",
-            "cost": 1469
-          },
-          "additional_items": {
-            "currency": "USD",
-            "cost": 699
           },
           "variant_count": 1
         }

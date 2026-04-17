@@ -13,1287 +13,6 @@
   "print_providers": [
     {
       "provider": {
-        "id": 27,
-        "title": "Print Geek"
-      },
-      "variants": {
-        "id": 27,
-        "title": "Print Geek",
-        "variants": [
-          {
-            "id": 38235,
-            "title": "Apple / S",
-            "cost": null,
-            "price": null,
-            "prices": [],
-            "options": {
-              "color": "Apple",
-              "size": "S"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 3000,
-                "width": 2250
-              }
-            ]
-          },
-          {
-            "id": 38236,
-            "title": "Apple / M",
-            "cost": null,
-            "price": null,
-            "prices": [],
-            "options": {
-              "color": "Apple",
-              "size": "M"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 3400,
-                "width": 2550
-              }
-            ]
-          },
-          {
-            "id": 38237,
-            "title": "Apple / L",
-            "cost": null,
-            "price": null,
-            "prices": [],
-            "options": {
-              "color": "Apple",
-              "size": "L"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 3600,
-                "width": 2700
-              }
-            ]
-          },
-          {
-            "id": 38238,
-            "title": "Black / XL",
-            "cost": null,
-            "price": null,
-            "prices": [],
-            "options": {
-              "color": "Black",
-              "size": "XL"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 3600,
-                "width": 2700
-              }
-            ]
-          },
-          {
-            "id": 38239,
-            "title": "Black / XS",
-            "cost": null,
-            "price": null,
-            "prices": [],
-            "options": {
-              "color": "Black",
-              "size": "XS"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 2600,
-                "width": 1950
-              }
-            ]
-          },
-          {
-            "id": 38240,
-            "title": "Black / S",
-            "cost": null,
-            "price": null,
-            "prices": [],
-            "options": {
-              "color": "Black",
-              "size": "S"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 3000,
-                "width": 2250
-              }
-            ]
-          },
-          {
-            "id": 38241,
-            "title": "Black / M",
-            "cost": null,
-            "price": null,
-            "prices": [],
-            "options": {
-              "color": "Black",
-              "size": "M"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 3400,
-                "width": 2550
-              }
-            ]
-          },
-          {
-            "id": 38242,
-            "title": "Black / L",
-            "cost": null,
-            "price": null,
-            "prices": [],
-            "options": {
-              "color": "Black",
-              "size": "L"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 3600,
-                "width": 2700
-              }
-            ]
-          },
-          {
-            "id": 38245,
-            "title": "Butter / S",
-            "cost": null,
-            "price": null,
-            "prices": [],
-            "options": {
-              "color": "Butter",
-              "size": "S"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 3000,
-                "width": 2250
-              }
-            ]
-          },
-          {
-            "id": 38246,
-            "title": "Butter / M",
-            "cost": null,
-            "price": null,
-            "prices": [],
-            "options": {
-              "color": "Butter",
-              "size": "M"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 3400,
-                "width": 2550
-              }
-            ]
-          },
-          {
-            "id": 38247,
-            "title": "Butter / L",
-            "cost": null,
-            "price": null,
-            "prices": [],
-            "options": {
-              "color": "Butter",
-              "size": "L"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 3600,
-                "width": 2700
-              }
-            ]
-          },
-          {
-            "id": 38248,
-            "title": "Heather / XL",
-            "cost": null,
-            "price": null,
-            "prices": [],
-            "options": {
-              "color": "Heather",
-              "size": "XL"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 3600,
-                "width": 2700
-              }
-            ]
-          },
-          {
-            "id": 38249,
-            "title": "Heather / XS",
-            "cost": null,
-            "price": null,
-            "prices": [],
-            "options": {
-              "color": "Heather",
-              "size": "XS"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 2600,
-                "width": 1950
-              }
-            ]
-          },
-          {
-            "id": 38250,
-            "title": "Heather / S",
-            "cost": null,
-            "price": null,
-            "prices": [],
-            "options": {
-              "color": "Heather",
-              "size": "S"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 3000,
-                "width": 2250
-              }
-            ]
-          },
-          {
-            "id": 38251,
-            "title": "Heather / M",
-            "cost": null,
-            "price": null,
-            "prices": [],
-            "options": {
-              "color": "Heather",
-              "size": "M"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 3400,
-                "width": 2550
-              }
-            ]
-          },
-          {
-            "id": 38252,
-            "title": "Heather / L",
-            "cost": null,
-            "price": null,
-            "prices": [],
-            "options": {
-              "color": "Heather",
-              "size": "L"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 3600,
-                "width": 2700
-              }
-            ]
-          },
-          {
-            "id": 38255,
-            "title": "Light Blue / S",
-            "cost": null,
-            "price": null,
-            "prices": [],
-            "options": {
-              "color": "Light Blue",
-              "size": "S"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 3000,
-                "width": 2250
-              }
-            ]
-          },
-          {
-            "id": 38256,
-            "title": "Light Blue / M",
-            "cost": null,
-            "price": null,
-            "prices": [],
-            "options": {
-              "color": "Light Blue",
-              "size": "M"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 3400,
-                "width": 2550
-              }
-            ]
-          },
-          {
-            "id": 38257,
-            "title": "Light Blue / L",
-            "cost": null,
-            "price": null,
-            "prices": [],
-            "options": {
-              "color": "Light Blue",
-              "size": "L"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 3600,
-                "width": 2700
-              }
-            ]
-          },
-          {
-            "id": 38258,
-            "title": "Navy / XL",
-            "cost": null,
-            "price": null,
-            "prices": [],
-            "options": {
-              "color": "Navy",
-              "size": "XL"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 3600,
-                "width": 2700
-              }
-            ]
-          },
-          {
-            "id": 38259,
-            "title": "Navy / XS",
-            "cost": null,
-            "price": null,
-            "prices": [],
-            "options": {
-              "color": "Navy",
-              "size": "XS"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 2600,
-                "width": 1950
-              }
-            ]
-          },
-          {
-            "id": 38260,
-            "title": "Navy / S",
-            "cost": null,
-            "price": null,
-            "prices": [],
-            "options": {
-              "color": "Navy",
-              "size": "S"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 3000,
-                "width": 2250
-              }
-            ]
-          },
-          {
-            "id": 38261,
-            "title": "Navy / M",
-            "cost": null,
-            "price": null,
-            "prices": [],
-            "options": {
-              "color": "Navy",
-              "size": "M"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 3400,
-                "width": 2550
-              }
-            ]
-          },
-          {
-            "id": 38262,
-            "title": "Navy / L",
-            "cost": null,
-            "price": null,
-            "prices": [],
-            "options": {
-              "color": "Navy",
-              "size": "L"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 3600,
-                "width": 2700
-              }
-            ]
-          },
-          {
-            "id": 38265,
-            "title": "Orange / S",
-            "cost": null,
-            "price": null,
-            "prices": [],
-            "options": {
-              "color": "Orange",
-              "size": "S"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 3000,
-                "width": 2250
-              }
-            ]
-          },
-          {
-            "id": 38266,
-            "title": "Orange / M",
-            "cost": null,
-            "price": null,
-            "prices": [],
-            "options": {
-              "color": "Orange",
-              "size": "M"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 3400,
-                "width": 2550
-              }
-            ]
-          },
-          {
-            "id": 38267,
-            "title": "Orange / L",
-            "cost": null,
-            "price": null,
-            "prices": [],
-            "options": {
-              "color": "Orange",
-              "size": "L"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 3600,
-                "width": 2700
-              }
-            ]
-          },
-          {
-            "id": 38270,
-            "title": "Pink / S",
-            "cost": null,
-            "price": null,
-            "prices": [],
-            "options": {
-              "color": "Pink",
-              "size": "S"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 3000,
-                "width": 2250
-              }
-            ]
-          },
-          {
-            "id": 38271,
-            "title": "Pink / M",
-            "cost": null,
-            "price": null,
-            "prices": [],
-            "options": {
-              "color": "Pink",
-              "size": "M"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 3400,
-                "width": 2550
-              }
-            ]
-          },
-          {
-            "id": 38272,
-            "title": "Pink / L",
-            "cost": null,
-            "price": null,
-            "prices": [],
-            "options": {
-              "color": "Pink",
-              "size": "L"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 3600,
-                "width": 2700
-              }
-            ]
-          },
-          {
-            "id": 38273,
-            "title": "Red / XL",
-            "cost": null,
-            "price": null,
-            "prices": [],
-            "options": {
-              "color": "Red",
-              "size": "XL"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 3600,
-                "width": 2700
-              }
-            ]
-          },
-          {
-            "id": 38274,
-            "title": "Red / XS",
-            "cost": null,
-            "price": null,
-            "prices": [],
-            "options": {
-              "color": "Red",
-              "size": "XS"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 2600,
-                "width": 1950
-              }
-            ]
-          },
-          {
-            "id": 38275,
-            "title": "Red / S",
-            "cost": null,
-            "price": null,
-            "prices": [],
-            "options": {
-              "color": "Red",
-              "size": "S"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 3000,
-                "width": 2250
-              }
-            ]
-          },
-          {
-            "id": 38276,
-            "title": "Red / M",
-            "cost": null,
-            "price": null,
-            "prices": [],
-            "options": {
-              "color": "Red",
-              "size": "M"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 3400,
-                "width": 2550
-              }
-            ]
-          },
-          {
-            "id": 38277,
-            "title": "Red / L",
-            "cost": null,
-            "price": null,
-            "prices": [],
-            "options": {
-              "color": "Red",
-              "size": "L"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 3600,
-                "width": 2700
-              }
-            ]
-          },
-          {
-            "id": 38280,
-            "title": "Silver / S",
-            "cost": null,
-            "price": null,
-            "prices": [],
-            "options": {
-              "color": "Silver",
-              "size": "S"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 3000,
-                "width": 2250
-              }
-            ]
-          },
-          {
-            "id": 38281,
-            "title": "Silver / M",
-            "cost": null,
-            "price": null,
-            "prices": [],
-            "options": {
-              "color": "Silver",
-              "size": "M"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 3400,
-                "width": 2550
-              }
-            ]
-          },
-          {
-            "id": 38282,
-            "title": "Silver / L",
-            "cost": null,
-            "price": null,
-            "prices": [],
-            "options": {
-              "color": "Silver",
-              "size": "L"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 3600,
-                "width": 2700
-              }
-            ]
-          },
-          {
-            "id": 38283,
-            "title": "White / XL",
-            "cost": null,
-            "price": null,
-            "prices": [],
-            "options": {
-              "color": "White",
-              "size": "XL"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 3600,
-                "width": 2700
-              }
-            ]
-          },
-          {
-            "id": 38284,
-            "title": "White / XS",
-            "cost": null,
-            "price": null,
-            "prices": [],
-            "options": {
-              "color": "White",
-              "size": "XS"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 2600,
-                "width": 1950
-              }
-            ]
-          },
-          {
-            "id": 38285,
-            "title": "White / S",
-            "cost": null,
-            "price": null,
-            "prices": [],
-            "options": {
-              "color": "White",
-              "size": "S"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 3000,
-                "width": 2250
-              }
-            ]
-          },
-          {
-            "id": 38286,
-            "title": "White / M",
-            "cost": null,
-            "price": null,
-            "prices": [],
-            "options": {
-              "color": "White",
-              "size": "M"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 3400,
-                "width": 2550
-              }
-            ]
-          },
-          {
-            "id": 38287,
-            "title": "White / L",
-            "cost": null,
-            "price": null,
-            "prices": [],
-            "options": {
-              "color": "White",
-              "size": "L"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 3600,
-                "width": 2700
-              }
-            ]
-          },
-          {
-            "id": 42593,
-            "title": "Royal / XL",
-            "cost": null,
-            "price": null,
-            "prices": [],
-            "options": {
-              "color": "Royal",
-              "size": "XL"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 3600,
-                "width": 2700
-              }
-            ]
-          },
-          {
-            "id": 42594,
-            "title": "Royal / XS",
-            "cost": null,
-            "price": null,
-            "prices": [],
-            "options": {
-              "color": "Royal",
-              "size": "XS"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 2600,
-                "width": 1950
-              }
-            ]
-          },
-          {
-            "id": 42595,
-            "title": "Royal / S",
-            "cost": null,
-            "price": null,
-            "prices": [],
-            "options": {
-              "color": "Royal",
-              "size": "S"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 3000,
-                "width": 2250
-              }
-            ]
-          },
-          {
-            "id": 42596,
-            "title": "Royal / M",
-            "cost": null,
-            "price": null,
-            "prices": [],
-            "options": {
-              "color": "Royal",
-              "size": "M"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 3400,
-                "width": 2550
-              }
-            ]
-          },
-          {
-            "id": 42597,
-            "title": "Royal / L",
-            "cost": null,
-            "price": null,
-            "prices": [],
-            "options": {
-              "color": "Royal",
-              "size": "L"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "dtg",
-                "height": 3600,
-                "width": 2700
-              }
-            ]
-          }
-        ]
-      },
-      "shipping": {
-        "handling_time": {
-          "value": 10,
-          "unit": "day"
-        },
-        "profiles": [
-          {
-            "variant_ids": [
-              38235,
-              38236,
-              38237,
-              38238,
-              38239,
-              38240,
-              38241,
-              38242,
-              38245,
-              38246,
-              38247,
-              38248,
-              38249,
-              38250,
-              38251,
-              38252,
-              38255,
-              38256,
-              38257,
-              38258,
-              38259,
-              38260,
-              38261,
-              38262,
-              38265,
-              38266,
-              38267,
-              38270,
-              38271,
-              38272,
-              38273,
-              38274,
-              38275,
-              38276,
-              38277,
-              38280,
-              38281,
-              38282,
-              38283,
-              38284,
-              38285,
-              38286,
-              38287,
-              42593,
-              42594,
-              42595,
-              42596,
-              42597
-            ],
-            "first_item": {
-              "currency": "USD",
-              "cost": 1279
-            },
-            "additional_items": {
-              "currency": "USD",
-              "cost": 549
-            },
-            "countries": [
-              "AL",
-              "AD",
-              "AM",
-              "BE",
-              "AT",
-              "BY",
-              "GE",
-              "GR",
-              "CZ",
-              "FO",
-              "FI",
-              "BG",
-              "AX",
-              "DK",
-              "EE",
-              "FR",
-              "CY",
-              "PT",
-              "RE",
-              "HU",
-              "MC",
-              "BV",
-              "GL",
-              "VA",
-              "GP",
-              "BA",
-              "HR",
-              "GG",
-              "IE",
-              "IT",
-              "IM",
-              "LT",
-              "LI",
-              "JE",
-              "LU",
-              "NL",
-              "DE",
-              "IS",
-              "GI",
-              "MD",
-              "ME",
-              "RO",
-              "SK",
-              "RS",
-              "MK",
-              "MT",
-              "LV",
-              "NO",
-              "PL",
-              "SM",
-              "SE",
-              "ES",
-              "TR",
-              "CH",
-              "UA",
-              "SI",
-              "XK",
-              "GB",
-              "REST_OF_THE_WORLD"
-            ]
-          },
-          {
-            "variant_ids": [
-              38235,
-              38236,
-              38237,
-              38238,
-              38239,
-              38240,
-              38241,
-              38242,
-              38245,
-              38246,
-              38247,
-              38248,
-              38249,
-              38250,
-              38251,
-              38252,
-              38255,
-              38256,
-              38257,
-              38258,
-              38259,
-              38260,
-              38261,
-              38262,
-              38265,
-              38266,
-              38267,
-              38270,
-              38271,
-              38272,
-              38273,
-              38274,
-              38275,
-              38276,
-              38277,
-              38280,
-              38281,
-              38282,
-              38283,
-              38284,
-              38285,
-              38286,
-              38287,
-              42593,
-              42594,
-              42595,
-              42596,
-              42597
-            ],
-            "first_item": {
-              "currency": "USD",
-              "cost": 2259
-            },
-            "additional_items": {
-              "currency": "USD",
-              "cost": 330
-            },
-            "countries": [
-              "US"
-            ]
-          },
-          {
-            "variant_ids": [
-              38235,
-              38236,
-              38237,
-              38238,
-              38239,
-              38240,
-              38241,
-              38242,
-              38245,
-              38246,
-              38247,
-              38248,
-              38249,
-              38250,
-              38251,
-              38252,
-              38255,
-              38256,
-              38257,
-              38258,
-              38259,
-              38260,
-              38261,
-              38262,
-              38265,
-              38266,
-              38267,
-              38270,
-              38271,
-              38272,
-              38273,
-              38274,
-              38275,
-              38276,
-              38277,
-              38280,
-              38281,
-              38282,
-              38283,
-              38284,
-              38285,
-              38286,
-              38287,
-              42593,
-              42594,
-              42595,
-              42596,
-              42597
-            ],
-            "first_item": {
-              "currency": "USD",
-              "cost": 679
-            },
-            "additional_items": {
-              "currency": "USD",
-              "cost": 219
-            },
-            "countries": [
-              "CA"
-            ]
-          }
-        ]
-      },
-      "cost_per_region": [
-        {
-          "countries": [
-            "AL",
-            "AD",
-            "AM",
-            "BE",
-            "AT",
-            "BY",
-            "GE",
-            "GR",
-            "CZ",
-            "FO",
-            "FI",
-            "BG",
-            "AX",
-            "DK",
-            "EE",
-            "FR",
-            "CY",
-            "PT",
-            "RE",
-            "HU",
-            "MC",
-            "BV",
-            "GL",
-            "VA",
-            "GP",
-            "BA",
-            "HR",
-            "GG",
-            "IE",
-            "IT",
-            "IM",
-            "LT",
-            "LI",
-            "JE",
-            "LU",
-            "NL",
-            "DE",
-            "IS",
-            "GI",
-            "MD",
-            "ME",
-            "RO",
-            "SK",
-            "RS",
-            "MK",
-            "MT",
-            "LV",
-            "NO",
-            "PL",
-            "SM",
-            "SE",
-            "ES",
-            "TR",
-            "CH",
-            "UA",
-            "SI",
-            "XK",
-            "GB",
-            "REST_OF_THE_WORLD"
-          ],
-          "first_item": {
-            "currency": "USD",
-            "cost": 1279
-          },
-          "additional_items": {
-            "currency": "USD",
-            "cost": 549
-          },
-          "variant_count": 48
-        },
-        {
-          "countries": [
-            "US"
-          ],
-          "first_item": {
-            "currency": "USD",
-            "cost": 2259
-          },
-          "additional_items": {
-            "currency": "USD",
-            "cost": 330
-          },
-          "variant_count": 48
-        },
-        {
-          "countries": [
-            "CA"
-          ],
-          "first_item": {
-            "currency": "USD",
-            "cost": 679
-          },
-          "additional_items": {
-            "currency": "USD",
-            "cost": 219
-          },
-          "variant_count": 48
-        }
-      ]
-    },
-    {
-      "provider": {
         "id": 99,
         "title": "Printify Choice"
       },
@@ -3474,14 +2193,14 @@
             ],
             "first_item": {
               "currency": "USD",
-              "cost": 1249
+              "cost": 1000
             },
             "additional_items": {
               "currency": "USD",
-              "cost": 499
+              "cost": 400
             },
             "countries": [
-              "AU"
+              "REST_OF_THE_WORLD"
             ]
           },
           {
@@ -3554,14 +2273,14 @@
             ],
             "first_item": {
               "currency": "USD",
-              "cost": 939
+              "cost": 1249
             },
             "additional_items": {
               "currency": "USD",
-              "cost": 439
+              "cost": 499
             },
             "countries": [
-              "CA"
+              "AU"
             ]
           },
           {
@@ -3714,14 +2433,14 @@
             ],
             "first_item": {
               "currency": "USD",
-              "cost": 1000
+              "cost": 939
             },
             "additional_items": {
               "currency": "USD",
-              "cost": 400
+              "cost": 439
             },
             "countries": [
-              "REST_OF_THE_WORLD"
+              "CA"
             ]
           }
         ]
@@ -3743,6 +2462,20 @@
         },
         {
           "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1000
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 400
+          },
+          "variant_count": 65
+        },
+        {
+          "countries": [
             "AU"
           ],
           "first_item": {
@@ -3752,20 +2485,6 @@
           "additional_items": {
             "currency": "USD",
             "cost": 499
-          },
-          "variant_count": 65
-        },
-        {
-          "countries": [
-            "CA"
-          ],
-          "first_item": {
-            "currency": "USD",
-            "cost": 939
-          },
-          "additional_items": {
-            "currency": "USD",
-            "cost": 439
           },
           "variant_count": 65
         },
@@ -3785,17 +2504,1298 @@
         },
         {
           "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 939
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 65
+        }
+      ]
+    },
+    {
+      "provider": {
+        "id": 27,
+        "title": "Print Geek"
+      },
+      "variants": {
+        "id": 27,
+        "title": "Print Geek",
+        "variants": [
+          {
+            "id": 38235,
+            "title": "Apple / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Apple",
+              "size": "S"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3000,
+                "width": 2250
+              }
+            ]
+          },
+          {
+            "id": 38236,
+            "title": "Apple / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Apple",
+              "size": "M"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3400,
+                "width": 2550
+              }
+            ]
+          },
+          {
+            "id": 38237,
+            "title": "Apple / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Apple",
+              "size": "L"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3600,
+                "width": 2700
+              }
+            ]
+          },
+          {
+            "id": 38238,
+            "title": "Black / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Black",
+              "size": "XL"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3600,
+                "width": 2700
+              }
+            ]
+          },
+          {
+            "id": 38239,
+            "title": "Black / XS",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Black",
+              "size": "XS"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 2600,
+                "width": 1950
+              }
+            ]
+          },
+          {
+            "id": 38240,
+            "title": "Black / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Black",
+              "size": "S"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3000,
+                "width": 2250
+              }
+            ]
+          },
+          {
+            "id": 38241,
+            "title": "Black / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Black",
+              "size": "M"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3400,
+                "width": 2550
+              }
+            ]
+          },
+          {
+            "id": 38242,
+            "title": "Black / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Black",
+              "size": "L"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3600,
+                "width": 2700
+              }
+            ]
+          },
+          {
+            "id": 38245,
+            "title": "Butter / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Butter",
+              "size": "S"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3000,
+                "width": 2250
+              }
+            ]
+          },
+          {
+            "id": 38246,
+            "title": "Butter / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Butter",
+              "size": "M"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3400,
+                "width": 2550
+              }
+            ]
+          },
+          {
+            "id": 38247,
+            "title": "Butter / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Butter",
+              "size": "L"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3600,
+                "width": 2700
+              }
+            ]
+          },
+          {
+            "id": 38248,
+            "title": "Heather / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Heather",
+              "size": "XL"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3600,
+                "width": 2700
+              }
+            ]
+          },
+          {
+            "id": 38249,
+            "title": "Heather / XS",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Heather",
+              "size": "XS"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 2600,
+                "width": 1950
+              }
+            ]
+          },
+          {
+            "id": 38250,
+            "title": "Heather / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Heather",
+              "size": "S"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3000,
+                "width": 2250
+              }
+            ]
+          },
+          {
+            "id": 38251,
+            "title": "Heather / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Heather",
+              "size": "M"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3400,
+                "width": 2550
+              }
+            ]
+          },
+          {
+            "id": 38252,
+            "title": "Heather / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Heather",
+              "size": "L"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3600,
+                "width": 2700
+              }
+            ]
+          },
+          {
+            "id": 38255,
+            "title": "Light Blue / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Light Blue",
+              "size": "S"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3000,
+                "width": 2250
+              }
+            ]
+          },
+          {
+            "id": 38256,
+            "title": "Light Blue / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Light Blue",
+              "size": "M"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3400,
+                "width": 2550
+              }
+            ]
+          },
+          {
+            "id": 38257,
+            "title": "Light Blue / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Light Blue",
+              "size": "L"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3600,
+                "width": 2700
+              }
+            ]
+          },
+          {
+            "id": 38258,
+            "title": "Navy / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Navy",
+              "size": "XL"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3600,
+                "width": 2700
+              }
+            ]
+          },
+          {
+            "id": 38259,
+            "title": "Navy / XS",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Navy",
+              "size": "XS"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 2600,
+                "width": 1950
+              }
+            ]
+          },
+          {
+            "id": 38260,
+            "title": "Navy / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Navy",
+              "size": "S"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3000,
+                "width": 2250
+              }
+            ]
+          },
+          {
+            "id": 38261,
+            "title": "Navy / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Navy",
+              "size": "M"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3400,
+                "width": 2550
+              }
+            ]
+          },
+          {
+            "id": 38262,
+            "title": "Navy / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Navy",
+              "size": "L"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3600,
+                "width": 2700
+              }
+            ]
+          },
+          {
+            "id": 38265,
+            "title": "Orange / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Orange",
+              "size": "S"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3000,
+                "width": 2250
+              }
+            ]
+          },
+          {
+            "id": 38266,
+            "title": "Orange / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Orange",
+              "size": "M"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3400,
+                "width": 2550
+              }
+            ]
+          },
+          {
+            "id": 38267,
+            "title": "Orange / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Orange",
+              "size": "L"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3600,
+                "width": 2700
+              }
+            ]
+          },
+          {
+            "id": 38270,
+            "title": "Pink / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Pink",
+              "size": "S"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3000,
+                "width": 2250
+              }
+            ]
+          },
+          {
+            "id": 38271,
+            "title": "Pink / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Pink",
+              "size": "M"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3400,
+                "width": 2550
+              }
+            ]
+          },
+          {
+            "id": 38272,
+            "title": "Pink / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Pink",
+              "size": "L"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3600,
+                "width": 2700
+              }
+            ]
+          },
+          {
+            "id": 38273,
+            "title": "Red / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Red",
+              "size": "XL"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3600,
+                "width": 2700
+              }
+            ]
+          },
+          {
+            "id": 38274,
+            "title": "Red / XS",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Red",
+              "size": "XS"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 2600,
+                "width": 1950
+              }
+            ]
+          },
+          {
+            "id": 38275,
+            "title": "Red / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Red",
+              "size": "S"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3000,
+                "width": 2250
+              }
+            ]
+          },
+          {
+            "id": 38276,
+            "title": "Red / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Red",
+              "size": "M"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3400,
+                "width": 2550
+              }
+            ]
+          },
+          {
+            "id": 38277,
+            "title": "Red / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Red",
+              "size": "L"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3600,
+                "width": 2700
+              }
+            ]
+          },
+          {
+            "id": 38280,
+            "title": "Silver / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Silver",
+              "size": "S"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3000,
+                "width": 2250
+              }
+            ]
+          },
+          {
+            "id": 38281,
+            "title": "Silver / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Silver",
+              "size": "M"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3400,
+                "width": 2550
+              }
+            ]
+          },
+          {
+            "id": 38282,
+            "title": "Silver / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Silver",
+              "size": "L"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3600,
+                "width": 2700
+              }
+            ]
+          },
+          {
+            "id": 38283,
+            "title": "White / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "White",
+              "size": "XL"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3600,
+                "width": 2700
+              }
+            ]
+          },
+          {
+            "id": 38284,
+            "title": "White / XS",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "White",
+              "size": "XS"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 2600,
+                "width": 1950
+              }
+            ]
+          },
+          {
+            "id": 38285,
+            "title": "White / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "White",
+              "size": "S"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3000,
+                "width": 2250
+              }
+            ]
+          },
+          {
+            "id": 38286,
+            "title": "White / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "White",
+              "size": "M"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3400,
+                "width": 2550
+              }
+            ]
+          },
+          {
+            "id": 38287,
+            "title": "White / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "White",
+              "size": "L"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3600,
+                "width": 2700
+              }
+            ]
+          },
+          {
+            "id": 42593,
+            "title": "Royal / XL",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Royal",
+              "size": "XL"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3600,
+                "width": 2700
+              }
+            ]
+          },
+          {
+            "id": 42594,
+            "title": "Royal / XS",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Royal",
+              "size": "XS"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 2600,
+                "width": 1950
+              }
+            ]
+          },
+          {
+            "id": 42595,
+            "title": "Royal / S",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Royal",
+              "size": "S"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3000,
+                "width": 2250
+              }
+            ]
+          },
+          {
+            "id": 42596,
+            "title": "Royal / M",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Royal",
+              "size": "M"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3400,
+                "width": 2550
+              }
+            ]
+          },
+          {
+            "id": 42597,
+            "title": "Royal / L",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Royal",
+              "size": "L"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dtg",
+                "height": 3600,
+                "width": 2700
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              38235,
+              38236,
+              38237,
+              38238,
+              38239,
+              38240,
+              38241,
+              38242,
+              38245,
+              38246,
+              38247,
+              38248,
+              38249,
+              38250,
+              38251,
+              38252,
+              38255,
+              38256,
+              38257,
+              38258,
+              38259,
+              38260,
+              38261,
+              38262,
+              38265,
+              38266,
+              38267,
+              38270,
+              38271,
+              38272,
+              38273,
+              38274,
+              38275,
+              38276,
+              38277,
+              38280,
+              38281,
+              38282,
+              38283,
+              38284,
+              38285,
+              38286,
+              38287,
+              42593,
+              42594,
+              42595,
+              42596,
+              42597
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1279
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 549
+            },
+            "countries": [
+              "AL",
+              "AD",
+              "AM",
+              "BE",
+              "AT",
+              "BY",
+              "GE",
+              "GR",
+              "CZ",
+              "FO",
+              "FI",
+              "BG",
+              "AX",
+              "DK",
+              "EE",
+              "FR",
+              "CY",
+              "PT",
+              "RE",
+              "HU",
+              "MC",
+              "BV",
+              "GL",
+              "VA",
+              "GP",
+              "BA",
+              "HR",
+              "GG",
+              "IE",
+              "IT",
+              "IM",
+              "LT",
+              "LI",
+              "JE",
+              "LU",
+              "NL",
+              "DE",
+              "IS",
+              "GI",
+              "MD",
+              "ME",
+              "RO",
+              "SK",
+              "RS",
+              "MK",
+              "MT",
+              "LV",
+              "NO",
+              "PL",
+              "SM",
+              "SE",
+              "ES",
+              "TR",
+              "CH",
+              "UA",
+              "SI",
+              "XK",
+              "GB",
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              38235,
+              38236,
+              38237,
+              38238,
+              38239,
+              38240,
+              38241,
+              38242,
+              38245,
+              38246,
+              38247,
+              38248,
+              38249,
+              38250,
+              38251,
+              38252,
+              38255,
+              38256,
+              38257,
+              38258,
+              38259,
+              38260,
+              38261,
+              38262,
+              38265,
+              38266,
+              38267,
+              38270,
+              38271,
+              38272,
+              38273,
+              38274,
+              38275,
+              38276,
+              38277,
+              38280,
+              38281,
+              38282,
+              38283,
+              38284,
+              38285,
+              38286,
+              38287,
+              42593,
+              42594,
+              42595,
+              42596,
+              42597
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2259
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 330
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              38235,
+              38236,
+              38237,
+              38238,
+              38239,
+              38240,
+              38241,
+              38242,
+              38245,
+              38246,
+              38247,
+              38248,
+              38249,
+              38250,
+              38251,
+              38252,
+              38255,
+              38256,
+              38257,
+              38258,
+              38259,
+              38260,
+              38261,
+              38262,
+              38265,
+              38266,
+              38267,
+              38270,
+              38271,
+              38272,
+              38273,
+              38274,
+              38275,
+              38276,
+              38277,
+              38280,
+              38281,
+              38282,
+              38283,
+              38284,
+              38285,
+              38286,
+              38287,
+              42593,
+              42594,
+              42595,
+              42596,
+              42597
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 679
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 219
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "AL",
+            "AD",
+            "AM",
+            "BE",
+            "AT",
+            "BY",
+            "GE",
+            "GR",
+            "CZ",
+            "FO",
+            "FI",
+            "BG",
+            "AX",
+            "DK",
+            "EE",
+            "FR",
+            "CY",
+            "PT",
+            "RE",
+            "HU",
+            "MC",
+            "BV",
+            "GL",
+            "VA",
+            "GP",
+            "BA",
+            "HR",
+            "GG",
+            "IE",
+            "IT",
+            "IM",
+            "LT",
+            "LI",
+            "JE",
+            "LU",
+            "NL",
+            "DE",
+            "IS",
+            "GI",
+            "MD",
+            "ME",
+            "RO",
+            "SK",
+            "RS",
+            "MK",
+            "MT",
+            "LV",
+            "NO",
+            "PL",
+            "SM",
+            "SE",
+            "ES",
+            "TR",
+            "CH",
+            "UA",
+            "SI",
+            "XK",
+            "GB",
             "REST_OF_THE_WORLD"
           ],
           "first_item": {
             "currency": "USD",
-            "cost": 1000
+            "cost": 1279
           },
           "additional_items": {
             "currency": "USD",
-            "cost": 400
+            "cost": 549
           },
-          "variant_count": 65
+          "variant_count": 48
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2259
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 330
+          },
+          "variant_count": 48
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 679
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 219
+          },
+          "variant_count": 48
         }
       ]
     },
@@ -5591,14 +5591,14 @@
             ],
             "first_item": {
               "currency": "USD",
-              "cost": 1000
+              "cost": 939
             },
             "additional_items": {
               "currency": "USD",
-              "cost": 400
+              "cost": 439
             },
             "countries": [
-              "REST_OF_THE_WORLD"
+              "CA"
             ]
           },
           {
@@ -5671,14 +5671,14 @@
             ],
             "first_item": {
               "currency": "USD",
-              "cost": 939
+              "cost": 475
             },
             "additional_items": {
               "currency": "USD",
-              "cost": 439
+              "cost": 240
             },
             "countries": [
-              "CA"
+              "US"
             ]
           },
           {
@@ -5831,14 +5831,14 @@
             ],
             "first_item": {
               "currency": "USD",
-              "cost": 475
+              "cost": 1000
             },
             "additional_items": {
               "currency": "USD",
-              "cost": 240
+              "cost": 400
             },
             "countries": [
-              "US"
+              "REST_OF_THE_WORLD"
             ]
           }
         ]
@@ -5860,20 +5860,6 @@
         },
         {
           "countries": [
-            "REST_OF_THE_WORLD"
-          ],
-          "first_item": {
-            "currency": "USD",
-            "cost": 1000
-          },
-          "additional_items": {
-            "currency": "USD",
-            "cost": 400
-          },
-          "variant_count": 65
-        },
-        {
-          "countries": [
             "CA"
           ],
           "first_item": {
@@ -5883,6 +5869,20 @@
           "additional_items": {
             "currency": "USD",
             "cost": 439
+          },
+          "variant_count": 65
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 475
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 240
           },
           "variant_count": 65
         },
@@ -5902,15 +5902,15 @@
         },
         {
           "countries": [
-            "US"
+            "REST_OF_THE_WORLD"
           ],
           "first_item": {
             "currency": "USD",
-            "cost": 475
+            "cost": 1000
           },
           "additional_items": {
             "currency": "USD",
-            "cost": 240
+            "cost": 400
           },
           "variant_count": 65
         }

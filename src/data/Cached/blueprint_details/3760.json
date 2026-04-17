@@ -1498,61 +1498,14 @@
             ],
             "first_item": {
               "currency": "USD",
-              "cost": 2199
+              "cost": 1500
             },
             "additional_items": {
               "currency": "USD",
-              "cost": 999
+              "cost": 1000
             },
             "countries": [
-              "AU"
-            ]
-          },
-          {
-            "variant_ids": [
-              207284,
-              207290,
-              207294,
-              207298,
-              207311,
-              207316,
-              207317,
-              207320,
-              207325,
-              207330,
-              207332,
-              207334,
-              207342,
-              207345,
-              207346,
-              207352,
-              207355,
-              207361,
-              207362,
-              207365,
-              207377,
-              207378,
-              207379,
-              207384,
-              207392,
-              207394,
-              207396,
-              207397,
-              207411,
-              207413,
-              207414,
-              207417
-            ],
-            "first_item": {
-              "currency": "USD",
-              "cost": 1269
-            },
-            "additional_items": {
-              "currency": "USD",
-              "cost": 659
-            },
-            "countries": [
-              "CA"
+              "REST_OF_THE_WORLD"
             ]
           },
           {
@@ -1639,14 +1592,61 @@
             ],
             "first_item": {
               "currency": "USD",
-              "cost": 1500
+              "cost": 2199
             },
             "additional_items": {
               "currency": "USD",
-              "cost": 1000
+              "cost": 999
             },
             "countries": [
-              "REST_OF_THE_WORLD"
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              207284,
+              207290,
+              207294,
+              207298,
+              207311,
+              207316,
+              207317,
+              207320,
+              207325,
+              207330,
+              207332,
+              207334,
+              207342,
+              207345,
+              207346,
+              207352,
+              207355,
+              207361,
+              207362,
+              207365,
+              207377,
+              207378,
+              207379,
+              207384,
+              207392,
+              207394,
+              207396,
+              207397,
+              207411,
+              207413,
+              207414,
+              207417
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1269
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 659
+            },
+            "countries": [
+              "CA"
             ]
           }
         ]
@@ -1663,6 +1663,34 @@
           "additional_items": {
             "currency": "USD",
             "cost": 209
+          },
+          "variant_count": 32
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1500
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1000
+          },
+          "variant_count": 32
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 249
           },
           "variant_count": 32
         },
@@ -1691,34 +1719,6 @@
           "additional_items": {
             "currency": "USD",
             "cost": 659
-          },
-          "variant_count": 32
-        },
-        {
-          "countries": [
-            "US"
-          ],
-          "first_item": {
-            "currency": "USD",
-            "cost": 999
-          },
-          "additional_items": {
-            "currency": "USD",
-            "cost": 249
-          },
-          "variant_count": 32
-        },
-        {
-          "countries": [
-            "REST_OF_THE_WORLD"
-          ],
-          "first_item": {
-            "currency": "USD",
-            "cost": 1500
-          },
-          "additional_items": {
-            "currency": "USD",
-            "cost": 1000
           },
           "variant_count": 32
         }

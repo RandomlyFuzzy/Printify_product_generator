@@ -5,14 +5,14 @@
     "brand": "Generic brand",
     "model": "",
     "images": [
+      "https://images.printify.com/69ba6974155388128a030812",
+      "https://images.printify.com/69ba6973b5b1bb0de808f9f2",
       "https://images.printify.com/68d695ba832f2e48a40d60a3",
       "https://images.printify.com/68e67161138d619f9d04c862",
       "https://images.printify.com/68e67163f8772fc402097bf2",
       "https://images.printify.com/68e671628577ee34c8030ba2",
-      "https://images.printify.com/69ba6974155388128a030812",
       "https://images.printify.com/68e6715fde7ce207ef052cb3",
-      "https://images.printify.com/68e6715ef09f78560e0a6dc3",
-      "https://images.printify.com/69ba6973b5b1bb0de808f9f2"
+      "https://images.printify.com/68e6715ef09f78560e0a6dc3"
     ]
   },
   "print_providers": [
@@ -158,14 +158,14 @@
             ],
             "first_item": {
               "currency": "USD",
-              "cost": 939
+              "cost": 569
             },
             "additional_items": {
               "currency": "USD",
-              "cost": 439
+              "cost": 249
             },
             "countries": [
-              "CA"
+              "US"
             ]
           },
           {
@@ -178,14 +178,14 @@
             ],
             "first_item": {
               "currency": "USD",
-              "cost": 569
+              "cost": 939
             },
             "additional_items": {
               "currency": "USD",
-              "cost": 249
+              "cost": 439
             },
             "countries": [
-              "US"
+              "CA"
             ]
           },
           {
@@ -227,20 +227,6 @@
         },
         {
           "countries": [
-            "CA"
-          ],
-          "first_item": {
-            "currency": "USD",
-            "cost": 939
-          },
-          "additional_items": {
-            "currency": "USD",
-            "cost": 439
-          },
-          "variant_count": 5
-        },
-        {
-          "countries": [
             "US"
           ],
           "first_item": {
@@ -250,6 +236,20 @@
           "additional_items": {
             "currency": "USD",
             "cost": 249
+          },
+          "variant_count": 5
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 939
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
           },
           "variant_count": 5
         },

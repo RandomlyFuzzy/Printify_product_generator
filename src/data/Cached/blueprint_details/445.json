@@ -5,6 +5,7 @@
     "brand": "Lane Seven",
     "model": "LS14003",
     "images": [
+      "https://images.printify.com/69ca73be2c1becfe370b3812",
       "https://images.printify.com/66d858214fe1c3b8e6027b85",
       "https://images.printify.com/66d858167cb156095302f086",
       "https://images.printify.com/66d85950ae63b6bb8d012b82",
@@ -13,8 +14,7 @@
       "https://images.printify.com/5d8c761cd0444b4bdd19dbb3",
       "https://images.printify.com/5d8b4f7fcbf5cb33d23f9193",
       "https://images.printify.com/5d8b5679cbf5cb33d23f9198",
-      "https://images.printify.com/5d8b5c3da39fb333c86e8067",
-      "https://images.printify.com/69ca73be2c1becfe370b3812"
+      "https://images.printify.com/5d8b5c3da39fb333c86e8067"
     ]
   },
   "print_providers": [
@@ -7969,92 +7969,14 @@
             ],
             "first_item": {
               "currency": "USD",
-              "cost": 2199
+              "cost": 1500
             },
             "additional_items": {
               "currency": "USD",
-              "cost": 999
+              "cost": 1000
             },
             "countries": [
-              "AU"
-            ]
-          },
-          {
-            "variant_ids": [
-              62585,
-              62586,
-              62587,
-              62588,
-              62589,
-              62590,
-              62591,
-              62592,
-              62593,
-              62594,
-              62595,
-              62596,
-              62597,
-              62598,
-              62599,
-              62600,
-              62601,
-              62602,
-              62603,
-              62604,
-              62605,
-              62606,
-              62607,
-              62608,
-              62609,
-              62610,
-              62611,
-              62612,
-              62613,
-              62614,
-              68128,
-              68129,
-              68130,
-              68131,
-              68132,
-              68133,
-              68134,
-              68135,
-              68136,
-              68137,
-              112489,
-              112490,
-              112491,
-              112492,
-              112493,
-              112494,
-              112495,
-              112496,
-              112497,
-              112498,
-              112499,
-              112500,
-              112501,
-              112502,
-              112503,
-              112504,
-              112505,
-              112506,
-              112507,
-              112508,
-              112509,
-              112510,
-              112511
-            ],
-            "first_item": {
-              "currency": "USD",
-              "cost": 1269
-            },
-            "additional_items": {
-              "currency": "USD",
-              "cost": 659
-            },
-            "countries": [
-              "CA"
+              "REST_OF_THE_WORLD"
             ]
           },
           {
@@ -8203,14 +8125,92 @@
             ],
             "first_item": {
               "currency": "USD",
-              "cost": 1500
+              "cost": 2199
             },
             "additional_items": {
               "currency": "USD",
-              "cost": 1000
+              "cost": 999
             },
             "countries": [
-              "REST_OF_THE_WORLD"
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              62585,
+              62586,
+              62587,
+              62588,
+              62589,
+              62590,
+              62591,
+              62592,
+              62593,
+              62594,
+              62595,
+              62596,
+              62597,
+              62598,
+              62599,
+              62600,
+              62601,
+              62602,
+              62603,
+              62604,
+              62605,
+              62606,
+              62607,
+              62608,
+              62609,
+              62610,
+              62611,
+              62612,
+              62613,
+              62614,
+              68128,
+              68129,
+              68130,
+              68131,
+              68132,
+              68133,
+              68134,
+              68135,
+              68136,
+              68137,
+              112489,
+              112490,
+              112491,
+              112492,
+              112493,
+              112494,
+              112495,
+              112496,
+              112497,
+              112498,
+              112499,
+              112500,
+              112501,
+              112502,
+              112503,
+              112504,
+              112505,
+              112506,
+              112507,
+              112508,
+              112509,
+              112510,
+              112511
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1269
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 659
+            },
+            "countries": [
+              "CA"
             ]
           }
         ]
@@ -8227,6 +8227,34 @@
           "additional_items": {
             "currency": "USD",
             "cost": 209
+          },
+          "variant_count": 63
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1500
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1000
+          },
+          "variant_count": 63
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 249
           },
           "variant_count": 63
         },
@@ -8255,34 +8283,6 @@
           "additional_items": {
             "currency": "USD",
             "cost": 659
-          },
-          "variant_count": 63
-        },
-        {
-          "countries": [
-            "US"
-          ],
-          "first_item": {
-            "currency": "USD",
-            "cost": 999
-          },
-          "additional_items": {
-            "currency": "USD",
-            "cost": 249
-          },
-          "variant_count": 63
-        },
-        {
-          "countries": [
-            "REST_OF_THE_WORLD"
-          ],
-          "first_item": {
-            "currency": "USD",
-            "cost": 1500
-          },
-          "additional_items": {
-            "currency": "USD",
-            "cost": 1000
           },
           "variant_count": 63
         }

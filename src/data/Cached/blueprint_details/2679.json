@@ -7,12 +7,12 @@
     "images": [
       "https://images.printify.com/69c1dcce61446955ae0d7f80",
       "https://images.printify.com/69c14c557faa0c9ce60f8710",
-      "https://images.printify.com/69c1dccf28492bd7870f6c30",
       "https://images.printify.com/69c14e787011cdc34201f6c2",
       "https://images.printify.com/69c14e7a3935c8c5ea080a90",
       "https://images.printify.com/69c14ef2269d934255011e52",
       "https://images.printify.com/69c14c5243e5e5871107f420",
-      "https://images.printify.com/69c14c54d52e11991a059dc0"
+      "https://images.printify.com/69c14c54d52e11991a059dc0",
+      "https://images.printify.com/69c1dccf28492bd7870f6c30"
     ]
   },
   "print_providers": [
@@ -1043,14 +1043,14 @@
             ],
             "first_item": {
               "currency": "USD",
-              "cost": 1269
+              "cost": 1500
             },
             "additional_items": {
               "currency": "USD",
-              "cost": 659
+              "cost": 1000
             },
             "countries": [
-              "CA"
+              "REST_OF_THE_WORLD"
             ]
           },
           {
@@ -1178,14 +1178,14 @@
             ],
             "first_item": {
               "currency": "USD",
-              "cost": 1500
+              "cost": 1269
             },
             "additional_items": {
               "currency": "USD",
-              "cost": 1000
+              "cost": 659
             },
             "countries": [
-              "REST_OF_THE_WORLD"
+              "CA"
             ]
           }
         ]
@@ -1207,15 +1207,15 @@
         },
         {
           "countries": [
-            "CA"
+            "REST_OF_THE_WORLD"
           ],
           "first_item": {
             "currency": "USD",
-            "cost": 1269
+            "cost": 1500
           },
           "additional_items": {
             "currency": "USD",
-            "cost": 659
+            "cost": 1000
           },
           "variant_count": 30
         },
@@ -1249,15 +1249,15 @@
         },
         {
           "countries": [
-            "REST_OF_THE_WORLD"
+            "CA"
           ],
           "first_item": {
             "currency": "USD",
-            "cost": 1500
+            "cost": 1269
           },
           "additional_items": {
             "currency": "USD",
-            "cost": 1000
+            "cost": 659
           },
           "variant_count": 30
         }

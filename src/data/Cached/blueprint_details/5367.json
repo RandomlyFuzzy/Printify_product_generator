@@ -6,7 +6,6 @@
     "model": "18-772",
     "images": [
       "https://images.printify.com/69a5b66dd76d13d54c020d30",
-      "https://images.printify.com/69b94308baa69d7539074eb2",
       "https://images.printify.com/69a5b6ca0daa2a43c501f730",
       "https://images.printify.com/69a5b253ee2ece21b90a23d0",
       "https://images.printify.com/69a5b6cf2387eb0dee0e2060",
@@ -16,7 +15,8 @@
       "https://images.printify.com/69a5b23d36dcd052f50dcc70",
       "https://images.printify.com/69a5b23725d53fd3e2047270",
       "https://images.printify.com/69a5b2478392c0a99f0c1f50",
-      "https://images.printify.com/69a5b24ccf44a60c86035c50"
+      "https://images.printify.com/69a5b24ccf44a60c86035c50",
+      "https://images.printify.com/69b94308baa69d7539074eb2"
     ]
   },
   "print_providers": [
@@ -417,29 +417,6 @@
             ],
             "first_item": {
               "currency": "USD",
-              "cost": 489
-            },
-            "additional_items": {
-              "currency": "USD",
-              "cost": 219
-            },
-            "countries": [
-              "US"
-            ]
-          },
-          {
-            "variant_ids": [
-              244707,
-              244708,
-              244709,
-              244710,
-              244711,
-              244712,
-              244713,
-              244714
-            ],
-            "first_item": {
-              "currency": "USD",
               "cost": 999
             },
             "additional_items": {
@@ -486,6 +463,29 @@
             ],
             "first_item": {
               "currency": "USD",
+              "cost": 489
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 219
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              244707,
+              244708,
+              244709,
+              244710,
+              244711,
+              244712,
+              244713,
+              244714
+            ],
+            "first_item": {
+              "currency": "USD",
               "cost": 939
             },
             "additional_items": {
@@ -515,20 +515,6 @@
         },
         {
           "countries": [
-            "US"
-          ],
-          "first_item": {
-            "currency": "USD",
-            "cost": 489
-          },
-          "additional_items": {
-            "currency": "USD",
-            "cost": 219
-          },
-          "variant_count": 8
-        },
-        {
-          "countries": [
             "REST_OF_THE_WORLD"
           ],
           "first_item": {
@@ -552,6 +538,20 @@
           "additional_items": {
             "currency": "USD",
             "cost": 239
+          },
+          "variant_count": 8
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 489
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 219
           },
           "variant_count": 8
         },

@@ -29,7 +29,18 @@ LogStatus($"Repository root: {repositoryRoot}");
 LogStatus($"Cache directory: {cacheDir}");
 
 var client = new PrintifyClient(token);
-var api = PrintifyBlueprintDatabase.CreateQueryApi(Path.Combine(cacheDir, "blueprint_details"));
+var BPD = Path.Combine(cacheDir, "blueprint_details");
+if(!Directory.Exists(BPD))
+{
+    Console.WriteLine("Cache directory does not exist. Creating empty cache.");
+    Directory.CreateDirectory(BPD);
+    var blueprints = await client.GetBlueprintsAsync();
+    await File.WriteAllTextAsync(
+        Path.Combine(BPD, "blueprints.json"),
+        JsonSerializer.Serialize(blueprints, new JsonSerializerOptions { WriteIndented = true }));
+    LogStatus($"Cached blueprint list with {blueprints.Count} blueprints.");
+}
+var api = PrintifyBlueprintDatabase.CreateQueryApi(BPD);
 
 
 
@@ -54,7 +65,10 @@ LogStatus($"Loaded {products.Count} existing product(s) from the cache shop.");
 //     try
 //     {
 //         await client.DeleteProductAsync(shop.Id, product.Id);
+
+//         PrintLoadingBar(++idx, products.Count);
 //         Console.WriteLine($"Deleted product {product.Id} with title {product.Title}. ({++idx}/{products.Count})");
+//         Console.CursorTop -=2;
 //     }
 //     catch (PrintifyApiException ex)
 //     {
@@ -73,6 +87,14 @@ LogPhase("Blueprint Sync");
 var blueprintIds = api.BlueprintIds.ToHashSet();
 //get all blueprint ids from the client
 var clientBlueprints = await client.GetBlueprintsAsync();
+//update the blueprints.json file in the cache
+clientBlueprints = clientBlueprints.OrderBy(blueprint => blueprint.Id).ToList();
+await File.WriteAllTextAsync(
+    Path.Combine(cacheDir, "blueprints.json"),
+    JsonSerializer.Serialize(clientBlueprints, new JsonSerializerOptions { WriteIndented = true }));
+LogStatus($"Updated blueprints.json after caching blueprint {clientBlueprints.Count}.");
+
+
 var clientBlueprintIds = clientBlueprints.Select(b => b.Id).ToHashSet();
 LogStatus($"Cached blueprint count: {blueprintIds.Count()}. Client blueprint count: {clientBlueprintIds.Count}.");
 //find blueprint ids that are in the client but not in the cache
@@ -81,6 +103,7 @@ if (missingBlueprintIds.Count != 0){
     //update the cache with the missing blueprints
     LogStatus($"Found {missingBlueprintIds.Count} missing blueprint(s). Refreshing cached blueprint details.");
     foreach (var blueprintId in missingBlueprintIds){
+        Reyty:
         try{
             LogStatus($"Fetching blueprint {blueprintId} metadata.");
             var blueprint = await client.GetBlueprintAsync(blueprintId);
@@ -139,17 +162,40 @@ if (missingBlueprintIds.Count != 0){
                     JsonSerializer.Serialize(detail, jsonOpts));
                 Console.WriteLine($"  Cached missing blueprint {blueprint.Id} - {blueprint.Title}.");
             }
-            //update the blueprints.json file in the cache
-            var blueprints = await client.GetBlueprintsAsync();
-            blueprints = blueprints.OrderBy(blueprint => blueprint.Id).ToList();
-            await File.WriteAllTextAsync(
-                Path.Combine(cacheDir, "blueprints.json"),
-                JsonSerializer.Serialize(blueprints, new JsonSerializerOptions { WriteIndented = true }));
-            LogStatus($"Updated blueprints.json after caching blueprint {blueprintId}.");
+
 
         }catch (PrintifyApiException ex)
         {
             Console.Error.WriteLine($"\n  WARNING: Failed to fetch blueprint {blueprintId}: {ex.Message}");
+            switch (ex.StatusCode)
+            {
+                case 401:
+                    Console.Error.WriteLine("  This indicates an authentication issue. Please check that your TOKEN in main.env is correct and has the necessary permissions.");
+                    break;
+                case 403:
+                    Console.Error.WriteLine("  This indicates an authorization issue. Please check that your TOKEN in main.env has the necessary permissions to access blueprint details.");
+                    break;
+                case 404:
+                    Console.Error.WriteLine("  This indicates that the blueprint was not found. It's possible that the blueprint was deleted after we fetched the list of blueprints. You may want to run this program again to see if the issue resolves itself.");
+                    break;
+                case 429:
+                    Console.Error.WriteLine("  This indicates that the rate limit was exceeded while fetching blueprint details. You may want to run this program again after some time to see if the issue resolves itself.");
+                    int waiteds = 0;
+                    int waitingTime = 20;
+                    while (waiteds < waitingTime)
+                    {
+
+                        PrintLoadingBar(waiteds, waitingTime);
+                        Console.CursorTop -= 1;
+                        await Task.Delay(TimeSpan.FromSeconds(1));
+                        waiteds++;
+                    }
+                    goto Reyty;
+                    break;
+                default:
+                    Console.Error.WriteLine("  An unexpected error occurred while fetching blueprint details.");
+                    break;
+            }
         }
     }
 }
@@ -821,6 +867,31 @@ static string BuildPlaceholderSignature(IReadOnlyList<VariantPlaceholder> placeh
             .Select(placeholder =>
                 $"{placeholder.Position.Trim()}|{(placeholder.DecorationMethod ?? string.Empty).Trim()}|{placeholder.Width.ToString(CultureInfo.InvariantCulture)}|{placeholder.Height.ToString(CultureInfo.InvariantCulture)}"));
 }
+
+static IReadOnlyList<VariantPlaceholder> SelectProbePlaceholders(IReadOnlyList<VariantPlaceholder> placeholders)
+{
+    if (placeholders.Count == 0)
+    {
+        return Array.Empty<VariantPlaceholder>();
+    }
+
+    var selectedPlaceholders = new List<VariantPlaceholder>
+    {
+        placeholders[0]
+    };
+
+    var neckPlaceholder = placeholders.FirstOrDefault(placeholder =>
+        placeholder.Position.Contains("neck", StringComparison.OrdinalIgnoreCase));
+
+    if (neckPlaceholder is not null &&
+        !EqualityComparer<VariantPlaceholder>.Default.Equals(neckPlaceholder, selectedPlaceholders[0]))
+    {
+        selectedPlaceholders.Add(neckPlaceholder);
+    }
+
+    return selectedPlaceholders;
+}
+
 static List<PrintArea> BuildProbePrintAreas(
     IReadOnlyList<PrintifyBlueprintSubvariant> subvariants,
     string uploadedImageId)
@@ -830,6 +901,7 @@ static List<PrintArea> BuildProbePrintAreas(
         .Select(group =>
         {
             var exemplar = group.First();
+            var selectedPlaceholders = SelectProbePlaceholders(exemplar.Placeholders);
 
             return new PrintArea
             {
@@ -837,7 +909,7 @@ static List<PrintArea> BuildProbePrintAreas(
                     .Select(subvariant => subvariant.VariantId)
                     .Distinct()
                     .ToList(),
-                Placeholders = exemplar.Placeholders
+                Placeholders = selectedPlaceholders
                     .Select(placeholder => new PrintAreaPlaceholder
                     {
                         Position = placeholder.Position,

@@ -5,11 +5,11 @@
     "brand": "TriDri",
     "model": "TD650",
     "images": [
-      "https://images.printify.com/69b15cd893971ef201035890",
       "https://images.printify.com/69bbf33118beacb95c0cef45",
       "https://images.printify.com/69bbf332eff4d2287c084252",
       "https://images.printify.com/69bbf33305d32abb0b095222",
-      "https://images.printify.com/69bbf33403b6651b00003341"
+      "https://images.printify.com/69bbf33403b6651b00003341",
+      "https://images.printify.com/69b15cd893971ef201035890"
     ]
   },
   "print_providers": [
@@ -446,33 +446,6 @@
             ],
             "first_item": {
               "currency": "USD",
-              "cost": 939
-            },
-            "additional_items": {
-              "currency": "USD",
-              "cost": 439
-            },
-            "countries": [
-              "CA"
-            ]
-          },
-          {
-            "variant_ids": [
-              244912,
-              244913,
-              244914,
-              244915,
-              244916,
-              244917,
-              244918,
-              244919,
-              244920,
-              244921,
-              244922,
-              244923
-            ],
-            "first_item": {
-              "currency": "USD",
               "cost": 519
             },
             "additional_items": {
@@ -481,33 +454,6 @@
             },
             "countries": [
               "US"
-            ]
-          },
-          {
-            "variant_ids": [
-              244912,
-              244913,
-              244914,
-              244915,
-              244916,
-              244917,
-              244918,
-              244919,
-              244920,
-              244921,
-              244922,
-              244923
-            ],
-            "first_item": {
-              "currency": "USD",
-              "cost": 1249
-            },
-            "additional_items": {
-              "currency": "USD",
-              "cost": 499
-            },
-            "countries": [
-              "AU"
             ]
           },
           {
@@ -536,6 +482,60 @@
             "countries": [
               "REST_OF_THE_WORLD"
             ]
+          },
+          {
+            "variant_ids": [
+              244912,
+              244913,
+              244914,
+              244915,
+              244916,
+              244917,
+              244918,
+              244919,
+              244920,
+              244921,
+              244922,
+              244923
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 939
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              244912,
+              244913,
+              244914,
+              244915,
+              244916,
+              244917,
+              244918,
+              244919,
+              244920,
+              244921,
+              244922,
+              244923
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1249
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "AU"
+            ]
           }
         ]
       },
@@ -556,20 +556,6 @@
         },
         {
           "countries": [
-            "CA"
-          ],
-          "first_item": {
-            "currency": "USD",
-            "cost": 939
-          },
-          "additional_items": {
-            "currency": "USD",
-            "cost": 439
-          },
-          "variant_count": 12
-        },
-        {
-          "countries": [
             "US"
           ],
           "first_item": {
@@ -584,20 +570,6 @@
         },
         {
           "countries": [
-            "AU"
-          ],
-          "first_item": {
-            "currency": "USD",
-            "cost": 1249
-          },
-          "additional_items": {
-            "currency": "USD",
-            "cost": 499
-          },
-          "variant_count": 12
-        },
-        {
-          "countries": [
             "REST_OF_THE_WORLD"
           ],
           "first_item": {
@@ -607,6 +579,34 @@
           "additional_items": {
             "currency": "USD",
             "cost": 400
+          },
+          "variant_count": 12
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 939
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 12
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1249
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 499
           },
           "variant_count": 12
         }

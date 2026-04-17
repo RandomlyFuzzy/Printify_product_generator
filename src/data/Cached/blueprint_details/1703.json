@@ -7,11 +7,11 @@
     "images": [
       "https://images.printify.com/6964a5548397d19fae0148c2",
       "https://images.printify.com/6964ea148a0d66d0040d7582",
-      "https://images.printify.com/6966319080fe1ff3460dfb28",
       "https://images.printify.com/6964f2b9e120657a310ff0f4",
       "https://images.printify.com/677fb2b726fc423ea20c22e7",
       "https://images.printify.com/677fb2b871d38c314a082e23",
-      "https://images.printify.com/677fb2ba0ed8ecd2580006b3"
+      "https://images.printify.com/677fb2ba0ed8ecd2580006b3",
+      "https://images.printify.com/6966319080fe1ff3460dfb28"
     ]
   },
   "print_providers": [
@@ -97,14 +97,14 @@
             ],
             "first_item": {
               "currency": "USD",
-              "cost": 929
+              "cost": 749
             },
             "additional_items": {
               "currency": "USD",
-              "cost": 199
+              "cost": 99
             },
             "countries": [
-              "CA"
+              "US"
             ]
           },
           {
@@ -133,14 +133,14 @@
             ],
             "first_item": {
               "currency": "USD",
-              "cost": 749
+              "cost": 929
             },
             "additional_items": {
               "currency": "USD",
-              "cost": 99
+              "cost": 199
             },
             "countries": [
-              "US"
+              "CA"
             ]
           }
         ]
@@ -148,15 +148,15 @@
       "cost_per_region": [
         {
           "countries": [
-            "CA"
+            "US"
           ],
           "first_item": {
             "currency": "USD",
-            "cost": 929
+            "cost": 749
           },
           "additional_items": {
             "currency": "USD",
-            "cost": 199
+            "cost": 99
           },
           "variant_count": 3
         },
@@ -176,15 +176,15 @@
         },
         {
           "countries": [
-            "US"
+            "CA"
           ],
           "first_item": {
             "currency": "USD",
-            "cost": 749
+            "cost": 929
           },
           "additional_items": {
             "currency": "USD",
-            "cost": 99
+            "cost": 199
           },
           "variant_count": 3
         }

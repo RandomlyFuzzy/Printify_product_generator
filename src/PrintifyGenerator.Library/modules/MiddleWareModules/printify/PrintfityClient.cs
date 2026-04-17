@@ -398,7 +398,7 @@ public class PrintifyClient
         await EnsureSuccessAsync(response);
         var json = await response.Content.ReadAsStringAsync();
         var page = JsonSerializer.Deserialize<PaginatedResponse<T>>(json, JsonOpts)!;
-        int pages = (int)Math.Floor((double)page.Total / limit);
+        int pages = (int)Math.Floor((double)page.Total / limit)+1;
         Task<HttpResponseMessage>[] tasks = new Task<HttpResponseMessage>[pages];
 
         Console.WriteLine($"Page 1: Fetched {page.Data.Count} items. Total items: {page.Total}. Total pages: {pages}.");

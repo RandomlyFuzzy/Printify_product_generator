@@ -15,6 +15,282 @@
   "print_providers": [
     {
       "provider": {
+        "id": 99,
+        "title": "Printify Choice"
+      },
+      "variants": {
+        "id": 99,
+        "title": "Printify Choice",
+        "variants": [
+          {
+            "id": 102987,
+            "title": "30\u0022 x 36\u0022 / Glossy",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "size": "30\u0022 x 36\u0022",
+              "paper": "Glossy"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 10800,
+                "width": 9075
+              }
+            ]
+          },
+          {
+            "id": 102988,
+            "title": "30\u0022 x 36\u0022 / Matte",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "size": "30\u0022 x 36\u0022",
+              "paper": "Matte"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 10800,
+                "width": 9075
+              }
+            ]
+          },
+          {
+            "id": 102989,
+            "title": "30\u0022 x 72\u0022 / Glossy",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "size": "30\u0022 x 72\u0022",
+              "paper": "Glossy"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 10800,
+                "width": 9075
+              }
+            ]
+          },
+          {
+            "id": 102990,
+            "title": "30\u0022 x 72\u0022 / Matte",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "size": "30\u0022 x 72\u0022",
+              "paper": "Matte"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 10800,
+                "width": 9075
+              }
+            ]
+          },
+          {
+            "id": 102991,
+            "title": "30\u0022 x 180\u0022 / Glossy",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "size": "30\u0022 x 180\u0022",
+              "paper": "Glossy"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 10800,
+                "width": 9075
+              }
+            ]
+          },
+          {
+            "id": 102992,
+            "title": "30\u0022 x 180\u0022 / Matte",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "paper": "Matte",
+              "size": "30\u0022 x 180\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 10800,
+                "width": 9075
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              102987,
+              102988,
+              102989,
+              102990,
+              102991,
+              102992
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 849
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 139
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              102987,
+              102988,
+              102989,
+              102990,
+              102991,
+              102992
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1499
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              102987,
+              102988,
+              102989,
+              102990,
+              102991,
+              102992
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1629
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 659
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              102987,
+              102988,
+              102989,
+              102990,
+              102991,
+              102992
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1349
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 149
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 849
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 139
+          },
+          "variant_count": 6
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1499
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "variant_count": 6
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1629
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 659
+          },
+          "variant_count": 6
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1349
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 149
+          },
+          "variant_count": 6
+        }
+      ]
+    },
+    {
+      "provider": {
         "id": 217,
         "title": "Fulfill Engine"
       },
@@ -604,282 +880,6 @@
             "cost": 1999
           },
           "variant_count": 2
-        }
-      ]
-    },
-    {
-      "provider": {
-        "id": 99,
-        "title": "Printify Choice"
-      },
-      "variants": {
-        "id": 99,
-        "title": "Printify Choice",
-        "variants": [
-          {
-            "id": 102987,
-            "title": "30\u0022 x 36\u0022 / Glossy",
-            "cost": null,
-            "price": null,
-            "prices": [],
-            "options": {
-              "size": "30\u0022 x 36\u0022",
-              "paper": "Glossy"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "digital-printing",
-                "height": 10800,
-                "width": 9075
-              }
-            ]
-          },
-          {
-            "id": 102988,
-            "title": "30\u0022 x 36\u0022 / Matte",
-            "cost": null,
-            "price": null,
-            "prices": [],
-            "options": {
-              "size": "30\u0022 x 36\u0022",
-              "paper": "Matte"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "digital-printing",
-                "height": 10800,
-                "width": 9075
-              }
-            ]
-          },
-          {
-            "id": 102989,
-            "title": "30\u0022 x 72\u0022 / Glossy",
-            "cost": null,
-            "price": null,
-            "prices": [],
-            "options": {
-              "size": "30\u0022 x 72\u0022",
-              "paper": "Glossy"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "digital-printing",
-                "height": 10800,
-                "width": 9075
-              }
-            ]
-          },
-          {
-            "id": 102990,
-            "title": "30\u0022 x 72\u0022 / Matte",
-            "cost": null,
-            "price": null,
-            "prices": [],
-            "options": {
-              "size": "30\u0022 x 72\u0022",
-              "paper": "Matte"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "digital-printing",
-                "height": 10800,
-                "width": 9075
-              }
-            ]
-          },
-          {
-            "id": 102991,
-            "title": "30\u0022 x 180\u0022 / Glossy",
-            "cost": null,
-            "price": null,
-            "prices": [],
-            "options": {
-              "size": "30\u0022 x 180\u0022",
-              "paper": "Glossy"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "digital-printing",
-                "height": 10800,
-                "width": 9075
-              }
-            ]
-          },
-          {
-            "id": 102992,
-            "title": "30\u0022 x 180\u0022 / Matte",
-            "cost": null,
-            "price": null,
-            "prices": [],
-            "options": {
-              "paper": "Matte",
-              "size": "30\u0022 x 180\u0022"
-            },
-            "placeholders": [
-              {
-                "position": "front",
-                "decoration_method": "digital-printing",
-                "height": 10800,
-                "width": 9075
-              }
-            ]
-          }
-        ]
-      },
-      "shipping": {
-        "handling_time": {
-          "value": 10,
-          "unit": "day"
-        },
-        "profiles": [
-          {
-            "variant_ids": [
-              102987,
-              102988,
-              102989,
-              102990,
-              102991,
-              102992
-            ],
-            "first_item": {
-              "currency": "USD",
-              "cost": 849
-            },
-            "additional_items": {
-              "currency": "USD",
-              "cost": 139
-            },
-            "countries": [
-              "US"
-            ]
-          },
-          {
-            "variant_ids": [
-              102987,
-              102988,
-              102989,
-              102990,
-              102991,
-              102992
-            ],
-            "first_item": {
-              "currency": "USD",
-              "cost": 1499
-            },
-            "additional_items": {
-              "currency": "USD",
-              "cost": 499
-            },
-            "countries": [
-              "CA"
-            ]
-          },
-          {
-            "variant_ids": [
-              102987,
-              102988,
-              102989,
-              102990,
-              102991,
-              102992
-            ],
-            "first_item": {
-              "currency": "USD",
-              "cost": 1629
-            },
-            "additional_items": {
-              "currency": "USD",
-              "cost": 659
-            },
-            "countries": [
-              "REST_OF_THE_WORLD"
-            ]
-          },
-          {
-            "variant_ids": [
-              102987,
-              102988,
-              102989,
-              102990,
-              102991,
-              102992
-            ],
-            "first_item": {
-              "currency": "USD",
-              "cost": 1349
-            },
-            "additional_items": {
-              "currency": "USD",
-              "cost": 149
-            },
-            "countries": [
-              "US"
-            ]
-          }
-        ]
-      },
-      "cost_per_region": [
-        {
-          "countries": [
-            "US"
-          ],
-          "first_item": {
-            "currency": "USD",
-            "cost": 849
-          },
-          "additional_items": {
-            "currency": "USD",
-            "cost": 139
-          },
-          "variant_count": 6
-        },
-        {
-          "countries": [
-            "CA"
-          ],
-          "first_item": {
-            "currency": "USD",
-            "cost": 1499
-          },
-          "additional_items": {
-            "currency": "USD",
-            "cost": 499
-          },
-          "variant_count": 6
-        },
-        {
-          "countries": [
-            "REST_OF_THE_WORLD"
-          ],
-          "first_item": {
-            "currency": "USD",
-            "cost": 1629
-          },
-          "additional_items": {
-            "currency": "USD",
-            "cost": 659
-          },
-          "variant_count": 6
-        },
-        {
-          "countries": [
-            "US"
-          ],
-          "first_item": {
-            "currency": "USD",
-            "cost": 1349
-          },
-          "additional_items": {
-            "currency": "USD",
-            "cost": 149
-          },
-          "variant_count": 6
         }
       ]
     },
