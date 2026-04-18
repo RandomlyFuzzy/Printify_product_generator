@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
@@ -34,12 +35,15 @@ public class MockupGenerator
     private readonly OllamaClient    _ollama;
     private readonly int             _shopId;
     private readonly string          _visionModel;
+    private readonly string          _dataBasePath;
 
     // Paths derived from dataBasePath
     private readonly string _lookupFilePath;     // staging/lookup.json
     private readonly string _blueprintCachePath; // staged/blueprints/blueprints.json
     private readonly string _draftsPath;         // staging/drafts/
+    private readonly string _logoImagePath;      // staging/Logo/Logo.png
     private readonly string _blueprintDetailsPath; // Cached/blueprint_details/
+    private readonly PrintifyBlueprintQueryApi _blueprintQueryApi;
 
     // ── Constructor ────────────────────────────────────────────────
 
@@ -63,11 +67,14 @@ public class MockupGenerator
         _ollama       = ollama;
         _shopId       = shopId;
         _visionModel  = visionModel;
+        _dataBasePath = dataBasePath;
 
         _lookupFilePath     = Path.Combine(dataBasePath, "staging",  "lookup.json");
         _blueprintCachePath = Path.Combine(dataBasePath, "staged",   "blueprints", "blueprints.json");
         _draftsPath         = Path.Combine(dataBasePath, "staging",  "drafts");
+        _logoImagePath      = Path.Combine(dataBasePath, "staging",  "Logo", "Logo.png");
         _blueprintDetailsPath = Path.Combine(dataBasePath, "Cached", "blueprint_details");
+        _blueprintQueryApi  = PrintifyBlueprintDatabase.CreateQueryApi(_blueprintDetailsPath);
     }
 
     // ── Public API ─────────────────────────────────────────────────
@@ -82,11 +89,44 @@ public class MockupGenerator
         List<MockupResult> mockupresults = new();
         try
         {
+            var jobId = TryExtractJobId(imagePath);
+
             // 1 ── Resolve / upload image
             var lookup = await ResolveOrUploadImageAsync(imagePath);
+            var p1path = Path.GetDirectoryName(imagePath)+"/phase_1.json";
+            var imageInformation = JsonSerializer.Deserialize<Prompt>(File.ReadAllText(p1path), JsonOpts)
+                ?? throw new InvalidDataException($"Prompt metadata file '{p1path}' could not be deserialized.");
+            var logoLookup = await ResolveOrUploadImageAsync(_logoImagePath);
 
             // 2 ── Load / download blueprint catalogue
             var blueprints = await GetOrDownloadBlueprintsAsync();
+
+            float max_tolerance = 0.20f; // 20% aspect ratio tolerance for blueprint suitability
+
+            //filter blueprints by those that can fit within a ceratin aspect ratio.
+            blueprints = blueprints.Where(b => 
+            {
+                var entry = BuildCatalogueEntry(b);
+                if (entry.Locations is null || entry.Locations.Count == 0)
+                    return false;
+
+                // Check if any print location can accommodate the image's aspect ratio within a reasonable tolerance
+                var imageAspectRatio = (double)imageInformation.width / imageInformation.height;
+                foreach (var location in entry.Locations)
+                {
+                    var size = location.Value;
+                    if (size.SizeX == 0 || size.SizeY == 0)
+                        continue;
+
+                    var locationAspectRatio = (double)size.SizeX / size.SizeY;
+                    if (Math.Abs(locationAspectRatio - imageAspectRatio) / imageAspectRatio <= max_tolerance) // 20% tolerance
+                        return true;
+                }
+
+                return false;
+            }).ToList();
+
+
 
             // 3 ── Ask LLM which blueprint suits this image best
             var suggestions = await AskLlmForBlueprintAsync(imagePath, blueprints);
@@ -101,33 +141,73 @@ public class MockupGenerator
                     continue;
                 }
 
-                
-
                 var provider = providers[0];
                 var variantResponse = await _printify.GetBlueprintVariantsAsync((suggestion.BlueprintId), provider.Id);
-                var variants = variantResponse.Variants;
-                // if (variants.Count == 0)
-                // {
-                //     continue;
-                // }
-                // //filter variants by price so i can keep cost to a minimum
-                // //find the mid price of each sku and keep all variants that are below a certain threshold (e.g. $15)
-                // var affordableVariants = new List<Variant>();
-                // foreach(var variant in variants)                {
-                //     var prices = variant.Prices;
-                //     if(prices == null || prices.Count == 0)                    {
-                //         continue;
-                //     }
-                //     var midPrice = prices.Average(p => p.Price);
-                //     if(midPrice <= 1500) // $15.00 in cents                    {
-                //         affordableVariants.Add(variant);
-                // }
-                // if(affordableVariants.Count == 0)                {
-                //     Console.WriteLine($"[MockupGenerator] No affordable variants found for blueprint {suggestion.BlueprintId} with provider {provider.Id}. Skipping.");
-                //     continue;
-                // }
-                // variants = affordableVariants;
+                var variants = variantResponse.Variants
+                    .Where(variant => variant.Placeholders is { Count: > 0 })
+                    .ToList();
+                if (variants.Count == 0)
+                {
+                    Console.WriteLine($"[MockupGenerator] No printable variants found for blueprint {suggestion.BlueprintId} with provider {provider.Id}. Skipping.");
+                    continue;
+                }
 
+                variants = FilterVariantsByPreferredColors(suggestion.BlueprintId, provider.Id, variants);
+                if (variants.Count == 0)
+                {
+                    Console.WriteLine($"[MockupGenerator] No black or white color variants found for blueprint {suggestion.BlueprintId} with provider {provider.Id}. Skipping.");
+                    continue;
+                }
+
+                float ratio = 0.05f;
+                string bptitle = suggestion.BlueprintTitle.ToLower();
+
+                if(bptitle.Contains("phone case"))
+                {
+                    ratio = 0.15f; // Phone cases often have very different aspect ratios, so be more lenient
+                }else if(bptitle.Contains("poster") || bptitle.Contains("canvas"))
+                {
+                    ratio = 0.05f; // Posters and canvases can also have a wider range of aspect ratios
+                }
+                else if(bptitle.Contains("mug"))
+                {
+                    ratio = 0.10f; // Mugs can be a bit tricky with aspect ratios, so allow some flexibility
+                }
+                else if(bptitle.Contains("t-shirt") || bptitle.Contains("hoodie") || bptitle.Contains("sweatshirt") || bptitle.Contains("tank top") || bptitle.Contains("tee"))
+                {
+                    ratio = 1f; // Apparel generally should be close to the image aspect ratio to look good
+                }else if(bptitle.Contains("hat") || bptitle.Contains("cap"))
+                {
+                    ratio = 0.20f; // Hats can vary widely in print area aspect ratio, so be more lenient
+                }else if(bptitle.Contains("tote bag") || bptitle.Contains("backpack"))
+                {
+                    ratio = 0.10f; // Bags can also have a wider range of aspect ratios
+                }else if(bptitle.Contains("square"))
+                {
+                    ratio = 0.01f; 
+                }
+                
+
+
+                //i want to only keep varients that aspect ratio is within 5% of the aspect ratio of the image to ensure that the design fits well on the product and doesn't get stretched or squished in an unappealing way, to do this i can calculate the aspect ratio of the image and each variant's print area and filter out those that are too far off from the image's aspect ratio
+                var imageAspectRatio = (double)imageInformation.width / imageInformation.height;
+                variants = variants.Where(variant => 
+                {
+                    var primaryPlaceholder = variant.Placeholders?.FirstOrDefault();
+                    if (primaryPlaceholder is null || primaryPlaceholder.Width == 0 || primaryPlaceholder.Height == 0)
+                    {
+                        return false;
+                    }
+
+                    var variantAspectRatio = (double)primaryPlaceholder.Width / primaryPlaceholder.Height;
+                    return Math.Abs(variantAspectRatio - imageAspectRatio) / imageAspectRatio <= ratio;
+                }).ToList();
+
+                if(variants.Count == 0)
+                {
+                    Console.WriteLine($"[MockupGenerator] No variants with suitable aspect ratio found for blueprint {suggestion.BlueprintId}. Skipping.");
+                    continue;
+                }
 
                 if(variants.Count > 100)
                 {
@@ -135,13 +215,14 @@ public class MockupGenerator
                     variants = variants.Take(100).ToList();
                 }
                 // 5 ── Create the draft product on Printify (not published)
-                var product = await CreateDraftProductAsync(lookup, suggestion, provider, variants);
+                var product = await CreateDraftProductAsync(lookup, logoLookup, suggestion, provider, variants);
 
                 
                 // 6 ── Persist draft record for later inspection
                 var record = new MockupDraftRecord
                 {
                     ProductId               = product.Id,
+                    JobId                   = jobId ?? string.Empty,
                     LocalImagePath          = imagePath,
                     PrintifyImageId         = lookup.PrintifyImageId,
                     PrintifyImagePreviewUrl = lookup.PreviewUrl,
@@ -320,7 +401,7 @@ public class MockupGenerator
             Available blueprints name and ids are as following:
             {{catalogueJson}}
 
-            being as profesional and concise as possible, you pick the top 3 best fitting blueprints for this image and explain in one sentence why you picked each one.
+            being as profesional and concise as possible, you pick the top 5 best fitting blueprints for this image and explain in one sentence why you picked each one.
             Now that you know what you want to put the image on, as you very well know i need you to tell me in a very concise manner only using the following JSON format:
             [
             {
@@ -461,57 +542,236 @@ public class MockupGenerator
         return entry;
     }
 
+    private List<Variant> FilterVariantsByPreferredColors(int blueprintId, int providerId, List<Variant> variants)
+    {
+        var optionsByVariantId = _blueprintQueryApi
+            .GetSubvariants(blueprintId, providerId)
+            .GroupBy(subvariant => subvariant.VariantId)
+            .ToDictionary(group => group.Key, group => group.First().Options);
+
+        var variantsWithColor = variants
+            .Select(variant => new
+            {
+                Variant = variant,
+                Color = ResolveVariantColor(variant, optionsByVariantId)
+            })
+            .ToList();
+
+        if (!variantsWithColor.Any(item => !string.IsNullOrWhiteSpace(item.Color)))
+        {
+            return variants;
+        }
+
+        var filteredVariants = variantsWithColor
+            .Where(item => IsPreferredVariantColor(item.Color))
+            .Select(item => item.Variant)
+            .ToList();
+
+        if (filteredVariants.Count > 0 && filteredVariants.Count != variants.Count)
+        {
+            Console.WriteLine($"[MockupGenerator] Reduced variants to {filteredVariants.Count} black/white color options for blueprint {blueprintId} with provider {providerId}.");
+        }
+
+        return filteredVariants;
+    }
+
+    private static string? ResolveVariantColor(
+        Variant variant,
+        IReadOnlyDictionary<int, IReadOnlyDictionary<string, string>> optionsByVariantId)
+    {
+        if (optionsByVariantId.TryGetValue(variant.Id, out var optionMap))
+        {
+            var cachedColor = TryGetVariantColor(optionMap);
+            if (!string.IsNullOrWhiteSpace(cachedColor))
+            {
+                return cachedColor;
+            }
+        }
+
+        return TryGetVariantColor(NormalizeVariantOptions(variant.Options));
+    }
+
+    private static IReadOnlyDictionary<string, string> NormalizeVariantOptions(Dictionary<string, object>? options)
+    {
+        if (options == null || options.Count == 0)
+        {
+            return new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+        }
+
+        var normalized = new Dictionary<string, string>(options.Count, StringComparer.OrdinalIgnoreCase);
+
+        foreach (var option in options)
+        {
+            normalized[option.Key] = option.Value switch
+            {
+                null => string.Empty,
+                JsonElement element when element.ValueKind == JsonValueKind.Null || element.ValueKind == JsonValueKind.Undefined => string.Empty,
+                JsonElement element when element.ValueKind == JsonValueKind.String => element.GetString() ?? string.Empty,
+                JsonElement element => element.ToString(),
+                _ => option.Value.ToString() ?? string.Empty
+            };
+        }
+
+        return normalized;
+    }
+
+    private static string? TryGetVariantColor(IReadOnlyDictionary<string, string> options)
+    {
+        if (options.TryGetValue("color", out var color) && !string.IsNullOrWhiteSpace(color))
+        {
+            return color.Trim();
+        }
+
+        if (options.TryGetValue("colour", out var colour) && !string.IsNullOrWhiteSpace(colour))
+        {
+            return colour.Trim();
+        }
+
+        return null;
+    }
+
+    private static bool IsPreferredVariantColor(string? color)
+    {
+        if (string.IsNullOrWhiteSpace(color))
+        {
+            return false;
+        }
+
+        return color.Contains("white", StringComparison.OrdinalIgnoreCase)
+            || color.Contains("black", StringComparison.OrdinalIgnoreCase);
+    }
+
+    private static string BuildPlaceholderSignature(IReadOnlyList<VariantPlaceholder> placeholders)
+    {
+        return string.Join(
+            "||",
+            placeholders
+                .OrderBy(placeholder => placeholder.Position, StringComparer.OrdinalIgnoreCase)
+                .ThenBy(placeholder => placeholder.DecorationMethod, StringComparer.OrdinalIgnoreCase)
+                .ThenBy(placeholder => placeholder.Width)
+                .ThenBy(placeholder => placeholder.Height)
+                .Select(placeholder =>
+                    $"{placeholder.Position.Trim()}|{(placeholder.DecorationMethod ?? string.Empty).Trim()}|{placeholder.Width.ToString(CultureInfo.InvariantCulture)}|{placeholder.Height.ToString(CultureInfo.InvariantCulture)}"));
+    }
+
+    private static IReadOnlyList<VariantPlaceholder> SelectDraftPlaceholders(IReadOnlyList<VariantPlaceholder> placeholders)
+    {
+        if (placeholders.Count == 0)
+        {
+            return Array.Empty<VariantPlaceholder>();
+        }
+
+        var selectedPlaceholders = new List<VariantPlaceholder>
+        {
+            placeholders[0]
+        };
+
+        var neckPlaceholder = placeholders.FirstOrDefault(placeholder =>
+            placeholder.Position.Contains("neck", StringComparison.OrdinalIgnoreCase));
+
+        if (neckPlaceholder is not null &&
+            !EqualityComparer<VariantPlaceholder>.Default.Equals(neckPlaceholder, selectedPlaceholders[0]))
+        {
+            selectedPlaceholders.Add(neckPlaceholder);
+        }
+
+        return selectedPlaceholders;
+    }
+
+    private static PrintAreaImage CreateCenteredPrintAreaImage(string imageId)
+    {
+        return new PrintAreaImage
+        {
+            Id     = imageId,
+            X      = 0.5,
+            Y      = 0.5,
+            Scale  = 1.0,
+            Angle  = 0.0,
+            Width  = 1.0,
+            Height = 1.0
+        };
+    }
+
+    private static string ResolveImageId(ImageLookupEntry image, string imageRole)
+    {
+        if (string.IsNullOrWhiteSpace(image.PrintifyImageId))
+        {
+            throw new InvalidOperationException($"{imageRole} image did not resolve to a Printify image ID.");
+        }
+
+        return image.PrintifyImageId;
+    }
+
+    private List<PrintArea> BuildDraftPrintAreas(
+        IReadOnlyList<Variant> variants,
+        string mainImageId,
+        string logoImageId)
+    {
+        return variants
+            .GroupBy(
+                variant => BuildPlaceholderSignature(variant.Placeholders ?? new List<VariantPlaceholder>()),
+                StringComparer.Ordinal)
+            .Select(group =>
+            {
+                var exemplar = group.First();
+                var selectedPlaceholders = SelectDraftPlaceholders(exemplar.Placeholders ?? new List<VariantPlaceholder>());
+                var mainPlaceholder = selectedPlaceholders[0];
+
+                return new PrintArea
+                {
+                    VariantIds = group
+                        .Select(variant => variant.Id)
+                        .Distinct()
+                        .ToList(),
+                    Placeholders = selectedPlaceholders
+                        .Select(placeholder => new PrintAreaPlaceholder
+                        {
+                            Position = placeholder.Position,
+                            DecorationMethod = string.IsNullOrWhiteSpace(placeholder.DecorationMethod)
+                                ? null
+                                : placeholder.DecorationMethod,
+                            Images = new List<PrintAreaImage>
+                            {
+                                CreateCenteredPrintAreaImage(EqualityComparer<VariantPlaceholder>.Default.Equals(placeholder, mainPlaceholder)
+                                    ? mainImageId
+                                    : logoImageId)
+                            }
+                        })
+                        .ToList()
+                };
+            })
+            .ToList();
+    }
+
     // ── Step 4+5 – Draft product creation ─────────────────────────
 
     private async Task<Product> CreateDraftProductAsync(
         ImageLookupEntry     image,
+        ImageLookupEntry     logoImage,
         BlueprintSuggestion  suggestion,
         BlueprintPrintProvider provider,
         List<Variant>        variants)
     {
-        var variantIds = variants.Select(v => v.Id).ToList();
-
-        // Place the design on the "front" position of every variant
-        var printAreaImage = new PrintAreaImage
-        {
-            Id    = image.PrintifyImageId,
-            X     = 0.5,
-            Y     = 0.5,
-            Scale = 1.0,
-            Angle = 0.0,
-            Width  = 1.0,
-            Height = 1.0
-        };
-
-        var printArea = new PrintArea
-        {
-            VariantIds   = variantIds,
-            Placeholders = new List<PrintAreaPlaceholder>
-            {
-                new()
-                {
-                    Position = "front",
-                    Images   = new List<PrintAreaImage> { printAreaImage }
-                }
-            }
-        };
+        var mainImageId = ResolveImageId(image, "Main");
+        var logoImageId = ResolveImageId(logoImage, "Logo");
+        var printAreas = BuildDraftPrintAreas(variants, mainImageId, logoImageId);
         //get variant price to produce 
 
         var productVariants = variants.Select(v => new CreateProductVariant
         {
             Id        = v.Id,
-            Price     = 2000,  // $20.00 (Printify stores prices in cents)
+            Price     = (int)(new Currency(CurrencyCode.GBP, 20.00m).ConvertTo(CurrencyCode.USD).GetAwaiter().GetResult().Amount*100),  // $20.00 (Printify stores prices in cents)
             IsEnabled = true
         }).ToList();
-
+        var product_id = $"{suggestion.BlueprintId}-{Path.GetFileNameWithoutExtension(image.LocalPath)}";
         var request = new CreateProductRequest
         {
-            Title           = $"Design – {suggestion.BlueprintTitle}",
-            Description     = $"AI-generated design. Blueprint: {suggestion.BlueprintTitle}. {suggestion.Reason}",
+            Title           = $"Design – {suggestion.BlueprintTitle} - {Path.GetFileNameWithoutExtension(image.LocalPath)}",
+            Description     = $"<br/> <br/> <br/> PRODUCTID: {product_id}",
             BlueprintId     = suggestion.BlueprintId,
             PrintProviderId = provider.Id,
             Variants        = productVariants,
-            PrintAreas      = new List<PrintArea> { printArea }
+            PrintAreas      = printAreas
         };
 
         Console.WriteLine($"[MockupGenerator] Creating draft product (blueprint {suggestion.BlueprintId}, provider {provider.Id}, {productVariants.Count} variants)...");
@@ -525,6 +785,34 @@ public class MockupGenerator
         Directory.CreateDirectory(_draftsPath);
         string filePath = Path.Combine(_draftsPath, $"{record.ProductId}.json");
         await File.WriteAllTextAsync(filePath, JsonSerializer.Serialize(record, JsonOpts));
+
+        if (!string.IsNullOrWhiteSpace(record.JobId))
+            UploadedJobProductsStore.TrackUpload(_dataBasePath, record.JobId, record.ProductId);
+
         Console.WriteLine($"[MockupGenerator] Draft record saved → {filePath}");
+    }
+
+    private static string? TryExtractJobId(string imagePath)
+    {
+        var normalizedImagePath = Path.GetFullPath(imagePath);
+        var directoryPath = Path.GetDirectoryName(normalizedImagePath);
+        if (string.IsNullOrWhiteSpace(directoryPath))
+            return null;
+
+        var folderName = Path.GetFileName(directoryPath);
+        if (string.IsNullOrWhiteSpace(folderName))
+            return null;
+
+        var fileNameWithoutExtension = Path.GetFileNameWithoutExtension(normalizedImagePath);
+        if (string.Equals(folderName, fileNameWithoutExtension, StringComparison.OrdinalIgnoreCase))
+            return folderName;
+
+        if (File.Exists(Path.Combine(directoryPath, "phase_1.json"))
+            || File.Exists(Path.Combine(directoryPath, "phase_3.json")))
+        {
+            return folderName;
+        }
+
+        return null;
     }
 }

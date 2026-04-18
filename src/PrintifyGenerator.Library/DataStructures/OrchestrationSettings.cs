@@ -5,7 +5,7 @@ public sealed class OrchestrationSettings
 {
     public string PromptModel { get; set; } = "llama3.2:1b";
     public string SuitabilityModel { get; set; } = "gemma4:e2b";
-    public string MockupVisionModel { get; set; } = "gemma4:e4b";
+    public string MockupVisionModel { get; set; } = "gemma4:latest";
     public float MinimumPublishScore { get; set; } = 6.0f;
     public List<OrchestrationNode> Ollama { get; set; } = new List<OrchestrationNode>();
     public List<OrchestrationNode> ComfyUi { get; set; } = new List<OrchestrationNode>();

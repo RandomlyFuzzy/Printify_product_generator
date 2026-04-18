@@ -15,7 +15,8 @@ if (File.Exists("./main.env"))
         }
     }
 }
-
+Console.WriteLine("Starting Printify Mockup Generator...\n");
+Console.WriteLine($"Loading API token from ./main.env... {token}");
 if (string.IsNullOrWhiteSpace(token))
 {
     Console.Error.WriteLine("[ERROR] TOKEN not found in ./main.env");
@@ -30,38 +31,38 @@ var publishingOverrides = PublishingOverrideStore.Load(dataBasePath);
 
 PrintifyClient printify = new PrintifyClient(token);
 
-OllamaClient? ollama = null;
-OrchestrationNode? selectedOllamaNode = null;
-foreach (var candidate in orchestrationSettings.Ollama.Where(node => node.Enabled && !string.IsNullOrWhiteSpace(node.BaseUrl)))
-{
-    try
-    {
-        var candidateClient = new OllamaClient(candidate.BaseUrl);
-        await candidateClient.CheckStatusAsync();
-        var installedModels = await candidateClient.GetInstalledModelNamesAsync();
-        if (!installedModels.Contains(orchestrationSettings.MockupVisionModel))
-        {
-            candidateClient.Dispose();
-            continue;
-        }
+OllamaClient? ollama = new OllamaClient("http://192.168.0.131:11434");
+// OrchestrationNode? selectedOllamaNode = null;
+// foreach (var candidate in orchestrationSettings.Ollama.Where(node => node.Enabled && !string.IsNullOrWhiteSpace(node.BaseUrl)))
+// {
+//     try
+//     {
+//         var candidateClient = new OllamaClient(candidate.BaseUrl);
+//         await candidateClient.CheckStatusAsync();
+//         var installedModels = await candidateClient.GetInstalledModelNamesAsync();
+//         if (!installedModels.Contains(orchestrationSettings.MockupVisionModel))
+//         {
+//             candidateClient.Dispose();
+//             continue;
+//         }
 
-        ollama = candidateClient;
-        selectedOllamaNode = candidate;
-        break;
-    }
-    catch
-    {
-        // try the next configured node
-    }
-}
+//         ollama = candidateClient;
+//         selectedOllamaNode = candidate;
+//         break;
+//     }
+//     catch
+//     {
+//         // try the next configured node
+//     }
+// }
 
-if (ollama is null || selectedOllamaNode is null)
-{
-    Console.Error.WriteLine($"[ERROR] No reachable Ollama nodes were found in {orchestrationSettingsPath}");
-    return;
-}
+// if (ollama is null || selectedOllamaNode is null)
+// {
+//     Console.Error.WriteLine($"[ERROR] No reachable Ollama nodes were found in {orchestrationSettingsPath}");
+//     return;
+// }
 
-Console.WriteLine($"Using Ollama node: {selectedOllamaNode.Name} ({selectedOllamaNode.BaseUrl})");
+// Console.WriteLine($"Using Ollama node: {selectedOllamaNode.Name} ({selectedOllamaNode.BaseUrl})");
 
 // ── Auto-resolve shop ID ───────────────────────────────────────────────────────
 Console.WriteLine("Fetching shop list from Printify...");
@@ -71,8 +72,12 @@ if (shops.Count == 0)
     Console.Error.WriteLine("[ERROR] No shops found on this Printify account.");
     return;
 }
-int shopId = shops[0].Id;
-Console.WriteLine($"Using shop: \"{shops[0].Title}\" (ID: {shopId})");
+foreach (var shop in shops)
+    Console.WriteLine($"  - {shop.Title} (ID: {shop.Id})");
+
+
+int shopId = shops.Where(a=>a.Title=="Staging").FirstOrDefault()?.Id ?? 0;
+Console.WriteLine($"Using shop: \"{shops.FirstOrDefault(a=>a.Id==shopId)?.Title}\" (ID: {shopId})");
 
 // ── MockupGenerator (moondream:latest, drafts only – no publishing) ────────────
 var generator = new MockupGenerator(

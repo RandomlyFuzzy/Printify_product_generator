@@ -39,6 +39,7 @@ public class BlueprintSuggestion
 public class MockupDraftRecord
 {
     [JsonPropertyName("product_id")]                public string       ProductId               { get; set; } = "";
+    [JsonPropertyName("job_id")]                    public string       JobId                   { get; set; } = "";
     [JsonPropertyName("local_image_path")]          public string       LocalImagePath          { get; set; } = "";
     [JsonPropertyName("printify_image_id")]         public string       PrintifyImageId         { get; set; } = "";
     [JsonPropertyName("printify_image_preview_url")]public string       PrintifyImagePreviewUrl { get; set; } = "";

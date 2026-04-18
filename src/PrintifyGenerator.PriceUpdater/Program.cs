@@ -25,8 +25,8 @@ var client = new PrintifyClient(settings.Token);
 Shop targetShop;
 try
 {
-    var shops = await client.GetShopsAsync();
-    targetShop = settings.ResolveShop(shops);
+    List<Shop> shops = await client.GetShopsAsync();
+    targetShop = shops.FirstOrDefault(a => a.Title == "Production");//settings.ResolveShop(shops);
 }
 catch (Exception ex)
 {
