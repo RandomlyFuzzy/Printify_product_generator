@@ -214,8 +214,20 @@ public class MockupGenerator
                     Console.WriteLine($"[MockupGenerator] Warning: blueprint {suggestion.BlueprintId} has {variants.Count} variants; only processing the first 100.");
                     variants = variants.Take(100).ToList();
                 }
+
+                var listingContent = ListingContentBuilder.Build(new ListingContentContext
+                {
+                    JobId = jobId ?? string.Empty,
+                    ImagePath = imagePath,
+                    BlueprintId = suggestion.BlueprintId,
+                    BlueprintTitle = suggestion.BlueprintTitle,
+                    PrintProviderId = provider.Id,
+                    PrintProviderTitle = provider.Title,
+                    LlmReason = suggestion.Reason
+                });
+
                 // 5 ── Create the draft product on Printify (not published)
-                var product = await CreateDraftProductAsync(lookup, logoLookup, suggestion, provider, variants);
+                var product = await CreateDraftProductAsync(lookup, logoLookup, suggestion, provider, variants, listingContent);
 
                 
                 // 6 ── Persist draft record for later inspection
@@ -223,6 +235,10 @@ public class MockupGenerator
                 {
                     ProductId               = product.Id,
                     JobId                   = jobId ?? string.Empty,
+                    LookupKey               = listingContent.Lookup.LookupKey,
+                    GroupKey                = listingContent.Lookup.GroupKey,
+                    AssetKey                = listingContent.Lookup.AssetKey,
+                    ReferenceCode           = listingContent.Lookup.ReferenceCode,
                     LocalImagePath          = imagePath,
                     PrintifyImageId         = lookup.PrintifyImageId,
                     PrintifyImagePreviewUrl = lookup.PreviewUrl,
@@ -231,6 +247,8 @@ public class MockupGenerator
                     LlmReason               = suggestion.Reason,
                     PrintProviderId         = provider.Id,
                     PrintProviderTitle      = provider.Title,
+                    LookupTags              = new List<string>(listingContent.Lookup.Tags),
+                    ChannelContent          = new Dictionary<string, ListingChannelContent>(listingContent.Channels, StringComparer.OrdinalIgnoreCase),
                     CreatedAt               = DateTime.UtcNow.ToString("O"),
                     MockupUrls              = product.Images?.Select(i => i.Src).ToList() ?? new List<string>()
                 };
@@ -750,11 +768,13 @@ public class MockupGenerator
         ImageLookupEntry     logoImage,
         BlueprintSuggestion  suggestion,
         BlueprintPrintProvider provider,
-        List<Variant>        variants)
+        List<Variant>        variants,
+        ListingContentBundle listingContent)
     {
         var mainImageId = ResolveImageId(image, "Main");
         var logoImageId = ResolveImageId(logoImage, "Logo");
         var printAreas = BuildDraftPrintAreas(variants, mainImageId, logoImageId);
+        var printifyContent = ListingContentBuilder.ResolveChannel(listingContent, "printify");
         //get variant price to produce 
 
         var productVariants = variants.Select(v => new CreateProductVariant
@@ -763,13 +783,13 @@ public class MockupGenerator
             Price     = (int)(new Currency(CurrencyCode.GBP, 20.00m).ConvertTo(CurrencyCode.USD).GetAwaiter().GetResult().Amount*100),  // $20.00 (Printify stores prices in cents)
             IsEnabled = true
         }).ToList();
-        var product_id = $"{suggestion.BlueprintId}-{Path.GetFileNameWithoutExtension(image.LocalPath)}";
         var request = new CreateProductRequest
         {
-            Title           = $"Design – {suggestion.BlueprintTitle} - {Path.GetFileNameWithoutExtension(image.LocalPath)}",
-            Description     = $"<br/> <br/> <br/> PRODUCTID: {product_id}",
+            Title           = printifyContent.Title,
+            Description     = printifyContent.Description,
             BlueprintId     = suggestion.BlueprintId,
             PrintProviderId = provider.Id,
+            Tags            = printifyContent.Tags,
             Variants        = productVariants,
             PrintAreas      = printAreas
         };

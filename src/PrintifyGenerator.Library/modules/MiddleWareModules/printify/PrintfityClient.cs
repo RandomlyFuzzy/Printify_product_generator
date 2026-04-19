@@ -99,6 +99,58 @@ public class PrintifyClient
         return await GetAsync<Product>($"/shops/{shopId}/products/{productId}.json");
     }
 
+    public async Task<ProductTransferResult> TransferProductAsync(
+        int sourceShopId,
+        string sourceProductId,
+        int targetShopId,
+        bool deleteSourceProduct = false,
+        bool publishTargetProduct = false,
+        PublishProductRequest? publishRequest = null)
+    {
+        if (sourceShopId <= 0)
+            throw new ArgumentOutOfRangeException(nameof(sourceShopId), "Source shop ID must be greater than zero.");
+        if (targetShopId <= 0)
+            throw new ArgumentOutOfRangeException(nameof(targetShopId), "Target shop ID must be greater than zero.");
+        if (string.IsNullOrWhiteSpace(sourceProductId))
+            throw new ArgumentException("Source product ID is required.", nameof(sourceProductId));
+
+        var sourceProduct = await GetProductAsync(sourceShopId, sourceProductId);
+        var createRequest = await BuildCreateProductRequestAsync(sourceProduct);
+        var createdProduct = await CreateProductAsync(targetShopId, createRequest);
+        var targetProductPublished = false;
+
+        if (publishTargetProduct)
+        {
+            await PublishProductAsync(targetShopId, createdProduct.Id, publishRequest ?? new PublishProductRequest());
+            targetProductPublished = true;
+        }
+
+        if (deleteSourceProduct)
+        {
+            try
+            {
+                await DeleteProductAsync(sourceShopId, sourceProduct.Id);
+            }
+            catch (Exception ex)
+            {
+                throw new InvalidOperationException(
+                    $"Product {sourceProduct.Id} was cloned to shop {targetShopId} as {createdProduct.Id}, but deleting the source product from shop {sourceShopId} failed.",
+                    ex);
+            }
+        }
+
+        return new ProductTransferResult
+        {
+            SourceShopId = sourceShopId,
+            SourceProductId = sourceProduct.Id,
+            TargetShopId = targetShopId,
+            TargetProductId = createdProduct.Id,
+            SourceProductDeleted = deleteSourceProduct,
+            TargetProductPublished = targetProductPublished,
+            TargetProduct = createdProduct
+        };
+    }
+
     public Task<ProductVariantPriceBreakdown> GetProductVariantPriceBreakdownAsync(
         int shopId,
         string productId,
@@ -384,6 +436,248 @@ public class PrintifyClient
         await EnsureSuccessAsync(response);
     }
 
+    private async Task<CreateProductRequest> BuildCreateProductRequestAsync(Product product)
+    {
+        if (product.PrintAreas is null || product.PrintAreas.Count == 0)
+        {
+            throw new InvalidOperationException(
+                $"Product {product.Id} does not contain any print areas, so it cannot be recreated in another shop.");
+        }
+
+        var uploadCache = new Dictionary<string, UploadedImage>(StringComparer.OrdinalIgnoreCase);
+        var verifiedUploadIds = new HashSet<string>(StringComparer.Ordinal);
+        var printAreas = new List<PrintArea>(product.PrintAreas.Count);
+
+        foreach (var printArea in product.PrintAreas)
+        {
+            printAreas.Add(await ClonePrintAreaAsync(printArea, uploadCache, verifiedUploadIds));
+        }
+
+        var emptyPrintArea = printAreas.FirstOrDefault(area => area.Placeholders.Count == 0);
+
+        if (emptyPrintArea is not null)
+        {
+            var variantIds = string.Join(", ", emptyPrintArea.VariantIds.OrderBy(id => id));
+            throw new InvalidOperationException(
+                $"Product {product.Id} contains a print area for variants [{variantIds}] without any placeholder images, so it cannot be recreated in another shop.");
+        }
+
+        return new CreateProductRequest
+        {
+            Title = product.Title,
+            Description = product.Description,
+            BlueprintId = product.BlueprintId,
+            PrintProviderId = product.PrintProviderId,
+            Variants = product.Variants.Select(CreateCreateProductVariant).ToList(),
+            PrintAreas = printAreas,
+            Tags = product.Tags.ToList(),
+            SafetyInformation = product.SafetyInformation,
+            PrintDetails = ClonePrintDetails(product.PrintDetails)
+        };
+    }
+
+    private static CreateProductVariant CreateCreateProductVariant(ProductVariant variant)
+    {
+        return new CreateProductVariant
+        {
+            Id = variant.Id,
+            Price = variant.Price,
+            IsEnabled = variant.IsEnabled
+        };
+    }
+
+    private async Task<PrintArea> ClonePrintAreaAsync(
+        PrintArea printArea,
+        Dictionary<string, UploadedImage> uploadCache,
+        HashSet<string> verifiedUploadIds)
+    {
+        var placeholders = new List<PrintAreaPlaceholder>();
+
+        foreach (var placeholder in printArea.Placeholders ?? new List<PrintAreaPlaceholder>())
+        {
+            var clonedPlaceholder = await ClonePrintAreaPlaceholderAsync(placeholder, uploadCache, verifiedUploadIds);
+            if (clonedPlaceholder.Images.Count > 0)
+            {
+                placeholders.Add(clonedPlaceholder);
+            }
+        }
+
+        return new PrintArea
+        {
+            VariantIds = printArea.VariantIds.ToList(),
+            Placeholders = placeholders
+        };
+    }
+
+    private async Task<PrintAreaPlaceholder> ClonePrintAreaPlaceholderAsync(
+        PrintAreaPlaceholder placeholder,
+        Dictionary<string, UploadedImage> uploadCache,
+        HashSet<string> verifiedUploadIds)
+    {
+        var images = new List<PrintAreaImage>();
+
+        foreach (var image in placeholder.Images ?? new List<PrintAreaImage>())
+        {
+            if (!HasUsablePrintAreaImage(image))
+            {
+                continue;
+            }
+
+            images.Add(await NormalizePrintAreaImageAsync(image, uploadCache, verifiedUploadIds));
+        }
+
+        return new PrintAreaPlaceholder
+        {
+            Position = placeholder.Position,
+            DecorationMethod = placeholder.DecorationMethod,
+            Images = images
+        };
+    }
+
+    private static bool HasUsablePrintAreaImage(PrintAreaImage image)
+    {
+        return !string.IsNullOrWhiteSpace(image.Id)
+            || !string.IsNullOrWhiteSpace(image.Src);
+    }
+
+    private async Task<PrintAreaImage> NormalizePrintAreaImageAsync(
+        PrintAreaImage image,
+        Dictionary<string, UploadedImage> uploadCache,
+        HashSet<string> verifiedUploadIds)
+    {
+        var normalizedSrc = string.IsNullOrWhiteSpace(image.Src)
+            ? null
+            : image.Src.Trim();
+        var normalizedId = string.IsNullOrWhiteSpace(image.Id)
+            ? null
+            : image.Id.Trim();
+
+        if (!string.IsNullOrWhiteSpace(normalizedId)
+            && await UploadExistsAsync(normalizedId, verifiedUploadIds))
+        {
+            return ClonePrintAreaImage(image, normalizedId, normalizedSrc);
+        }
+
+        if (!string.IsNullOrWhiteSpace(normalizedSrc))
+        {
+            var uploaded = await EnsureUploadedImageAsync(normalizedSrc, image.Name, uploadCache);
+            return ClonePrintAreaImage(image, uploaded.Id, normalizedSrc);
+        }
+
+        throw new InvalidOperationException(
+            "A print area image is missing a valid Printify upload ID and does not expose a source URL that can be re-uploaded for transfer.");
+    }
+
+    private async Task<bool> UploadExistsAsync(string uploadId, HashSet<string> verifiedUploadIds)
+    {
+        if (verifiedUploadIds.Contains(uploadId))
+        {
+            return true;
+        }
+
+        try
+        {
+            await GetUploadAsync(uploadId);
+            verifiedUploadIds.Add(uploadId);
+            return true;
+        }
+        catch (PrintifyApiException ex) when (ex.StatusCode == 404)
+        {
+            return false;
+        }
+    }
+
+    private async Task<UploadedImage> EnsureUploadedImageAsync(
+        string sourceUrl,
+        string? imageName,
+        Dictionary<string, UploadedImage> uploadCache)
+    {
+        if (uploadCache.TryGetValue(sourceUrl, out var cachedUpload))
+        {
+            return cachedUpload;
+        }
+
+        var fileName = ResolveTransferUploadFileName(sourceUrl, imageName);
+        var uploaded = await UploadImageByUrlAsync(fileName, sourceUrl);
+        uploadCache[sourceUrl] = uploaded;
+        return uploaded;
+    }
+
+    private static string ResolveTransferUploadFileName(string sourceUrl, string? imageName)
+    {
+        if (!string.IsNullOrWhiteSpace(imageName))
+        {
+            return imageName.Trim();
+        }
+
+        if (Uri.TryCreate(sourceUrl, UriKind.Absolute, out var imageUri))
+        {
+            var fileName = System.IO.Path.GetFileName(imageUri.LocalPath);
+            if (!string.IsNullOrWhiteSpace(fileName))
+            {
+                return fileName;
+            }
+        }
+
+        return "print-area-image";
+    }
+
+    private static PrintAreaImage ClonePrintAreaImage(PrintAreaImage image, string? resolvedId, string? resolvedSrc)
+    {
+        var normalizedId = string.IsNullOrWhiteSpace(resolvedId)
+            ? null
+            : resolvedId.Trim();
+        var normalizedSrc = string.IsNullOrWhiteSpace(resolvedSrc)
+            ? null
+            : resolvedSrc.Trim();
+
+        return new PrintAreaImage
+        {
+            // Cross-shop Create Product validation requires a real upload ID.
+            // If the source product exposes only a stale or missing ID, re-upload the
+            // source URL first and clone against that fresh upload.
+            Id = normalizedId,
+            Src = normalizedSrc,
+            Name = image.Name,
+            Type = image.Type,
+            Height = image.Height,
+            Width = image.Width,
+            X = image.X,
+            Y = image.Y,
+            Scale = image.Scale,
+            Angle = image.Angle,
+            Pattern = CloneImagePattern(image.Pattern)
+        };
+    }
+
+    private static ImagePattern? CloneImagePattern(ImagePattern? pattern)
+    {
+        if (pattern is null)
+            return null;
+
+        return new ImagePattern
+        {
+            SpacingX = pattern.SpacingX,
+            SpacingY = pattern.SpacingY,
+            Angle = pattern.Angle,
+            Offset = pattern.Offset,
+            Scale = pattern.Scale
+        };
+    }
+
+    private static PrintDetails? ClonePrintDetails(PrintDetails? printDetails)
+    {
+        if (printDetails is null)
+            return null;
+
+        return new PrintDetails
+        {
+            PrintOnSide = printDetails.PrintOnSide,
+            SeparatorType = printDetails.SeparatorType,
+            SeparatorColor = printDetails.SeparatorColor
+        };
+    }
+
     private async Task<List<T>> GetAllPagesAsync<T>(string firstPagePath)
     {
         var all = new List<T>();
@@ -399,7 +693,7 @@ public class PrintifyClient
         var json = await response.Content.ReadAsStringAsync();
         var page = JsonSerializer.Deserialize<PaginatedResponse<T>>(json, JsonOpts)!;
         int pages = (int)Math.Floor((double)page.Total / limit)+1;
-        Task<HttpResponseMessage>[] tasks = new Task<HttpResponseMessage>[pages];
+        var tasks = new List<Task<HttpResponseMessage>>(Math.Max(pages - 1, 0));
 
         Console.WriteLine($"Page 1: Fetched {page.Data.Count} items. Total items: {page.Total}. Total pages: {pages}.");
         all.AddRange(page.Data);
@@ -409,24 +703,19 @@ public class PrintifyClient
             string pageurl = url + (url.Contains("?") ? $"&page={i}&limit={limit}" : $"?page={i}&limit={limit}");
             int indx = i; // capture loop variable
             // Console.WriteLine($"Queueing page {indx} from {pageurl}...");
-            tasks[i - 1] = _http.GetAsync(pageurl);
+            tasks.Add(_http.GetAsync(pageurl));
         });
-        tasks = tasks.Where(t => t != null).ToArray()!; // remove nulls for pages that don't exist
 
-        int completed = 0;
-        while(completed < pages - 1)
+        while(tasks.Count > 0)
         {
-            var completedTaskIndex = Task.WaitAny(tasks);
-            var completedTask = tasks[completedTaskIndex];
-            completed++;
+            var completedTask = await Task.WhenAny(tasks);
+            tasks.Remove(completedTask);
 
             var pageResponse = await completedTask;
             await EnsureSuccessAsync(pageResponse);
             var pageJson = await pageResponse.Content.ReadAsStringAsync();
             var pageDataObj = JsonSerializer.Deserialize<PaginatedResponse<T>>(pageJson, JsonOpts)!;
             all.AddRange(pageDataObj.Data);
-            tasks[completedTaskIndex] = null; // mark this task as completed
-            tasks = tasks.Where(t => t != null).ToArray()!; // remove nulls for pages that don't exist
         }
 
 
@@ -481,4 +770,15 @@ public class PrintifyApiException : Exception
         StatusCode = statusCode;
         ResponseBody = responseBody;
     }
+}
+
+public record ProductTransferResult
+{
+    public int SourceShopId { get; set; }
+    public string SourceProductId { get; set; } = "";
+    public int TargetShopId { get; set; }
+    public string TargetProductId { get; set; } = "";
+    public bool SourceProductDeleted { get; set; }
+    public bool TargetProductPublished { get; set; }
+    public Product TargetProduct { get; set; } = new();
 }

@@ -75,27 +75,30 @@ modules/
   MockupGenerator.cs
   PintifyBlueprintDatbase.cs
   PrintfityClient.cs
+ Sellingmodules/DataStructures/
+  ListingContentModels.cs
+  SellerModels.cs
+ Sellingmodules/Ebay/DataStructures/
+  EbayAccount.cs
+  EbayAuth.cs
+  EbayConfig.cs
+  EbayFulfillment.cs
+  EbayInventory.cs
+ Sellingmodules/Ebay/
+  EbayAccountClient.cs
+  EbayClient.cs
+  EbayFulfillmentClient.cs
+  EbayInventoryClient.cs
+  EbayMarketingClient.cs
+  EbayOAuthClient.cs
+  EbaySellerClientV1.cs
+ Sellingmodules/Etsy/
+  DataStructures/EtsyModels.cs
+  EtsyClient.cs
+  EtsySellerClientV1.cs
  Sellingmodules/
-  DataStructures/SellerModels.cs
-  Ebay/DataStructures/
-   EbayAccount.cs
-   EbayAuth.cs
-   EbayConfig.cs
-   EbayFulfillment.cs
-   EbayInventory.cs
-  Ebay/
-   EbayAccountClient.cs
-   EbayClient.cs
-   EbayFulfillmentClient.cs
-   EbayInventoryClient.cs
-   EbayMarketingClient.cs
-   EbayOAuthClient.cs
-   EbaySellerClientV1.cs
-  Etsy/
-   DataStructures/EtsyModels.cs
-   EtsyClient.cs
-   EtsySellerClientV1.cs
   ISellerClient.cs
+  ListingContentBuilder.cs
  utility/
   BlueprintCountrySettingsStore.cs
   JsonXPath.cs

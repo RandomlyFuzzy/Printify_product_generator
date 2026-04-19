@@ -5,15 +5,9 @@
   "MinimumPublishScore": 7,
   "Ollama": [
     {
-      "Id": "local-ollama",
-      "Name": "Local Ollama",
-      "BaseUrl": "http://192.168.0.131:11434",
-      "Enabled": false
-    },
-    {
       "Id": "4495a0d38e0641b09dcfa1f63193b31a",
       "Name": "laptop",
-      "BaseUrl": "http://192.168.0.180:11434",
+      "BaseUrl": "http://localhost:11434",
       "Enabled": true
     }
   ],

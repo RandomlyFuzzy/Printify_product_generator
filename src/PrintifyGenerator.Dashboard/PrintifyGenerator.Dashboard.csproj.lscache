@@ -73,12 +73,15 @@ Pages/
  Privacy.cshtml.cs
  QcQueue.cshtml.cs
  Stats.cshtml.cs
+ SwipeReview.cshtml.cs
 Program.cs
 Services/
  BlueprintCatalogService.cs
  DashboardDataService.cs
  GenerationRuntimeService.cs
  NodeHealthService.cs
+ StagingSwipeReviewService.cs
+ SwipeReviewMoveQueueService.cs
 
 [metadataReferences]
 ../PrintifyGenerator.Library/obj/Debug/net10.0/ref/PrintifyGenerator.Library.dll
@@ -436,6 +439,7 @@ Pages/
   _Layout.cshtml
   _ValidationScriptsPartial.cshtml
  Stats.cshtml
+ SwipeReview.cshtml
  _ViewImports.cshtml
  _ViewStart.cshtml
 
@@ -451,5 +455,6 @@ Pages/
   _Layout.cshtml
   _ValidationScriptsPartial.cshtml
  Stats.cshtml
+ SwipeReview.cshtml
  _ViewImports.cshtml
  _ViewStart.cshtml

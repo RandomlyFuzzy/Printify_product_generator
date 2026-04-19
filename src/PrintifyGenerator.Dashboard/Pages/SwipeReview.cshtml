@@ -1,0 +1,803 @@
+@page
+@model SwipeReviewModel
+
+<main class="swipe-app" data-swipe-app data-initial-state='@Model.PageState.InitialSnapshotJson'>
+    @Html.AntiForgeryToken()
+
+    <div class="swipe-topbar">
+        <div class="swipe-count-pill" id="swipe-count">@Model.PageState.InitialCountLabel</div>
+        <div class="swipe-toast" id="swipe-toast" hidden></div>
+    </div>
+
+    <section class="swipe-stage" id="swipe-stage">
+        <div class="swipe-stage-backdrop" id="swipe-stage-backdrop" style="@Model.PageState.InitialBackdropStyle"></div>
+
+        <div class="swipe-card-shell" id="swipe-card-shell">
+            <article class="@Model.PageState.InitialCardClass" id="swipe-card" aria-live="polite">
+                <span class="swipe-overlay-badge swipe-overlay-badge-left">Nope</span>
+                <span class="swipe-overlay-badge swipe-overlay-badge-right">Move</span>
+                <span class="swipe-overlay-badge swipe-overlay-badge-up">Prev</span>
+                <span class="swipe-overlay-badge swipe-overlay-badge-down">Next</span>
+
+                <div class="swipe-card-media">
+                    <button type="button" class="swipe-image-step swipe-image-step-up" id="swipe-prev-image" aria-label="Previous product image">^</button>
+
+                    <div class="@Model.PageState.InitialImageFrameClass" id="swipe-image-frame">
+                        <img id="swipe-main-image"
+                             src="@Model.PageState.InitialImage.Url"
+                             alt="@Model.PageState.InitialImage.AltText"
+                             draggable="false"
+                             hidden="@Model.PageState.HideInitialImage" />
+                        <div class="swipe-image-empty" id="swipe-image-empty" hidden="@Model.PageState.HideInitialImageEmptyState">
+                            No mockup image is available for this draft yet.
+                        </div>
+
+                        <div class="swipe-image-meta">
+                            <span id="swipe-image-label">@Model.PageState.InitialGalleryLabel</span>
+                            <span id="swipe-image-counter">@Model.PageState.InitialImageCounter</span>
+                        </div>
+                    </div>
+
+                    <button type="button" class="swipe-image-step swipe-image-step-down" id="swipe-next-image" aria-label="Next product image">v</button>
+                </div>
+            </article>
+        </div>
+
+        <aside class="swipe-side-panel" id="swipe-side-panel" hidden="@Model.PageState.HideInitialSupplementalPanel">
+            <div class="swipe-side-panel-header">
+                <div>
+                    <span class="swipe-side-panel-kicker" id="swipe-grid-label">@Model.PageState.InitialGalleryLabel</span>
+                    <strong class="swipe-side-panel-title">Quick pick</strong>
+                </div>
+                <span class="swipe-side-panel-count" id="swipe-supplemental-count">@Model.PageState.InitialSupplementalCountLabel</span>
+            </div>
+
+            <div class="swipe-side-grid" id="swipe-supplemental-grid">
+                @for (var index = 0; index < Model.PageState.InitialSupplementalImages.Count; index++)
+                {
+                    var image = Model.PageState.InitialSupplementalImages[index];
+                    <button type="button"
+                            class="swipe-side-thumb @(index == 0 ? "is-active" : null)"
+                            data-image-index="@index"
+                            aria-label="Show @Model.PageState.InitialGalleryLabel.ToLowerInvariant() @(index + 1)"
+                            aria-pressed="@(index == 0 ? "true" : "false")">
+                        <img src="@image.Url" alt="@image.AltText" loading="lazy" />
+                        <div class="swipe-side-thumb-meta">
+                            <span>@image.SourceLabel</span>
+                            <strong>@image.Caption</strong>
+                        </div>
+                    </button>
+                }
+            </div>
+        </aside>
+
+        <section class="@Model.PageState.InitialEmptyStateClass" id="swipe-empty-state">
+            <span class="swipe-empty-label">Queue clear</span>
+            <h1>The review stack is clear.</h1>
+            <p>Queued moves keep running in the background, and new draft products will appear here automatically.</p>
+        </section>
+    </section>
+
+    <div class="@Model.PageState.InitialActionsClass" id="swipe-actions">
+        <button type="button"
+                class="swipe-action-button swipe-action-delete"
+                id="swipe-delete-button"
+                aria-label="Delete staged product"
+            disabled="@Model.PageState.DeleteDisabled">X</button>
+        <button type="button"
+                class="swipe-action-button swipe-action-promote"
+                id="swipe-promote-button"
+            aria-label="Move staged product to publishing drafts"
+            disabled="@Model.PageState.PromoteDisabled">&gt;</button>
+    </div>
+</main>
+
+@section Scripts {
+    <script>
+        (() => {
+            const app = document.querySelector("[data-swipe-app]");
+            if (!app) {
+                return;
+            }
+
+            const refs = {
+                count: document.getElementById("swipe-count"),
+                toast: document.getElementById("swipe-toast"),
+                stage: document.getElementById("swipe-stage"),
+                backdrop: document.getElementById("swipe-stage-backdrop"),
+                cardShell: document.getElementById("swipe-card-shell"),
+                card: document.getElementById("swipe-card"),
+                imageFrame: document.getElementById("swipe-image-frame"),
+                image: document.getElementById("swipe-main-image"),
+                imageEmpty: document.getElementById("swipe-image-empty"),
+                imageLabel: document.getElementById("swipe-image-label"),
+                imageCounter: document.getElementById("swipe-image-counter"),
+                sidePanel: document.getElementById("swipe-side-panel"),
+                gridLabel: document.getElementById("swipe-grid-label"),
+                supplementalCount: document.getElementById("swipe-supplemental-count"),
+                supplementalGrid: document.getElementById("swipe-supplemental-grid"),
+                emptyState: document.getElementById("swipe-empty-state"),
+                actions: document.getElementById("swipe-actions"),
+                deleteButton: document.getElementById("swipe-delete-button"),
+                promoteButton: document.getElementById("swipe-promote-button"),
+                prevImageButton: document.getElementById("swipe-prev-image"),
+                nextImageButton: document.getElementById("swipe-next-image")
+            };
+
+            const requestToken = app.querySelector('input[name="__RequestVerificationToken"]')?.value ?? "";
+
+            let state;
+            let confirmedState;
+            let pendingActions = [];
+            let processingActions = false;
+            let actionSequence = 0;
+            const preloadAheadCount = 6;
+            const imagePreloadCache = new Map();
+
+            const normalizeState = (value) => {
+                const upcomingItems = Array.isArray(value?.upcomingItems)
+                    ? value.upcomingItems.filter(Boolean)
+                    : value?.upcomingItem ? [value.upcomingItem] : [];
+
+                return {
+                    queueCount: Number(value?.queueCount ?? 0),
+                    currentItem: value?.currentItem ?? null,
+                    statusMessage: typeof value?.statusMessage === "string" ? value.statusMessage : null,
+                    upcomingItem: upcomingItems[0] ?? value?.upcomingItem ?? null,
+                    upcomingItems: upcomingItems
+                };
+            };
+
+            try {
+                state = normalizeState(JSON.parse(app.dataset.initialState || "{}"));
+            } catch {
+                state = normalizeState({ queueCount: 0, currentItem: null, statusMessage: "Swipe review state could not be loaded." });
+            }
+
+            confirmedState = normalizeState(state);
+
+            let imageIndex = 0;
+            let busy = false;
+            let toastTimer = 0;
+            let dragSession = null;
+
+            const currentItem = () => state?.currentItem ?? null;
+            const currentImages = () => currentItem()?.displayImages ?? currentItem()?.images ?? [];
+            const currentGalleryLabel = () => currentItem()?.productImages?.length > 0 ? "Product images" : "Available images";
+
+            const isImageReady = (url) => imagePreloadCache.get(url)?.status === "loaded";
+
+            const primeImage = (url) => {
+                if (!url) {
+                    return Promise.resolve();
+                }
+
+                const cached = imagePreloadCache.get(url);
+                if (cached) {
+                    return cached.promise;
+                }
+
+                const probe = new Image();
+                let settled = false;
+                const entry = {
+                    status: "loading",
+                    promise: null
+                };
+
+                entry.promise = new Promise((resolve) => {
+                    const complete = (status) => {
+                        if (settled) {
+                            return;
+                        }
+
+                        settled = true;
+                        entry.status = status;
+                        resolve(status);
+                    };
+
+                    probe.addEventListener("load", () => complete("loaded"), { once: true });
+                    probe.addEventListener("error", () => complete("error"), { once: true });
+                    probe.decoding = "async";
+                    probe.src = url;
+
+                    if (probe.complete) {
+                        queueMicrotask(() => complete(probe.naturalWidth > 0 ? "loaded" : "error"));
+                    }
+                });
+
+                imagePreloadCache.set(url, entry);
+                return entry.promise;
+            };
+
+            const collectItemImageUrls = (item) => {
+                if (!item) {
+                    return [];
+                }
+
+                const urls = new Set();
+                const allImages = [
+                    ...(item.displayImages ?? item.images ?? []),
+                    ...(item.supplementalImages ?? [])
+                ];
+
+                allImages.forEach((image) => {
+                    const url = typeof image?.url === "string" ? image.url.trim() : "";
+                    if (url) {
+                        urls.add(url);
+                    }
+                });
+
+                return [...urls];
+            };
+
+            const preloadStateAssets = (snapshot) => {
+                if (!snapshot) {
+                    return;
+                }
+
+                const items = [];
+                const seen = new Set();
+                const queue = [snapshot.currentItem, ...(snapshot.upcomingItems ?? []).slice(0, preloadAheadCount)];
+
+                queue.forEach((item) => {
+                    if (!item?.productId || seen.has(item.productId)) {
+                        return;
+                    }
+
+                    seen.add(item.productId);
+                    items.push(item);
+                });
+
+                items.forEach((item) => {
+                    collectItemImageUrls(item).forEach((url) => {
+                        void primeImage(url);
+                    });
+                });
+            };
+
+            const syncThumbnailSelection = () => {
+                const thumbnails = refs.supplementalGrid.querySelectorAll(".swipe-side-thumb");
+                thumbnails.forEach((thumbnail, index) => {
+                    const isActive = index === imageIndex;
+                    thumbnail.classList.toggle("is-active", isActive);
+                    thumbnail.setAttribute("aria-pressed", isActive ? "true" : "false");
+                });
+            };
+
+            const isInteractiveElement = (target) => {
+                return target instanceof HTMLElement
+                    && Boolean(target.closest("button, input, select, textarea, a"));
+            };
+
+            const getSnapshotQueueItems = (snapshot) => {
+                if (!snapshot) {
+                    return [];
+                }
+
+                const items = [];
+                const seenProductIds = new Set();
+
+                [snapshot.currentItem, ...(snapshot.upcomingItems ?? [])].forEach((item) => {
+                    if (!item?.productId || seenProductIds.has(item.productId)) {
+                        return;
+                    }
+
+                    seenProductIds.add(item.productId);
+                    items.push(item);
+                });
+
+                return items;
+            };
+
+            const buildDerivedState = () => {
+                const pendingProductIds = new Set(pendingActions.map((action) => action.productId));
+                const queuedItems = getSnapshotQueueItems(confirmedState)
+                    .filter((item) => !pendingProductIds.has(item.productId));
+                const queueCount = Math.max(0, Number(confirmedState?.queueCount ?? 0) - pendingActions.length);
+
+                return normalizeState({
+                    queueCount: queueCount,
+                    currentItem: queuedItems[0] ?? null,
+                    statusMessage: queueCount === 0
+                        ? (confirmedState?.statusMessage ?? "No staged draft products are waiting for review.")
+                        : confirmedState?.statusMessage ?? null,
+                    upcomingItem: queuedItems[1] ?? null,
+                    upcomingItems: queuedItems.slice(1)
+                });
+            };
+
+            const applyCardEntry = () => {
+                refs.card.classList.add("is-entering");
+                window.setTimeout(() => {
+                    refs.card.classList.remove("is-entering");
+                }, 260);
+            };
+
+            const queueOptimisticAdvance = (nextState, onApplied) => {
+                if (!nextState) {
+                    setBusy(false);
+                    onApplied?.();
+                    return {
+                        cancel: () => false
+                    };
+                }
+
+                preloadStateAssets(nextState);
+
+                let activated = false;
+                const timer = window.setTimeout(() => {
+                    activated = true;
+                    clearCardState();
+                    renderState(nextState);
+                    applyCardEntry();
+                    setBusy(false);
+                    onApplied?.();
+                }, 105);
+
+                return {
+                    cancel: () => {
+                        window.clearTimeout(timer);
+                        if (!activated) {
+                            setBusy(false);
+                        }
+                        return activated;
+                    }
+                };
+            };
+
+            const renderSupplementalGrid = () => {
+                const item = currentItem();
+                const images = currentImages();
+                const galleryLabel = currentGalleryLabel();
+
+                refs.sidePanel.hidden = !item || images.length === 0;
+                refs.gridLabel.textContent = galleryLabel;
+                refs.supplementalCount.textContent = images.length === 1
+                    ? "1 image"
+                    : `${images.length} images`;
+
+                const cards = images.map((image, index) => {
+                    const card = document.createElement("button");
+                    card.type = "button";
+                    card.className = "swipe-side-thumb";
+                    if (index === imageIndex) {
+                        card.classList.add("is-active");
+                    }
+
+                    card.dataset.imageIndex = String(index);
+                    card.setAttribute("aria-label", `Show ${galleryLabel.toLowerCase()} ${index + 1}`);
+                    card.setAttribute("aria-pressed", index === imageIndex ? "true" : "false");
+
+                    const thumbnail = document.createElement("img");
+                    thumbnail.src = image.url;
+                    thumbnail.alt = image.altText || image.caption || image.sourceLabel || "Product image";
+                    thumbnail.loading = index < 6 ? "eager" : "lazy";
+                    thumbnail.decoding = "async";
+                    if ("fetchPriority" in thumbnail) {
+                        thumbnail.fetchPriority = index < 3 ? "high" : "low";
+                    }
+
+                    const meta = document.createElement("div");
+                    meta.className = "swipe-side-thumb-meta";
+
+                    const label = document.createElement("span");
+                    label.textContent = image.sourceLabel || galleryLabel;
+
+                    const caption = document.createElement("strong");
+                    caption.textContent = image.caption || image.altText || `Image ${index + 1}`;
+
+                    meta.append(label, caption);
+                    card.append(thumbnail, meta);
+                    return card;
+                });
+
+                refs.supplementalGrid.replaceChildren(...cards);
+            };
+
+            const updateActionButtons = () => {
+                const item = currentItem();
+                const images = currentImages();
+
+                refs.deleteButton.disabled = busy || !item || item.canDelete !== true;
+                refs.promoteButton.disabled = busy || !item || item.canPromote !== true;
+                refs.prevImageButton.disabled = busy || images.length <= 1;
+                refs.nextImageButton.disabled = busy || images.length <= 1;
+                refs.promoteButton.title = item?.promoteUnavailableReason || "";
+            };
+
+            const setBusy = (nextBusy) => {
+                busy = nextBusy;
+                app.classList.toggle("is-busy", nextBusy);
+                document.body.classList.toggle("is-busy", nextBusy);
+                updateActionButtons();
+            };
+
+            const showToast = (message, level = "info") => {
+                window.clearTimeout(toastTimer);
+
+                const text = typeof message === "string" ? message.trim() : "";
+                if (!text) {
+                    refs.toast.hidden = true;
+                    refs.toast.textContent = "";
+                    refs.toast.className = "swipe-toast";
+                    return;
+                }
+
+                refs.toast.hidden = false;
+                refs.toast.textContent = text;
+                refs.toast.className = `swipe-toast is-visible is-${level}`;
+
+                toastTimer = window.setTimeout(() => {
+                    refs.toast.hidden = true;
+                    refs.toast.textContent = "";
+                    refs.toast.className = "swipe-toast";
+                }, 2800);
+            };
+
+            const setBackdrop = (url) => {
+                refs.backdrop.style.backgroundImage = url ? `url("${url}")` : "none";
+            };
+
+            const renderImage = () => {
+                const images = currentImages();
+                const image = images[imageIndex] ?? null;
+                const imageUrl = image?.url || "";
+
+                refs.imageFrame.classList.toggle("is-hydrating", Boolean(imageUrl) && !isImageReady(imageUrl));
+
+                if (imageUrl) {
+                    void primeImage(imageUrl);
+                    refs.image.hidden = false;
+                    refs.image.decoding = "async";
+                    refs.image.dataset.expectedSrc = imageUrl;
+                    if ("fetchPriority" in refs.image) {
+                        refs.image.fetchPriority = imageIndex === 0 ? "high" : "auto";
+                    }
+                    refs.image.src = imageUrl;
+                    refs.image.alt = image.altText || "Product image";
+                    refs.imageFrame.classList.remove("is-empty");
+                } else {
+                    refs.imageFrame.classList.remove("is-hydrating");
+                    refs.image.hidden = true;
+                    refs.image.removeAttribute("src");
+                    delete refs.image.dataset.expectedSrc;
+                    refs.image.alt = "No image available";
+                    refs.imageFrame.classList.add("is-empty");
+                }
+
+                refs.imageEmpty.hidden = Boolean(imageUrl);
+                refs.imageLabel.textContent = currentGalleryLabel();
+                refs.imageCounter.textContent = images.length > 0 ? `${imageIndex + 1} / ${images.length}` : "0 / 0";
+                setBackdrop(imageUrl);
+                syncThumbnailSelection();
+                updateActionButtons();
+            };
+
+            const renderState = (nextState) => {
+                const previousItem = currentItem();
+                const previousProductId = previousItem?.productId ?? null;
+                const previousImageIndex = imageIndex;
+
+                state = normalizeState(nextState || { queueCount: 0, currentItem: null, statusMessage: null, upcomingItems: [] });
+                preloadStateAssets(state);
+
+                const item = currentItem();
+                if (item?.productId && item.productId === previousProductId) {
+                    const nextImageCount = currentImages().length;
+                    imageIndex = nextImageCount > 0
+                        ? Math.max(0, Math.min(previousImageIndex, nextImageCount - 1))
+                        : 0;
+                } else {
+                    imageIndex = 0;
+                }
+
+                refs.count.textContent = item ? `${state.queueCount} left` : "No cards left";
+                refs.card.classList.toggle("is-hidden", !item);
+                refs.emptyState.classList.toggle("is-visible", !item);
+                refs.actions.classList.toggle("is-hidden", !item);
+
+                if (!item) {
+                    renderSupplementalGrid();
+                    renderImage();
+                    return;
+                }
+
+                renderSupplementalGrid();
+                renderImage();
+            };
+
+            const clearCardState = () => {
+                refs.card.classList.remove("is-entering", "is-throwing-left", "is-throwing-right", "is-dragging");
+                refs.cardShell.classList.remove("is-settling");
+                refs.card.style.transform = "";
+                delete refs.card.dataset.intent;
+            };
+
+            const settleCard = () => {
+                refs.cardShell.classList.add("is-settling");
+                refs.card.style.transform = "";
+                delete refs.card.dataset.intent;
+
+                window.setTimeout(() => {
+                    refs.cardShell.classList.remove("is-settling");
+                }, 180);
+            };
+
+            const stepImage = (delta) => {
+                const images = currentImages();
+                if (busy || images.length <= 1) {
+                    return;
+                }
+
+                imageIndex = (imageIndex + delta + images.length) % images.length;
+                renderImage();
+            };
+
+            const sendAction = async (handlerName, productId) => {
+                if (!productId) {
+                    return null;
+                }
+
+                const body = new URLSearchParams();
+                body.set("productId", productId);
+                if (requestToken) {
+                    body.set("__RequestVerificationToken", requestToken);
+                }
+
+                const response = await fetch(`?handler=${handlerName}`, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+                        "X-Requested-With": "XMLHttpRequest"
+                    },
+                    credentials: "same-origin",
+                    body: body.toString()
+                });
+
+                if (!response.ok) {
+                    throw new Error(`Request failed with status ${response.status}.`);
+                }
+
+                return await response.json();
+            };
+
+            const drainActionPipeline = () => {
+                if (processingActions) {
+                    return;
+                }
+
+                processingActions = true;
+
+                void (async () => {
+                    try {
+                        while (pendingActions.length > 0) {
+                            const action = pendingActions[0];
+
+                            try {
+                                const payload = await sendAction(action.handlerName, action.productId);
+                                confirmedState = normalizeState(payload?.snapshot ?? { queueCount: 0, currentItem: null, statusMessage: null, upcomingItems: [] });
+                                pendingActions.shift();
+
+                                const nextState = buildDerivedState();
+                                const previousProductId = currentItem()?.productId ?? null;
+                                const nextProductId = nextState.currentItem?.productId ?? null;
+
+                                clearCardState();
+                                renderState(nextState);
+
+                                if (previousProductId !== nextProductId && nextProductId) {
+                                    applyCardEntry();
+                                }
+
+                                showToast(payload?.message, payload?.level || "success");
+                            } catch (error) {
+                                pendingActions.shift();
+
+                                const nextState = buildDerivedState();
+                                const previousProductId = currentItem()?.productId ?? null;
+                                const nextProductId = nextState.currentItem?.productId ?? null;
+
+                                clearCardState();
+                                renderState(nextState);
+
+                                if (previousProductId !== nextProductId && nextProductId) {
+                                    applyCardEntry();
+                                }
+
+                                showToast(error instanceof Error ? error.message : "The action failed.", "error");
+                            }
+                        }
+                    } finally {
+                        processingActions = false;
+
+                        if (pendingActions.length > 0) {
+                            drainActionPipeline();
+                        }
+                    }
+                })();
+            };
+
+            const performAction = async (handlerName, direction) => {
+                const item = currentItem();
+                if (!item || busy) {
+                    return;
+                }
+
+                if (handlerName === "Delete" && item.canDelete !== true) {
+                    return;
+                }
+
+                if (handlerName === "Promote" && item.canPromote !== true) {
+                    showToast(item.promoteUnavailableReason || "Move is unavailable.", "warning");
+                    settleCard();
+                    return;
+                }
+
+                setBusy(true);
+                refs.card.style.transform = "";
+                delete refs.card.dataset.intent;
+                refs.card.classList.add(direction === "left" ? "is-throwing-left" : "is-throwing-right");
+
+                pendingActions.push({
+                    id: ++actionSequence,
+                    handlerName: handlerName,
+                    productId: item.productId
+                });
+
+                const optimisticState = buildDerivedState();
+                queueOptimisticAdvance(optimisticState, drainActionPipeline);
+            };
+
+            const startDrag = (event) => {
+                if (busy || !currentItem() || isInteractiveElement(event.target)) {
+                    return;
+                }
+
+                if (event.pointerType === "mouse" && event.button !== 0) {
+                    return;
+                }
+
+                dragSession = {
+                    pointerId: event.pointerId,
+                    startX: event.clientX,
+                    startY: event.clientY
+                };
+
+                refs.card.classList.add("is-dragging");
+                refs.card.setPointerCapture(event.pointerId);
+            };
+
+            const updateDrag = (event) => {
+                if (!dragSession || event.pointerId !== dragSession.pointerId) {
+                    return;
+                }
+
+                const deltaX = event.clientX - dragSession.startX;
+                const deltaY = event.clientY - dragSession.startY;
+                const horizontal = Math.abs(deltaX) > Math.abs(deltaY);
+
+                if (horizontal) {
+                    const rotation = Math.max(-18, Math.min(18, deltaX / 16));
+                    refs.card.style.transform = `translate(${deltaX}px, ${deltaY * 0.18}px) rotate(${rotation}deg)`;
+                    refs.card.dataset.intent = deltaX < -36 ? "delete" : deltaX > 36 ? "promote" : "";
+                    return;
+                }
+
+                refs.card.style.transform = `translate(${deltaX * 0.08}px, ${deltaY}px)`;
+                refs.card.dataset.intent = deltaY < -36 ? "prev" : deltaY > 36 ? "next" : "";
+            };
+
+            const endDrag = async (event) => {
+                if (!dragSession || event.pointerId !== dragSession.pointerId) {
+                    return;
+                }
+
+                const deltaX = event.clientX - dragSession.startX;
+                const deltaY = event.clientY - dragSession.startY;
+                const horizontal = Math.abs(deltaX) > Math.abs(deltaY);
+
+                dragSession = null;
+                refs.card.classList.remove("is-dragging");
+
+                try {
+                    refs.card.releasePointerCapture(event.pointerId);
+                } catch {
+                    // Ignore release errors when the pointer capture has already ended.
+                }
+
+                if (horizontal && Math.abs(deltaX) > 120) {
+                    await performAction(deltaX < 0 ? "Delete" : "Promote", deltaX < 0 ? "left" : "right");
+                    return;
+                }
+
+                if (!horizontal && Math.abs(deltaY) > 90) {
+                    stepImage(deltaY < 0 ? -1 : 1);
+                    settleCard();
+                    return;
+                }
+
+                settleCard();
+            };
+
+            const cancelDrag = () => {
+                if (!dragSession) {
+                    return;
+                }
+
+                dragSession = null;
+                refs.card.classList.remove("is-dragging");
+                settleCard();
+            };
+
+            refs.deleteButton.addEventListener("click", () => performAction("Delete", "left"));
+            refs.promoteButton.addEventListener("click", () => performAction("Promote", "right"));
+            refs.prevImageButton.addEventListener("click", () => stepImage(-1));
+            refs.nextImageButton.addEventListener("click", () => stepImage(1));
+            refs.supplementalGrid.addEventListener("click", (event) => {
+                const target = event.target instanceof HTMLElement
+                    ? event.target.closest(".swipe-side-thumb")
+                    : null;
+
+                if (!(target instanceof HTMLButtonElement) || busy) {
+                    return;
+                }
+
+                const nextIndex = Number.parseInt(target.dataset.imageIndex ?? "", 10);
+                if (!Number.isInteger(nextIndex) || nextIndex === imageIndex) {
+                    return;
+                }
+
+                imageIndex = nextIndex;
+                renderImage();
+            });
+
+            refs.card.addEventListener("pointerdown", startDrag);
+            refs.card.addEventListener("pointermove", updateDrag);
+            refs.card.addEventListener("pointerup", endDrag);
+            refs.card.addEventListener("pointercancel", cancelDrag);
+            refs.card.addEventListener("dragstart", (event) => event.preventDefault());
+            refs.image.addEventListener("load", () => {
+                refs.imageFrame.classList.remove("is-hydrating");
+            });
+            refs.image.addEventListener("error", () => {
+                refs.imageFrame.classList.remove("is-hydrating");
+            });
+
+            window.addEventListener("keydown", (event) => {
+                if (event.defaultPrevented || busy) {
+                    return;
+                }
+
+                const target = event.target;
+                if (target instanceof HTMLInputElement
+                    || target instanceof HTMLTextAreaElement
+                    || target instanceof HTMLSelectElement
+                    || (target instanceof HTMLElement && target.isContentEditable)) {
+                    return;
+                }
+
+                switch (event.key) {
+                    case "ArrowUp":
+                        event.preventDefault();
+                        stepImage(-1);
+                        break;
+                    case "ArrowDown":
+                        event.preventDefault();
+                        stepImage(1);
+                        break;
+                    case "ArrowLeft":
+                        event.preventDefault();
+                        performAction("Delete", "left");
+                        break;
+                    case "ArrowRight":
+                        event.preventDefault();
+                        performAction("Promote", "right");
+                        break;
+                }
+            });
+
+            preloadStateAssets(state);
+            renderState(state);
+        })();
+    </script>
+}

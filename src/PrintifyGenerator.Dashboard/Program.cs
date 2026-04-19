@@ -10,6 +10,12 @@ builder.Services.AddSingleton<DashboardDataService>();
 builder.Services.AddSingleton<BlueprintCatalogService>();
 builder.Services.AddSingleton<GenerationRuntimeService>();
 builder.Services.AddSingleton<IHostedService>(static serviceProvider => serviceProvider.GetRequiredService<GenerationRuntimeService>());
+builder.Services.AddSingleton<SwipeReviewMoveQueueService>();
+builder.Services.AddSingleton<IHostedService>(static serviceProvider => serviceProvider.GetRequiredService<SwipeReviewMoveQueueService>());
+builder.Services.AddHttpClient<StagingSwipeReviewService>(client =>
+{
+    client.Timeout = TimeSpan.FromSeconds(30);
+});
 builder.Services.AddHttpClient<NodeHealthService>(client =>
 {
     client.Timeout = TimeSpan.FromSeconds(3);

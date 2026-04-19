@@ -25,59 +25,70 @@
     var isQcQueuePage = requestPath.StartsWith("/QcQueue", StringComparison.OrdinalIgnoreCase);
     var isGeneratedImagesPage = requestPath.StartsWith("/GeneratedImages", StringComparison.OrdinalIgnoreCase);
     var isBlueprintCatalogPage = requestPath.StartsWith("/BlueprintCatalog", StringComparison.OrdinalIgnoreCase);
+    var isSwipeReviewPage = requestPath.StartsWith("/SwipeReview", StringComparison.OrdinalIgnoreCase);
 }
-<body>
-    <div class="app-shell">
-        <header class="app-header">
-            <a class="brand-mark" asp-page="/Stats">Printify Generator Dashboard</a>
-            <div class="app-header-actions">
-                <nav class="nav-strip">
-                    <a class="nav-link @(isStatsPage ? "is-active" : null)" asp-page="/Stats">Stats</a>
-                    <a class="nav-link @(isBlueprintCatalogPage ? "is-active" : null)" asp-page="/BlueprintCatalog">Catalog</a>
-                    <a class="nav-link @(isQcQueuePage ? "is-active" : null)" asp-page="/QcQueue">QC Queue</a>
-                    <a class="nav-link @(isGeneratedImagesPage ? "is-active" : null)" asp-page="/GeneratedImages">Generated Images</a>
-                </nav>
-                <button type="button" class="theme-toggle" data-theme-toggle aria-live="polite">Light mode</button>
-            </div>
-        </header>
-        <main role="main">
+<body class="@(isSwipeReviewPage ? "page-swipe-review" : null)">
+    @if (isSwipeReviewPage)
+    {
+        <main role="main" class="immersive-main">
             @RenderBody()
         </main>
-    </div>
+    }
+    else
+    {
+        <div class="app-shell">
+            <header class="app-header">
+                <a class="brand-mark" asp-page="/Stats">Printify Generator Dashboard</a>
+                <div class="app-header-actions">
+                    <nav class="nav-strip">
+                        <a class="nav-link @(isStatsPage ? "is-active" : null)" asp-page="/Stats">Stats</a>
+                        <a class="nav-link @(isBlueprintCatalogPage ? "is-active" : null)" asp-page="/BlueprintCatalog">Catalog</a>
+                        <a class="nav-link @(isSwipeReviewPage ? "is-active" : null)" asp-page="/SwipeReview">Swipe Review</a>
+                        <a class="nav-link @(isQcQueuePage ? "is-active" : null)" asp-page="/QcQueue">QC Queue</a>
+                        <a class="nav-link @(isGeneratedImagesPage ? "is-active" : null)" asp-page="/GeneratedImages">Generated Images</a>
+                    </nav>
+                    <button type="button" class="theme-toggle" data-theme-toggle aria-live="polite">Light mode</button>
+                </div>
+            </header>
+            <main role="main">
+                @RenderBody()
+            </main>
+        </div>
 
-    <script>
-        (() => {
-            const root = document.documentElement;
-            const toggle = document.querySelector("[data-theme-toggle]");
-            if (!toggle) {
-                return;
-            }
-
-            const getTheme = () => root.dataset.theme === "light" ? "light" : "dark";
-
-            const syncThemeToggle = () => {
-                const isDark = getTheme() === "dark";
-                toggle.textContent = isDark ? "Light mode" : "Dark mode";
-                toggle.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
-                toggle.setAttribute("aria-pressed", isDark ? "true" : "false");
-            };
-
-            syncThemeToggle();
-
-            toggle.addEventListener("click", () => {
-                const nextTheme = getTheme() === "dark" ? "light" : "dark";
-                root.dataset.theme = nextTheme;
-
-                try {
-                    localStorage.setItem("dashboard-theme", nextTheme);
-                } catch {
-                    // Ignore storage failures and still swap the live theme.
+        <script>
+            (() => {
+                const root = document.documentElement;
+                const toggle = document.querySelector("[data-theme-toggle]");
+                if (!toggle) {
+                    return;
                 }
 
+                const getTheme = () => root.dataset.theme === "light" ? "light" : "dark";
+
+                const syncThemeToggle = () => {
+                    const isDark = getTheme() === "dark";
+                    toggle.textContent = isDark ? "Light mode" : "Dark mode";
+                    toggle.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
+                    toggle.setAttribute("aria-pressed", isDark ? "true" : "false");
+                };
+
                 syncThemeToggle();
-            });
-        })();
-    </script>
+
+                toggle.addEventListener("click", () => {
+                    const nextTheme = getTheme() === "dark" ? "light" : "dark";
+                    root.dataset.theme = nextTheme;
+
+                    try {
+                        localStorage.setItem("dashboard-theme", nextTheme);
+                    } catch {
+                        // Ignore storage failures and still swap the live theme.
+                    }
+
+                    syncThemeToggle();
+                });
+            })();
+        </script>
+    }
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>

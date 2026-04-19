@@ -40,6 +40,10 @@ public class MockupDraftRecord
 {
     [JsonPropertyName("product_id")]                public string       ProductId               { get; set; } = "";
     [JsonPropertyName("job_id")]                    public string       JobId                   { get; set; } = "";
+    [JsonPropertyName("lookup_key")]                public string       LookupKey               { get; set; } = "";
+    [JsonPropertyName("group_key")]                 public string       GroupKey                { get; set; } = "";
+    [JsonPropertyName("asset_key")]                 public string       AssetKey                { get; set; } = "";
+    [JsonPropertyName("reference_code")]            public string       ReferenceCode           { get; set; } = "";
     [JsonPropertyName("local_image_path")]          public string       LocalImagePath          { get; set; } = "";
     [JsonPropertyName("printify_image_id")]         public string       PrintifyImageId         { get; set; } = "";
     [JsonPropertyName("printify_image_preview_url")]public string       PrintifyImagePreviewUrl { get; set; } = "";
@@ -48,6 +52,8 @@ public class MockupDraftRecord
     [JsonPropertyName("llm_reason")]                public string       LlmReason               { get; set; } = "";
     [JsonPropertyName("print_provider_id")]         public int          PrintProviderId         { get; set; }
     [JsonPropertyName("print_provider_title")]      public string       PrintProviderTitle      { get; set; } = "";
+    [JsonPropertyName("lookup_tags")]               public List<string> LookupTags              { get; set; } = new();
+    [JsonPropertyName("channel_content")]           public Dictionary<string, ListingChannelContent> ChannelContent { get; set; } = new();
     [JsonPropertyName("created_at")]                public string       CreatedAt               { get; set; } = "";
     [JsonPropertyName("mockup_urls")]               public List<string> MockupUrls              { get; set; } = new();
 }
