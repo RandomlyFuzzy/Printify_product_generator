@@ -86,8 +86,10 @@ class Program
         var imagePaths = new List<string>();
         int id = 0;
         Console.WriteLine($"Downloading images for product {product.Id} total images: {product.Images.Count()}");
-        foreach (var image in product.Images)
+        
+        for(int i = 0; i < Math.Min(12, product.Images.Count()); i++)
         {
+            var image = product.Images[i];
             var imageData = await httpClient.GetByteArrayAsync(image.Src);
             var extension = Path.GetExtension(image.Src).Split('?')[0]; // Handle URLs with query parameters
             var imagePath = Path.Combine(tempFolder, $"{id++}{extension}");
@@ -108,7 +110,10 @@ class Program
             suggest that style. Make sure the Title uses as much of the 80 character limit as possible and is very 
             descriptive. The description should be detailed and include potential use cases for the product. 
             The tags should be relevant keywords that potential customers might search for when looking for a 
-            product like this.
+            product like this. The title should include what the product is, and the main use case. 
+            The description should expand on the title and include more details about the product, 
+            its features, and potential use cases. The tags should be a mix of specific and broad keywords 
+            that are relevant to the product.
 
             Provide the metadata in JSON format with the following structure:
             {{
