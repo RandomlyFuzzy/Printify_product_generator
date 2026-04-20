@@ -132,17 +132,17 @@ static int CalculateVariantPrice(int shippingPrice, int productionPrice, decimal
     var Total = new Currency(CurrencyCode.USD, (productionPrice + shippingPrice*(totalMargin)) / 100m);
     Console.Write($" Margin amount: {Total}.");
 
-    var targetCurrency = country switch
-    {
-        "United States" => CurrencyCode.USD,
-        "USA" => CurrencyCode.USD,
-        "US" => CurrencyCode.USD,
-        "United Kingdom" => CurrencyCode.GBP,
-        "GB" => CurrencyCode.GBP,
-        _ => throw new NotSupportedException($"Unsupported destination country: {country}")
-    };
-    Total = Total.ConvertTo(targetCurrency).GetAwaiter().GetResult();
-    Console.Write($" Converted total cost to {targetCurrency}: {Total}.");
+    // var targetCurrency = country switch
+    // {
+    //     "United States" => CurrencyCode.USD,
+    //     "USA" => CurrencyCode.USD,
+    //     "US" => CurrencyCode.USD,
+    //     "United Kingdom" => CurrencyCode.GBP,
+    //     "GB" => CurrencyCode.GBP,
+    //     _ => throw new NotSupportedException($"Unsupported destination country: {country}")
+    // };
+    // Total = Total.ConvertTo(targetCurrency).GetAwaiter().GetResult();
+    // Console.Write($" Converted total cost to {targetCurrency}: {Total}.");
     //make it pretty i.e. to X.99 instead of X.YY and round to nearest 0.99 or 0.49 depending on the price range, also make sure it doesn't end up lower than the production cost after conversion
     Total = Total.Amount switch
     {
@@ -153,7 +153,7 @@ static int CalculateVariantPrice(int shippingPrice, int productionPrice, decimal
     Console.WriteLine($"Rounded total price: {Total}.");
 
     //convert back to usd
-    Total = Total.ConvertTo(CurrencyCode.USD).GetAwaiter().GetResult();
+    // Total = Total.ConvertTo(CurrencyCode.USD).GetAwaiter().GetResult();
     Console.WriteLine($"Converted total cost back to USD: {Total}.");
 
     return checked((int)(Total.Amount * 100));
