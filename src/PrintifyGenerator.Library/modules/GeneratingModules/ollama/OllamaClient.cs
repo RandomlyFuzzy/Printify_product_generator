@@ -124,15 +124,20 @@ public class OllamaClient : IDisposable
     }
 
     // 🖼️ 9. Generate with image (multimodal)
-    public async Task<string> GenerateWithImageAsync(string model, string prompt, string imagePath)
+    public async Task<string> GenerateWithImageAsync(string model, string prompt, params string[] imagePaths)
     {
-        var base64Image = Convert.ToBase64String(await File.ReadAllBytesAsync(imagePath));
+        var base64Images = new List<string>();
+        foreach (var imagePath in imagePaths)
+        {
+            var imageBytes = await File.ReadAllBytesAsync(imagePath);
+            base64Images.Add(Convert.ToBase64String(imageBytes));
+        }
 
         var body = JsonSerializer.Serialize(new
         {
             model,
             prompt,
-            images = new[] { base64Image },
+            images = base64Images,
             stream = false
         });
 
@@ -154,21 +159,36 @@ public class OllamaClient : IDisposable
        
     }
 
-
     public async IAsyncEnumerable<string> GenerateWithImageStreamAsync(
     string model,
     string prompt,
-    string imagePath,
+    string imagePaths,
     [System.Runtime.CompilerServices.EnumeratorCancellation] CancellationToken cancellationToken = default)
     {
-        var imageBytes = await File.ReadAllBytesAsync(imagePath, cancellationToken);
-        var base64Image = Convert.ToBase64String(imageBytes);
+        await foreach(var response in GenerateWithImagesStreamAsync(model, prompt, new string[]{imagePaths}, cancellationToken))
+        {
+            yield return response;
+        }
+    }
+    public async IAsyncEnumerable<string> GenerateWithImagesStreamAsync(
+    string model,
+    string prompt,
+    string[] imagePaths,
+    [System.Runtime.CompilerServices.EnumeratorCancellation] CancellationToken cancellationToken = default)
+    {
+        List<string> base64Images = new();
+        foreach (var imagePath in imagePaths)
+        {
+            var imageBytes = await File.ReadAllBytesAsync(imagePath, cancellationToken);
+            var base64Image = Convert.ToBase64String(imageBytes);
+            base64Images.Add(base64Image);
+        }
 
         var requestBody = JsonSerializer.Serialize(new
         {
             model,
             prompt,
-            images = new[] { base64Image },
+            images = base64Images,
             stream = true
         });
 

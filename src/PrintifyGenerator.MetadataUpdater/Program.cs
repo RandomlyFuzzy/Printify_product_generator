@@ -1,202 +1,187 @@
-var repositoryRoot = ResolveRepositoryRoot();
-if (repositoryRoot is null)
-{
-    Console.Error.WriteLine("[ERROR] Could not locate the repository root.");
-    return 1;
-}
+using System.Text.Json;
 
-Directory.SetCurrentDirectory(repositoryRoot);
 
-ProductMetadataUpdaterSettings settings;
-try
-{
-    settings = ProductMetadataUpdaterSettings.Load(repositoryRoot, args);
-}
-catch (Exception ex)
-{
-    Console.Error.WriteLine($"[ERROR] {ex.Message}");
-    return 1;
-}
 
-var client = new PrintifyClient(settings.Token);
-
-Shop stagingShop;
-Shop publishingShop;
-try
+class Program
 {
-    var shops = await client.GetShopsAsync();
-    stagingShop = settings.ResolveStagingShop(shops);
-    publishingShop = settings.ResolvePublishingShop(shops, stagingShop.Id);
-}
-catch (Exception ex)
-{
-    Console.Error.WriteLine($"[ERROR] Failed to resolve the staging/publishing Printify shops: {ex.Message}");
-    return 1;
-}
-
-Console.WriteLine($"Staging shop: {stagingShop.Id} ({stagingShop.Title}).");
-Console.WriteLine($"Publishing shop: {publishingShop.Id} ({publishingShop.Title}).");
-if (stagingShop.Id == publishingShop.Id)
-{
-    Console.WriteLine("Same-shop mode is enabled. The chosen product will be updated in place only. No clone, delete, or draft cleanup will occur.");
-}
-Console.WriteLine(settings.ApplyChanges
-    ? stagingShop.Id == publishingShop.Id
-        ? "Live mode is enabled. The best GB-priced source product from each group will be updated in place only; nothing will be published."
-        : "Live mode is enabled. The best GB-priced staged draft from each group will be transferred as a draft only; nothing will be published."
-    : "Dry-run mode is enabled. No products will be transferred, updated, deleted, or published.");
-Console.WriteLine($"Metadata channel: {settings.MetadataChannel}");
-Console.WriteLine($"Shipping country: {settings.ShippingCountryCode}");
-Console.WriteLine($"Pricing rule: {settings.MarginPercent:0.##}% over production plus first-item shipping.");
-Console.WriteLine($"Desired variant quantity: {settings.DesiredVariantQuantity} (informational only; Printify product updates do not expose writable inventory quantities).");
-
-if (!string.IsNullOrWhiteSpace(settings.ConfiguredStagingShopName))
-{
-    Console.WriteLine($"Configured staging shop name: {settings.ConfiguredStagingShopName}");
-}
-
-if (!string.IsNullOrWhiteSpace(settings.ConfiguredPublishingShopName))
-{
-    Console.WriteLine($"Configured publishing shop name: {settings.ConfiguredPublishingShopName}");
-}
-
-if (settings.TransferLimit.HasValue)
-{
-    Console.WriteLine($"Transfer limit: {settings.TransferLimit.Value}");
-}
-
-if (settings.ProductIds.Count > 0)
-{
-    Console.WriteLine($"Product filters: {string.Join(", ", settings.ProductIds.OrderBy(id => id, StringComparer.OrdinalIgnoreCase))}");
-}
-
-using var cancellation = new CancellationTokenSource();
-Console.CancelKeyPress += (_, eventArgs) =>
-{
-    eventArgs.Cancel = true;
-    if (!cancellation.IsCancellationRequested)
+    static HttpClient httpClient = new();
+    static string CurrentDebugPlace = string.Empty;
+    static async Task<int> Main(string[] args)
     {
-        Console.WriteLine("Cancellation requested. Waiting for the current product to finish...");
-        cancellation.Cancel();
-    }
-};
+        var repositoryRoot = ResolveRepositoryRoot();
 
-var draftsRoot = Path.Combine(repositoryRoot, "src", "data", "staging", "drafts");
-var blueprintDetailsDirectory = Path.Combine(repositoryRoot, "src", "data", "Cached", "blueprint_details");
-var updater = new ProductMetadataUpdater(
-    client,
-    stagingShop.Id,
-    publishingShop.Id,
-    draftsRoot,
-    PrintifyBlueprintDatabase.CreateQueryApi(blueprintDetailsDirectory),
-    settings);
-
-try
-{
-    var summary = await updater.RunOnceAsync(cancellation.Token);
-    PrintSummary(summary, settings.ApplyChanges);
-    return summary.HasFailures ? 1 : 0;
-}
-catch (OperationCanceledException) when (cancellation.IsCancellationRequested)
-{
-    Console.Error.WriteLine("[ERROR] Metadata transfer run cancelled.");
-    return 1;
-}
-catch (Exception ex)
-{
-    Console.Error.WriteLine($"[ERROR] Metadata transfer run failed: {ex.Message}");
-    return 1;
-}
-
-static void PrintSummary(ProductMetadataUpdateRunSummary summary, bool applyChanges)
-{
-    Console.WriteLine();
-    Console.WriteLine($"Run completed in {(summary.CompletedAt - summary.StartedAt).TotalSeconds:F1}s.");
-    Console.WriteLine($"Mode: {(summary.IsInPlaceMode ? "in-place update" : "cross-shop transfer")}");
-    Console.WriteLine($"Shipping country: {summary.ShippingCountryCode}");
-    Console.WriteLine($"Margin percent: {summary.MarginPercent:0.##}");
-    Console.WriteLine($"Draft records loaded: {summary.DraftRecordsLoaded}");
-    Console.WriteLine($"Draft load failures: {summary.DraftLoadFailures}");
-    if (summary.IsInPlaceMode)
-    {
-        Console.WriteLine($"Products discovered: {summary.InPlaceProductsDiscovered}");
-        Console.WriteLine($"Products processed: {summary.InPlaceProductsProcessed}");
-        Console.WriteLine($"Products skipped by filter: {summary.InPlaceProductsSkippedByFilter}");
-        Console.WriteLine($"Products matched to metadata source: {summary.InPlaceProductsMatched}");
-        Console.WriteLine($"Products reconstructed from lookup data: {summary.InPlaceProductsMatchedFromFallback}");
-        Console.WriteLine($"Products without metadata source: {summary.InPlaceProductsWithoutDraftMatch}");
-        Console.WriteLine($"Products unchanged: {summary.InPlaceProductsUnchanged}");
-    }
-    else
-    {
-        Console.WriteLine($"Draft groups discovered: {summary.DraftGroupsDiscovered}");
-        Console.WriteLine($"Draft groups processed: {summary.DraftGroupsProcessed}");
-        Console.WriteLine($"Draft groups skipped by filter: {summary.DraftGroupsSkippedByFilter}");
-        Console.WriteLine($"Draft groups skipped as already transferred: {summary.DraftGroupsSkippedAlreadyTransferred}");
-        Console.WriteLine($"Draft groups without a viable candidate: {summary.DraftGroupsWithoutViableCandidate}");
-        Console.WriteLine($"Staging products discovered: {summary.StagingProductsDiscovered}");
-        Console.WriteLine($"Publishing products discovered: {summary.PublishingProductsDiscovered}");
-        Console.WriteLine($"Candidate drafts evaluated: {summary.CandidateDraftsEvaluated}");
-        Console.WriteLine($"Candidate drafts missing from staging: {summary.CandidateDraftsMissingFromStaging}");
-        Console.WriteLine($"Candidates with delivered-cost cache data: {summary.CandidateDraftsWithDeliveredCost}");
-        Console.WriteLine($"Candidates with production-only cache data: {summary.CandidateDraftsWithProductionOnlyCost}");
-        Console.WriteLine($"Candidates without cache pricing: {summary.CandidateDraftsWithoutPricing}");
-        Console.WriteLine($"Draft groups selected for transfer: {summary.DraftGroupsSelectedForTransfer}");
-    }
-    Console.WriteLine(applyChanges
-        ? summary.IsInPlaceMode
-            ? $"Products updated in place: {summary.TransfersCompleted}"
-            : $"Drafts transferred: {summary.TransfersCompleted}"
-        : summary.IsInPlaceMode
-            ? $"Products that would be updated in place: {summary.TransfersPlanned}"
-            : $"Drafts that would be transferred: {summary.TransfersPlanned}");
-    Console.WriteLine(summary.IsInPlaceMode
-        ? $"In-place update failures: {summary.TransferFailures}"
-        : $"Transfer failures: {summary.TransferFailures}");
-    Console.WriteLine($"Variants repriced: {summary.VariantsPriced}");
-    if (!summary.IsInPlaceMode)
-    {
-        Console.WriteLine(applyChanges
-            ? $"Staging products removed: {summary.StagingProductsRemoved}"
-            : $"Staging products that would be removed: {summary.StagingProductsPlannedForRemoval}");
-        Console.WriteLine(applyChanges
-            ? $"Draft records removed: {summary.DraftRecordsRemoved}"
-            : $"Draft records that would be removed: {summary.DraftRecordsPlannedForRemoval}");
-        Console.WriteLine($"Staging cleanup failures: {summary.StagingProductRemovalFailures}");
-        Console.WriteLine($"Draft record cleanup failures: {summary.DraftRecordRemovalFailures}");
-        Console.WriteLine($"Target clone cleanup failures: {summary.TargetCloneCleanupFailures}");
-    }
-    Console.WriteLine($"Desired variant quantity: {summary.DesiredVariantQuantity} (not applied; Printify product updates only support variant price and is_enabled).");
-    Console.WriteLine(summary.IsInPlaceMode
-        ? $"Updated products where quantity could not be applied: {summary.ProductsWithUnsupportedQuantityRequest}"
-        : $"Transferred products where quantity could not be applied: {summary.ProductsWithUnsupportedQuantityRequest}");
-    Console.WriteLine();
-}
-
-static string? ResolveRepositoryRoot()
-{
-    var probeRoots = new[]
-    {
-        Directory.GetCurrentDirectory(),
-        AppContext.BaseDirectory
-    }
-    .Where(path => !string.IsNullOrWhiteSpace(path))
-    .Distinct(StringComparer.OrdinalIgnoreCase);
-
-    foreach (var probeRoot in probeRoots)
-    {
-        var current = new DirectoryInfo(Path.GetFullPath(probeRoot));
-
-        while (current is not null)
+        if (repositoryRoot is null)
         {
-            if (File.Exists(Path.Combine(current.FullName, "PrintifyGenerator.sln")))
-            {
-                return current.FullName;
-            }
-
-            current = current.Parent;
+            Console.Error.WriteLine("[ERROR] Could not locate the repository root.");
+            return 1;
         }
+
+        Directory.SetCurrentDirectory(repositoryRoot);
+
+        ProductMetadataUpdaterSettings settings;
+        try
+        {
+            settings = ProductMetadataUpdaterSettings.Load(repositoryRoot, args);
+        }
+        catch (Exception ex)
+        {
+            Console.Error.WriteLine($"[ERROR] {ex.Message}");
+            return 1;
+        }
+        var client = new PrintifyClient(settings.Token);
+        var ollamaClient = new OllamaClient("http://localhost:11434");
+
+        Shop stagingShop;
+        try
+        {
+            var shops = await client.GetShopsAsync();
+            stagingShop = settings.ResolveStagingShop(shops);
+        }
+        catch (Exception ex)
+        {
+            Console.Error.WriteLine($"[ERROR] Failed to resolve the staging/publishing Printify shops: {ex.Message} at {CurrentDebugPlace}");
+            return 1;
+        }
+
+        Console.WriteLine($"Staging shop: {stagingShop.Id} ({stagingShop.Title}).");
+
+
+        var Products = await client.GetAllProductsAsync(stagingShop.Id);
+        Console.WriteLine($"Products in staging shop: {Products.Count()}");
+
+        foreach (var product in Products)
+        {
+            //1.download all the images for the product and save them to a local folder
+            //download images to a temp folder 
+            //2. generate metadata for the product using the ollama client and the downloaded images
+            //3. update the product metadata in printify using the client
+            //4. cleanup the temp images
+            var tempFolder = Path.Combine(Path.GetTempPath(), Guid.NewGuid().ToString());
+            Directory.CreateDirectory(tempFolder);
+            var imagePaths = await DownloadProductImagesAsync(client, product, tempFolder);
+            bool completed = false;
+            while(!completed){
+                try
+                {        
+                    var metadata = await GenerateMetadataAsync(ollamaClient, imagePaths);
+                    await UpdateProductMetadataAsync(client, product, metadata);
+                }catch (Exception ex)
+                {
+                    Console.Error.WriteLine($"[ERROR] Failed to process product {product.Id}: {ex.Message} at {CurrentDebugPlace}");
+                }
+                finally
+                {
+                    Directory.Delete(tempFolder, true);
+                }
+                completed = true;
+            }
+        }
+        return 0;
     }
 
-    return null;
+
+
+    static async Task<IEnumerable<string>> DownloadProductImagesAsync(PrintifyClient client, Product product, string tempFolder)
+    {
+        var imagePaths = new List<string>();
+        int id = 0;
+        Console.WriteLine($"Downloading images for product {product.Id} total images: {product.Images.Count()}");
+        foreach (var image in product.Images)
+        {
+            var imageData = await httpClient.GetByteArrayAsync(image.Src);
+            var extension = Path.GetExtension(image.Src).Split('?')[0]; // Handle URLs with query parameters
+            var imagePath = Path.Combine(tempFolder, $"{id++}{extension}");
+            await File.WriteAllBytesAsync(imagePath, imageData);
+            imagePaths.Add(imagePath);
+        }
+        return imagePaths;
+    }
+
+    static async Task<ProductMetadata> GenerateMetadataAsync(OllamaClient ollamaClient, IEnumerable<string> imagePaths)
+    {
+        // For simplicity, we'll just send the image paths to the model and get back some dummy metadata.
+        // In a real implementation, you'd likely want to send the actual image data or use a more complex prompt.
+        var prompt = $@"Generate metadata for a product as if you are an e-commerce product listing generator.
+            you should provide as much detail as possible with as many keywords as possible based on the images provided.
+            As well as extra possible uses never use copywriten content like names of brands or celebrities but you can use 
+            general terms like 'inspired by celebrity styles' or 'similar to popular brand aesthetics' if the images 
+            suggest that style. Make sure the Title uses as much of the 80 character limit as possible and is very 
+            descriptive. The description should be detailed and include potential use cases for the product. 
+            The tags should be relevant keywords that potential customers might search for when looking for a 
+            product like this.
+
+            Provide the metadata in JSON format with the following structure:
+            {{
+                ""title"": ""Generated Product Title"",
+                ""description"": ""Generated product description based on the images."",
+                ""tags"": [""tag1"", ""tag2"", ""tag3""]
+            }}
+        ";
+        CurrentDebugPlace = "Before calling GenerateWithImageAsync";
+        string response = "";
+        await foreach(var data in ollamaClient.GenerateWithImagesStreamAsync("gemma4:e2b", prompt, imagePaths.ToArray()))
+        {
+            response += data;
+            Console.Write(data);
+        }
+        CurrentDebugPlace = "After calling GenerateWithImageAsync";
+
+        response = response.Trim();
+        response = response.Substring(response.IndexOf('{')); // Ensure we start parsing from the first '{' character in case there is any extra text before the JSON.
+        response = response.Substring(0, response.LastIndexOf('}') + 1); // Ensure we end parsing at the last '}' character in case there is any extra text after the JSON.
+
+        return JsonSerializer.Deserialize<ProductMetadata>(response) ?? throw new Exception("Failed to parse metadata from model response.");
+    }
+
+    static async Task UpdateProductMetadataAsync(PrintifyClient client, Product product, ProductMetadata metadata)
+    {
+        // Parse the metadata JSON and update the product in Printify.
+        // This is a simplified example; in a real implementation, you'd want to handle errors and edge cases.
+        if (metadata is null)
+        {
+            Console.Error.WriteLine($"[ERROR] Failed to parse metadata JSON. Skipping product {product.Id}.");
+            return;
+        }
+
+        var updatedProduct = new UpdateProductRequest
+        {
+            Title = metadata.title,
+            Description = metadata.description,
+            Tags = metadata.tags.ToList(),
+            // Note: In a real implementation, you'd likely want to preserve other product properties and only update the relevant metadata fields.
+        };
+        CurrentDebugPlace = "Before calling UpdateProductAsync";
+        await client.UpdateProductAsync(product.ShopId,product.Id, updatedProduct);
+        CurrentDebugPlace = "After calling UpdateProductAsync";
+    }
+
+
+    static string? ResolveRepositoryRoot()
+    {
+        var probeRoots = new[]
+        {
+            Directory.GetCurrentDirectory(),
+            AppContext.BaseDirectory
+        }
+        .Where(path => !string.IsNullOrWhiteSpace(path))
+        .Distinct(StringComparer.OrdinalIgnoreCase);
+
+        foreach (var probeRoot in probeRoots)
+        {
+            var current = new DirectoryInfo(Path.GetFullPath(probeRoot));
+
+            while (current is not null)
+            {
+                if (File.Exists(Path.Combine(current.FullName, "PrintifyGenerator.sln")))
+                {
+                    return current.FullName;
+                }
+
+                current = current.Parent;
+            }
+        }
+
+        return null;
+    }
 }
+record ProductMetadata(string title, string description, IEnumerable<string> tags);
