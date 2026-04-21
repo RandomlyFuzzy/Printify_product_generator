@@ -91,8 +91,8 @@ while(!Console.KeyAvailable)
         ""negative"": ""ugly, deformed, blurry, low quality, watermark, text, bad anatomy, extra limbs"",
         ""width"": <number>,
         ""height"": <number>,
-        ""steps"": <range between 20-50>,
-        ""cfg"": <range between 3 and 7>
+        ""steps"": <range between 7-10>,
+        ""cfg"": <range between 1-3>
     }
     ]";
 
@@ -220,7 +220,7 @@ async IAsyncEnumerable<Prompt> GeneratePrompt(
 
 async IAsyncEnumerable<string> GenerateImage(IAsyncEnumerable<Prompt> prompts)
 {
-    string path = "src/data/workloads/illustration_lora_base.json";
+    string path = "src/data/workloads/better_default.json";//illustration_lora_base.json";
     JobStatus jobStatus;
     int job = 0;
     await foreach (var prompt in prompts)
@@ -233,16 +233,16 @@ async IAsyncEnumerable<string> GenerateImage(IAsyncEnumerable<Prompt> prompts)
 
         // possative is 76:6.inputs.text
         // negative is 76:7.inputs.text
-        workflowCopy = JsonXPath.Set(workflowCopy, "//76:6/inputs/text", JsonValue.Create(prompt.positive));
-        workflowCopy = JsonXPath.Set(workflowCopy, "//76:7/inputs/text", JsonValue.Create(prompt.negative));
+        workflowCopy = JsonXPath.Set(workflowCopy, "//30:45/inputs/text", JsonValue.Create(prompt.positive));
+        workflowCopy = JsonXPath.Set(workflowCopy, "//30:85/inputs/text", JsonValue.Create(prompt.negative));
 
         //76:58.inputs.width/height 
-        workflowCopy = JsonXPath.Set(workflowCopy, "//76:58/inputs/width", JsonValue.Create(prompt.width));
-        workflowCopy = JsonXPath.Set(workflowCopy, "//76:58/inputs/height", JsonValue.Create(prompt.height));
+        workflowCopy = JsonXPath.Set(workflowCopy, "//30:41/inputs/width", JsonValue.Create(prompt.width));
+        workflowCopy = JsonXPath.Set(workflowCopy, "//30:41/inputs/height", JsonValue.Create(prompt.height));
 
         //76:3.inputs.steps/cfg
-        workflowCopy = JsonXPath.Set(workflowCopy, "//76:3/inputs/steps", JsonValue.Create(prompt.steps));
-        workflowCopy = JsonXPath.Set(workflowCopy, "//76:3/inputs/cfg", JsonValue.Create(prompt.cfg));
+        workflowCopy = JsonXPath.Set(workflowCopy, "//30:44/inputs/steps", JsonValue.Create(prompt.steps));
+        workflowCopy = JsonXPath.Set(workflowCopy, "//30:44/inputs/cfg", JsonValue.Create(prompt.cfg));
 
 
         Console.WriteLine($"Dispatching image job to {comfyNode.Node.Name} ({comfyNode.Node.BaseUrl})");
