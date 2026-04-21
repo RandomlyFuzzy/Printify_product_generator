@@ -81,16 +81,17 @@ Console.WriteLine($"Using {activeOllamaNodes.Count} Ollama node(s) and {activeCo
 while(!Console.KeyAvailable)
 {
     const string initalPrompt = @"You are a prompt engineer for AI image generation. Output ONLY a valid JSON array with no markdown, no explanation, no code fences, and no extra text — just raw JSON.
-    Generate 3 creative Stable Diffusion prompts for print-on-demand products (t-shirts, posters, mugs). Each should be visually striking, commercially appealing, and varied in style (e.g. illustration, watercolor, retro, minimalist, photorealistic).
-    You should try and make it appealing to a wide audience and not too niche. Avoid text in the image, as it can be hard to read on products. Each prompt should have a positive part describing the main subject and style, and a negative part specifying what to avoid.
+    Generate 2 creative Stable Diffusion prompts they must be different from each other and not similar. 
+    Each prompt should be detailed and include style, lighting, and quality boosters to create high-quality images the prompt must be as descriptive as possible it should have a subject, location, and context. 
+    Also generate a negative prompt for each to avoid unwanted elements in the image including text glypes and weird artifacting.
     Due to what this is going to be used for you can you make it either landscape portrait or square to give a wide range of products the prompt can be put onto.
     Use this exact format:
     [
     {
         ""positive"": ""detailed positive prompt here, comma separated tags, style, lighting, quality boosters"",
         ""negative"": ""ugly, deformed, blurry, low quality, watermark, text, bad anatomy, extra limbs"",
-        ""width"": <number>,
-        ""height"": <number>,
+        ""width"": <number somewhere around 512-1024>,
+        ""height"": <number somewhere around 512-1024>,
         ""steps"": <range between 7-10>,
         ""cfg"": <range between 1-3>
     }
@@ -123,7 +124,6 @@ while(!Console.KeyAvailable)
         {
             await foreach(var suitabilities in GenerateImageSuitability(images, SutabilityPrompt))
             {
-                Console.WriteLine(suitabilities.PrityJsonString());
                 WriteSuitabilityRecord(suitabilities);
                 Console.WriteLine("Generated suitability for " + suitabilities.imageURL);
             }
@@ -148,7 +148,7 @@ async IAsyncEnumerable<ImageSuitability> GenerateImageSuitability(List<string> i
             await foreach (var response in ollamaNode.Client.GenerateWithImageStreamAsync(orchestrationSettings.SuitabilityModel, SutabilityPrompt, image))
             {
                 totalResp += response;
-                // Console.Write(response);
+                Console.Write(response);
             }
             totalResp = totalResp.Substring(totalResp.IndexOf("{")); // get the json part only
             totalResp = totalResp.Substring(0,totalResp.LastIndexOf("}")+1); // get the json part only
@@ -166,7 +166,6 @@ async IAsyncEnumerable<ImageSuitability> GenerateImageSuitability(List<string> i
             Console.WriteLine($"Error generating suitability for {image}: {ex.Message}");
             goto start;
         }
-        Console.WriteLine(suitability.PrityJsonString());
         yield return suitability;
     }
 }
@@ -187,7 +186,7 @@ async IAsyncEnumerable<Prompt> GeneratePrompt(
 
             await foreach (var response in ollamaNode.Client.GenerateStreamAsync(orchestrationSettings.PromptModel, initalPrompt))
             {
-                // Console.Write(response);
+                Console.Write(response);
                 returnedPrompt += response;
             }
             //json parse the returned prompt
@@ -200,6 +199,13 @@ async IAsyncEnumerable<Prompt> GeneratePrompt(
             if (promptList2 == null || promptList2.Count == 0)
             {
                 continue; 
+            }
+            foreach (var prompt in promptList2)
+            {
+                prompt.width = Math.Clamp(prompt.width, 256, 1024);
+                prompt.height = Math.Clamp(prompt.height, 256, 1024);
+                prompt.steps = Math.Clamp(prompt.steps, 7, 10);
+                prompt.cfg = Math.Clamp(prompt.cfg, 1f, 3f);
             }
             prompts = promptList2;
         }
