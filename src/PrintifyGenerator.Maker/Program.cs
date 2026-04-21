@@ -82,7 +82,8 @@ while(!Console.KeyAvailable)
 {
     const string initalPrompt = @"You are a prompt engineer for AI image generation. Output ONLY a valid JSON array with no markdown, no explanation, no code fences, and no extra text — just raw JSON.
     Generate 2 creative Stable Diffusion prompts they must be different from each other and not similar. 
-    Each prompt should be detailed and include style, lighting, and quality boosters to create high-quality images the prompt must be as descriptive as possible it should have a subject, location, and context. 
+    Each prompt should be detailed and include art style(water colours, charcoal, digital painting. etc anything to make it seem less artificial), lighting, and quality boosters to create high-quality images the prompt must be as descriptive as possible it should have a subject, location, and context.
+    The prompts should be suitable for a general audience and be able to be put onto a variety of products like stickers, t-shirts, mugs, and posters without being inappropriate or offensive.
     Also generate a negative prompt for each to avoid unwanted elements in the image including text glypes and weird artifacting.
     Due to what this is going to be used for you can you make it either landscape portrait or square to give a wide range of products the prompt can be put onto.
     Use this exact format:
