@@ -364,7 +364,7 @@ public class OllamaClient : IDisposable
             {
                 temperature = 0.7,
                 top_p = 0.9,
-                num_predict = 200
+                num_predict = 2000000
             }
         });
 

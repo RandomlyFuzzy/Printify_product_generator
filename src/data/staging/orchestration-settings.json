@@ -1,5 +1,5 @@
 {
-  "PromptModel": "llama3.2:1b",
+  "PromptModel": "gemma4:e4b",
   "SuitabilityModel": "gemma4:e4b",
   "MockupVisionModel": "gemma4:e4b",
   "MinimumPublishScore": 7,
@@ -7,7 +7,7 @@
     {
       "Id": "4495a0d38e0641b09dcfa1f63193b31a",
       "Name": "laptop",
-      "BaseUrl": "http://localhost:11434",
+      "BaseUrl": "http://192.168.0.131:11434",
       "Enabled": true
     }
   ],
@@ -15,7 +15,7 @@
     {
       "Id": "comfyui-151",
       "Name": "ComfyUI 151",
-      "BaseUrl": "http://192.168.0.151:8188",
+      "BaseUrl": "http://localhost:8188",
       "Enabled": true
     }
   ]

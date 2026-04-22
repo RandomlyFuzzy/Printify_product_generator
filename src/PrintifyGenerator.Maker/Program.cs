@@ -81,18 +81,20 @@ Console.WriteLine($"Using {activeOllamaNodes.Count} Ollama node(s) and {activeCo
 while(!Console.KeyAvailable)
 {
     const string initalPrompt = @"You are a prompt engineer for AI image generation. Output ONLY a valid JSON array with no markdown, no explanation, no code fences, and no extra text — just raw JSON.
-    Generate 3 creative Stable Diffusion prompts for print-on-demand products (t-shirts, posters, mugs). Each should be visually striking, commercially appealing, and varied in style (e.g. illustration, watercolor, retro, minimalist, photorealistic).
-    You should try and make it appealing to a wide audience and not too niche. Avoid text in the image, as it can be hard to read on products. Each prompt should have a positive part describing the main subject and style, and a negative part specifying what to avoid.
+    Generate 2 creative Stable Diffusion prompts they must be different from each other and not similar. 
+    Each prompt should be detailed and include art style(water colours, charcoal, digital painting. etc anything to make it seem less artificial), lighting, and quality boosters to create high-quality images the prompt must be as descriptive as possible it should have a subject, location, and context.
+    The prompts should be suitable for a general audience and be able to be put onto a variety of products like stickers, t-shirts, mugs, and posters without being inappropriate or offensive.
+    Also generate a negative prompt for each to avoid unwanted elements in the image including text glypes and weird artifacting.
     Due to what this is going to be used for you can you make it either landscape portrait or square to give a wide range of products the prompt can be put onto.
     Use this exact format:
     [
     {
         ""positive"": ""detailed positive prompt here, comma separated tags, style, lighting, quality boosters"",
         ""negative"": ""ugly, deformed, blurry, low quality, watermark, text, bad anatomy, extra limbs"",
-        ""width"": <number>,
-        ""height"": <number>,
-        ""steps"": <range between 20-50>,
-        ""cfg"": <range between 3 and 7>
+        ""width"": <number somewhere around 512-1024>,
+        ""height"": <number somewhere around 512-1024>,
+        ""steps"": <range between 7-10>,
+        ""cfg"": <range between 1-3>
     }
     ]";
 
@@ -123,7 +125,6 @@ while(!Console.KeyAvailable)
         {
             await foreach(var suitabilities in GenerateImageSuitability(images, SutabilityPrompt))
             {
-                Console.WriteLine(suitabilities.PrityJsonString());
                 WriteSuitabilityRecord(suitabilities);
                 Console.WriteLine("Generated suitability for " + suitabilities.imageURL);
             }
@@ -148,7 +149,7 @@ async IAsyncEnumerable<ImageSuitability> GenerateImageSuitability(List<string> i
             await foreach (var response in ollamaNode.Client.GenerateWithImageStreamAsync(orchestrationSettings.SuitabilityModel, SutabilityPrompt, image))
             {
                 totalResp += response;
-                // Console.Write(response);
+                Console.Write(response);
             }
             totalResp = totalResp.Substring(totalResp.IndexOf("{")); // get the json part only
             totalResp = totalResp.Substring(0,totalResp.LastIndexOf("}")+1); // get the json part only
@@ -166,7 +167,6 @@ async IAsyncEnumerable<ImageSuitability> GenerateImageSuitability(List<string> i
             Console.WriteLine($"Error generating suitability for {image}: {ex.Message}");
             goto start;
         }
-        Console.WriteLine(suitability.PrityJsonString());
         yield return suitability;
     }
 }
@@ -187,7 +187,7 @@ async IAsyncEnumerable<Prompt> GeneratePrompt(
 
             await foreach (var response in ollamaNode.Client.GenerateStreamAsync(orchestrationSettings.PromptModel, initalPrompt))
             {
-                // Console.Write(response);
+                Console.Write(response);
                 returnedPrompt += response;
             }
             //json parse the returned prompt
@@ -200,6 +200,13 @@ async IAsyncEnumerable<Prompt> GeneratePrompt(
             if (promptList2 == null || promptList2.Count == 0)
             {
                 continue; 
+            }
+            foreach (var prompt in promptList2)
+            {
+                prompt.width = Math.Clamp(prompt.width, 256, 1024);
+                prompt.height = Math.Clamp(prompt.height, 256, 1024);
+                prompt.steps = Math.Clamp(prompt.steps, 7, 10);
+                prompt.cfg = Math.Clamp(prompt.cfg, 1f, 3f);
             }
             prompts = promptList2;
         }
@@ -220,7 +227,7 @@ async IAsyncEnumerable<Prompt> GeneratePrompt(
 
 async IAsyncEnumerable<string> GenerateImage(IAsyncEnumerable<Prompt> prompts)
 {
-    string path = "src/data/workloads/illustration_lora_base.json";
+    string path = "src/data/workloads/better_default.json";//illustration_lora_base.json";
     JobStatus jobStatus;
     int job = 0;
     await foreach (var prompt in prompts)
@@ -233,16 +240,16 @@ async IAsyncEnumerable<string> GenerateImage(IAsyncEnumerable<Prompt> prompts)
 
         // possative is 76:6.inputs.text
         // negative is 76:7.inputs.text
-        workflowCopy = JsonXPath.Set(workflowCopy, "//76:6/inputs/text", JsonValue.Create(prompt.positive));
-        workflowCopy = JsonXPath.Set(workflowCopy, "//76:7/inputs/text", JsonValue.Create(prompt.negative));
+        workflowCopy = JsonXPath.Set(workflowCopy, "//30:45/inputs/text", JsonValue.Create(prompt.positive));
+        workflowCopy = JsonXPath.Set(workflowCopy, "//30:85/inputs/text", JsonValue.Create(prompt.negative));
 
         //76:58.inputs.width/height 
-        workflowCopy = JsonXPath.Set(workflowCopy, "//76:58/inputs/width", JsonValue.Create(prompt.width));
-        workflowCopy = JsonXPath.Set(workflowCopy, "//76:58/inputs/height", JsonValue.Create(prompt.height));
+        workflowCopy = JsonXPath.Set(workflowCopy, "//30:41/inputs/width", JsonValue.Create(prompt.width));
+        workflowCopy = JsonXPath.Set(workflowCopy, "//30:41/inputs/height", JsonValue.Create(prompt.height));
 
         //76:3.inputs.steps/cfg
-        workflowCopy = JsonXPath.Set(workflowCopy, "//76:3/inputs/steps", JsonValue.Create(prompt.steps));
-        workflowCopy = JsonXPath.Set(workflowCopy, "//76:3/inputs/cfg", JsonValue.Create(prompt.cfg));
+        workflowCopy = JsonXPath.Set(workflowCopy, "//30:44/inputs/steps", JsonValue.Create(prompt.steps));
+        workflowCopy = JsonXPath.Set(workflowCopy, "//30:44/inputs/cfg", JsonValue.Create(prompt.cfg));
 
 
         Console.WriteLine($"Dispatching image job to {comfyNode.Node.Name} ({comfyNode.Node.BaseUrl})");
