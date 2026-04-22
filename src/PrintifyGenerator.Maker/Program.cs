@@ -80,17 +80,15 @@ Console.WriteLine($"Using {activeOllamaNodes.Count} Ollama node(s) and {activeCo
 
 while(!Console.KeyAvailable)
 {
-    const string initalPrompt = @"You are a prompt engineer for AI image generation. Output ONLY a valid JSON array with no markdown, no explanation, no code fences, and no extra text — just raw JSON.
-    Generate 2 creative Stable Diffusion prompts they must be different from each other and not similar. 
-    Each prompt should be detailed and include art style(water colours, charcoal, digital painting. etc anything to make it seem less artificial), lighting, and quality boosters to create high-quality images the prompt must be as descriptive as possible it should have a subject, location, and context.
-    The prompts should be suitable for a general audience and be able to be put onto a variety of products like stickers, t-shirts, mugs, and posters without being inappropriate or offensive.
-    Also generate a negative prompt for each to avoid unwanted elements in the image including text glypes and weird artifacting.
-    Due to what this is going to be used for you can you make it either landscape portrait or square to give a wide range of products the prompt can be put onto.
-    Use this exact format:
+    const string initalPrompt = @"Generate varied illustration prompt ideas for Printify.
+    Keep each result clearly different from the others.
+    Write a positive prompt describing the artwork.
+    Write a negative prompt listing common flaws and unwanted elements.
+    Use this exact json format:
     [
     {
-        ""positive"": ""detailed positive prompt here, comma separated tags, style, lighting, quality boosters"",
-        ""negative"": ""ugly, deformed, blurry, low quality, watermark, text, bad anatomy, extra limbs"",
+        ""positive"": ""art prompt here"",
+        ""negative"": ""ugly, deformed, blurry, low quality, watermark, text, bad anatomy, extra limbs, duplicate elements"",
         ""width"": <number somewhere around 512-1024>,
         ""height"": <number somewhere around 512-1024>,
         ""steps"": <range between 7-10>,
@@ -165,6 +163,7 @@ async IAsyncEnumerable<ImageSuitability> GenerateImageSuitability(List<string> i
         catch(Exception ex)
         {
             Console.WriteLine($"Error generating suitability for {image}: {ex.Message}");
+            totalResp = "";
             goto start;
         }
         yield return suitability;
@@ -190,6 +189,10 @@ async IAsyncEnumerable<Prompt> GeneratePrompt(
                 Console.Write(response);
                 returnedPrompt += response;
             }
+
+            returnedPrompt = returnedPrompt.Trim();
+            returnedPrompt = returnedPrompt.Substring(returnedPrompt.IndexOf("[")); // get the json part only
+            returnedPrompt = returnedPrompt.Substring(0,returnedPrompt.LastIndexOf("]")+1); // get the json part only
             //json parse the returned prompt
             //if the end doesnt contain ] then add it to the end to make it a valid json
             if (!returnedPrompt.Trim().EndsWith("]")){
@@ -215,6 +218,7 @@ async IAsyncEnumerable<Prompt> GeneratePrompt(
             // Console.WriteLine("Error: "+ex.Message);
             // Console.WriteLine(returnedPrompt);
         }
+        Console.WriteLine($"Generated {prompts.Count} prompt(s) on {ollamaNode.Node.Name} ({ollamaNode.Node.BaseUrl})");
         foreach (var prompt in prompts)
         {
             Console.WriteLine("Generated Prompt "+(cnt++));

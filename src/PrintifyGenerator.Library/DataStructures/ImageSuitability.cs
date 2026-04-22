@@ -23,7 +23,7 @@ public record ImageSuitability
     public bool DoesViolateLaw { get; set; } = false;
     public bool DoesViolateIPRights { get; set; } = false;
     public bool IsNSFW { get; set; } = false; 
-    public List<string> Issues { get; set; } = new List<string>();
+    public List<string> Issues { get; set; } = new List<string>(){"None","blurry","deformed","watermark","text overlay","bad anatomy","extra limbs","low quality","artifical", "poor composition","unoriginal","lacking creativity"};
     public Scoring Scoring { get; set; } = new Scoring();
 
     public bool isValid()

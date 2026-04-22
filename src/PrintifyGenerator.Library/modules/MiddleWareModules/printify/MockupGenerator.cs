@@ -420,6 +420,7 @@ public class MockupGenerator
             {{catalogueJson}}
 
             being as profesional and concise as possible, you pick the top 5 best fitting blueprints for this image and explain in one sentence why you picked each one.
+            Also exclude that include the word "Glass" in the title as the image is not suitable for glass products. 
             Now that you know what you want to put the image on, as you very well know i need you to tell me in a very concise manner only using the following JSON format:
             [
             {

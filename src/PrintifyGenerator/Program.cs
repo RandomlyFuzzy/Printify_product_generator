@@ -31,7 +31,7 @@ var publishingOverrides = PublishingOverrideStore.Load(dataBasePath);
 
 PrintifyClient printify = new PrintifyClient(token);
 
-OllamaClient? ollama = new OllamaClient();//"http://192.168.0.131:11434");
+OllamaClient? ollama = new OllamaClient("http://localhost:11434");
 // OrchestrationNode? selectedOllamaNode = null;
 // foreach (var candidate in orchestrationSettings.Ollama.Where(node => node.Enabled && !string.IsNullOrWhiteSpace(node.BaseUrl)))
 // {

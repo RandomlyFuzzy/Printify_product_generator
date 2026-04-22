@@ -3,20 +3,20 @@
   "SuitabilityModel": "gemma4:e4b",
   "MockupVisionModel": "gemma4:e4b",
   "MinimumPublishScore": 7,
-  "Ollama": [
-    {
-      "Id": "4495a0d38e0641b09dcfa1f63193b31a",
-      "Name": "laptop",
-      "BaseUrl": "http://192.168.0.131:11434",
-      "Enabled": true
-    }
-  ],
+  "Ollama": [{
+    "Name": "Main Ollama Instance",
+    "BaseUrl":"http://192.168.0.131:11434",
+    "Enabled": false
+  },
+  {
+    "Name": "local",
+    "BaseUrl":"http://localhost:11434",
+    "Enabled": true
+  }],
   "ComfyUi": [
-    {
-      "Id": "comfyui-151",
-      "Name": "ComfyUI 151",
-      "BaseUrl": "http://localhost:8188",
-      "Enabled": true
-    }
-  ]
+  {
+    "Name": "Server",
+    "BaseUrl":"http://192.168.0.181:8188",
+    "Enabled": true
+  }]
 }
