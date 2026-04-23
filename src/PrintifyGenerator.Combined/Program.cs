@@ -1,4 +1,6 @@
-﻿var options = RunnerOptions.Parse(args);
+﻿using System.Diagnostics;
+
+var options = RunnerOptions.Parse(args);
 var cancellationSource = new CancellationTokenSource();
 
 Console.CancelKeyPress += (_, eventArgs) =>
@@ -14,8 +16,15 @@ Console.WriteLine($"Pipeline phases: {pipeline.Count}");
 Console.WriteLine($"Discovered bundles: {bundles.Count}");
 Console.WriteLine("Priority: process latest phases first, then create earlier phases when needed.");
 
-var changes = await RunSchedulerAsync(pipeline, bundles, options, cancellationSource.Token);
-Console.WriteLine($"Done. Applied {changes} phase update(s).");
+try
+{
+    var changes = await RunSchedulerAsync(pipeline, bundles, options, cancellationSource.Token);
+    Console.WriteLine($"Done. Applied {changes} phase update(s).");
+}
+catch (OperationCanceledException)
+{
+    Console.WriteLine("Cancelled. Exiting cleanly.");
+}
 
 static async Task<int> RunSchedulerAsync(
     IReadOnlyList<IPhaseGenerator> pipeline,
@@ -24,9 +33,19 @@ static async Task<int> RunSchedulerAsync(
     CancellationToken cancellationToken)
 {
     var updated = 0;
+    var startTimeUtc = DateTime.UtcNow;
+    var measuredSteps = 0;
+    var measuredDuration = TimeSpan.Zero;
+
     for (var i = 0; i < options.MaxSteps; i++)
     {
-        cancellationToken.ThrowIfCancellationRequested();
+        if (cancellationToken.IsCancellationRequested)
+        {
+            Console.WriteLine("[CANCEL] Cancellation requested. Stopping scheduler.");
+            break;
+        }
+
+        var remainingBefore = CountRemainingPhaseUnits(pipeline, bundles);
 
         var next = PickNextWork(pipeline, bundles);
         if (next.bundle is null || next.phase is null)
@@ -35,16 +54,42 @@ static async Task<int> RunSchedulerAsync(
             {
                 var seeded = SeedNewBundle(options.CheckingRoot);
                 bundles.Add(seeded);
-                Console.WriteLine($"Seeded new bundle {seeded.Id}.");
+                Console.WriteLine($"[SEED] {seeded.Id} | bundles={bundles.Count} | remaining={CountRemainingPhaseUnits(pipeline, bundles)}");
                 continue;
             }
 
+            Console.WriteLine($"[IDLE] No runnable work. Remaining units={remainingBefore}.");
             break;
         }
 
-        var result = await next.phase.RunAsync(next.bundle, cancellationToken);
+        var remainingByPhase = BuildRemainingByPhaseMap(pipeline, bundles);
+        var currentPhaseBacklog = remainingByPhase.TryGetValue(next.phase.PhaseNumber, out var backlog) ? backlog : 0;
+        var eta = EstimateEta(startTimeUtc, measuredSteps, measuredDuration, remainingBefore);
+        Console.WriteLine(
+            $"[PROGRESS] step {i + 1}/{options.MaxSteps} | bundle={next.bundle.Id} | phase{next.phase.PhaseNumber} {next.phase.PhaseName} | " +
+            $"phase-backlog={currentPhaseBacklog} | remaining={remainingBefore} | eta={eta}");
+
+        var stepTimer = Stopwatch.StartNew();
+        PhaseExecutionResult result;
+        try
+        {
+            result = await next.phase.RunAsync(next.bundle, cancellationToken);
+        }
+        catch (OperationCanceledException) when (cancellationToken.IsCancellationRequested)
+        {
+            Console.WriteLine("[CANCEL] Cancellation requested while running a phase. Stopping scheduler.");
+            break;
+        }
+        stepTimer.Stop();
+        measuredSteps++;
+        measuredDuration += stepTimer.Elapsed;
+
         var status = result.Success ? (result.Changed ? "OK" : "SKIP") : "ERR";
-        Console.WriteLine($"[{status}] {next.bundle.Id} phase{next.phase.PhaseNumber}: {result.Message}");
+        var remainingAfter = CountRemainingPhaseUnits(pipeline, bundles);
+        var avgStepSeconds = measuredDuration.TotalSeconds / Math.Max(1, measuredSteps);
+        Console.WriteLine(
+            $"[{status}] {next.bundle.Id} phase{next.phase.PhaseNumber} {next.phase.PhaseName}: {result.Message} | " +
+            $"elapsed={stepTimer.Elapsed:mm\\:ss} | avg={avgStepSeconds:F1}s/phase | remaining={remainingAfter}");
         if (result.Changed)
         {
             updated++;
@@ -52,6 +97,49 @@ static async Task<int> RunSchedulerAsync(
     }
 
     return updated;
+}
+
+static int CountRemainingPhaseUnits(IReadOnlyList<IPhaseGenerator> pipeline, IEnumerable<PhaseBundle> bundles)
+{
+    var remaining = 0;
+    foreach (var bundle in bundles)
+    {
+        var completed = bundle.GetHighestCompletedPhase(pipeline);
+        if (completed < pipeline.Count)
+        {
+            remaining += pipeline.Count - completed;
+        }
+    }
+
+    return remaining;
+}
+
+static Dictionary<int, int> BuildRemainingByPhaseMap(IReadOnlyList<IPhaseGenerator> pipeline, IEnumerable<PhaseBundle> bundles)
+{
+    var map = Enumerable.Range(1, pipeline.Count).ToDictionary(phase => phase, _ => 0);
+    foreach (var bundle in bundles)
+    {
+        var completed = bundle.GetHighestCompletedPhase(pipeline);
+        for (var phase = completed + 1; phase <= pipeline.Count; phase++)
+        {
+            map[phase]++;
+        }
+    }
+
+    return map;
+}
+
+static string EstimateEta(DateTime startTimeUtc, int measuredSteps, TimeSpan measuredDuration, int remainingBefore)
+{
+    if (measuredSteps <= 0 || remainingBefore <= 0)
+    {
+        return "n/a";
+    }
+
+    var avgSeconds = measuredDuration.TotalSeconds / measuredSteps;
+    var etaUtc = DateTime.UtcNow.AddSeconds(avgSeconds * remainingBefore);
+    var elapsed = DateTime.UtcNow - startTimeUtc;
+    return $"{etaUtc:HH:mm:ss}Z (~{elapsed:hh\\:mm\\:ss} elapsed)";
 }
 
 static (PhaseBundle? bundle, IPhaseGenerator? phase) PickNextWork(
@@ -109,7 +197,7 @@ sealed record RunnerOptions(string CheckingRoot, int MaxSteps, bool AllowSeeding
     public static RunnerOptions Parse(string[] args)
     {
         var checkingRoot = "./src/data/Checking";
-        var maxSteps = 150;
+        var maxSteps = int.MaxValue;
         var allowSeeding = false;
 
         for (var i = 0; i < args.Length; i++)

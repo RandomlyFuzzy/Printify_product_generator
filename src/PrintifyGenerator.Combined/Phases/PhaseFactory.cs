@@ -1,7 +1,8 @@
-
+using System.Globalization;
+using System.Net.Http;
 using System.Text.Json;
 
-public static class PhaseFactory
+public static partial class PhaseFactory
 {
 	public static IReadOnlyList<IPhaseGenerator> CreatePipeline() =>
 		new IPhaseGenerator[]
@@ -10,12 +11,11 @@ public static class PhaseFactory
 			new Phase2ImageGenerator(),
 			new Phase3SuitabilityGenerator(),
 			new Phase4ProductsGenerator(),
-			new Phase5ProductAssessmentGenerator(),
-			new Phase6MetadataGenerator(),
+			new Phase5MetadataGenerator(),
+			new Phase6ProductAssessmentGenerator(),
 			new Phase7PublishingDirectionGenerator(),
 			new Phase8PricingGenerator(),
-			new Phase9ProductionQueueGenerator(),
-			new Phase10ManualPublishingMarker(),
+			new Phase9ManualPublishingMarker(),
 		};
 
 	private static readonly JsonSerializerOptions PrettyJson = new()
@@ -23,301 +23,598 @@ public static class PhaseFactory
 		WriteIndented = true,
 	};
 
-	private sealed class Phase1PromptGenerator : PhaseGeneratorBase
+	private const string PromptGenerationInstruction = @"You are an expert prompt engineer for commercial print-on-demand artwork.
+Create one high-converting image-generation prompt for a broad audience.
+
+Output requirements:
+- Return ONLY valid JSON.
+- No markdown, no code fences, no extra text.
+- Return exactly one array item with exactly these keys.
+
+JSON format:
+[
 	{
-		public Phase1PromptGenerator() : base(1, "Prompt Generated", "id/phase1.json => Prompt") { }
+		""positive"": ""detailed scene prompt with style, composition, lighting, color direction, and print-friendly details"",
+		""negative"": ""artifact and quality blockers as comma-separated tags"",
+		""width"": 768,
+		""height"": 768,
+		""steps"": 9,
+		""cfg"": 2.5
+	}
+]
 
-		protected override bool IsCompleteCore(PhaseBundle bundle)
-			=> File.Exists(bundle.ResolvePhaseFile(1, "json", underscoreLegacy: true));
+Quality rules:
+- Positive prompt should be specific, visually rich, and include a clear main subject.
+- Prefer clean silhouettes, strong contrast, and central composition suitable for apparel prints.
+- Avoid references to logos, trademarks, celebrity likenesses, copyrighted characters, or artist names.
+- Negative prompt should suppress blur, artifacts, text, watermarks, extra limbs, bad anatomy, noise, and low detail.
+- Keep width, height, steps, and cfg exactly as shown above.";
 
-		protected override bool CanRunCore(PhaseBundle bundle) => true;
+	private const string ImageSuitabilityPrompt = @"Assess this image for safe, legal, and commercially viable print-on-demand use.
 
-		protected override Task<PhaseExecutionResult> ExecuteCoreAsync(PhaseBundle bundle, CancellationToken cancellationToken)
+Output requirements:
+- Return ONLY valid JSON.
+- No markdown, no code fences, no extra keys, no extra text.
+- Match the shape below exactly.
+
+Scoring rules:
+- All numeric scores are between 0.0 and 1.0.
+- suitability is the overall confidence score.
+- If any legal, IP, or NSFW risk is present, set the related boolean to true and include specific issue text.
+- Issues should be short, concrete findings. Use an empty array when no issues are found.
+
+Required JSON shape:
+{
+	""suitability"": 0.0,
+	""DoesViolateLaw"": false,
+	""DoesViolateIPRights"": false,
+	""IsNSFW"": false,
+	""Issues"": [""""],
+	""Scoring"": {
+		""commercialAppeal"": 0.0,
+		""printQuality"": 0.0,
+		""estimatedSalesViability"": 0.0,
+		""uniqueness"": 0.0,
+		""technicalSkill"": 0.0,
+		""creativity"": 0.0,
+		""composition"": 0.0,
+		""technique"": 0.0,
+		""originality"": 0.0
+	}
+}";
+
+	private const string ProductAssessmentPrompt = @"Assess these product mockup images for marketplace readiness and technical quality.
+
+Output requirements:
+- Return ONLY valid JSON.
+- No markdown, no code fences, no extra keys, no extra text.
+- Match this shape exactly.
+
+Decision rules:
+- FitForPrintify is true only if the design appears printable, compliant, and visually acceptable for listing.
+- shouldContinue is true only if generation should proceed to publishing decisions.
+- Issues should contain concrete, short reasons (for example: low resolution, clipping, unreadable subject, risky IP elements).
+- Use an empty Issues array when no issues are found.
+
+Required JSON shape:
+{
+	""FitForPrintify"": true,
+	""Issues"": [""""],
+	""shouldContinue"": true
+}";
+
+	private const string ProductMetaPrompt = @"Generate conversion-focused product listing metadata from product mockup images.
+
+Output requirements:
+- Return ONLY valid JSON.
+- No markdown, no code fences, no extra keys, no extra text.
+- Match this shape exactly:
+{
+	""Title"": ""..."",
+	""Description"": ""html description"",
+	""Tags"": [""tag1"", ""tag2""]
+}
+
+Rules:
+- Title must be less than 80 characters.
+- Description must be less than 3000 characters.
+- Title should be specific, human-readable, and avoid keyword stuffing.
+- Description should use simple HTML (p, ul, li, strong) and highlight benefits, material feel, and gift/use cases.
+- Tags should be relevant search phrases, lowercase preferred, no duplicates, and no trademarked terms.
+- Never include URLs, markdown, JSON comments, or text outside the JSON object.";
+
+	private const string PublishDirectionPromptTemplate = @"Choose the best marketplace destination for this POD product.
+
+Output requirements:
+- Return ONLY valid JSON object.
+- No markdown, no code fences, no extra keys, no extra text.
+- Use exactly this shape:
+{
+	""stores"": [""Ebay"",""ebay""],
+	""reason"": ""short reason""
+}
+
+Rules:
+- Allowed stores are only Etsy and Ebay.
+- Choose one or both stores based on product style, buyer intent, and marketplace fit.
+- reason must be concise (one short sentence) and specific.
+
+Product context:
+{0}";
+
+	private static string GetPhase4Path(PhaseBundle bundle)
+	{
+		var canonical = Path.Combine(bundle.DirectoryPath, "phase4.txt");
+		if (File.Exists(canonical))
 		{
-			var outputFile = bundle.ResolvePhaseFile(1, "json", underscoreLegacy: true);
-			var prompt = new Prompt
-			{
-				positive = "vibrant graphic illustration, print-on-demand friendly composition",
-				negative = "watermark, text artifacts, blur, low quality",
-				width = 1024,
-				height = 1024,
-				steps = 30,
-				cfg = 4.5f,
-			};
-
-			File.WriteAllText(outputFile, JsonSerializer.Serialize(prompt, PrettyJson));
-			return Task.FromResult(PhaseExecutionResult.Done($"Created {Path.GetFileName(outputFile)}."));
+			return canonical;
 		}
+
+		var legacy = Path.Combine(bundle.DirectoryPath, "phase_4.txt");
+		if (File.Exists(legacy))
+		{
+			return legacy;
+		}
+
+		return canonical;
 	}
 
-	private sealed class Phase2ImageGenerator : PhaseGeneratorBase
+	private static string GetPhase5Path(PhaseBundle bundle, string pid)
 	{
-		private static readonly byte[] TinyPng = Convert.FromBase64String(
-			"iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/w8AAusB9Y9xFwAAAABJRU5ErkJggg==");
-
-		public Phase2ImageGenerator() : base(2, "Image Generated", "id/id.png => byte[]") { }
-
-		protected override bool IsCompleteCore(PhaseBundle bundle) => bundle.FindImagePath() is not null;
-
-		protected override bool CanRunCore(PhaseBundle bundle)
-			=> File.Exists(bundle.ResolvePhaseFile(1, "json", underscoreLegacy: true));
-
-		protected override Task<PhaseExecutionResult> ExecuteCoreAsync(PhaseBundle bundle, CancellationToken cancellationToken)
+		var upper = Path.Combine(bundle.DirectoryPath, $"phase5.{pid}.Meta.json");
+		if (File.Exists(upper))
 		{
-			var outputFile = bundle.GetPath($"{bundle.Id}.png");
-			File.WriteAllBytes(outputFile, TinyPng);
-			return Task.FromResult(PhaseExecutionResult.Done($"Created {Path.GetFileName(outputFile)}."));
+			return upper;
 		}
+
+		var lower = Path.Combine(bundle.DirectoryPath, $"phase5.{pid}.meta.json");
+		if (File.Exists(lower))
+		{
+			return lower;
+		}
+
+		return upper;
 	}
 
-	private sealed class Phase3SuitabilityGenerator : PhaseGeneratorBase
+	private static string GetPhase6Path(PhaseBundle bundle, string pid)
+		=> Path.Combine(bundle.DirectoryPath, $"phase6.{pid}.json");
+
+	private static bool Phase5Complete(PhaseBundle bundle)
 	{
-		public Phase3SuitabilityGenerator() : base(3, "Image Assessed", "id/phase3.json => ImageSuitability") { }
-
-		protected override bool IsCompleteCore(PhaseBundle bundle)
-			=> File.Exists(bundle.ResolvePhaseFile(3, "json", underscoreLegacy: true));
-
-		protected override bool CanRunCore(PhaseBundle bundle) => bundle.FindImagePath() is not null;
-
-		protected override Task<PhaseExecutionResult> ExecuteCoreAsync(PhaseBundle bundle, CancellationToken cancellationToken)
+		var pids = bundle.ReadPhase4ProductIds();
+		if (pids.Count == 0)
 		{
-			var imagePath = bundle.FindImagePath();
-			if (imagePath is null)
+			return File.Exists(GetPhase4Path(bundle));
+		}
+
+		return pids.All(pid => File.Exists(GetPhase5Path(bundle, pid)));
+	}
+
+	private static bool Phase6Complete(PhaseBundle bundle)
+	{
+		var pids = bundle.ReadPhase4ProductIds();
+		if (pids.Count == 0)
+		{
+			return Phase5Complete(bundle);
+		}
+
+		return pids.All(pid => File.Exists(GetPhase6Path(bundle, pid)));
+	}
+
+	private static ImageSuitability? ReadImageSuitability(PhaseBundle bundle)
+	{
+		var path = bundle.ResolvePhaseFile(3, "json", underscoreLegacy: true);
+		if (!File.Exists(path))
+		{
+			return null;
+		}
+
+		return JsonSerializer.Deserialize<ImageSuitability>(File.ReadAllText(path));
+	}
+
+	private sealed class PublishDirectionDecision
+	{
+		public List<string> stores { get; set; } = new();
+		public string reason { get; set; } = string.Empty;
+	}
+
+	private static async Task<string> CollectStreamAsync(IAsyncEnumerable<string> source, CancellationToken cancellationToken)
+	{
+		var sb = new System.Text.StringBuilder();
+		await foreach (var token in source.WithCancellation(cancellationToken))
+		{
+            Console.Write(token);
+			sb.Append(token);
+		}
+
+		return sb.ToString();
+	}
+
+	private static bool TryExtractJsonObject(string response, out string json)
+	{
+		return TryExtractJsonByRootKind(response, '{', '}', out json);
+	}
+
+	private static bool TryExtractJsonArray(string response, out string json)
+	{
+		return TryExtractJsonByRootKind(response, '[', ']', out json);
+	}
+
+	private static bool TryExtractJsonByRootKind(string response, char open, char close, out string json)
+	{
+		json = string.Empty;
+		if (string.IsNullOrWhiteSpace(response))
+		{
+			return false;
+		}
+
+		var sanitized = NormalizeLlmResponse(response);
+		if (TryValidateJsonRoot(sanitized, open, close, out json))
+		{
+			return true;
+		}
+
+		if (!TryExtractBalancedJson(sanitized, open, close, out var extracted))
+		{
+			return false;
+		}
+
+		return TryValidateJsonRoot(extracted, open, close, out json);
+	}
+
+	private static string NormalizeLlmResponse(string response)
+	{
+		var normalized = TryExtractOllamaResponseBody(response);
+		normalized = StripMarkdownFence(normalized);
+
+		if (normalized.StartsWith("json", StringComparison.OrdinalIgnoreCase))
+		{
+			normalized = normalized[4..].TrimStart();
+		}
+
+		return normalized.Trim();
+	}
+
+	private static string TryExtractOllamaResponseBody(string response)
+	{
+		var trimmed = response.Trim();
+		if (string.IsNullOrWhiteSpace(trimmed) || !trimmed.StartsWith('{'))
+		{
+			return trimmed;
+		}
+
+		try
+		{
+			using var document = JsonDocument.Parse(trimmed);
+			if (document.RootElement.ValueKind == JsonValueKind.Object
+				&& document.RootElement.TryGetProperty("response", out var responseElement)
+				&& responseElement.ValueKind == JsonValueKind.String)
 			{
-				return Task.FromResult(PhaseExecutionResult.Failed("Missing phase2 image."));
+				return responseElement.GetString()?.Trim() ?? string.Empty;
 			}
-
-			var outputFile = bundle.ResolvePhaseFile(3, "json", underscoreLegacy: true);
-			var suitability = new ImageSuitability
-			{
-				imageURL = imagePath,
-				suitability = 7.5f,
-				DoesViolateLaw = false,
-				DoesViolateIPRights = false,
-				IsNSFW = false,
-				Issues = new List<string>(),
-				Scoring = new Scoring
-				{
-					commercialAppeal = 7,
-					printQuality = 8,
-					estimatedSalesViability = 7,
-					uniqueness = 7,
-					technicalSkill = 7,
-					creativity = 8,
-					composition = 7,
-					technique = 7,
-					originality = 8,
-				},
-			};
-
-			File.WriteAllText(outputFile, JsonSerializer.Serialize(suitability, PrettyJson));
-			return Task.FromResult(PhaseExecutionResult.Done($"Created {Path.GetFileName(outputFile)}."));
 		}
+		catch
+		{
+			// Keep original response when envelope parsing fails.
+		}
+
+		return trimmed;
 	}
 
-	private sealed class Phase4ProductsGenerator : PhaseGeneratorBase
+	private static string StripMarkdownFence(string response)
 	{
-		public Phase4ProductsGenerator() : base(4, "Products Generated", "id/phase4.txt => PID[]") { }
-
-		protected override bool IsCompleteCore(PhaseBundle bundle)
-			=> File.Exists(bundle.ResolvePhaseFile(4, "txt"));
-
-		protected override bool CanRunCore(PhaseBundle bundle)
-			=> File.Exists(bundle.ResolvePhaseFile(3, "json", underscoreLegacy: true));
-
-		protected override Task<PhaseExecutionResult> ExecuteCoreAsync(PhaseBundle bundle, CancellationToken cancellationToken)
+		var trimmed = response.Trim();
+		if (!trimmed.StartsWith("```", StringComparison.Ordinal))
 		{
-			var outputFile = bundle.ResolvePhaseFile(4, "txt");
-			var prefix = bundle.Id.ToString("N")[..8].ToUpperInvariant();
-			File.WriteAllLines(outputFile, new[] { $"PID-{prefix}-001", $"PID-{prefix}-002" });
-			return Task.FromResult(PhaseExecutionResult.Done($"Created {Path.GetFileName(outputFile)}."));
+			return trimmed;
 		}
+
+		var withoutOpening = trimmed[3..].TrimStart();
+		if (withoutOpening.StartsWith("json", StringComparison.OrdinalIgnoreCase))
+		{
+			withoutOpening = withoutOpening[4..].TrimStart();
+		}
+
+		var closingFence = withoutOpening.LastIndexOf("```", StringComparison.Ordinal);
+		if (closingFence >= 0)
+		{
+			return withoutOpening[..closingFence].Trim();
+		}
+
+		var lines = trimmed.Split('\n');
+		if (lines.Length < 2)
+		{
+			return withoutOpening.Trim();
+		}
+
+		var start = 1;
+		var end = lines.Length;
+		if (lines[^1].TrimStart().StartsWith("```", StringComparison.Ordinal))
+		{
+			end = lines.Length - 1;
+		}
+
+		return string.Join("\n", lines[start..end]).Trim();
 	}
 
-	private sealed class Phase5ProductAssessmentGenerator : PhaseGeneratorBase
+	private static bool TryValidateJsonRoot(string text, char open, char close, out string json)
 	{
-		public Phase5ProductAssessmentGenerator() : base(5, "Products Assessed", "id/phase5.PID.json => ProductAssessment") { }
-
-		protected override bool IsCompleteCore(PhaseBundle bundle)
+		json = string.Empty;
+		if (string.IsNullOrWhiteSpace(text))
 		{
-			var pids = bundle.ReadPhase4ProductIds();
-			if (pids.Count == 0)
+			return false;
+		}
+
+		var trimmed = text.Trim();
+		if (trimmed[0] != open || trimmed[^1] != close)
+		{
+			return false;
+		}
+
+		try
+		{
+			using var doc = JsonDocument.Parse(trimmed);
+			if ((open == '{' && doc.RootElement.ValueKind != JsonValueKind.Object)
+				|| (open == '[' && doc.RootElement.ValueKind != JsonValueKind.Array))
 			{
 				return false;
 			}
 
-			return pids.All(pid => File.Exists(bundle.GetPath($"phase5.{pid}.json")));
+			json = trimmed;
+			return true;
+		}
+		catch
+		{
+			return false;
+		}
+	}
+
+	private static bool TryExtractBalancedJson(string text, char open, char close, out string json)
+	{
+		json = string.Empty;
+		var start = text.IndexOf(open);
+		if (start < 0)
+		{
+			return false;
 		}
 
-		protected override bool CanRunCore(PhaseBundle bundle)
-			=> bundle.ReadPhase4ProductIds().Count > 0;
-
-		protected override Task<PhaseExecutionResult> ExecuteCoreAsync(PhaseBundle bundle, CancellationToken cancellationToken)
+		var depth = 0;
+		var inString = false;
+		var escaped = false;
+		for (var i = start; i < text.Length; i++)
 		{
-			var pids = bundle.ReadPhase4ProductIds();
-			foreach (var pid in pids)
+			var ch = text[i];
+			if (inString)
 			{
-				var outputFile = bundle.GetPath($"phase5.{pid}.json");
-				if (File.Exists(outputFile))
+				if (escaped)
 				{
+					escaped = false;
 					continue;
 				}
 
-				var assessment = new ProductAssessment
+				if (ch == '\\')
 				{
-					FitForPrintify = true,
-					Issues = Array.Empty<string>(),
-					shouldContinue = true,
-				};
-				File.WriteAllText(outputFile, JsonSerializer.Serialize(assessment, PrettyJson));
-			}
-
-			return Task.FromResult(PhaseExecutionResult.Done($"Created phase5 assessments ({pids.Count})."));
-		}
-	}
-
-	private sealed class Phase6MetadataGenerator : PhaseGeneratorBase
-	{
-		public Phase6MetadataGenerator() : base(6, "Metadata Generated", "id/phase6.PID.Meta.json => ProductMeta") { }
-
-		protected override bool IsCompleteCore(PhaseBundle bundle)
-		{
-			var pids = bundle.ReadPhase4ProductIds();
-			if (pids.Count == 0)
-			{
-				return false;
-			}
-
-			return pids.All(pid => File.Exists(bundle.GetPath($"phase6.{pid}.meta.json")));
-		}
-
-		protected override bool CanRunCore(PhaseBundle bundle)
-			=> PhaseCompleted(bundle, 5);
-
-		protected override Task<PhaseExecutionResult> ExecuteCoreAsync(PhaseBundle bundle, CancellationToken cancellationToken)
-		{
-			var pids = bundle.ReadPhase4ProductIds();
-			foreach (var pid in pids)
-			{
-				var outputFile = bundle.GetPath($"phase6.{pid}.meta.json");
-				if (File.Exists(outputFile))
-				{
+					escaped = true;
 					continue;
 				}
 
-				var meta = new ProductMeta
+				if (ch == '"')
 				{
-					Title = $"{pid} premium print design",
-					Description = "Auto-generated metadata. Review before publishing.",
-					Tags = new[] { "print", "design", "pod" },
-				};
+					inString = false;
+				}
 
-				File.WriteAllText(outputFile, JsonSerializer.Serialize(meta, PrettyJson));
+				continue;
 			}
 
-			return Task.FromResult(PhaseExecutionResult.Done($"Created phase6 metadata ({pids.Count})."));
+			if (ch == '"')
+			{
+				inString = true;
+				continue;
+			}
+
+			if (ch == open)
+			{
+				depth++;
+			}
+			else if (ch == close)
+			{
+				depth--;
+				if (depth == 0)
+				{
+					json = text[start..(i + 1)];
+					return true;
+				}
+			}
 		}
+
+		return false;
 	}
 
-	private sealed class Phase7PublishingDirectionGenerator : PhaseGeneratorBase
+	private sealed class CombinedRuntime
 	{
-		public Phase7PublishingDirectionGenerator() : base(7, "Publishing Direction", "id/phase7.txt => PID,Store[]") { }
+		private static readonly Lazy<CombinedRuntime> InstanceFactory = new(() => new CombinedRuntime());
+		public static CombinedRuntime Current => InstanceFactory.Value;
 
-		protected override bool IsCompleteCore(PhaseBundle bundle)
-			=> File.Exists(bundle.ResolvePhaseFile(7, "txt"));
+		private readonly RoundRobinSelector<OrchestrationNode> _ollamaSelector;
+		private readonly RoundRobinSelector<OrchestrationNode> _comfySelector;
+		private readonly HttpClient _http = new();
+		private readonly Lazy<PrintifyClient> _printifyClient;
+		private List<Shop>? _shops;
 
-		protected override bool CanRunCore(PhaseBundle bundle)
-			=> PhaseCompleted(bundle, 6);
-
-		protected override Task<PhaseExecutionResult> ExecuteCoreAsync(PhaseBundle bundle, CancellationToken cancellationToken)
+		private CombinedRuntime()
 		{
-			var pids = bundle.ReadPhase4ProductIds();
-			var outputFile = bundle.ResolvePhaseFile(7, "txt");
-			File.WriteAllLines(outputFile, pids.Select(pid => $"{pid},Etsy,Ebay"));
-			return Task.FromResult(PhaseExecutionResult.Done($"Created {Path.GetFileName(outputFile)}."));
+			RepositoryRoot = ResolveRepositoryRoot() ?? Directory.GetCurrentDirectory();
+			DataRoot = Path.Combine(RepositoryRoot, "src", "data");
+			Settings = OrchestrationSettingsStore.Load(DataRoot);
+
+			var ollamaNodes = Settings.Ollama
+				.Where(node => node.Enabled && !string.IsNullOrWhiteSpace(node.BaseUrl))
+				.ToList();
+			if (ollamaNodes.Count == 0)
+			{
+				throw new InvalidOperationException("No enabled Ollama nodes found in orchestration settings.");
+			}
+
+			var comfyNodes = Settings.ComfyUi
+				.Where(node => node.Enabled && !string.IsNullOrWhiteSpace(node.BaseUrl))
+				.ToList();
+			if (comfyNodes.Count == 0)
+			{
+				throw new InvalidOperationException("No enabled ComfyUI nodes found in orchestration settings.");
+			}
+
+			_ollamaSelector = new RoundRobinSelector<OrchestrationNode>(ollamaNodes);
+			_comfySelector = new RoundRobinSelector<OrchestrationNode>(comfyNodes);
+
+			Token = ReadToken(RepositoryRoot)
+				?? throw new InvalidOperationException("TOKEN is missing from main.env; Printify phases require it.");
+
+			_printifyClient = new Lazy<PrintifyClient>(() => new PrintifyClient(Token));
 		}
-	}
 
-	private sealed class Phase8PricingGenerator : PhaseGeneratorBase
-	{
-		public Phase8PricingGenerator() : base(8, "Pricing", "id/phase8.txt => PID,ProdId,VID,Shop,ProductionPrice,Price") { }
+		public string RepositoryRoot { get; }
+		public string DataRoot { get; }
+		public string Token { get; }
+		public OrchestrationSettings Settings { get; }
 
-		protected override bool IsCompleteCore(PhaseBundle bundle)
-			=> File.Exists(bundle.ResolvePhaseFile(8, "txt"));
+		public OllamaClient CreateOllamaClient() => new(_ollamaSelector.Next().BaseUrl);
 
-		protected override bool CanRunCore(PhaseBundle bundle)
-			=> File.Exists(bundle.ResolvePhaseFile(7, "txt"));
+		public string NextComfyBaseUrl() => _comfySelector.Next().BaseUrl;
 
-		protected override Task<PhaseExecutionResult> ExecuteCoreAsync(PhaseBundle bundle, CancellationToken cancellationToken)
+		public PrintifyClient GetPrintifyClient() => _printifyClient.Value;
+
+		public async Task<int> ResolveShopIdAsync(string preferredTitle)
 		{
-			var pids = bundle.ReadPhase4ProductIds();
-			var outputFile = bundle.ResolvePhaseFile(8, "txt");
-			var lines = pids.Select(pid => $"{pid},PROD-{pid},VID-{pid},Etsy,1299,1899");
-			File.WriteAllLines(outputFile, lines);
-			return Task.FromResult(PhaseExecutionResult.Done($"Created {Path.GetFileName(outputFile)}."));
+			if (_shops is null)
+			{
+				_shops = await GetPrintifyClient().GetShopsAsync();
+			}
+
+			var preferred = _shops.FirstOrDefault(shop => string.Equals(shop.Title, preferredTitle, StringComparison.OrdinalIgnoreCase));
+			if (preferred is not null)
+			{
+				return preferred.Id;
+			}
+
+			if (_shops.Count == 0)
+			{
+				throw new InvalidOperationException("No Printify shops are available for this token.");
+			}
+
+			return _shops[0].Id;
 		}
-	}
 
-	private sealed class Phase9ProductionQueueGenerator : PhaseGeneratorBase
-	{
-		public Phase9ProductionQueueGenerator() : base(9, "Moved To Production", "id/phase9.txt => PID[]") { }
-
-		protected override bool IsCompleteCore(PhaseBundle bundle)
-			=> File.Exists(bundle.ResolvePhaseFile(9, "txt"));
-
-		protected override bool CanRunCore(PhaseBundle bundle)
-			=> File.Exists(bundle.ResolvePhaseFile(8, "txt"));
-
-		protected override Task<PhaseExecutionResult> ExecuteCoreAsync(PhaseBundle bundle, CancellationToken cancellationToken)
+		public async Task<List<Shop>> ResolveShopsByNamesAsync(IEnumerable<string> requestedNames)
 		{
-			var phase8File = bundle.ResolvePhaseFile(8, "txt");
-			var pids = File.ReadAllLines(phase8File)
-				.Select(line => line.Split(',', 2, StringSplitOptions.TrimEntries)[0])
-				.Where(pid => !string.IsNullOrWhiteSpace(pid))
-				.Distinct(StringComparer.OrdinalIgnoreCase)
-				.ToArray();
+			if (_shops is null)
+			{
+				_shops = await GetPrintifyClient().GetShopsAsync();
+			}
 
-			var outputFile = bundle.ResolvePhaseFile(9, "txt");
-			File.WriteAllLines(outputFile, pids);
-			return Task.FromResult(PhaseExecutionResult.Done($"Created {Path.GetFileName(outputFile)}."));
+			var shops = _shops ?? new List<Shop>();
+			var resolved = new List<Shop>();
+
+			foreach (var requestedName in requestedNames.Where(name => !string.IsNullOrWhiteSpace(name)))
+			{
+				var normalized = requestedName.Trim();
+				var match = shops.FirstOrDefault(shop =>
+					string.Equals(shop.Title, normalized, StringComparison.OrdinalIgnoreCase)
+					|| shop.Title.Contains(normalized, StringComparison.OrdinalIgnoreCase)
+					|| normalized.Contains(shop.Title, StringComparison.OrdinalIgnoreCase));
+
+				if (match is not null && resolved.All(existing => existing.Id != match.Id))
+				{
+					resolved.Add(match);
+				}
+			}
+
+			return resolved;
 		}
-	}
 
-	private sealed class Phase10ManualPublishingMarker : PhaseGeneratorBase
-	{
-		public Phase10ManualPublishingMarker() : base(10, "Human Assessment + Publishing", "id/phase10.manual.txt") { }
-
-		protected override bool IsCompleteCore(PhaseBundle bundle)
-			=> File.Exists(bundle.ResolvePhaseFile(10, "manual.txt"));
-
-		protected override bool CanRunCore(PhaseBundle bundle)
-			=> File.Exists(bundle.ResolvePhaseFile(9, "txt"));
-
-		protected override Task<PhaseExecutionResult> ExecuteCoreAsync(PhaseBundle bundle, CancellationToken cancellationToken)
+		public async Task<List<string>> DownloadProductImagesAsync(IEnumerable<string> urls, int maxCount, CancellationToken cancellationToken)
 		{
-			var outputFile = bundle.ResolvePhaseFile(10, "manual.txt");
-			File.WriteAllText(outputFile, $"Manual publish gate reached at {DateTime.UtcNow:O}");
-			return Task.FromResult(PhaseExecutionResult.Done($"Created {Path.GetFileName(outputFile)}."));
+			var files = new List<string>();
+			foreach (var url in urls.Where(url => !string.IsNullOrWhiteSpace(url)).Take(Math.Max(1, maxCount)))
+			{
+				cancellationToken.ThrowIfCancellationRequested();
+				var bytes = await _http.GetByteArrayAsync(url, cancellationToken);
+				var ext = Path.GetExtension(url.Split('?', 2)[0]);
+				if (string.IsNullOrWhiteSpace(ext))
+				{
+					ext = ".png";
+				}
+
+				var tempPath = Path.Combine(Path.GetTempPath(), $"pg-combined-{Guid.NewGuid():N}{ext}");
+				await File.WriteAllBytesAsync(tempPath, bytes, cancellationToken);
+				files.Add(tempPath);
+			}
+
+			return files;
 		}
-	}
 
-	private static bool PhaseCompleted(PhaseBundle bundle, int phaseNumber)
-	{
-		return phaseNumber switch
+		public void TryDeleteFiles(IEnumerable<string> files)
 		{
-			1 => File.Exists(bundle.ResolvePhaseFile(1, "json", underscoreLegacy: true)),
-			2 => bundle.FindImagePath() is not null,
-			3 => File.Exists(bundle.ResolvePhaseFile(3, "json", underscoreLegacy: true)),
-			4 => File.Exists(bundle.ResolvePhaseFile(4, "txt")),
-			5 => bundle.ReadPhase4ProductIds().All(pid => File.Exists(bundle.GetPath($"phase5.{pid}.json"))) &&
-				 bundle.ReadPhase4ProductIds().Count > 0,
-			6 => bundle.ReadPhase4ProductIds().All(pid => File.Exists(bundle.GetPath($"phase6.{pid}.meta.json"))) &&
-				 bundle.ReadPhase4ProductIds().Count > 0,
-			7 => File.Exists(bundle.ResolvePhaseFile(7, "txt")),
-			8 => File.Exists(bundle.ResolvePhaseFile(8, "txt")),
-			9 => File.Exists(bundle.ResolvePhaseFile(9, "txt")),
-			10 => File.Exists(bundle.ResolvePhaseFile(10, "manual.txt")),
-			_ => false,
-		};
+			foreach (var file in files)
+			{
+				try
+				{
+					if (File.Exists(file))
+					{
+						File.Delete(file);
+					}
+				}
+				catch
+				{
+					// best effort temp-file cleanup
+				}
+			}
+		}
+
+		private static string? ResolveRepositoryRoot()
+		{
+			var probeRoots = new[]
+			{
+				Directory.GetCurrentDirectory(),
+				AppContext.BaseDirectory,
+			}
+			.Where(path => !string.IsNullOrWhiteSpace(path))
+			.Distinct(StringComparer.OrdinalIgnoreCase);
+
+			foreach (var probeRoot in probeRoots)
+			{
+				var current = new DirectoryInfo(Path.GetFullPath(probeRoot));
+				while (current is not null)
+				{
+					if (File.Exists(Path.Combine(current.FullName, "PrintifyGenerator.sln")))
+					{
+						return current.FullName;
+					}
+
+					current = current.Parent;
+				}
+			}
+
+			return null;
+		}
+
+		private static string? ReadToken(string repositoryRoot)
+		{
+			var envPath = Path.Combine(repositoryRoot, "main.env");
+			if (!File.Exists(envPath))
+			{
+				return null;
+			}
+
+			foreach (var rawLine in File.ReadLines(envPath))
+			{
+				var line = rawLine.Trim();
+				if (line.StartsWith("TOKEN=", StringComparison.OrdinalIgnoreCase))
+				{
+					return line["TOKEN=".Length..].Trim();
+				}
+			}
+
+			return null;
+		}
 	}
 }

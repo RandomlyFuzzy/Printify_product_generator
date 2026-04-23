@@ -121,7 +121,7 @@ public record Product
     [JsonPropertyName("images")] public List<ProductMockupImage>? Images { get; set; }
     [JsonPropertyName("created_at")] public string? CreatedAt { get; set; }
     [JsonPropertyName("updated_at")] public string? UpdatedAt { get; set; }
-    [JsonPropertyName("visible")] public bool Visible { get; set; }
+    [JsonPropertyName("visible")] public bool Visible { get; set; } = true;
     [JsonPropertyName("blueprint_id")] public int BlueprintId { get; set; }
     [JsonPropertyName("print_provider_id")] public int PrintProviderId { get; set; }
     [JsonPropertyName("user_id")] public int UserId { get; set; }

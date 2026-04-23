@@ -98,7 +98,7 @@ public sealed class SwipeReviewMoveQueueService : BackgroundService
                     if (!result.Success)
                     {
                         _logger.LogWarning(
-                            "Queued swipe review move for {ProductId} finished with warning: {Message}",
+                            "Queued swipe review publish for {ProductId} finished with warning: {Message}",
                             queuedMove.ProductId,
                             result.Message);
                         await AppendLogEntryAsync("warning", queuedMove, result.Message, result.TargetProductId, exception: null);
@@ -106,7 +106,7 @@ public sealed class SwipeReviewMoveQueueService : BackgroundService
                     else
                     {
                         _logger.LogInformation(
-                            "Queued swipe review move for {ProductId} completed as target {TargetProductId}.",
+                            "Queued swipe review publish for {ProductId} completed as target {TargetProductId}.",
                             queuedMove.ProductId,
                             result.TargetProductId);
                     }
@@ -117,7 +117,7 @@ public sealed class SwipeReviewMoveQueueService : BackgroundService
                 }
                 catch (Exception ex)
                 {
-                    _logger.LogError(ex, "Queued swipe review move failed for {ProductId}.", queuedMove.ProductId);
+                    _logger.LogError(ex, "Queued swipe review publish failed for {ProductId}.", queuedMove.ProductId);
                     await AppendLogEntryAsync("error", queuedMove, ex.Message, targetProductId: null, ex);
                 }
                 finally
@@ -168,7 +168,7 @@ public sealed class SwipeReviewMoveQueueService : BackgroundService
         var logsRoot = Path.Combine(dataRoot, "staging", "logs");
         Directory.CreateDirectory(logsRoot);
 
-        var logPath = Path.Combine(logsRoot, "swipe-review-move-errors.jsonl");
+        var logPath = Path.Combine(logsRoot, "swipe-review-publish-errors.jsonl");
         var entry = new SwipeReviewMoveLogEntry(
             TimestampUtc: DateTime.UtcNow,
             Level: level,
