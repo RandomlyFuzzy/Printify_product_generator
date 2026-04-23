@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
@@ -16,6 +17,8 @@ using System.Threading.Tasks;
 public class PrintifyClient
 {
     private const string BaseUrl = "https://api.printify.com/v1";
+    private const int MaxRetryAttempts = 4;
+    private const int BaseRetryDelayMs = 1000;
     private readonly HttpClient _http;
     private static readonly JsonSerializerOptions JsonOpts = new()
     {
@@ -395,7 +398,7 @@ public class PrintifyClient
 
     private async Task<T> GetAsync<T>(string path)
     {
-        var response = await _http.GetAsync($"{BaseUrl}{path}");
+        var response = await SendWithRetryAsync(() => _http.GetAsync($"{BaseUrl}{path}"), "GET", path);
         await EnsureSuccessAsync(response);
         var json = await response.Content.ReadAsStringAsync();
         return JsonSerializer.Deserialize<T>(json, JsonOpts)!;
@@ -403,10 +406,10 @@ public class PrintifyClient
 
     private async Task<T> PostAsync<T>(string path, object? body)
     {
-        var content = body != null
-            ? new StringContent(JsonSerializer.Serialize(body, JsonOpts), Encoding.UTF8, "application/json")
-            : null;
-        var response = await _http.PostAsync($"{BaseUrl}{path}", content);
+        var response = await SendWithRetryAsync(
+            () => _http.PostAsync($"{BaseUrl}{path}", BuildJsonContent(body)),
+            "POST",
+            path);
         await EnsureSuccessAsync(response);
         var json = await response.Content.ReadAsStringAsync();
         return JsonSerializer.Deserialize<T>(json, JsonOpts)!;
@@ -414,17 +417,19 @@ public class PrintifyClient
 
     private async Task PostAsync(string path, object? body)
     {
-        var content = body != null
-            ? new StringContent(JsonSerializer.Serialize(body, JsonOpts), Encoding.UTF8, "application/json")
-            : null;
-        var response = await _http.PostAsync($"{BaseUrl}{path}", content);
+        var response = await SendWithRetryAsync(
+            () => _http.PostAsync($"{BaseUrl}{path}", BuildJsonContent(body)),
+            "POST",
+            path);
         await EnsureSuccessAsync(response);
     }
 
     private async Task<T> PutAsync<T>(string path, object body)
     {
-        var content = new StringContent(JsonSerializer.Serialize(body, JsonOpts), Encoding.UTF8, "application/json");
-        var response = await _http.PutAsync($"{BaseUrl}{path}", content);
+        var response = await SendWithRetryAsync(
+            () => _http.PutAsync($"{BaseUrl}{path}", BuildJsonContent(body)),
+            "PUT",
+            path);
         await EnsureSuccessAsync(response);
         var json = await response.Content.ReadAsStringAsync();
         return JsonSerializer.Deserialize<T>(json, JsonOpts)!;
@@ -432,8 +437,100 @@ public class PrintifyClient
 
     private async Task DeleteAsync(string path)
     {
-        var response = await _http.DeleteAsync($"{BaseUrl}{path}");
+        var response = await SendWithRetryAsync(() => _http.DeleteAsync($"{BaseUrl}{path}"), "DELETE", path);
         await EnsureSuccessAsync(response);
+    }
+
+    private StringContent? BuildJsonContent(object? body)
+    {
+        if (body is null)
+        {
+            return null;
+        }
+
+        return new StringContent(JsonSerializer.Serialize(body, JsonOpts), Encoding.UTF8, "application/json");
+    }
+
+    private async Task<HttpResponseMessage> SendWithRetryAsync(
+        Func<Task<HttpResponseMessage>> sendAsync,
+        string method,
+        string path)
+    {
+        Exception? lastTransportException = null;
+
+        for (var attempt = 1; attempt <= MaxRetryAttempts; attempt++)
+        {
+            HttpResponseMessage? response = null;
+
+            try
+            {
+                response = await sendAsync();
+            }
+            catch (HttpRequestException ex) when (attempt < MaxRetryAttempts)
+            {
+                lastTransportException = ex;
+                var retryDelay = GetRetryDelay(attempt, null);
+                Console.WriteLine($"Transient transport error on {method} {path}. Retrying in {retryDelay.TotalMilliseconds:0}ms (attempt {attempt}/{MaxRetryAttempts}).");
+                await Task.Delay(retryDelay);
+                continue;
+            }
+            catch (TaskCanceledException ex) when (attempt < MaxRetryAttempts)
+            {
+                lastTransportException = ex;
+                var retryDelay = GetRetryDelay(attempt, null);
+                Console.WriteLine($"Request timeout on {method} {path}. Retrying in {retryDelay.TotalMilliseconds:0}ms (attempt {attempt}/{MaxRetryAttempts}).");
+                await Task.Delay(retryDelay);
+                continue;
+            }
+
+            if (response.IsSuccessStatusCode)
+            {
+                return response;
+            }
+
+            if (attempt < MaxRetryAttempts && IsTransientStatusCode(response.StatusCode))
+            {
+                var retryDelay = GetRetryDelay(attempt, response);
+                Console.WriteLine($"Transient Printify API error {(int)response.StatusCode} on {method} {path}. Retrying in {retryDelay.TotalMilliseconds:0}ms (attempt {attempt}/{MaxRetryAttempts}).");
+                response.Dispose();
+                await Task.Delay(retryDelay);
+                continue;
+            }
+
+            return response;
+        }
+
+        throw new InvalidOperationException(
+            $"Printify request failed after {MaxRetryAttempts} attempts for {method} {path}.",
+            lastTransportException);
+    }
+
+    private static bool IsTransientStatusCode(HttpStatusCode statusCode)
+    {
+        return statusCode == HttpStatusCode.TooManyRequests || (int)statusCode >= 500;
+    }
+
+    private static TimeSpan GetRetryDelay(int attempt, HttpResponseMessage? response)
+    {
+        var retryAfter = response?.Headers.RetryAfter;
+        if (retryAfter?.Delta is TimeSpan delta && delta > TimeSpan.Zero)
+        {
+            return delta;
+        }
+
+        if (retryAfter?.Date is DateTimeOffset retryDate)
+        {
+            var untilDate = retryDate - DateTimeOffset.UtcNow;
+            if (untilDate > TimeSpan.Zero)
+            {
+                return untilDate;
+            }
+        }
+
+        var cappedAttempt = Math.Min(attempt, 6);
+        var exponentialMs = BaseRetryDelayMs * (1 << (cappedAttempt - 1));
+        var jitterMs = Random.Shared.Next(0, 250);
+        return TimeSpan.FromMilliseconds(exponentialMs + jitterMs);
     }
 
     private async Task<CreateProductRequest> BuildCreateProductRequestAsync(Product product)
@@ -688,7 +785,7 @@ public class PrintifyClient
 
         string pageurl = url + (url.Contains("?") ? $"&page={pagenum}&limit={limit}" : $"?page={pagenum}&limit={limit}");
         Console.WriteLine($"Fetching page {pagenum} from {pageurl}...");
-        var response = await _http.GetAsync(pageurl);
+        var response = await SendWithRetryAsync(() => _http.GetAsync(pageurl), "GET", pageurl);
         await EnsureSuccessAsync(response);
         var json = await response.Content.ReadAsStringAsync();
         var page = JsonSerializer.Deserialize<PaginatedResponse<T>>(json, JsonOpts)!;
@@ -703,7 +800,7 @@ public class PrintifyClient
             string pageurl = url + (url.Contains("?") ? $"&page={i}&limit={limit}" : $"?page={i}&limit={limit}");
             int indx = i; // capture loop variable
             // Console.WriteLine($"Queueing page {indx} from {pageurl}...");
-            tasks.Add(_http.GetAsync(pageurl));
+            tasks.Add(SendWithRetryAsync(() => _http.GetAsync(pageurl), "GET", pageurl));
         });
 
         while(tasks.Count > 0)

@@ -1492,6 +1492,21 @@ body.page-swipe-review {
   justify-self: center;
 }
 
+.swipe-copy-panel {
+  position: relative;
+  z-index: 2;
+  grid-column: 1;
+  width: min(100%, 260px);
+  height: calc(100svh - 190px);
+  max-height: calc(100svh - 190px);
+  align-self: center;
+  overflow: auto;
+}
+
+.swipe-copy-panel[hidden] {
+  display: none;
+}
+
 .swipe-side-panel {
   position: relative;
   z-index: 2;
@@ -1930,7 +1945,7 @@ body.page-swipe-review {
   color: rgba(18, 32, 41, 0.84);
   line-height: 1.45;
   display: -webkit-box;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 10;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -2118,6 +2133,13 @@ body.is-busy button {
     height: min(calc(100svh - 396px), 700px);
   }
 
+  .swipe-copy-panel {
+    grid-column: auto;
+    width: min(100%, 520px);
+    height: auto;
+    max-height: none;
+  }
+
   .swipe-side-panel {
     grid-column: auto;
     width: min(100%, 520px);
@@ -2164,6 +2186,12 @@ body.is-busy button {
     justify-self: center;
   }
 
+  .swipe-copy-panel {
+    width: min(100%, 520px);
+    height: auto;
+    max-height: none;
+  }
+
   .swipe-side-panel {
     width: min(100%, 520px);
     height: auto;
@@ -2202,6 +2230,10 @@ body.is-busy button {
   }
 
   .swipe-card-shell {
+    width: min(100%, 500px);
+  }
+
+  .swipe-copy-panel {
     width: min(100%, 500px);
   }
 
@@ -2261,6 +2293,10 @@ body.is-busy button {
 
   .swipe-card {
     border-radius: 30px;
+  }
+
+  .swipe-copy-panel {
+    width: 100%;
   }
 
   .swipe-side-panel {

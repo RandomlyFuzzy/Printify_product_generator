@@ -128,7 +128,7 @@ public sealed record SwipeReviewPageState(
                 ? "Tap a thumbnail or swipe up and down for more product images."
                 : supplementalImages.Count > 0
                     ? "Reference images stay pinned on the side."
-                : "Swipe left to delete or right to move to drafts.");
+                : "Swipe left to delete or right to publish to eBay.");
 
         return new SwipeReviewPageState(
             CurrentItem: current,

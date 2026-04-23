@@ -105,7 +105,9 @@ sealed class PricingUpdater
                 {
                     var shipping = await _client.CalculateShippingAsync(_shopId, BuildShippingRequest(product.Id, variant.Id));
                     shippingCost = ResolveShippingCost(shipping, _settings.ShippingMethod);
-                    newPrice = _priceCalculator(shippingCost, variant.Cost);
+                    var worstCaseShippingCost = ResolveHighestAvailableShippingCost(shipping);
+                    var effectiveShippingCost = Math.Max(shippingCost, worstCaseShippingCost);
+                    newPrice = _priceCalculator(effectiveShippingCost, variant.Cost);
 
                     if (newPrice < 0)
                     {
@@ -236,6 +238,21 @@ sealed class PricingUpdater
             .Min(),
             _ => shipping.Standard
         };
+    }
+
+    private static int ResolveHighestAvailableShippingCost(ShippingCostResponse shipping)
+    {
+        return new[]
+        {
+            shipping.Standard,
+            shipping.Express,
+            shipping.Priority,
+            shipping.PrintifyExpress,
+            shipping.Economy
+        }
+        .Where(cost => cost > 0)
+        .DefaultIfEmpty(0)
+        .Max();
     }
 
     private static string FormatMinorUnits(int minorUnits)

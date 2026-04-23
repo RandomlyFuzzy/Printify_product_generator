@@ -125,12 +125,16 @@ static int CalculateVariantPrice(int shippingPrice, int productionPrice, decimal
         throw new ArgumentOutOfRangeException(nameof(productionPrice), "Production price cannot be negative.");
     }
 
-    var totalMargin = (100 + marginPercent) / 100;
+    var normalizedShippingPrice = Math.Max(0, shippingPrice);
+    var marginMultiplier = 1m + (marginPercent / 100m);
+    var costFloor = (productionPrice + normalizedShippingPrice) / 100m;
+    var targetRetail = costFloor * marginMultiplier;
 
-    Console.Write($"[Calculating] {productionPrice}USD (production) + {shippingPrice}USD (shipping) with margin {totalMargin:P2}% for country {country}.");
-    var marginAmount = (productionPrice + shippingPrice) * totalMargin;
-    var Total = new Currency(CurrencyCode.USD, (productionPrice + shippingPrice*(totalMargin)) / 100m);
-    Console.Write($" Margin amount: {Total}.");
+    Console.Write(
+        $"[Calculating] {productionPrice}USD (production) + {normalizedShippingPrice}USD (shipping) with margin {marginPercent:0.##}% for country {country}.");
+
+    var Total = new Currency(CurrencyCode.USD, targetRetail);
+    Console.Write($" Target retail before rounding: {Total}.");
 
     // var targetCurrency = country switch
     // {
@@ -143,13 +147,19 @@ static int CalculateVariantPrice(int shippingPrice, int productionPrice, decimal
     // };
     // Total = Total.ConvertTo(targetCurrency).GetAwaiter().GetResult();
     // Console.Write($" Converted total cost to {targetCurrency}: {Total}.");
-    //make it pretty i.e. to X.99 instead of X.YY and round to nearest 0.99 or 0.49 depending on the price range, also make sure it doesn't end up lower than the production cost after conversion
+    // Keep retail-friendly endings while preserving profitability against production + shipping cost floor.
     Total = Total.Amount switch
     {
-        < 10 => new Currency(Total.Code, Math.Max(Math.Round(Total.Amount - 0.01m) + 0.99m, productionPrice / 100m)),
-        < 50 => new Currency(Total.Code, Math.Max(Math.Round(Total.Amount - 0.01m) + 0.49m, productionPrice / 100m)),
-        _ => new Currency(Total.Code, Math.Max(Math.Round(Total.Amount - 0.01m) + 0.99m, productionPrice / 100m))
+        < 10 => new Currency(Total.Code, Math.Max(Math.Round(Total.Amount - 0.01m) + 0.99m, targetRetail)),
+        < 50 => new Currency(Total.Code, Math.Max(Math.Round(Total.Amount - 0.01m) + 0.49m, targetRetail)),
+        _ => new Currency(Total.Code, Math.Max(Math.Round(Total.Amount - 0.01m) + 0.99m, targetRetail))
     };
+
+    if (Total.Amount < costFloor)
+    {
+        Total = new Currency(Total.Code, costFloor);
+    }
+
     Console.WriteLine($"Rounded total price: {Total}.");
 
     //convert back to usd

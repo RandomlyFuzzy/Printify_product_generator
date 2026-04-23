@@ -77,20 +77,35 @@ public sealed class StagingSwipeReviewService
         var normalizedProductId = productId.Trim();
         var dataRoot = ResolveDataRoot();
         var settings = OrchestrationSettingsStore.Load(dataRoot);
+        var context = await ResolveContextAsync(settings, requireOllama: false, cancellationToken);
+        if (!IsEbayShop(context.PublishingShop))
+        {
+            throw new InvalidOperationException(
+                $"Publishing shop '{context.PublishingShop.Title}' is not an eBay-connected shop. Configure PUBLISHING_SHOP_ID to an eBay shop before publishing from swipe review.");
+        }
 
-        _ = FindDraftRecord(dataRoot, normalizedProductId)
-            ?? throw new FileNotFoundException($"No draft record was found for staged product {normalizedProductId}.");
+        var publishingProduct = await context.Printify.GetProductAsync(context.PublishingShop.Id, normalizedProductId);
+        if (IsPublishedProduct(publishingProduct))
+        {
+            var alreadyPublishedSnapshot = await LoadSnapshotAsync(dataRoot, settings, context, cancellationToken);
+            return new SwipeReviewActionExecution(
+                new SwipeReviewActionResult(
+                    Success: false,
+                    Message: $"Product {normalizedProductId} is already published in {context.PublishingShop.Title}.",
+                    TargetProductId: normalizedProductId),
+                alreadyPublishedSnapshot);
+        }
 
         var queued = _moveQueue.TryEnqueue(normalizedProductId);
-        var snapshot = await LoadSnapshotAsync(dataRoot, settings, resolvedContext: null, cancellationToken);
+        var snapshot = await LoadSnapshotAsync(dataRoot, settings, context, cancellationToken);
         var actionResult = queued
             ? new SwipeReviewActionResult(
                 Success: true,
-                Message: $"Queued {normalizedProductId} to move in the background.",
+                Message: $"Queued {normalizedProductId} to publish to eBay in the background.",
                 TargetProductId: null)
             : new SwipeReviewActionResult(
                 Success: false,
-                Message: $"Move for {normalizedProductId} is already queued.",
+                Message: $"Publish for {normalizedProductId} is already queued.",
                 TargetProductId: null);
 
         return new SwipeReviewActionExecution(actionResult, snapshot);
@@ -122,54 +137,127 @@ public sealed class StagingSwipeReviewService
         ResolvedReviewContext? resolvedContext,
         CancellationToken cancellationToken)
     {
-        var queuedProductIds = _moveQueue.CreateQueuedProductIdSnapshot();
-        var queuedDrafts = LoadDraftQueue(dataRoot)
-            .OrderByDescending(entry => entry.CreatedAtUtc)
-            .ToList();
-        var drafts = queuedDrafts
-            .Where(entry => !queuedProductIds.Contains(entry.Draft.ProductId))
-            .ToList();
-        var queuedDraftCount = queuedDrafts.Count - drafts.Count;
-
-        if (drafts.Count == 0)
+        var context = resolvedContext ?? await ResolveContextAsync(settings, requireOllama: false, cancellationToken);
+        if (!IsEbayShop(context.PublishingShop))
         {
+            throw new InvalidOperationException(
+                $"Publishing shop '{context.PublishingShop.Title}' is not an eBay-connected shop. Configure PUBLISHING_SHOP_ID to an eBay shop before using swipe review.");
+        }
+
+        var queuedProductIds = _moveQueue.CreateQueuedProductIdSnapshot();
+        var allPublishingProducts = await context.Printify.GetAllProductsAsync(context.PublishingShop.Id);
+        var unpublishedProducts = allPublishingProducts
+            .Where(IsUnpublishedProduct)
+            .OrderByDescending(product => ParseCreatedAt(product.CreatedAt, DateTime.MinValue))
+            .ToList();
+        var queueProducts = unpublishedProducts
+            .Where(product => !queuedProductIds.Contains(product.Id))
+            .ToList();
+        var queuedProductCount = unpublishedProducts.Count - queueProducts.Count;
+        var allUnpublishedProductsQueued = unpublishedProducts.Count > 0 && queueProducts.Count == 0;
+        if (allUnpublishedProductsQueued)
+        {
+            // Keep cards visible for review even when the entire unpublished set is currently queued.
+            queueProducts = unpublishedProducts;
+        }
+        var publishedHiddenCount = allPublishingProducts.Count(IsPublishedProduct);
+
+        if (queueProducts.Count == 0)
+        {
+            var parts = new List<string>();
+            if (queuedProductCount > 0)
+            {
+                parts.Add($"{queuedProductCount} publish{(queuedProductCount == 1 ? string.Empty : "es")} queued in the background.");
+            }
+
+            if (publishedHiddenCount > 0)
+            {
+                parts.Add($"{publishedHiddenCount} published eBay product{(publishedHiddenCount == 1 ? string.Empty : "s")} hidden from swipe review.");
+            }
+
             return new SwipeReviewSnapshot(
                 QueueCount: 0,
                 CurrentItem: null,
-                StatusMessage: queuedDraftCount > 0
-                    ? $"{queuedDraftCount} move{(queuedDraftCount == 1 ? string.Empty : "s")} queued in the background."
-                    : "No staged draft products are waiting for review.",
+                StatusMessage: parts.Count > 0
+                    ? string.Join(" ", parts)
+                    : "No unpublished products are waiting in the eBay shop queue.",
                 UpcomingItem: null,
                 UpcomingItems: Array.Empty<SwipeReviewItem>());
         }
 
-        var statusMessage = string.Empty;
+        var statusParts = new List<string>();
+        if (allUnpublishedProductsQueued)
+        {
+            statusParts.Add($"{queuedProductCount} unpublished eBay product{(queuedProductCount == 1 ? string.Empty : "s")} currently queued in the background.");
+        }
+
+        if (publishedHiddenCount > 0)
+        {
+            statusParts.Add($"{publishedHiddenCount} published eBay product{(publishedHiddenCount == 1 ? string.Empty : "s")} hidden from swipe review.");
+        }
+
+        var statusMessage = string.Join(" ", statusParts);
         SwipeReviewItem currentItem;
 
         try
         {
-            var context = resolvedContext ?? await ResolveContextAsync(settings, requireOllama: false, cancellationToken);
-            currentItem = await BuildCurrentItemAsync(drafts[0], dataRoot, context, cancellationToken);
+            currentItem = await BuildCurrentItemAsync(queueProducts[0], context, cancellationToken);
         }
         catch (Exception ex)
         {
-            currentItem = BuildFallbackItem(drafts[0], dataRoot, ex.Message);
-            statusMessage = ex.Message;
+            currentItem = BuildFallbackItem(queueProducts[0], ex.Message);
+            statusMessage = string.IsNullOrWhiteSpace(statusMessage)
+                ? ex.Message
+                : $"{statusMessage} {ex.Message}";
         }
 
-        var upcomingItems = drafts
+        var upcomingItems = queueProducts
             .Skip(1)
             .Take(PreloadedUpcomingItemCount)
-            .Select(storedDraft => BuildPreviewItem(storedDraft, dataRoot))
+            .Select(BuildPreviewItem)
             .ToArray();
         var upcomingItem = upcomingItems.FirstOrDefault();
 
         return new SwipeReviewSnapshot(
-            QueueCount: drafts.Count,
+            QueueCount: queueProducts.Count,
             CurrentItem: currentItem,
             StatusMessage: string.IsNullOrWhiteSpace(statusMessage) ? null : statusMessage,
             UpcomingItem: upcomingItem,
             UpcomingItems: upcomingItems);
+    }
+
+    private async Task<List<StoredDraftRecord>> FilterUnpublishedDraftsAsync(
+        IReadOnlyList<StoredDraftRecord> drafts,
+        ResolvedReviewContext context,
+        CancellationToken cancellationToken)
+    {
+        var unpublishedDrafts = new List<StoredDraftRecord>(drafts.Count);
+
+        foreach (var draft in drafts)
+        {
+            cancellationToken.ThrowIfCancellationRequested();
+
+            try
+            {
+                var product = await context.Printify.GetProductAsync(context.StagingShop.Id, draft.Draft.ProductId);
+                if (product.Visible == false)
+                {
+                    unpublishedDrafts.Add(draft);
+                }
+            }
+            catch (HttpRequestException ex) when (ex.StatusCode == HttpStatusCode.NotFound)
+            {
+                DeleteDraftRecord(draft.DraftPath);
+            }
+        }
+
+        return unpublishedDrafts;
+    }
+
+    private static bool HasEbayChannelContent(MockupDraftRecord draft)
+    {
+        return (draft.ChannelContent?.Keys ?? Enumerable.Empty<string>())
+            .Any(key => string.Equals(key, "ebay", StringComparison.OrdinalIgnoreCase));
     }
 
     private async Task<SwipeReviewActionResult> DeleteAsync(
@@ -182,10 +270,29 @@ public sealed class StagingSwipeReviewService
             throw new InvalidOperationException("A staged product ID is required.");
 
         if (_moveQueue.IsQueued(productId))
-            throw new InvalidOperationException("This product is already queued for a background move.");
+            throw new InvalidOperationException("This product is already queued for background publish.");
 
-        var draft = FindDraftRecord(dataRoot, productId)
-            ?? throw new FileNotFoundException($"No draft record was found for staged product {productId}.");
+        var draft = FindDraftRecord(dataRoot, productId);
+
+        if (draft is null)
+        {
+            try
+            {
+                await context.Printify.DeleteProductAsync(context.PublishingShop.Id, productId);
+            }
+            catch (HttpRequestException ex) when (ex.StatusCode == HttpStatusCode.NotFound)
+            {
+                return new SwipeReviewActionResult(
+                    Success: false,
+                    Message: $"Product {productId} was not found in {context.PublishingShop.Title}.",
+                    TargetProductId: null);
+            }
+
+            return new SwipeReviewActionResult(
+                Success: true,
+                Message: $"Removed unpublished eBay product {productId} from {context.PublishingShop.Title}.",
+                TargetProductId: null);
+        }
 
         try
         {
@@ -214,8 +321,43 @@ public sealed class StagingSwipeReviewService
         if (string.IsNullOrWhiteSpace(productId))
             throw new InvalidOperationException("A staged product ID is required.");
 
-        var draft = FindDraftRecord(dataRoot, productId)
-            ?? throw new FileNotFoundException($"No draft record was found for staged product {productId}.");
+        var draft = FindDraftRecord(dataRoot, productId);
+
+        if (!IsEbayShop(context.PublishingShop))
+            throw new InvalidOperationException(
+                $"Publishing shop '{context.PublishingShop.Title}' is not an eBay-connected shop. Configure PUBLISHING_SHOP_ID to an eBay shop before publishing from swipe review.");
+
+        if (draft is null)
+        {
+            Product publishingProduct;
+            try
+            {
+                publishingProduct = await context.Printify.GetProductAsync(context.PublishingShop.Id, productId);
+            }
+            catch (HttpRequestException ex) when (ex.StatusCode == HttpStatusCode.NotFound)
+            {
+                throw new FileNotFoundException($"No unpublished eBay product was found for {productId} in {context.PublishingShop.Title}.", ex);
+            }
+
+            if (IsPublishedProduct(publishingProduct))
+            {
+                return new SwipeReviewActionResult(
+                    Success: false,
+                    Message: $"Product {productId} is already published in {context.PublishingShop.Title}.",
+                    TargetProductId: publishingProduct.Id);
+            }
+
+            await context.Printify.PublishProductAsync(
+                context.PublishingShop.Id,
+                publishingProduct.Id,
+                new PublishProductRequest());
+
+            return new SwipeReviewActionResult(
+                Success: true,
+                Message: $"Published {publishingProduct.Id} to eBay via {context.PublishingShop.Title}.",
+                TargetProductId: publishingProduct.Id);
+        }
+
         var stagingProduct = await context.Printify.GetProductAsync(context.StagingShop.Id, draft.Draft.ProductId);
         var generatedListing = await GenerateListingContentAsync(draft.Draft, stagingProduct, context, cancellationToken);
         var repricedVariants = await BuildVariantUpdatesAsync(stagingProduct, context, cancellationToken);
@@ -239,6 +381,10 @@ public sealed class StagingSwipeReviewService
             };
 
             await context.Printify.UpdateProductAsync(context.PublishingShop.Id, transfer.TargetProductId, updateRequest);
+            await context.Printify.PublishProductAsync(
+                context.PublishingShop.Id,
+                transfer.TargetProductId,
+                new PublishProductRequest());
         }
         catch (Exception ex)
         {
@@ -249,13 +395,13 @@ public sealed class StagingSwipeReviewService
 
             var failureReason = DescribeFailure(ex);
             var failurePrefix = string.IsNullOrWhiteSpace(transfer?.TargetProductId)
-                ? $"The product {draft.Draft.ProductId} could not be moved to {context.PublishingShop.Title}."
-                : $"The product clone {transfer.TargetProductId} could not be prepared in {context.PublishingShop.Title}.";
+                ? $"The product {draft.Draft.ProductId} could not be prepared for eBay publish in {context.PublishingShop.Title}."
+                : $"The product clone {transfer.TargetProductId} could not be published to eBay from {context.PublishingShop.Title}.";
             var cleanupSummary = cleanupTargetOnFailure
-                ? " The target draft copy was removed so the queue stays clean."
+                ? " The target copy was removed so the queue stays clean."
                 : string.IsNullOrWhiteSpace(transfer?.TargetProductId)
                     ? " No product changes were applied."
-                    : " No cleanup was applied after the failure, so the created draft copy was left in place for manual review.";
+                    : " No cleanup was applied after the failure, so the created copy was left in place for manual review.";
 
             throw new InvalidOperationException(
                 $"{failurePrefix} {failureReason}{cleanupSummary}",
@@ -270,95 +416,93 @@ public sealed class StagingSwipeReviewService
         }
         catch
         {
-            completionMessage = $"Moved {transfer.TargetProductId} to {context.PublishingShop.Title} as a draft, but deleting the staging product failed. Remove the staging copy manually to avoid duplicates.";
+            completionMessage = $"Published {transfer.TargetProductId} to eBay via {context.PublishingShop.Title}, but deleting the staging product failed. Remove the staging copy manually to avoid duplicates.";
         }
 
         DeleteDraftRecord(draft.DraftPath);
 
         return new SwipeReviewActionResult(
             Success: string.IsNullOrWhiteSpace(completionMessage),
-            Message: completionMessage ?? $"Moved {transfer!.TargetProductId} to {context.PublishingShop.Title} as a draft with refreshed copy and repriced variants.",
+            Message: completionMessage ?? $"Published {transfer!.TargetProductId} to eBay via {context.PublishingShop.Title} with refreshed copy and repriced variants.",
             TargetProductId: transfer!.TargetProductId);
     }
 
     private async Task<SwipeReviewItem> BuildCurrentItemAsync(
-        StoredDraftRecord storedDraft,
-        string dataRoot,
+        Product product,
         ResolvedReviewContext context,
         CancellationToken cancellationToken)
     {
-        var draft = storedDraft.Draft;
-        var product = await context.Printify.GetProductAsync(context.StagingShop.Id, draft.ProductId);
-        var channelContent = ResolveChannelContent(draft);
         var pricingPreview = await BuildPricingPreviewAsync(product, context, cancellationToken);
+        var createdAtUtc = ParseCreatedAt(product.CreatedAt, DateTime.MinValue);
 
         return new SwipeReviewItem(
-            ProductId: draft.ProductId,
-            JobId: ChooseValue(draft.JobId, "Unknown job"),
-            ReferenceCode: ChooseValue(draft.ReferenceCode, draft.ProductId),
-            BlueprintTitle: ChooseValue(draft.BlueprintTitle, "Unknown product"),
-            PrintProviderTitle: ChooseValue(draft.PrintProviderTitle, "Unknown provider"),
-            CreatedAtUtc: storedDraft.CreatedAtUtc,
-            CurrentTitle: ChooseValue(product.Title, channelContent.Title, draft.BlueprintTitle, "Untitled product"),
-            CurrentDescription: ChooseValue(product.Description, channelContent.Description, draft.LlmReason, "No description available."),
+            ProductId: product.Id,
+            JobId: "eBay shop",
+            ReferenceCode: ChooseValue(product.External?.Handle, product.External?.Id, product.Id),
+            BlueprintTitle: product.BlueprintId > 0 ? $"Blueprint #{product.BlueprintId}" : "Unknown product",
+            PrintProviderTitle: product.PrintProviderId > 0 ? $"Provider #{product.PrintProviderId}" : "Unknown provider",
+            CreatedAtUtc: createdAtUtc,
+            CurrentTitle: ChooseValue(product.Title, "Untitled product"),
+            CurrentDescription: ChooseValue(product.Description, "No description available."),
             CurrentPriceLabel: pricingPreview.CurrentLabel,
             SuggestedPriceLabel: pricingPreview.SuggestedLabel,
             MarginLabel: pricingPreview.MarginLabel,
-            Images: BuildDisplayImages(draft, dataRoot),
-            Tags: ResolveTags(channelContent, product, draft),
+            Images: BuildDisplayImages(product),
+            Tags: product.Tags
+                .Select(tag => tag?.Trim())
+                .Where(tag => !string.IsNullOrWhiteSpace(tag))
+                .Distinct(StringComparer.OrdinalIgnoreCase)
+                .Take(10)
+                .Cast<string>()
+                .ToList(),
             CanDelete: true,
             CanPromote: true,
             PromoteUnavailableReason: null);
     }
 
     private SwipeReviewItem BuildFallbackItem(
-        StoredDraftRecord storedDraft,
-        string dataRoot,
+        Product product,
         string reason)
     {
-        var draft = storedDraft.Draft;
-        var channelContent = ResolveChannelContent(draft);
+        var createdAtUtc = ParseCreatedAt(product.CreatedAt, DateTime.MinValue);
 
         return new SwipeReviewItem(
-            ProductId: draft.ProductId,
-            JobId: ChooseValue(draft.JobId, "Unknown job"),
-            ReferenceCode: ChooseValue(draft.ReferenceCode, draft.ProductId),
-            BlueprintTitle: ChooseValue(draft.BlueprintTitle, "Unknown product"),
-            PrintProviderTitle: ChooseValue(draft.PrintProviderTitle, "Unknown provider"),
-            CreatedAtUtc: storedDraft.CreatedAtUtc,
-            CurrentTitle: ChooseValue(channelContent.Title, draft.BlueprintTitle, draft.ProductId, "Untitled product"),
-            CurrentDescription: ChooseValue(channelContent.Description, draft.LlmReason, "The live staging product could not be loaded."),
+            ProductId: product.Id,
+            JobId: "eBay shop",
+            ReferenceCode: ChooseValue(product.External?.Handle, product.External?.Id, product.Id),
+            BlueprintTitle: product.BlueprintId > 0 ? $"Blueprint #{product.BlueprintId}" : "Unknown product",
+            PrintProviderTitle: product.PrintProviderId > 0 ? $"Provider #{product.PrintProviderId}" : "Unknown provider",
+            CreatedAtUtc: createdAtUtc,
+            CurrentTitle: ChooseValue(product.Title, product.Id, "Untitled product"),
+            CurrentDescription: ChooseValue(product.Description, "The live eBay product could not be loaded."),
             CurrentPriceLabel: "Unavailable",
             SuggestedPriceLabel: "Unavailable",
             MarginLabel: "Live pricing unavailable",
-            Images: BuildDisplayImages(draft, dataRoot),
-            Tags: ResolveFallbackTags(channelContent, draft),
+            Images: BuildDisplayImages(product),
+            Tags: product.Tags,
             CanDelete: false,
             CanPromote: false,
             PromoteUnavailableReason: reason);
     }
 
-    private SwipeReviewItem BuildPreviewItem(
-        StoredDraftRecord storedDraft,
-        string dataRoot)
+    private SwipeReviewItem BuildPreviewItem(Product product)
     {
-        var draft = storedDraft.Draft;
-        var channelContent = ResolveChannelContent(draft);
+        var createdAtUtc = ParseCreatedAt(product.CreatedAt, DateTime.MinValue);
 
         return new SwipeReviewItem(
-            ProductId: draft.ProductId,
-            JobId: ChooseValue(draft.JobId, "Unknown job"),
-            ReferenceCode: ChooseValue(draft.ReferenceCode, draft.ProductId),
-            BlueprintTitle: ChooseValue(draft.BlueprintTitle, "Unknown product"),
-            PrintProviderTitle: ChooseValue(draft.PrintProviderTitle, "Unknown provider"),
-            CreatedAtUtc: storedDraft.CreatedAtUtc,
-            CurrentTitle: ChooseValue(channelContent.Title, draft.BlueprintTitle, draft.ProductId, "Untitled product"),
-            CurrentDescription: ChooseValue(channelContent.Description, draft.LlmReason, "Draft details are loading."),
+            ProductId: product.Id,
+            JobId: "eBay shop",
+            ReferenceCode: ChooseValue(product.External?.Handle, product.External?.Id, product.Id),
+            BlueprintTitle: product.BlueprintId > 0 ? $"Blueprint #{product.BlueprintId}" : "Unknown product",
+            PrintProviderTitle: product.PrintProviderId > 0 ? $"Provider #{product.PrintProviderId}" : "Unknown provider",
+            CreatedAtUtc: createdAtUtc,
+            CurrentTitle: ChooseValue(product.Title, product.Id, "Untitled product"),
+            CurrentDescription: ChooseValue(product.Description, "Product details are loading."),
             CurrentPriceLabel: "Loading...",
             SuggestedPriceLabel: "Loading...",
             MarginLabel: "Fetching live pricing",
-            Images: BuildDisplayImages(draft, dataRoot),
-            Tags: ResolveFallbackTags(channelContent, draft),
+            Images: BuildDisplayImages(product),
+            Tags: product.Tags,
             CanDelete: true,
             CanPromote: true,
             PromoteUnavailableReason: null);
@@ -562,6 +706,28 @@ public sealed class StagingSwipeReviewService
         return images;
     }
 
+    private static List<SwipeReviewImage> BuildDisplayImages(Product product)
+    {
+        var images = new List<SwipeReviewImage>();
+        var seen = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+
+        foreach (var productImage in product.Images ?? Enumerable.Empty<ProductMockupImage>())
+        {
+            if (string.IsNullOrWhiteSpace(productImage.Src) || !seen.Add(productImage.Src))
+                continue;
+
+            images.Add(new SwipeReviewImage(
+                Url: productImage.Src,
+                AltText: $"Mockup for {ChooseValue(product.Title, product.Id)}",
+                Caption: string.IsNullOrWhiteSpace(productImage.Position)
+                    ? "Shop mockup"
+                    : productImage.Position,
+                SourceLabel: "Mockup"));
+        }
+
+        return images;
+    }
+
     private static GeneratedListingContent? TryResolveStoredListingContent(MockupDraftRecord draft, Product stagingProduct)
     {
         var channelContent = ResolveChannelContent(draft);
@@ -739,14 +905,29 @@ public sealed class StagingSwipeReviewService
         if (matchingProfiles.Count == 0)
             matchingProfiles = shippingInfo.Profiles.ToList();
 
-        var matchingCountry = matchingProfiles.FirstOrDefault(profile =>
-            profile.Countries.Any(country => string.Equals(country, countryCode, StringComparison.OrdinalIgnoreCase)));
+        var countrySpecificCosts = matchingProfiles
+            .Where(profile => profile.Countries.Any(country => string.Equals(country, countryCode, StringComparison.OrdinalIgnoreCase)))
+            .Select(profile => profile.FirstItem?.Cost ?? 0)
+            .Where(cost => cost > 0)
+            .ToList();
 
-        var profile = matchingCountry
-            ?? matchingProfiles.FirstOrDefault(candidate => candidate.Countries.Count == 0)
-            ?? matchingProfiles.FirstOrDefault();
+        if (countrySpecificCosts.Count > 0)
+            return countrySpecificCosts.Max();
 
-        return profile?.FirstItem?.Cost ?? 0;
+        var fallbackCosts = matchingProfiles
+            .Where(candidate => candidate.Countries.Count == 0)
+            .Select(candidate => candidate.FirstItem?.Cost ?? 0)
+            .Where(cost => cost > 0)
+            .ToList();
+
+        if (fallbackCosts.Count > 0)
+            return fallbackCosts.Max();
+
+        return matchingProfiles
+            .Select(candidate => candidate.FirstItem?.Cost ?? 0)
+            .Where(cost => cost > 0)
+            .DefaultIfEmpty(0)
+            .Max();
     }
 
     private static int CalculateAppealingPrice(int productionPrice, int shippingPrice, decimal marginPercent)
@@ -798,6 +979,9 @@ public sealed class StagingSwipeReviewService
 
     private static ListingChannelContent ResolveChannelContent(MockupDraftRecord draft)
     {
+        if (draft.ChannelContent.TryGetValue("ebay", out var ebayContent))
+            return ebayContent;
+
         if (draft.ChannelContent.TryGetValue("printify", out var printifyContent))
             return printifyContent;
 
@@ -954,12 +1138,43 @@ Original fit reason: {ChooseValue(draft.LlmReason, "Unavailable")}";
             return shops.FirstOrDefault(shop => shop.Id == configuredShopId.Value && shop.Id != stagingShopId);
         }
 
+        var nonStagingShops = shops.Where(shop => shop.Id != stagingShopId).ToList();
+        var ebayShop = nonStagingShops.FirstOrDefault(IsEbayShop);
+        if (ebayShop is not null)
+            return ebayShop;
+
         return shops.FirstOrDefault(shop => shop.Id != stagingShopId && string.Equals(shop.Title, "Publishing", StringComparison.OrdinalIgnoreCase))
             ?? shops.FirstOrDefault(shop => shop.Id != stagingShopId && string.Equals(shop.Title, "Production", StringComparison.OrdinalIgnoreCase))
             ?? shops.FirstOrDefault(shop => shop.Id != stagingShopId && shop.Title.Contains("publish", StringComparison.OrdinalIgnoreCase))
             ?? shops.FirstOrDefault(shop => shop.Id != stagingShopId && shop.Title.Contains("production", StringComparison.OrdinalIgnoreCase))
             ?? shops.FirstOrDefault(shop => shop.Id != stagingShopId && !string.Equals(shop.SalesChannel, "custom_integration", StringComparison.OrdinalIgnoreCase))
             ?? shops.FirstOrDefault(shop => shop.Id != stagingShopId);
+    }
+
+    private static bool IsEbayShop(Shop shop)
+    {
+        return ContainsEbay(shop.SalesChannel) || ContainsEbay(shop.Title);
+    }
+
+    private static bool IsUnpublishedProduct(Product product)
+    {
+        return !IsPublishedProduct(product);
+    }
+
+    private static bool IsPublishedProduct(Product product)
+    {
+        return product.Visible && HasExternalListing(product);
+    }
+
+    private static bool HasExternalListing(Product product)
+    {
+        return !string.IsNullOrWhiteSpace(product.External?.Id);
+    }
+
+    private static bool ContainsEbay(string? value)
+    {
+        return !string.IsNullOrWhiteSpace(value)
+            && value.Contains("ebay", StringComparison.OrdinalIgnoreCase);
     }
 
     private static string ReadRequiredEnvValue(string envFilePath, string key)
@@ -1045,7 +1260,7 @@ Original fit reason: {ChooseValue(draft.LlmReason, "Unavailable")}";
     {
         var message = ex.GetBaseException().Message.Trim();
         if (string.IsNullOrWhiteSpace(message))
-            return "An unknown error occurred while preparing the draft move.";
+            return "An unknown error occurred while preparing the eBay publish.";
 
         return message.EndsWith('.') ? message + " " : message + ".";
     }

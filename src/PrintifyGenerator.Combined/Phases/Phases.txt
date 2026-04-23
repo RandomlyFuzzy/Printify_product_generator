@@ -2,21 +2,19 @@ phase1 => Prompt Generated
 phase2 => image Generated
 phase3 => image assesses
 phase4 => products Generated
-phase5 => products assessed
-phase6 => metadata Generated
+phase5 => metadata Generated
+phase6 => products assessed
 phase7 => Publishing Direction (etsy/ebay/etc)
 phase8 => Pricing
-phase9 => moved to Production
-phase10=> Human Assessment + Publishing
+phase9 => Human Assessment + Publishing
 
 
 phase1 => id/phase1.json            => Prompt
 phase2 => id/id.png                 => byte[]
 phase3 => id/phase3.json            => ImageSuitability
 phase4 => id/phase4.txt             => PID[]
-phase5 => id/phase5.PID.json        => ProductAssessment
-phase6 => id/phase6.PID.Meta.json   => ProductMeta
+phase5 => id/phase5.PID.Meta.json   => ProductMeta
+phase6 => id/phase6.PID.json        => ProductAssessment
 phase7 => id/phase7.txt             => PID,Store[]
 phase8 => id/phase8.txt             => PID,ProdId,VID,Shop,ProductionPrice,Price
-phase9 => id/phase9.txt             => PID[] //even if assessed unfit
-phase10=> maunal from printify
+phase9 => maunal from printify

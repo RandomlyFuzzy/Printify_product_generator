@@ -12,10 +12,44 @@
     <section class="swipe-stage" id="swipe-stage">
         <div class="swipe-stage-backdrop" id="swipe-stage-backdrop" style="@Model.PageState.InitialBackdropStyle"></div>
 
+        <aside class="swipe-card-copy swipe-copy-panel" id="swipe-copy-panel" hidden="@(Model.PageState.CurrentItem is null)">
+            <div class="swipe-card-heading">
+                <span class="swipe-kicker" id="swipe-kicker">@Model.PageState.BlueprintTitle</span>
+                <span class="swipe-provider" id="swipe-provider">@Model.PageState.PrintProviderTitle</span>
+            </div>
+
+            <h2 class="swipe-title" id="swipe-title">@Model.PageState.CurrentTitle</h2>
+            <p class="swipe-description" id="swipe-description">@Model.PageState.CurrentDescription</p>
+
+            <div class="swipe-metrics">
+                <div>
+                    <span>Current</span>
+                    <strong id="swipe-current-price">@Model.PageState.CurrentPriceLabel</strong>
+                </div>
+                <div>
+                    <span>Suggested</span>
+                    <strong id="swipe-suggested-price">@Model.PageState.SuggestedPriceLabel</strong>
+                </div>
+                <div>
+                    <span>Margin</span>
+                    <strong id="swipe-margin">@Model.PageState.MarginLabel</strong>
+                </div>
+            </div>
+
+            <div class="swipe-tag-row" id="swipe-tag-row" hidden="@(!Model.PageState.HasVisibleTags)">
+                @foreach (var tag in Model.PageState.VisibleTags)
+                {
+                    <span class="swipe-tag-chip">@tag</span>
+                }
+            </div>
+
+            <p class="swipe-note" id="swipe-note">@Model.PageState.InitialNote</p>
+        </aside>
+
         <div class="swipe-card-shell" id="swipe-card-shell">
             <article class="@Model.PageState.InitialCardClass" id="swipe-card" aria-live="polite">
                 <span class="swipe-overlay-badge swipe-overlay-badge-left">Nope</span>
-                <span class="swipe-overlay-badge swipe-overlay-badge-right">Move</span>
+                <span class="swipe-overlay-badge swipe-overlay-badge-right">Publish</span>
                 <span class="swipe-overlay-badge swipe-overlay-badge-up">Prev</span>
                 <span class="swipe-overlay-badge swipe-overlay-badge-down">Next</span>
 
@@ -74,7 +108,7 @@
         <section class="@Model.PageState.InitialEmptyStateClass" id="swipe-empty-state">
             <span class="swipe-empty-label">Queue clear</span>
             <h1>The review stack is clear.</h1>
-            <p>Queued moves keep running in the background, and new draft products will appear here automatically.</p>
+            <p>Queued eBay publishes keep running in the background, and new draft products will appear here automatically.</p>
         </section>
     </section>
 
@@ -87,7 +121,7 @@
         <button type="button"
                 class="swipe-action-button swipe-action-promote"
                 id="swipe-promote-button"
-            aria-label="Move staged product to publishing drafts"
+            aria-label="Publish staged product to eBay"
             disabled="@Model.PageState.PromoteDisabled">&gt;</button>
     </div>
 </main>
@@ -116,6 +150,16 @@
                 gridLabel: document.getElementById("swipe-grid-label"),
                 supplementalCount: document.getElementById("swipe-supplemental-count"),
                 supplementalGrid: document.getElementById("swipe-supplemental-grid"),
+                copyPanel: document.getElementById("swipe-copy-panel"),
+                kicker: document.getElementById("swipe-kicker"),
+                provider: document.getElementById("swipe-provider"),
+                title: document.getElementById("swipe-title"),
+                description: document.getElementById("swipe-description"),
+                currentPrice: document.getElementById("swipe-current-price"),
+                suggestedPrice: document.getElementById("swipe-suggested-price"),
+                margin: document.getElementById("swipe-margin"),
+                tagRow: document.getElementById("swipe-tag-row"),
+                note: document.getElementById("swipe-note"),
                 emptyState: document.getElementById("swipe-empty-state"),
                 actions: document.getElementById("swipe-actions"),
                 deleteButton: document.getElementById("swipe-delete-button"),
@@ -394,6 +438,46 @@
                 refs.supplementalGrid.replaceChildren(...cards);
             };
 
+            const renderCopy = () => {
+                const item = currentItem();
+
+                if (!item) {
+                    refs.copyPanel.hidden = true;
+                    refs.kicker.textContent = "";
+                    refs.provider.textContent = "";
+                    refs.title.textContent = "";
+                    refs.description.textContent = "";
+                    refs.currentPrice.textContent = "";
+                    refs.suggestedPrice.textContent = "";
+                    refs.margin.textContent = "";
+                    refs.note.textContent = state?.statusMessage || "No staged draft products are waiting for review.";
+                    refs.tagRow.hidden = true;
+                    refs.tagRow.replaceChildren();
+                    return;
+                }
+
+                refs.copyPanel.hidden = false;
+                refs.kicker.textContent = item.blueprintTitle || "Unknown product";
+                refs.provider.textContent = item.printProviderTitle || "Unknown provider";
+                refs.title.textContent = item.currentTitle || "Untitled product";
+                refs.description.textContent = item.currentDescription || "No description available.";
+                refs.currentPrice.textContent = item.currentPriceLabel || "Unavailable";
+                refs.suggestedPrice.textContent = item.suggestedPriceLabel || "Unavailable";
+                refs.margin.textContent = item.marginLabel || "Unavailable";
+                refs.note.textContent = item.promoteUnavailableReason
+                    || state?.statusMessage
+                    || "Swipe left to delete or right to publish to eBay.";
+
+                const tags = Array.isArray(item.tags) ? item.tags.filter((tag) => typeof tag === "string" && tag.trim()) : [];
+                refs.tagRow.hidden = tags.length === 0;
+                refs.tagRow.replaceChildren(...tags.slice(0, 4).map((tag) => {
+                    const chip = document.createElement("span");
+                    chip.className = "swipe-tag-chip";
+                    chip.textContent = tag;
+                    return chip;
+                }));
+            };
+
             const updateActionButtons = () => {
                 const item = currentItem();
                 const images = currentImages();
@@ -498,11 +582,13 @@
 
                 if (!item) {
                     renderSupplementalGrid();
+                    renderCopy();
                     renderImage();
                     return;
                 }
 
                 renderSupplementalGrid();
+                renderCopy();
                 renderImage();
             };
 
@@ -628,7 +714,7 @@
                 }
 
                 if (handlerName === "Promote" && item.canPromote !== true) {
-                    showToast(item.promoteUnavailableReason || "Move is unavailable.", "warning");
+                    showToast(item.promoteUnavailableReason || "Publish is unavailable.", "warning");
                     settleCard();
                     return;
                 }
