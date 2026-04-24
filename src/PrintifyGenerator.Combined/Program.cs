@@ -100,7 +100,7 @@ await Parallel.ForEachAsync(
                         sw.Elapsed,
                         DateTime.UtcNow));
 
-                    Console.WriteLine($"[{bundleId}] ERROR: {ex.Message}");
+                    Console.WriteLine($"[{bundleId}] ERROR: {ex.Message} {ex.StackTrace.ToString()}");
                 }
                 finally
                 {
