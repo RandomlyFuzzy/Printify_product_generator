@@ -13,7 +13,19 @@ public class OllamaClient : IDisposable
     private readonly string _baseUrl;
 
     // 🔒 GLOBAL LOCK (only 1 request at a time)
-    private static readonly SemaphoreSlim _gate = new(1, 1);
+    private SemaphoreSlim _gate
+    {
+        get
+        {
+            if (!_modelLocks.TryGetValue(_baseUrl, out var sem))
+            {
+                sem = new SemaphoreSlim(1, 1);
+                _modelLocks[_baseUrl] = sem;
+            }
+            return sem;
+        }
+    }
+    static Dictionary<string,SemaphoreSlim> _modelLocks = new(StringComparer.OrdinalIgnoreCase);
 
     public OllamaClient(string baseUrl = "http://localhost:11434")
     {
@@ -22,7 +34,12 @@ public class OllamaClient : IDisposable
         {
             Timeout = TimeSpan.FromMinutes(10)
         };
+        if(!_modelLocks.ContainsKey(_baseUrl))
+        {
+            _modelLocks[_baseUrl] = new SemaphoreSlim(1,1);
+        }
     }
+
 
     // =========================
     // 🔹 LOCK HELPER
