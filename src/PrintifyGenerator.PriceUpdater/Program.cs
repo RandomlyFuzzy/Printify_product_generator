@@ -26,7 +26,7 @@ Shop targetShop;
 try
 {
     List<Shop> shops = await client.GetShopsAsync();
-    targetShop = shops.FirstOrDefault(a => a.Title == "Production");//settings.ResolveShop(shops);
+    targetShop = shops.FirstOrDefault(a => a.Title == "Ebay");//settings.ResolveShop(shops);
 }
 catch (Exception ex)
 {
@@ -124,6 +124,10 @@ static int CalculateVariantPrice(int shippingPrice, int productionPrice, decimal
     {
         throw new ArgumentOutOfRangeException(nameof(productionPrice), "Production price cannot be negative.");
     }
+    //solve for 
+    // (PP + TP * (1+(sales tax %))-13.6%[sale fee] - 1.3%[international fee] - 0.40 [sale fixed fee] < target retail price * 95% 
+
+    
 
     var normalizedShippingPrice = Math.Max(0, shippingPrice);
     var marginMultiplier = 1m + (marginPercent / 100m);

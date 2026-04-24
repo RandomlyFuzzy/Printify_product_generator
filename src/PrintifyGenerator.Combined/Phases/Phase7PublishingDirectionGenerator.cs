@@ -5,7 +5,7 @@ public static partial class PhaseFactory
 {
 	private sealed class Phase7PublishingDirectionGenerator : PhaseGeneratorBase
 	{
-		public Phase7PublishingDirectionGenerator() : base(7, "Publishing Direction", "id/phase7.txt => {\"pid\":\"...\",\"targets\":[{\"shopTitle\":\"Ebay\",\"shopId\":123,\"productId\":\"...\"}]}") { }
+		public Phase7PublishingDirectionGenerator() : base(7, "Publishing Direction", "id/phase7.txt => PID,Store,NPID") { }
 
 		protected override bool IsCompleteCore(PhaseBundle bundle)
 			=> File.Exists(bundle.ResolvePhaseFile(7, "txt"));
@@ -76,7 +76,22 @@ public static partial class PhaseFactory
 				}
 
 				var targets = await runtime.ResolveShopsByNamesAsync(selectedStores);
-				var targetEntries = new List<object>();
+				var unresolvedStores = selectedStores
+					.Where(store => targets.All(target =>
+						!string.Equals(target.Title, store, StringComparison.OrdinalIgnoreCase)
+						&& !target.Title.Contains(store, StringComparison.OrdinalIgnoreCase)
+						&& !store.Contains(target.Title, StringComparison.OrdinalIgnoreCase)))
+					.Distinct(StringComparer.OrdinalIgnoreCase)
+					.ToList();
+
+				if (unresolvedStores.Count > 0)
+				{
+					transferFailures += unresolvedStores.Count;
+					Console.Error.WriteLine($"[phase7] Could not resolve target shop(s) for product {pid}: {string.Join(", ", unresolvedStores)}");
+					continue;
+				}
+
+				var targetLines = new List<string>();
 				foreach (var target in targets)
 				{
 					try
@@ -88,47 +103,33 @@ public static partial class PhaseFactory
 							deleteSourceProduct: false,
 							publishTargetProduct: false);
 						movedCount++;
-						targetEntries.Add(new
-						{
-							shopTitle = target.Title,
-							shopId = target.Id,
-							productId = transfer.TargetProductId,
-						});
+						targetLines.Add($"{pid},{target.Title},{transfer.TargetProductId}");
 					}
 					catch (Exception ex)
 					{
 						transferFailures++;
-						targetEntries.Add(new
-						{
-							shopTitle = target.Title,
-							shopId = target.Id,
-							productId = (string?)null,
-						});
 						Console.Error.WriteLine($"[phase7] Failed to transfer product {pid} to shop '{target.Title}' ({target.Id}): {ex.Message}");
 					}
 				}
 
-				if (targetEntries.Count == 0)
+				if (targetLines.Count == 0)
 				{
-					targetEntries.AddRange(selectedStores
-						.Where(store => !string.IsNullOrWhiteSpace(store))
-						.Select(store => new
-						{
-							shopTitle = store,
-							shopId = (int?)null,
-							productId = (string?)null,
-						}));
+					transferFailures++;
+					Console.Error.WriteLine($"[phase7] No transferable target product was created for source product {pid}.");
+					continue;
 				}
 
-				lines.Add(JsonSerializer.Serialize(new
-				{
-					pid,
-					targets = targetEntries,
-				}));
+				lines.AddRange(targetLines);
 			}
 
+			if (transferFailures > 0)
+			{
+				return PhaseExecutionResult.Failed($"Phase7 could not create a complete publishing manifest. {transferFailures} transfer/resolution failure(s) occurred.");
+			}
+			Console.WriteLine($"Phase7 generated publishing directions for {movedCount} product(s) for bundle {bundle.Id}.");
+			Console.WriteLine($"Output written to {Path.GetFileName(outputFile)} with lines: {string.Join("; ", lines)}");
 			File.WriteAllLines(outputFile, lines);
-			return PhaseExecutionResult.Done($"Created {Path.GetFileName(outputFile)} and transferred {movedCount} draft copy/copies with {transferFailures} transfer failure(s).");
+			return PhaseExecutionResult.Done($"Created {Path.GetFileName(outputFile)} and transferred {movedCount} draft copy/copies.");
 		}
 
 		private static string BuildPublishingContext(
@@ -153,22 +154,22 @@ public static partial class PhaseFactory
 				return new List<string>();
 			}
 
-			PublishDirectionDecision? decision;
+			List<PublishDirectionDecision>? decision;
 			try
 			{
-				decision = JsonSerializer.Deserialize<PublishDirectionDecision>(jsonObject, PrettyJson);
+				decision = JsonSerializer.Deserialize<List<PublishDirectionDecision>>(jsonObject, PrettyJson);
 			}
 			catch
 			{
 				return new List<string>();
 			}
 
-			if (decision is null || decision.stores is null || decision.stores.Count == 0)
+			if (decision is null || decision.Count == 0)
 			{
 				return new List<string>();
 			}
 
-			return decision.stores
+			return decision.Select(d => d.store)
 				.Where(store => !string.IsNullOrWhiteSpace(store))
 				.Select(store => store.Trim())
 				.Where(store => store.Equals("Etsy", StringComparison.OrdinalIgnoreCase) || store.Equals("Ebay", StringComparison.OrdinalIgnoreCase))

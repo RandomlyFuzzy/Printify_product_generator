@@ -1,0 +1,239 @@
+{
+  "blueprint": {
+    "id": 5638,
+    "title": "adidas\u00AE Defender 5 Backpack (Embroidery)",
+    "brand": "adidas\u00AE",
+    "model": "AB600",
+    "images": [
+      "https://images.printify.com/69e24c4d5af8c06eaa0f2103",
+      "https://images.printify.com/69e24c494e53aa9509067143",
+      "https://images.printify.com/69e24c51fc95024cd407dc06",
+      "https://images.printify.com/69e5f39f3471a7e9d00c6790",
+      "https://images.printify.com/69e24c4a4f50c5c6410d4bc4",
+      "https://images.printify.com/69e24c446ae4843fda0a3ed4",
+      "https://images.printify.com/69e24c4b57ec2fc3ce096c7f",
+      "https://images.printify.com/69e24c5386e675c4ef0d8b67"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 61,
+        "title": "Dimona Tee"
+      },
+      "variants": {
+        "id": 61,
+        "title": "Dimona Tee",
+        "variants": [
+          {
+            "id": 252214,
+            "title": "Black / Black / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Black / Black",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 1181,
+                "width": 1181
+              }
+            ]
+          },
+          {
+            "id": 252215,
+            "title": "Team Navy Blue/ White / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Team Navy Blue/ White",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 1181,
+                "width": 1181
+              }
+            ]
+          },
+          {
+            "id": 252216,
+            "title": "Team Power Red / White / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Team Power Red / White",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 1181,
+                "width": 1181
+              }
+            ]
+          },
+          {
+            "id": 252217,
+            "title": "Team Royal Blue / White / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Team Royal Blue / White",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 1181,
+                "width": 1181
+              }
+            ]
+          },
+          {
+            "id": 252218,
+            "title": "Twill Onix Grey / Black / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Twill Onix Grey / Black",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 1181,
+                "width": 1181
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              252214,
+              252215,
+              252216,
+              252217,
+              252218
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 929
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              252214,
+              252215,
+              252216,
+              252217,
+              252218
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2019
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 709
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              252214,
+              252215,
+              252216,
+              252217,
+              252218
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2039
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 739
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 929
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 5
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2019
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 709
+          },
+          "variant_count": 5
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2039
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 739
+          },
+          "variant_count": 5
+        }
+      ]
+    }
+  ]
+}

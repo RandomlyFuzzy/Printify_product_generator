@@ -15,6 +15,6 @@ phase3 => id/phase3.json            => ImageSuitability
 phase4 => id/phase4.txt             => PID[]
 phase5 => id/phase5.PID.Meta.json   => ProductMeta
 phase6 => id/phase6.PID.json        => ProductAssessment
-phase7 => id/phase7.txt             => PID,Store[]
-phase8 => id/phase8.txt             => PID,ProdId,VID,Shop,ProductionPrice,Price
+phase7 => id/phase7.txt             => PID,Store,NPID
+phase8 => id/phase8.txt             => NPID,ProducerId,VID,Shop,ProductionPrice,ShippingPrice,MyPricing
 phase9 => maunal from printify

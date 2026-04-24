@@ -11,11 +11,11 @@ public static partial class PhaseFactory
 			new Phase2ImageGenerator(),
 			new Phase3SuitabilityGenerator(),
 			new Phase4ProductsGenerator(),
-			new Phase5MetadataGenerator(),
-			new Phase6ProductAssessmentGenerator(),
-			new Phase7PublishingDirectionGenerator(),
-			new Phase8PricingGenerator(),
-			new Phase9ManualPublishingMarker(),
+			// new Phase5MetadataGenerator(),
+			// new Phase6ProductAssessmentGenerator(),
+			// new Phase7PublishingDirectionGenerator(),
+			// new Phase8PricingGenerator(),
+			// new Phase9ManualPublishingMarker(),
 		};
 
 	private static readonly JsonSerializerOptions PrettyJson = new()
@@ -129,11 +129,12 @@ Output requirements:
 - Return ONLY valid JSON object.
 - No markdown, no code fences, no extra keys, no extra text.
 - Use exactly this shape:
+[
 {
-	""stores"": [""Ebay"",""ebay""],
+	""store"": ""Etsy"" or ""Ebay"",
 	""reason"": ""short reason""
 }
-
+]
 Rules:
 - Allowed stores are only Etsy and Ebay.
 - Choose one or both stores based on product style, buyer intent, and marketplace fit.
@@ -214,7 +215,7 @@ Product context:
 
 	private sealed class PublishDirectionDecision
 	{
-		public List<string> stores { get; set; } = new();
+		public string store { get; set; } = string.Empty;
 		public string reason { get; set; } = string.Empty;
 	}
 

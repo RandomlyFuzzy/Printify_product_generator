@@ -108,7 +108,8 @@ public class PrintifyClient
         int targetShopId,
         bool deleteSourceProduct = false,
         bool publishTargetProduct = false,
-        PublishProductRequest? publishRequest = null)
+        PublishProductRequest? publishRequest = null,
+        IReadOnlyList<CreateProductVariant>? variantOverrides = null)
     {
         if (sourceShopId <= 0)
             throw new ArgumentOutOfRangeException(nameof(sourceShopId), "Source shop ID must be greater than zero.");
@@ -119,6 +120,7 @@ public class PrintifyClient
 
         var sourceProduct = await GetProductAsync(sourceShopId, sourceProductId);
         var createRequest = await BuildCreateProductRequestAsync(sourceProduct);
+        ApplyVariantOverrides(createRequest.Variants, variantOverrides);
         var createdProduct = await CreateProductAsync(targetShopId, createRequest);
         var targetProductPublished = false;
 
@@ -152,6 +154,28 @@ public class PrintifyClient
             TargetProductPublished = targetProductPublished,
             TargetProduct = createdProduct
         };
+    }
+
+    private static void ApplyVariantOverrides(
+        List<CreateProductVariant> variants,
+        IReadOnlyList<CreateProductVariant>? variantOverrides)
+    {
+        if (variantOverrides is null || variantOverrides.Count == 0 || variants.Count == 0)
+        {
+            return;
+        }
+
+        var overridesById = variantOverrides.ToDictionary(variant => variant.Id);
+        foreach (var variant in variants)
+        {
+            if (!overridesById.TryGetValue(variant.Id, out var variantOverride))
+            {
+                continue;
+            }
+
+            variant.Price = variantOverride.Price;
+            variant.IsEnabled = variantOverride.IsEnabled;
+        }
     }
 
     public Task<ProductVariantPriceBreakdown> GetProductVariantPriceBreakdownAsync(

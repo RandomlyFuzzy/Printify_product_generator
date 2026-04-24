@@ -1,0 +1,401 @@
+{
+  "blueprint": {
+    "id": 5452,
+    "title": "Protective Laptop Sleeve",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/69ce5d883ff9e2ad130ddf30",
+      "https://images.printify.com/69ce5d8dd668c0ada403e532",
+      "https://images.printify.com/69ce5d8a2a90588d5b0f6551",
+      "https://images.printify.com/69ce5d8fe9253b4a070b17d0"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 99,
+        "title": "Printify Choice"
+      },
+      "variants": {
+        "id": 99,
+        "title": "Printify Choice",
+        "variants": [
+          {
+            "id": 247005,
+            "title": "13\u0022 / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "size": "13\u0022",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 3450,
+                "width": 4500
+              }
+            ]
+          },
+          {
+            "id": 247006,
+            "title": "15\u0022 / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "size": "15\u0022",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 3600,
+                "width": 4650
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              247005
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 989
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 209
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              247005,
+              247006
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 599
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 319
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              247005,
+              247006
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1099
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 229
+            },
+            "countries": [
+              "DK",
+              "LV",
+              "LT",
+              "SE",
+              "CH",
+              "EE",
+              "FI",
+              "IS",
+              "NO",
+              "LI"
+            ]
+          },
+          {
+            "variant_ids": [
+              247005,
+              247006
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 699
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 239
+            },
+            "countries": [
+              "GB",
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "FO",
+              "FR",
+              "GE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IM",
+              "IT",
+              "JE",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "TR",
+              "UA",
+              "XK",
+              "IE",
+              "DE"
+            ]
+          },
+          {
+            "variant_ids": [
+              247005
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1129
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 269
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              247006
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1089
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 289
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              247006
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1249
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 359
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 989
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 209
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 599
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 319
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "DK",
+            "LV",
+            "LT",
+            "SE",
+            "CH",
+            "EE",
+            "FI",
+            "IS",
+            "NO",
+            "LI"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1099
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 229
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "GB",
+            "AX",
+            "AL",
+            "AD",
+            "AM",
+            "AT",
+            "BY",
+            "BE",
+            "BA",
+            "BV",
+            "BG",
+            "HR",
+            "CY",
+            "CZ",
+            "FO",
+            "FR",
+            "GE",
+            "GI",
+            "GR",
+            "GL",
+            "GP",
+            "GG",
+            "VA",
+            "HU",
+            "IM",
+            "IT",
+            "JE",
+            "LU",
+            "MK",
+            "MT",
+            "MD",
+            "MC",
+            "ME",
+            "NL",
+            "PL",
+            "PT",
+            "RE",
+            "RO",
+            "SM",
+            "RS",
+            "SK",
+            "SI",
+            "ES",
+            "TR",
+            "UA",
+            "XK",
+            "IE",
+            "DE"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 699
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 239
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1129
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 269
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1089
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 289
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1249
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 359
+          },
+          "variant_count": 1
+        }
+      ]
+    }
+  ]
+}

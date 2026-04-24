@@ -1,0 +1,359 @@
+{
+  "blueprint": {
+    "id": 5370,
+    "title": "Bi-Fold Wallet with Flip",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/69ce1c61f6fa80753a0533a3",
+      "https://images.printify.com/69e7913599170563df075f40",
+      "https://images.printify.com/69cd137a1e9d832a950f6ef7",
+      "https://images.printify.com/69cd16c952cd61b5b702b503",
+      "https://images.printify.com/69cd7cbb10a8186fc1063eb0",
+      "https://images.printify.com/69e8abcfb7294ade560b6a52"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 217,
+        "title": "Fulfill Engine"
+      },
+      "variants": {
+        "id": 217,
+        "title": "Fulfill Engine",
+        "variants": [
+          {
+            "id": 244784,
+            "title": "One size / Black/Gold",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "size": "One size",
+              "color": "Black/Gold"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "engraving",
+                "height": 840,
+                "width": 1050
+              },
+              {
+                "position": "back",
+                "decoration_method": "engraving",
+                "height": 840,
+                "width": 1050
+              }
+            ]
+          },
+          {
+            "id": 244785,
+            "title": "One size / Black/Silver",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "size": "One size",
+              "color": "Black/Silver"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "engraving",
+                "height": 840,
+                "width": 1050
+              },
+              {
+                "position": "back",
+                "decoration_method": "engraving",
+                "height": 840,
+                "width": 1050
+              }
+            ]
+          },
+          {
+            "id": 244786,
+            "title": "One size / Dark Brown",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "size": "One size",
+              "color": "Dark Brown"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "engraving",
+                "height": 840,
+                "width": 1050
+              },
+              {
+                "position": "back",
+                "decoration_method": "engraving",
+                "height": 840,
+                "width": 1050
+              }
+            ]
+          },
+          {
+            "id": 244787,
+            "title": "One size / Gray",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "size": "One size",
+              "color": "Gray"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "engraving",
+                "height": 840,
+                "width": 1050
+              },
+              {
+                "position": "back",
+                "decoration_method": "engraving",
+                "height": 840,
+                "width": 1050
+              }
+            ]
+          },
+          {
+            "id": 244788,
+            "title": "One size / Light Brown",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "size": "One size",
+              "color": "Light Brown"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "engraving",
+                "height": 840,
+                "width": 1050
+              },
+              {
+                "position": "back",
+                "decoration_method": "engraving",
+                "height": 840,
+                "width": 1050
+              }
+            ]
+          },
+          {
+            "id": 244789,
+            "title": "One size / Rawhide",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "size": "One size",
+              "color": "Rawhide"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "engraving",
+                "height": 840,
+                "width": 1050
+              },
+              {
+                "position": "back",
+                "decoration_method": "engraving",
+                "height": 840,
+                "width": 1050
+              }
+            ]
+          },
+          {
+            "id": 244790,
+            "title": "One size / Rustic/Gold",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "size": "One size",
+              "color": "Rustic/Gold"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "engraving",
+                "height": 840,
+                "width": 1050
+              },
+              {
+                "position": "back",
+                "decoration_method": "engraving",
+                "height": 840,
+                "width": 1050
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              244784,
+              244785,
+              244786,
+              244787,
+              244788,
+              244789,
+              244790
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 449
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 209
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              244784,
+              244785,
+              244786,
+              244787,
+              244788,
+              244789,
+              244790
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 939
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              244784,
+              244785,
+              244786,
+              244787,
+              244788,
+              244789,
+              244790
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              244784,
+              244785,
+              244786,
+              244787,
+              244788,
+              244789,
+              244790
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 569
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "US"
+            ]
+          }
+        ]
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 449
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 209
+          },
+          "variant_count": 7
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 939
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 7
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 399
+          },
+          "variant_count": 7
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 569
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 249
+          },
+          "variant_count": 7
+        }
+      ]
+    }
+  ]
+}

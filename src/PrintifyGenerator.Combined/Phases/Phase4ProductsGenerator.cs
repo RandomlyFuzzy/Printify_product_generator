@@ -50,7 +50,10 @@ public static partial class PhaseFactory
 			}
 
 			ids = ids.Distinct(StringComparer.OrdinalIgnoreCase).ToList();
+			Console.WriteLine($"Phase4 generated {ids.Count} product(s) for bundle {bundle.Id}.");
+			Console.WriteLine($"Products: {string.Join(", ", ids)} outputed to {(outputFile)}.");
 			File.WriteAllLines(outputFile, ids);
+			Environment.Exit(0);
 			return PhaseExecutionResult.Done($"Created {Path.GetFileName(outputFile)} with {ids.Count} product(s) via PrintifyGenerator flow.");
 		}
 	}

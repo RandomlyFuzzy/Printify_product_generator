@@ -1,0 +1,301 @@
+{
+  "blueprint": {
+    "id": 5634,
+    "title": "Spiral Notebook - Dotted",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/69e0cadbd27db496b80b7401",
+      "https://images.printify.com/69e0cadcc8df21f0440c92a0",
+      "https://images.printify.com/69e0cadb2e5abe6866086560",
+      "https://images.printify.com/69e0cd1b2c2b05c34a044e03",
+      "https://images.printify.com/69e0cade1b21c5b0af06dcd0",
+      "https://images.printify.com/69e0cadfde174f2324028850",
+      "https://images.printify.com/69e0caddc620b258f40d4bb0",
+      "https://images.printify.com/69e0caddb531b8f32204da83"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 99,
+        "title": "Printify Choice"
+      },
+      "variants": {
+        "id": 99,
+        "title": "Printify Choice",
+        "variants": [
+          {
+            "id": 252281,
+            "title": "5.5\u2033 x 8.5\u2033 / Dotgrid",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "size": "5.5\u2033 x 8.5\u2033",
+              "paper": "Dotgrid"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "digital-printing",
+                "height": 2625,
+                "width": 1725
+              },
+              {
+                "position": "back",
+                "decoration_method": "digital-printing",
+                "height": 2625,
+                "width": 1725
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              252281
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1209
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "CA",
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              252281
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 109
+            },
+            "countries": [
+              "DK",
+              "LV",
+              "LT",
+              "SE",
+              "CH",
+              "EE",
+              "FI",
+              "IS",
+              "NO",
+              "LI"
+            ]
+          },
+          {
+            "variant_ids": [
+              252281
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 459
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 149
+            },
+            "countries": [
+              "GB",
+              "AX",
+              "AL",
+              "AD",
+              "AM",
+              "AT",
+              "BY",
+              "BE",
+              "BA",
+              "BV",
+              "BG",
+              "HR",
+              "CY",
+              "CZ",
+              "FO",
+              "FR",
+              "GE",
+              "GI",
+              "GR",
+              "GL",
+              "GP",
+              "GG",
+              "VA",
+              "HU",
+              "IM",
+              "IT",
+              "JE",
+              "LU",
+              "MK",
+              "MT",
+              "MD",
+              "MC",
+              "ME",
+              "NL",
+              "PL",
+              "PT",
+              "RE",
+              "RO",
+              "SM",
+              "RS",
+              "SK",
+              "SI",
+              "ES",
+              "TR",
+              "UA",
+              "XK",
+              "IE",
+              "DE"
+            ]
+          },
+          {
+            "variant_ids": [
+              252281
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1629
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 529
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "CA",
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1209
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "DK",
+            "LV",
+            "LT",
+            "SE",
+            "CH",
+            "EE",
+            "FI",
+            "IS",
+            "NO",
+            "LI"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 109
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "GB",
+            "AX",
+            "AL",
+            "AD",
+            "AM",
+            "AT",
+            "BY",
+            "BE",
+            "BA",
+            "BV",
+            "BG",
+            "HR",
+            "CY",
+            "CZ",
+            "FO",
+            "FR",
+            "GE",
+            "GI",
+            "GR",
+            "GL",
+            "GP",
+            "GG",
+            "VA",
+            "HU",
+            "IM",
+            "IT",
+            "JE",
+            "LU",
+            "MK",
+            "MT",
+            "MD",
+            "MC",
+            "ME",
+            "NL",
+            "PL",
+            "PT",
+            "RE",
+            "RO",
+            "SM",
+            "RS",
+            "SK",
+            "SI",
+            "ES",
+            "TR",
+            "UA",
+            "XK",
+            "IE",
+            "DE"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 459
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 149
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1629
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 529
+          },
+          "variant_count": 1
+        }
+      ]
+    }
+  ]
+}
