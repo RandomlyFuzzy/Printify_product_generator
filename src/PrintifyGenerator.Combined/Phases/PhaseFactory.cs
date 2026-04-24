@@ -11,9 +11,9 @@ public static partial class PhaseFactory
 			new Phase2ImageGenerator(),
 			new Phase3SuitabilityGenerator(),
 			new Phase4ProductsGenerator(),
-			// new Phase5MetadataGenerator(),
-			// new Phase6ProductAssessmentGenerator(),
-			// new Phase7PublishingDirectionGenerator(),
+			new Phase5MetadataGenerator(),
+			new Phase6ProductAssessmentGenerator(),
+			new Phase7PublishingDirectionGenerator(),
 			// new Phase8PricingGenerator(),
 			// new Phase9ManualPublishingMarker(),
 		};
@@ -91,10 +91,13 @@ Output requirements:
 - Match this shape exactly.
 
 Decision rules:
-- FitForPrintify is true only if the design appears printable, compliant, and visually acceptable for listing.
+- FitForPrintify is true only if the design appears printable, compliant i.e. does not violate any laws or IP rights, and visually acceptable for listing.
 - shouldContinue is true only if generation should proceed to publishing decisions.
 - Issues should contain concrete, short reasons (for example: low resolution, clipping, unreadable subject, risky IP elements).
 - Use an empty Issues array when no issues are found.
+- If the image is cut off or clipped in the mockup, but the original image is suitable, still return FitForPrintify as true and include an issue noting the clipping for later review.
+- Dont allow images on breast pockets as they are embroidered and will be rejected by printify and cause listing issues, if the mockup contains a breast pocket with an image return FitForPrintify as false and include an issue noting this for later review.
+
 
 Required JSON shape:
 {
@@ -116,7 +119,7 @@ Output requirements:
 }
 
 Rules:
-- Title must be less than 80 characters.
+- Title must be less than 80 characters and should be concise dont fall for pictures of items on the printed item no tradmark terms or anything that could infringe IP rights.
 - Description must be less than 3000 characters.
 - Title should be specific, human-readable, and avoid keyword stuffing.
 - Description should use simple HTML (p, ul, li, strong) and highlight benefits, material feel, and gift/use cases.
@@ -224,7 +227,7 @@ Product context:
 		var sb = new System.Text.StringBuilder();
 		await foreach (var token in source.WithCancellation(cancellationToken))
 		{
-            Console.Write(token);
+            // Console.Write(token);
 			sb.Append(token);
 		}
 

@@ -1,225 +1,279 @@
-﻿using System.Diagnostics;
+﻿using System.Collections.Concurrent;
+using System.Diagnostics;
+using System.Threading;
 
 var options = RunnerOptions.Parse(args);
 var cancellationSource = new CancellationTokenSource();
 
-Console.CancelKeyPress += (_, eventArgs) =>
+// 🔥 declare worker count FIRST
+int workerCount = Environment.ProcessorCount*2;
+
+// 🔥 declare signal BEFORE it's used anywhere
+var signal = new SemaphoreSlim(0);
+
+Console.CancelKeyPress += (_, e) =>
 {
-    eventArgs.Cancel = true;
+    e.Cancel = true;
+
     cancellationSource.Cancel();
+
+    // wake all workers immediately
+    signal.Release(workerCount);
 };
 
 var pipeline = PhaseFactory.CreatePipeline();
 var bundles = DiscoverBundles(options.CheckingRoot).ToList();
 
 Console.WriteLine($"Pipeline phases: {pipeline.Count}");
-Console.WriteLine($"Discovered bundles: {bundles.Count}");
-Console.WriteLine("Priority: process latest phases first, then create earlier phases when needed.");
+Console.WriteLine($"Bundles: {bundles.Count}");
 
-try
+var workQueue = new ConcurrentQueue<WorkItem>();
+var remaining = new ConcurrentDictionary<Guid, int>();
+
+var activeWork = new ConcurrentDictionary<int, ActiveWorkItem>();
+var completedWork = new ConcurrentQueue<CompletedWorkItem>();
+// -------------------------
+// Init
+// -------------------------
+var activeBundles = new ConcurrentDictionary<Guid, byte>();
+
+foreach (var bundle in bundles)
 {
-    var changes = await RunSchedulerAsync(pipeline, bundles, options, cancellationSource.Token);
-    Console.WriteLine($"Done. Applied {changes} phase update(s).");
+    activeBundles[bundle.Id] = 0;
+
+    var completed = bundle.GetHighestCompletedPhase(pipeline);
+    remaining[bundle.Id] = pipeline.Count - completed;
+
+    EnqueueNext(bundle, completed);
 }
-catch (OperationCanceledException)
-{
-    Console.WriteLine("Cancelled. Exiting cleanly.");
-}
 
-static async Task<int> RunSchedulerAsync(
-    IReadOnlyList<IPhaseGenerator> pipeline,
-    List<PhaseBundle> bundles,
-    RunnerOptions options,
-    CancellationToken cancellationToken)
+_ = Task.Run(async () =>
 {
-    var updated = 0;
-    var startTimeUtc = DateTime.UtcNow;
-    var measuredSteps = 0;
-    var measuredDuration = TimeSpan.Zero;
+    var lastPrintedCount = 0;
 
-    for (var i = 0; i < options.MaxSteps; i++)
+    while (!cancellationSource.IsCancellationRequested)
     {
-        if (cancellationToken.IsCancellationRequested)
-        {
-            Console.WriteLine("[CANCEL] Cancellation requested. Stopping scheduler.");
-            break;
-        }
+        Console.Clear();
 
-        var remainingBefore = CountRemainingPhaseUnits(pipeline, bundles);
+        var snapshot = completedWork.ToArray();
+        Console.WriteLine("=== COMPLETED WORK ===");
+        Console.WriteLine();
+        Console.WriteLine($"Total completed: {snapshot.Length}");
+        Console.WriteLine();
+        Console.WriteLine("=== ACTIVE WORK ===");
 
-        var next = PickNextWork(pipeline, bundles);
-        if (next.bundle is null || next.phase is null)
+        if (activeWork.IsEmpty)
+            Console.WriteLine("Idle");
+        else
         {
-            if (options.AllowSeeding)
+            foreach (var kv in activeWork)
             {
-                var seeded = SeedNewBundle(options.CheckingRoot);
-                bundles.Add(seeded);
-                Console.WriteLine($"[SEED] {seeded.Id} | bundles={bundles.Count} | remaining={CountRemainingPhaseUnits(pipeline, bundles)}");
-                continue;
-            }
+                var w = kv.Key;
+                var a = kv.Value;
+                var dur = DateTime.UtcNow - a.StartedUtc;
 
-            Console.WriteLine($"[IDLE] No runnable work. Remaining units={remainingBefore}.");
-            break;
+                Console.WriteLine(
+                    $"W{w}: {a.BundleId} | P{a.PhaseNumber} {a.PhaseName} | {dur:mm\\:ss}");
+            }
         }
 
-        var remainingByPhase = BuildRemainingByPhaseMap(pipeline, bundles);
-        var currentPhaseBacklog = remainingByPhase.TryGetValue(next.phase.PhaseNumber, out var backlog) ? backlog : 0;
-        var eta = EstimateEta(startTimeUtc, measuredSteps, measuredDuration, remainingBefore);
-        Console.WriteLine(
-            $"[PROGRESS] step {i + 1}/{options.MaxSteps} | bundle={next.bundle.Id} | phase{next.phase.PhaseNumber} {next.phase.PhaseName} | " +
-            $"phase-backlog={currentPhaseBacklog} | remaining={remainingBefore} | eta={eta}");
+        Console.WriteLine();
 
-        var stepTimer = Stopwatch.StartNew();
-        PhaseExecutionResult result;
+        await Task.Delay(500);
+    }
+});
+// -------------------------
+// Worker pool
+// -------------------------
+var workers = new Task[workerCount];
+
+for (int i = 0; i < workerCount; i++)
+{
+    int id = i;
+    workers[i] = WorkerLoop(id);
+}
+
+await Task.WhenAll(workers);
+
+// =======================================================
+// WORKER LOOP (NO POLLING)
+// =======================================================
+async Task WorkerLoop(int workerId)
+{
+    while (true)
+    {
+        if (cancellationSource.IsCancellationRequested)
+            return;
+
         try
         {
-            result = await next.phase.RunAsync(next.bundle, cancellationToken);
+            await signal.WaitAsync(cancellationSource.Token);
         }
-        catch (OperationCanceledException) when (cancellationToken.IsCancellationRequested)
+        catch (OperationCanceledException)
         {
-            Console.WriteLine("[CANCEL] Cancellation requested while running a phase. Stopping scheduler.");
-            break;
+            return;
         }
-        stepTimer.Stop();
-        measuredSteps++;
-        measuredDuration += stepTimer.Elapsed;
 
-        var status = result.Success ? (result.Changed ? "OK" : "SKIP") : "ERR";
-        var remainingAfter = CountRemainingPhaseUnits(pipeline, bundles);
-        var avgStepSeconds = measuredDuration.TotalSeconds / Math.Max(1, measuredSteps);
+        if (cancellationSource.IsCancellationRequested)
+            return;
+
+        if (!workQueue.TryDequeue(out var item))
+            continue;
+
+        await Execute(item, workerId);
+    }
+}
+
+// =======================================================
+// EXECUTION
+// =======================================================
+async Task Execute(WorkItem item, int workerId)
+{
+    var started = DateTime.UtcNow;
+
+    activeWork[workerId] = new ActiveWorkItem(
+        item.Bundle.Id,
+        item.Phase.PhaseNumber,
+        item.Phase.PhaseName,
+        started);
+
+    Console.WriteLine(
+        $"[W{workerId}] START {item.Bundle.Id} P{item.Phase.PhaseNumber}");
+
+    var sw = Stopwatch.StartNew();
+
+    try
+    {
+        var result = await item.Phase.RunAsync(item.Bundle, cancellationSource.Token);
+        sw.Stop();
+
+        activeWork.TryRemove(workerId, out _);
+
+        var status = result.Changed ? "OK" : "SKIP";
+
+        completedWork.Enqueue(new CompletedWorkItem(
+            item.Bundle.Id,
+            item.Phase.PhaseNumber,
+            item.Phase.PhaseName,
+            status,
+            sw.Elapsed,
+            DateTime.UtcNow));
+
         Console.WriteLine(
-            $"[{status}] {next.bundle.Id} phase{next.phase.PhaseNumber} {next.phase.PhaseName}: {result.Message} | " +
-            $"elapsed={stepTimer.Elapsed:mm\\:ss} | avg={avgStepSeconds:F1}s/phase | remaining={remainingAfter}");
+            $"[W{workerId}] {status} {item.Bundle.Id} P{item.Phase.PhaseNumber} " +
+            $"| {sw.Elapsed:mm\\:ss} | {result.Message}");
+
         if (result.Changed)
         {
-            updated++;
+            EnqueueNext(item.Bundle, item.Phase.PhaseNumber);
         }
     }
-
-    return updated;
-}
-
-static int CountRemainingPhaseUnits(IReadOnlyList<IPhaseGenerator> pipeline, IEnumerable<PhaseBundle> bundles)
-{
-    var remaining = 0;
-    foreach (var bundle in bundles)
+    catch (OperationCanceledException)
     {
-        var completed = bundle.GetHighestCompletedPhase(pipeline);
-        if (completed < pipeline.Count)
-        {
-            remaining += pipeline.Count - completed;
-        }
+        activeWork.TryRemove(workerId, out _);
+    }
+    catch (Exception ex)
+    {
+        activeWork.TryRemove(workerId, out _);
+
+        completedWork.Enqueue(new CompletedWorkItem(
+            item.Bundle.Id,
+            item.Phase.PhaseNumber,
+            item.Phase.PhaseName,
+            "ERR",
+            sw.Elapsed,
+            DateTime.UtcNow));
+
+        Console.WriteLine($"[W{workerId}] ERROR {ex.Message}");
+    }
+}
+// =======================================================
+// SCHEDULING (lock-free enqueue)
+// =======================================================
+void EnqueueNext(PhaseBundle bundle, int completedPhase)
+{
+    var nextIndex = completedPhase + 1;
+
+    if (nextIndex >= pipeline.Count)
+    {
+        activeBundles.TryRemove(bundle.Id, out _);
+        return;
     }
 
-    return remaining;
+    var phase = pipeline[nextIndex-1];
+
+    if (!phase.CanRun(bundle))
+        return;
+
+    workQueue.Enqueue(new WorkItem(bundle, phase));
+
+    // wake one worker
+    signal.Release();
 }
 
-static Dictionary<int, int> BuildRemainingByPhaseMap(IReadOnlyList<IPhaseGenerator> pipeline, IEnumerable<PhaseBundle> bundles)
+// =======================================================
+// WORK ITEM
+// =======================================================
+
+// =======================================================
+// DISCOVERY
+// =======================================================
+static IEnumerable<PhaseBundle> DiscoverBundles(string root)
 {
-    var map = Enumerable.Range(1, pipeline.Count).ToDictionary(phase => phase, _ => 0);
-    foreach (var bundle in bundles)
-    {
-        var completed = bundle.GetHighestCompletedPhase(pipeline);
-        for (var phase = completed + 1; phase <= pipeline.Count; phase++)
-        {
-            map[phase]++;
-        }
-    }
-
-    return map;
-}
-
-static string EstimateEta(DateTime startTimeUtc, int measuredSteps, TimeSpan measuredDuration, int remainingBefore)
-{
-    if (measuredSteps <= 0 || remainingBefore <= 0)
-    {
-        return "n/a";
-    }
-
-    var avgSeconds = measuredDuration.TotalSeconds / measuredSteps;
-    var etaUtc = DateTime.UtcNow.AddSeconds(avgSeconds * remainingBefore);
-    var elapsed = DateTime.UtcNow - startTimeUtc;
-    return $"{etaUtc:HH:mm:ss}Z (~{elapsed:hh\\:mm\\:ss} elapsed)";
-}
-
-static (PhaseBundle? bundle, IPhaseGenerator? phase) PickNextWork(
-    IReadOnlyList<IPhaseGenerator> pipeline,
-    IEnumerable<PhaseBundle> bundles)
-{
-    var candidates = bundles
-        .Select(bundle =>
-        {
-            var completed = bundle.GetHighestCompletedPhase(pipeline);
-            var nextPhase = completed + 1;
-            if (nextPhase > pipeline.Count)
-            {
-                return (bundle: (PhaseBundle?)null, phase: (IPhaseGenerator?)null, completed: -1);
-            }
-
-            var phase = pipeline[nextPhase - 1];
-            var canRun = phase.CanRun(bundle);
-            return (bundle: canRun ? bundle : null, phase: canRun ? phase : null, completed);
-        })
-        .Where(item => item.bundle is not null && item.phase is not null)
-        .OrderByDescending(item => item.completed)
-        .ThenBy(item => item.bundle!.DirectoryPath, StringComparer.OrdinalIgnoreCase)
-        .FirstOrDefault();
-
-    return (candidates.bundle, candidates.phase);
-}
-
-static IEnumerable<PhaseBundle> DiscoverBundles(string checkingRoot)
-{
-    if (!Directory.Exists(checkingRoot))
-    {
+    if (!Directory.Exists(root))
         yield break;
-    }
 
-    foreach (var directory in Directory.EnumerateDirectories(checkingRoot, "*", SearchOption.AllDirectories))
+    foreach (var dir in Directory.EnumerateDirectories(root, "*", SearchOption.AllDirectories))
     {
-        if (PhaseBundle.TryCreate(directory, out var bundle) && bundle is not null)
-        {
+        if (PhaseBundle.TryCreate(dir, out var bundle) && bundle is not null)
             yield return bundle;
-        }
     }
 }
 
-static PhaseBundle SeedNewBundle(string checkingRoot)
-{
-    var id = Guid.NewGuid();
-    var path = Path.Combine(checkingRoot, DateTime.UtcNow.ToString("yyyy-MM"), DateTime.UtcNow.ToString("dd"), id.ToString());
-    Directory.CreateDirectory(path);
-    return new PhaseBundle(id, path);
-}
-
+// =======================================================
+// OPTIONS
+// =======================================================
 sealed record RunnerOptions(string CheckingRoot, int MaxSteps, bool AllowSeeding)
 {
     public static RunnerOptions Parse(string[] args)
     {
-        var checkingRoot = "./src/data/Checking";
+        var root = "./src/data/Checking";
         var maxSteps = int.MaxValue;
-        var allowSeeding = false;
+        var seed = false;
 
-        for (var i = 0; i < args.Length; i++)
+        for (int i = 0; i < args.Length; i++)
         {
             switch (args[i])
             {
                 case "--root" when i + 1 < args.Length:
-                    checkingRoot = args[++i];
+                    root = args[++i];
                     break;
-                case "--max-steps" when i + 1 < args.Length && int.TryParse(args[i + 1], out var parsed):
-                    maxSteps = Math.Max(1, parsed);
+
+                case "--max-steps" when i + 1 < args.Length && int.TryParse(args[i + 1], out var v):
+                    maxSteps = Math.Max(1, v);
                     i++;
                     break;
+
                 case "--seed":
-                    allowSeeding = true;
+                    seed = true;
                     break;
             }
         }
 
-        return new RunnerOptions(
-            CheckingRoot: Path.GetFullPath(checkingRoot),
-            MaxSteps: maxSteps,
-            AllowSeeding: allowSeeding);
+        return new RunnerOptions(Path.GetFullPath(root), maxSteps, seed);
     }
 }
+
+sealed record WorkItem(PhaseBundle Bundle, IPhaseGenerator Phase);
+sealed record ActiveWorkItem(
+    Guid BundleId,
+    int PhaseNumber,
+    string PhaseName,
+    DateTime StartedUtc);
+sealed record CompletedWorkItem(
+    Guid BundleId,
+    int PhaseNumber,
+    string PhaseName,
+    string Status,
+    TimeSpan Duration,
+    DateTime FinishedUtc);

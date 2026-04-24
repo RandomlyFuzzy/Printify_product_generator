@@ -36,12 +36,12 @@ public static partial class PhaseFactory
 			var generator = new MockupGenerator(
 				printify: printify,
 				ollama: ollama,
-				shopId: stagingShopId,
-				dataBasePath: runtime.DataRoot,
-				visionModel: runtime.Settings.MockupVisionModel);
+				shopId: stagingShopId);
 
 			var ids = new List<string>();
-			await foreach (var result in generator.ProcessImageAsync(imagePath))
+			var results = await generator.ProcessImageAsync(imagePath);
+
+			foreach (var result in results)
 			{
 				if (result.Success && !string.IsNullOrWhiteSpace(result.Draft?.ProductId))
 				{
@@ -53,7 +53,6 @@ public static partial class PhaseFactory
 			Console.WriteLine($"Phase4 generated {ids.Count} product(s) for bundle {bundle.Id}.");
 			Console.WriteLine($"Products: {string.Join(", ", ids)} outputed to {(outputFile)}.");
 			File.WriteAllLines(outputFile, ids);
-			Environment.Exit(0);
 			return PhaseExecutionResult.Done($"Created {Path.GetFileName(outputFile)} with {ids.Count} product(s) via PrintifyGenerator flow.");
 		}
 	}

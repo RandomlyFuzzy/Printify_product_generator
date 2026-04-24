@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text.Json;
 using System.Threading.Tasks;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.PixelFormats;
@@ -12,6 +13,11 @@ public class MockupGenerator
     private readonly OllamaClient _ollama;
     private readonly int _shopId;
 
+    const string dataBasePath = @"./src/data";
+    const string _blueprintDetailsPath = dataBasePath+"/Cached"+ "/blueprint_details";
+
+    private readonly Dictionary<string, int> _stats = new();
+
     public MockupGenerator(PrintifyClient printify, OllamaClient ollama, int shopId)
     {
         _printify = printify;
@@ -20,7 +26,7 @@ public class MockupGenerator
     }
 
     // =========================
-    // ENTRY POINT
+    // ENTRY
     // =========================
     public async Task<List<MockupResult>> ProcessImageAsync(string imagePath)
     {
@@ -28,157 +34,316 @@ public class MockupGenerator
 
         var analysis = ImageAnalyzer.Analyze(imagePath);
 
-        var mainImage = await _printify.UploadImageFromFileAsync(imagePath);
+        var uploaded = await _printify.UploadImageFromFileAsync(imagePath);
         var blueprints = await _printify.GetBlueprintsAsync();
 
-        var selectedBlueprints = await SelectBlueprints(imagePath, blueprints);
+        var trimmedBlueprints = TrimBlueprints(blueprints, analysis);
+        // Console.WriteLine($"Trimmed to {trimmedBlueprints.Count} from {blueprints.Count} blueprints after heuristic filtering.");
 
-        foreach (var bp in selectedBlueprints)
+        var selected = await SelectBlueprints(imagePath, trimmedBlueprints);
+        foreach (var bp in selected)
+        {
+            Console.WriteLine($"Blueprint {bp.BlueprintId}: {bp.BlueprintTitle} | Reason: {bp.Reason}");
+        }
+
+        if (!selected.Any())
+        {
+            Log("LLM returned no blueprints");
+            PrintStats();
+            return results;
+        }
+
+        foreach (var bp in selected)
         {
             var providers = await _printify.GetBlueprintPrintProvidersAsync(bp.BlueprintId);
-            if (!providers.Any()) continue;
+
+            if (!providers.Any())
+            {
+                Log("No providers available");
+                continue;
+            }
 
             var provider = providers.First();
 
-            var variantResponse = await _printify.GetBlueprintVariantsAsync(bp.BlueprintId, provider.Id);
-            var variants = BuildScoredVariants(variantResponse.Variants, analysis);
+            var variantResponse =
+                await _printify.GetBlueprintVariantsAsync(bp.BlueprintId, provider.Id);
 
-            if (!variants.Any()) continue;
+            var variants = variantResponse.Variants;
 
-            var printAreas = BuildPrintAreas(variants, mainImage.Id, analysis);
+            if (!variants.Any())
+            {
+                Log("No variants returned");
+                continue;
+            }
 
-            var product = await CreateProduct(bp, provider, variants, printAreas);
+            var filtered = ScoreAndFilterVariants(variants, analysis);
+
+            if (!filtered.Any())
+            {
+                Log("No suitable variants after scoring");
+                continue;
+            }
+
+            var printAreas = BuildPrintAreas(filtered, uploaded.Id, analysis);
+
+            var product = await CreateProduct(bp, provider, filtered, printAreas);
 
             results.Add(new MockupResult
             {
                 Success = true,
-                PrintifyImageId = mainImage.Id,
+                PrintifyImageId = uploaded.Id,
                 Draft = new MockupDraftRecord
                 {
                     ProductId = product.Id,
+                    JobId = Path.GetFileNameWithoutExtension(imagePath) + "_" + bp.BlueprintId,
+                    LookupKey = $"{bp.BlueprintId}:{provider.Id}",
+                    GroupKey = bp.BlueprintId.ToString(),
+                    AssetKey = uploaded.Id,
+                    ReferenceCode = Guid.NewGuid().ToString(),
+                    LocalImagePath = imagePath,
+                    PrintifyImageId = uploaded.Id,
+                    PrintifyImagePreviewUrl = uploaded.PreviewUrl,
                     BlueprintId = bp.BlueprintId,
-                    BlueprintTitle = bp.BlueprintTitle
+                    BlueprintTitle = bp.BlueprintTitle,
+                    LlmReason = bp.Reason,
+                    PrintProviderId = provider.Id,
+                    PrintProviderTitle = provider.Title,
+                    CreatedAt = DateTime.UtcNow.ToString("o"),
+                    MockupUrls = product.Images.Select(i => i.Src).ToList()
                 }
             });
         }
 
+        PrintStats();
         return results;
     }
 
-    // =========================
-    // IMAGE ANALYSIS
-    // =========================
-    private class ImageAnalysis
-    {
-        public double AspectRatio { get; set; }
-        public bool IsDark { get; set; }
-        public double DetailScore { get; set; }
-    }
 
-    private static class ImageAnalyzer
+    // =========================
+    // BLUEPRINT Filter
+    // =========================
+    private List<Blueprint> TrimBlueprints(List<Blueprint> blueprints, ImageAnalysis analysis)
     {
-        public static ImageAnalysis Analyze(string path)
+        var scored = new List<(Blueprint bp, double score)>();
+
+        foreach (var bp in blueprints)
         {
-            using var image = Image.Load<Rgba32>(path);
+            double score = 0;
 
-            double brightness = 0;
-            double variance = 0;
-            int count = 0;
+            var title = bp.Title?.ToLowerInvariant() ?? "";
 
-            int step = Math.Max(1, image.Width / 100);
+            // =========================
+            // 1. CATEGORY PRIORITY (strong signal)
+            // =========================
+            if (title.Contains("t-shirt") || title.Contains("tee")) score += 6;
+            if (title.Contains("hoodie")) score += 6;
+            if (title.Contains("sweatshirt")) score += 5;
+            if (title.Contains("poster")) score += 5;
+            if (title.Contains("canvas")) score += 5;
+            if (title.Contains("mug")) score += 5;
+            if (title.Contains("sticker")) score += 4;
+            if (title.Contains("tote")) score += 4;
+            if (title.Contains("phone case")) score += 4;
+            if (title.Contains("hat") || title.Contains("cap")) score += 3;
 
-            for (int x = 0; x < image.Width; x += step)
-            for (int y = 0; y < image.Height; y += step)
+            // penalise awkward / low-quality merch types
+            if (title.Contains("glass")) score -= 10;
+            if (title.Contains("ornament")) score -= 5;
+            if (title.Contains("keychain")) score -= 2;
+
+            // =========================
+            // 2. PRINT AREA ASPECT RATIO FIT (IMPORTANT)
+            // =========================
+            try
             {
-                var p = image[x, y];
-                double b = (p.R + p.G + p.B) / 3.0;
-                brightness += b;
-                count++;
+                var entry = BuildCatalogueEntry(bp);
+
+                if (entry.Locations != null && entry.Locations.Count > 0)
+                {
+                    // FIRST print location only (your rule)
+                    var first = entry.Locations.First();
+
+                    var printRatio = (double)first.Value.SizeX / first.Value.SizeY;
+
+                    score *= AspectRatioMultiplier(analysis.AspectRatio, printRatio);
+                }
+            }
+            catch
+            {
+                // ignore broken blueprint metadata
+                score *= 0.5;
             }
 
-            double avg = brightness / count;
+            // =========================
+            // 3. IMAGE COMPATIBILITY BOOSTS
+            // =========================
+            if (analysis.AspectRatio > 1.5 && (title.Contains("poster") || title.Contains("landscape") || title.Contains("horizontal")))
+                score += 1;
+            else if (analysis.AspectRatio < 0.8 && (title.Contains("portrait") || title.Contains("vertical")))
+                score += 1;
+            else if (analysis.DetailScore > 0.8 && title.Contains("square"))
+                score += 1;
 
-            for (int x = 0; x < image.Width; x += step)
-            for (int y = 0; y < image.Height; y += step)
-            {
-                var p = image[x, y];
-                double b = (p.R + p.G + p.B) / 3.0;
-                variance += Math.Pow(b - avg, 2);
-            }
 
-            return new ImageAnalysis
-            {
-                AspectRatio = (double)image.Width / image.Height,
-                IsDark = avg < 128,
-                DetailScore = Math.Min(1.0, variance / 5000.0)
-            };
+            // =========================
+            // 4. BASELINE (prevents zero collapse)
+            // =========================
+            score += 0.1;
+
+            scored.Add((bp, score));
         }
+
+        // =========================
+        // FINAL SELECTION
+        // =========================
+        return scored
+            .OrderByDescending(x => x.score)
+            .Take(150)
+            .Select(x => x.bp)
+            .ToList();
+    }
+    /// <summary> /// Builds a <see cref="BlueprintCatalogueEntry"/> for a blueprint, 
+    /// /// enriching it with print-location dimensions from the cached 
+    /// /// blueprint_details JSON files when available. 
+    /// /// </summary> 
+    private BlueprintCatalogueEntry BuildCatalogueEntry(Blueprint blueprint)
+    {
+        var entry = new BlueprintCatalogueEntry { Id = blueprint.Id, Title = blueprint.Title }; 
+        var detailFile = Path.Combine(_blueprintDetailsPath, $"{blueprint.Id}.json"); 
+        if (!File.Exists(detailFile)) 
+            return entry; 
+        try
+        {
+            var json = File.ReadAllText(detailFile); 
+            var doc = JsonDocument.Parse(json); 
+            var root = doc.RootElement;
+            // Collect unique positions and their max dimensions across all 
+            // // providers / variants so the LLM sees the full print surface. 
+            var locations = new Dictionary<string, PrintLocationSize>(StringComparer.OrdinalIgnoreCase); if (root.TryGetProperty("print_providers", out var providers))
+            {
+                foreach (var pp in providers.EnumerateArray())
+                {
+                    if (!pp.TryGetProperty("variants", out var variantsWrapper)) continue; if (!variantsWrapper.TryGetProperty("variants", out var variants)) continue; foreach (var v in variants.EnumerateArray())
+                    {
+                        if (!v.TryGetProperty("placeholders", out var placeholders)) 
+                            continue;
+
+                        foreach (var ph in placeholders.EnumerateArray())
+                        {
+                            var position = ph.GetProperty("position").GetString() ?? ""; var width = ph.TryGetProperty("width", out var w) ? w.GetInt32() : 0; var height = ph.TryGetProperty("height", out var h) ? h.GetInt32() : 0; if (locations.TryGetValue(position, out var existing)) { if (width > existing.SizeX) existing.SizeX = width; if (height > existing.SizeY) existing.SizeY = height; } else { locations[position] = new PrintLocationSize { SizeX = width, SizeY = height }; }
+                        } // One variant per provider is enough to capture the positions. 
+                        break;
+                    }
+                }
+            }
+            entry.PrintLocations = locations.Keys.ToList(); entry.Locations = locations;
+        }
+        catch
+        { // Cached file is corrupt or unexpected format – return basic entry. 
+        } 
+        return entry; 
+    }
+    private static double AspectRatioMultiplier(double imageRatio, double printRatio)
+    {
+        if (imageRatio <= 0 || printRatio <= 0)
+            return 0.1;
+
+        var diff = Math.Abs(imageRatio - printRatio) / imageRatio;
+
+        // every 10% difference halves the score
+        var steps = Math.Floor(diff / 0.1);
+
+        return 2.0 * Math.Pow(0.5, steps);
     }
 
     // =========================
-    // BLUEPRINT SELECTION
+    // LLM SELECTION
     // =========================
     private async Task<List<BlueprintSuggestion>> SelectBlueprints(string imagePath, List<Blueprint> blueprints)
     {
-        var sample = blueprints.OrderBy(_ => Guid.NewGuid()).Take(30).ToList();
-
-        string prompt = "Pick best 3 products for this image.";
-
-        string response = await _ollama.GenerateAsync("llava", prompt, imagePath);
-
         try
         {
-            return System.Text.Json.JsonSerializer.Deserialize<List<BlueprintSuggestion>>(response)
+
+            string response = "";
+
+            await foreach (var chunk in _ollama.GenerateWithImageStreamAsync(
+                "gemma4:e4b",
+                "Pick 3 best product types. Return JSON [{id,title}] only. "+BuildLlmBlueprintPayload(blueprints) ,
+                imagePath))
+            {
+                response += chunk;
+                // Console.Write($"{chunk}");
+            }
+
+            return System.Text.Json.JsonSerializer.Deserialize<List<BlueprintSuggestion>>(
+                       ExtractJson(response))
                    ?? new List<BlueprintSuggestion>();
         }
         catch
         {
-            return sample.Take(3).Select(b => new BlueprintSuggestion
-            {
-                BlueprintId = b.Id,
-                BlueprintTitle = b.Title
-            }).ToList();
+            Log("LLM parsing failed");
+            return new List<BlueprintSuggestion>();
         }
     }
-
-    // =========================
-    // VARIANT SCORING
-    // =========================
-    private List<Variant> BuildScoredVariants(List<Variant> variants, ImageAnalysis analysis)
+    private static string BuildLlmBlueprintPayload(List<Blueprint> blueprints)
     {
-        return variants
-            .Where(v => v.Placeholders != null && v.Placeholders.Count > 0)
-            .Select(v => new
-            {
-                Variant = v,
-                Score = ScoreVariant(v, analysis)
-            })
-            .OrderByDescending(x => x.Score)
-            .Take(20)
-            .Select(x => x.Variant)
-            .ToList();
+        var simplified = blueprints.Select(b => new
+        {
+            id = b.Id,
+            title = b.Title
+        });
+
+        return System.Text.Json.JsonSerializer.Serialize(simplified);
     }
-
-    private double ScoreVariant(Variant v, ImageAnalysis analysis)
+    // =========================
+    // VARIANT SELECTION (NO COST)
+    // =========================
+    private List<Variant> ScoreAndFilterVariants(List<Variant> variants, ImageAnalysis analysis)
     {
-        double score = 0;
+        var scored = new List<(Variant v, double score)>();
 
-        var ph = v.Placeholders.First();
+        foreach (var v in variants)
+        {
+            if (v.Placeholders == null || v.Placeholders.Count == 0)
+            {
+                Log("Missing placeholders");
+                continue;
+            }
 
-        // Bigger print area = better
-        score += (ph.Width * ph.Height) / 1_000_000.0;
+            var ph = v.Placeholders.First();
 
-        // Dark/light contrast
-        if (analysis.IsDark)
-            score += 1;
-        else
-            score += 1;
+            if (ph.Width <= 0 || ph.Height <= 0)
+            {
+                Log("Invalid placeholder size");
+                continue;
+            }
 
-        // Penalize small areas for detailed images
-        if (analysis.DetailScore > 0.7 && ph.Width < 2000)
-            score -= 2;
+            double score = 0;
 
-        return score;
+            // print area size is KING
+            score += (ph.Width * ph.Height) / 1_000_000.0;
+
+            // image complexity fit
+            if (analysis.DetailScore > 0.7 && ph.Width < 2000)
+                score -= 2;
+
+            // aspect harmony
+            var ratio = (double)ph.Width / ph.Height;
+            var diff = Math.Abs(ratio - analysis.AspectRatio) / analysis.AspectRatio;
+
+            if (diff < 0.2)
+                score += 1;
+            else if (diff > 0.5)
+                score -= 1;
+
+            scored.Add((v, score));
+        }
+
+        return scored
+            .OrderByDescending(x => x.score)
+            .Take(30)
+            .Select(x => x.v)
+            .ToList();
     }
 
     // =========================
@@ -188,13 +353,13 @@ public class MockupGenerator
     {
         return variants
             .GroupBy(v => v.Placeholders.First().Position)
-            .Select(group =>
+            .Select(g =>
             {
-                var ph = group.First().Placeholders.First();
+                var ph = g.First().Placeholders.First();
 
                 return new PrintArea
                 {
-                    VariantIds = group.Select(v => v.Id).ToList(),
+                    VariantIds = g.Select(v => v.Id).ToList(),
                     Placeholders = new List<PrintAreaPlaceholder>
                     {
                         new PrintAreaPlaceholder
@@ -202,37 +367,21 @@ public class MockupGenerator
                             Position = ph.Position,
                             Images = new List<PrintAreaImage>
                             {
-                                CreateSmartImage(imageId, analysis, ph)
+                                new PrintAreaImage
+                                {
+                                    Id = imageId,
+                                    X = 0.5,
+                                    Y = 0.5,
+                                    Scale = analysis.DetailScore > 0.7 ? 0.7 : 0.85,
+                                    Width = 1,
+                                    Height = 1
+                                }
                             }
                         }
                     }
                 };
             })
             .ToList();
-    }
-
-    private PrintAreaImage CreateSmartImage(string id, ImageAnalysis analysis, VariantPlaceholder ph)
-    {
-        double scale = 0.85;
-
-        if (analysis.DetailScore > 0.7)
-            scale = 0.7;
-
-        var ratio = (double)ph.Width / ph.Height;
-        var diff = Math.Abs(ratio - analysis.AspectRatio) / analysis.AspectRatio;
-
-        if (diff > 0.25)
-            scale *= 0.9;
-
-        return new PrintAreaImage
-        {
-            Id = id,
-            X = 0.5,
-            Y = 0.5,
-            Scale = scale,
-            Width = 1,
-            Height = 1
-        };
     }
 
     // =========================
@@ -247,14 +396,13 @@ public class MockupGenerator
         var productVariants = variants.Select(v => new CreateProductVariant
         {
             Id = v.Id,
-            Price = CalculatePrice(v),
+            Price = 2000, // fixed pre-publish placeholder
             IsEnabled = true
         }).ToList();
 
         return await _printify.CreateProductAsync(_shopId, new CreateProductRequest
         {
             Title = bp.BlueprintTitle,
-            Description = "Auto-generated design",
             BlueprintId = bp.BlueprintId,
             PrintProviderId = provider.Id,
             Variants = productVariants,
@@ -262,9 +410,75 @@ public class MockupGenerator
         });
     }
 
-    private int CalculatePrice(Variant v)
+    // =========================
+    // DEBUGGING
+    // =========================
+    private void Log(string reason)
     {
-        double multiplier = v.Price < 1000 ? 2.5 : 2.2;
-        return (int)(v.Price * multiplier);
+        if (!_stats.ContainsKey(reason))
+            _stats[reason] = 0;
+
+        _stats[reason]++;
+    }
+
+    private void PrintStats()
+    {
+        int total = _stats.Values.Sum();
+        if(total == 0)
+        {
+            return;
+        }
+        Console.WriteLine("\n===== MOCKUP REJECTION SUMMARY =====");
+
+        foreach (var item in _stats.OrderByDescending(x => x.Value))
+        {
+            Console.WriteLine($"{item.Key,-40} x {item.Value}");
+        }
+
+        Console.WriteLine("====================================\n");
+    }
+
+    private static string ExtractJson(string text)
+    {
+        int start = text.IndexOf('[');
+        int end = text.LastIndexOf(']');
+
+        return (start >= 0 && end > start)
+            ? text.Substring(start, end - start + 1)
+            : "[]";
+    }
+
+    // =========================
+    // IMAGE ANALYSIS
+    // =========================
+    private class ImageAnalysis
+    {
+        public double AspectRatio { get; set; }
+        public double DetailScore { get; set; }
+    }
+
+    private static class ImageAnalyzer
+    {
+        public static ImageAnalysis Analyze(string path)
+        {
+            using var img = Image.Load<Rgba32>(path);
+
+            double total = 0;
+            int count = 0;
+
+            for (int x = 0; x < img.Width; x += 10)
+            for (int y = 0; y < img.Height; y += 10)
+            {
+                var p = img[x, y];
+                total += (p.R + p.G + p.B) / 3.0;
+                count++;
+            }
+
+            return new ImageAnalysis
+            {
+                AspectRatio = (double)img.Width / img.Height,
+                DetailScore = 0.5
+            };
+        }
     }
 }
