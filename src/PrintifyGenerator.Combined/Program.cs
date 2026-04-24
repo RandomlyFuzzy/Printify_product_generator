@@ -1,6 +1,8 @@
 ﻿using System.Collections.Concurrent;
 using System.Diagnostics;
 using System.Threading;
+using System.Threading.Tasks;
+using System;
 
 var options = RunnerOptions.Parse(args);
 var cancellationSource = new CancellationTokenSource();
@@ -16,6 +18,8 @@ Console.CancelKeyPress += (_, e) =>
     e.Cancel = true;
 
     cancellationSource.Cancel();
+
+    Environment.Exit(0);
 
     // wake all workers immediately
     signal.Release(workerCount);
