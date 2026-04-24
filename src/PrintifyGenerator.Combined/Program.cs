@@ -1,14 +1,28 @@
-﻿using System.Diagnostics;
-using System.Collections.Concurrent;
+﻿using System.Collections.Concurrent;
+using System.Diagnostics;
+using System.Threading;
+using System.Threading.Tasks;
+using System;
 
 var options = RunnerOptions.Parse(args);
-using var cts = new CancellationTokenSource();
+var cancellationSource = new CancellationTokenSource();
+
+// 🔥 declare worker count FIRST
+int workerCount = Environment.ProcessorCount * 2;
+
+// 🔥 declare signal BEFORE it's used anywhere
+var signal = new SemaphoreSlim(0);
 
 Console.CancelKeyPress += (_, e) =>
 {
     e.Cancel = true;
-    Console.WriteLine("Stopping...");
-    cts.Cancel();
+
+    cancellationSource.Cancel();
+
+    // wake all workers immediately
+    signal.Release(workerCount);
+
+    Environment.Exit(0);
 };
 
 var pipeline = PhaseFactory.CreatePipeline();
@@ -17,113 +31,200 @@ var bundles = DiscoverBundles(options.CheckingRoot).ToList();
 Console.WriteLine($"Pipeline phases: {pipeline.Count}");
 Console.WriteLine($"Bundles: {bundles.Count}");
 
-int maxParallelBundles = Environment.ProcessorCount; // tune this
+var workQueue = new ConcurrentQueue<WorkItem>();
+var remaining = new ConcurrentDictionary<Guid, int>();
 
-var active = new ConcurrentDictionary<Guid, ActiveWorkItem>();
-var completed = new ConcurrentQueue<CompletedWorkItem>();
+var activeWork = new ConcurrentDictionary<int, ActiveWorkItem>();
+var completedWork = new ConcurrentQueue<CompletedWorkItem>();
 
 // -------------------------
-// EXECUTION
+// Init
 // -------------------------
-await Parallel.ForEachAsync(
-    bundles,
-    new ParallelOptions
+var activeBundles = new ConcurrentDictionary<Guid, byte>();
+
+foreach (var bundle in bundles)
+{
+    activeBundles[bundle.Id] = 0;
+
+    var completed = bundle.GetHighestCompletedPhase(pipeline);
+    remaining[bundle.Id] = pipeline.Count - completed;
+
+    EnqueueNext(bundle, completed);
+}
+
+// -------------------------
+// UI LOOP
+// -------------------------
+_ = Task.Run(async () =>
+{
+    while (!cancellationSource.IsCancellationRequested)
     {
-        MaxDegreeOfParallelism = maxParallelBundles,
-        CancellationToken = cts.Token
-    },
-    async (bundle, ct) =>
+        Console.Clear();
+
+        var snapshot = completedWork.ToArray();
+
+        Console.WriteLine("=== COMPLETED WORK ===");
+        Console.WriteLine();
+        Console.WriteLine($"Total completed: {snapshot.Length}");
+        Console.WriteLine();
+
+        Console.WriteLine("=== ACTIVE WORK ===");
+
+        if (activeWork.IsEmpty)
+            Console.WriteLine("Idle");
+        else
+        {
+            foreach (var kv in activeWork)
+            {
+                var w = kv.Key;
+                var a = kv.Value;
+                var dur = DateTime.UtcNow - a.StartedUtc;
+
+                Console.WriteLine(
+                    $"W{w}: {a.BundleId} | P{a.PhaseNumber} {a.PhaseName} | {dur:mm\\:ss}");
+            }
+        }
+
+        Console.WriteLine();
+
+        await Task.Delay(500);
+    }
+});
+
+// -------------------------
+// Worker pool
+// -------------------------
+var workers = new Task[workerCount];
+
+for (int i = 0; i < workerCount; i++)
+{
+    int id = i;
+    workers[i] = WorkerLoop(id);
+}
+
+await Task.WhenAll(workers);
+
+// =======================================================
+// WORKER LOOP (NO POLLING)
+// =======================================================
+async Task WorkerLoop(int workerId)
+{
+    while (true)
     {
-        var bundleId = bundle.Id;
+        if (cancellationSource.IsCancellationRequested)
+            return;
 
         try
         {
-            var completedPhase = bundle.GetHighestCompletedPhase(pipeline);
-
-            // normalize to safe index
-            var startIndex = Math.Clamp(completedPhase, 0, pipeline.Count);
-
-            for (int i = startIndex; i < pipeline.Count; i++)
-            {
-                ct.ThrowIfCancellationRequested();
-                var phase = pipeline[i];
-
-                if (!phase.CanRun(bundle))
-                    continue;
-
-                var started = DateTime.UtcNow;
-
-                active[bundleId] = new ActiveWorkItem(
-                    bundleId,
-                    phase.PhaseNumber,
-                    phase.PhaseName,
-                    started);
-
-                Console.WriteLine(
-                    $"[{bundleId}] START P{phase.PhaseNumber} {phase.PhaseName}");
-
-                var sw = Stopwatch.StartNew();
-
-                try
-                {
-                    var result = await phase.RunAsync(bundle, ct);
-                    sw.Stop();
-
-                    var status = result.Changed ? "OK" : "SKIP";
-
-                    completed.Enqueue(new CompletedWorkItem(
-                        bundleId,
-                        phase.PhaseNumber,
-                        phase.PhaseName,
-                        status,
-                        sw.Elapsed,
-                        DateTime.UtcNow));
-
-                    Console.WriteLine(
-                        $"[{bundleId}] {status} P{phase.PhaseNumber} | {sw.Elapsed:mm\\:ss}");
-
-                    // optional: stop pipeline early if no change
-                    if (!result.Changed)
-                        continue;
-                }
-                catch (OperationCanceledException)
-                {
-                    throw;
-                }
-                catch (Exception ex)
-                {
-                    sw.Stop();
-
-                    completed.Enqueue(new CompletedWorkItem(
-                        bundleId,
-                        phase.PhaseNumber,
-                        phase.PhaseName,
-                        "ERR",
-                        sw.Elapsed,
-                        DateTime.UtcNow));
-
-                    Console.WriteLine($"[{bundleId}] ERROR: {ex.Message} {ex.StackTrace.ToString()}");
-                }
-                finally
-                {
-                    active.TryRemove(bundleId, out _);
-                }
-            }
-
-            Console.WriteLine($"[{bundleId}] ✅ COMPLETED ALL PHASES");
+            await signal.WaitAsync(cancellationSource.Token);
         }
         catch (OperationCanceledException)
         {
-            Console.WriteLine($"[{bundleId}] ⛔ CANCELLED");
+            return;
         }
-    });
 
-// -------------------------
-// DONE
-// -------------------------
-Console.WriteLine();
-Console.WriteLine("All work finished (or cancelled).");
+        if (cancellationSource.IsCancellationRequested)
+            return;
 
+        if (!workQueue.TryDequeue(out var item))
+            continue;
+
+        await Execute(item, workerId);
+    }
+}
+
+// =======================================================
+// EXECUTION
+// =======================================================
+async Task Execute(WorkItem item, int workerId)
+{
+    var started = DateTime.UtcNow;
+
+    activeWork[workerId] = new ActiveWorkItem(
+        item.Bundle.Id,
+        item.Phase.PhaseNumber,
+        item.Phase.PhaseName,
+        started);
+
+    Console.WriteLine(
+        $"[W{workerId}] START {item.Bundle.Id} P{item.Phase.PhaseNumber}");
+
+    var sw = Stopwatch.StartNew();
+
+    try
+    {
+        var result = await item.Phase.RunAsync(item.Bundle, cancellationSource.Token);
+        sw.Stop();
+
+        activeWork.TryRemove(workerId, out _);
+
+        var status = result.Changed ? "OK" : "SKIP";
+
+        completedWork.Enqueue(new CompletedWorkItem(
+            item.Bundle.Id,
+            item.Phase.PhaseNumber,
+            item.Phase.PhaseName,
+            status,
+            sw.Elapsed,
+            DateTime.UtcNow));
+
+        Console.WriteLine(
+            $"[W{workerId}] {status} {item.Bundle.Id} P{item.Phase.PhaseNumber} " +
+            $"| {sw.Elapsed:mm\\:ss} | {result.Message}");
+
+        // ✅ ALWAYS advance to next phase (core fix)
+        EnqueueNext(item.Bundle, item.Phase.PhaseNumber);
+    }
+    catch (OperationCanceledException)
+    {
+        activeWork.TryRemove(workerId, out _);
+    }
+    catch (Exception ex)
+    {
+        activeWork.TryRemove(workerId, out _);
+
+        completedWork.Enqueue(new CompletedWorkItem(
+            item.Bundle.Id,
+            item.Phase.PhaseNumber,
+            item.Phase.PhaseName,
+            "ERR",
+            sw.Elapsed,
+            DateTime.UtcNow));
+
+        Console.WriteLine($"[W{workerId}] ERROR {ex.Message}");
+
+        // ✅ still continue pipeline even on error
+        EnqueueNext(item.Bundle, item.Phase.PhaseNumber);
+    }
+}
+
+// =======================================================
+// SCHEDULING (lock-free enqueue)
+// =======================================================
+void EnqueueNext(PhaseBundle bundle, int completedPhase)
+{
+    var nextPhaseNumber = completedPhase + 1;
+
+    if (nextPhaseNumber > pipeline.Count)
+    {
+        activeBundles.TryRemove(bundle.Id, out _);
+        return;
+    }
+
+    var phase = pipeline[nextPhaseNumber - 1];
+
+    // ✅ skip non-runnable phases instead of killing bundle
+    if (!phase.CanRun(bundle))
+    {
+        EnqueueNext(bundle, nextPhaseNumber);
+        return;
+    }
+
+    workQueue.Enqueue(new WorkItem(bundle, phase));
+
+    // wake one worker
+    signal.Release();
+}
 
 // =======================================================
 // DISCOVERY
@@ -175,8 +276,10 @@ sealed record RunnerOptions(string CheckingRoot, int MaxSteps, bool AllowSeeding
 }
 
 // =======================================================
-// RECORDS
+// MODELS
 // =======================================================
+sealed record WorkItem(PhaseBundle Bundle, IPhaseGenerator Phase);
+
 sealed record ActiveWorkItem(
     Guid BundleId,
     int PhaseNumber,
