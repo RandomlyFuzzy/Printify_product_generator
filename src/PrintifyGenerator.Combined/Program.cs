@@ -40,10 +40,12 @@ await Parallel.ForEachAsync(
         {
             var completedPhase = bundle.GetHighestCompletedPhase(pipeline);
 
-            for (int i = completedPhase; i < pipeline.Count; i++)
+            // normalize to safe index
+            var startIndex = Math.Clamp(completedPhase, 0, pipeline.Count);
+
+            for (int i = startIndex; i < pipeline.Count; i++)
             {
                 ct.ThrowIfCancellationRequested();
-
                 var phase = pipeline[i];
 
                 if (!phase.CanRun(bundle))
