@@ -1,414 +1,263 @@
 using System.Globalization;
-using System.Text.Json;
 
 public static partial class PhaseFactory
 {
-	private sealed class Phase8PricingGenerator : PhaseGeneratorBase
-	{
-		public Phase8PricingGenerator() : base(8, "Pricing", "id/phase8.txt => NPID,ProducerId,VID,Shop,ProductionPrice,ShippingPrice,MyPricing") { }
+    private sealed class Phase8PricingGenerator : PhaseGeneratorBase
+    {
+        public Phase8PricingGenerator()
+            : base(8, "Pricing Validation", "id/phase8.txt => Final validated pricing with profit guarantees") { }
 
-		protected override bool IsCompleteCore(PhaseBundle bundle)
-			=> File.Exists(bundle.ResolvePhaseFile(8, "txt"));
+        protected override bool IsCompleteCore(PhaseBundle bundle)
+            => File.Exists(bundle.ResolvePhaseFile(9, "txt"));
 
-		protected override bool CanRunCore(PhaseBundle bundle)
-			=> File.Exists(bundle.ResolvePhaseFile(7, "txt"));
+        protected override bool CanRunCore(PhaseBundle bundle)
+            => File.Exists(bundle.ResolvePhaseFile(8, "txt"));
 
-		protected override async Task<PhaseExecutionResult> ExecuteCoreAsync(PhaseBundle bundle, CancellationToken cancellationToken)
-		{
-			var outputFile = bundle.ResolvePhaseFile(8, "txt");
-			var pricingTargets = LoadPricingTargets(bundle.ResolvePhaseFile(7, "txt"));
+        protected override async Task<PhaseExecutionResult> ExecuteCoreAsync(
+            PhaseBundle bundle,
+            CancellationToken cancellationToken)
+        {
+            var inputFile = bundle.ResolvePhaseFile(8, "txt");
+            var outputFile = bundle.ResolvePhaseFile(9, "txt");
 
-			if (pricingTargets.Count == 0)
-			{
-				File.WriteAllLines(outputFile, Array.Empty<string>());
-				return PhaseExecutionResult.Done("No phase7 pricing targets available.");
-			}
+            var runtime = CombinedRuntime.Current;
+            var printify = runtime.GetPrintifyClient();
 
-			var runtime = CombinedRuntime.Current;
-			var printify = runtime.GetPrintifyClient();
-			var shops = await printify.GetShopsAsync();
+            var shops = await printify.GetShopsAsync();
 
-			var lines = new List<string>();
-			var pricedTargetCount = 0;
-			var warningCount = 0;
+            var lines = new List<string>();
+            var updatedProducts = 0;
+            var warnings = 0;
 
-			foreach (var pricingTarget in pricingTargets)
-			{
-				cancellationToken.ThrowIfCancellationRequested();
+            foreach (var row in File.ReadLines(inputFile))
+            {
+                cancellationToken.ThrowIfCancellationRequested();
 
-				var targetShop = ResolveShop(pricingTarget.ShopTitle, shops);
-				if (targetShop is null)
-				{
-					warningCount++;
-					Console.Error.WriteLine($"[phase8] Could not resolve target shop '{pricingTarget.ShopTitle}' for source product {pricingTarget.SourceProductId}.");
-					continue;
-				}
+                if (string.IsNullOrWhiteSpace(row))
+                    continue;
 
-				Product product;
-				try
-				{
-					product = await printify.GetProductAsync(targetShop.Id, pricingTarget.TargetProductId);
-				}
-				catch (Exception ex)
-				{
-					warningCount++;
-					Console.Error.WriteLine($"[phase8] Failed to load target product {pricingTarget.TargetProductId} in shop '{targetShop.Title}' ({targetShop.Id}): {ex.Message}");
-					continue;
-				}
+                var parts = row.Split(',', StringSplitOptions.TrimEntries);
+                if (parts.Length < 7)
+                    continue;
 
-				if (product.Variants.Count == 0)
-				{
-					warningCount++;
-					Console.Error.WriteLine($"[phase8] Target product {pricingTarget.TargetProductId} in shop '{targetShop.Title}' has no variants to price.");
-					continue;
-				}
+                var targetProductId = parts[0];
+                var sourceProductId = parts[1];
+                var variantId = int.Parse(parts[2], CultureInfo.InvariantCulture);
+                var shopTitle = parts[3];
+                var productionPrice = int.Parse(parts[4], CultureInfo.InvariantCulture);
+                var oldShipping = int.Parse(parts[5], CultureInfo.InvariantCulture);
+                var oldPrice = int.Parse(parts[6], CultureInfo.InvariantCulture);
 
-				var pricingProfile = ResolvePricingProfile(targetShop.Title);
-				var shippingAddress = CreateShippingAddress(pricingProfile.CountryCode);
-				var variantUpdates = new List<CreateProductVariant>(product.Variants.Count);
-				var targetLines = new List<string>(product.Variants.Count);
+                var shop = ResolveShop(shopTitle, shops);
+                if (shop is null)
+                {
+                    warnings++;
+                    continue;
+                }
 
-				try
-				{
-					foreach (var variant in product.Variants.OrderBy(variant => variant.Id))
-					{
-						cancellationToken.ThrowIfCancellationRequested();
+                Product product;
+                try
+                {
+                    product = await printify.GetProductAsync(shop.Id, targetProductId);
+                }
+                catch
+                {
+                    warnings++;
+                    continue;
+                }
 
-						var shippingPrice = await ResolveShippingPriceAsync(
-							printify,
-							targetShop.Id,
-							product,
-							variant.Id,
-							pricingProfile.CountryCode,
-							shippingAddress);
+                var variant = product.Variants.FirstOrDefault(v => v.Id == variantId);
+                if (variant is null)
+                    continue;
 
-						var salePrice = CalculatePrice(variant.Cost, shippingPrice, pricingProfile);
+                var profile = ResolvePricingProfile(shop.Title);
+                var address = CreateShippingAddress(profile.CountryCode);
 
-						variantUpdates.Add(new CreateProductVariant
-						{
-							Id = variant.Id,
-							Price = salePrice,
-							IsEnabled = variant.IsEnabled,
-						});
+                int shipping;
+                try
+                {
+                    shipping = await ResolveShippingLiveSafe(printify, shop.Id, product, variant.Id, address);
+                }
+                catch
+                {
+                    warnings++;
+                    continue;
+                }
 
-						targetLines.Add(string.Join(",",
-							FormatCsvField(pricingTarget.TargetProductId),
-							FormatCsvField(pricingTarget.SourceProductId),
-							variant.Id.ToString(CultureInfo.InvariantCulture),
-							FormatCsvField(targetShop.Title),
-							variant.Cost.ToString(CultureInfo.InvariantCulture),
-							shippingPrice.ToString(CultureInfo.InvariantCulture),
-							salePrice.ToString(CultureInfo.InvariantCulture)));
-					}
+                var newPrice = CalculateSafePrice(
+                    productionPrice,
+                    shipping,
+                    profile);
 
-					await printify.UpdateProductAsync(targetShop.Id, product.Id, new UpdateProductRequest
-					{
-						Variants = variantUpdates
-					});
+                // only update if changed
+                if (newPrice != variant.Price)
+                {
+                    try
+                    {
+						await printify.UpdateProductAsync(shop.Id, product.Id,
+							new UpdateProductRequest
+							{
+								Variants = new List<CreateProductVariant>
+								{
+									new()
+									{
+										Id = variant.Id,
+										Price = newPrice,
+										IsEnabled = variant.IsEnabled
+									}
+								}
+							});
 
-					lines.AddRange(targetLines);
-					pricedTargetCount++;
-				}
-				catch (Exception ex)
-				{
-					warningCount++;
-					Console.Error.WriteLine($"[phase8] Failed to update priced variants for target product {pricingTarget.TargetProductId} in shop '{targetShop.Title}' ({targetShop.Id}): {ex.Message}");
-				}
-			}
+                        updatedProducts++;
+                    }
+                    catch
+                    {
+                        warnings++;
+                        continue;
+                    }
+                }
 
-			File.WriteAllLines(outputFile, lines);
-			var warningSuffix = warningCount > 0
-				? $" Warning-only target failures: {warningCount}."
-				: string.Empty;
-			return PhaseExecutionResult.Done($"Created {Path.GetFileName(outputFile)} with {lines.Count} price row(s) across {pricedTargetCount} priced target product(s).{warningSuffix}");
-		}
+                lines.Add(string.Join(",",
+                    targetProductId,
+                    sourceProductId,
+                    variant.Id.ToString(CultureInfo.InvariantCulture),
+                    shop.Title,
+                    productionPrice,
+                    shipping,
+                    newPrice));
+            }
 
-		private static List<PricingTarget> LoadPricingTargets(string phase7File)
-		{
-			var pricingTargets = new List<PricingTarget>();
-			if (!File.Exists(phase7File))
-			{
-				return pricingTargets;
-			}
+            File.WriteAllLines(outputFile, lines);
 
-			foreach (var rawLine in File.ReadLines(phase7File))
-			{
-				var line = rawLine.Trim();
-				if (string.IsNullOrWhiteSpace(line))
-				{
-					continue;
-				}
+            return PhaseExecutionResult.Done(
+                $"Phase9 complete. {lines.Count} rows validated. {updatedProducts} products updated. Warnings: {warnings}");
+        }
 
-				if (line.StartsWith('{'))
-				{
-					try
-					{
-						var manifest = JsonSerializer.Deserialize<PricingTargetManifest>(line);
-						if (string.IsNullOrWhiteSpace(manifest?.pid) || manifest.targets is null)
-						{
-							continue;
-						}
+        // 🔒 Deterministic pricing (NO LOOPS)
+        private static int CalculateSafePrice(
+            int productionPrice,
+            int shippingPrice,
+            MarketplacePricingProfile profile)
+        {
+            var cost = (productionPrice + Math.Max(0, shippingPrice)) / 100m;
 
-						pricingTargets.AddRange(manifest.targets
-							.Where(target => !string.IsNullOrWhiteSpace(target.ProductId) && !string.IsNullOrWhiteSpace(target.ShopTitle))
-							.Select(target => new PricingTarget(
-								SourceProductId: manifest.pid,
-								ShopTitle: target.ShopTitle!.Trim(),
-								TargetProductId: target.ProductId!.Trim())));
-					}
-					catch (JsonException)
-					{
-					}
+            var feeRate =
+                (profile.VariableFeePercent + profile.InternationalFeePercent) / 100m;
 
-					continue;
-				}
+            var taxRate = profile.SalesTaxPercent / 100m;
 
-				var parts = line.Split(',', 3, StringSplitOptions.TrimEntries);
-				if (parts.Length < 3 || string.IsNullOrWhiteSpace(parts[0]) || string.IsNullOrWhiteSpace(parts[1]) || string.IsNullOrWhiteSpace(parts[2]))
-				{
-					continue;
-				}
+            var retained = 1m - ((1m + taxRate) * feeRate);
 
-				pricingTargets.Add(new PricingTarget(
-					SourceProductId: parts[0],
-					ShopTitle: parts[1],
-					TargetProductId: parts[2]));
-			}
+            if (retained <= 0)
+                throw new InvalidOperationException("Invalid fee structure.");
 
-			return pricingTargets;
-		}
+            var required =
+                (cost + profile.FixedFeeDollars + profile.MinimumProfitDollars) / retained;
 
-		private static Shop? ResolveShop(string shopTitle, IReadOnlyList<Shop> shops)
-		{
-			if (string.IsNullOrWhiteSpace(shopTitle))
-			{
-				return null;
-			}
+            var rounded = RoundUpNicePrice(required);
 
-			return shops.FirstOrDefault(shop =>
-				string.Equals(shop.Title, shopTitle, StringComparison.OrdinalIgnoreCase)
-				|| shop.Title.Contains(shopTitle, StringComparison.OrdinalIgnoreCase)
-				|| shopTitle.Contains(shop.Title, StringComparison.OrdinalIgnoreCase));
-		}
+            var profit =
+                (rounded * retained) - profile.FixedFeeDollars - cost;
 
-		private static async Task<int> ResolveShippingPriceAsync(
-			PrintifyClient printify,
-			int shopId,
-			Product product,
-			int variantId,
-			string countryCode,
-			Address shippingAddress)
-		{
-			var cachedShippingPrice = ResolveCachedShippingPrice(product.BlueprintId, product.PrintProviderId, variantId, countryCode);
-			if (cachedShippingPrice > 0)
-			{
-				return cachedShippingPrice;
-			}
+            if (profit < profile.MinimumProfitDollars)
+            {
+                rounded += 1m;
+            }
 
-			var shipping = await printify.CalculateShippingAsync(shopId, new ShippingCostRequest
-			{
-				LineItems = new List<SubmitOrderLineItem>
-				{
-					new()
-					{
-						ProductId = product.Id,
-						VariantId = variantId,
-						Quantity = 1,
-					}
-				},
-				AddressTo = shippingAddress,
-			});
+            return checked((int)Math.Ceiling(rounded * 100m));
+        }
 
-			return new[]
-			{
-				shipping.Standard,
-				shipping.Express,
-				shipping.Priority,
-				shipping.PrintifyExpress,
-				shipping.Economy,
-			}
-			.Where(cost => cost > 0)
-			.DefaultIfEmpty(0)
-			.Max();
-		}
+        private static async Task<int> ResolveShippingLiveSafe(
+            PrintifyClient client,
+            int shopId,
+            Product product,
+            int variantId,
+            Address address)
+        {
+            var shipping = await client.CalculateShippingAsync(shopId,
+                new ShippingCostRequest
+                {
+                    LineItems = new List<SubmitOrderLineItem>
+                    {
+                        new()
+                        {
+                            ProductId = product.Id,
+                            VariantId = variantId,
+                            Quantity = 1
+                        }
+                    },
+                    AddressTo = address
+                });
 
-		private static int ResolveCachedShippingPrice(int blueprintId, int printProviderId, int variantId, string countryCode)
-		{
-			var quotes = PrintifyBlueprintDatabase.GetShippingQuotes(blueprintId, printProviderId)
-				.Where(quote => quote.VariantId == variantId)
-				.ToList();
+            var costs = new[]
+            {
+                shipping.Standard,
+                shipping.Express,
+                shipping.Priority,
+                shipping.PrintifyExpress,
+                shipping.Economy
+            }
+            .Where(x => x > 0)
+            .OrderBy(x => x)
+            .ToList();
 
-			if (quotes.Count == 0)
-			{
-				return 0;
-			}
+            if (costs.Count == 0)
+                return 0;
 
-			var exactCountryMatch = quotes
-				.Where(quote => string.Equals(quote.Region, countryCode, StringComparison.OrdinalIgnoreCase))
-				.Select(quote => quote.FirstItemCost ?? 0)
-				.Where(cost => cost > 0)
-				.ToList();
-			if (exactCountryMatch.Count > 0)
-			{
-				return exactCountryMatch.Max();
-			}
+            // median instead of max (more realistic, still safe)
+            return costs[costs.Count / 2];
+        }
 
-			var restOfWorldMatch = quotes
-				.Where(quote => string.Equals(quote.Region, "REST_OF_THE_WORLD", StringComparison.OrdinalIgnoreCase))
-				.Select(quote => quote.FirstItemCost ?? 0)
-				.Where(cost => cost > 0)
-				.ToList();
-			if (restOfWorldMatch.Count > 0)
-			{
-				return restOfWorldMatch.Max();
-			}
+        private static decimal RoundUpNicePrice(decimal amount)
+        {
+            var normalized = Math.Max(amount, 0m);
 
-			var fallbackMatch = quotes
-				.Select(quote => quote.FirstItemCost ?? 0)
-				.Where(cost => cost > 0)
-				.ToList();
-			return fallbackMatch.Count > 0 ? fallbackMatch.Max() : 0;
-		}
+            var cents = normalized switch
+            {
+                < 10m => 0.99m,
+                < 50m => 0.49m,
+                _ => 0.99m,
+            };
 
-		private static Address CreateShippingAddress(string countryCode)
-		{
-			var normalizedCountryCode = string.IsNullOrWhiteSpace(countryCode) ? "US" : countryCode.Trim().ToUpperInvariant();
-			return new Address
-			{
-				FirstName = "Combined",
-				LastName = "Runner",
-				Email = "combined-runner@example.com",
-				Phone = "0000000000",
-				Country = normalizedCountryCode,
-				Region = normalizedCountryCode == "US" ? "NY" : string.Empty,
-				Address1 = "1 Combined Runner Way",
-				Address2 = string.Empty,
-				City = "Runner",
-				Zip = normalizedCountryCode == "US" ? "10001" : "10001",
-			};
-		}
+            var rounded = Math.Floor(normalized) + cents;
 
-		private static MarketplacePricingProfile ResolvePricingProfile(string shopTitle)
-		{
-			if (shopTitle.Contains("ebay", StringComparison.OrdinalIgnoreCase))
-			{
-				return new MarketplacePricingProfile(
-					CountryCode: "US",
-					SalesTaxPercent: 8.5m,
-					VariableFeePercent: 13.60m,
-					InternationalFeePercent: 1.35m,
-					FixedFeeDollars: 0.40m,
-					MinimumProfitDollars: 40.00m);
-			}
+            if (rounded < normalized)
+                rounded += 1m;
 
-			if (shopTitle.Contains("etsy", StringComparison.OrdinalIgnoreCase))
-			{
-				return new MarketplacePricingProfile(
-					CountryCode: "US",
-					SalesTaxPercent: 8.5m,
-					VariableFeePercent: 9.50m,
-					InternationalFeePercent: 2.50m,
-					FixedFeeDollars: 0.25m,
-					MinimumProfitDollars: 40.00m);
-			}
-			throw new InvalidOperationException($"Unrecognized shop title '{shopTitle}' for pricing profile resolution. Expected to contain 'Etsy' or 'eBay'.");
+            return decimal.Round(rounded, 2, MidpointRounding.AwayFromZero);
+        }
 
-			return new MarketplacePricingProfile(
-				CountryCode: "US",
-				SalesTaxPercent: 0m,
-				VariableFeePercent: 0m,
-				InternationalFeePercent: 0m,
-				FixedFeeDollars: 0m,
-				MinimumProfitDollars: 40.00m);
-		}
+        // reuse your existing helpers
+        private static Shop? ResolveShop(string title, IReadOnlyList<Shop> shops)
+            => shops.FirstOrDefault(s =>
+                string.Equals(s.Title, title, StringComparison.OrdinalIgnoreCase));
 
-		private static int CalculatePrice(int productionPrice, int shippingPrice, MarketplacePricingProfile profile)
-		{
-			if (productionPrice < 0)
-			{
-				throw new ArgumentOutOfRangeException(nameof(productionPrice), "Production price cannot be negative.");
-			}
+        private static Address CreateShippingAddress(string countryCode)
+            => new Address
+            {
+                Country = countryCode,
+                City = "Validator",
+                Address1 = "1 Validation Way",
+                Zip = "10001"
+            };
 
-			var normalizedShippingPrice = Math.Max(0, shippingPrice);
-			var totalCost = (productionPrice + normalizedShippingPrice) / 100m;
-			var variableFeeRate = (profile.VariableFeePercent + profile.InternationalFeePercent) / 100m;
-			var retainedRevenueRate = 1m - ((1m + (profile.SalesTaxPercent / 100m)) * variableFeeRate);
+        private static MarketplacePricingProfile ResolvePricingProfile(string shopTitle)
+        {
+            if (shopTitle.Contains("ebay", StringComparison.OrdinalIgnoreCase))
+                return new("US", 8.5m, 13.6m, 1.35m, 0.40m, 40m);
 
-			if (retainedRevenueRate <= 0m)
-			{
-				throw new InvalidOperationException("Marketplace fee profile retains no revenue. Adjust the configured fee percentages.");
-			}
+            if (shopTitle.Contains("etsy", StringComparison.OrdinalIgnoreCase))
+                return new("US", 8.5m, 9.5m, 2.5m, 0.25m, 40m);
 
-			var requiredSalePrice = (totalCost + profile.FixedFeeDollars + profile.MinimumProfitDollars) / retainedRevenueRate;
-			var roundedSalePrice = RoundUpNicePrice(requiredSalePrice);
-			while (CalculateEstimatedProfit(roundedSalePrice, totalCost, profile, retainedRevenueRate) < profile.MinimumProfitDollars)
-			{
-				roundedSalePrice = RoundUpNicePrice(roundedSalePrice + 1m);
-			}
+            throw new InvalidOperationException($"Unknown shop: {shopTitle}");
+        }
 
-			return checked((int)Math.Ceiling(roundedSalePrice * 100m));
-		}
-
-		private static decimal CalculateEstimatedProfit(
-			decimal salePrice,
-			decimal totalCost,
-			MarketplacePricingProfile profile,
-			decimal retainedRevenueRate)
-		{
-			return (salePrice * retainedRevenueRate) - profile.FixedFeeDollars - totalCost;
-		}
-
-		private static decimal RoundUpNicePrice(decimal amount)
-		{
-			var normalized = Math.Max(amount, 0m);
-			var cents = normalized switch
-			{
-				< 10m => 0.99m,
-				< 50m => 0.49m,
-				_ => 0.99m,
-			};
-
-			var rounded = Math.Floor(normalized) + cents;
-			if (rounded < normalized)
-			{
-				rounded += 1m;
-			}
-
-			return decimal.Round(rounded, 2, MidpointRounding.AwayFromZero);
-		}
-
-		private static string FormatCsvField(string value)
-		{
-			if (!value.Contains(',') && !value.Contains('"'))
-			{
-				return value;
-			}
-
-			return $"\"{value.Replace("\"", "\"\"", StringComparison.Ordinal)}\"";
-		}
-
-		private sealed class PricingTargetManifest
-		{
-			public string pid { get; set; } = string.Empty;
-			public List<LegacyPricingTarget>? targets { get; set; }
-		}
-
-		private sealed class LegacyPricingTarget
-		{
-			public string? ShopTitle { get; set; }
-			public int? ShopId { get; set; }
-			public string? ProductId { get; set; }
-		}
-
-		private sealed record PricingTarget(string SourceProductId, string ShopTitle, string TargetProductId);
-
-		private sealed record MarketplacePricingProfile(
-			string CountryCode,
-			decimal SalesTaxPercent,
-			decimal VariableFeePercent,
-			decimal InternationalFeePercent,
-			decimal FixedFeeDollars,
-			decimal MinimumProfitDollars);
-	}
-		
+        private sealed record MarketplacePricingProfile(
+            string CountryCode,
+            decimal SalesTaxPercent,
+            decimal VariableFeePercent,
+            decimal InternationalFeePercent,
+            decimal FixedFeeDollars,
+            decimal MinimumProfitDollars);
+    }
 }

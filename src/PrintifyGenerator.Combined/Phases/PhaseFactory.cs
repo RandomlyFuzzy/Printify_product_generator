@@ -14,7 +14,7 @@ public static partial class PhaseFactory
 			new Phase5MetadataGenerator(),
 			new Phase6ProductAssessmentGenerator(),
 			new Phase7PublishingDirectionGenerator(),
-			// new Phase8PricingGenerator(),
+			new Phase8PricingGenerator(),
 			// new Phase9ManualPublishingMarker(),
 		};
 
