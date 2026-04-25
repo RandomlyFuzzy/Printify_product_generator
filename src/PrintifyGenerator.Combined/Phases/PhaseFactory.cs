@@ -58,7 +58,7 @@ Output requirements:
 - Match the shape below exactly.
 
 Scoring rules:
-- All numeric scores are between 0.0 and 1.0.
+- All numeric scores are between 0.0 and 10.0.
 - suitability is the overall confidence score.
 - If any legal, IP, or NSFW risk is present, set the related boolean to true and include specific issue text.
 - Issues should be short, concrete findings. Use an empty array when no issues are found.
