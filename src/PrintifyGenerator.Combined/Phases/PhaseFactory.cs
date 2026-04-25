@@ -134,7 +134,7 @@ Output requirements:
 - Use exactly this shape:
 [
 {
-	""store"": ""Etsy"" or ""Ebay"",
+	""store"": ""Ebay"" or ""Etsy"",
 	""reason"": ""short reason""
 }
 ]
@@ -183,6 +183,16 @@ Product context:
 	private static string GetPhase6Path(PhaseBundle bundle, string pid)
 		=> Path.Combine(bundle.DirectoryPath, $"phase6.{pid}.json");
 
+	private static string GetPhase7ReasonPath(PhaseBundle bundle, string npid)
+		=> Path.Combine(bundle.DirectoryPath, $"phase7.{npid}.reason.json");
+
+	private sealed class Phase7ReasonRecord
+	{
+		public string store { get; set; } = string.Empty;
+		public string reason { get; set; } = string.Empty;
+		public string sourcePid { get; set; } = string.Empty;
+	}
+
 	private static bool Phase5Complete(PhaseBundle bundle)
 	{
 		var pids = bundle.ReadPhase4ProductIds();
@@ -222,13 +232,16 @@ Product context:
 		public string reason { get; set; } = string.Empty;
 	}
 
-	private static async Task<string> CollectStreamAsync(IAsyncEnumerable<string> source, CancellationToken cancellationToken)
+	private static async Task<string> CollectStreamAsync(IAsyncEnumerable<string> source, CancellationToken cancellationToken,string endOn = null)
 	{
 		var sb = new System.Text.StringBuilder();
 		await foreach (var token in source.WithCancellation(cancellationToken))
 		{
-            // Console.Write(token);
 			sb.Append(token);
+			if (endOn is not null && token.Contains(endOn))
+			{
+				break;
+			}
 		}
 
 		return sb.ToString();

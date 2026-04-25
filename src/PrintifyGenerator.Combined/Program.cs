@@ -10,7 +10,7 @@ using System.Linq;
 var options = RunnerOptions.Parse(args);
 var cancellationSource = new CancellationTokenSource();
 
-int workerCount = Environment.ProcessorCount;
+int workerCount =  Environment.ProcessorCount;
 
 // 🔥 bundle queue (not work items)
 var bundleQueue = new Queue<PhaseBundle>();
@@ -47,43 +47,43 @@ foreach (var bundle in bundles)
     bundleQueue.Enqueue(bundle);
 }
 
-// -------------------------
-// UI LOOP
-// -------------------------
-_ = Task.Run(async () =>
-{
-    while (!cancellationSource.IsCancellationRequested)
-    {
-        Console.Clear();
+// // -------------------------
+// // UI LOOP
+// // -------------------------
+// _ = Task.Run(async () =>
+// {
+//     while (!cancellationSource.IsCancellationRequested)
+//     {
+//         Console.Clear();
 
-        var snapshot = completedWork.ToArray();
+//         var snapshot = completedWork.ToArray();
 
-        Console.WriteLine("=== COMPLETED WORK ===");
-        Console.WriteLine();
-        Console.WriteLine($"Total completed: {snapshot.Length}");
-        Console.WriteLine();
+//         Console.WriteLine("=== COMPLETED WORK ===");
+//         Console.WriteLine();
+//         Console.WriteLine($"Total completed: {snapshot.Length}");
+//         Console.WriteLine();
 
-        Console.WriteLine("=== ACTIVE WORK ===");
+//         Console.WriteLine("=== ACTIVE WORK ===");
 
-        if (activeWork.IsEmpty)
-            Console.WriteLine("Idle");
-        else
-        {
-            foreach (var kv in activeWork)
-            {
-                var w = kv.Key;
-                var a = kv.Value;
-                var dur = DateTime.UtcNow - a.StartedUtc;
+//         if (activeWork.IsEmpty)
+//             Console.WriteLine("Idle");
+//         else
+//         {
+//             foreach (var kv in activeWork)
+//             {
+//                 var w = kv.Key;
+//                 var a = kv.Value;
+//                 var dur = DateTime.UtcNow - a.StartedUtc;
 
-                Console.WriteLine(
-                    $"W{w}: {a.BundleId} | P{a.PhaseNumber} {a.PhaseName} | {dur:mm\\:ss}");
-            }
-        }
+//                 Console.WriteLine(
+//                     $"W{w}: {a.BundleId} | P{a.PhaseNumber} {a.PhaseName} | {dur:mm\\:ss}");
+//             }
+//         }
 
-        Console.WriteLine();
-        await Task.Delay(500);
-    }
-});
+//         Console.WriteLine();
+//         await Task.Delay(500);
+//     }
+// });
 
 // -------------------------
 // WORKERS
@@ -168,7 +168,7 @@ async Task Execute(WorkItem item, int workerId)
         started);
 
     Console.WriteLine(
-        $"[W{workerId}] START {item.Bundle.Id} P{item.Phase.PhaseNumber}");
+        $"[W{workerId}] [{item.Phase.PhaseNumber}] START {item.Bundle.Id} P{item.Phase.PhaseNumber}");
 
     var sw = Stopwatch.StartNew();
 
@@ -190,7 +190,7 @@ async Task Execute(WorkItem item, int workerId)
             DateTime.UtcNow));
 
         Console.WriteLine(
-            $"[W{workerId}] {status} {item.Bundle.Id} P{item.Phase.PhaseNumber} " +
+            $"[W{workerId}] [{item.Phase.PhaseNumber}] {status} {item.Bundle.Id} P{item.Phase.PhaseNumber} " +
             $"| {sw.Elapsed:mm\\:ss} | {result.Message}");
     }
     catch (OperationCanceledException)
@@ -208,8 +208,18 @@ async Task Execute(WorkItem item, int workerId)
             "ERR",
             sw.Elapsed,
             DateTime.UtcNow));
-
-        Console.WriteLine($"[W{workerId}] ERROR {ex.Message}");
+        string fileandline = string.Empty;
+        if (ex.StackTrace is not null)        {
+            var lines = ex.StackTrace.Split(Environment.NewLine);
+            if (lines.Length > 0)            {
+                var firstLine = lines[0];
+                var idx = firstLine.LastIndexOf(" in ");
+                if (idx != -1)                {
+                    fileandline = firstLine.Substring(idx + 4);
+                }
+            }
+        }
+        Console.WriteLine($"[W{workerId}] [{item.Phase.PhaseNumber}] ERROR {ex.Message} {fileandline}");
     }
 }
 

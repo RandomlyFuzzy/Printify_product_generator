@@ -37,7 +37,19 @@ public static partial class PhaseFactory
 			{
 				cancellationToken.ThrowIfCancellationRequested();
 
-				var product = await printify.GetProductAsync(stagingShopId, pid);
+				Product product;
+				try
+				{
+					product = await printify.GetProductAsync(stagingShopId, pid);
+				}
+				catch (PrintifyApiException ex) when (ex.StatusCode == 404)
+				{
+					// Product no longer exists in staging — it was likely transferred in a prior run
+					// that crashed before writing the output file. Do not count as a failure.
+					Console.Error.WriteLine($"[phase7] Product {pid} not found in staging shop {stagingShopId} (404) - already gone, skipping.");
+					continue;
+				}
+
 				var suitability = ReadImageSuitability(bundle);
 				var assessmentPath = GetPhase6Path(bundle, pid);
 				var assessment = File.Exists(assessmentPath)
@@ -51,7 +63,7 @@ public static partial class PhaseFactory
 
 				var context = BuildPublishingContext(product, suitability, assessment, meta);
 				var basePrompt = PublishDirectionPromptTemplate.Replace("{0}", context, StringComparison.Ordinal);
-				List<string>? selectedStores = null;
+				List<PublishDirectionDecision>? decisions = null;
 				for (var attempt = 1; attempt <= 4; attempt++)
 				{
 					var prompt = attempt == 1
@@ -60,20 +72,17 @@ public static partial class PhaseFactory
 
 					var response = await CollectStreamAsync(
 						ollama.GenerateStreamAsync(runtime.Settings.SuitabilityModel, prompt, cancellationToken),
-						cancellationToken);
+						cancellationToken, endOn: "]");
 
-					selectedStores = ParseStores(response);
-					if (selectedStores.Count > 0)
+					decisions = ParseDecisions(response);
+					if (decisions.Count > 0)
 					{
 						break;
 					}
 				}
 
-				selectedStores ??= new List<string>();
-				if (selectedStores.Count == 0)
-				{
-					selectedStores = new List<string> { "Etsy" };
-				}
+				decisions ??= new List<PublishDirectionDecision>();
+				var selectedStores = decisions.Select(d => d.store).ToList();
 
 				var targets = await runtime.ResolveShopsByNamesAsync(selectedStores);
 				var unresolvedStores = selectedStores
@@ -90,25 +99,38 @@ public static partial class PhaseFactory
 					Console.Error.WriteLine($"[phase7] Could not resolve target shop(s) for product {pid}: {string.Join(", ", unresolvedStores)}");
 					continue;
 				}
+				var sids = targets.Select(t => t.Id).Distinct().ToList();
 
 				var targetLines = new List<string>();
-				foreach (var target in targets)
+				foreach (var targetId in sids)
 				{
+					var targetTitle = targets.Where(t => t.Id == targetId).Select(t => t.Title).FirstOrDefault() ?? string.Empty;
 					try
 					{
 						var transfer = await printify.TransferProductAsync(
 							sourceShopId: stagingShopId,
 							sourceProductId: pid,
-							targetShopId: target.Id,
+							targetShopId: targetId,
 							deleteSourceProduct: false,
 							publishTargetProduct: false);
 						movedCount++;
-						targetLines.Add($"{pid},{target.Title},{transfer.TargetProductId}");
+						targetLines.Add($"{pid},{targetTitle},{transfer.TargetProductId}");
+
+						var matchingDecision = decisions.FirstOrDefault(d =>
+							d.store.Equals(targetTitle, StringComparison.OrdinalIgnoreCase)
+							|| targetTitle.Contains(d.store, StringComparison.OrdinalIgnoreCase)
+							|| d.store.Contains(targetTitle, StringComparison.OrdinalIgnoreCase));
+						if (matchingDecision is not null)
+						{
+							var reasonPath = GetPhase7ReasonPath(bundle, transfer.TargetProductId);
+							var reasonRecord = new Phase7ReasonRecord { store = matchingDecision.store, reason = matchingDecision.reason, sourcePid = pid };
+							File.WriteAllText(reasonPath, JsonSerializer.Serialize(reasonRecord, PrettyJson));
+						}
 					}
 					catch (Exception ex)
 					{
 						transferFailures++;
-						Console.Error.WriteLine($"[phase7] Failed to transfer product {pid} to shop '{target.Title}' ({target.Id}): {ex.Message}");
+						Console.Error.WriteLine($"[phase7] Failed to transfer product {pid} to shop '{targetTitle}' ({targetId}): {ex.Message}");
 					}
 				}
 
@@ -118,17 +140,20 @@ public static partial class PhaseFactory
 					Console.Error.WriteLine($"[phase7] No transferable target product was created for source product {pid}.");
 					continue;
 				}
-
 				lines.AddRange(targetLines);
 			}
 
-			if (transferFailures > 0)
-			{
-				return PhaseExecutionResult.Failed($"Phase7 could not create a complete publishing manifest. {transferFailures} transfer/resolution failure(s) occurred.");
-			}
 			Console.WriteLine($"Phase7 generated publishing directions for {movedCount} product(s) for bundle {bundle.Id}.");
 			Console.WriteLine($"Output written to {Path.GetFileName(outputFile)} with lines: {string.Join("; ", lines)}");
 			File.WriteAllLines(outputFile, lines);
+
+			if (transferFailures > 0)
+			{
+				// Write the output file first so the phase is marked complete and won't retry,
+				// then surface the failure count in the result message.
+				return PhaseExecutionResult.Done($"Created {Path.GetFileName(outputFile)} with {movedCount} transfer(s) and {transferFailures} failure(s).");
+			}
+
 			return PhaseExecutionResult.Done($"Created {Path.GetFileName(outputFile)} and transferred {movedCount} draft copy/copies.");
 		}
 
@@ -147,33 +172,34 @@ public static partial class PhaseFactory
 			return $"Title: {title}\nTags: {tags}\nImageScore: {score}\nFitForPrintify: {fit}\nShouldContinue: {continueFlag}";
 		}
 
-		private static List<string> ParseStores(string response)
+		private static List<PublishDirectionDecision> ParseDecisions(string response)
 		{
-			if (!TryExtractJsonObject(response, out var jsonObject))
+			if (!TryExtractJsonArray(response, out var jsonArray))
 			{
-				return new List<string>();
+				return new List<PublishDirectionDecision>();
 			}
 
 			List<PublishDirectionDecision>? decision;
 			try
 			{
-				decision = JsonSerializer.Deserialize<List<PublishDirectionDecision>>(jsonObject, PrettyJson);
+				decision = JsonSerializer.Deserialize<List<PublishDirectionDecision>>(jsonArray, PrettyJson);
 			}
 			catch
 			{
-				return new List<string>();
+				return new List<PublishDirectionDecision>();
 			}
 
 			if (decision is null || decision.Count == 0)
 			{
-				return new List<string>();
+				return new List<PublishDirectionDecision>();
 			}
 
-			return decision.Select(d => d.store)
-				.Where(store => !string.IsNullOrWhiteSpace(store))
-				.Select(store => store.Trim())
-				.Where(store => store.Equals("Etsy", StringComparison.OrdinalIgnoreCase) || store.Equals("Ebay", StringComparison.OrdinalIgnoreCase))
-				.Distinct(StringComparer.OrdinalIgnoreCase)
+			return decision
+				.Where(d => !string.IsNullOrWhiteSpace(d.store))
+				.Select(d => new PublishDirectionDecision { store = d.store.Trim(), reason = d.reason?.Trim() ?? string.Empty })
+				.Where(d => d.store.Equals("Etsy", StringComparison.OrdinalIgnoreCase) || d.store.Equals("Ebay", StringComparison.OrdinalIgnoreCase))
+				.GroupBy(d => d.store, StringComparer.OrdinalIgnoreCase)
+				.Select(g => g.First())
 				.ToList();
 		}
 	}
