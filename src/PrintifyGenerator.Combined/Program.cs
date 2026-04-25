@@ -3,24 +3,28 @@ using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
 using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 
 var options = RunnerOptions.Parse(args);
 var cancellationSource = new CancellationTokenSource();
 
-// 🔥 declare worker count FIRST
-int workerCount = Environment.ProcessorCount * 2;
+int workerCount = Environment.ProcessorCount;
 
-// 🔥 declare signal BEFORE it's used anywhere
-var signal = new SemaphoreSlim(0);
+// 🔥 bundle queue (not work items)
+var bundleQueue = new Queue<PhaseBundle>();
+var queueLock = new object();
 
 Console.CancelKeyPress += (_, e) =>
 {
     e.Cancel = true;
-
     cancellationSource.Cancel();
 
-    // wake all workers immediately
-    signal.Release(workerCount);
+    lock (queueLock)
+    {
+        Monitor.PulseAll(queueLock);
+    }
 
     Environment.Exit(0);
 };
@@ -31,25 +35,16 @@ var bundles = DiscoverBundles(options.CheckingRoot).ToList();
 Console.WriteLine($"Pipeline phases: {pipeline.Count}");
 Console.WriteLine($"Bundles: {bundles.Count}");
 
-var workQueue = new ConcurrentQueue<WorkItem>();
-var remaining = new ConcurrentDictionary<Guid, int>();
-
 var activeWork = new ConcurrentDictionary<int, ActiveWorkItem>();
 var completedWork = new ConcurrentQueue<CompletedWorkItem>();
-
-// -------------------------
-// Init
-// -------------------------
 var activeBundles = new ConcurrentDictionary<Guid, byte>();
 
+// -------------------------
+// INIT (enqueue bundles)
+// -------------------------
 foreach (var bundle in bundles)
 {
-    activeBundles[bundle.Id] = 0;
-
-    var completed = bundle.GetHighestCompletedPhase(pipeline);
-    remaining[bundle.Id] = pipeline.Count - completed;
-
-    EnqueueNext(bundle, completed);
+    bundleQueue.Enqueue(bundle);
 }
 
 // -------------------------
@@ -86,13 +81,12 @@ _ = Task.Run(async () =>
         }
 
         Console.WriteLine();
-
         await Task.Delay(500);
     }
 });
 
 // -------------------------
-// Worker pool
+// WORKERS
 // -------------------------
 var workers = new Task[workerCount];
 
@@ -105,7 +99,7 @@ for (int i = 0; i < workerCount; i++)
 await Task.WhenAll(workers);
 
 // =======================================================
-// WORKER LOOP (NO POLLING)
+// WORKER LOOP (pulls bundles)
 // =======================================================
 async Task WorkerLoop(int workerId)
 {
@@ -114,27 +108,54 @@ async Task WorkerLoop(int workerId)
         if (cancellationSource.IsCancellationRequested)
             return;
 
-        try
+        PhaseBundle bundle;
+
+        lock (queueLock)
         {
-            await signal.WaitAsync(cancellationSource.Token);
+            while (bundleQueue.Count == 0)
+            {
+                Monitor.Wait(queueLock);
+
+                if (cancellationSource.IsCancellationRequested)
+                    return;
+            }
+
+            bundle = bundleQueue.Dequeue();
         }
-        catch (OperationCanceledException)
-        {
-            return;
-        }
 
-        if (cancellationSource.IsCancellationRequested)
-            return;
-
-        if (!workQueue.TryDequeue(out var item))
-            continue;
-
-        await Execute(item, workerId);
+        await RunBundle(workerId, bundle);
     }
 }
 
 // =======================================================
-// EXECUTION
+// RUN FULL BUNDLE (key change)
+// =======================================================
+async Task RunBundle(int workerId, PhaseBundle bundle)
+{
+    activeBundles[bundle.Id] = 0;
+
+    int completed = bundle.GetHighestCompletedPhase(pipeline);
+
+    for (int i = completed; i < pipeline.Count; i++)
+    {
+        if (cancellationSource.IsCancellationRequested)
+            return;
+
+        var phase = pipeline[i];
+
+        if (!phase.CanRun(bundle))
+            continue;
+
+        var item = new WorkItem(bundle, phase);
+
+        await Execute(item, workerId);
+    }
+
+    activeBundles.TryRemove(bundle.Id, out _);
+}
+
+// =======================================================
+// EXECUTION (unchanged except NO enqueue)
 // =======================================================
 async Task Execute(WorkItem item, int workerId)
 {
@@ -171,9 +192,6 @@ async Task Execute(WorkItem item, int workerId)
         Console.WriteLine(
             $"[W{workerId}] {status} {item.Bundle.Id} P{item.Phase.PhaseNumber} " +
             $"| {sw.Elapsed:mm\\:ss} | {result.Message}");
-
-        // ✅ ALWAYS advance to next phase (core fix)
-        EnqueueNext(item.Bundle, item.Phase.PhaseNumber);
     }
     catch (OperationCanceledException)
     {
@@ -192,38 +210,7 @@ async Task Execute(WorkItem item, int workerId)
             DateTime.UtcNow));
 
         Console.WriteLine($"[W{workerId}] ERROR {ex.Message}");
-
-        // ✅ still continue pipeline even on error
-        EnqueueNext(item.Bundle, item.Phase.PhaseNumber);
     }
-}
-
-// =======================================================
-// SCHEDULING (lock-free enqueue)
-// =======================================================
-void EnqueueNext(PhaseBundle bundle, int completedPhase)
-{
-    var nextPhaseNumber = completedPhase + 1;
-
-    if (nextPhaseNumber > pipeline.Count)
-    {
-        activeBundles.TryRemove(bundle.Id, out _);
-        return;
-    }
-
-    var phase = pipeline[nextPhaseNumber - 1];
-
-    // ✅ skip non-runnable phases instead of killing bundle
-    if (!phase.CanRun(bundle))
-    {
-        EnqueueNext(bundle, nextPhaseNumber);
-        return;
-    }
-
-    workQueue.Enqueue(new WorkItem(bundle, phase));
-
-    // wake one worker
-    signal.Release();
 }
 
 // =======================================================

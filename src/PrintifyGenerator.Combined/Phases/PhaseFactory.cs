@@ -15,7 +15,7 @@ public static partial class PhaseFactory
 			new Phase6ProductAssessmentGenerator(),
 			new Phase7PublishingDirectionGenerator(),
 			new Phase8PricingGenerator(),
-			// new Phase9ManualPublishingMarker(),
+			new Phase9ManualPublishingMarker(),
 		};
 
 	private static readonly JsonSerializerOptions PrettyJson = new()
