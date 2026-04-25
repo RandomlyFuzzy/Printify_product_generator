@@ -122,7 +122,7 @@ public static partial class PhaseFactory
 							|| d.store.Contains(targetTitle, StringComparison.OrdinalIgnoreCase));
 						if (matchingDecision is not null)
 						{
-							var reasonPath = GetPhase7ReasonPath(bundle, transfer.TargetProductId);
+							var reasonPath = GetPhase7ReasonPath(bundle, transfer.TargetProductId, matchingDecision.store);
 							var reasonRecord = new Phase7ReasonRecord { store = matchingDecision.store, reason = matchingDecision.reason, sourcePid = pid };
 							File.WriteAllText(reasonPath, JsonSerializer.Serialize(reasonRecord, PrettyJson));
 						}

@@ -183,8 +183,8 @@ Product context:
 	private static string GetPhase6Path(PhaseBundle bundle, string pid)
 		=> Path.Combine(bundle.DirectoryPath, $"phase6.{pid}.json");
 
-	private static string GetPhase7ReasonPath(PhaseBundle bundle, string npid)
-		=> Path.Combine(bundle.DirectoryPath, $"phase7.{npid}.reason.json");
+	private static string GetPhase7ReasonPath(PhaseBundle bundle, string npid, string shop)
+		=> Path.Combine(bundle.DirectoryPath, $"phase7.{npid}.{shop}.reason.json");
 
 	private sealed class Phase7ReasonRecord
 	{
