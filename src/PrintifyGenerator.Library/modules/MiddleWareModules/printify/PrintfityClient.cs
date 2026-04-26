@@ -419,7 +419,6 @@ public class PrintifyClient
     }
 
     // ─── HTTP Helpers ──────────────────────────────────────────────
-
     private async Task<T> GetAsync<T>(string path)
     {
         var response = await SendWithRetryAsync(() => _http.GetAsync($"{BaseUrl}{path}"), "GET", path);
@@ -474,7 +473,11 @@ public class PrintifyClient
 
         return new StringContent(JsonSerializer.Serialize(body, JsonOpts), Encoding.UTF8, "application/json");
     }
+    private static readonly object _rateLimitLock = new();
+    private static DateTime _nextAllowedRequestTime = DateTime.MinValue;
 
+    // adjust as needed (e.g. 5–10 requests/sec depending on API limits)
+    private static readonly TimeSpan MinRequestInterval = TimeSpan.FromMilliseconds(300);
     private async Task<HttpResponseMessage> SendWithRetryAsync(
         Func<Task<HttpResponseMessage>> sendAsync,
         string method,
@@ -488,6 +491,7 @@ public class PrintifyClient
 
             try
             {
+                await EnforceRateLimitAsync(); // <-- add this
                 response = await sendAsync();
             }
             catch (HttpRequestException ex) when (attempt < MaxRetryAttempts)
@@ -528,7 +532,27 @@ public class PrintifyClient
             $"Printify request failed after {MaxRetryAttempts} attempts for {method} {path}.",
             lastTransportException);
     }
+    private static async Task EnforceRateLimitAsync()
+    {
+        TimeSpan delay = TimeSpan.Zero;
 
+        lock (_rateLimitLock)
+        {
+            var now = DateTime.UtcNow;
+
+            if (now < _nextAllowedRequestTime)
+            {
+                delay = _nextAllowedRequestTime - now;
+            }
+
+            _nextAllowedRequestTime = (now + delay).Add(MinRequestInterval);
+        }
+
+        if (delay > TimeSpan.Zero)
+        {
+            await Task.Delay(delay);
+        }
+    }
     private static bool IsTransientStatusCode(HttpStatusCode statusCode)
     {
         return statusCode == HttpStatusCode.TooManyRequests || (int)statusCode >= 500;

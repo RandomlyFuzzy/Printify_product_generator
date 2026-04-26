@@ -1,4 +1,5 @@
 using System.Globalization;
+using Microsoft.VisualBasic;
 
 public static partial class PhaseFactory
 {
@@ -8,17 +9,17 @@ public static partial class PhaseFactory
             : base(8, "Pricing Validation", "id/phase8.txt => Final validated pricing with profit guarantees") { }
 
         protected override bool IsCompleteCore(PhaseBundle bundle)
-            => File.Exists(bundle.ResolvePhaseFile(9, "txt"));
-
+            => File.Exists(bundle.ResolvePhaseFile(8, "txt"))&& new FileInfo(bundle.ResolvePhaseFile(8, "txt")).Length > 0;
+    
         protected override bool CanRunCore(PhaseBundle bundle)
-            => File.Exists(bundle.ResolvePhaseFile(8, "txt"));
+            => File.Exists(bundle.ResolvePhaseFile(7, "txt"));
 
         protected override async Task<PhaseExecutionResult> ExecuteCoreAsync(
             PhaseBundle bundle,
             CancellationToken cancellationToken)
         {
-            var inputFile = bundle.ResolvePhaseFile(8, "txt");
-            var outputFile = bundle.ResolvePhaseFile(9, "txt");
+            var inputFile = bundle.ResolvePhaseFile(7, "txt");
+            var outputFile = bundle.ResolvePhaseFile(8, "txt");
 
             var runtime = CombinedRuntime.Current;
             var printify = runtime.GetPrintifyClient();
@@ -29,6 +30,8 @@ public static partial class PhaseFactory
             var updatedProducts = 0;
             var warnings = 0;
 
+            //pid,shopname,newpid
+            //69eb5a3838f9f004a708d9cd,My Etsy Store,69ed4322293dd6baa00733bc
             foreach (var row in File.ReadLines(inputFile))
             {
                 cancellationToken.ThrowIfCancellationRequested();
@@ -37,16 +40,12 @@ public static partial class PhaseFactory
                     continue;
 
                 var parts = row.Split(',', StringSplitOptions.TrimEntries);
-                if (parts.Length < 7)
+                if (parts.Length < 3)
                     continue;
 
-                var targetProductId = parts[0];
-                var sourceProductId = parts[1];
-                var variantId = int.Parse(parts[2], CultureInfo.InvariantCulture);
-                var shopTitle = parts[3];
-                var productionPrice = int.Parse(parts[4], CultureInfo.InvariantCulture);
-                var oldShipping = int.Parse(parts[5], CultureInfo.InvariantCulture);
-                var oldPrice = int.Parse(parts[6], CultureInfo.InvariantCulture);
+                var _ = parts[0];
+                var shopTitle = parts[1];
+                var targetProductId = parts[2];
 
                 var shop = ResolveShop(shopTitle, shops);
                 if (shop is null)
@@ -66,7 +65,7 @@ public static partial class PhaseFactory
                     continue;
                 }
 
-                var variant = product.Variants.FirstOrDefault(v => v.Id == variantId);
+                var variant = product.Variants.FirstOrDefault();
                 if (variant is null)
                     continue;
 
@@ -84,28 +83,37 @@ public static partial class PhaseFactory
                     continue;
                 }
 
-                var newPrice = CalculateSafePrice(
-                    productionPrice,
-                    shipping,
-                    profile);
+                var updatedVariants = new List<CreateProductVariant>();
+
+                foreach (var v in product.Variants)
+                {
+                    if (!v.IsEnabled)
+                        continue;
+
+                    var productionPrice = v.Price;
+
+                    var newPrice = CalculateSafePrice(
+                        productionPrice,
+                        shipping,
+                        shop.Title);
+
+                    updatedVariants.Add(new CreateProductVariant
+                    {
+                        Id = v.Id,
+                        Price = newPrice,
+                        IsEnabled = true
+                    });
+                }
 
                 // only update if changed
-                if (newPrice != variant.Price)
+                if (updatedVariants.Any(v => v.Price != variant.Price))
                 {
                     try
                     {
 						await printify.UpdateProductAsync(shop.Id, product.Id,
 							new UpdateProductRequest
 							{
-								Variants = new List<CreateProductVariant>
-								{
-									new()
-									{
-										Id = variant.Id,
-										Price = newPrice,
-										IsEnabled = variant.IsEnabled
-									}
-								}
+								Variants = updatedVariants
 							});
 
                         updatedProducts++;
@@ -116,15 +124,19 @@ public static partial class PhaseFactory
                         continue;
                     }
                 }
-
-                lines.Add(string.Join(",",
-                    targetProductId,
-                    sourceProductId,
-                    variant.Id.ToString(CultureInfo.InvariantCulture),
-                    shop.Title,
-                    productionPrice,
-                    shipping,
-                    newPrice));
+                foreach (var v in updatedVariants)
+                {
+                    var oldVariant = product.Variants.First(ov => ov.Id == v.Id);
+                    var productionPrice = oldVariant.Price;
+                    var newPrice = v.Price;
+                    lines.Add(string.Join(",",
+                        targetProductId,
+                        oldVariant.Id.ToString(CultureInfo.InvariantCulture),
+                        shop.Title,
+                        productionPrice,
+                        shipping,
+                        newPrice));
+                }
             }
 
             File.WriteAllLines(outputFile, lines);
@@ -137,35 +149,77 @@ public static partial class PhaseFactory
         private static int CalculateSafePrice(
             int productionPrice,
             int shippingPrice,
-            MarketplacePricingProfile profile)
+            string profile)
         {
-            var cost = (productionPrice + Math.Max(0, shippingPrice)) / 100m;
 
-            var feeRate =
-                (profile.VariableFeePercent + profile.InternationalFeePercent) / 100m;
+            profile = profile.ToLowerInvariant();
 
-            var taxRate = profile.SalesTaxPercent / 100m;
+            decimal minimumPrice = -1m; //amount to make 0% profit, will be adjusted by profile
 
-            var retained = 1m - ((1m + taxRate) * feeRate);
-
-            if (retained <= 0)
-                throw new InvalidOperationException("Invalid fee structure.");
-
-            var required =
-                (cost + profile.FixedFeeDollars + profile.MinimumProfitDollars) / retained;
-
-            var rounded = RoundUpNicePrice(required);
-
-            var profit =
-                (rounded * retained) - profile.FixedFeeDollars - cost;
-
-            if (profit < profile.MinimumProfitDollars)
+            switch (profile)
             {
-                rounded += 1m;
+                case "ebay":
+                    minimumPrice = CalcuateEbayMinimumPrice(productionPrice, shippingPrice);
+                    break;
+                case "etsy":
+                    minimumPrice = CalcuateEtsyMinimumPrice(productionPrice, shippingPrice);
+                    break;
+                // add more countries as needed
+                default:
+                    throw new InvalidOperationException($"Unknown pricing profile: {profile}");
             }
 
-            return checked((int)Math.Ceiling(rounded * 100m));
+
+            if (shippingPrice < 0)
+                throw new InvalidOperationException("Shipping price cannot be negative.");
+
+            switch (profile)
+            {
+                case "ebay":
+                    minimumPrice *= 1.41m;
+                    break;
+                case "etsy":
+                    minimumPrice *= 1.30m;
+                    break;
+                // add more countries as needed
+                default:
+                    throw new InvalidOperationException($"Unknown pricing profile: {profile}");
+            }
+
+            minimumPrice = RoundUpNicePrice(minimumPrice);
+
+            return checked((int)Math.Ceiling(minimumPrice * 100m));
         }
+
+        private static decimal CalcuateEbayMinimumPrice(decimal productionPrice, decimal shippingPrice)
+        {
+            var TaxedCost = productionPrice + shippingPrice;
+            TaxedCost *= 1.2m;//Eu
+
+            //ebays cut
+            var runningCosts = 0.4m;//sale fee
+            runningCosts += TaxedCost*0.136m;//ebay variable fee
+            runningCosts += TaxedCost*0.018m;//international fee
+            runningCosts *= 1.2m;//vat
+
+            return TaxedCost + runningCosts;
+        }
+
+        private static decimal CalcuateEtsyMinimumPrice(decimal productionPrice, decimal shippingPrice)
+        {
+            //Includes listing fee ($0.20), transaction fee (6.5%), and Payment processing fee (3% + $0.25). Also includes off-site ad fees (if enabled).
+            var TaxedCost = productionPrice + shippingPrice;
+            TaxedCost *= 1.2m;//Eu
+
+            //Includes listing fee ($0.20), transaction fee (6.5%), and Payment processing fee (3% + $0.25). Also includes off-site ad fees (if enabled).
+            var runningCosts = 0.2m;//listing fee
+            runningCosts += TaxedCost*0.065m;//transaction fee
+            runningCosts += TaxedCost*0.03m + 0.25m;//payment processing fee
+            runningCosts *= 1.2m;//vat
+
+            return TaxedCost + runningCosts; //added listing fee
+        }
+    
 
         private static async Task<int> ResolveShippingLiveSafe(
             PrintifyClient client,
@@ -244,10 +298,10 @@ public static partial class PhaseFactory
         private static MarketplacePricingProfile ResolvePricingProfile(string shopTitle)
         {
             if (shopTitle.Contains("ebay", StringComparison.OrdinalIgnoreCase))
-                return new("US", 8.5m, 13.6m, 1.35m, 0.40m, 40m);
+                return new("US", 8.5m, 13.6m, 1.35m, 0.40m, 1m);
 
             if (shopTitle.Contains("etsy", StringComparison.OrdinalIgnoreCase))
-                return new("US", 8.5m, 9.5m, 2.5m, 0.25m, 40m);
+                return new("US", 8.5m, 9.5m, 2.5m, 0.20m, 1m);
 
             throw new InvalidOperationException($"Unknown shop: {shopTitle}");
         }

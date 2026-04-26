@@ -60,36 +60,36 @@ Console.CancelKeyPress += (_, e) =>
 // =======================================================
 // UI LOOP
 // =======================================================
-_ = Task.Run(async () =>
-{
-    while (!cancellationSource.IsCancellationRequested)
-    {
-        Console.Clear();
+// _ = Task.Run(async () =>
+// {
+//     while (!cancellationSource.IsCancellationRequested)
+//     {
+//         Console.Clear();
 
-        Console.WriteLine("=== COMPLETED WORK ===");
-        Console.WriteLine($"Total completed: {completedWork.Count}");
-        Console.WriteLine();
+//         Console.WriteLine("=== COMPLETED WORK ===");
+//         Console.WriteLine($"Total completed: {completedWork.Count}");
+//         Console.WriteLine();
 
-        Console.WriteLine("=== ACTIVE WORK ===");
+//         Console.WriteLine("=== ACTIVE WORK ===");
 
-        if (activeWork.IsEmpty)
-            Console.WriteLine("Idle");
-        else
-        {
-            foreach (var kv in activeWork)
-            {
-                var w = kv.Key;
-                var a = kv.Value;
-                var dur = DateTime.UtcNow - a.StartedUtc;
+//         if (activeWork.IsEmpty)
+//             Console.WriteLine("Idle");
+//         else
+//         {
+//             foreach (var kv in activeWork)
+//             {
+//                 var w = kv.Key;
+//                 var a = kv.Value;
+//                 var dur = DateTime.UtcNow - a.StartedUtc;
 
-                Console.WriteLine(
-                    $"W{w}: {a.BundleId} | P{a.PhaseNumber} {a.PhaseName} | {dur:mm\\:ss}");
-            }
-        }
+//                 Console.WriteLine(
+//                     $"W{w}: {a.BundleId} | P{a.PhaseNumber} {a.PhaseName} | {dur:mm\\:ss}");
+//             }
+//         }
 
-        await Task.Delay(500);
-    }
-});
+//         await Task.Delay(500);
+//     }
+// });
 
 // =======================================================
 // EXTERNAL PRODUCER (filesystem)
@@ -249,8 +249,15 @@ async Task Execute(WorkItem item, int workerId)
             "ERR",
             sw.Elapsed,
             DateTime.UtcNow));
-
-        Console.WriteLine($"[W{workerId}] ERROR {ex.Message}");
+        var pagelinenumer = "";
+        //get ther first none system stack frame
+        var st = new StackTrace(ex, true);
+        var frame = st.GetFrames()?.FirstOrDefault(f => f.GetFileName() != null && !f.GetFileName().Contains("System"));
+        if (frame != null)        {
+            pagelinenumer = $"{Path.GetFileName(frame.GetFileName())}:{frame.GetFileLineNumber()}";
+        }
+        var extype = ex.GetType().Name;
+        Console.WriteLine($"[W{workerId}] ERROR {ex.Message} (Line: {pagelinenumer}) (Type: {extype}) {item.Bundle.Id}");
     }
 }
 
