@@ -1,139 +1,194 @@
 ﻿using System.Collections.Concurrent;
 using System.Diagnostics;
-using System.Threading;
-using System.Threading.Tasks;
+using System.Threading.Channels;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 
 var options = RunnerOptions.Parse(args);
 var cancellationSource = new CancellationTokenSource();
 
-int workerCount =  Environment.ProcessorCount;
+int workerCount = Environment.ProcessorCount;
 
-// 🔥 bundle queue (not work items)
-var bundleQueue = new Queue<PhaseBundle>();
-var queueLock = new object();
+// =======================================================
+// CHANNEL (single unified queue)
+// =======================================================
+var bundleChannel = Channel.CreateUnbounded<PhaseBundle>();
 
+var seenBundles = new ConcurrentDictionary<Guid, byte>();
+
+// =======================================================
+// PIPELINE
+// =======================================================
+var pipeline = PhaseFactory.CreatePipeline();
+
+// =======================================================
+// STATE
+// =======================================================
+var activeWork = new ConcurrentDictionary<int, ActiveWorkItem>();
+var completedWork = new ConcurrentQueue<CompletedWorkItem>();
+
+int activeCount = 0;
+
+// =======================================================
+// INITIAL DISCOVERY
+// =======================================================
+var initialBundles = DiscoverBundles(options.CheckingRoot).ToList();
+
+Console.WriteLine($"Pipeline phases: {pipeline.Count}");
+Console.WriteLine($"Initial bundles: {initialBundles.Count}");
+
+foreach (var bundle in initialBundles)
+{
+    if (seenBundles.TryAdd(bundle.Id, 0))
+        bundleChannel.Writer.TryWrite(bundle);
+}
+
+// =======================================================
+// CANCEL
+// =======================================================
 Console.CancelKeyPress += (_, e) =>
 {
     e.Cancel = true;
     cancellationSource.Cancel();
-
-    lock (queueLock)
-    {
-        Monitor.PulseAll(queueLock);
-    }
-
-    Environment.Exit(0);
+    bundleChannel.Writer.TryComplete();
 };
 
-var pipeline = PhaseFactory.CreatePipeline();
-var bundles = DiscoverBundles(options.CheckingRoot).ToList();
-
-Console.WriteLine($"Pipeline phases: {pipeline.Count}");
-Console.WriteLine($"Bundles: {bundles.Count}");
-
-var activeWork = new ConcurrentDictionary<int, ActiveWorkItem>();
-var completedWork = new ConcurrentQueue<CompletedWorkItem>();
-var activeBundles = new ConcurrentDictionary<Guid, byte>();
-
-// -------------------------
-// INIT (enqueue bundles)
-// -------------------------
-foreach (var bundle in bundles)
+// =======================================================
+// UI LOOP
+// =======================================================
+_ = Task.Run(async () =>
 {
-    bundleQueue.Enqueue(bundle);
-}
+    while (!cancellationSource.IsCancellationRequested)
+    {
+        Console.Clear();
 
-// // -------------------------
-// // UI LOOP
-// // -------------------------
-// _ = Task.Run(async () =>
-// {
-//     while (!cancellationSource.IsCancellationRequested)
-//     {
-//         Console.Clear();
+        Console.WriteLine("=== COMPLETED WORK ===");
+        Console.WriteLine($"Total completed: {completedWork.Count}");
+        Console.WriteLine();
 
-//         var snapshot = completedWork.ToArray();
+        Console.WriteLine("=== ACTIVE WORK ===");
 
-//         Console.WriteLine("=== COMPLETED WORK ===");
-//         Console.WriteLine();
-//         Console.WriteLine($"Total completed: {snapshot.Length}");
-//         Console.WriteLine();
+        if (activeWork.IsEmpty)
+            Console.WriteLine("Idle");
+        else
+        {
+            foreach (var kv in activeWork)
+            {
+                var w = kv.Key;
+                var a = kv.Value;
+                var dur = DateTime.UtcNow - a.StartedUtc;
 
-//         Console.WriteLine("=== ACTIVE WORK ===");
+                Console.WriteLine(
+                    $"W{w}: {a.BundleId} | P{a.PhaseNumber} {a.PhaseName} | {dur:mm\\:ss}");
+            }
+        }
 
-//         if (activeWork.IsEmpty)
-//             Console.WriteLine("Idle");
-//         else
-//         {
-//             foreach (var kv in activeWork)
-//             {
-//                 var w = kv.Key;
-//                 var a = kv.Value;
-//                 var dur = DateTime.UtcNow - a.StartedUtc;
+        await Task.Delay(500);
+    }
+});
 
-//                 Console.WriteLine(
-//                     $"W{w}: {a.BundleId} | P{a.PhaseNumber} {a.PhaseName} | {dur:mm\\:ss}");
-//             }
-//         }
+// =======================================================
+// EXTERNAL PRODUCER (filesystem)
+// =======================================================
+_ = Task.Run(async () =>
+{
+    while (!cancellationSource.IsCancellationRequested)
+    {
+        try
+        {
+            var discovered = DiscoverBundles(options.CheckingRoot);
 
-//         Console.WriteLine();
-//         await Task.Delay(500);
-//     }
-// });
+            foreach (var bundle in discovered)
+            {
+                if (seenBundles.TryAdd(bundle.Id, 0))
+                {
+                    await bundleChannel.Writer.WriteAsync(bundle, cancellationSource.Token);
+                    Console.WriteLine($"[EXT] queued {bundle.Id}");
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"[EXT ERROR] {ex.Message}");
+        }
 
-// -------------------------
+        await Task.Delay(2000);
+    }
+});
+
+// =======================================================
+// INTERNAL PRODUCER (idle generator)
+// =======================================================
+_ = Task.Run(async () =>
+{
+    int counter = 0;
+
+    while (!cancellationSource.IsCancellationRequested)
+    {
+        try
+        {
+            bool idle =
+                bundleChannel.Reader.Count <= workerCount &&
+                Volatile.Read(ref activeCount) <= workerCount;
+
+            if (idle)
+            {
+                var bundle = CreateInternalBundle(counter++);
+
+                if (seenBundles.TryAdd(bundle.Id, 0))
+                {
+                    await bundleChannel.Writer.WriteAsync(bundle, cancellationSource.Token);
+                    Console.WriteLine($"[INT] generated {bundle.Id}");
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"[INT ERROR] {ex.Message}");
+        }
+
+        await Task.Delay(10);
+    }
+});
+
+// =======================================================
 // WORKERS
-// -------------------------
-var workers = new Task[workerCount];
-
-for (int i = 0; i < workerCount; i++)
-{
-    int id = i;
-    workers[i] = WorkerLoop(id);
-}
+// =======================================================
+var workers = Enumerable.Range(0, workerCount)
+    .Select(i => WorkerLoop(i))
+    .ToArray();
 
 await Task.WhenAll(workers);
 
 // =======================================================
-// WORKER LOOP (pulls bundles)
+// WORKER LOOP
 // =======================================================
 async Task WorkerLoop(int workerId)
 {
-    while (true)
+    await foreach (var bundle in bundleChannel.Reader.ReadAllAsync(cancellationSource.Token))
     {
-        if (cancellationSource.IsCancellationRequested)
-            return;
+        Interlocked.Increment(ref activeCount);
 
-        PhaseBundle bundle;
-
-        lock (queueLock)
+        try
         {
-            while (bundleQueue.Count == 0)
-            {
-                Monitor.Wait(queueLock);
-
-                if (cancellationSource.IsCancellationRequested)
-                    return;
-            }
-
-            bundle = bundleQueue.Dequeue();
+            await RunBundle(workerId, bundle);
         }
-
-        await RunBundle(workerId, bundle);
+        finally
+        {
+            Interlocked.Decrement(ref activeCount);
+        }
     }
 }
 
 // =======================================================
-// RUN FULL BUNDLE (key change)
+// RUN BUNDLE
 // =======================================================
 async Task RunBundle(int workerId, PhaseBundle bundle)
 {
-    activeBundles[bundle.Id] = 0;
-
     int completed = bundle.GetHighestCompletedPhase(pipeline);
 
     for (int i = completed; i < pipeline.Count; i++)
@@ -147,15 +202,12 @@ async Task RunBundle(int workerId, PhaseBundle bundle)
             continue;
 
         var item = new WorkItem(bundle, phase);
-
         await Execute(item, workerId);
     }
-
-    activeBundles.TryRemove(bundle.Id, out _);
 }
 
 // =======================================================
-// EXECUTION (unchanged except NO enqueue)
+// EXECUTE
 // =======================================================
 async Task Execute(WorkItem item, int workerId)
 {
@@ -167,9 +219,6 @@ async Task Execute(WorkItem item, int workerId)
         item.Phase.PhaseName,
         started);
 
-    Console.WriteLine(
-        $"[W{workerId}] [{item.Phase.PhaseNumber}] START {item.Bundle.Id} P{item.Phase.PhaseNumber}");
-
     var sw = Stopwatch.StartNew();
 
     try
@@ -179,23 +228,15 @@ async Task Execute(WorkItem item, int workerId)
 
         activeWork.TryRemove(workerId, out _);
 
-        var status = result.Changed ? "OK" : "SKIP";
-
         completedWork.Enqueue(new CompletedWorkItem(
             item.Bundle.Id,
             item.Phase.PhaseNumber,
             item.Phase.PhaseName,
-            status,
+            result.Changed ? "OK" : "SKIP",
             sw.Elapsed,
             DateTime.UtcNow));
 
-        Console.WriteLine(
-            $"[W{workerId}] [{item.Phase.PhaseNumber}] {status} {item.Bundle.Id} P{item.Phase.PhaseNumber} " +
-            $"| {sw.Elapsed:mm\\:ss} | {result.Message}");
-    }
-    catch (OperationCanceledException)
-    {
-        activeWork.TryRemove(workerId, out _);
+        Console.WriteLine($"[W{workerId}] P{item.Phase.PhaseNumber} {(result.Changed ? "OK" : "SKIP")} {item.Bundle.Id}");
     }
     catch (Exception ex)
     {
@@ -208,19 +249,17 @@ async Task Execute(WorkItem item, int workerId)
             "ERR",
             sw.Elapsed,
             DateTime.UtcNow));
-        string fileandline = string.Empty;
-        if (ex.StackTrace is not null)        {
-            var lines = ex.StackTrace.Split(Environment.NewLine);
-            if (lines.Length > 0)            {
-                var firstLine = lines[0];
-                var idx = firstLine.LastIndexOf(" in ");
-                if (idx != -1)                {
-                    fileandline = firstLine.Substring(idx + 4);
-                }
-            }
-        }
-        Console.WriteLine($"[W{workerId}] [{item.Phase.PhaseNumber}] ERROR {ex.Message} {fileandline}");
+
+        Console.WriteLine($"[W{workerId}] ERROR {ex.Message}");
     }
+}
+
+// =======================================================
+// INTERNAL BUNDLE GENERATOR
+// =======================================================
+static PhaseBundle CreateInternalBundle(int i)
+{
+    return PhaseBundle.CreateSynthetic(Guid.NewGuid());
 }
 
 // =======================================================
