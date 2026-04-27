@@ -90,7 +90,7 @@ public static partial class PhaseFactory
                     if (!v.IsEnabled)
                         continue;
 
-                    var productionPrice = v.Price;
+                    var productionPrice = v.Cost;
 
                     var newPrice = CalculateSafePrice(
                         productionPrice,
@@ -159,10 +159,10 @@ public static partial class PhaseFactory
             switch (profile)
             {
                 case "ebay":
-                    minimumPrice = CalcuateEbayMinimumPrice(productionPrice, shippingPrice);
+                    minimumPrice = CalcuateEbayMinimumPrice(productionPrice/100m, shippingPrice/100m);
                     break;
-                case "etsy":
-                    minimumPrice = CalcuateEtsyMinimumPrice(productionPrice, shippingPrice);
+                case "my etsy store":
+                    minimumPrice = CalcuateEtsyMinimumPrice(productionPrice/100m, shippingPrice/100m);
                     break;
                 // add more countries as needed
                 default:
@@ -176,19 +176,19 @@ public static partial class PhaseFactory
             switch (profile)
             {
                 case "ebay":
-                    minimumPrice *= 1.41m;
+                    minimumPrice *= 1.03m;
                     break;
-                case "etsy":
-                    minimumPrice *= 1.30m;
+                case "my etsy store":
+                    minimumPrice *= 1.02m;
                     break;
                 // add more countries as needed
                 default:
                     throw new InvalidOperationException($"Unknown pricing profile: {profile}");
             }
 
-            minimumPrice = RoundUpNicePrice(minimumPrice);
+            minimumPrice = RoundUpNicePrice(minimumPrice)*100m;
 
-            return checked((int)Math.Ceiling(minimumPrice * 100m));
+            return (int)minimumPrice;
         }
 
         private static decimal CalcuateEbayMinimumPrice(decimal productionPrice, decimal shippingPrice)
