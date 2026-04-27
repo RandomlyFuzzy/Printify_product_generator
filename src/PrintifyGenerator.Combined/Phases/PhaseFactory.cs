@@ -23,13 +23,12 @@ public static partial class PhaseFactory
 		WriteIndented = true,
 	};
 
-	private const string PromptGenerationInstruction = @"You are an expert prompt engineer for commercial print-on-demand artwork.
-Create one high-converting image-generation prompt for a broad audience.
+	private const string PromptGenerationInstruction = @"You are a world-class prompt engineer specializing in commercial print-on-demand artwork for apparel and merchandise.
+Your task: Craft a single, high-converting image-generation prompt designed to appeal to a wide audience and maximize sales potential.
 
 Output requirements:
-- Return ONLY valid JSON.
-- No markdown, no code fences, no extra text.
-- Return exactly one array item with exactly these keys.
+- Output ONLY valid JSON. No markdown, code fences, or extra commentary.
+- Return exactly one array item with these keys and structure.
 
 JSON format:
 [
@@ -106,25 +105,58 @@ Required JSON shape:
 	""shouldContinue"": true
 }";
 
-	private const string ProductMetaPrompt = @"Generate conversion-focused product listing metadata from product mockup images.
+	private const string ProductMetaPrompt = @"Generate high-converting SEO metadata for an e-commerce product based on provided mockup images.
 
-Output requirements:
-- Return ONLY valid JSON.
-- No markdown, no code fences, no extra keys, no extra text.
-- Match this shape exactly:
+Output format (STRICT):
+
+Return ONLY a valid JSON object.
+No markdown, no explanations, no extra text.
+Use EXACTLY this structure:
 {
-	""Title"": ""..."",
-	""Description"": ""html description"",
-	""Tags"": [""tag1"", ""tag2""]
+""Title"": ""..."",
+""Description"": ""html description"",
+""Tags"": [""tag1"", ""tag2""]
 }
 
-Rules:
-- Title must be less than 80 characters and should be concise dont fall for pictures of items on the printed item no tradmark terms or anything that could infringe IP rights.
-- Description must be less than 3000 characters.
-- Title should be specific, human-readable, and avoid keyword stuffing.
-- Description should use simple HTML (p, ul, li, strong) and highlight benefits, material feel, and gift/use cases.
-- Tags should be relevant search phrases, lowercase preferred, no duplicates, and no trademarked terms.
-- Never include URLs, markdown, JSON comments, or text outside the JSON object.";
+Title Requirements:
+
+Max 80 characters.
+Clear, specific, and human-readable.
+Focus on the actual product being sold (not background props in mockups).
+Avoid keyword stuffing.
+Do NOT include brand names, trademarks, copyrighted terms, or IP-infringing phrases.
+Use natural language with primary keyword + key attribute (e.g., material, audience, or use case).
+
+Description Requirements:
+
+Max 3000 characters.
+Use ONLY simple HTML: <p>, <ul>, <li>, <strong>.
+Structure:
+1 short engaging intro paragraph.
+1 bullet list of key features/benefits.
+1 short paragraph covering use cases or gifting ideas.
+Focus on:
+Benefits over features (how it feels/helps the user).
+Material, quality, and comfort (if applicable).
+Emotional appeal and practical use.
+Keep language clear, natural, and persuasive (not spammy).
+Do NOT include URLs, pricing, shipping, guarantees, or claims that cannot be verified.
+
+Tags Requirements:
+
+5–15 tags.
+Lowercase only.
+No duplicates.
+No trademarks or brand names.
+Use relevant search phrases (mix of short-tail and long-tail keywords).
+Reflect product type, style, audience, and use case.
+
+General Rules:
+
+Base output ONLY on the product visible in the mockup.
+Ignore unrelated objects, backgrounds, or decorative elements.
+Do not hallucinate features that are not visually evident.
+Ensure all content is safe for commercial use and free of IP violations.";
 
 	private const string PublishDirectionPromptTemplate = @"Choose the best marketplace destination for this POD product.
 
