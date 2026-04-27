@@ -88,4 +88,14 @@ public sealed class PhaseBundle
             .Distinct(StringComparer.OrdinalIgnoreCase)
             .ToArray();
     }
+
+    public static PhaseBundle CreateSynthetic(Guid id)
+    {
+        //./src/data/Checking/yyyy-mm/dd/{id}/phaseN.json
+        var tempDir = Path.Combine("src", "data", "Checking", DateTime.Now.ToString("yyyy-MM"), DateTime.Now.ToString("dd"), id.ToString());
+
+        Directory.CreateDirectory(tempDir);
+
+        return new PhaseBundle(id, tempDir);
+    }
 }

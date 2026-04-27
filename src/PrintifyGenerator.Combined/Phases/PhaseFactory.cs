@@ -97,7 +97,7 @@ Decision rules:
 - Use an empty Issues array when no issues are found.
 - If the image is cut off or clipped in the mockup, but the original image is suitable, still return FitForPrintify as true and include an issue noting the clipping for later review.
 - Dont allow images on breast pockets as they are embroidered and will be rejected by printify and cause listing issues, if the mockup contains a breast pocket with an image return FitForPrintify as false and include an issue noting this for later review.
-
+- It is only fit to continue if it has any chance of it be bought by a customer, if it is technically suitable but has a very niche or questionable aesthetic that may not have marketplace appeal, set FitForPrintify to true but shouldContinue to false and include an issue noting this for later review.
 
 Required JSON shape:
 {

@@ -301,12 +301,22 @@ public class MockupGenerator
     private List<Variant> ScoreAndFilterVariants(List<Variant> variants, ImageAnalysis analysis)
     {
         var scored = new List<(Variant v, double score)>();
-
         foreach (var v in variants)
         {
             if (v.Placeholders == null || v.Placeholders.Count == 0)
+                continue;
+
+            // 🚫 REMOVE EMBROIDERY PLACEHOLDERS
+            v.Placeholders = v.Placeholders
+                .Where(p =>
+                    !string.Equals(p.DecorationMethod, "embroidery", StringComparison.OrdinalIgnoreCase)
+                )
+                .ToList();
+
+            // if nothing usable remains, drop variant entirely
+            if (!v.Placeholders.Any())
             {
-                Log("Missing placeholders");
+                Log("Variant removed (embroidery only)");
                 continue;
             }
 
