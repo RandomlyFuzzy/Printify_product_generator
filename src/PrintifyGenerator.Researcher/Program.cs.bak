@@ -1,0 +1,351 @@
+﻿using System;
+using System.Collections.Concurrent;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text.Json;
+using System.Text.RegularExpressions;
+
+class Program
+{
+    const int CHUNK = 50000;
+    const int MIN_WORD_COUNT = 50;
+    const int PRODUCT_LIMIT = 500000;
+    
+    static void Main()
+    {
+        Console.WriteLine("LOADING LISTING WORDS + SENTIMENT + SALES...");
+        
+        var productPath = "/home/rf/Desktop/Printify_prodcuct_generator/DataSets/RawData/meta_Clothing_Shoes_and_Jewelry.jsonl";
+        var reviewPath = "/home/rf/Desktop/Printify_prodcuct_generator/DataSets/RawData/Clothing_Shoes_and_Jewelry.jsonl";
+        
+        var asinToListingWords = new ConcurrentDictionary<string, ConcurrentBag<string>>();
+        var asinToCategory = new ConcurrentDictionary<string, string>();
+        var asinToSales = new ConcurrentDictionary<string, int>();
+        var asinToSentiment = new ConcurrentDictionary<string, double>();
+        var categoryProducts = new ConcurrentDictionary<string, ConcurrentBag<(string asin, int sales)>>();
+        
+        Console.WriteLine("\n=== PHASE 1: LOADING PRODUCT LISTINGS ===");
+        Console.WriteLine($"Reading from: {productPath}");
+        LoadProductListings(productPath, asinToListingWords, asinToCategory, asinToSales, categoryProducts);
+        
+        var asinsList = asinToCategory.Keys.ToList();
+        Console.WriteLine($"\nLoaded {asinsList.Count:N0} products with listings");
+        
+        Console.WriteLine("\n=== PHASE 2: CALCULATING REVIEW SENTIMENT ===");
+        Console.WriteLine($"Reading from: {reviewPath}");
+        CalculateSentiment(reviewPath, asinToSentiment, new HashSet<string>(asinsList));
+        
+        Console.WriteLine("\n=== PHASE 3: ANALYZING BY CATEGORY ===");
+        
+        var topCategories = categoryProducts
+            .OrderByDescending(kvp => kvp.Value.Count)
+            .Take(10)
+            .Select(kvp => kvp.Key)
+            .ToList();
+        
+        Console.WriteLine($"\nTop categories: {string.Join(", ", topCategories)}");
+        
+        var stopWords = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
+        {
+            "the", "a", "an", "is", "are", "was", "were", "be", "been", "being",
+            "have", "has", "had", "do", "does", "did", "will", "would", "could", "should",
+            "may", "might", "must", "shall", "can", "need", "to", "of", "in", "for",
+            "on", "with", "at", "by", "from", "as", "into", "through", "during",
+            "before", "after", "above", "below", "between", "under", "again", "further",
+            "then", "once", "here", "there", "when", "where", "why", "how", "all",
+            "each", "few", "more", "most", "other", "some", "such", "no", "nor",
+            "not", "only", "own", "same", "so", "than", "too", "very", "just",
+            "and", "but", "if", "or", "because", "until", "while", "about", "this",
+            "that", "it", "its", "my", "me", "we", "our", "you", "your", "he",
+            "she", "him", "her", "they", "them", "their", "what", "which", "who",
+            "i", "am", "get", "got", "one", "two", "also", "back", "any",
+            "size", "fit", "color", "brand", "material", "made", "buy", "product",
+            "wear", "worn", "pair", "day", "time", "year", "month", "week"
+        };
+        
+        var outputDir = "/home/rf/Desktop/Printify_prodcuct_generator/category_features";
+        Directory.CreateDirectory(outputDir);
+        
+        Console.WriteLine("\n=== RESULTS ===");
+        
+        foreach (var category in topCategories)
+        {
+            var products = categoryProducts.TryGetValue(category, out var bag) ? bag.ToList() : new List<(string, int)>();
+            if (products.Count < 10) continue;
+            
+            var totalCount = products.Count;
+            Console.WriteLine($"\n=== {category.ToUpper()} ({totalCount:N0} products) ===");
+            
+            var categoryWordSentiment = new ConcurrentDictionary<string, (int pos, int total)>();
+            var categoryWordSales = new ConcurrentDictionary<string, (int sales, int count)>();
+            
+            foreach (var (asin, sales) in products)
+            {
+                if (!asinToListingWords.TryGetValue(asin, out var words)) continue;
+                if (!asinToSentiment.TryGetValue(asin, out var sentiment)) continue;
+                
+                var isPositive = sentiment >= 4.0;
+                var isHighSales = sales >= products.OrderByDescending(p => p.Item2).Take((int)(products.Count * 0.1)).Last().Item2;
+                
+                foreach (var word in words)
+                {
+                    if (stopWords.Contains(word)) continue;
+                    
+                    if (isPositive)
+                    {
+                        var current = categoryWordSentiment.GetOrAdd(word, _ => (0, 0));
+                        categoryWordSentiment[word] = (current.pos + 1, current.total + 1);
+                    }
+                    else
+                    {
+                        var current = categoryWordSentiment.GetOrAdd(word, _ => (0, 0));
+                        categoryWordSentiment[word] = (current.pos, current.total + 1);
+                    }
+                    
+                    if (isHighSales)
+                    {
+                        var current = categoryWordSales.GetOrAdd(word, _ => (0, 0));
+                        categoryWordSales[word] = (current.sales + sales, current.count + 1);
+                    }
+                }
+            }
+            
+            var results = new List<(string word, double sentimentPct, int salesVolume, int total)>();
+            
+            foreach (var kv in categoryWordSentiment)
+            {
+                if (!categoryWordSales.TryGetValue(kv.Key, out var salesData)) continue;
+                if (salesData.count < MIN_WORD_COUNT) continue;
+                
+                var sentimentPct = (double)kv.Value.pos / kv.Value.total * 100;
+                var salesVolume = salesData.sales;
+                results.Add((kv.Key, sentimentPct, salesVolume, salesData.count));
+            }
+            
+            var bySentimentResults = results.OrderByDescending(x => x.sentimentPct).Take(30).ToList();
+            var bySalesResults = results.OrderByDescending(x => x.salesVolume).Take(30).ToList();
+            var sentimentSet = bySentimentResults.Select(x => x.word).ToHashSet();
+            var salesSet = bySalesResults.Select(x => x.word).ToHashSet();
+            
+            var overlap = results.Where(x => sentimentSet.Contains(x.word) && salesSet.Contains(x.word)).ToList();
+            
+            var safeName = string.Join("_", category.Split(Path.GetInvalidFileNameChars()));
+            var filePath = Path.Combine(outputDir, $"{safeName}.txt");
+            using var writer = new StreamWriter(filePath);
+            writer.WriteLine($"=== {category.ToUpper()} ({totalCount:N0} products) ===");
+            writer.WriteLine();
+            writer.WriteLine("--- TOP SENTIMENT WORDS ---");
+            foreach (var r in bySentimentResults.Take(20))
+                writer.WriteLine($"  {r.word}: {r.sentimentPct:F1}% positive ({r.total:N0} products)");
+            
+            writer.WriteLine();
+            writer.WriteLine("--- TOP SALES WORDS ---");
+            foreach (var r in bySalesResults.Take(20))
+                writer.WriteLine($"  {r.word}: {r.salesVolume:N0} reviews ({r.total:N0} products)");
+            
+            writer.WriteLine();
+            writer.WriteLine("--- TOP OVERLAP (BEST SEO) ---");
+            writer.WriteLine($"  Found {overlap.Count} overlapping words");
+            foreach (var r in overlap.Take(20))
+            {
+                writer.WriteLine($"  {r.word}: {r.sentimentPct:F1}% positive, {r.salesVolume:N0} sales");
+                Console.WriteLine($"  {r.word}: {r.sentimentPct:F1}% positive, {r.salesVolume:N0} sales");
+            }
+            
+            Console.WriteLine($"\nSaved to: {filePath}");
+        }
+    }
+    
+    static IEnumerable<string> StreamLines(string path, int chunkSize)
+    {
+        using var reader = new StreamReader(path);
+        var buffer = new List<string>(chunkSize);
+        while (!reader.EndOfStream)
+        {
+            buffer.Clear();
+            for (int i = 0; i < chunkSize && !reader.EndOfStream; i++)
+            {
+                var line = reader.ReadLine();
+                if (!string.IsNullOrWhiteSpace(line))
+                    buffer.Add(line);
+            }
+            if (buffer.Count == 0) yield break;
+            foreach (var line in buffer)
+                yield return line;
+        }
+    }
+    
+    static void LoadProductListings(string path, 
+        ConcurrentDictionary<string, ConcurrentBag<string>> asinToListingWords,
+        ConcurrentDictionary<string, string> asinToCategory, 
+        ConcurrentDictionary<string, int> asinToSales,
+        ConcurrentDictionary<string, ConcurrentBag<(string, int)>> categoryProducts)
+    {
+        int loaded = 0;
+        int scanned = 0;
+        
+        Console.WriteLine("Streaming product file...");
+        
+        foreach (var line in StreamLines(path, CHUNK))
+        {
+            scanned++;
+            if (scanned % 100000 == 0)
+                Console.WriteLine($"Scanned {scanned:N0} products...");
+            
+            if (string.IsNullOrWhiteSpace(line)) continue;
+        {
+            if (string.IsNullOrWhiteSpace(line)) continue;
+            try
+            {
+                var doc = JsonDocument.Parse(line);
+                var root = doc.RootElement;
+                
+                string? asin = null;
+                int sales = 0;
+                string? category = null;
+                var words = new ConcurrentBag<string>();
+                
+                if (root.TryGetProperty("parent_asin", out var pa))
+                    asin = pa.ValueKind == JsonValueKind.String ? pa.GetString() : null;
+                else if (root.TryGetProperty("asin", out var a))
+                    asin = a.ValueKind == JsonValueKind.String ? a.GetString() : null;
+                
+                if (root.TryGetProperty("rating_number", out var rn))
+                    sales = rn.ValueKind == JsonValueKind.Number ? rn.GetInt32() : 0;
+                
+                if (root.TryGetProperty("categories", out var cats) && cats.ValueKind == JsonValueKind.Array)
+                {
+                    foreach (var c in cats.EnumerateArray())
+                        if (c.ValueKind == JsonValueKind.String)
+                            category = c.GetString();
+                }
+                
+                ExtractListingWords(root, words);
+                
+                if (!string.IsNullOrEmpty(asin) && sales > 0 && !string.IsNullOrEmpty(category) && words.Count > 0)
+                {
+                    asinToListingWords[asin] = words;
+                    asinToCategory[asin] = category;
+                    asinToSales[asin] = sales;
+                    categoryProducts.AddOrUpdate(category, 
+                        _ => new ConcurrentBag<(string, int)> { (asin, sales) },
+                        (_, bag) => { bag.Add((asin, sales)); return bag; });
+                    loaded++;
+                }
+            }
+            catch { }
+            
+            if (loaded % 10000 == 0)
+                Console.WriteLine($"Loaded {loaded:N0} product listings");
+            
+            if (loaded >= PRODUCT_LIMIT)
+            {
+                Console.WriteLine($"Reached limit of {PRODUCT_LIMIT:N0} products");
+                break;
+            }
+        }
+        
+        Console.WriteLine($"Loaded {loaded:N0} product listings total");
+    }
+    
+    static void ExtractListingWords(JsonElement root, ConcurrentBag<string> words)
+    {
+        var textFields = new[] { "title", "description", "features", "brand" };
+        
+        foreach (var field in textFields)
+        {
+            if (root.TryGetProperty(field, out var elem))
+            {
+                string? text = null;
+                if (elem.ValueKind == JsonValueKind.String)
+                    text = elem.GetString();
+                else if (elem.ValueKind == JsonValueKind.Array)
+                {
+                    var arr = new List<string>();
+                    foreach (var item in elem.EnumerateArray())
+                        if (item.ValueKind == JsonValueKind.String)
+                            arr.Add(item.GetString()!);
+                    text = string.Join(" ", arr);
+                }
+                
+                if (!string.IsNullOrEmpty(text))
+                {
+                    var extracted = ExtractWords(text);
+                    foreach (var w in extracted)
+                        words.Add(w);
+                }
+            }
+        }
+    }
+
+    static void CalculateSentiment(string path, ConcurrentDictionary<string, double> asinToSentiment, HashSet<string> targetAsins)
+    {
+        var asinRatings = new ConcurrentDictionary<string, List<int>>();
+        int processed = 0;
+        
+        foreach (var chunk in StreamLines(path, CHUNK).Chunk(CHUNK))
+        {
+            processed += chunk.Length;
+            if (processed % 1000000 == 0)
+                Console.WriteLine($"Processed {processed:N0} reviews...");
+            
+            Parallel.ForEach(chunk, line =>
+            {
+                if (string.IsNullOrWhiteSpace(line)) return;
+                try
+                {
+                    var doc = JsonDocument.Parse(line);
+                    var root = doc.RootElement;
+                    
+                    string? asin = null;
+                    int overall = 0;
+                    
+                    if (root.TryGetProperty("parent_asin", out var pa))
+                        asin = pa.ValueKind == JsonValueKind.String ? pa.GetString() : null;
+                    else if (root.TryGetProperty("asin", out var a))
+                        asin = a.ValueKind == JsonValueKind.String ? a.GetString() : null;
+                    
+                    if (root.TryGetProperty("overall", out var o))
+                        overall = o.ValueKind == JsonValueKind.Number ? o.GetInt32() : 0;
+                    
+                    if (!string.IsNullOrEmpty(asin) && overall > 0 && targetAsins.Contains(asin))
+                    {
+                        var list = asinRatings.GetOrAdd(asin, _ => new List<int>());
+                        lock (list)
+                        {
+                            list.Add(overall);
+                        }
+                    }
+                }
+                catch { }
+            });
+        }
+        
+        foreach (var kv in asinRatings)
+        {
+            var avg = kv.Value.Average();
+            asinToSentiment[kv.Key] = avg;
+        }
+        
+        Console.WriteLine($"Calculated sentiment for {asinToSentiment.Count:N0} products");
+    }
+    
+    static HashSet<string> ExtractWords(string text)
+    {
+        var words = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+        if (string.IsNullOrEmpty(text)) return words;
+        
+        text = text.ToLower();
+        text = Regex.Replace(text, @"[\d\.\,\!\?\;\:""\(\)\[\]\{\}\/\\\#\$\%\^\&\*\+\~\`\<\>\|\-=_+]", " ");
+        
+        foreach (var word in text.Split(' ', StringSplitOptions.RemoveEmptyEntries))
+        {
+            var cleaned = word.Trim('s');
+            if (!string.IsNullOrEmpty(cleaned) && cleaned.Length >= 4 && cleaned.All(c => char.IsLetter(c)))
+                words.Add(cleaned);
+        }
+        
+        return words;
+    }
+}

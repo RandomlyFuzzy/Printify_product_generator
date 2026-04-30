@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PrintifyGenerator.Library")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6d3ec4dc8adc858eef94e4040367cd1b1c380dca")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cb42a3c14b0424679fc792b8755de2148fe10e56")]
 [assembly: System.Reflection.AssemblyProductAttribute("PrintifyGenerator.Library")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PrintifyGenerator.Library")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

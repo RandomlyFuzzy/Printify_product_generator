@@ -18,14 +18,83 @@ if (string.IsNullOrWhiteSpace(token))
         "TOKEN was not found in main.env. Live Printify pricing is required because cached blueprint_details files do not contain comparable variant pricing.");
     return 1;
 }
+PrintifyClient client = new PrintifyClient(token);
+
+//read every phase4 and phase7 text file in ../data/Checking/**/**/*.txt and print the file name and the token
+var dataDirectory = Path.Combine(repositoryRoot,"src", "data", "Checking");
+if (!Directory.Exists(dataDirectory))
+{
+    Console.Error.WriteLine($"Data directory not found at {dataDirectory}");
+    return 1;
+}
+List<string> ph4 = Directory.GetFiles(dataDirectory, "phase4.txt", SearchOption.AllDirectories).ToList();
+List<string> ph7 = Directory.GetFiles(dataDirectory, "phase7.txt", SearchOption.AllDirectories).ToList();
+// foreach (var year in Directory.GetDirectories(dataDirectory))
+// {
+
+    
+// }
+
+HashSet<string> PIDs = new HashSet<string>();
+
+foreach (var file in ph4)
+{
+    File.ReadLines(file)
+        .Select(line => line.Split(',').FirstOrDefault()?.Trim())
+        .Where(pid => !string.IsNullOrWhiteSpace(pid))
+        .ToList()
+        .ForEach(pid => PIDs.Add(pid!));
+}
+foreach (var file in ph7)
+{
+    File.ReadLines(file)
+        .Select(line => line.Split(',').LastOrDefault()?.Trim())
+        .Where(pid => !string.IsNullOrWhiteSpace(pid))
+        .ToList()
+        .ForEach(pid => PIDs.Add(pid!));
+}
+
+Console.WriteLine($"Found {PIDs.Count} unique PIDs across phase4 and phase7 files.");
+
+string[] StoreNames = new[] { "Staging","Ebay","My Etsy Store" };
+
+int[] Storeids = new int[StoreNames.Length];
+
+foreach (var store in client.GetShopsAsync().Result)
+{
+    var index = Array.IndexOf(StoreNames, store.Title);
+    if (index >= 0)
+    {
+        Storeids[index] = store.Id;
+        Console.WriteLine($"Mapped Store '{store.Title}' to ID {Storeids[index]}");
+    }
+}
+
+foreach (var store in Storeids)
+{
+    var products = await client.GetAllProductsAsync(store);
+    int i = 1 ;
+    foreach (var product in products)
+    {
+        if(!PIDs.Contains(product.Id.ToString()))
+        {
+            if(product.External == null)
+            {
+                await client.DeleteProductAsync(store, product.Id);
+                Console.WriteLine($"Deleted product with PID: {product.Id} from store {store} because it was not found in the phase4 or phase7 files and was not published.");
+            }
+        }
+        LogProgress(i++, products.Count);
+    }
+}
 
 
-
-
-
-
-
-
+static void LogProgress(int current, int total)
+{
+    string progressBar = new string('#', (int)((current / (double)total) * 50)).PadRight(50);
+    Console.WriteLine($"\r[{progressBar}] {current}/{total} products");
+    Console.CursorTop --;
+}
 
 
 

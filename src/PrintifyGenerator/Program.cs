@@ -79,32 +79,29 @@ foreach (var shop in shops)
 int shopId = shops.Where(a=>a.Title=="Staging").FirstOrDefault()?.Id ?? 0;
 Console.WriteLine($"Using shop: \"{shops.FirstOrDefault(a=>a.Id==shopId)?.Title}\" (ID: {shopId})");
 
-// ── MockupGenerator (moondream:latest, drafts only – no publishing) ────────────
+// ── MockupGenerator ────────────────────────────────────────────────────────────
 var generator = new MockupGenerator(
     printify:     printify,
     ollama:       ollama,
-    shopId:       shopId,
-    dataBasePath: dataBasePath,
-    visionModel:  orchestrationSettings.MockupVisionModel);
+    shopId:       shopId);
 
-// ── Collect candidate images from phase_3 results ─────────────────────────────
+// ── Process images from phase_3 results ───────────────────────────────────────
 const string checkingPath = "./src/data/Checking";
 
-if (!Directory.Exists(checkingPath) )
+if (!Directory.Exists(checkingPath))
 {
     Console.Error.WriteLine("[WARN] No phase-3 data directories were found.");
-    Console.Error.WriteLine($"  → Expected one of: {checkingPath}");
+    return;
 }
 
-var jsonFiles = EnumerateSuitabilityFiles(checkingPath)
-    .Distinct(StringComparer.OrdinalIgnoreCase)
-    .ToList();
+int success = 0, failed = 0, processed = 0;
 
-Console.WriteLine($"Found {jsonFiles.Count} phase-3 suitability records.");
-
-var imagePaths = new List<string>();
-foreach (var jsonFile in jsonFiles)
+// Stream through files one at a time to avoid high memory usage
+foreach (var jsonFile in EnumerateSuitabilityFiles(checkingPath).Distinct(StringComparer.OrdinalIgnoreCase))
 {
+    processed++;
+    Console.WriteLine($"[{processed}] Processing: {Path.GetFileName(Path.GetDirectoryName(jsonFile))}");
+
     try
     {
         var suitability = JsonSerializer.Deserialize<ImageSuitability>(
@@ -116,7 +113,10 @@ foreach (var jsonFile in jsonFiles)
 
         string? path = ResolveImagePath(suitability.imageURL, jsonFile);
         if (path is null)
+        {
+            Console.WriteLine($"  Skipping: Could not resolve image path");
             continue;
+        }
 
         var eligibility = PublishingEligibilityEvaluator.Evaluate(
             path,
@@ -126,57 +126,41 @@ foreach (var jsonFile in jsonFiles)
 
         if (!eligibility.IsEligibleForPublishing)
         {
-            Console.WriteLine($"Skipping {path}: {eligibility.Reason}");
+            Console.WriteLine($"  Skipping: {eligibility.Reason}");
             continue;
         }
 
         if (eligibility.HasManualOverride)
-            Console.WriteLine($"Including {path}: {eligibility.Reason}");
+            Console.WriteLine($"  Including (override): {eligibility.Reason}");
 
-        imagePaths.Add(path);
+        // Process the image
+        var results = await generator.ProcessImageAsync(path);
+
+        foreach (var result in results)
+        {
+            if (result.Success)
+            {
+                Console.WriteLine($"  ✓ Draft created – product ID: {result.Draft!.ProductId}");
+                Console.WriteLine($"    Blueprint: {result.Draft.BlueprintTitle}");
+                success++;
+            }
+            else
+            {
+                Console.Error.WriteLine($"  ✗ Failed: {result.Error}");
+                failed++;
+            }
+        }
     }
-    catch { /* skip malformed records */ }
-}
-
-imagePaths = imagePaths
-    .Distinct(StringComparer.OrdinalIgnoreCase)
-    .ToList();
-
-if (imagePaths.Count == 0)
-{
-    Console.WriteLine("No suitable images found to process.");
-    return;
-}
-
-Console.WriteLine($"\n{imagePaths.Count} suitable image(s) queued for mockup generation.");
-Console.WriteLine("Drafts will be created on Printify but NOT published.\n");
-
-// ── Process each image ─────────────────────────────────────────────────────────
-int success = 0, failed = 0;
-foreach (var (imagePath, idx) in imagePaths.Select((p, i) => (p, i)))
-{
-    Console.WriteLine($"[{idx + 1}/{imagePaths.Count}] {imagePath}");
-    
-    await foreach (var result in generator.ProcessImageAsync(imagePath))
+    catch (Exception ex)
     {
-        if (result.Success)
-        {
-            Console.WriteLine($"  ✓ Draft created – product ID: {result.Draft!.ProductId}");
-            Console.WriteLine($"  Blueprint: {result.Draft.BlueprintTitle}");
-            Console.WriteLine($"  Reason:    {result.Draft.LlmReason}");
-            success++;
-        }
-        else
-        {
-            Console.Error.WriteLine($"  ✗ Failed: {result.Error}");
-            failed++;
-        }
+        Console.Error.WriteLine($"  Error: {ex.Message}");
+        failed++;
     }
 
     Console.WriteLine();
 }
 
-Console.WriteLine($"Done. {success} draft(s) created, {failed} failed.");
+Console.WriteLine($"\nDone. Processed: {processed}, Drafts created: {success}, Failed: {failed}");
 Console.WriteLine("Inspect drafts in ./src/data/staging/drafts/ before publishing.");
 
 static IEnumerable<string> EnumerateSuitabilityFiles(string checkingRoot)

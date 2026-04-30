@@ -425,6 +425,29 @@ public class OllamaClient : IDisposable
         }
     }
 
+    public Task<float[]> GetEmbeddingVectorAsync(string model, string prompt)
+    => WithLock(async () =>
+    {
+        var body = JsonSerializer.Serialize(new
+        {
+            model,
+            prompt
+        });
+
+        var json = await PostAsync("/api/embeddings", body);
+
+        using var doc = JsonDocument.Parse(json);
+
+        if (!doc.RootElement.TryGetProperty("embedding", out var emb))
+            throw new InvalidOperationException("No embedding returned");
+
+        var vector = new float[emb.GetArrayLength()];
+        for (int i = 0; i < vector.Length; i++)
+            vector[i] = emb[i].GetSingle();
+
+        return vector;
+    });
+
     public void Dispose()
     {
         _http.Dispose();
@@ -465,6 +488,8 @@ public class OllamaClient : IDisposable
 
         return set;
     }
+
+
 
     private string BuildUrl(string endpoint)
         => endpoint.StartsWith('/')
