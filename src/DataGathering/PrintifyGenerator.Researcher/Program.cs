@@ -41,7 +41,7 @@ namespace PrintifyGenerator.Researcher
 
             Console.WriteLine("LOADING LISTING WORDS + SENTIMENT + SALES + CTR + PRICE...");
 
-            var amazonRoot = "/home/rf/Desktop/Printify_prodcuct_generator/DataSets/RawData/Amazon-Reviews-2023";
+            var amazonRoot = "./DataSets/RawData/Amazon-Reviews-2023";
             var (productPaths, reviewPaths) = ResolveAmazonCategoryPaths(amazonRoot);
 
             var stopWords = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
@@ -86,17 +86,17 @@ namespace PrintifyGenerator.Researcher
 
             var ebayDataset = new Datasets.EbayProductDataset(new[]
             {
-                "/home/rf/Desktop/Printify_prodcuct_generator/DataSets/RawData/ebay_mens_clothing_600_products.csv",
-                "/home/rf/Desktop/Printify_prodcuct_generator/DataSets/ebay_productlisting/ebay__20210401_20210430__30k_data(1).csv"
+                "./DataSets/RawData/ebay_mens_clothing_600_products.csv",
+                "./DataSets/ebay_productlisting/ebay__20210401_20210430__30k_data(1).csv"
             });
             await ebayDataset.LoadAsync();
 
             var womenClothingDataset = new Datasets.WomenClothingSalesDataset(
-                "/home/rf/Desktop/Printify_prodcuct_generator/DataSets/RawData/women_clothing_ecommerce_sales.csv");
+                "./DataSets/RawData/women_clothing_ecommerce_sales.csv");
             await womenClothingDataset.LoadAsync();
 
             var onlineSalesDataset = new Datasets.OnlineSalesDataset(
-                "/home/rf/Desktop/Printify_prodcuct_generator/DataSets/RawData/Online Sales Data.csv");
+                "./DataSets/RawData/Online Sales Data.csv");
             await onlineSalesDataset.LoadAsync();
 
             var datasetRegistry = new DatasetRegistry();
