@@ -16,7 +16,7 @@ namespace PrintifyGenerator.Researcher.Datasets
 
         private static readonly Regex CategorySymbolRegex = new Regex(@"[^a-z0-9]+", RegexOptions.Compiled);
 
-        private readonly string _productPath;
+        private readonly string[] _productPaths;
         private readonly Dictionary<string, ProductData> _asinData = new();
         private readonly Dictionary<string, double> _asinSentiment = new();
         private readonly Dictionary<string, HashSet<string>> _asinCategories = new();
@@ -36,56 +36,75 @@ namespace PrintifyGenerator.Researcher.Datasets
         }
 
         public AmazonProductDataset(string productPath)
+            : this(new[] { productPath })
         {
-            _productPath = productPath;
+        }
+
+        public AmazonProductDataset(IEnumerable<string> productPaths)
+        {
+            _productPaths = productPaths
+                .Where(path => !string.IsNullOrWhiteSpace(path))
+                .Distinct(StringComparer.OrdinalIgnoreCase)
+                .ToArray();
         }
 
         public async Task LoadAsync()
         {
-            Console.WriteLine($"Loading Amazon product data from: {Path.GetFileName(_productPath)}");
+            Console.WriteLine($"Loading Amazon product data from {_productPaths.Length} file(s)...");
             int loaded = 0;
 
             await Task.Run(() =>
             {
-                foreach (var line in File.ReadLines(_productPath))
+                foreach (var productPath in _productPaths)
                 {
-                    if (string.IsNullOrWhiteSpace(line)) continue;
-                    try
+                    if (!File.Exists(productPath))
                     {
-                        using var doc = JsonDocument.Parse(line);
-                        var root = doc.RootElement;
-
-                        string? asin = GetAsin(root);
-                        if (string.IsNullOrEmpty(asin)) continue;
-
-                        int sales = GetSales(root);
-                        string category = GetCategory(root);
-                        if (sales <= 0 || string.IsNullOrEmpty(category)) continue;
-
-                        var data = new ProductData
-                        {
-                            Category = category,
-                            Sales = sales,
-                            Price = GetPrice(root),
-                            ImageCount = GetImageCount(root),
-                            Title = GetTitle(root),
-                            Brand = GetBrand(root),
-                            Color = GetColor(root),
-                            Material = GetMaterial(root),
-                            Manufacturer = GetManufacturer(root)
-                        };
-
-                        _asinData[asin] = data;
-
-                        if (!_asinCategories.TryGetValue(category, out var catSet))
-                            _asinCategories[category] = catSet = new HashSet<string>();
-                        catSet.Add(asin);
-
-                        loaded++;
-                        if (loaded % 10000 == 0)
-                            Console.WriteLine($"  Loaded {loaded:N0} products...");
+                        Console.WriteLine($"  Skipping missing file: {productPath}");
+                        continue;
                     }
-                    catch { }
+
+                    Console.WriteLine($"  Loading from: {Path.GetFileName(productPath)}");
+
+                    foreach (var line in File.ReadLines(productPath))
+                    {
+                        if (string.IsNullOrWhiteSpace(line)) continue;
+                        try
+                        {
+                            using var doc = JsonDocument.Parse(line);
+                            var root = doc.RootElement;
+
+                            string? asin = GetAsin(root);
+                            if (string.IsNullOrEmpty(asin)) continue;
+
+                            int sales = GetSales(root);
+                            string category = GetCategory(root);
+                            if (sales <= 0 || string.IsNullOrEmpty(category)) continue;
+
+                            var data = new ProductData
+                            {
+                                Category = category,
+                                Sales = sales,
+                                Price = GetPrice(root),
+                                ImageCount = GetImageCount(root),
+                                Title = GetTitle(root),
+                                Brand = GetBrand(root),
+                                Color = GetColor(root),
+                                Material = GetMaterial(root),
+                                Manufacturer = GetManufacturer(root)
+                            };
+
+                            _asinData[asin] = data;
+
+                            if (!_asinCategories.TryGetValue(category, out var catSet))
+                                _asinCategories[category] = catSet = new HashSet<string>();
+                            catSet.Add(asin);
+
+                            loaded++;
+                            if (loaded % 10000 == 0)
+                                Console.WriteLine($"  Loaded {loaded:N0} products...");
+                        }
+                        catch { }
+                    }
                 }
             });
 

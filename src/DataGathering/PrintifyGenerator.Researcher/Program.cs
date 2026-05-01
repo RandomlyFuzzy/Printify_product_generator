@@ -41,8 +41,8 @@ namespace PrintifyGenerator.Researcher
 
             Console.WriteLine("LOADING LISTING WORDS + SENTIMENT + SALES + CTR + PRICE...");
 
-            var productPath = "/home/rf/Desktop/Printify_prodcuct_generator/DataSets/RawData/meta_Clothing_Shoes_and_Jewelry.jsonl";
-            var reviewPath = "/home/rf/Desktop/Printify_prodcuct_generator/DataSets/RawData/Clothing_Shoes_and_Jewelry.jsonl";
+            var amazonRoot = "/home/rf/Desktop/Printify_prodcuct_generator/DataSets/RawData/Amazon-Reviews-2023";
+            var (productPaths, reviewPaths) = ResolveAmazonCategoryPaths(amazonRoot);
 
             var stopWords = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
             {
@@ -66,11 +66,11 @@ namespace PrintifyGenerator.Researcher
             Directory.CreateDirectory(outputDir);
 
             Console.WriteLine("\n=== PHASE 1: SCANNING REVIEWS FOR PRODUCTS WITH REVIEWS ===");
-            var (targetAsins, asinToSentiment) = ScanReviewsAndGetSentiment(reviewPath, QUICK_TEST_LIMIT);
+            var (targetAsins, asinToSentiment) = ScanReviewsAndGetSentiment(reviewPaths, QUICK_TEST_LIMIT);
             Console.WriteLine($"Found {targetAsins.Count:N0} products with reviews");
             Console.WriteLine($"Calculated sentiment for {asinToSentiment.Count:N0} products");
 
-            var amazonDataset = new Datasets.AmazonProductDataset(productPath);
+            var amazonDataset = new Datasets.AmazonProductDataset(productPaths);
             await amazonDataset.LoadAsync();
             amazonDataset.SetSentimentData(asinToSentiment);
 
@@ -81,7 +81,8 @@ namespace PrintifyGenerator.Researcher
                 "/home/rf/Desktop/Printify_prodcuct_generator/DataSets/RawData/cleaned-2019-Dec.csv"
             });
             await ctrDataset.LoadAsync();
-            ctrDataset.BuildTitleMapping(productPath);
+            foreach (var productPath in productPaths)
+                ctrDataset.BuildTitleMapping(productPath);
 
             var ebayDataset = new Datasets.EbayProductDataset(new[]
             {
@@ -209,7 +210,7 @@ namespace PrintifyGenerator.Researcher
             // Track phrases for all products (needed for phrase clusters)
             var allProductPhrases = new Dictionary<string, HashSet<string>>();
 
-            await ProcessProducts(productPath, amazonDataset, ctrDataset, ebayDataset, womenClothingDataset, onlineSalesDataset,
+            await ProcessProducts(productPaths, amazonDataset, ctrDataset, ebayDataset, womenClothingDataset, onlineSalesDataset,
                 registry, topAsins, bottomAsins, topCounts, bottomCounts, allCategoryNames, stopWords, targetAsins, allProductPhrases, productToCategories);
 
             Console.WriteLine("Phase 3 complete!");
@@ -253,7 +254,7 @@ namespace PrintifyGenerator.Researcher
                         cats.Add(catInfo.CategoryName);
                 }
             }
-            await ProcessProducts(productPath, amazonDataset, ctrDataset, ebayDataset, womenClothingDataset, onlineSalesDataset,
+            await ProcessProducts(productPaths, amazonDataset, ctrDataset, ebayDataset, womenClothingDataset, onlineSalesDataset,
                 registry, topAsins, bottomAsins, topCounts, bottomCounts, productTypeCategoryNames, stopWords,
                 new HashSet<string>(productTypeProductToCategories.Keys), allProductPhrases, productTypeProductToCategories);
 
@@ -341,50 +342,57 @@ namespace PrintifyGenerator.Researcher
             OutputResults(registry, topCategories, categoryProducts, outputDir, topAsins, bottomAsins, topCounts, bottomCounts, allCategoryInfos);
         }
 
-        static (HashSet<string> asins, Dictionary<string, double> sentiment) ScanReviewsAndGetSentiment(string path, int limit = PRODUCT_LIMIT)
+        static (HashSet<string> asins, Dictionary<string, double> sentiment) ScanReviewsAndGetSentiment(IEnumerable<string> reviewPaths, int limit = PRODUCT_LIMIT)
         {
             var asinSumCount = new ConcurrentDictionary<string, (long sum, int count)>();
             int processed = 0;
 
-            foreach (var chunk in StreamLines(path).Chunk(CHUNK))
+            foreach (var reviewPath in reviewPaths)
             {
-                processed += chunk.Length;
-                if (processed % 1000000 == 0)
-                    Console.WriteLine($"Scanned {processed:N0} reviews...");
-
-                Parallel.ForEach(chunk, line =>
+                Console.WriteLine($"Scanning reviews: {Path.GetFileName(reviewPath)}");
+                foreach (var chunk in StreamLines(reviewPath).Chunk(CHUNK))
                 {
-                    if (string.IsNullOrWhiteSpace(line)) return;
-                    try
+                    processed += chunk.Length;
+                    if (processed % 1000000 == 0)
+                        Console.WriteLine($"Scanned {processed:N0} reviews...");
+
+                    Parallel.ForEach(chunk, line =>
                     {
-                        using var doc = JsonDocument.Parse(line);
-                        var root = doc.RootElement;
-
-                        string? asin = null;
-                        int overall = 0;
-
-                        if (root.TryGetProperty("parent_asin", out var pa))
-                            asin = pa.ValueKind == JsonValueKind.String ? pa.GetString() : null;
-                        else if (root.TryGetProperty("asin", out var a))
-                            asin = a.ValueKind == JsonValueKind.String ? a.GetString() : null;
-
-                        if (root.TryGetProperty("rating", out var o))
-                            overall = o.ValueKind == JsonValueKind.Number ? (int)o.GetDouble() : 0;
-
-                        if (!string.IsNullOrEmpty(asin) && overall > 0)
+                        if (string.IsNullOrWhiteSpace(line)) return;
+                        try
                         {
-                            asinSumCount.AddOrUpdate(asin, (overall, 1),
-                                (_, sc) => (sc.sum + overall, sc.count + 1));
+                            using var doc = JsonDocument.Parse(line);
+                            var root = doc.RootElement;
+
+                            string? asin = null;
+                            int overall = 0;
+
+                            if (root.TryGetProperty("parent_asin", out var pa))
+                                asin = pa.ValueKind == JsonValueKind.String ? pa.GetString() : null;
+                            else if (root.TryGetProperty("asin", out var a))
+                                asin = a.ValueKind == JsonValueKind.String ? a.GetString() : null;
+
+                            if (root.TryGetProperty("rating", out var o))
+                                overall = o.ValueKind == JsonValueKind.Number ? (int)o.GetDouble() : 0;
+
+                            if (!string.IsNullOrEmpty(asin) && overall > 0)
+                            {
+                                asinSumCount.AddOrUpdate(asin, (overall, 1),
+                                    (_, sc) => (sc.sum + overall, sc.count + 1));
+                            }
                         }
+                        catch { }
+                    });
+
+                    if (asinSumCount.Count >= limit)
+                    {
+                        Console.WriteLine($"Reached limit of {asinSumCount.Count:N0} products");
+                        break;
                     }
-                    catch { }
-                });
+                }
 
                 if (asinSumCount.Count >= limit)
-                {
-                    Console.WriteLine($"Reached limit of {asinSumCount.Count:N0} products");
                     break;
-                }
             }
 
             var targetAsins = new HashSet<string>(asinSumCount.Keys);
@@ -507,7 +515,7 @@ namespace PrintifyGenerator.Researcher
                 registry.ProcessMaterialForCategory(material, context);
         }
 
-        static async Task ProcessProducts(string path,
+        static async Task ProcessProducts(IEnumerable<string> productPaths,
             Datasets.AmazonProductDataset amazonDataset,
             Datasets.EcommerceBehaviorDataset ctrDataset,
             Datasets.EbayProductDataset ebayDataset,
@@ -530,52 +538,56 @@ namespace PrintifyGenerator.Researcher
 
             await Task.Run(() =>
             {
-                foreach (var line in StreamLines(path))
+                foreach (var productPath in productPaths)
                 {
-                    processed++;
-                    if (processed % 100000 == 0)
-                        Console.WriteLine($"Pass 2: processed {processed:N0} products...");
-
-                    if (string.IsNullOrWhiteSpace(line)) continue;
-                    try
+                    Console.WriteLine($"Pass 2: reading {Path.GetFileName(productPath)}...");
+                    foreach (var line in StreamLines(productPath))
                     {
-                        using var doc = JsonDocument.Parse(line);
-                        var root = doc.RootElement;
+                        processed++;
+                        if (processed % 100000 == 0)
+                            Console.WriteLine($"Pass 2: processed {processed:N0} products...");
 
-                        string? asin = null;
-                        if (root.TryGetProperty("parent_asin", out var pa))
-                            asin = pa.ValueKind == JsonValueKind.String ? pa.GetString() : null;
-                        else if (root.TryGetProperty("asin", out var a))
-                            asin = a.ValueKind == JsonValueKind.String ? a.GetString() : null;
-
-                        if (string.IsNullOrEmpty(asin) || !targetAsins.Contains(asin)) continue;
-                        if (!asinData.TryGetValue(asin, out var data)) continue;
-
-                        var category = data.Category;
-                        var sales = data.Sales;
-                        var price = data.Price;
-                        var imageCount = data.ImageCount;
-                        var title = data.Title;
-                        var brand = data.Brand;
-
-                        // Process for all categories this product belongs to
-                        if (productToCategories != null && productToCategories.TryGetValue(asin, out var productCats))
+                        if (string.IsNullOrWhiteSpace(line)) continue;
+                        try
                         {
-                            foreach (var cat in productCats)
+                            using var doc = JsonDocument.Parse(line);
+                            var root = doc.RootElement;
+
+                            string? asin = null;
+                            if (root.TryGetProperty("parent_asin", out var pa))
+                                asin = pa.ValueKind == JsonValueKind.String ? pa.GetString() : null;
+                            else if (root.TryGetProperty("asin", out var a))
+                                asin = a.ValueKind == JsonValueKind.String ? a.GetString() : null;
+
+                            if (string.IsNullOrEmpty(asin) || !targetAsins.Contains(asin)) continue;
+                            if (!asinData.TryGetValue(asin, out var data)) continue;
+
+                            var category = data.Category;
+                            var sales = data.Sales;
+                            var price = data.Price;
+                            var imageCount = data.ImageCount;
+                            var title = data.Title;
+                            var brand = data.Brand;
+
+                            // Process for all categories this product belongs to
+                            if (productToCategories != null && productToCategories.TryGetValue(asin, out var productCats))
                             {
-                                ProcessProductForCategory(asin, cat, data, amazonDataset, ctrDataset, ebayDataset,
+                                foreach (var cat in productCats)
+                                {
+                                    ProcessProductForCategory(asin, cat, data, amazonDataset, ctrDataset, ebayDataset,
+                                        stopWords, registry, topAsins, bottomAsins, root, allProductPhrases);
+                                }
+                            }
+                            else
+                            {
+                                // Fallback: process only for main category
+                                if (!topCategoriesSet.Contains(category)) continue;
+                                ProcessProductForCategory(asin, category, data, amazonDataset, ctrDataset, ebayDataset,
                                     stopWords, registry, topAsins, bottomAsins, root, allProductPhrases);
                             }
                         }
-                        else
-                        {
-                            // Fallback: process only for main category
-                            if (!topCategoriesSet.Contains(category)) continue;
-                            ProcessProductForCategory(asin, category, data, amazonDataset, ctrDataset, ebayDataset,
-                                stopWords, registry, topAsins, bottomAsins, root, allProductPhrases);
-                        }
+                        catch { }
                     }
-                    catch { }
                 }
             });
 
@@ -714,6 +726,46 @@ namespace PrintifyGenerator.Researcher
                 if (!string.IsNullOrWhiteSpace(line))
                     yield return line;
             }
+        }
+
+        static (List<string> productPaths, List<string> reviewPaths) ResolveAmazonCategoryPaths(string amazonRoot)
+        {
+            var categoriesFile = Path.Combine(amazonRoot, "all_categories.txt");
+            var metaDir = Path.Combine(amazonRoot, "meta_categories");
+            var reviewDir = Path.Combine(amazonRoot, "review_categories");
+
+            if (!File.Exists(categoriesFile))
+                throw new FileNotFoundException($"Missing category list: {categoriesFile}");
+
+            var categoryNames = File.ReadLines(categoriesFile)
+                .Select(line => line.Trim())
+                .Where(line => !string.IsNullOrWhiteSpace(line))
+                .Distinct(StringComparer.OrdinalIgnoreCase)
+                .ToList();
+
+            var productPaths = new List<string>();
+            var reviewPaths = new List<string>();
+
+            foreach (var category in categoryNames)
+            {
+                var productPath = Path.Combine(metaDir, $"meta_{category}.jsonl");
+                var reviewPath = Path.Combine(reviewDir, $"{category}.jsonl");
+
+                if (!File.Exists(productPath) || !File.Exists(reviewPath))
+                {
+                    Console.WriteLine($"Skipping category '{category}' because one or both files are missing.");
+                    continue;
+                }
+
+                productPaths.Add(productPath);
+                reviewPaths.Add(reviewPath);
+            }
+
+            if (productPaths.Count == 0 || reviewPaths.Count == 0)
+                throw new InvalidOperationException("No valid Amazon category dataset pairs found from all_categories.txt");
+
+            Console.WriteLine($"Resolved {productPaths.Count} Amazon category dataset pair(s) from all_categories.txt");
+            return (productPaths, reviewPaths);
         }
 
         static (List<string> words, List<string> phrases) ExtractWordsAndPhrases(JsonElement root, HashSet<string> stopWords)
