@@ -7,6 +7,7 @@ public static partial class PhaseFactory
 	public static IReadOnlyList<IPhaseGenerator> CreatePipeline() =>
 		new IPhaseGenerator[]
 		{
+			new Phase0InsightGenerator(),
 			new Phase1PromptGenerator(),
 			new Phase2ImageGenerator(),
 			new Phase3SuitabilityGenerator(),
@@ -195,6 +196,88 @@ Product context:
 		return canonical;
 	}
 
+	private static string GetPhase0InsightPath(PhaseBundle bundle)
+		=> Path.Combine(bundle.DirectoryPath, "phase0.insight.json");
+
+	private static string GetPhase0BlueprintQueryPath(PhaseBundle bundle)
+		=> Path.Combine(bundle.DirectoryPath, "phase0.blueprint-query.json");
+
+	private static string GetPhase4InsightsPath(PhaseBundle bundle)
+		=> Path.Combine(bundle.DirectoryPath, "phase4.insights.json");
+
+	private static ProductDefinitionInput? ReadProductDefinition(PhaseBundle bundle)
+	{
+		var candidates = new[]
+		{
+			Path.Combine(bundle.DirectoryPath, "product_definition.json"),
+			Path.Combine(bundle.DirectoryPath, "product-definition.json"),
+			Path.Combine(bundle.DirectoryPath, "phase1.definition.json"),
+			Path.Combine(bundle.DirectoryPath, "phase0.product.json"),
+		};
+
+		foreach (var candidate in candidates)
+		{
+			if (!File.Exists(candidate))
+			{
+				continue;
+			}
+
+			try
+			{
+				var parsed = JsonSerializer.Deserialize<ProductDefinitionInput>(File.ReadAllText(candidate), PrettyJson);
+				if (parsed is not null)
+				{
+					return parsed;
+				}
+			}
+			catch
+			{
+				// keep probing candidate files
+			}
+		}
+
+		return null;
+	}
+
+	private static SellabilityInsight? ReadPhase0Insight(PhaseBundle bundle)
+	{
+		var primaryPath = GetPhase0InsightPath(bundle);
+		var legacyPath = Path.Combine(bundle.DirectoryPath, "phase1.insight.json");
+		var path = File.Exists(primaryPath) ? primaryPath : legacyPath;
+
+		if (!File.Exists(path))
+		{
+			return null;
+		}
+
+		try
+		{
+			return JsonSerializer.Deserialize<SellabilityInsight>(File.ReadAllText(path), PrettyJson);
+		}
+		catch
+		{
+			return null;
+		}
+	}
+
+	private static BlueprintQueryInsight? ReadPhase0BlueprintQuery(PhaseBundle bundle)
+	{
+		var path = GetPhase0BlueprintQueryPath(bundle);
+		if (!File.Exists(path))
+		{
+			return null;
+		}
+
+		try
+		{
+			return JsonSerializer.Deserialize<BlueprintQueryInsight>(File.ReadAllText(path), PrettyJson);
+		}
+		catch
+		{
+			return null;
+		}
+	}
+
 	private static string GetPhase5Path(PhaseBundle bundle, string pid)
 	{
 		var upper = Path.Combine(bundle.DirectoryPath, $"phase5.{pid}.Meta.json");
@@ -264,7 +347,7 @@ Product context:
 		public string reason { get; set; } = string.Empty;
 	}
 
-	private static async Task<string> CollectStreamAsync(IAsyncEnumerable<string> source, CancellationToken cancellationToken,string endOn = null)
+	private static async Task<string> CollectStreamAsync(IAsyncEnumerable<string> source, CancellationToken cancellationToken, string? endOn = null)
 	{
 		var sb = new System.Text.StringBuilder();
 		await foreach (var token in source.WithCancellation(cancellationToken))
@@ -277,6 +360,73 @@ Product context:
 		}
 
 		return sb.ToString();
+	}
+
+	/// <summary>
+	/// Runs up to <paramref name="maxAttempts"/> LLM calls, appending a JSON-retry instruction on each
+	/// subsequent attempt, and returns the first successfully deserialized result that satisfies
+	/// <paramref name="isValid"/> (or any non-null result when no predicate is supplied).
+	/// Returns <c>null</c> when all attempts are exhausted.
+	/// </summary>
+	private static async Task<T?> RetryOllamaJsonObjectAsync<T>(
+		Func<string, IAsyncEnumerable<string>> generateFunc,
+		string basePrompt,
+		CancellationToken cancellationToken,
+		Func<T, bool>? isValid = null,
+		int maxAttempts = 4) where T : class
+	{
+		for (var attempt = 1; attempt <= maxAttempts; attempt++)
+		{
+			var prompt = attempt == 1
+				? basePrompt
+				: basePrompt + "\n\nIMPORTANT: Previous response was not valid JSON. Return only one valid JSON object and nothing else.";
+
+			var response = await CollectStreamAsync(generateFunc(prompt), cancellationToken);
+			if (!TryExtractJsonObject(response, out var jsonObject))
+				continue;
+
+			T? result;
+			try { result = JsonSerializer.Deserialize<T>(jsonObject, PrettyJson); }
+			catch { continue; }
+
+			if (result is not null && (isValid is null || isValid(result)))
+				return result;
+		}
+
+		return null;
+	}
+
+	/// <summary>
+	/// Runs up to <paramref name="maxAttempts"/> LLM calls, appending a JSON-retry instruction on each
+	/// subsequent attempt, and returns the first successfully deserialized non-empty list.
+	/// Returns <c>null</c> when all attempts are exhausted.
+	/// </summary>
+	private static async Task<List<T>?> RetryOllamaJsonArrayAsync<T>(
+		Func<string, IAsyncEnumerable<string>> generateFunc,
+		string basePrompt,
+		CancellationToken cancellationToken,
+		string? endOn = null,
+		int maxAttempts = 4) where T : class
+	{
+		for (var attempt = 1; attempt <= maxAttempts; attempt++)
+		{
+			var prompt = attempt == 1
+				? basePrompt
+				: basePrompt + "\n\nIMPORTANT: Previous response was not valid JSON. Return only one valid JSON array and nothing else.";
+
+			var response = await CollectStreamAsync(generateFunc(prompt), cancellationToken, endOn);
+			if (!TryExtractJsonArray(response, out var jsonArray))
+				continue;
+
+			List<T>? result;
+			try { result = JsonSerializer.Deserialize<List<T>>(jsonArray, PrettyJson); }
+			catch { continue; }
+
+			if (result?.Count > 0)
+				return result;
+		}
+
+		return null;
 	}
 
 	private static bool TryExtractJsonObject(string response, out string json)
@@ -488,6 +638,7 @@ Product context:
 		private readonly RoundRobinSelector<OrchestrationNode> _comfySelector;
 		private readonly HttpClient _http = new();
 		private readonly Lazy<PrintifyClient> _printifyClient;
+		private readonly Lazy<CategoryFeatureIntelligence> _featureIntelligence;
 		private List<Shop>? _shops;
 
 		private CombinedRuntime()
@@ -519,12 +670,19 @@ Product context:
 				?? throw new InvalidOperationException("TOKEN is missing from main.env; Printify phases require it.");
 
 			_printifyClient = new Lazy<PrintifyClient>(() => new PrintifyClient(Token));
+			_featureIntelligence = new Lazy<CategoryFeatureIntelligence>(() =>
+			{
+				var featuresDir = Path.Combine(RepositoryRoot, "category_features");
+				var historyPath = Path.Combine(DataRoot, "staging", "shop-market-history.json");
+				return CategoryFeatureIntelligence.Load(featuresDir, historyPath);
+			});
 		}
 
 		public string RepositoryRoot { get; }
 		public string DataRoot { get; }
 		public string Token { get; }
 		public OrchestrationSettings Settings { get; }
+		public CategoryFeatureIntelligence FeatureIntelligence => _featureIntelligence.Value;
 
 		public OllamaClient CreateOllamaClient() => new(_ollamaSelector.Next().BaseUrl);
 

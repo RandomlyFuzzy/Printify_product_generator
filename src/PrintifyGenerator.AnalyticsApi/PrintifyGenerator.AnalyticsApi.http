@@ -1,0 +1,80 @@
+@PrintifyGenerator.AnalyticsApi_HostAddress = http://localhost:5219
+
+GET {{PrintifyGenerator.AnalyticsApi_HostAddress}}/
+Accept: application/json
+
+###
+
+GET {{PrintifyGenerator.AnalyticsApi_HostAddress}}/api/market/summary?top=20
+Accept: application/json
+
+###
+
+GET {{PrintifyGenerator.AnalyticsApi_HostAddress}}/api/phases/bundles?limit=25
+Accept: application/json
+
+###
+
+GET {{PrintifyGenerator.AnalyticsApi_HostAddress}}/api/phases/overview
+Accept: application/json
+
+###
+
+GET {{PrintifyGenerator.AnalyticsApi_HostAddress}}/api/phases/artifacts/phase5?limit=25
+Accept: application/json
+
+###
+
+POST {{PrintifyGenerator.AnalyticsApi_HostAddress}}/api/phases/ingest/product-definition
+Content-Type: application/json
+
+{
+	"bundleId": null,
+	"title": "Minimalist Cotton Tee",
+	"description": "Simple graphic shirt designed for everyday gifting.",
+	"mainCategory": "Clothing, Shoes & Jewelry",
+	"subCategory": "T-Shirt",
+	"audience": "Unisex",
+	"primaryColor": "black",
+	"material": "cotton",
+	"useCase": "casual streetwear",
+	"keywords": ["crew neck", "short sleeve", "gift"]
+}
+
+###
+
+POST {{PrintifyGenerator.AnalyticsApi_HostAddress}}/api/phases/ingest/artifact
+Content-Type: application/json
+
+{
+	"bundleId": null,
+	"phase": "phase5",
+	"fileName": "phase5.custom-seo.json",
+	"payload": {
+		"title": "Minimalist Graphic Tee for Everyday Wear",
+		"description": "Comfortable cotton shirt with clean, gift-ready style.",
+		"tags": ["graphic tee", "cotton", "gift"]
+	}
+}
+
+###
+
+POST {{PrintifyGenerator.AnalyticsApi_HostAddress}}/api/market/ingest/category-feature
+Content-Type: application/json
+
+{
+	"fileName": "MainCategory_Clothing,_Shoes_&_Jewelry.txt",
+	"content": "=== Clothing, Shoes & Jewelry (1500 products, Type: MainCategory) ===\n--- CTR INDICATORS ---\n  crew neck: +62.5% CTR lift (250 in top / 40 in bottom)\n--- SENTIMENT ---\n  cotton: 84.2% positive (600 products)\n"
+}
+
+###
+
+GET {{PrintifyGenerator.AnalyticsApi_HostAddress}}/api/phases/bundles/00000000-0000-0000-0000-000000000000/phase/phase5
+Accept: application/json
+
+###
+
+GET {{PrintifyGenerator.AnalyticsApi_HostAddress}}/api/phases/bundles/00000000-0000-0000-0000-000000000000
+Accept: application/json
+
+###

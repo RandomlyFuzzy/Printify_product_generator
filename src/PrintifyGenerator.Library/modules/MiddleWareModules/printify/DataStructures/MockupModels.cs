@@ -78,6 +78,24 @@ public class PrintLocationSize
     [JsonPropertyName("size_y")] public int SizeY { get; set; }
 }
 
+// ── Market signals (from category-feature intelligence) ───────────
+
+/// <summary>
+/// Signals derived from category feature data that guide blueprint and
+/// variant selection toward higher-selling combinations.
+/// </summary>
+public class MarketSignals
+{
+    /// <summary>Colour names that sell well for this product type, ordered by score.</summary>
+    public string[] RecommendedColors { get; init; } = Array.Empty<string>();
+
+    /// <summary>High-intent keywords that should influence blueprint category matching.</summary>
+    public string[] CategoryKeywords { get; init; } = Array.Empty<string>();
+
+    /// <summary>Primary colour from the product definition (single strong signal).</summary>
+    public string PrimaryColor { get; init; } = string.Empty;
+}
+
 // ── Processing result ──────────────────────────────────────────────
 
 /// <summary>

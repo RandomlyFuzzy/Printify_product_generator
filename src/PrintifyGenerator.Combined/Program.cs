@@ -5,8 +5,14 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
+
+if (TryRunBlueprintQuery(args))
+{
+    return;
+}
 
 var options = RunnerOptions.Parse(args);
 var cancellationSource = new CancellationTokenSource();
@@ -60,36 +66,36 @@ Console.CancelKeyPress += (_, e) =>
 // =======================================================
 // UI LOOP
 // =======================================================
-_ = Task.Run(async () =>
-{
-    while (!cancellationSource.IsCancellationRequested)
-    {
-        Console.Clear();
+// _ = Task.Run(async () =>
+// {
+//     while (!cancellationSource.IsCancellationRequested)
+//     {
+//         Console.Clear();
 
-        Console.WriteLine("=== COMPLETED WORK ===");
-        Console.WriteLine($"Total completed: {completedWork.Count} Left: {bundleChannel.Reader.Count}");
-        Console.WriteLine();
+//         Console.WriteLine("=== COMPLETED WORK ===");
+//         Console.WriteLine($"Total completed: {completedWork.Count} Left: {bundleChannel.Reader.Count}");
+//         Console.WriteLine();
 
-        Console.WriteLine("=== ACTIVE WORK ===");
+//         Console.WriteLine("=== ACTIVE WORK ===");
 
-        if (activeWork.IsEmpty)
-            Console.WriteLine("Idle");
-        else
-        {
-            foreach (var kv in activeWork)
-            {
-                var w = kv.Key;
-                var a = kv.Value;
-                var dur = DateTime.UtcNow - a.StartedUtc;
+//         if (activeWork.IsEmpty)
+//             Console.WriteLine("Idle");
+//         else
+//         {
+//             foreach (var kv in activeWork)
+//             {
+//                 var w = kv.Key;
+//                 var a = kv.Value;
+//                 var dur = DateTime.UtcNow - a.StartedUtc;
 
-                Console.WriteLine(
-                    $"W{w}: {a.BundleId} | P{a.PhaseNumber} {a.PhaseName} | {dur:mm\\:ss}");
-            }
-        }
+//                 Console.WriteLine(
+//                     $"W{w}: {a.BundleId} | P{a.PhaseNumber} {a.PhaseName} | {dur:mm\\:ss}");
+//             }
+//         }
 
-        await Task.Delay(500);
-    }
-});
+//         await Task.Delay(500);
+//     }
+// });
 
 // =======================================================
 // EXTERNAL PRODUCER (filesystem)
@@ -189,9 +195,7 @@ async Task WorkerLoop(int workerId)
 // =======================================================
 async Task RunBundle(int workerId, PhaseBundle bundle)
 {
-    int completed = bundle.GetHighestCompletedPhase(pipeline);
-
-    for (int i = completed; i < pipeline.Count; i++)
+    for (int i = 0; i < pipeline.Count; i++)
     {
         if (cancellationSource.IsCancellationRequested)
             return;
@@ -252,9 +256,15 @@ async Task Execute(WorkItem item, int workerId)
         var pagelinenumer = "";
         //get ther first none system stack frame
         var st = new StackTrace(ex, true);
-        var frame = st.GetFrames()?.FirstOrDefault(f => f.GetFileName() != null && !f.GetFileName().Contains("System"));
-        if (frame != null)        {
-            pagelinenumer = $"{Path.GetFileName(frame.GetFileName())}:{frame.GetFileLineNumber()}";
+        var frame = st.GetFrames()?.FirstOrDefault(f =>
+        {
+            var fileName = f.GetFileName();
+            return fileName is not null && !fileName.Contains("System", StringComparison.Ordinal);
+        });
+        if (frame != null)
+        {
+            var frameFileName = frame.GetFileName() ?? string.Empty;
+            pagelinenumer = $"{Path.GetFileName(frameFileName)}:{frame.GetFileLineNumber()}";
         }
         var extype = ex.GetType().Name;
         Console.WriteLine($"[W{workerId}] ERROR {ex.Message} (Line: {pagelinenumer}) (Type: {extype}) {item.Bundle.Id}");
@@ -282,6 +292,101 @@ static IEnumerable<PhaseBundle> DiscoverBundles(string root)
         if (PhaseBundle.TryCreate(dir, out var bundle) && bundle is not null)
             yield return bundle;
     }
+}
+
+bool TryRunBlueprintQuery(string[] cliArgs)
+{
+    var blueprintName = GetArgValue(cliArgs, "--query-blueprint");
+    if (string.IsNullOrWhiteSpace(blueprintName))
+    {
+        return false;
+    }
+
+    var seoCountRaw = GetArgValue(cliArgs, "--seo-keyword-count");
+    var seoKeywordCount = int.TryParse(seoCountRaw, out var parsedSeoCount)
+        ? Math.Clamp(parsedSeoCount, 6, 24)
+        : 12;
+
+    var repositoryRoot = ResolveRepositoryRootForQuery() ?? Directory.GetCurrentDirectory();
+    var featuresDir = Path.Combine(repositoryRoot, "category_features");
+    var historyPath = Path.Combine(repositoryRoot, "src", "data", "staging", "shop-market-history.json");
+
+    if (!Directory.Exists(featuresDir))
+    {
+        Console.Error.WriteLine($"category_features directory not found: {featuresDir}");
+        return true;
+    }
+
+    var intelligence = CategoryFeatureIntelligence.Load(featuresDir, historyPath);
+    var response = intelligence.QueryBlueprintStarter(blueprintName, seoKeywordCount);
+
+    var outputPath = GetArgValue(cliArgs, "--query-output");
+    var json = JsonSerializer.Serialize(response, new JsonSerializerOptions { WriteIndented = true });
+    if (!string.IsNullOrWhiteSpace(outputPath))
+    {
+        var fullOutputPath = Path.GetFullPath(outputPath);
+        var outputDirectory = Path.GetDirectoryName(fullOutputPath);
+        if (!string.IsNullOrWhiteSpace(outputDirectory))
+        {
+            Directory.CreateDirectory(outputDirectory);
+        }
+
+        File.WriteAllText(fullOutputPath, json);
+        Console.WriteLine($"Blueprint query insight saved to: {fullOutputPath}");
+    }
+    else
+    {
+        Console.WriteLine(json);
+    }
+
+    return true;
+}
+
+static string? GetArgValue(string[] cliArgs, string key)
+{
+    for (var i = 0; i < cliArgs.Length; i++)
+    {
+        var arg = cliArgs[i];
+        if (string.Equals(arg, key, StringComparison.OrdinalIgnoreCase) && i + 1 < cliArgs.Length)
+        {
+            return cliArgs[i + 1];
+        }
+
+        var prefix = key + "=";
+        if (arg.StartsWith(prefix, StringComparison.OrdinalIgnoreCase))
+        {
+            return arg.Substring(prefix.Length);
+        }
+    }
+
+    return null;
+}
+
+static string? ResolveRepositoryRootForQuery()
+{
+    var probeRoots = new[]
+    {
+        Directory.GetCurrentDirectory(),
+        AppContext.BaseDirectory,
+    }
+    .Where(path => !string.IsNullOrWhiteSpace(path))
+    .Distinct(StringComparer.OrdinalIgnoreCase);
+
+    foreach (var probeRoot in probeRoots)
+    {
+        var current = new DirectoryInfo(Path.GetFullPath(probeRoot));
+        while (current is not null)
+        {
+            if (File.Exists(Path.Combine(current.FullName, "PrintifyGenerator.sln")))
+            {
+                return current.FullName;
+            }
+
+            current = current.Parent;
+        }
+    }
+
+    return null;
 }
 
 // =======================================================

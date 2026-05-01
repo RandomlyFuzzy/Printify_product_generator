@@ -14,46 +14,39 @@ public static partial class PhaseFactory
 		protected override async Task<PhaseExecutionResult> ExecuteCoreAsync(PhaseBundle bundle, CancellationToken cancellationToken)
 		{
 			var runtime = CombinedRuntime.Current;
+			var intelligence = runtime.FeatureIntelligence;
+
+			var insight = ReadPhase0Insight(bundle);
+			if (insight is null)
+			{
+				var definition = ReadProductDefinition(bundle) ?? intelligence.GenerateRandomDefinition(bundle.Id);
+				insight = intelligence.PredictSellability(definition);
+				File.WriteAllText(GetPhase0InsightPath(bundle), JsonSerializer.Serialize(insight, PrettyJson));
+			}
+			var starter = ReadPhase0BlueprintQuery(bundle);
+
 			using var ollama = runtime.CreateOllamaClient();
 
-			List<Prompt>? prompts = null;
-			for (var attempt = 1; attempt <= 4; attempt++)
-			{
-				var promptText = attempt == 1
-					? PromptGenerationInstruction
-					: PromptGenerationInstruction + "\n\nIMPORTANT: Previous response was not valid JSON. Return only a valid JSON array and nothing else.";
+			var basePrompt = PromptGenerationInstruction
+				+ "\n\nProduct definition and sellability guidance (use this as the core commercial direction):\n"
+				+ JsonSerializer.Serialize(insight, PrettyJson)
+				+ "\n\nUse the recommended keywords/colors/materials naturally in the composition and style."
+				+ (starter is not null && starter.PromptAnchors.Length > 0
+					? "\n\nBlueprint starter anchors (prioritize these in visual concept and wording):\n- " + string.Join("\n- ", starter.PromptAnchors)
+					: string.Empty)
+				+ "\n\nIMPORTANT: Return only one valid JSON array item and no extra text.";
 
-				var response = new System.Text.StringBuilder();
-				await foreach (var token in ollama.GenerateStreamAsync(runtime.Settings.PromptModel, promptText, cancellationToken))
-				{
-					response.Append(token);
-				}
-
-				if (!TryExtractJsonArray(response.ToString(), out var jsonArray))
-				{
-					continue;
-				}
-
-				try
-				{
-					prompts = JsonSerializer.Deserialize<List<Prompt>>(jsonArray, PrettyJson);
-					if (prompts?.Count > 0)
-					{
-						break;
-					}
-				}
-				catch
-				{
-					// Retry with stricter JSON instruction.
-				}
-			}
+			var prompts = await RetryOllamaJsonArrayAsync<Prompt>(
+				prompt => ollama.GenerateStreamAsync(runtime.Settings.PromptModel, prompt, cancellationToken),
+				basePrompt,
+				cancellationToken);
 
 			if (prompts is null || prompts.Count == 0)
 			{
 				return PhaseExecutionResult.Failed("Phase1 model did not return valid JSON array after retries.");
 			}
 
-			var prompt = prompts?.FirstOrDefault();
+			var prompt = prompts.FirstOrDefault();
 			if (prompt is null || !prompt.isValid())
 			{
 				return PhaseExecutionResult.Failed("Phase1 prompt payload is invalid.");
@@ -66,7 +59,7 @@ public static partial class PhaseFactory
 
 			var outputFile = bundle.ResolvePhaseFile(1, "json", underscoreLegacy: true);
 			File.WriteAllText(outputFile, JsonSerializer.Serialize(prompt, PrettyJson));
-			return PhaseExecutionResult.Done($"Created {Path.GetFileName(outputFile)} using Ollama.");
+			return PhaseExecutionResult.Done($"Created {Path.GetFileName(outputFile)} using Ollama with feature-driven sellability guidance.");
 		}
 	}
 }

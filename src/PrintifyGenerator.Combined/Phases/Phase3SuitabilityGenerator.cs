@@ -22,36 +22,11 @@ public static partial class PhaseFactory
 			var runtime = CombinedRuntime.Current;
 			using var ollama = runtime.CreateOllamaClient();
 
-			ImageSuitability? suitability = null;
-			for (var attempt = 1; attempt <= 4; attempt++)
-			{
-				var prompt = attempt == 1
-					? ImageSuitabilityPrompt
-					: ImageSuitabilityPrompt + "\n\nIMPORTANT: Previous response was not valid JSON. Return only one valid JSON object and nothing else.";
-
-				var response = await CollectStreamAsync(
-					ollama.GenerateWithImageStreamAsync(runtime.Settings.SuitabilityModel, prompt, imagePath, cancellationToken),
-					cancellationToken);
-
-				if (!TryExtractJsonObject(response, out var jsonObject))
-				{
-					continue;
-				}
-
-				try
-				{
-					suitability = JsonSerializer.Deserialize<ImageSuitability>(jsonObject, PrettyJson);
-				}
-				catch
-				{
-					suitability = null;
-				}
-
-				if (suitability is not null && suitability.isValid())
-				{
-					break;
-				}
-			}
+			var suitability = await RetryOllamaJsonObjectAsync<ImageSuitability>(
+				prompt => ollama.GenerateWithImageStreamAsync(runtime.Settings.SuitabilityModel, prompt, imagePath, cancellationToken),
+				ImageSuitabilityPrompt,
+				cancellationToken,
+				isValid: s => s.isValid());
 
 			if (suitability is null || !suitability.isValid())
 			{

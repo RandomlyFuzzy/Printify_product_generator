@@ -15,6 +15,12 @@ public static partial class PhaseFactory
 		protected override async Task<PhaseExecutionResult> ExecuteCoreAsync(PhaseBundle bundle, CancellationToken cancellationToken)
 		{
 			var runtime = CombinedRuntime.Current;
+			var intelligence = runtime.FeatureIntelligence;
+			var phase1Insight = ReadPhase0Insight(bundle);
+
+			var pairings = intelligence.GetColorCategoryPairings(20, phase1Insight?.Definition);
+			File.WriteAllText(GetPhase4InsightsPath(bundle), JsonSerializer.Serialize(pairings, PrettyJson));
+
 			var suitabilityFile = bundle.ResolvePhaseFile(3, "json", underscoreLegacy: true);
 			var suitability = JsonSerializer.Deserialize<ImageSuitability>(File.ReadAllText(suitabilityFile));
 			var imagePath = bundle.FindImagePath();
@@ -27,16 +33,25 @@ public static partial class PhaseFactory
 			if (suitability is null || !suitability.IsSuitableForPrint())
 			{
 				File.WriteAllLines(outputFile, Array.Empty<string>());
-				return PhaseExecutionResult.Done("Phase4 skipped product generation due to unsuitable image.");
+				return PhaseExecutionResult.Done("Phase4 skipped product generation due to unsuitable image; wrote phase4 color-category insights.");
 			}
 
 			using var ollama = runtime.CreateOllamaClient();
 			var printify = runtime.GetPrintifyClient();
 			var stagingShopId = await runtime.ResolveShopIdAsync("Staging");
+
+			var signals = new MarketSignals
+			{
+				RecommendedColors = phase1Insight?.RecommendedColors ?? Array.Empty<string>(),
+				CategoryKeywords = phase1Insight?.RecommendedKeywords ?? Array.Empty<string>(),
+				PrimaryColor = phase1Insight?.Definition.PrimaryColor ?? string.Empty,
+			};
+
 			var generator = new MockupGenerator(
 				printify: printify,
 				ollama: ollama,
-				shopId: stagingShopId);
+				shopId: stagingShopId,
+				signals: signals);
 
 			var ids = new List<string>();
 			var results = await generator.ProcessImageAsync(imagePath);
@@ -53,7 +68,7 @@ public static partial class PhaseFactory
 			Console.WriteLine($"Phase4 generated {ids.Count} product(s) for bundle {bundle.Id}.");
 			Console.WriteLine($"Products: {string.Join(", ", ids)} outputed to {(outputFile)}.");
 			File.WriteAllLines(outputFile, ids);
-			return PhaseExecutionResult.Done($"Created {Path.GetFileName(outputFile)} with {ids.Count} product(s) via PrintifyGenerator flow.");
+			return PhaseExecutionResult.Done($"Created {Path.GetFileName(outputFile)} with {ids.Count} product(s) and wrote phase4 pairing insights.");
 		}
 	}
 }

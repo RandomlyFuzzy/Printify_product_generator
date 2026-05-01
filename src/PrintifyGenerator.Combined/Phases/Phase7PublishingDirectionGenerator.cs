@@ -24,6 +24,8 @@ public static partial class PhaseFactory
 			}
 
 			var runtime = CombinedRuntime.Current;
+			var intelligence = runtime.FeatureIntelligence;
+			var phase1Insight = ReadPhase0Insight(bundle);
 			var printify = runtime.GetPrintifyClient();
 			var stagingShopId = await runtime.ResolveShopIdAsync("Staging");
 			using var ollama = runtime.CreateOllamaClient();
@@ -61,27 +63,20 @@ public static partial class PhaseFactory
 					? JsonSerializer.Deserialize<ProductMeta>(File.ReadAllText(metaPath))
 					: null;
 
-				var context = BuildPublishingContext(product, suitability, assessment, meta);
+				var storeHints = intelligence.RecommendShops(
+					phase1Insight?.Definition,
+					meta?.Tags ?? Array.Empty<string>(),
+					meta?.Title ?? product.Title);
+
+				var context = BuildPublishingContext(product, suitability, assessment, meta, storeHints);
 				var basePrompt = PublishDirectionPromptTemplate.Replace("{0}", context, StringComparison.Ordinal);
-				List<PublishDirectionDecision>? decisions = null;
-				for (var attempt = 1; attempt <= 4; attempt++)
-				{
-					var prompt = attempt == 1
-						? basePrompt
-						: basePrompt + "\n\nIMPORTANT: Previous response was not valid JSON. Return only one valid JSON object and nothing else.";
 
-					var response = await CollectStreamAsync(
-						ollama.GenerateStreamAsync(runtime.Settings.SuitabilityModel, prompt, cancellationToken),
-						cancellationToken, endOn: "]");
-
-					decisions = ParseDecisions(response);
-					if (decisions.Count > 0)
-					{
-						break;
-					}
-				}
-
-				decisions ??= new List<PublishDirectionDecision>();
+				var rawDecisions = await RetryOllamaJsonArrayAsync<PublishDirectionDecision>(
+					prompt => ollama.GenerateStreamAsync(runtime.Settings.SuitabilityModel, prompt, cancellationToken),
+					basePrompt,
+					cancellationToken,
+					endOn: "]");
+				var decisions = FilterDecisions(rawDecisions);
 				var selectedStores = decisions.Select(d => d.store).ToList();
 
 				var targets = await runtime.ResolveShopsByNamesAsync(selectedStores);
@@ -126,6 +121,8 @@ public static partial class PhaseFactory
 							var reasonRecord = new Phase7ReasonRecord { store = matchingDecision.store, reason = matchingDecision.reason, sourcePid = pid };
 							File.WriteAllText(reasonPath, JsonSerializer.Serialize(reasonRecord, PrettyJson));
 						}
+
+						intelligence.RecordShopDecision(targetTitle, phase1Insight?.Definition);
 					}
 					catch (Exception ex)
 					{
@@ -161,40 +158,27 @@ public static partial class PhaseFactory
 			Product product,
 			ImageSuitability? suitability,
 			ProductAssessment? assessment,
-			ProductMeta? meta)
+			ProductMeta? meta,
+			ShopRecommendationBundle storeHints)
 		{
 			var title = string.IsNullOrWhiteSpace(meta?.Title) ? product.Title : meta!.Title;
 			var tags = (meta?.Tags?.Length ?? 0) > 0 ? string.Join(", ", meta!.Tags) : string.Join(", ", product.Tags);
 			var fit = assessment?.FitForPrintify == true ? "yes" : "no";
 			var continueFlag = assessment?.shouldContinue == true ? "yes" : "no";
 			var score = suitability?.OverallScore().ToString("0.00", CultureInfo.InvariantCulture) ?? "unknown";
+			var storeGuidance = string.Join("; ", storeHints.Recommendations.Select(reco => $"{reco.Store}:{reco.Score:0.00} ({reco.Reason})"));
 
-			return $"Title: {title}\nTags: {tags}\nImageScore: {score}\nFitForPrintify: {fit}\nShouldContinue: {continueFlag}";
+			return $"Title: {title}\nTags: {tags}\nImageScore: {score}\nFitForPrintify: {fit}\nShouldContinue: {continueFlag}\nStoreGuidance: {storeGuidance}";
 		}
 
-		private static List<PublishDirectionDecision> ParseDecisions(string response)
+		private static List<PublishDirectionDecision> FilterDecisions(List<PublishDirectionDecision>? raw)
 		{
-			if (!TryExtractJsonArray(response, out var jsonArray))
+			if (raw is null || raw.Count == 0)
 			{
 				return new List<PublishDirectionDecision>();
 			}
 
-			List<PublishDirectionDecision>? decision;
-			try
-			{
-				decision = JsonSerializer.Deserialize<List<PublishDirectionDecision>>(jsonArray, PrettyJson);
-			}
-			catch
-			{
-				return new List<PublishDirectionDecision>();
-			}
-
-			if (decision is null || decision.Count == 0)
-			{
-				return new List<PublishDirectionDecision>();
-			}
-
-			return decision
+			return raw
 				.Where(d => !string.IsNullOrWhiteSpace(d.store))
 				.Select(d => new PublishDirectionDecision { store = d.store.Trim(), reason = d.reason?.Trim() ?? string.Empty })
 				.Where(d => d.store.Equals("Etsy", StringComparison.OrdinalIgnoreCase) || d.store.Equals("Ebay", StringComparison.OrdinalIgnoreCase))

@@ -60,35 +60,10 @@ public static partial class PhaseFactory
 						}
 						else
 						{
-							for (var attempt = 1; attempt <= 4; attempt++)
-							{
-								var prompt = attempt == 1
-									? BuildProductAssessmentPrompt(product, meta)
-									: BuildProductAssessmentPrompt(product, meta) + "\n\nIMPORTANT: Previous response was not valid JSON. Return only one valid JSON object and nothing else.";
-
-								var response = await CollectStreamAsync(
-									ollama.GenerateWithImagesStreamAsync(runtime.Settings.SuitabilityModel, prompt, imagePaths.ToArray(), cancellationToken),
-									cancellationToken);
-
-								if (!TryExtractJsonObject(response, out var jsonObject))
-								{
-									continue;
-								}
-
-								try
-								{
-									assessment = JsonSerializer.Deserialize<ProductAssessment>(jsonObject, PrettyJson);
-								}
-								catch
-								{
-									assessment = null;
-								}
-
-								if (assessment is not null)
-								{
-									break;
-								}
-							}
+							assessment = await RetryOllamaJsonObjectAsync<ProductAssessment>(
+								p => ollama.GenerateWithImagesStreamAsync(runtime.Settings.SuitabilityModel, p, imagePaths.ToArray(), cancellationToken),
+								BuildProductAssessmentPrompt(product, meta),
+								cancellationToken);
 
 							if (assessment is null)
 							{

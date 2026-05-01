@@ -12,17 +12,19 @@ public class MockupGenerator
     private readonly PrintifyClient _printify;
     private readonly OllamaClient _ollama;
     private readonly int _shopId;
+    private readonly MarketSignals _signals;
 
     const string dataBasePath = @"./src/data";
     const string _blueprintDetailsPath = dataBasePath+"/Cached"+ "/blueprint_details";
 
     private readonly Dictionary<string, int> _stats = new();
 
-    public MockupGenerator(PrintifyClient printify, OllamaClient ollama, int shopId)
+    public MockupGenerator(PrintifyClient printify, OllamaClient ollama, int shopId, MarketSignals? signals = null)
     {
         _printify = printify;
         _ollama = ollama;
         _shopId = shopId;
+        _signals = signals ?? new MarketSignals();
     }
 
     // =========================
@@ -126,6 +128,12 @@ public class MockupGenerator
     {
         var scored = new List<(Blueprint bp, double score)>();
 
+        // Build a normalised set of category keywords from market signals for O(1) lookup.
+        var keywordSet = _signals.CategoryKeywords
+            .Where(k => k.Length >= 3)
+            .Select(k => k.ToLowerInvariant())
+            .ToHashSet(StringComparer.OrdinalIgnoreCase);
+
         foreach (var bp in blueprints)
         {
             double score = 0;
@@ -150,6 +158,19 @@ public class MockupGenerator
             if (title.Contains("glass")) score -= 10;
             if (title.Contains("ornament")) score -= 5;
             if (title.Contains("keychain")) score -= 2;
+
+            // =========================
+            // 1b. MARKET SIGNAL BOOST
+            // Category keywords from sellability data boost relevant blueprints.
+            // =========================
+            foreach (var keyword in keywordSet)
+            {
+                if (title.Contains(keyword))
+                {
+                    score += 2.5;
+                    break; // one boost per blueprint to avoid stacking
+                }
+            }
 
             // =========================
             // 2. PRINT AREA ASPECT RATIO FIT (IMPORTANT)
@@ -300,6 +321,13 @@ public class MockupGenerator
     // =========================
     private List<Variant> ScoreAndFilterVariants(List<Variant> variants, ImageAnalysis analysis)
     {
+        // Build ordered colour preference list. Primary colour gets the strongest boost.
+        var primaryColor = _signals.PrimaryColor.ToLowerInvariant().Trim();
+        var recommendedColors = _signals.RecommendedColors
+            .Select(c => c.ToLowerInvariant().Trim())
+            .Where(c => c.Length >= 2)
+            .ToList();
+
         var scored = new List<(Variant v, double score)>();
         foreach (var v in variants)
         {
@@ -345,6 +373,35 @@ public class MockupGenerator
                 score += 1;
             else if (diff > 0.5)
                 score -= 1;
+
+            // =========================
+            // COLOUR SIGNAL SCORING
+            // Extract colour from variant title (format: "Colour / Size")
+            // Boost if it matches recommended colours from market intelligence.
+            // =========================
+            var variantTitle = (v.Title ?? "").ToLowerInvariant();
+            var colourPart = variantTitle.Split('/')[0].Trim();
+
+            if (!string.IsNullOrEmpty(primaryColor) && colourPart.Contains(primaryColor))
+            {
+                // strongest boost: exact primary colour match
+                score += 4.0;
+            }
+            else
+            {
+                // ranked boost: earlier in recommended list = higher score
+                var matchIndex = recommendedColors.FindIndex(c => colourPart.Contains(c) || c.Contains(colourPart));
+                if (matchIndex >= 0)
+                {
+                    // +3 for first match, diminishing by rank
+                    score += Math.Max(0.5, 3.0 - matchIndex * 0.4);
+                }
+                else if (recommendedColors.Count > 0)
+                {
+                    // slight penalty for colours not in the recommended list when we have data
+                    score -= 0.5;
+                }
+            }
 
             scored.Add((v, score));
         }

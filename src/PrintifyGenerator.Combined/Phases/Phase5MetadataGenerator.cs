@@ -26,6 +26,8 @@ public static partial class PhaseFactory
 			}
 
 			var runtime = CombinedRuntime.Current;
+			var intelligence = runtime.FeatureIntelligence;
+			var phase1Insight = ReadPhase0Insight(bundle);
 			var printify = runtime.GetPrintifyClient();
 			var stagingShopId = await runtime.ResolveShopIdAsync("Staging");
 			using var ollama = runtime.CreateOllamaClient();
@@ -35,7 +37,10 @@ public static partial class PhaseFactory
 			foreach (var pid in pids)
 			{
 				var outputFile = GetPhase5Path(bundle, pid);
+				var seoHintPath = Path.Combine(bundle.DirectoryPath, $"phase5.{pid}.seo-hints.json");
 				var product = await printify.GetProductAsync(stagingShopId, pid);
+				var seoHints = intelligence.BuildSeoHints(phase1Insight?.Definition, 14);
+				File.WriteAllText(seoHintPath, JsonSerializer.Serialize(seoHints, PrettyJson));
 				ProductMeta? meta = null;
 
 				if (File.Exists(outputFile))
@@ -58,7 +63,7 @@ public static partial class PhaseFactory
 						if (imagePaths.Count == 0)
 						{
 							meta = new ProductMeta
-						{
+							{
 								Title = product.Title,
 								Description = product.Description,
 								Tags = product.Tags.ToArray(),
@@ -66,35 +71,15 @@ public static partial class PhaseFactory
 						}
 						else
 						{
-							for (var attempt = 1; attempt <= 4; attempt++)
-							{
-								var prompt = attempt == 1
-									? ProductMetaPrompt
-									: ProductMetaPrompt + "\n\nIMPORTANT: Previous response was not valid JSON. Return only one valid JSON object and nothing else.";
+							var metaBasePrompt = ProductMetaPrompt
+								+ "\n\nSEO guidance from historical category performance (use naturally, do not keyword-stuff):\n"
+								+ JsonSerializer.Serialize(seoHints, PrettyJson)
+								+ "\n\nUse the strongest high-intent keywords in title and opening paragraph where relevant.";
 
-								var response = await CollectStreamAsync(
-									ollama.GenerateWithImagesStreamAsync(runtime.Settings.MockupVisionModel, prompt, imagePaths.ToArray(), cancellationToken),
-									cancellationToken);
-
-								if (!TryExtractJsonObject(response, out var jsonObject))
-								{
-									continue;
-								}
-
-								try
-								{
-									meta = JsonSerializer.Deserialize<ProductMeta>(jsonObject, PrettyJson);
-								}
-								catch
-								{
-									meta = null;
-								}
-
-								if (meta is not null)
-								{
-									break;
-								}
-							}
+							meta = await RetryOllamaJsonObjectAsync<ProductMeta>(
+								p => ollama.GenerateWithImagesStreamAsync(runtime.Settings.MockupVisionModel, p, imagePaths.ToArray(), cancellationToken),
+								metaBasePrompt,
+								cancellationToken);
 						}
 
 						if (meta is null)
