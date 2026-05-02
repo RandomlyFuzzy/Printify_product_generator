@@ -3,6 +3,7 @@ import { States } from '../states.js';
 import { stateStartQuery }    from './START_QUERY.js';
 import { stateEnsureHome }    from './ENSURE_HOME.js';
 import { stateScrollToTop }   from './SCROLL_TO_TOP.js';
+import { stateSelectSearch }  from './SELECT_SEARCH.js';
 import { stateTypeSearch }    from './TYPE_SEARCH.js';
 import { stateBrowsePage }    from './BROWSE_PAGE.js';
 import { stateClickOnPage }   from './CLICK_ON_PAGE.js';
@@ -28,6 +29,7 @@ export async function runState(state, ctx) {
     case States.START_QUERY:      return stateStartQuery(ctx);
     case States.ENSURE_HOME:      return stateEnsureHome(ctx);
     case States.SCROLL_TO_TOP:    return stateScrollToTop(ctx);
+    case States.SELECT_SEARCH:    return stateSelectSearch(ctx);
     case States.TYPE_SEARCH:      return stateTypeSearch(ctx);
     case States.BROWSE_PAGE:      return stateBrowsePage(ctx);
     case States.CLICK_ON_PAGE:    return stateClickOnPage(ctx);

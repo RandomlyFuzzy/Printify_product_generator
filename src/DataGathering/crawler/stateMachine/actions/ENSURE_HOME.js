@@ -1,5 +1,6 @@
 import { States } from '../states.js';
-import { findSearchbar, varyViewport } from '../../statelessfunctions/humanBehavior.js';
+import { findSearchbar } from '../../statelessfunctions/humanBehavior/findSearchbar.js';
+import { varyViewport } from '../../statelessfunctions/humanBehavior/varyViewport.js';
 import { delay, randomBetween, randomDelay } from '../../statelessfunctions/timing.js';
 
 export async function stateEnsureHome(ctx) {
@@ -29,5 +30,5 @@ export async function stateEnsureHome(ctx) {
   }
 
   ctx.searchSelector = searchSelector;
-  return States.SCROLL_TO_TOP;
+  return States.START_QUERY;
 }

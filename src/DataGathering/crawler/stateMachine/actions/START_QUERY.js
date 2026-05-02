@@ -20,7 +20,14 @@ export async function stateStartQuery(ctx) {
   ctx.cardsInteracted = 0;
   ctx.newSuggestions = [];
   ctx.links          = [];
+  ctx.searchSelector = null;
+  ctx.readyForNextPage = false;
+  ctx.lastScrapedResultsUrl = null;
+  ctx.pageVisitCount = 0;
+  ctx.pageEnteredAt  = null;
+  ctx.pageBudgetMs   = null;
 
-  // First query goes to homepage, subsequent ones scroll to top then type search
-  return ctx.skipEnsureHome ? States.SCROLL_TO_TOP : States.ENSURE_HOME;
+  // Always try searching from the current page first.
+  // If no search bar is available, SCROLL_TO_TOP/TYPE_SEARCH will reroute as needed.
+  return States.SCROLL_TO_TOP;
 }

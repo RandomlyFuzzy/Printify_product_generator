@@ -9,6 +9,13 @@ export const SUGGESTIONS_CSV = path.join(OUTPUT_DIR, 'search_suggestions.csv');
 export const QUERIES_CSV     = path.join(OUTPUT_DIR, 'queries_searched.csv');
 export const CARDS_TXT       = path.join(OUTPUT_DIR, 'cards.txt');
 
+export function normalizeQuery(query) {
+  return String(query ?? '')
+    .split(/\r?\n/)[0]
+    .trim()
+    .toLowerCase();
+}
+
 // ── Initialisation ────────────────────────────────────────────────────────────
 
 export function initCSVFiles() {
@@ -28,9 +35,12 @@ export function initCSVFiles() {
  * @param {function} persist - bound persistRealtimeState(extra)
  */
 export function logQuery(query, persist) {
+  const cleanQuery = normalizeQuery(query);
+  if (!cleanQuery) return;
+
   const utcTime = new Date().toISOString();
-  fs.appendFileSync(QUERIES_CSV, `ebay,${query},${utcTime}\n`);
-  persist({ lastQuery: query, lastEvent: 'query_logged' });
+  fs.appendFileSync(QUERIES_CSV, `ebay,${cleanQuery},${utcTime}\n`);
+  persist({ lastQuery: cleanQuery, lastEvent: 'query_logged' });
 }
 
 /**
@@ -77,7 +87,8 @@ export function loadSearchedQueries() {
     const lines = fs.readFileSync(QUERIES_CSV, 'utf8').split('\n').slice(1);
     lines.forEach(line => {
       const parts = line.split(',');
-      if (parts[1]) searched.add(parts[1].trim());
+      const cleanQuery = normalizeQuery(parts[1]);
+      if (cleanQuery) searched.add(cleanQuery);
     });
   }
   return searched;

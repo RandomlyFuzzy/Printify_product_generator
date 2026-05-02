@@ -1,5 +1,6 @@
 import { States }   from './states.js';
 import { runState } from './actions/index.js';
+import { logError } from '../persistence/logger.js';
 
 /**
  * Run the state machine for a single search query.
@@ -20,7 +21,7 @@ export async function runQueryMachine(ctx) {
       console.log(`  [sm] ${state} → ${nextState}`);
       state = nextState;
     } catch (err) {
-      console.error(`[StateMachine] Error in state "${state}": ${err.message}`);
+      logError(`[StateMachine] Error in state "${state}"`, err, { state });
       state = States.QUERY_DONE;
     }
   }

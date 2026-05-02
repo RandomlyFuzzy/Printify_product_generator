@@ -3,14 +3,15 @@ import path from 'path';
 
 import { States } from '../states.js';
 import { TRANSITIONS, pickNextState } from '../transitions.js';
-import { simulateReading, humanScroll } from '../../statelessfunctions/humanBehavior.js';
+import { simulateReading } from '../../statelessfunctions/humanBehavior/simulateReading.js';
+import { humanScroll } from '../../statelessfunctions/humanBehavior/humanScroll.js';
 import { delay, randomBetween } from '../../statelessfunctions/timing.js';
 import { extractProductId } from '../../statelessfunctions/parsers.js';
 
 export async function stateVisitProduct(ctx) {
   const { page, links, PRODUCTS_DIR } = ctx;
 
-  if (!links || links.length === 0) return States.NEXT_PAGE;
+  if (!links || links.length === 0) return States.BROWSE_PAGE;
 
   const randomCard = links[randomBetween(0, links.length - 1)];
   const label = randomCard.title?.substring(0, 40) ?? randomCard.url;
@@ -64,12 +65,5 @@ export async function stateVisitProduct(ctx) {
 
   if (ctx.currentPageNum >= ctx.maxPages) return States.QUERY_DONE;
 
-  const candidates = TRANSITIONS[States.VISIT_PRODUCT].filter(([state]) => {
-    if (state === States.NEXT_PAGE && (ctx.cardsInteracted || 0) < 1) {
-      return false;
-    }
-    return true;
-  });
-
-  return pickNextState(candidates.length > 0 ? candidates : TRANSITIONS[States.VISIT_PRODUCT].filter(([s]) => s !== States.NEXT_PAGE));
+  return pickNextState(TRANSITIONS[States.VISIT_PRODUCT]);
 }

@@ -1,7 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { loadSearchedQueries, loadSuggestions } from './csvLogger.js';
+import { loadSearchedQueries, loadSuggestions, normalizeQuery } from './csvLogger.js';
+import { logError, logWarn, logDebug } from './logger.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -16,16 +17,24 @@ export const STATE_FILE   = path.join(OUTPUT_DIR, 'state.json');
  * @param {object}      extra - additional fields to merge into the snapshot
  */
 export function persistRealtimeState(searchedSet, suggestionsSet, extra = {}) {
-  if (!searchedSet || !suggestionsSet) return;
+  if (!searchedSet || !suggestionsSet) {
+    logWarn('persistRealtimeState called with invalid sets', { searchedSet: !!searchedSet, suggestionsSet: !!suggestionsSet });
+    return;
+  }
 
-  const state = {
-    searched:   [...searchedSet],
-    suggestions: [...suggestionsSet],
-    updatedAt:  new Date().toISOString(),
-    ...extra,
-  };
+  try {
+    const state = {
+      searched:   [...searchedSet],
+      suggestions: [...suggestionsSet],
+      updatedAt:  new Date().toISOString(),
+      ...extra,
+    };
 
-  fs.writeFileSync(STATE_FILE, JSON.stringify(state, null, 2));
+    fs.writeFileSync(STATE_FILE, JSON.stringify(state, null, 2));
+    logDebug('State persisted', { searchedCount: searchedSet.size, suggestionsCount: suggestionsSet.size });
+  } catch (err) {
+    logError('Failed to persist state', err, { stateFile: STATE_FILE });
+  }
 }
 
 /**
@@ -47,10 +56,16 @@ export function loadStateSets() {
   }
 
   const searched = loadSearchedQueries();
-  searchedFromState.forEach(q => searched.add(String(q).trim().toLowerCase()));
+  searchedFromState.forEach((q) => {
+    const cleanQuery = normalizeQuery(q);
+    if (cleanQuery) searched.add(cleanQuery);
+  });
 
   const suggestions = loadSuggestions();
-  suggestionsFromState.forEach(s => suggestions.add(String(s).trim().toLowerCase()));
+  suggestionsFromState.forEach((s) => {
+    const cleanSuggestion = normalizeQuery(s);
+    if (cleanSuggestion) suggestions.add(cleanSuggestion);
+  });
 
   return { searched, suggestions };
 }

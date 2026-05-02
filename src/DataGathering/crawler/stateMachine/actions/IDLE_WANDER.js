@@ -1,6 +1,8 @@
 import { States } from '../states.js';
 import { TRANSITIONS, pickNextState } from '../transitions.js';
-import { humanScroll, humanHover, idlePause } from '../../statelessfunctions/humanBehavior.js';
+import { humanScroll } from '../../statelessfunctions/humanBehavior/humanScroll.js';
+import { humanHover } from '../../statelessfunctions/humanBehavior/humanHover.js';
+import { idlePause } from '../../statelessfunctions/humanBehavior/idlePause.js';
 import { delay, randomBetween } from '../../statelessfunctions/timing.js';
 
 async function performMissScroll(page) {
@@ -43,7 +45,7 @@ export async function stateIdleWander(ctx) {
   const { page } = ctx;
 
   console.log('  [idle wander — taking an unstructured break]');
-  await idlePause();
+  await idlePause(page);
 
   const wanderActions = [
     { name: 'scroll', run: () => humanScroll(page) },

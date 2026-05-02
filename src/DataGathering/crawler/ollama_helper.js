@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { logError, logWarn, logDebug } from './persistence/logger.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -22,6 +23,8 @@ const saveCache = () => {
 
 const queryOllama = async (prompt) => {
   try {
+    logDebug('Ollama request', { model: MODEL, promptLength: prompt.length });
+
     const response = await fetch(OLLAMA_URL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -33,12 +36,21 @@ const queryOllama = async (prompt) => {
       })
     });
 
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status} ${response.statusText}`);
+    }
 
     const data = await response.json();
+
+    if (!data.response) {
+      logWarn('Ollama returned empty response', { data });
+      return '';
+    }
+
+    logDebug('Ollama response received', { responseLength: data.response.length });
     return data.response?.trim() || '';
   } catch (e) {
-    console.log(`  Ollama error: ${e.message}`);
+    logError('Ollama request failed', e, { model: MODEL, ollamaUrl: OLLAMA_URL });
     return null;
   }
 };

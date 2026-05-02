@@ -1,6 +1,6 @@
 import { States } from '../states.js';
 import { TRANSITIONS, pickNextState } from '../transitions.js';
-import { delay, randomBetween } from '../../statelessfunctions/timing.js';
+import { delay, randomBetween, scaleDuration } from '../../statelessfunctions/timing.js';
 
 export async function stateClickOnPage(ctx) {
   const { page } = ctx;
@@ -27,14 +27,14 @@ export async function stateClickOnPage(ctx) {
     if (clickTarget) {
       await page.mouse.move(clickTarget.x, clickTarget.y, { steps: randomBetween(4, 10) });
       await delay(randomBetween(80, 220));
-      await page.mouse.click(clickTarget.x, clickTarget.y, { delay: randomBetween(30, 120) });
+      await page.mouse.click(clickTarget.x, clickTarget.y, { delay: scaleDuration(randomBetween(30, 120)) });
       await delay(randomBetween(300, 900));
     } else {
       const viewport = page.viewport() ?? { width: 1280, height: 720 };
       const x = randomBetween(100, Math.max(120, viewport.width - 100));
       const y = randomBetween(120, Math.max(140, viewport.height - 120));
       await page.mouse.move(x, y, { steps: randomBetween(3, 9) });
-      await page.mouse.click(x, y, { delay: randomBetween(30, 120) });
+      await page.mouse.click(x, y, { delay: scaleDuration(randomBetween(30, 120)) });
       await delay(randomBetween(250, 700));
     }
   } catch (_) {

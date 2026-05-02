@@ -1,5 +1,16 @@
+const MIN_SLOWDOWN_MULTIPLIER = 2;
+const MAX_SLOWDOWN_MULTIPLIER = 3;
+
+export function scaleDuration(ms) {
+  const duration = Number(ms);
+  if (!Number.isFinite(duration) || duration <= 0) return 0;
+
+  const multiplier = Math.random() * (MAX_SLOWDOWN_MULTIPLIER - MIN_SLOWDOWN_MULTIPLIER) + MIN_SLOWDOWN_MULTIPLIER;
+  return Math.floor(duration * multiplier);
+}
+
 export function delay(ms) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
+  return new Promise((resolve) => setTimeout(resolve, scaleDuration(ms)));
 }
 
 export function randomBetween(min, max) {

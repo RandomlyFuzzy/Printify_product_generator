@@ -1,6 +1,7 @@
 import { States } from '../states.js';
 import { TRANSITIONS, pickNextState } from '../transitions.js';
-import { humanHover, simulateReading } from '../../statelessfunctions/humanBehavior.js';
+import { humanHover } from '../../statelessfunctions/humanBehavior/humanHover.js';
+import { simulateReading } from '../../statelessfunctions/humanBehavior/simulateReading.js';
 import { delay, randomBetween } from '../../statelessfunctions/timing.js';
 
 export async function stateScrollExplore(ctx) {

@@ -12,6 +12,9 @@ export const States = Object.freeze({
   /** Scroll to the top of the page before typing a new search query. */
   SCROLL_TO_TOP: 'SCROLL_TO_TOP',
 
+  /** Click and focus the search input, select any existing text, ready to type. */
+  SELECT_SEARCH: 'SELECT_SEARCH',
+
   /** Type the query with human-like keystrokes, submit, await results. */
   TYPE_SEARCH:   'TYPE_SEARCH',
 

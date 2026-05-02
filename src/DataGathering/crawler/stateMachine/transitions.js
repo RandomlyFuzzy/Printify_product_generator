@@ -21,13 +21,13 @@ import { States } from './states.js';
  */
 export const TRANSITIONS = {
   [States.BROWSE_PAGE]: [
-    [States.CLICK_ON_PAGE, 25],
-    [States.HOVER_CARD,    20],
-    [States.PAUSE,        15],
-    [States.SCROLL_EXPLORE,10],
-    [States.FILTER_CLICK,  10],
-    [States.SCROLL_TO_BOTTOM, 10],
-    [States.IDLE_WANDER,   10],
+    [States.CLICK_ON_PAGE,    24],
+    [States.HOVER_CARD,       20],
+    [States.PAUSE,            16],
+    [States.SCROLL_EXPLORE,   14],
+    [States.FILTER_CLICK,     12],
+    [States.SCROLL_TO_BOTTOM,  6],
+    [States.IDLE_WANDER,       8],
   ],
 
   [States.CLICK_ON_PAGE]: [
@@ -71,11 +71,10 @@ export const TRANSITIONS = {
   ],
 
   [States.VISIT_PRODUCT]: [
-    [States.PAUSE,        30],
-    [States.BROWSE_PAGE,  40],
-    [States.NEXT_PAGE,    15],
-    [States.SCROLL_EXPLORE,10],
-    [States.IDLE_WANDER,   5],
+    [States.PAUSE,            34],
+    [States.BROWSE_PAGE,      40],
+    [States.SCROLL_EXPLORE,   16],
+    [States.IDLE_WANDER,      10],
   ],
 
   [States.NEXT_PAGE]: [
@@ -94,11 +93,10 @@ export const TRANSITIONS = {
   ],
 
   [States.IDLE_WANDER]: [
-    [States.BROWSE_PAGE,  45],
-    [States.PAUSE,        20],
-    [States.SCROLL_EXPLORE,15],
-    [States.NEXT_PAGE,    15],
-    [States.QUERY_DONE,    5],
+    [States.BROWSE_PAGE,      52],
+    [States.PAUSE,            20],
+    [States.SCROLL_EXPLORE,   18],
+    [States.QUERY_DONE,       10],
   ],
 
   [States.PAUSE]: [

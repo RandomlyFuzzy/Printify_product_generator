@@ -3,10 +3,11 @@ import fs         from 'fs';
 
 import { selectSuggestions }                        from './ollama_helper.js';
 import { delay, randomBetween, shuffleArray }        from './statelessfunctions/timing.js';
-import { humanScroll }                               from './statelessfunctions/humanBehavior.js';
+import { humanScroll }                               from './statelessfunctions/humanBehavior/humanScroll.js';
 import { OUTPUT_DIR, PRODUCTS_DIR, persistRealtimeState, loadStateSets } from './persistence/stateStore.js';
-import { initCSVFiles, logQuery, logSuggestion, loadSearchedQueries, loadSuggestions, saveCardData } from './persistence/csvLogger.js';
+import { initCSVFiles, logQuery, logSuggestion, loadSearchedQueries, loadSuggestions, normalizeQuery, saveCardData } from './persistence/csvLogger.js';
 import { runQueryMachine }                           from './stateMachine/index.js';
+import { logError, logWarn, logInfo, logDebug }      from './persistence/logger.js';
 
 fs.mkdirSync(OUTPUT_DIR,   { recursive: true });
 fs.mkdirSync(PRODUCTS_DIR, { recursive: true });
@@ -27,12 +28,13 @@ async function main() {
   const initialQueries = ['men', 'women', 'unisex'];
   initialQueries.forEach(q => searchedSet.delete(q));
 
-  let allQueries = [...new Set([...initialQueries, ...suggestionsSet])];
+  let allQueries = [...new Set([...initialQueries, ...suggestionsSet].map(normalizeQuery).filter(Boolean))];
   allQueries = shuffleArray(allQueries);
 
   const browser = await puppeteer.launch({
     headless: true,
     args: ['--no-sandbox', '--disable-setuid-sandbox'],
+    protocolTimeout: 120_000,  // 2 min — prevents mouse/wheel CDP timeouts under load
   });
 
   const page = await browser.newPage();
@@ -45,54 +47,69 @@ async function main() {
   process.on('SIGINT', async () => {
     if (exiting) return;
     exiting = true;
-    console.log('\n\n=== Stopping gracefully... ===');
+    logInfo('SIGINT received, stopping gracefully');
     persist({ lastEvent: 'sigint' });
     await browser.close();
-    console.log('Done!');
+    logInfo('Browser closed, shutdown complete');
     process.exit(0);
   });
 
   try {
     if (!page.url().includes('ebay.com')) {
-      await page.goto('https://www.ebay.com', { waitUntil: 'domcontentloaded', timeout: 60000 });
-      await page.evaluate(() => window.scrollTo(0, 0));
+      try {
+        await page.goto('https://www.ebay.com', { waitUntil: 'domcontentloaded', timeout: 60000 });
+        await page.evaluate(() => window.scrollTo(0, 0));
+      } catch (navErr) {
+        logError('Navigation to eBay failed', navErr, { url: 'https://www.ebay.com' });
+        throw navErr;
+      }
     }
 
     while (!exiting) {
       let currentIndex = 0;
 
       while (currentIndex < allQueries.length && !exiting) {
-        const query = allQueries[currentIndex];
+        const query = normalizeQuery(allQueries[currentIndex]);
+
+        if (!query) {
+          currentIndex++;
+          continue;
+        }
+
+        logDebug(`Processing query`, { query, index: currentIndex, total: allQueries.length });
 
         // Build the state-machine context for this query
         const ctx = {
           page,
-          query: query.toLowerCase(),
+          query,
           searchedSet,
           suggestionsSet,
           csvLogger,
           persist,
           PRODUCTS_DIR,
-          skipEnsureHome: currentIndex > 0,
         };
 
-        const newSuggestions = await runQueryMachine(ctx);
+        try {
+          const newSuggestions = await runQueryMachine(ctx);
 
-        console.log(`  Queries remaining in queue: ${allQueries.length - currentIndex - 1}`);
-        currentIndex++;
+          logInfo(`Query processed`, { query, suggestionsCount: newSuggestions.length });
+          currentIndex++;
 
-        if (currentIndex < allQueries.length && newSuggestions.length > 0) {
-          console.log(`  Asking Ollama to filter ${newSuggestions.length} suggestions...`);
-          const filtered = await selectSuggestions(query, newSuggestions);
+          if (currentIndex < allQueries.length && newSuggestions.length > 0) {
+            logDebug(`Filtering suggestions with Ollama`, { query, suggestionCount: newSuggestions.length });
+            const filtered = await selectSuggestions(query, newSuggestions);
 
-          for (const s of filtered) {
-            if (!searchedSet.has(s) && !allQueries.includes(s)) {
-              allQueries.push(s);
-              console.log(`  + Queued new search: "${s}"`);
+            for (const s of filtered) {
+              const nextQuery = normalizeQuery(s);
+              if (nextQuery && !searchedSet.has(nextQuery) && !allQueries.includes(nextQuery)) {
+                allQueries.push(nextQuery);
+                logInfo(`Queued new search`, { query: nextQuery, fromQuery: query });
+              }
             }
           }
-
-          console.log(`  Queries remaining in queue: ${allQueries.length - currentIndex}`);
+        } catch (queryErr) {
+          logError(`Query processing failed`, queryErr, { query, index: currentIndex });
+          currentIndex++;
         }
 
         await humanScroll(page);
@@ -101,16 +118,17 @@ async function main() {
 
       if (exiting) break;
 
-      console.log(`\n\n=== Cycle complete, restarting with ${allQueries.length} queries ===`);
+      logInfo(`Cycle complete, restarting`, { queryCount: allQueries.length });
       allQueries = shuffleArray(allQueries);
     }
   } catch (err) {
-    console.error('Fatal error:', err);
+    logError('Fatal error in main loop', err, { exiting, currentQueryCount: allQueries.length });
   } finally {
     persist({ lastEvent: 'shutdown' });
     if (!exiting) {
       await delay(2000);
       await browser.close();
+      logInfo('Browser closed after normal shutdown');
     }
   }
 }
