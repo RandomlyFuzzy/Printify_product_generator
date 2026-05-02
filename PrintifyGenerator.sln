@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintifyGenerator.Blueprint
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintifyGenerator.Researcher", "src\DataGathering\PrintifyGenerator.Researcher\PrintifyGenerator.Researcher.csproj", "{B0E291A4-BADE-4305-9345-63EB2C1B7125}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintifyGenerator.Scraper", "src\DataGathering\PrintifyGenerator.Scraper\PrintifyGenerator.Scraper.csproj", "{7AD28789-854A-4626-9127-78798AAB2681}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -117,6 +119,18 @@ Global
 		{B0E291A4-BADE-4305-9345-63EB2C1B7125}.Release|x64.Build.0 = Release|Any CPU
 		{B0E291A4-BADE-4305-9345-63EB2C1B7125}.Release|x86.ActiveCfg = Release|Any CPU
 		{B0E291A4-BADE-4305-9345-63EB2C1B7125}.Release|x86.Build.0 = Release|Any CPU
+		{7AD28789-854A-4626-9127-78798AAB2681}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AD28789-854A-4626-9127-78798AAB2681}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AD28789-854A-4626-9127-78798AAB2681}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{7AD28789-854A-4626-9127-78798AAB2681}.Debug|x64.Build.0 = Debug|Any CPU
+		{7AD28789-854A-4626-9127-78798AAB2681}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7AD28789-854A-4626-9127-78798AAB2681}.Debug|x86.Build.0 = Debug|Any CPU
+		{7AD28789-854A-4626-9127-78798AAB2681}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AD28789-854A-4626-9127-78798AAB2681}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AD28789-854A-4626-9127-78798AAB2681}.Release|x64.ActiveCfg = Release|Any CPU
+		{7AD28789-854A-4626-9127-78798AAB2681}.Release|x64.Build.0 = Release|Any CPU
+		{7AD28789-854A-4626-9127-78798AAB2681}.Release|x86.ActiveCfg = Release|Any CPU
+		{7AD28789-854A-4626-9127-78798AAB2681}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -131,5 +145,6 @@ Global
 		{C72562BB-1573-4776-7401-7E6C37D0B989} = {77B303A4-6792-4860-9E98-28BA595B97BE}
 		{5AE0DE36-E42D-4BE6-AAA2-568B5C36836A} = {C72562BB-1573-4776-7401-7E6C37D0B989}
 		{B0E291A4-BADE-4305-9345-63EB2C1B7125} = {C72562BB-1573-4776-7401-7E6C37D0B989}
+		{7AD28789-854A-4626-9127-78798AAB2681} = {C72562BB-1573-4776-7401-7E6C37D0B989}
 	EndGlobalSection
 EndGlobal
