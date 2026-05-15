@@ -43,7 +43,7 @@ public record ImageSuitability
         return Scoring.OverallScore();
     }
 
-    public string PrityJsonString()
+    public string PrettyJsonString()
     {
         return JsonSerializer.Serialize(this, new JsonSerializerOptions { WriteIndented = true });
     }

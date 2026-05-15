@@ -37,7 +37,7 @@ Each item must use this exact JSON shape:
     private static readonly string SuitabilityPrompt =
         "You are reviewing artwork for public print-on-demand sales. " +
         "Return only JSON describing whether the image is safe, commercially suitable, and free of IP or legal risk. " +
-        "Use this exact schema: " + new ImageSuitability().PrityJsonString();
+        "Use this exact schema: " + new ImageSuitability().PrettyJsonString();
 
     private readonly object _sync = new();
     private readonly IWebHostEnvironment _environment;
@@ -486,7 +486,7 @@ Each item must use this exact JSON shape:
         var jobId = comfyNode.Client.QueuePrompt(workflow);
         var jobDirectory = Path.Combine(_checkingRoot, DateTime.UtcNow.ToString("yyyy-MM"), DateTime.UtcNow.ToString("dd"), jobId);
         Directory.CreateDirectory(jobDirectory);
-        await File.WriteAllTextAsync(Path.Combine(jobDirectory, "phase_1.json"), item.Prompt.ToPrityJsonString(), cancellationToken);
+        await File.WriteAllTextAsync(Path.Combine(jobDirectory, "phase_1.json"), item.Prompt.ToPrettyJsonString(), cancellationToken);
 
         lock (_sync)
         {

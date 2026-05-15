@@ -11,7 +11,7 @@ public record ProductAssessment
         return new ProductAssessment
         {
             FitForPrintify = false,
-            Issues = "Unapealing product, unknown Product, Pornographic, Contains text, Defformed".Split(", "),
+            Issues = "Unappealing product, unknown Product, Pornographic, Contains text, Deformed".Split(", "),
             shouldContinue = false
         };
     }

@@ -22,7 +22,7 @@ public record Prompt
     {
         return JsonSerializer.Serialize(this, options);
     }
-    public string ToPrityJsonString()
+    public string ToPrettyJsonString()
     {
         return JsonSerializer.Serialize(this, new JsonSerializerOptions { WriteIndented = true });
     }
