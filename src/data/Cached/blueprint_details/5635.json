@@ -1,0 +1,346 @@
+{
+  "blueprint": {
+    "id": 5635,
+    "title": "Cotton Bed Set",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/69de303a276dbd041d0d7500",
+      "https://images.printify.com/69df4e0fe563c5f964083af3",
+      "https://images.printify.com/69de303e78cfa18d3305c292",
+      "https://images.printify.com/69de3053fd3d05261d0c5660"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 10,
+        "title": "MWW On Demand"
+      },
+      "variants": {
+        "id": 10,
+        "title": "MWW On Demand",
+        "variants": [
+          {
+            "id": 251651,
+            "title": "Queen / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "size": "Queen",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "duvet",
+                "decoration_method": "direct-to-fabric",
+                "height": 13500,
+                "width": 13500
+              },
+              {
+                "position": "left_sham",
+                "decoration_method": "direct-to-fabric",
+                "height": 3225,
+                "width": 4125
+              },
+              {
+                "position": "right_sham",
+                "decoration_method": "direct-to-fabric",
+                "height": 3225,
+                "width": 4125
+              }
+            ]
+          },
+          {
+            "id": 251652,
+            "title": "Twin XL / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "size": "Twin XL",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "duvet",
+                "decoration_method": "direct-to-fabric",
+                "height": 14175,
+                "width": 10500
+              },
+              {
+                "position": "left_sham",
+                "decoration_method": "direct-to-fabric",
+                "height": 3225,
+                "width": 4125
+              },
+              {
+                "position": "right_sham",
+                "decoration_method": "direct-to-fabric",
+                "height": 3225,
+                "width": 4125
+              }
+            ]
+          },
+          {
+            "id": 251653,
+            "title": "Twin / White",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "size": "Twin",
+              "color": "White"
+            },
+            "placeholders": [
+              {
+                "position": "duvet",
+                "decoration_method": "direct-to-fabric",
+                "height": 13500,
+                "width": 10500
+              },
+              {
+                "position": "left_sham",
+                "decoration_method": "direct-to-fabric",
+                "height": 3225,
+                "width": 4125
+              },
+              {
+                "position": "right_sham",
+                "decoration_method": "direct-to-fabric",
+                "height": 3225,
+                "width": 4125
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              251652,
+              251653
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 909
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 209
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              251651
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1009
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 309
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              251652,
+              251653
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1509
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 599
+            },
+            "countries": [
+              "REST_OF_THE_WORLD",
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              251652,
+              251653
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 959
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 239
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              251651
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1029
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 329
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              251651
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1479
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1479
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              251651
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1849
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 1849
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 909
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 209
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1009
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 309
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD",
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1509
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 599
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 959
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 239
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1029
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 329
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1479
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1479
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1849
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 1849
+          },
+          "variant_count": 1
+        }
+      ]
+    }
+  ]
+}

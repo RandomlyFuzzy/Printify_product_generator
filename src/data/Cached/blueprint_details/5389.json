@@ -1,0 +1,360 @@
+{
+  "blueprint": {
+    "id": 5389,
+    "title": "Nomad Tumbler 32oz",
+    "brand": "HydraPeak",
+    "model": "",
+    "images": [
+      "https://images.printify.com/69bbc671020c80c7a208f663",
+      "https://images.printify.com/69f32979f3cec4b71c061720",
+      "https://images.printify.com/69f32aa15c42f4599c071f32",
+      "https://images.printify.com/69f32974c3c01eaa54023bd3",
+      "https://images.printify.com/69f3330673e4e787990f9db0",
+      "https://images.printify.com/69f32976cf77dd4d7d0b9482",
+      "https://images.printify.com/69bbc6786d000c0638011d02"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 86,
+        "title": "Chill"
+      },
+      "variants": {
+        "id": 86,
+        "title": "Chill",
+        "variants": [
+          {
+            "id": 245002,
+            "title": "Ivory / 32oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Ivory",
+              "size": "32oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1370,
+                "width": 3340
+              },
+              {
+                "position": "front_laser_engraving",
+                "decoration_method": "laser-engraving",
+                "height": 1050,
+                "width": 600
+              }
+            ]
+          },
+          {
+            "id": 245003,
+            "title": "Black / 32oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Black",
+              "size": "32oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1370,
+                "width": 3340
+              },
+              {
+                "position": "front_laser_engraving",
+                "decoration_method": "laser-engraving",
+                "height": 1050,
+                "width": 600
+              }
+            ]
+          },
+          {
+            "id": 245004,
+            "title": "Stone / 32oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Stone",
+              "size": "32oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1370,
+                "width": 3340
+              },
+              {
+                "position": "front_laser_engraving",
+                "decoration_method": "laser-engraving",
+                "height": 1050,
+                "width": 600
+              }
+            ]
+          },
+          {
+            "id": 245005,
+            "title": "Navy / 32oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Navy",
+              "size": "32oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1370,
+                "width": 3340
+              },
+              {
+                "position": "front_laser_engraving",
+                "decoration_method": "laser-engraving",
+                "height": 1050,
+                "width": 600
+              }
+            ]
+          },
+          {
+            "id": 245006,
+            "title": "Powder Blue / 32oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Powder Blue",
+              "size": "32oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1370,
+                "width": 3340
+              },
+              {
+                "position": "front_laser_engraving",
+                "decoration_method": "laser-engraving",
+                "height": 1050,
+                "width": 600
+              }
+            ]
+          },
+          {
+            "id": 245007,
+            "title": "Cotton Pink / 32oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Cotton Pink",
+              "size": "32oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1370,
+                "width": 3340
+              },
+              {
+                "position": "front_laser_engraving",
+                "decoration_method": "laser-engraving",
+                "height": 1050,
+                "width": 600
+              }
+            ]
+          },
+          {
+            "id": 245008,
+            "title": "Pale Sage / 32oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Pale Sage",
+              "size": "32oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1370,
+                "width": 3340
+              },
+              {
+                "position": "front_laser_engraving",
+                "decoration_method": "laser-engraving",
+                "height": 1050,
+                "width": 600
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              245002,
+              245003,
+              245004,
+              245005,
+              245006,
+              245007,
+              245008
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 759
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 299
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              245002,
+              245003,
+              245004,
+              245005,
+              245006,
+              245007,
+              245008
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 979
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              245002,
+              245003,
+              245004,
+              245005,
+              245006,
+              245007,
+              245008
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1659
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 919
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              245002,
+              245003,
+              245004,
+              245005,
+              245006,
+              245007,
+              245008
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1229
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 529
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 759
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 299
+          },
+          "variant_count": 7
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 979
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 7
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1659
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 919
+          },
+          "variant_count": 7
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1229
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 529
+          },
+          "variant_count": 7
+        }
+      ]
+    }
+  ]
+}

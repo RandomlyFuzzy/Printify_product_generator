@@ -1,0 +1,213 @@
+{
+  "blueprint": {
+    "id": 5374,
+    "title": "Round Border Photo Pendant",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/69fb32c277e94b74f503c240",
+      "https://images.printify.com/6a02cf5954cd3204b1080cc2",
+      "https://images.printify.com/69fb32a149bb64dc970a17f0",
+      "https://images.printify.com/69fb32add581a87bf80c52b0",
+      "https://images.printify.com/69fb32b25e591f64c70cab02",
+      "https://images.printify.com/69fdd1505b63bcdd8f0a17e0"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 436,
+        "title": "Photograve"
+      },
+      "variants": {
+        "id": 436,
+        "title": "Photograve",
+        "variants": [
+          {
+            "id": 244819,
+            "title": "1\u0027\u0027 x 1\u0027\u0027 / Stainless Steel",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "size": "1\u0027\u0027 x 1\u0027\u0027",
+              "color": "Stainless Steel"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "laser-engraving",
+                "height": 1087,
+                "width": 1087
+              },
+              {
+                "position": "front_dye-sublimation",
+                "decoration_method": "dye-sublimation",
+                "height": 1087,
+                "width": 1087
+              }
+            ]
+          },
+          {
+            "id": 253876,
+            "title": "1\u0027\u0027 x 1\u0027\u0027 / Gold Plated",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "size": "1\u0027\u0027 x 1\u0027\u0027",
+              "color": "Gold Plated"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "laser-engraving",
+                "height": 1087,
+                "width": 1087
+              },
+              {
+                "position": "front_dye-sublimation",
+                "decoration_method": "dye-sublimation",
+                "height": 1087,
+                "width": 1087
+              }
+            ]
+          },
+          {
+            "id": 253877,
+            "title": "1\u0027\u0027 x 1\u0027\u0027 / Sterling Silver",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "size": "1\u0027\u0027 x 1\u0027\u0027",
+              "color": "Sterling Silver"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "laser-engraving",
+                "height": 1087,
+                "width": 1087
+              },
+              {
+                "position": "front_dye-sublimation",
+                "decoration_method": "dye-sublimation",
+                "height": 1087,
+                "width": 1087
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              244819,
+              253876,
+              253877
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 569
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "CA",
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              244819,
+              253876,
+              253877
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              244819,
+              253876,
+              253877
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 939
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "CA",
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 569
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 249
+          },
+          "variant_count": 3
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 399
+          },
+          "variant_count": 3
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 939
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 3
+        }
+      ]
+    }
+  ]
+}

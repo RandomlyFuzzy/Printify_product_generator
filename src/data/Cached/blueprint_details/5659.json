@@ -1,0 +1,340 @@
+{
+  "blueprint": {
+    "id": 5659,
+    "title": "Explorer Sling Bag (Embroidery)",
+    "brand": "Comfort Colors\u00AE",
+    "model": "CCSB0",
+    "images": [
+      "https://images.printify.com/6a02ffea403575fb6201a034",
+      "https://images.printify.com/6a02da0e81570e4e730660f3",
+      "https://images.printify.com/6a02da0d517f2707bc0d6682",
+      "https://images.printify.com/6a02da10295326699b05b911",
+      "https://images.printify.com/6a02da0f04bd83c71a0555c2",
+      "https://images.printify.com/6a02da0cba6c65a1e70b43a0",
+      "https://images.printify.com/6a02da0a00aacef7790cca01",
+      "https://images.printify.com/6a02da0674ac77b123059c22",
+      "https://images.printify.com/6a02da051d0cdc1a4b0ffa60",
+      "https://images.printify.com/6a02da09b9ec02fb0004dfe2",
+      "https://images.printify.com/6a02da08b80c79383c0bea02"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 217,
+        "title": "Fulfill Engine"
+      },
+      "variants": {
+        "id": 217,
+        "title": "Fulfill Engine",
+        "variants": [
+          {
+            "id": 254000,
+            "title": "One size / Bay",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "size": "One size",
+              "color": "Bay"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 1200,
+                "width": 900
+              },
+              {
+                "position": "front_dtf",
+                "decoration_method": "dtf",
+                "height": 1200,
+                "width": 900
+              }
+            ]
+          },
+          {
+            "id": 254001,
+            "title": "One size / Black",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "size": "One size",
+              "color": "Black"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 1200,
+                "width": 900
+              },
+              {
+                "position": "front_dtf",
+                "decoration_method": "dtf",
+                "height": 1200,
+                "width": 900
+              }
+            ]
+          },
+          {
+            "id": 254002,
+            "title": "One size / Chambray",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "size": "One size",
+              "color": "Chambray"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 1200,
+                "width": 900
+              },
+              {
+                "position": "front_dtf",
+                "decoration_method": "dtf",
+                "height": 1200,
+                "width": 900
+              }
+            ]
+          },
+          {
+            "id": 254003,
+            "title": "One size / Ivory",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "size": "One size",
+              "color": "Ivory"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 1200,
+                "width": 900
+              },
+              {
+                "position": "front_dtf",
+                "decoration_method": "dtf",
+                "height": 1200,
+                "width": 900
+              }
+            ]
+          },
+          {
+            "id": 254004,
+            "title": "One size / Rose Quartz",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "size": "One size",
+              "color": "Rose Quartz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 1200,
+                "width": 900
+              },
+              {
+                "position": "front_dtf",
+                "decoration_method": "dtf",
+                "height": 1200,
+                "width": 900
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              254000,
+              254001,
+              254002,
+              254003,
+              254004
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 569
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 209
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              254000,
+              254001,
+              254002,
+              254003,
+              254004
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 589
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              254000,
+              254001,
+              254002,
+              254003,
+              254004
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1249
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              254000,
+              254001,
+              254002,
+              254003,
+              254004
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1069
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 499
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              254000,
+              254001,
+              254002,
+              254003,
+              254004
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1069
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 569
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 209
+          },
+          "variant_count": 5
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 589
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 249
+          },
+          "variant_count": 5
+        },
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1249
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "variant_count": 5
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1069
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 499
+          },
+          "variant_count": 5
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1069
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 5
+        }
+      ]
+    }
+  ]
+}

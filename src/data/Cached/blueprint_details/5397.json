@@ -1,0 +1,301 @@
+{
+  "blueprint": {
+    "id": 5397,
+    "title": "Thermos Food Jar, 25oz",
+    "brand": "HydraPeak",
+    "model": "",
+    "images": [
+      "https://images.printify.com/69bd769c574e52dce00233d0",
+      "https://images.printify.com/69bd76a20d516e30d10465b0",
+      "https://images.printify.com/6a0188949ead45038a0b310c",
+      "https://images.printify.com/6a018898516e2563910074e0",
+      "https://images.printify.com/6a018896b9c672ce78099440",
+      "https://images.printify.com/6a018892ec8843c3be044b92"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 86,
+        "title": "Chill"
+      },
+      "variants": {
+        "id": 86,
+        "title": "Chill",
+        "variants": [
+          {
+            "id": 245133,
+            "title": "Black / 25oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Black",
+              "size": "25oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1039,
+                "width": 3539
+              },
+              {
+                "position": "front_laser_engraving",
+                "decoration_method": "laser-engraving",
+                "height": 525,
+                "width": 600
+              }
+            ]
+          },
+          {
+            "id": 245134,
+            "title": "Ivory / 25oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Ivory",
+              "size": "25oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1039,
+                "width": 3539
+              },
+              {
+                "position": "front_laser_engraving",
+                "decoration_method": "laser-engraving",
+                "height": 525,
+                "width": 600
+              }
+            ]
+          },
+          {
+            "id": 245135,
+            "title": "Iceberg / 25oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Iceberg",
+              "size": "25oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1039,
+                "width": 3539
+              },
+              {
+                "position": "front_laser_engraving",
+                "decoration_method": "laser-engraving",
+                "height": 525,
+                "width": 600
+              }
+            ]
+          },
+          {
+            "id": 245136,
+            "title": "Cotton Pink / 25oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Cotton Pink",
+              "size": "25oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1039,
+                "width": 3539
+              },
+              {
+                "position": "front_laser_engraving",
+                "decoration_method": "laser-engraving",
+                "height": 525,
+                "width": 600
+              }
+            ]
+          },
+          {
+            "id": 245138,
+            "title": "Purple / 25oz",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Purple",
+              "size": "25oz"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "uv",
+                "height": 1039,
+                "width": 3539
+              },
+              {
+                "position": "front_laser_engraving",
+                "decoration_method": "laser-engraving",
+                "height": 525,
+                "width": 600
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              245133,
+              245134,
+              245135,
+              245136,
+              245138
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 659
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              245133,
+              245134,
+              245135,
+              245136,
+              245138
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 699
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              245133,
+              245134,
+              245135,
+              245136,
+              245138
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1329
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 699
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          },
+          {
+            "variant_ids": [
+              245133,
+              245134,
+              245135,
+              245136,
+              245138
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1229
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 529
+            },
+            "countries": [
+              "CA"
+            ]
+          }
+        ]
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 659
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 249
+          },
+          "variant_count": 5
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 699
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 399
+          },
+          "variant_count": 5
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1329
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 699
+          },
+          "variant_count": 5
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1229
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 529
+          },
+          "variant_count": 5
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "blueprint": {
+    "id": 5656,
+    "title": "Leather Bracelet with Beads (Engraving)",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/6a02dea69d54aa1dff00bdb1",
+      "https://images.printify.com/6a02dea513287bfaf4074162",
+      "https://images.printify.com/6a02dea1339aa5c06908a820",
+      "https://images.printify.com/6a02e307f32f768bc00e8870",
+      "https://images.printify.com/6a02dea49ccaaeca2305d2a0",
+      "https://images.printify.com/69fdd671cdeb783b8b0a9e10"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 436,
+        "title": "Photograve"
+      },
+      "variants": {
+        "id": 436,
+        "title": "Photograve",
+        "variants": [
+          {
+            "id": 253999,
+            "title": "8.5\u0022 / Stainless Steel",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "size": "8.5\u0022",
+              "color": "Stainless Steel"
+            },
+            "placeholders": [
+              {
+                "position": "front_1",
+                "decoration_method": "laser-engraving",
+                "height": 156,
+                "width": 1351
+              },
+              {
+                "position": "front_2",
+                "decoration_method": "laser-engraving",
+                "height": 156,
+                "width": 1351
+              },
+              {
+                "position": "front_3",
+                "decoration_method": "laser-engraving",
+                "height": 156,
+                "width": 1351
+              },
+              {
+                "position": "front_4",
+                "decoration_method": "laser-engraving",
+                "height": 156,
+                "width": 1351
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              253999
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 569
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "CA",
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              253999
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              253999
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 939
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "CA",
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 569
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 249
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 399
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 939
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 1
+        }
+      ]
+    }
+  ]
+}

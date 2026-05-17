@@ -1,0 +1,239 @@
+{
+  "blueprint": {
+    "id": 5639,
+    "title": "Under Armour\u00AE All Sport Backpack (Embroidery)",
+    "brand": "Under Armour\u00AE",
+    "model": "1350097",
+    "images": [
+      "https://images.printify.com/69e63b0d319c3c04ab0060a3",
+      "https://images.printify.com/6a06f70f5aab87239b0e5620",
+      "https://images.printify.com/6a06e43740d60dea6309de87",
+      "https://images.printify.com/6a06f7f6befc7cfbba00f460",
+      "https://images.printify.com/6a06f7fa94d72856170eaf22",
+      "https://images.printify.com/6a06e42cd53f403c93083066",
+      "https://images.printify.com/6a06e42fb81f1cb8720a623d",
+      "https://images.printify.com/6a06e43265bc6e4d20008f4b"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 61,
+        "title": "Dimona Tee"
+      },
+      "variants": {
+        "id": 61,
+        "title": "Dimona Tee",
+        "variants": [
+          {
+            "id": 252219,
+            "title": "Black / White / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Black / White",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 1181,
+                "width": 1181
+              }
+            ]
+          },
+          {
+            "id": 252220,
+            "title": "Midnight Navy / White / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Midnight Navy / White",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 1181,
+                "width": 1181
+              }
+            ]
+          },
+          {
+            "id": 252221,
+            "title": "Red / White / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Red / White",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 1181,
+                "width": 1181
+              }
+            ]
+          },
+          {
+            "id": 252222,
+            "title": "Royal / White / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Royal / White",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 1181,
+                "width": 1181
+              }
+            ]
+          },
+          {
+            "id": 252223,
+            "title": "Steel / White / One size",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "color": "Steel / White",
+              "size": "One size"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "embroidery",
+                "height": 1181,
+                "width": 1181
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              252219,
+              252220,
+              252221,
+              252222,
+              252223
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 929
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              252219,
+              252220,
+              252221,
+              252222,
+              252223
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2019
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 709
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              252219,
+              252220,
+              252221,
+              252222,
+              252223
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2039
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 739
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 929
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 5
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2019
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 709
+          },
+          "variant_count": 5
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2039
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 739
+          },
+          "variant_count": 5
+        }
+      ]
+    }
+  ]
+}

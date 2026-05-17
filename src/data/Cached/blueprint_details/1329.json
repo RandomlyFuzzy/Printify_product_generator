@@ -1,0 +1,146 @@
+{
+  "blueprint": {
+    "id": 1329,
+    "title": "Stubby Cooler",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/66cc893f1c50130eda094fe3",
+      "https://images.printify.com/66cc8941a8cab123e602b232",
+      "https://images.printify.com/6490170bebf237071c02b251",
+      "https://images.printify.com/67efb004623376b962025393"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 34,
+        "title": "The Print Bar"
+      },
+      "variants": {
+        "id": 34,
+        "title": "The Print Bar",
+        "variants": [
+          {
+            "id": 101095,
+            "title": "Regular Can",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "size": "Regular Can"
+            },
+            "placeholders": [
+              {
+                "position": "all",
+                "decoration_method": "dye-sublimation",
+                "height": 1476,
+                "width": 2657
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              101095
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 639
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 139
+            },
+            "countries": [
+              "AU"
+            ]
+          },
+          {
+            "variant_ids": [
+              101095
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1249
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 139
+            },
+            "countries": [
+              "NZ"
+            ]
+          },
+          {
+            "variant_ids": [
+              101095
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1449
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 159
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "AU"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 639
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 139
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "NZ"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1249
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 139
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1449
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 159
+          },
+          "variant_count": 1
+        }
+      ]
+    }
+  ]
+}

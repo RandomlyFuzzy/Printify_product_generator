@@ -1,0 +1,187 @@
+{
+  "blueprint": {
+    "id": 5657,
+    "title": "Dog Tag with Chain",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/69fc6f31bd1607e22d035770",
+      "https://images.printify.com/69fc6f340538e474480011d0",
+      "https://images.printify.com/69fc701902f9db84b0087d60",
+      "https://images.printify.com/69fc701a31c7ec667609c1b3",
+      "https://images.printify.com/69fc6f36af17482006040b43",
+      "https://images.printify.com/69fc6f26448f9311f80948a1",
+      "https://images.printify.com/69fc6f28af17482006040b42",
+      "https://images.printify.com/69fdd6cad2c64304d709c2c0"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 436,
+        "title": "Photograve"
+      },
+      "variants": {
+        "id": 436,
+        "title": "Photograve",
+        "variants": [
+          {
+            "id": 253889,
+            "title": "One Size / Stainless Steel",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "size": "One Size",
+              "color": "Stainless Steel"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "laser-engraving",
+                "height": 2272,
+                "width": 1356
+              },
+              {
+                "position": "front_dye-sublimation",
+                "decoration_method": "dye-sublimation",
+                "height": 568,
+                "width": 339
+              }
+            ]
+          },
+          {
+            "id": 253890,
+            "title": "One Size / Gold Plated",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "size": "One Size",
+              "color": "Gold Plated"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "laser-engraving",
+                "height": 2272,
+                "width": 1356
+              },
+              {
+                "position": "front_dye-sublimation",
+                "decoration_method": "dye-sublimation",
+                "height": 568,
+                "width": 339
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              253889,
+              253890
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 569
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "CA",
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              253889,
+              253890
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              253889,
+              253890
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 939
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "CA",
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 569
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 249
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 399
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 939
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 2
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "blueprint": {
+    "id": 5658,
+    "title": "Cufflinks",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/69fddb217543f807c60a8f92",
+      "https://images.printify.com/6a043cd1bacc80423d0f62c1",
+      "https://images.printify.com/6a043cbe2e2b28ecbf0855a0",
+      "https://images.printify.com/6a04222fb0210b086f0fe311",
+      "https://images.printify.com/6a0430187a5477c586036350",
+      "https://images.printify.com/6a04301c60f2968de8080ff0"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 436,
+        "title": "Photograve"
+      },
+      "variants": {
+        "id": 436,
+        "title": "Photograve",
+        "variants": [
+          {
+            "id": 253992,
+            "title": "One Size / Stainless Steel",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "size": "One Size",
+              "color": "Stainless Steel"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "laser-engraving",
+                "height": 749,
+                "width": 749
+              },
+              {
+                "position": "front_dye-sublimation",
+                "decoration_method": "dye-sublimation",
+                "height": 749,
+                "width": 749
+              }
+            ]
+          },
+          {
+            "id": 253993,
+            "title": "One Size / Gold Plated",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "size": "One Size",
+              "color": "Gold Plated"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "laser-engraving",
+                "height": 749,
+                "width": 749
+              },
+              {
+                "position": "front_dye-sublimation",
+                "decoration_method": "dye-sublimation",
+                "height": 749,
+                "width": 749
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              253992,
+              253993
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 569
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 249
+            },
+            "countries": [
+              "CA",
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              253992,
+              253993
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 999
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 399
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              253992,
+              253993
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 939
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 439
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "CA",
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 569
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 249
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 999
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 399
+          },
+          "variant_count": 2
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 939
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 439
+          },
+          "variant_count": 2
+        }
+      ]
+    }
+  ]
+}

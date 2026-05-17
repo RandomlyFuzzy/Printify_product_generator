@@ -1,0 +1,153 @@
+{
+  "blueprint": {
+    "id": 5649,
+    "title": "Nursing Pillow Cover",
+    "brand": "Generic brand",
+    "model": "",
+    "images": [
+      "https://images.printify.com/69f0ba11ef5fd0c40508d960",
+      "https://images.printify.com/6a01a6bdf5bec375ab0f3fc0",
+      "https://images.printify.com/6a01a6e78c514106010872e0",
+      "https://images.printify.com/69fd82483ce864d7d80d7bb1",
+      "https://images.printify.com/6a0322b32efa82134d0dc082"
+    ]
+  },
+  "print_providers": [
+    {
+      "provider": {
+        "id": 92,
+        "title": "Pic the Gift"
+      },
+      "variants": {
+        "id": 92,
+        "title": "Pic the Gift",
+        "variants": [
+          {
+            "id": 252447,
+            "title": "28.6\u0022 x 9.8\u0022",
+            "cost": null,
+            "price": null,
+            "prices": [],
+            "options": {
+              "size": "28.6\u0022 x 9.8\u0022"
+            },
+            "placeholders": [
+              {
+                "position": "front",
+                "decoration_method": "dye-sublimation",
+                "height": 3261,
+                "width": 4424
+              },
+              {
+                "position": "back",
+                "decoration_method": "dye-sublimation",
+                "height": 3261,
+                "width": 4424
+              }
+            ]
+          }
+        ]
+      },
+      "shipping": {
+        "handling_time": {
+          "value": 10,
+          "unit": "day"
+        },
+        "profiles": [
+          {
+            "variant_ids": [
+              252447
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1859
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 879
+            },
+            "countries": [
+              "CA"
+            ]
+          },
+          {
+            "variant_ids": [
+              252447
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 1099
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 589
+            },
+            "countries": [
+              "US"
+            ]
+          },
+          {
+            "variant_ids": [
+              252447
+            ],
+            "first_item": {
+              "currency": "USD",
+              "cost": 2289
+            },
+            "additional_items": {
+              "currency": "USD",
+              "cost": 799
+            },
+            "countries": [
+              "REST_OF_THE_WORLD"
+            ]
+          }
+        ]
+      },
+      "cost_per_region": [
+        {
+          "countries": [
+            "CA"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1859
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 879
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "US"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 1099
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 589
+          },
+          "variant_count": 1
+        },
+        {
+          "countries": [
+            "REST_OF_THE_WORLD"
+          ],
+          "first_item": {
+            "currency": "USD",
+            "cost": 2289
+          },
+          "additional_items": {
+            "currency": "USD",
+            "cost": 799
+          },
+          "variant_count": 1
+        }
+      ]
+    }
+  ]
+}
