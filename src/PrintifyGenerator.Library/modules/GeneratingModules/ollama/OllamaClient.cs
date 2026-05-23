@@ -19,7 +19,7 @@ public class OllamaClient : IDisposable
         {
             if (!_modelLocks.TryGetValue(_baseUrl, out var sem))
             {
-                sem = new SemaphoreSlim(1, 1);
+                sem = new SemaphoreSlim(1, 2);
                 _modelLocks[_baseUrl] = sem;
             }
             return sem;

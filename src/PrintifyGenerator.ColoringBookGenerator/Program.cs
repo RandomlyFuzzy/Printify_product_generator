@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Text.Json;
 using System.Threading.Tasks;
 using PrintifyGenerator.ColoringBookGenerator.Services;
+using PrintifyGenerator.ColoringBookGenerator.Services.PromptProviders;
 using PrintifyGenerator.ColoringBookGenerator.Utilities;
 
 namespace PrintifyGenerator.ColoringBookGenerator
@@ -14,9 +15,22 @@ namespace PrintifyGenerator.ColoringBookGenerator
     {
 
         static string model = "gemma4:e2b";
+        static IPromptProvider _promptProvider = null!;
         static async Task<int> Main(string[] args)
         {
             PrintBanner();
+
+            // ── Check for --regenerate mode ──────────────────────────────────
+            if (args.Any(a => a.Equals("--regenerate", StringComparison.OrdinalIgnoreCase)))
+            {
+                return await RunRegenerateAsync(args);
+            }
+
+            // ── Check for --finish mode ───────────────────────────────────────
+            if (args.Any(a => a.Equals("--finish", StringComparison.OrdinalIgnoreCase)))
+            {
+                return await RunFinisherAsync(args);
+            }
 
             // ── Load Printify token ─────────────────────────────────────────────
             var token = LoadToken();
@@ -25,25 +39,85 @@ namespace PrintifyGenerator.ColoringBookGenerator
                 Error("No TOKEN found. Add TOKEN=<your_token> to main.env in the project root.");
                 return 1;
             }
-            string[] lines = File.ReadAllLines("PictureBookIdeas");
 
-            Console.WriteLine(args.Length);
-    
-            // ── Collect titles — each argument is a separate book title ──────────
-            var titles = args.Length > 1
-                ? args.ToList()
-                : lines.ToList();
+            // ── Parse arguments ─────────────────────────────────────────────────
+            var bookTypeArg = args.FirstOrDefault(a => a.StartsWith("--book-type=", StringComparison.OrdinalIgnoreCase))
+                ?.Substring("--book-type=".Length);
+            var countArg = args.FirstOrDefault(a => a.StartsWith("--count=", StringComparison.OrdinalIgnoreCase))
+                ?.Substring("--count=".Length);
+            var filteredArgs = args
+                .Where(a => !a.StartsWith("--book-type=", StringComparison.OrdinalIgnoreCase))
+                .Where(a => !a.StartsWith("--count=", StringComparison.OrdinalIgnoreCase))
+                .ToArray();
 
+            _promptProvider = bookTypeArg?.ToLowerInvariant() switch
+            {
+                "picturebook" or "picture" => new PictureBookPromptProvider(),
+                "storybook" or "story" => new StoryBookPromptProvider(),
+                "paintbynumbers" or "paint-by-numbers" or "paint" => new PaintByNumbersPromptProvider(),
+                _ => new PictureBookPromptProvider()
+            };
+
+            // Print selected provider blueprint info (was previously hard-coded in the banner)
+            try
+            {
+                var bp = _promptProvider.Blueprint;
+                Info($"Blueprint : {bp.BlueprintId} · {bp.PageWidth}x{bp.PageHeight} px · {bp.PageCount} pages");
+            }
+            catch
+            {
+                // ignore if blueprint info is unavailable
+            }
+
+            // ── Collect titles — remaining args, or auto-generate from file, or auto-generate via AI ──
+            var titles = new List<string>();
+
+            if (filteredArgs.Length > 0)
+            {
+                titles.AddRange(filteredArgs);
+            }
+            else if (File.Exists("PictureBookIdeas"))
+            {
+                var lines = File.ReadAllLines("PictureBookIdeas")
+                    .Select(l => l.Trim())
+                    .Where(l => l.Length > 0 && !l.StartsWith('#'))
+                    .ToArray();
+                if (lines.Length > 0)
+                    titles.AddRange(lines);
+            }
+
+            if (titles.Count == 0)
+            {
+                int count = 1;
+                if (countArg != null && int.TryParse(countArg, out var parsed) && parsed > 0)
+                    count = parsed;
+
+                Step($"Auto-generating {count} title(s) via Ollama...");
+                titles.AddRange(await GenerateTitlesAsync(count));
+                if (titles.Count == 0)
+                {
+                    Error("Failed to generate any titles. Provide titles as arguments or add them to PictureBookIdeas.");
+                    return 1;
+                }
+            }
+            else if (countArg != null && int.TryParse(countArg, out var parsedTarget) && parsedTarget > titles.Count)
+            {
+                int extra = parsedTarget - titles.Count;
+                Step($"Generating {extra} additional title(s) via Ollama to reach target of {parsedTarget}...");
+                titles.AddRange(await GenerateTitlesAsync(extra));
+            }
+
+            Info($"Book type : {_promptProvider.BookType}");
+            Info($"Titles    : {titles.Count}");
 
             // ── Wire up services (shared across all themes) ─────────────────────
             const int etsyShopId = 27152940;
             var http     = new HttpClient();
-            // Primary: FreeGen (cloud), Fallback: local/remote ComfyUI so generation continues during rate-limits
-            var freeGen = new FreeGenGenerator(http);
-            var comfy = new ComfyUiGenerator("http://192.168.0.181:8188");
+            var freeGen = new FreeGenGenerator(http, _promptProvider);
+            var comfy = new ComfyUiGenerator(_promptProvider, "http://192.168.0.181:8188");
             var imageGen = new FallbackImageGenerator(freeGen, comfy);
             var printify = new PrintifyClient(token);
-            var service  = new ColoringBookService(imageGen, printify, etsyShopId, "http://192.168.0.181:11434", model);
+            var service  = new ColoringBookService(imageGen, printify, etsyShopId, _promptProvider, "http://192.168.0.181:11434", model);
 
             int overallExitCode = 0;
 
@@ -72,13 +146,14 @@ namespace PrintifyGenerator.ColoringBookGenerator
                     Warn("Ollama derivation failed — falling back to manual input.");
                     theme      = Prompt("Theme", null);
                     styleAddon = Prompt("Style add-on", null,
-                                        defaultValue: "flat vector illustration,");
+                                        defaultValue: "flat vector illustration");
                 }
 
                 Console.WriteLine();
                 Info($"Title      : {title}");
                 Info($"Theme      : {theme}");
                 Info($"Style      : {styleAddon}");
+                Info($"Book type  : {_promptProvider.BookType}");
                 Info($"Pages      : back cover + front cover + 24 interior pages");
                 Info($"Destination: My Etsy Store (shop 27152940)");
                 Console.WriteLine();
@@ -113,14 +188,175 @@ namespace PrintifyGenerator.ColoringBookGenerator
             return overallExitCode;
         }
 
+        // ── Standalone Finisher Mode ──────────────────────────────────────────
+
+        private static async Task<int> RunFinisherAsync(string[] args)
+        {
+            var inputDir = args
+                .FirstOrDefault(a => a.StartsWith("--input=", StringComparison.OrdinalIgnoreCase))
+                ?.Substring("--input=".Length);
+            var outputDir = args
+                .FirstOrDefault(a => a.StartsWith("--output=", StringComparison.OrdinalIgnoreCase))
+                ?.Substring("--output=".Length);
+            var bookTypeArg = args
+                .FirstOrDefault(a => a.StartsWith("--book-type=", StringComparison.OrdinalIgnoreCase))
+                ?.Substring("--book-type=".Length);
+            var noBw = args.Any(a => a.Equals("--no-bw", StringComparison.OrdinalIgnoreCase));
+            var noAa = args.Any(a => a.Equals("--no-antialias", StringComparison.OrdinalIgnoreCase));
+            var pageNums = args.Any(a => a.Equals("--page-numbers", StringComparison.OrdinalIgnoreCase));
+
+            if (string.IsNullOrWhiteSpace(inputDir))
+            {
+                Error("Usage: --finish --input=<directory> [--output=<directory>] [--book-type=picturebook|storybook|paintbynumbers] [--no-bw] [--no-antialias] [--page-numbers]");
+                return 1;
+            }
+
+            if (!Directory.Exists(inputDir))
+            {
+                Error($"Input directory not found: {inputDir}");
+                return 1;
+            }
+
+            var provider = (bookTypeArg?.ToLowerInvariant()) switch
+            {
+                "picturebook" or "picture" => (IPromptProvider)new PictureBookPromptProvider(),
+                "storybook" or "story" => new StoryBookPromptProvider(),
+                "paintbynumbers" or "paint-by-numbers" or "paint" => new PaintByNumbersPromptProvider(),
+                _ => new PictureBookPromptProvider()
+            };
+
+            var finisher = new BookFinisher(provider);
+            var options = new FinishingOptions
+            {
+                ConvertToBlackAndWhite = !noBw,
+                ApplyAntialiasing = !noAa,
+                AddPageNumbers = pageNums,
+                AddTitleOverlay = false,
+                SaveIntermediateStages = true,
+                SupersampleFactor = 8,
+                GaussianBlurSigma = 1f
+            };
+
+            Step($"Book type: {provider.BookType}");
+            Step($"Input: {inputDir}");
+            Step($"Output: {outputDir ?? Path.Combine(inputDir, "finished")}");
+            Step($"B&W conversion: {options.ConvertToBlackAndWhite}");
+            Step($"Antialiasing: {options.ApplyAntialiasing}");
+            Step($"Page numbers: {options.AddPageNumbers}");
+            Console.WriteLine();
+
+            var result = await finisher.FinishDirectoryAsync(inputDir, outputDir, options);
+            var textContent = await finisher.GeneratePageNumberTextContentAsync(
+                result.OutputDirectory,
+                result.PageCount);
+            var titleContent = await finisher.GenerateTitleTextContentAsync(
+                result.OutputDirectory,
+                "Untitled",
+                "",
+                provider.BuildDescription(""),
+                provider.BuildTags(""));
+            var subjects = provider.BuildPageSubjectsFallback("");
+            var productText = await finisher.GenerateProductTextContentAsync(
+                result.OutputDirectory,
+                "Untitled",
+                "",
+                subjects,
+                options);
+
+            Success($"Finished {result.Files.Count} images ({result.CoverCount} covers, {result.PageCount} pages)");
+            Success($"Output: {result.OutputDirectory}");
+            Success($"Text content saved to output directory");
+
+            return 0;
+        }
+
+        // ── Regenerate Mode ─────────────────────────────────────────────
+
+        private static async Task<int> RunRegenerateAsync(string[] args)
+        {
+            var inputDir = args
+                .FirstOrDefault(a => a.StartsWith("--input=", StringComparison.OrdinalIgnoreCase))
+                ?.Substring("--input=".Length);
+            var pageStr = args
+                .FirstOrDefault(a => a.StartsWith("--page=", StringComparison.OrdinalIgnoreCase))
+                ?.Substring("--page=".Length);
+            var bookTypeArg = args
+                .FirstOrDefault(a => a.StartsWith("--book-type=", StringComparison.OrdinalIgnoreCase))
+                ?.Substring("--book-type=".Length);
+            var appendArg = args
+                .FirstOrDefault(a => a.StartsWith("--append=", StringComparison.OrdinalIgnoreCase))
+                ?.Substring("--append=".Length);
+
+            if (string.IsNullOrWhiteSpace(inputDir) || string.IsNullOrWhiteSpace(pageStr))
+            {
+                Error("Usage: --regenerate --input=<directory> --page=<number> [--append=\"prompt suffix\"] [--book-type=picturebook|storybook|paintbynumbers]");
+                return 1;
+            }
+
+            if (!Directory.Exists(inputDir))
+            {
+                Error($"Input directory not found: {inputDir}");
+                return 1;
+            }
+
+            if (!int.TryParse(pageStr, out var pageNumber) || pageNumber < 1)
+            {
+                Error($"Invalid page number: {pageStr}");
+                return 1;
+            }
+
+            var token = LoadToken();
+            if (string.IsNullOrWhiteSpace(token))
+            {
+                Error("No TOKEN found. Add TOKEN=<your_token> to main.env in the project root.");
+                return 1;
+            }
+
+            var provider = (bookTypeArg?.ToLowerInvariant()) switch
+            {
+                "picturebook" or "picture" => (IPromptProvider)new PictureBookPromptProvider(),
+                "storybook" or "story" => new StoryBookPromptProvider(),
+                "paintbynumbers" or "paint-by-numbers" or "paint" => new PaintByNumbersPromptProvider(),
+                _ => new PictureBookPromptProvider()
+            };
+
+            _promptProvider = provider;
+
+            var http = new HttpClient();
+            var freeGen = new FreeGenGenerator(http, provider);
+            var comfy = new ComfyUiGenerator(provider, "http://192.168.0.181:8188");
+            var imageGen = new FallbackImageGenerator(freeGen, comfy);
+            var printify = new PrintifyClient(token);
+            const int etsyShopId = 27152940;
+            var service = new ColoringBookService(imageGen, printify, etsyShopId, provider, "http://192.168.0.181:11434", model);
+
+            Step($"Regenerating page {pageNumber} in {inputDir}");
+            Step($"Book type: {provider.BookType}");
+            if (!string.IsNullOrWhiteSpace(appendArg))
+                Step($"Prompt append: {appendArg}");
+
+            try
+            {
+                await service.RegeneratePageAsync(inputDir, pageNumber, appendArg, msg => Step(msg));
+                Success($"Alternative for page {pageNumber} created and saved in draft product");
+            }
+            catch (Exception ex)
+            {
+                Error($"Failed: {ex.Message}");
+                return 1;
+            }
+
+            return 0;
+        }
+
         // ── UI helpers ──────────────────────────────────────────────────────────
 
         private static void PrintBanner()
         {
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("╔══════════════════════════════════════════════════════╗");
-            Console.WriteLine("║          Printify Coloring Book Generator            ║");
-            Console.WriteLine("║  blueprint 2721 · District Photo · 8.5\" × 11\"        ║");
+            Console.WriteLine("║       Printify Book Generator                        ║");
+            // Blueprint info is printed after the prompt provider is selected
             Console.WriteLine("╚══════════════════════════════════════════════════════╝");
             Console.ResetColor();
             Console.WriteLine();
@@ -198,153 +434,13 @@ namespace PrintifyGenerator.ColoringBookGenerator
 
         // ── Ollama generation ───────────────────────────────────────────────────
 
-        private static async Task<(string? title, string? style)> GenerateTitleAndStyleAsync(string theme)
-        {
-            var ollamaPrompt =
-                @"You are a product copywriter for a print-on-demand coloring book store.
-
-Given a theme, generate a single valid JSON object with two fields: ""title"" and ""style"".
-
-────────────────────
-FIELD 1: ""title""
-────────────────────
-Requirements:
-- 4–8 words total
-- Must end with exactly: ""Coloring Book"" or ""Colouring Book""
-- Must be marketable, specific, and appealing
-- Avoid generic marketing words (e.g., Amazing, Ultimate, Best, Fun)
-- Choose the most appropriate audience based on the theme:
-  - Children (ages 4–10) OR Adult relaxation / mindfulness
-
-Good examples:
-- ""Jungle Safari Adventure Coloring Book""
-- ""Magical Fairy Garden Coloring Book""
-- ""Cute Kawaii Animals Colouring Book""
-
-────────────────────
-FIELD 2: ""style""
-────────────────────
-This is a comma-separated list of AI image-generation keywords for a single illustration.
-
-Rules:
-- DO NOT describe a book page, paper, borders, or page layout
-- DO NOT include ""coloring book page"" or any physical medium references
-- The output must describe a clean standalone illustration only
-
-- MUST always include these base terms:
-  ""thick black outlines, white fill, no shading, no color""
-
-- Add 3–5 theme-specific descriptors describing:
-  • subject matter (e.g., jungle animals, fantasy creatures, space scenes)
-  • visual mood (e.g., cute, whimsical, serene, playful, detailed, intricate)
-  • composition style (e.g., centered composition, symmetrical design, isolated scene)
-
-IMPORTANT QUALITY REQUIREMENTS:
-- Output must be visually clean and free of artifacts
-- Ensure the description produces crisp, uncluttered line art
-- Avoid complex background noise or messy compositions
-- Prefer clear separation between subjects and background elements
-
-Good examples:
-- ""thick black outlines, white fill, no shading, no color, cute cartoon jungle animals, playful composition, clean isolated scene""
-- ""thick black outlines, white fill, no shading, no color, intricate mandala patterns, symmetrical design, floral geometry, clean crisp lines""
-
-────────────────────
-THEME
-────────────────────
-Theme: ""{theme}""
-
-────────────────────
-OUTPUT RULES
-────────────────────
-- Return ONLY one valid JSON object
-- No markdown, no explanations, no extra text
-- Ensure clean, structured text output with no artifacts or formatting noise
-- Output must start with { and end with }
-- Must be valid JSON (all keys and values use double quotes)
-- Do not include single quotes anywhere
-
-Example:
-{""title"":""Jungle Safari Adventure Coloring Book"",""style"":""thick black outlines, white fill, no shading, no color, cute jungle animals, tropical setting, clean isolated composition""}";
-
-            string raw = "";
-            try
-            {
-                // record the prompt for later inspection
-                PromptRecorder.Record("GenerateTitleAndStyleAsync", "theme->title", ollamaPrompt);
-                Step($"Sending request to Ollama ({model})...");
-                using var ollama = new OllamaClient("http://192.168.0.181:11434");
-                raw = await ollama.GenerateAsync(model, ollamaPrompt);
-                Step("Ollama response received.");
-
-                // Extract the "response" field from the Ollama envelope
-                var body = raw.Trim();
-                if (body.StartsWith('{'))
-                {
-                    using var doc = JsonDocument.Parse(body);
-                    if (doc.RootElement.TryGetProperty("response", out var resp))
-                        body = resp.GetString()?.Trim() ?? body;
-                }else {
-                    Console.WriteLine("Ollama response does not start with '{', using raw response body. "+raw);
-                }
-
-                // Strip markdown fences if present
-                if (body.StartsWith("```"))
-                {
-                    var firstNewline = body.IndexOf('\n');
-                    var lastFence    = body.LastIndexOf("```");
-                    if (firstNewline > 0 && lastFence > firstNewline)
-                        body = body[(firstNewline + 1)..lastFence].Trim();
-                }
-
-                using var result = JsonDocument.Parse(body);
-                var root = result.RootElement;
-                var title = root.TryGetProperty("title", out var t) ? t.GetString() : null;
-                var style = root.TryGetProperty("style", out var s) ? s.GetString() : null;
-
-                if (!string.IsNullOrWhiteSpace(title) && !string.IsNullOrWhiteSpace(style))
-                    return (title.Trim(), style.Trim());
-            }
-            catch (Exception ex)
-            {
-                Warn($"Ollama error: {ex.Message}"+raw);
-            }
-
-            return (null, null);
-        }
-
         private static async Task<(string? theme, string? style)> GenerateThemeAndStyleFromTitleAsync(string title)
         {
-            var ollamaPrompt = $@"You are a product copywriter specialising in children's coloring books (ages 3-10).
-
-Task: Given a single BOOK TITLE, produce a concise 'theme' and a 'style' string suitable for generating interior coloring illustrations.
-
-Rules for the 'theme' field:
-- 10-20 words, lower-case, no punctuation suitable for a child to understand.
-- Describe the interior subject (e.g. 'jungle animals', 'space robots', 'cozy bakery').
-- Do NOT include the words 'coloring', 'colouring', or 'book'.
-
-Rules for the 'style' field:
-- A comma-separated list of image-generation keywords for ONE illustration.
-- MUST include the base terms: ""thick black outlines, white fill, no shading, no color"".
-- Add 3–5 short descriptors (subject matter, mood, composition). Keep phrases short.
-- Do NOT mention paper, page layout, borders, or the words 'coloring book'.
-
-BOOK TITLE:
-""{title}""
-
-OUTPUT FORMAT:
-- Return ONLY one valid JSON object with exactly two fields: ""theme"" and ""style"".
-- No markdown, no explanation, no extra text. Start with {{ and end with }}.
-
-Examples:
-{{""theme"":""jungle animals"",""style"":""thick black outlines, white fill, no shading, no color, cute jungle animals, playful composition, centered subject""}}
-{{""theme"":""cozy witch bakery"",""style"":""thick black outlines, white fill, no shading, no color, cozy witch baking, whimsical kitchen, detailed props""}}";
+            var ollamaPrompt = _promptProvider.BuildThemeAndStylePrompt(title);
 
             string raw = "";
             try
             {
-                // record the prompt so it can be reproduced later
                 PromptRecorder.Record("GenerateThemeAndStyleFromTitleAsync", "title->theme", ollamaPrompt);
                 Step($"Sending request to Ollama ({model})...");
                 using var ollama = new OllamaClient("http://192.168.0.181:11434");
@@ -380,8 +476,8 @@ Examples:
                 {
                     theme = theme.Trim();
                     style = style.Trim();
-                    var baseTerms = "thick black outlines, white fill, no shading, no color";
-                    if (!style.Contains("thick black outlines", StringComparison.OrdinalIgnoreCase))
+                    var baseTerms = _promptProvider.BaseStyleTerms;
+                    if (!style.Contains(baseTerms, StringComparison.OrdinalIgnoreCase))
                         style = baseTerms + ", " + style;
                     return (theme, style);
                 }
@@ -394,16 +490,67 @@ Examples:
             return (null, null);
         }
 
+        // ── Title generation ─────────────────────────────────────────────────────
+
+        private static async Task<List<string>> GenerateTitlesAsync(int count)
+        {
+            var prompt = _promptProvider.BuildTitleGenerationPrompt(count);
+            PromptRecorder.Record("GenerateTitlesAsync", "title_generation", prompt);
+
+            string raw = "";
+            try
+            {
+                Step($"Requesting {count} title(s) from Ollama ({model})...");
+                using var ollama = new OllamaClient("http://192.168.0.181:11434");
+                raw = await ollama.GenerateAsync(model, prompt);
+                Step("Ollama title response received.");
+
+                var body = raw.Trim();
+                if (body.StartsWith('{'))
+                {
+                    using var doc = JsonDocument.Parse(body);
+                    if (doc.RootElement.TryGetProperty("response", out var resp))
+                        body = resp.GetString()?.Trim() ?? body;
+                }
+
+                if (body.StartsWith("```"))
+                {
+                    var firstNewline = body.IndexOf('\n');
+                    var lastFence = body.LastIndexOf("```");
+                    if (firstNewline > 0 && lastFence > firstNewline)
+                        body = body[(firstNewline + 1)..lastFence].Trim();
+                }
+
+                using var result = JsonDocument.Parse(body);
+                if (result.RootElement.ValueKind == JsonValueKind.Array)
+                {
+                    var titles = new List<string>();
+                    foreach (var el in result.RootElement.EnumerateArray())
+                    {
+                        var t = el.GetString()?.Trim();
+                        if (!string.IsNullOrWhiteSpace(t))
+                            titles.Add(t);
+                    }
+                    PromptRecorder.Record("GenerateTitlesAsync", "generated_titles", string.Join("\n", titles));
+                    return titles;
+                }
+            }
+            catch (Exception ex)
+            {
+                Warn($"Title generation error: {ex.Message}" + raw);
+            }
+
+            return new List<string>();
+        }
+
         // ── Token loading ───────────────────────────────────────────────────────
 
         private static string? LoadToken()
         {
-            // Check environment variable first
             var env = Environment.GetEnvironmentVariable("TOKEN");
             if (!string.IsNullOrWhiteSpace(env))
                 return env;
 
-            // Walk up from cwd looking for main.env
             var dir = Directory.GetCurrentDirectory();
             for (int i = 0; i < 5; i++)
             {
@@ -426,4 +573,3 @@ Examples:
         }
     }
 }
-

@@ -19,7 +19,7 @@ namespace PrintifyGenerator.ColoringBookGenerator.Utilities
         private readonly double _refillPerSecond;
         private DateTime _lastRefillUtc;
 
-        private ImageRateLimiter()
+        internal ImageRateLimiter()
         {
             _tokens = _capacity; // start full
             _refillPerSecond = 100.0 / 3600.0; // tokens per second

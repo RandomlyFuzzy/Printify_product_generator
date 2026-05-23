@@ -3,6 +3,8 @@ using System.IO;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using PrintifyGenerator.ColoringBookGenerator.Utilities;
+using PrintifyGenerator.ColoringBookGenerator.Services.PromptProviders;
+using PrintifyGenerator.ColoringBookGenerator.Models;
 
 namespace PrintifyGenerator.ColoringBookGenerator.Services
 {
@@ -11,41 +13,72 @@ namespace PrintifyGenerator.ColoringBookGenerator.Services
         private readonly string _baseUrl;
         private readonly string _workflowPath;
         private readonly int _timeoutMinutes;
+        private readonly IPromptProvider _promptProvider;
+        private readonly BookFinisher _finisher;
 
-        public ComfyUiGenerator(string baseUrl = "http://192.168.0.181:8188", string? workflowPath = null, int timeoutMinutes = 10)
+        public ComfyUiGenerator(IPromptProvider promptProvider, string baseUrl = "http://192.168.0.181:8188", string? workflowPath = null, int timeoutMinutes = 10)
         {
             _baseUrl = baseUrl?.TrimEnd('/') ?? throw new ArgumentNullException(nameof(baseUrl));
             _workflowPath = workflowPath ?? Path.Combine(Directory.GetCurrentDirectory(), "src", "data", "workloads", "better_default.json");
             _timeoutMinutes = timeoutMinutes;
+            _promptProvider = promptProvider;
+            _finisher = new BookFinisher(promptProvider);
         }
 
-        public async Task<string> GenerateFrontCoverAsync(string outputDirectory, string title, string theme, string styleAddon)
+        public async Task<string> GenerateFrontCoverAsync(string outputDirectory, string title, string theme, string styleAddon, string? promptPrefix = null)
         {
-            var prompt = BuildFrontCoverPrompt(title, theme, styleAddon);
+            var basePrompt = _promptProvider.BuildFrontCoverPrompt(title, theme, styleAddon);
+            var prompt = string.IsNullOrWhiteSpace(promptPrefix) ? basePrompt : (promptPrefix + "\n" + basePrompt);
             PromptRecorder.Record("ComfyUiGenerator", "front_cover_prompt", prompt);
             return await GenerateInternalAsync(prompt, Ratio.ratio_3_4, outputDirectory, "front_cover");
         }
 
-        public async Task<string> GenerateBackCoverAsync(string outputDirectory, string theme, string styleAddon)
+        public async Task<string> GenerateBackCoverAsync(string outputDirectory, string theme, string styleAddon, string? promptPrefix = null)
         {
-            var prompt = BuildBackCoverPrompt(theme, styleAddon);
+            var basePrompt = _promptProvider.BuildBackCoverPrompt(theme, styleAddon);
+            var prompt = string.IsNullOrWhiteSpace(promptPrefix) ? basePrompt : (promptPrefix + "\n" + basePrompt);
             PromptRecorder.Record("ComfyUiGenerator", "back_cover_prompt", prompt);
             return await GenerateInternalAsync(prompt, Ratio.ratio_3_4, outputDirectory, "back_cover");
         }
 
-        public async Task<string> GeneratePageAsync(string outputDirectory, int pageNumber, string theme, string styleAddon)
+        public async Task<string> GeneratePageAsync(string outputDirectory, int pageNumber, string theme, string styleAddon, string? promptPrefix = null)
         {
-            var ratio = Ratio.ratio_16_9; // Standard portrait ratio for coloring book pages
-            if (pageNumber == 1 || pageNumber == 24) ratio = Ratio.ratio_3_4; // Could customize first and last page if desired
-            var prompt = BuildPagePrompt(pageNumber, theme, styleAddon);
+            var ratio = Ratio.ratio_16_9;
+            if (pageNumber == 1 || pageNumber == 24) ratio = Ratio.ratio_3_4;
+            var basePrompt = _promptProvider.BuildPagePrompt(pageNumber, theme, styleAddon);
+            var prompt = string.IsNullOrWhiteSpace(promptPrefix) ? basePrompt : (promptPrefix + "\n" + basePrompt);
             PromptRecorder.Record("ComfyUiGenerator", $"page_{pageNumber:D2}_prompt", prompt);
             return await GenerateInternalAsync(prompt, ratio, outputDirectory, $"page_{pageNumber:D2}");
+        }
+
+        public async Task<string> GenerateImageFromJobAsync(string outputDirectory, GenerationJob job, string? promptPrefix = null)
+        {
+            var ratio = ParseRatio(job.AspectRatio);
+            var basePrompt = job.Prompt ?? string.Empty;
+            var prompt = string.IsNullOrWhiteSpace(promptPrefix) ? basePrompt : (promptPrefix + "\n" + basePrompt);
+            PromptRecorder.Record("ComfyUiGenerator", $"job_{job.PageLabel}_prompt", prompt);
+            return await GenerateInternalAsync(prompt, ratio, outputDirectory, job.PageLabel);
+        }
+
+        private static Ratio ParseRatio(string ratio)
+        {
+            return ratio?.Replace(":", "_") switch
+            {
+                "4_3" => Ratio.ratio_4_3,
+                "3_4" => Ratio.ratio_3_4,
+                "1_1" => Ratio.ratio_1_1,
+                "16_9" => Ratio.ratio_16_9,
+                "9_16" => Ratio.ratio_9_16,
+                _ => Ratio.ratio_3_4
+            };
         }
 
         private async Task<string> GenerateInternalAsync(string prompt, Ratio ratioId, string outputDirectory, string baseName)
         {
             if (string.IsNullOrWhiteSpace(prompt)) prompt = ".";
             if (prompt.Length > 2000) prompt = prompt.Substring(0, 2000);
+
+            PromptRecorder.Record("ComfyUiGenerator", $"final_prompt_{baseName}", prompt);
 
             Directory.CreateDirectory(outputDirectory);
 
@@ -115,7 +148,23 @@ namespace PrintifyGenerator.ColoringBookGenerator.Services
             var downloaded = await status.DownloadAllImagesAsync(outputDirectory, baseName);
             Console.WriteLine($"[ComfyUI] downloaded: {downloaded}");
             if (!string.IsNullOrWhiteSpace(downloaded))
-                return downloaded;
+            {
+                // Apply BookFinisher processing
+                var pageNum = ExtractPageNumber(baseName);
+                var options = new FinishingOptions
+                {
+                    ConvertToBlackAndWhite = _finisher.ShouldConvertToBlackAndWhite,
+                    ApplyAntialiasing = true,
+                    AddPageNumbers = false,
+                    AddTitleOverlay = false,
+                    SaveIntermediateStages = true,
+                    SupersampleFactor = 8,
+                    GaussianBlurSigma = 1f
+                };
+                var finishedPath = await _finisher.FinishImageAsync(downloaded, outputDirectory, pageNum, options);
+                Console.WriteLine($"[ComfyUI] finished: {finishedPath}");
+                return finishedPath;
+            }
 
             throw new Exception("ComfyUI generation completed but no image was downloaded.");
         }
@@ -133,124 +182,12 @@ namespace PrintifyGenerator.ColoringBookGenerator.Services
             };
         }
 
-        private static string BuildFrontCoverPrompt(string title, string theme, string styleAddon)
+        private static int? ExtractPageNumber(string baseName)
         {
-            return $@"
-        Create a high-quality black and white coloring book FRONT COVER illustration.
-
-        Title:
-        {title}
-
-        Theme:
-        {theme}
-
-        CRITICAL TITLE REQUIREMENT:
-        - The title MUST be clearly visible and perfectly legible
-        - The title must be well-formed, correctly spelled, and centered
-        - Use a decorative but readable lettering style suitable for coloring books
-        - The title should be integrated into the cover design (not floating randomly)
-        - Ensure strong contrast so the text is readable in black and white line art
-
-        Style Requirements:
-        - Pure black and white line art only
-        - No grayscale, shading, or color
-        - Clean bold outlines suitable for coloring
-        - Highly detailed but printable
-        - White background
-        - Professional coloring book cover illustration style
-        - Kid-friendly and visually engaging
-
-        Additional Style:
-        {styleAddon}
-
-        Composition:
-        - Prominent central focal illustration related to the theme
-        - Title positioned prominently (top or center depending on composition balance)
-        - Decorative framing elements around the title
-        - Balanced, symmetrical, polished cover layout
-        - Leave clear separation between title and illustration elements
-        - Avoid clutter that reduces title readability
-        - No extra text besides the title
-
-        Output Style:
-        Intricate ink illustration, vector-style line art, crisp monochrome outlines, professional coloring book cover design.
-        ";
-        }
-
-        private static string BuildBackCoverPrompt(string theme, string styleAddon)
-        {
-            return $@"
-            Create a high-quality black and white coloring book illustration for the BACK COVER of a coloring book.
-
-            Theme:
-            {theme}
-
-            Style Requirements:
-            - Pure black and white line art only
-            - No grayscale, shading, or color
-            - Clean bold outlines suitable for coloring
-            - Highly detailed but printable
-            - White background
-            - Coloring book page aesthetic
-            - Kid-friendly and visually engaging
-            - Balanced composition with decorative borders and background elements
-            - Include whimsical and intricate patterns
-            - Professional coloring book illustration style
-
-            Additional Style:
-            {styleAddon}
-
-            Composition:
-            - Full-page vertical layout
-            - Leave some open spaces for coloring
-            - Center-focused design
-            - Symmetrical and visually appealing
-            - Avoid text, logos, or watermarks
-
-            Output Style:
-            Intricate ink illustration, vector-style line art, coloring book page, crisp outlines, monochrome drawing.
-        ";
-        }
-
-        private static string BuildPagePrompt(int pageNumber, string theme, string styleAddon)
-        {
-            return $@"
-        Create a high-quality black and white coloring book illustration for PAGE {pageNumber} of a coloring book.
-
-        Theme:
-        {theme}
-
-        Style Requirements:
-        - Pure black and white line art only
-        - No grayscale, shading, or color
-        - Clean bold outlines suitable for coloring
-        - Highly detailed but printable
-        - White background
-        - Coloring book page aesthetic
-        - Kid-friendly and visually engaging
-        - Intricate patterns and decorative elements
-        - Professional coloring book illustration style
-
-        Additional Style:
-        {styleAddon}
-
-        Composition:
-        - Full-page vertical layout
-        - Unique scene composition for this page
-        - Center-focused subject with supporting background details
-        - Balanced use of open spaces for coloring
-        - Include depth and layered elements
-        - Avoid text, logos, watermarks, or page numbers inside the image
-
-        Page Design Guidance:
-        - Make this page visually distinct from other pages
-        - Add thematic objects, scenery, and ornamental details related to the theme
-        - Ensure the illustration feels immersive and creative
-        - Maintain consistent art style across all pages
-
-        Output Style:
-        Intricate ink illustration, vector-style line art, crisp monochrome outlines, detailed coloring book page.
-        ";
+            var match = System.Text.RegularExpressions.Regex.Match(baseName, @"page_(\d+)", System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+            if (match.Success && int.TryParse(match.Groups[1].Value, out var pn))
+                return pn;
+            return null;
         }
     }
 }

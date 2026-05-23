@@ -36,6 +36,7 @@ public static partial class PhaseFactory
 					: string.Empty)
 				+ "\n\nIMPORTANT: Return only one valid JSON array item and no extra text.";
 
+			Console.WriteLine("Phase 1 base prompt sent ");
 			var prompts = await RetryOllamaJsonArrayAsync<Prompt>(
 				prompt => ollama.GenerateStreamAsync(runtime.Settings.PromptModel, prompt, cancellationToken),
 				basePrompt,

@@ -9,25 +9,28 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Collections.Generic;
 using System.Linq;
-using SixLabors.ImageSharp;
-using SixLabors.ImageSharp.PixelFormats;
-using SixLabors.ImageSharp.Processing;
 using PrintifyGenerator.ColoringBookGenerator.Utilities;
+using PrintifyGenerator.ColoringBookGenerator.Services.PromptProviders;
+using PrintifyGenerator.ColoringBookGenerator.Models;
 
 namespace PrintifyGenerator.ColoringBookGenerator.Services
 {
     public class FreeGenGenerator : IImageGenerator
     {
         private readonly HttpClient _http;
+        private readonly IPromptProvider _promptProvider;
+        private readonly BookFinisher _finisher;
 
         private readonly string _signerUrl = "https://prompt-signer.freegen.app";
         private readonly string _generatorUrl = "https://image-generator.freegen.app";
         private readonly string _websocketUrl = "wss://websocket-bridge.freegen.app/ws";
         private readonly string _statsApiUrl = "https://stats.freegen.app";
 
-        public FreeGenGenerator(HttpClient http)
+        public FreeGenGenerator(HttpClient http, IPromptProvider promptProvider)
         {
             _http = http;
+            _promptProvider = promptProvider;
+            _finisher = new BookFinisher(promptProvider);
         }
 
         // When the remote FreeGen reports a rate-limit, we mark it unavailable
@@ -50,157 +53,61 @@ namespace PrintifyGenerator.ColoringBookGenerator.Services
         // ── Public API ─────────────────────────────────────────────────────────
 
         /// <summary>Front (right-side) cover — full color, portrait 3:4.</summary>
-        public async Task<string> GenerateFrontCoverAsync(string outputDirectory, string title, string theme, string styleAddon)
+        public async Task<string> GenerateFrontCoverAsync(string outputDirectory, string title, string theme, string styleAddon, string? promptPrefix = null)
         {
-            var prompt = BuildFrontCoverPrompt(title, theme, styleAddon);
+            var basePrompt = _promptProvider.BuildFrontCoverPrompt(title, theme, styleAddon);
+            var prompt = string.IsNullOrWhiteSpace(promptPrefix) ? basePrompt : (promptPrefix + "\n" + basePrompt);
             PromptRecorder.Record("FreeGenGenerator", "front_cover_prompt", prompt);
-            var result = await GenerateInternalAsync(prompt, Ratio.ratio_3_4);
+            var result = await GenerateInternalAsync(prompt, Ratio.ratio_3_4, "front_cover");
             return await SaveImageResultAsync(result, outputDirectory, "front_cover");
         }
 
-        /// <summary>Back (left-side) cover — full color, portrait 3:4.</summary>
-        public async Task<string> GenerateBackCoverAsync(string outputDirectory, string theme, string styleAddon)
+        public async Task<string> GenerateBackCoverAsync(string outputDirectory, string theme, string styleAddon, string? promptPrefix = null)
         {
-            var prompt = BuildBackCoverPrompt(theme, styleAddon);
+            var basePrompt = _promptProvider.BuildBackCoverPrompt(theme, styleAddon);
+            var prompt = string.IsNullOrWhiteSpace(promptPrefix) ? basePrompt : (promptPrefix + "\n" + basePrompt);
             PromptRecorder.Record("FreeGenGenerator", "back_cover_prompt", prompt);
-            var result = await GenerateInternalAsync(prompt, Ratio.ratio_3_4);
+            var result = await GenerateInternalAsync(prompt, Ratio.ratio_3_4, "back_cover");
             return await SaveImageResultAsync(result, outputDirectory, "back_cover");
         }
 
-        /// <summary>Interior coloring page — black and white line art, portrait 3:4.</summary>
-        public async Task<string> GeneratePageAsync(string outputDirectory, int pageNumber, string theme, string styleAddon)
+        public async Task<string> GeneratePageAsync(string outputDirectory, int pageNumber, string theme, string styleAddon, string? promptPrefix = null)
         {
-            var ratio = Ratio.ratio_16_9; // Standard portrait ratio for coloring book pages
-            if (pageNumber == 1 || pageNumber == 24) ratio = Ratio.ratio_3_4; // Could customize first and last page if desired
-            var prompt = BuildPagePrompt(pageNumber, theme, styleAddon);
+            var ratio = Ratio.ratio_16_9;
+            if (pageNumber == 1 || pageNumber == 24) ratio = Ratio.ratio_3_4;
+            var basePrompt = _promptProvider.BuildPagePrompt(pageNumber, theme, styleAddon);
+            var prompt = string.IsNullOrWhiteSpace(promptPrefix) ? basePrompt : (promptPrefix + "\n" + basePrompt);
             PromptRecorder.Record("FreeGenGenerator", $"page_{pageNumber:D2}_prompt", prompt);
-            var result = await GenerateInternalAsync(prompt, ratio);
+            var result = await GenerateInternalAsync(prompt, ratio, $"page_{pageNumber:D2}");
             return await SaveImageResultAsync(result, outputDirectory, $"page_{pageNumber:D2}");
         }
 
-        // ── Prompt builders ────────────────────────────────────────────────────
-        private static string BuildFrontCoverPrompt(string title, string theme, string styleAddon)
+        public async Task<string> GenerateImageFromJobAsync(string outputDirectory, GenerationJob job, string? promptPrefix = null)
         {
-            return $@"
-        Create a high-quality black and white coloring book FRONT COVER illustration.
-
-        Title:
-        {title}
-
-        Theme:
-        {theme}
-
-        CRITICAL TITLE REQUIREMENT:
-        - The title MUST be clearly visible and perfectly legible
-        - The title must be well-formed, correctly spelled, and centered
-        - Use a decorative but readable lettering style suitable for coloring books
-        - The title should be integrated into the cover design (not floating randomly)
-        - Ensure strong contrast so the text is readable in black and white line art
-
-        Style Requirements:
-        - Pure black and white line art only
-        - No grayscale, shading, or color
-        - Clean bold outlines suitable for coloring
-        - Highly detailed but printable
-        - White background
-        - Professional coloring book cover illustration style
-        - Kid-friendly and visually engaging
-
-        Additional Style:
-        {styleAddon}
-
-        Composition:
-        - Prominent central focal illustration related to the theme
-        - Title positioned prominently (top or center depending on composition balance)
-        - Decorative framing elements around the title
-        - Balanced, symmetrical, polished cover layout
-        - Leave clear separation between title and illustration elements
-        - Avoid clutter that reduces title readability
-        - No extra text besides the title
-
-        Output Style:
-        Intricate ink illustration, vector-style line art, crisp monochrome outlines, professional coloring book cover design.
-        ";
-        }
-        private static string BuildBackCoverPrompt(string theme, string styleAddon)
-        {
-            return $@"
-            Create a high-quality black and white coloring book illustration for the BACK COVER of a coloring book.
-
-            Theme:
-            {theme}
-
-            Style Requirements:
-            - Pure black and white line art only
-            - No grayscale, shading, or color
-            - Clean bold outlines suitable for coloring
-            - Highly detailed but printable
-            - White background
-            - Coloring book page aesthetic
-            - Kid-friendly and visually engaging
-            - Balanced composition with decorative borders and background elements
-            - Include whimsical and intricate patterns
-            - Professional coloring book illustration style
-
-            Additional Style:
-            {styleAddon}
-
-            Composition:
-            - Full-page vertical layout
-            - Leave some open spaces for coloring
-            - Center-focused design
-            - Symmetrical and visually appealing
-            - Avoid text, logos, or watermarks
-
-            Output Style:
-            Intricate ink illustration, vector-style line art, coloring book page, crisp outlines, monochrome drawing.
-        ";
+            var ratio = ParseRatio(job.AspectRatio);
+            var basePrompt = job.Prompt ?? string.Empty;
+            var prompt = string.IsNullOrWhiteSpace(promptPrefix) ? basePrompt : (promptPrefix + "\n" + basePrompt);
+            PromptRecorder.Record("FreeGenGenerator", $"job_{job.PageLabel}_prompt", prompt);
+            var result = await GenerateInternalAsync(prompt, ratio, job.PageLabel);
+            var rawPath = await SaveImageResultAsync(result, outputDirectory, job.PageLabel);
+            job.OutputPath = rawPath;
+            return rawPath;
         }
 
-
-
-        private static string BuildPagePrompt(int pageNumber, string theme, string styleAddon)
+        private static Ratio ParseRatio(string ratio)
         {
-            return $@"
-        Create a high-quality black and white coloring book illustration for PAGE {pageNumber} of a coloring book.
-
-        Theme:
-        {theme}
-
-        Style Requirements:
-        - Pure black and white line art only
-        - No grayscale, shading, or color
-        - Clean bold outlines suitable for coloring
-        - Highly detailed but printable
-        - White background
-        - Coloring book page aesthetic
-        - Kid-friendly and visually engaging
-        - Intricate patterns and decorative elements
-        - Professional coloring book illustration style
-
-        Additional Style:
-        {styleAddon}
-
-        Composition:
-        - Full-page vertical layout
-        - Unique scene composition for this page
-        - Center-focused subject with supporting background details
-        - Balanced use of open spaces for coloring
-        - Include depth and layered elements
-        - Avoid text, logos, watermarks, or page numbers inside the image
-
-        Page Design Guidance:
-        - Make this page visually distinct from other pages
-        - Add thematic objects, scenery, and ornamental details related to the theme
-        - Ensure the illustration feels immersive and creative
-        - Maintain consistent art style across all pages
-
-        Output Style:
-        Intricate ink illustration, vector-style line art, crisp monochrome outlines, detailed coloring book page.
-        ";
+            return ratio?.Replace(":", "_") switch
+            {
+                "4_3" => Ratio.ratio_4_3,
+                "3_4" => Ratio.ratio_3_4,
+                "1_1" => Ratio.ratio_1_1,
+                "16_9" => Ratio.ratio_16_9,
+                "9_16" => Ratio.ratio_9_16,
+                _ => Ratio.ratio_3_4
+            };
         }
 
-        private async Task<string> GenerateInternalAsync(string prompt, Ratio ratioId)
+        private async Task<string> GenerateInternalAsync(string prompt, Ratio ratioId, string src = "unknown")
         {
             if (string.IsNullOrWhiteSpace(prompt))
                 prompt = ".";
@@ -211,15 +118,7 @@ namespace PrintifyGenerator.ColoringBookGenerator.Services
                 Console.WriteLine("Warning: Prompt exceeded 2000 characters and was truncated. This may affect image quality.");
             }
 
-            // record the final prompt that will be sent to the signer/generator (post-truncation)
-            try
-            {
-                PromptRecorder.Record("FreeGenGenerator", "final_prompt", prompt);
-            }
-            catch
-            {
-                // best-effort only
-            }
+            PromptRecorder.Record("FreeGenGenerator", $"final_prompt_{src}", prompt);
 
             // Rate-limit acquisitions: ensure we only generate up to 100 images per hour
             await Utilities.ImageRateLimiter.Instance.AcquireAsync();
@@ -611,40 +510,48 @@ namespace PrintifyGenerator.ColoringBookGenerator.Services
             return outPath;
         }
 
-        private static async Task ProcessImageBytesAndSaveAsync(byte[] bytes, string outPath)
+        private async Task ProcessImageBytesAndSaveAsync(byte[] bytes, string outPath)
         {
             var dir = Path.GetDirectoryName(outPath);
             if (!string.IsNullOrEmpty(dir)) Directory.CreateDirectory(dir);
-            using var image = Image.Load<Rgba32>(bytes);
-            var origW = image.Width;
-            var origH = image.Height;
 
             var baseName = Path.GetFileNameWithoutExtension(outPath);
             var ext = Path.GetExtension(outPath);
-            if (string.IsNullOrEmpty(ext)) ext = ".png";
+            if (string.IsNullOrEmpty(ext)) ext = ".jpg";
 
-            // Save original
-            var origPath = Path.Combine(dir, baseName + "_orig" + ext);
-            await image.SaveAsync(origPath);
+            // Save raw original bytes first (no processing)
+            var rawPath = Path.Combine(dir, baseName + "_00_raw" + ext);
+            await File.WriteAllBytesAsync(rawPath, bytes);
 
-            // Convert to grayscale
-            image.Mutate(ctx => ctx.Grayscale());
-            var grayPath = Path.Combine(dir, baseName + "_01_grayscale" + ext);
-            await image.SaveAsync(grayPath);
-
-            // Supersample, blur, then downsample to smooth edges (antialiasing)
-            const int supersample = 8;
-            if (supersample > 1 && origW > 1 && origH > 1)
+            // Use BookFinisher for all finishing stages
+            var pageNum = ExtractPageNumber(baseName);
+            var options = new FinishingOptions
             {
-                image.Mutate(ctx => ctx.Resize(origW * supersample, origH * supersample, KnownResamplers.Lanczos3));
-                image.Mutate(ctx => ctx.GaussianBlur(1f));
-                image.Mutate(ctx => ctx.Resize(origW, origH, KnownResamplers.Lanczos3));
-            }
-            var aaPath = Path.Combine(dir, baseName + "_02_antialiased" + ext);
-            await image.SaveAsync(aaPath);
+                ConvertToBlackAndWhite = _finisher.ShouldConvertToBlackAndWhite,
+                ApplyAntialiasing = true,
+                AddPageNumbers = false,
+                AddTitleOverlay = false,
+                SaveIntermediateStages = true,
+                SupersampleFactor = 8,
+                GaussianBlurSigma = 1f
+            };
 
-            // Final output (same name caller expects)
-            await image.SaveAsync(outPath);
+            var finalPath = await _finisher.FinishImageAsync(rawPath, dir, pageNum, options);
+
+            // Overwrite the caller's expected path with the BookFinisher's output
+            if (finalPath != outPath)
+            {
+                if (File.Exists(outPath)) File.Delete(outPath);
+                File.Copy(finalPath, outPath);
+            }
+        }
+
+        private static int? ExtractPageNumber(string baseName)
+        {
+            var match = System.Text.RegularExpressions.Regex.Match(baseName, @"page_(\d+)", System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+            if (match.Success && int.TryParse(match.Groups[1].Value, out var pn))
+                return pn;
+            return null;
         }
 
         private string RatioToString(Ratio r)

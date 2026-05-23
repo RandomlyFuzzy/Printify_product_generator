@@ -27,6 +27,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintifyGenerator.Scraper",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintifyGenerator.Library.Tests", "src\PrintifyGenerator.Library.Tests\PrintifyGenerator.Library.Tests.csproj", "{65049E72-7939-4B77-B9A8-53FD83E242D1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintifyGenerator.ColoringBookGenerator.Tests", "src\PrintifyGenerator.ColoringBookGenerator.Tests\PrintifyGenerator.ColoringBookGenerator.Tests.csproj", "{BCD5CE68-9E1A-490A-8725-5BBA037730AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintifyGenerator.ColoringBookGenerator", "src\PrintifyGenerator.ColoringBookGenerator\PrintifyGenerator.ColoringBookGenerator.csproj", "{FD43B251-F370-47EA-9DE5-9B1A07780E16}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -145,6 +149,30 @@ Global
 		{65049E72-7939-4B77-B9A8-53FD83E242D1}.Release|x64.Build.0 = Release|Any CPU
 		{65049E72-7939-4B77-B9A8-53FD83E242D1}.Release|x86.ActiveCfg = Release|Any CPU
 		{65049E72-7939-4B77-B9A8-53FD83E242D1}.Release|x86.Build.0 = Release|Any CPU
+		{BCD5CE68-9E1A-490A-8725-5BBA037730AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCD5CE68-9E1A-490A-8725-5BBA037730AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCD5CE68-9E1A-490A-8725-5BBA037730AF}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{BCD5CE68-9E1A-490A-8725-5BBA037730AF}.Debug|x64.Build.0 = Debug|Any CPU
+		{BCD5CE68-9E1A-490A-8725-5BBA037730AF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BCD5CE68-9E1A-490A-8725-5BBA037730AF}.Debug|x86.Build.0 = Debug|Any CPU
+		{BCD5CE68-9E1A-490A-8725-5BBA037730AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCD5CE68-9E1A-490A-8725-5BBA037730AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCD5CE68-9E1A-490A-8725-5BBA037730AF}.Release|x64.ActiveCfg = Release|Any CPU
+		{BCD5CE68-9E1A-490A-8725-5BBA037730AF}.Release|x64.Build.0 = Release|Any CPU
+		{BCD5CE68-9E1A-490A-8725-5BBA037730AF}.Release|x86.ActiveCfg = Release|Any CPU
+		{BCD5CE68-9E1A-490A-8725-5BBA037730AF}.Release|x86.Build.0 = Release|Any CPU
+		{FD43B251-F370-47EA-9DE5-9B1A07780E16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD43B251-F370-47EA-9DE5-9B1A07780E16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD43B251-F370-47EA-9DE5-9B1A07780E16}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{FD43B251-F370-47EA-9DE5-9B1A07780E16}.Debug|x64.Build.0 = Debug|Any CPU
+		{FD43B251-F370-47EA-9DE5-9B1A07780E16}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FD43B251-F370-47EA-9DE5-9B1A07780E16}.Debug|x86.Build.0 = Debug|Any CPU
+		{FD43B251-F370-47EA-9DE5-9B1A07780E16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD43B251-F370-47EA-9DE5-9B1A07780E16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD43B251-F370-47EA-9DE5-9B1A07780E16}.Release|x64.ActiveCfg = Release|Any CPU
+		{FD43B251-F370-47EA-9DE5-9B1A07780E16}.Release|x64.Build.0 = Release|Any CPU
+		{FD43B251-F370-47EA-9DE5-9B1A07780E16}.Release|x86.ActiveCfg = Release|Any CPU
+		{FD43B251-F370-47EA-9DE5-9B1A07780E16}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -161,5 +189,7 @@ Global
 		{B0E291A4-BADE-4305-9345-63EB2C1B7125} = {C72562BB-1573-4776-7401-7E6C37D0B989}
 		{7AD28789-854A-4626-9127-78798AAB2681} = {C72562BB-1573-4776-7401-7E6C37D0B989}
 		{65049E72-7939-4B77-B9A8-53FD83E242D1} = {77B303A4-6792-4860-9E98-28BA595B97BE}
+		{BCD5CE68-9E1A-490A-8725-5BBA037730AF} = {77B303A4-6792-4860-9E98-28BA595B97BE}
+		{FD43B251-F370-47EA-9DE5-9B1A07780E16} = {77B303A4-6792-4860-9E98-28BA595B97BE}
 	EndGlobalSection
 EndGlobal
