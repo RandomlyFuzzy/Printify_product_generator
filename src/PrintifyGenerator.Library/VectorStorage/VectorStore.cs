@@ -18,6 +18,29 @@ public class VectorStore
     public long MaxFileSizeBytes { get; set; } = 30 * 1024 * 1024;
     public int MaxLoadRecords { get; set; } = 50000;
 
+    public void Clear()
+    {
+        _records.Clear();
+        _index = new HnswIndex<VectorRecord>(_m, _efConstruction, _efSearch);
+    }
+
+    public void ClearPersistence()
+    {
+        int shardIndex = 0;
+        while (File.Exists(ShardPath(shardIndex)))
+        {
+            File.Delete(ShardPath(shardIndex));
+            shardIndex++;
+        }
+
+        if (File.Exists(_persistencePath))
+            File.Delete(_persistencePath);
+
+        var hnswPath = Path.ChangeExtension(_persistencePath, ".hnsw");
+        if (File.Exists(hnswPath))
+            File.Delete(hnswPath);
+    }
+
     private string ShardPath(int index) =>
         Path.Combine(Path.GetDirectoryName(_persistencePath) ?? ".",
             $"{_baseName}_{index}.json");

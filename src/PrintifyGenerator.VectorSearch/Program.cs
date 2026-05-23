@@ -27,22 +27,25 @@ Console.WriteLine($"  Ollama: {ollamaUrl}  Model: {embedModel}");
 Console.WriteLine($"  Store:  {storePath}  ({store.Count} vectors)");
 Console.WriteLine($"  Market: {marketDir}");
 Console.WriteLine();
-Console.WriteLine("  Commands:");
-Console.WriteLine("    <text>            Search prompts by text substring");
-Console.WriteLine("    /embed <text>     Semantic search via Ollama embedding");
-Console.WriteLine("    /scan             Scan output/, Checking/, for prompts");
-Console.WriteLine("    /market           Load market data from category_features/");
-Console.WriteLine("    /purchase <q>     Search both prompts + market data");
-Console.WriteLine("    /eval <prompt>    RAG-enhanced prompt quality estimate");
-Console.WriteLine("    /tools            Ollama tool-calling demo (RAG + scoring)");
-Console.WriteLine("    /store            Show store statistics");
-Console.WriteLine("    /list [n]         Top n records by score");
-Console.WriteLine("    /recent [n]       n most recent records");
-Console.WriteLine("    /concept <c>      Filter records by concept");
-Console.WriteLine("    /ingest-all       Scan all sources + market data (fast)");
-Console.WriteLine("    /embed-all        Ollama-embed all records missing embeddings");
-Console.WriteLine("    /save             Persist vector store to disk");
-Console.WriteLine("    /quit             Exit");
+    Console.WriteLine("  Commands:");
+    Console.WriteLine("    <text>            Search prompts by text substring");
+    Console.WriteLine("    /embed <text>     Semantic search via Ollama embedding");
+    Console.WriteLine("    /scan             Scan output/, Checking/, for prompts");
+    Console.WriteLine("    /market           Load market data from category_features/");
+    Console.WriteLine("    /purchase <q>     Search both prompts + market data");
+    Console.WriteLine("    /eval <prompt>    RAG-enhanced prompt quality estimate");
+    Console.WriteLine("    /tools            Ollama tool-calling demo (RAG + scoring)");
+    Console.WriteLine("    /store            Show store statistics");
+    Console.WriteLine("    /list [n]         Top n records by score");
+    Console.WriteLine("    /recent [n]       n most recent records");
+    Console.WriteLine("    /concept <c>      Filter records by concept");
+    Console.WriteLine("    /ingest-all       Scan all sources + market data (fast)");
+    Console.WriteLine("    /embed-all        Ollama-embed all records missing embeddings");
+    Console.WriteLine("    /save             Persist vector store to disk");
+    Console.WriteLine("    /clear            Clear the console screen");
+    Console.WriteLine("    /reset            Clear in-memory store (use /save first to persist)");
+    Console.WriteLine("    /purge            Delete ALL persisted vector store files");
+    Console.WriteLine("    /quit             Exit");
 Console.WriteLine();
 
 while (true)
@@ -71,6 +74,9 @@ while (true)
             case "/ingest-all": await CmdIngestAll(); break;
             case "/embed-all": await CmdEmbedAll(); break;
             case "/save":     CmdSave(); break;
+            case "/clear":    CmdClear(); break;
+            case "/reset":    CmdReset(); break;
+            case "/purge":    CmdPurge(); break;
             default:          CmdTextSearch(input); break;
         }
     }
@@ -573,6 +579,34 @@ void CmdSave()
 {
     store.Save();
     Console.WriteLine("  Store saved.");
+}
+
+void CmdClear()
+{
+    Console.Clear();
+}
+
+void CmdReset()
+{
+    int prevCount = store.Count;
+    store.Clear();
+    Console.WriteLine($"  In-memory store cleared (was: {prevCount} records).");
+    Console.WriteLine("  Use /scan or /ingest-all to re-scan data, or /save /quit to exit.");
+}
+
+void CmdPurge()
+{
+    Console.Write("  This will DELETE ALL persisted vector store files. Continue? (y/n): ");
+    if (Console.ReadLine()?.Trim().ToLower() != "y")
+    {
+        Console.WriteLine("  Purge cancelled.");
+        return;
+    }
+
+    store.ClearPersistence();
+    store.Clear();
+
+    Console.WriteLine("  Persistence purged and in-memory cleared.");
 }
 
 void CmdTextSearch(string input)
