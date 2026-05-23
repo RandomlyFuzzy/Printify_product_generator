@@ -6,6 +6,7 @@ using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
 using System.IO;
+using PrintifyGenerator.Library.Ollama;
 
 public class OllamaClient : IDisposable
 {
@@ -31,6 +32,20 @@ public class OllamaClient : IDisposable
     {
         _baseUrl = baseUrl.TrimEnd('/');
         _http = new HttpClient()
+        {
+            Timeout = TimeSpan.FromMinutes(10)
+        };
+        if(!_modelLocks.ContainsKey(_baseUrl))
+        {
+            _modelLocks[_baseUrl] = new SemaphoreSlim(1,1);
+        }
+    }
+
+    /// <summary>For testing — inject a custom HttpClient.</summary>
+    public OllamaClient(string baseUrl, HttpMessageHandler handler)
+    {
+        _baseUrl = baseUrl.TrimEnd('/');
+        _http = new HttpClient(handler)
         {
             Timeout = TimeSpan.FromMinutes(10)
         };
@@ -146,6 +161,114 @@ public class OllamaClient : IDisposable
 
             return PostAsync("/api/chat", body);
         });
+
+    // =========================
+    // 🔹 4b. Chat with Tools (multi-turn)
+    // =========================
+    /// <param name="executeTool">Called for each tool_call. Receives ToolCall, returns string result.</param>
+    public async Task<ChatResult> ChatWithToolsAsync(
+        string model,
+        List<ChatMessage> messages,
+        List<ToolDefinition> tools,
+        Func<ToolCall, Task<string>> executeTool,
+        int maxTurns = 10)
+    {
+        var allMessages = new List<Dictionary<string, object>>();
+        foreach (var msg in messages)
+            allMessages.Add(msg.ToDictionary());
+
+        var toolDefs = tools.Select(t => t.ToJson()).ToList();
+
+        for (int turn = 0; turn < maxTurns; turn++)
+        {
+            var requestBody = new Dictionary<string, object>
+            {
+                ["model"] = model,
+                ["stream"] = false,
+                ["messages"] = allMessages,
+                ["tools"] = toolDefs
+            };
+
+            var json = JsonSerializer.Serialize(requestBody);
+            var responseJson = await WithLock(() => PostAsync("/api/chat", json));
+            using var doc = JsonDocument.Parse(responseJson);
+            var root = doc.RootElement;
+
+            var msgElement = root.GetProperty("message");
+            var role = msgElement.GetProperty("role").GetString()!;
+            var content = msgElement.TryGetProperty("content", out var c) ? c.GetString() : null;
+
+            List<ToolCall>? toolCalls = null;
+            if (msgElement.TryGetProperty("tool_calls", out var tcElement))
+                toolCalls = ToolCall.ParseList(tcElement);
+
+            var assistantMsg = new Dictionary<string, object> { ["role"] = role };
+            if (content != null)
+                assistantMsg["content"] = content;
+            if (toolCalls is { Count: > 0 })
+            {
+                var callsList = new List<Dictionary<string, object>>();
+                foreach (var tc in toolCalls)
+                {
+                    var argsDict = new Dictionary<string, object>();
+                    foreach (var kvp in tc.Arguments)
+                        argsDict[kvp.Key] = JsonSerializer.Deserialize<object>(kvp.Value.GetRawText()) ?? "";
+
+                    var argsJson = JsonSerializer.Serialize(argsDict);
+                    callsList.Add(new Dictionary<string, object>
+                    {
+                        ["type"] = "function",
+                        ["function"] = new Dictionary<string, object>
+                        {
+                            ["name"] = tc.Name,
+                            ["arguments"] = argsJson
+                        }
+                    });
+                }
+                assistantMsg["tool_calls"] = callsList;
+            }
+            allMessages.Add(assistantMsg);
+
+            if (toolCalls == null || toolCalls.Count == 0)
+            {
+                return new ChatResult(content ?? "", allMessages);
+            }
+
+            foreach (var toolCall in toolCalls)
+            {
+                string result;
+                try
+                {
+                    result = await executeTool(toolCall);
+                }
+                catch (Exception ex)
+                {
+                    result = $"Error: {ex.Message}";
+                }
+
+                allMessages.Add(new Dictionary<string, object>
+                {
+                    ["role"] = "tool",
+                    ["tool_call_id"] = $"{toolCall.Name}_{turn}",
+                    ["content"] = result
+                });
+            }
+        }
+
+        return new ChatResult("Max turns reached", allMessages);
+    }
+
+    public class ChatResult
+    {
+        public string Content { get; }
+        public List<Dictionary<string, object>> MessageHistory { get; }
+
+        public ChatResult(string content, List<Dictionary<string, object>> messageHistory)
+        {
+            Content = content;
+            MessageHistory = messageHistory;
+        }
+    }
 
     // =========================
     // 🔹 5. Show model
